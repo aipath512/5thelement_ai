@@ -1,0 +1,23 @@
+{
+  "schema": "adi-ai-v1",
+  "actions": [
+    {
+      "id": "ACT-AUDIT",
+      "name": "Request AI Audit",
+      "method": "email",
+      "target": "contact@5thelement.ai"
+    },
+    {
+      "id": "ACT-CHECK",
+      "name": "Check My Business",
+      "method": "email",
+      "target": "contact@5thelement.ai"
+    },
+    {
+      "id": "ACT-VERIFY",
+      "name": "Review ADI Manifest",
+      "method": "GET",
+      "target": "/.well-known/adi-manifest.txt"
+    }
+  ]
+}

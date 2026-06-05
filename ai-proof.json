@@ -1,0 +1,26 @@
+{
+  "schema": "adi-ai-v1",
+  "type": "OrganizationEntity",
+  "entity_id": "ENT-ORG-AIVENTURE",
+  "name": "AiVenture",
+  "flagship": "5THELEMENT.ai",
+  "legal_name": "AiVenture S.R.L.",
+  "country": "Romania",
+  "category": "AI Delivery Infrastructure",
+  "primary_site": "https://5thelement.ai/",
+  "mission": "Help B2B firms attract, promote, sell and grow using AI.",
+  "description": "AiVenture provides AI Delivery Infrastructure. 5THELEMENT.ai is the flagship authority platform for AI Discovery Infrastructure.",
+  "founder": {
+    "name": "Dan Ionescu",
+    "linkedin": "https://www.linkedin.com/in/dan-ionesco-a856082a0"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/107338970",
+    "https://www.linkedin.com/showcase/5thelement-ai/",
+    "https://www.crunchbase.com/organization/aiventure-s-r-l",
+    "https://www.facebook.com/people/Aiventure/61573220584246/",
+    "https://x.com/aipath512",
+    "https://www.youtube.com/@AIVenture-q8u",
+    "https://medium.com/@aipath512"
+  ]
+}

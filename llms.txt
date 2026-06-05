@@ -1,0 +1,9 @@
+/* TEAM */
+Founder: Dan Ionescu
+Company: AiVenture S.R.L.
+Flagship: 5THELEMENT.ai
+Contact: contact@5thelement.ai
+
+/* SITE */
+Category: AI Discovery Infrastructure
+Delivery umbrella: ADI — AI Delivery Infrastructure

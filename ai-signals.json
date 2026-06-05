@@ -1,0 +1,14 @@
+{
+  "schema": "adi-ai-v1",
+  "proof_layer": {
+    "statement": "Proof supports claims. Verification supports trust.",
+    "artifact_fingerprint": "31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36",
+    "provenance_anchor": "ai-delivery-infrastructure_canonical_txt.ots",
+    "root_manifest_hash": "82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30",
+    "note": "SHA-256 and OTS can provide evidence of integrity and timestamped existence. They do not by themselves prove legal compliance, commercial results or model recommendation behavior."
+  },
+  "planned_ots_endpoints": [
+    "/.well-known/ots/ai-delivery-infrastructure.ots",
+    "/.well-known/ots/adi-manifest.ots"
+  ]
+}

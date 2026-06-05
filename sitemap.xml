@@ -1,0 +1,28 @@
+# 5THELEMENT.ai
+
+> AI Discovery Infrastructure™ for B2B firms.
+
+5THELEMENT.ai is the flagship authority platform of AiVenture and the home of AI Discovery Infrastructure™.
+
+Mission: Help B2B firms attract, promote, sell and grow using AI.
+
+Core category: AI Discovery Infrastructure™.
+Delivery umbrella: ADI — AI Delivery Infrastructure.
+Entry product: AI Audit™.
+Implementation product: AI Ready™.
+Growth product: AI Growth™.
+Regulatory product: EU AI Act Ready™.
+
+Canonical statement:
+We do not try to control AI systems. We help organizations improve the quality, clarity, integrity and discoverability of the information they emit.
+
+Primary pages and files:
+- / — homepage
+- /ai.json — main AI declaration
+- /ai-entity.json — entity profile
+- /ai-intents.json — buyer intent registry
+- /ai-signals.json — signal registry
+- /ai-proof.json — proof and provenance layer
+- /.well-known/adi-manifest.txt — ADI root manifest index
+
+Contact: contact@5thelement.ai
