@@ -1,0 +1,28 @@
+# AI Delivery Infrastructure (ADI) Root Manifest Index
+# Site: 5thelement.ai
+# Status: public index / verification aid
+# Timestamp: 2026-06-05T00:00:00Z
+
+ROOT_MANIFEST_HASH: 82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30
+ADI_ARTIFACT_FINGERPRINT: 31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36
+CANONICAL_OTS_REFERENCE: ai-delivery-infrastructure_canonical_txt.ots
+
+PUBLIC_AI_FILES:
+/llms.txt
+/ai.json
+/ai-entity.json
+/ai-intents.json
+/ai-signals.json
+/ai-proof.json
+/ai-routes.json
+/ai-actions.json
+/ai-trust.json
+/ai-validation.json
+
+NOTE:
+ROOT_MANIFEST_HASH represents the hash of the canonical ADI root manifest artifact.
+This human-readable index file is a public verification aid and may not hash to ROOT_MANIFEST_HASH unless generated as the canonical artifact itself.
+
+DISCLAIMER:
+SHA-256 and OpenTimestamps can provide evidence of integrity and timestamped existence.
+They do not by themselves prove legal compliance, commercial results, ownership, or AI model recommendation behavior.
