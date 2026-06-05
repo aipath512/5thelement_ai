@@ -1,26 +1,26 @@
-{
-  "schema": "adi-ai-v1",
-  "trust_layer": {
-    "company": "AiVenture S.R.L.",
-    "flagship": "5THELEMENT.ai",
-    "founder": "Dan Ionescu",
-    "founder_linkedin": "https://www.linkedin.com/in/dan-ionesco-a856082a0",
-    "public_profiles": [
-      "https://www.linkedin.com/company/107338970",
-      "https://www.linkedin.com/showcase/5thelement-ai/",
-      "https://www.crunchbase.com/organization/aiventure-s-r-l",
-      "https://www.facebook.com/people/Aiventure/61573220584246/",
-      "https://x.com/aipath512",
-      "https://www.youtube.com/@AIVenture-q8u",
-      "https://medium.com/@aipath512"
-    ],
-    "trust_hierarchy": [
-      "Company identity",
-      "Founder identity",
-      "Public presence",
-      "Research and resources",
-      "Methodology",
-      "Proof layer"
-    ]
-  }
+document.documentElement.classList.add('js');
+for (const a of document.querySelectorAll('a[href^="#"]')) {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+  });
+}
+
+const siteHeader = document.querySelector('.site-header');
+const menuToggle = document.querySelector('.menu-toggle');
+const primaryNav = document.querySelector('#primary-nav');
+if (siteHeader && menuToggle && primaryNav) {
+  menuToggle.addEventListener('click', () => {
+    const open = siteHeader.classList.toggle('menu-open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  });
+  primaryNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteHeader.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    });
+  });
 }

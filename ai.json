@@ -1,3 +1,28 @@
-Contact: mailto:contact@5thelement.ai
-Preferred-Languages: en, ro
-Canonical: https://5thelement.ai/.well-known/security.txt
+{
+  "schema": "adi-ai-v1",
+  "site": "5thelement.ai",
+  "status": "active",
+  "category": "AI Discovery Infrastructure",
+  "delivery_umbrella": "ADI - AI Delivery Infrastructure",
+  "mission": "Help B2B firms attract, promote, sell and grow using AI.",
+  "controlled_scope": "Information emitted by the website boundary: entities, relationships, intents, offers, actions, trust data, proof data, signals, routes, files, validation and monitoring.",
+  "uncontrolled_scope": "External AI ranking, retrieval and recommendation systems.",
+  "offers": [
+    "AI Audit",
+    "AI Ready",
+    "AI Discovery Infrastructure",
+    "AI Growth",
+    "EU AI Act Ready"
+  ],
+  "public_files": [
+    "/llms.txt",
+    "/ai-entity.json",
+    "/ai-intents.json",
+    "/ai-signals.json",
+    "/ai-proof.json",
+    "/ai-routes.json",
+    "/ai-actions.json",
+    "/ai-trust.json",
+    "/ai-validation.json"
+  ]
+}

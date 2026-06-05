@@ -1,69 +1,24 @@
 {
   "schema": "adi-ai-v1",
-  "signals": [
-    {
-      "id": "SIG-ENT-001",
-      "name": "Organization identity declared",
-      "type": "entity",
-      "file_or_endpoint": "/ai-entity.json",
-      "check_rule": "organization name exists",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-ENT-002",
-      "name": "Founder declared",
-      "type": "entity",
-      "file_or_endpoint": "/ai-entity.json",
-      "check_rule": "founder.name exists",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-SITE-001",
-      "name": "llms.txt present",
-      "type": "discovery",
-      "file_or_endpoint": "/llms.txt",
-      "check_rule": "file returns 200",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-SITE-002",
-      "name": "ai.json present",
-      "type": "discovery",
-      "file_or_endpoint": "/ai.json",
-      "check_rule": "file returns 200 and valid JSON",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-INT-001",
-      "name": "Buyer intents declared",
-      "type": "intent",
-      "file_or_endpoint": "/ai-intents.json",
-      "check_rule": "25 intents exist",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-PROOF-001",
-      "name": "Proof layer declared",
-      "type": "proof",
-      "file_or_endpoint": "/ai-proof.json",
-      "check_rule": "artifact hash exists",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-TRUST-001",
-      "name": "Public profiles declared",
-      "type": "trust",
-      "file_or_endpoint": "/ai-trust.json",
-      "check_rule": "sameAs list exists",
-      "status": "declared"
-    },
-    {
-      "id": "SIG-ROUTE-001",
-      "name": "Contact route declared",
-      "type": "route",
-      "file_or_endpoint": "/ai-routes.json",
-      "check_rule": "contact route exists",
-      "status": "declared"
-    }
+  "validation_model": {
+    "principle": "No hardcoded scores. No synthetic pass values.",
+    "states": [
+      "PASS",
+      "FAIL",
+      "WARNING"
+    ],
+    "note": "Generation and validation are separate. Compiler output should be validated independently."
+  },
+  "visibility_levels": [
+    "L0 Invisible",
+    "L1 Discoverable",
+    "L2 Crawlable",
+    "L3 Understandable",
+    "L4 Verifiable",
+    "L5 Trusted",
+    "L6 Recommendable",
+    "L7 Preferred",
+    "L8 Operational",
+    "L9 Autonomous Participation"
   ]
 }

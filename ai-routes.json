@@ -1,155 +1,35 @@
 {
   "schema": "adi-ai-v1",
-  "intents": [
+  "routes": [
     {
-      "id": "INT-001",
-      "question": "Can AI help my business?",
-      "pillar": "AI Audit",
-      "canonical_answer": "Start with an AI Audit to understand how AI currently sees the business."
+      "id": "ROUTE-HOME",
+      "purpose": "Homepage",
+      "url": "/"
     },
     {
-      "id": "INT-002",
-      "question": "Can ChatGPT find my business?",
-      "pillar": "AI Audit",
-      "canonical_answer": "Assess whether AI systems can discover and understand the business entity."
+      "id": "ROUTE-CONTACT",
+      "purpose": "Contact",
+      "url": "mailto:contact@5thelement.ai"
     },
     {
-      "id": "INT-003",
-      "question": "Why does AI recommend competitors?",
-      "pillar": "AI Audit",
-      "canonical_answer": "Identify missing signals, trust gaps and recommendation barriers."
+      "id": "ROUTE-LLMS",
+      "purpose": "LLM discovery",
+      "url": "/llms.txt"
     },
     {
-      "id": "INT-004",
-      "question": "What is AI-ready?",
-      "pillar": "AI Ready",
-      "canonical_answer": "Make business identity, offers, trust data and contact routes machine-readable."
+      "id": "ROUTE-ENTITY",
+      "purpose": "Entity declaration",
+      "url": "/ai-entity.json"
     },
     {
-      "id": "INT-005",
-      "question": "Do I need a new website for AI?",
-      "pillar": "AI Ready",
-      "canonical_answer": "No. The AI-ready layer can be added without rebuilding the website."
+      "id": "ROUTE-INTENTS",
+      "purpose": "Buyer intent registry",
+      "url": "/ai-intents.json"
     },
     {
-      "id": "INT-006",
-      "question": "How do I get my business into ChatGPT?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "Emit clear structured business signals. Files are delivery mechanisms, not the source of visibility itself."
-    },
-    {
-      "id": "INT-007",
-      "question": "What is llms.txt?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "A discovery file that can guide AI systems toward important site information."
-    },
-    {
-      "id": "INT-008",
-      "question": "What is ai.json?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "A structured declaration of business identity, offers, trust and routes."
-    },
-    {
-      "id": "INT-009",
-      "question": "What is an AI signal?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "A machine-verifiable unit of business information generated from canonical facts."
-    },
-    {
-      "id": "INT-010",
-      "question": "How do I prepare for AI agents?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "Expose entities, intents, actions, routes and trust signals in machine-readable formats."
-    },
-    {
-      "id": "INT-011",
-      "question": "Can AI help me get more customers?",
-      "pillar": "AI Growth",
-      "canonical_answer": "Use AI discovery, qualification and follow-up systems to increase opportunity flow."
-    },
-    {
-      "id": "INT-012",
-      "question": "Can AI automate marketing?",
-      "pillar": "AI Growth",
-      "canonical_answer": "Use AI-assisted content, intent mapping and answer-layer positioning."
-    },
-    {
-      "id": "INT-013",
-      "question": "Can AI qualify leads?",
-      "pillar": "AI Growth",
-      "canonical_answer": "Use AI-assisted interaction and structured qualification workflows."
-    },
-    {
-      "id": "INT-014",
-      "question": "Can AI improve sales follow-up?",
-      "pillar": "AI Growth",
-      "canonical_answer": "Use CRM memory, summaries and next-action recommendations."
-    },
-    {
-      "id": "INT-015",
-      "question": "What ROI can AI create?",
-      "pillar": "AI Growth",
-      "canonical_answer": "Start with baseline measurement, then track visibility, recommendations and inbound opportunities."
-    },
-    {
-      "id": "INT-016",
-      "question": "Can I trust AI to represent my brand?",
-      "pillar": "Trust Layer",
-      "canonical_answer": "Improve entity consistency, public evidence, structured data and proof workflows."
-    },
-    {
-      "id": "INT-017",
-      "question": "What is the Proof Layer?",
-      "pillar": "Proof Layer",
-      "canonical_answer": "Integrity fingerprints and timestamping that support verification of artifacts."
-    },
-    {
-      "id": "INT-018",
-      "question": "Is AI secure for customer data?",
-      "pillar": "Trust Layer",
-      "canonical_answer": "Customer transactions and private data remain separate from the public AI Discovery Layer."
-    },
-    {
-      "id": "INT-019",
-      "question": "How do I prove expertise to AI?",
-      "pillar": "Trust Layer",
-      "canonical_answer": "Expose expertise, services, evidence, references and structured trust signals."
-    },
-    {
-      "id": "INT-020",
-      "question": "What makes an AI company serious?",
-      "pillar": "Trust Layer",
-      "canonical_answer": "Public entity signals, founder identity, evidence, methodology and verifiable artifacts."
-    },
-    {
-      "id": "INT-021",
-      "question": "Does EU AI Act apply to me?",
-      "pillar": "EU AI Act Ready",
-      "canonical_answer": "Identify AI use cases and transparency obligations before deadlines."
-    },
-    {
-      "id": "INT-022",
-      "question": "What is Article 50?",
-      "pillar": "EU AI Act Ready",
-      "canonical_answer": "Transparency obligations for certain AI interactions and AI-generated/manipulated content."
-    },
-    {
-      "id": "INT-023",
-      "question": "What happens if I ignore EU AI Act?",
-      "pillar": "EU AI Act Ready",
-      "canonical_answer": "Organizations should prepare documentation, disclosures and governance processes before enforcement deadlines."
-    },
-    {
-      "id": "INT-024",
-      "question": "What is the future of AI for B2B?",
-      "pillar": "AI Discovery Infrastructure",
-      "canonical_answer": "Buyers increasingly delegate research and comparison to AI systems and agents."
-    },
-    {
-      "id": "INT-025",
-      "question": "What should I do first?",
-      "pillar": "AI Audit",
-      "canonical_answer": "Run an AI Audit to identify current discovery, trust and signal gaps."
+      "id": "ROUTE-MANIFEST",
+      "purpose": "ADI manifest index",
+      "url": "/.well-known/adi-manifest.txt"
     }
   ]
 }

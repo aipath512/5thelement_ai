@@ -1,14 +1,69 @@
 {
   "schema": "adi-ai-v1",
-  "proof_layer": {
-    "statement": "Proof supports claims. Verification supports trust.",
-    "artifact_fingerprint": "31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36",
-    "provenance_anchor": "ai-delivery-infrastructure_canonical_txt.ots",
-    "root_manifest_hash": "82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30",
-    "note": "SHA-256 and OTS can provide evidence of integrity and timestamped existence. They do not by themselves prove legal compliance, commercial results or model recommendation behavior."
-  },
-  "planned_ots_endpoints": [
-    "/.well-known/ots/ai-delivery-infrastructure.ots",
-    "/.well-known/ots/adi-manifest.ots"
+  "signals": [
+    {
+      "id": "SIG-ENT-001",
+      "name": "Organization identity declared",
+      "type": "entity",
+      "file_or_endpoint": "/ai-entity.json",
+      "check_rule": "organization name exists",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-ENT-002",
+      "name": "Founder declared",
+      "type": "entity",
+      "file_or_endpoint": "/ai-entity.json",
+      "check_rule": "founder.name exists",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-SITE-001",
+      "name": "llms.txt present",
+      "type": "discovery",
+      "file_or_endpoint": "/llms.txt",
+      "check_rule": "file returns 200",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-SITE-002",
+      "name": "ai.json present",
+      "type": "discovery",
+      "file_or_endpoint": "/ai.json",
+      "check_rule": "file returns 200 and valid JSON",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-INT-001",
+      "name": "Buyer intents declared",
+      "type": "intent",
+      "file_or_endpoint": "/ai-intents.json",
+      "check_rule": "25 intents exist",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-PROOF-001",
+      "name": "Proof layer declared",
+      "type": "proof",
+      "file_or_endpoint": "/ai-proof.json",
+      "check_rule": "artifact hash exists",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-TRUST-001",
+      "name": "Public profiles declared",
+      "type": "trust",
+      "file_or_endpoint": "/ai-trust.json",
+      "check_rule": "sameAs list exists",
+      "status": "declared"
+    },
+    {
+      "id": "SIG-ROUTE-001",
+      "name": "Contact route declared",
+      "type": "route",
+      "file_or_endpoint": "/ai-routes.json",
+      "check_rule": "contact route exists",
+      "status": "declared"
+    }
   ]
 }

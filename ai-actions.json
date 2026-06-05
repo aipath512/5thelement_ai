@@ -1,1 +1,23 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>404 — 5THELEMENT.ai</title><link rel='stylesheet' href='/styles.css'></head><body><main class='final-cta'><h1>404</h1><p class='muted'>This route was not found.</p><a class='btn primary' href='/'>Return home</a></main></body></html>
+{
+  "schema": "adi-ai-v1",
+  "actions": [
+    {
+      "id": "ACT-AUDIT",
+      "name": "Request AI Audit",
+      "method": "email",
+      "target": "contact@5thelement.ai"
+    },
+    {
+      "id": "ACT-CHECK",
+      "name": "Check My Business",
+      "method": "email",
+      "target": "contact@5thelement.ai"
+    },
+    {
+      "id": "ACT-VERIFY",
+      "name": "Review ADI Manifest",
+      "method": "GET",
+      "target": "/.well-known/adi-manifest.txt"
+    }
+  ]
+}

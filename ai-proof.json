@@ -1,26 +1,14 @@
 {
   "schema": "adi-ai-v1",
-  "type": "OrganizationEntity",
-  "entity_id": "ENT-ORG-AIVENTURE",
-  "name": "AiVenture",
-  "flagship": "5THELEMENT.ai",
-  "legal_name": "AiVenture S.R.L.",
-  "country": "Romania",
-  "category": "AI Delivery Infrastructure",
-  "primary_site": "https://5thelement.ai/",
-  "mission": "Help B2B firms attract, promote, sell and grow using AI.",
-  "description": "AiVenture provides AI Delivery Infrastructure. 5THELEMENT.ai is the flagship authority platform for AI Discovery Infrastructure.",
-  "founder": {
-    "name": "Dan Ionescu",
-    "linkedin": "https://www.linkedin.com/in/dan-ionesco-a856082a0"
+  "proof_layer": {
+    "statement": "Proof supports claims. Verification supports trust.",
+    "artifact_fingerprint": "31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36",
+    "provenance_anchor": "ai-delivery-infrastructure_canonical_txt.ots",
+    "root_manifest_hash": "82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30",
+    "note": "SHA-256 and OTS can provide evidence of integrity and timestamped existence. They do not by themselves prove legal compliance, commercial results or model recommendation behavior."
   },
-  "sameAs": [
-    "https://www.linkedin.com/company/107338970",
-    "https://www.linkedin.com/showcase/5thelement-ai/",
-    "https://www.crunchbase.com/organization/aiventure-s-r-l",
-    "https://www.facebook.com/people/Aiventure/61573220584246/",
-    "https://x.com/aipath512",
-    "https://www.youtube.com/@AIVenture-q8u",
-    "https://medium.com/@aipath512"
+  "planned_ots_endpoints": [
+    "/.well-known/ots/ai-delivery-infrastructure.ots",
+    "/.well-known/ots/adi-manifest.ots"
   ]
 }

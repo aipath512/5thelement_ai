@@ -1,24 +1,9 @@
-{
-  "schema": "adi-ai-v1",
-  "validation_model": {
-    "principle": "No hardcoded scores. No synthetic pass values.",
-    "states": [
-      "PASS",
-      "FAIL",
-      "WARNING"
-    ],
-    "note": "Generation and validation are separate. Compiler output should be validated independently."
-  },
-  "visibility_levels": [
-    "L0 Invisible",
-    "L1 Discoverable",
-    "L2 Crawlable",
-    "L3 Understandable",
-    "L4 Verifiable",
-    "L5 Trusted",
-    "L6 Recommendable",
-    "L7 Preferred",
-    "L8 Operational",
-    "L9 Autonomous Participation"
-  ]
-}
+/* TEAM */
+Founder: Dan Ionescu
+Company: AiVenture S.R.L.
+Flagship: 5THELEMENT.ai
+Contact: contact@5thelement.ai
+
+/* SITE */
+Category: AI Discovery Infrastructure
+Delivery umbrella: ADI — AI Delivery Infrastructure
