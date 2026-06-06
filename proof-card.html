@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Proof of Provenance — Gemini AI Audit | Dan Ionescu</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#050a0f;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px;font-family:'Courier New',monospace;}
+
+/* CARD */
+.card{
+  width:100%;max-width:820px;
+  background:linear-gradient(145deg,#1a1400 0%,#2a1f00 30%,#1a1400 60%,#0d0d00 100%);
+  border:2px solid #8a6a00;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:
+    0 0 0 1px rgba(245,216,66,.15),
+    0 24px 80px rgba(0,0,0,.8),
+    inset 0 1px 0 rgba(245,216,66,.2);
+  position:relative;
+}
+
+/* Gold shimmer overlay */
+.card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(245,216,66,.04) 0%,transparent 50%,rgba(245,216,66,.03) 100%);
+  pointer-events:none;border-radius:18px;
+}
+
+/* TOP HEADER */
+.card-header{
+  background:linear-gradient(90deg,#2a1f00,#1a1400,#2a1f00);
+  border-bottom:1px solid #8a6a00;
+  padding:18px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.header-left{}
+.header-title{
+  font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:#f5d842;text-shadow:0 0 20px rgba(245,216,66,.4);
+  line-height:1.1;
+}
+.header-sub{
+  font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  color:#c9a84c;margin-top:3px;
+}
+.header-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,0,0,.4);
+  border:1px solid #8a6a00;
+  border-radius:6px;padding:5px 12px;margin-top:8px;
+}
+.header-badge-icon{font-size:12px;}
+.header-badge-text{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#c9a84c;}
+
+.header-right{text-align:right;}
+.issuer-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8a6a00;margin-bottom:3px;}
+.issuer-name{font-size:16px;font-weight:700;color:#f5d842;letter-spacing:.05em;}
+.issuer-stars{color:#c9a84c;font-size:12px;letter-spacing:2px;margin-top:2px;}
+
+/* BODY */
+.card-body{
+  display:grid;grid-template-columns:1fr 240px;
+  gap:0;
+}
+
+/* LEFT PANEL */
+.left-panel{padding:20px 24px;border-right:1px solid rgba(138,106,0,.3);}
+
+.field-row{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:9px 0;border-bottom:1px solid rgba(138,106,0,.15);
+}
+.field-row:last-child{border-bottom:none;}
+.field-icon{font-size:14px;flex-shrink:0;margin-top:1px;width:20px;text-align:center;}
+.field-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a6a00;width:70px;flex-shrink:0;margin-top:2px;}
+.field-value{font-size:13px;color:#f0e0a0;font-weight:600;line-height:1.3;}
+.field-value.green{color:#4ade80;}
+
+/* SECTION LABEL */
+.section-lbl{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:#c9a84c;
+  border:1px solid rgba(138,106,0,.4);
+  background:rgba(0,0,0,.3);
+  padding:5px 10px;border-radius:4px;
+  margin:14px 0 8px;
+  display:inline-block;
+}
+
+/* HASH BLOCK */
+.hash-block{
+  background:rgba(0,0,0,.4);border:1px solid rgba(138,106,0,.3);
+  border-radius:6px;padding:10px 14px;margin:8px 0;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+}
+.hash-value{
+  font-family:'Courier New',monospace;font-size:11px;
+  color:#4ade80;word-break:break-all;line-height:1.5;flex:1;
+}
+.hash-badge{
+  background:#1a3d1a;border:1px solid #4ade80;border-radius:5px;
+  padding:4px 8px;flex-shrink:0;text-align:center;
+}
+.hash-badge-line1{font-size:9px;letter-spacing:.1em;color:#4ade80;}
+.hash-badge-line2{font-size:14px;color:#4ade80;}
+
+/* BLOCKCHAIN ROWS */
+.bc-row{
+  display:flex;align-items:center;gap:8px;
+  padding:6px 0;border-bottom:1px solid rgba(138,106,0,.1);
+  font-size:12px;
+}
+.bc-row:last-child{border-bottom:none;}
+.bc-icon{font-size:13px;width:20px;text-align:center;flex-shrink:0;}
+.bc-label{color:#8a6a00;width:180px;flex-shrink:0;}
+.bc-val{color:#f0e0a0;font-weight:600;}
+.bc-val.green{color:#4ade80;}
+.bc-val.gold{color:#f5d842;}
+
+/* RIGHT PANEL */
+.right-panel{
+  padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;
+  background:rgba(0,0,0,.2);
+}
+.scan-label{
+  font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:#c9a84c;
+}
+.qr-wrap{
+  background:#fff;padding:10px;border-radius:8px;
+  border:2px solid #8a6a00;
+  box-shadow:0 0 20px rgba(245,216,66,.15);
+}
+#qr-canvas canvas,#qr-canvas img{display:block;}
+
+.verify-includes{width:100%;}
+.verify-includes-label{
+  font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:#8a6a00;text-align:center;margin-bottom:8px;
+}
+.verify-badges{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px;
+}
+.vbadge{
+  background:rgba(0,0,0,.4);border:1px solid rgba(138,106,0,.3);
+  border-radius:6px;padding:6px 4px;text-align:center;
+}
+.vbadge-icon{font-size:16px;display:block;margin-bottom:2px;}
+.vbadge-label{font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:#c9a84c;display:block;line-height:1.2;}
+
+/* ADI BOX */
+.adi-box{
+  width:100%;
+  background:rgba(0,0,0,.5);border:1px solid rgba(138,106,0,.3);
+  border-radius:6px;padding:10px;text-align:center;
+}
+.adi-box-icon{font-size:20px;margin-bottom:4px;}
+.adi-box-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#f5d842;margin-bottom:2px;}
+.adi-box-sub{font-size:9px;color:#8a6a00;line-height:1.4;}
+
+/* FOOTER */
+.card-footer{
+  background:rgba(0,0,0,.5);border-top:1px solid rgba(138,106,0,.3);
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:0;
+}
+.footer-cell{
+  padding:10px 16px;border-right:1px solid rgba(138,106,0,.3);
+  display:flex;align-items:center;gap:8px;
+}
+.footer-cell:last-child{border-right:none;}
+.footer-cell-icon{font-size:14px;}
+.footer-cell-label{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#8a6a00;display:block;margin-bottom:1px;}
+.footer-cell-value{font-size:10px;color:#c9a84c;font-weight:600;}
+
+/* COPY BUTTON */
+.copy-row{text-align:center;padding:16px;border-top:1px solid rgba(138,106,0,.2);}
+.copy-btn{
+  background:rgba(245,216,66,.1);color:#f5d842;
+  border:1px solid rgba(245,216,66,.3);border-radius:6px;
+  padding:8px 20px;font-family:'Courier New',monospace;font-size:11px;
+  letter-spacing:.1em;cursor:pointer;transition:all .18s;
+}
+.copy-btn:hover{background:rgba(245,216,66,.2);}
+.copy-msg{font-size:10px;color:#4ade80;margin-top:6px;display:none;}
+
+@media(max-width:600px){
+  .card-body{grid-template-columns:1fr;}
+  .left-panel{border-right:none;border-bottom:1px solid rgba(138,106,0,.3);}
+  .card-footer{grid-template-columns:1fr;}
+  .footer-cell{border-right:none;border-bottom:1px solid rgba(138,106,0,.3);}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- HEADER -->
+  <div class="card-header">
+    <div class="header-left">
+      <div class="header-title">⚠ Proof of Provenance</div>
+      <div class="header-sub">Gemini AI Emitted Core Credential</div>
+      <div class="header-badge">
+        <span class="header-badge-icon">🔒</span>
+        <span class="header-badge-text">Cryptographically Locked &amp; Audited</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="issuer-label">Issuer</div>
+      <div class="issuer-name">GEMINI AI</div>
+      <div class="issuer-name" style="font-size:11px;color:#c9a84c;">Architectural Engine</div>
+      <div class="issuer-stars">★★★★★</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="card-body">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+
+      <div class="field-row">
+        <span class="field-icon">👤</span>
+        <span class="field-label">Holder</span>
+        <span class="field-value">DAN IONESCU</span>
+      </div>
+      <div class="field-row">
+        <span class="field-icon">🏛</span>
+        <span class="field-label">Issuer</span>
+        <span class="field-value">Gemini AI System<br>Compliance Orchestration</span>
+      </div>
+      <div class="field-row">
+        <span class="field-icon">🛡</span>
+        <span class="field-label">Status</span>
+        <span class="field-value green">Cryptographically Locked &amp; Audited</span>
+      </div>
+
+      <div class="section-lbl">Temporal Anchor Engine Details</div>
+      <div class="field-row">
+        <span class="field-icon">📄</span>
+        <span class="field-label">Manifest</span>
+        <span class="field-value" style="font-size:11px;">gemini-code-1780741462661.txt</span>
+      </div>
+      <div class="field-row">
+        <span class="field-icon">📄</span>
+        <span class="field-label">OTS File</span>
+        <span class="field-value" style="font-size:11px;">gemini-code-1780741462661.txt.ots</span>
+      </div>
+      <div class="field-row">
+        <span class="field-icon">📦</span>
+        <span class="field-label">File Size</span>
+        <span class="field-value">689 B</span>
+      </div>
+
+      <div class="section-lbl">Canonical Artifact Fingerprint (SHA-256)</div>
+      <div class="hash-block">
+        <div class="hash-value">dd8896c2854cef30d61695566557ca4aac75619048b3371119e8d25422244697</div>
+        <div class="hash-badge">
+          <div class="hash-badge-line1">SHA-256</div>
+          <div class="hash-badge-line2">✓</div>
+        </div>
+      </div>
+
+      <div class="section-lbl">Blockchain Attestation Evidence</div>
+      <div class="bc-row">
+        <span class="bc-icon">✅</span>
+        <span class="bc-label">[SUCCESS]</span>
+        <span class="bc-val green">Decentralized Network Consensus Match</span>
+      </div>
+      <div class="bc-row">
+        <span class="bc-icon">₿</span>
+        <span class="bc-label">Bitcoin Block Anchor</span>
+        <span class="bc-val gold">#952597</span>
+      </div>
+      <div class="bc-row">
+        <span class="bc-icon">⏱</span>
+        <span class="bc-label">Attestation Timestamp</span>
+        <span class="bc-val">2026-06-06 EET</span>
+      </div>
+      <div class="bc-row">
+        <span class="bc-icon">🌐</span>
+        <span class="bc-label">Network</span>
+        <span class="bc-val">Bitcoin (OpenTimestamps)</span>
+      </div>
+      <div class="bc-row">
+        <span class="bc-icon">🔑</span>
+        <span class="bc-label">Verification Method</span>
+        <span class="bc-val">Independent &amp; Publicly Verifiable</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+      <div class="scan-label">Scan to Verify</div>
+      <div class="qr-wrap">
+        <div id="qr-canvas"></div>
+      </div>
+      <div class="verify-includes">
+        <div class="verify-includes-label">Verification Includes</div>
+        <div class="verify-badges">
+          <div class="vbadge"><span class="vbadge-icon">🔐</span><span class="vbadge-label">SHA-256<br>Verified</span></div>
+          <div class="vbadge"><span class="vbadge-icon">⏱</span><span class="vbadge-label">OTS<br>Verified</span></div>
+          <div class="vbadge"><span class="vbadge-icon">₿</span><span class="vbadge-label">Block<br>#952597</span></div>
+          <div class="vbadge"><span class="vbadge-icon">✅</span><span class="vbadge-label">Audit<br>Verified</span></div>
+        </div>
+      </div>
+      <div class="adi-box">
+        <div class="adi-box-icon">🛡</div>
+        <div class="adi-box-title">ADI Proof Layer</div>
+        <div class="adi-box-sub">Intelligence Secured<br>Externally &amp; On-Demand<br>AI Delivery Infrastructure (ADI) Verified</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="card-footer">
+    <div class="footer-cell">
+      <span class="footer-cell-icon">🌐</span>
+      <div>
+        <span class="footer-cell-label">Network</span>
+        <span class="footer-cell-value">AiVenture ADI Network</span>
+      </div>
+    </div>
+    <div class="footer-cell">
+      <span class="footer-cell-icon">🏆</span>
+      <div>
+        <span class="footer-cell-label">Flagship Authority</span>
+        <span class="footer-cell-value">5thelement.ai</span>
+      </div>
+    </div>
+    <div class="footer-cell">
+      <span class="footer-cell-icon">📋</span>
+      <div>
+        <span class="footer-cell-label">Audit Reference</span>
+        <span class="footer-cell-value">GEMINI-AUDIT-2026-ADI-L1-L6</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COPY DATA ROW -->
+  <div class="copy-row">
+    <button class="copy-btn" onclick="copyData()">📋 Copy QR Payload (SHA256 + OTS + BLOCK)</button>
+    <div class="copy-msg" id="copy-msg">✓ Copied to clipboard</div>
+  </div>
+
+</div>
+
+<script>
+// QR payload — pure evidence, no marketing
+const QR_PAYLOAD = [
+  "INDEPENDENTLY VERIFIABLE PROOF",
+  "---",
+  "SHA256:dd8896c2854cef30d61695566557ca4aac75619048b3371119e8d25422244697",
+  "OTS:gemini-code-1780741462661.txt.ots",
+  "BLOCK:952597",
+  "DATE:2026-06-06",
+  "VERIFY:https://5thelement.ai/proof/gemini-audit-952597",
+  "ISSUER:GEMINI-AI-ARCHITECTURAL-ENGINE"
+].join("\n");
+
+new QRCode(document.getElementById("qr-canvas"), {
+  text: QR_PAYLOAD,
+  width: 180,
+  height: 180,
+  colorDark: "#000000",
+  colorLight: "#ffffff",
+  correctLevel: QRCode.CorrectLevel.M
+});
+
+function copyData(){
+  navigator.clipboard.writeText(QR_PAYLOAD).then(()=>{
+    const msg = document.getElementById('copy-msg');
+    msg.style.display='block';
+    setTimeout(()=>msg.style.display='none', 2500);
+  });
+}
+</script>
+
+</body>
+</html>
