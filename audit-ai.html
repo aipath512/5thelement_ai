@@ -88,7 +88,18 @@ p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--tm);line-height:1.7;}
 /* HERO */
 #hero{background:#050a0f;padding:130px 0 88px;min-height:80vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;}
 #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -10%,rgba(77,142,245,.12) 0%,transparent 70%);pointer-events:none;}
-.hero-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--y);background:rgba(245,216,66,.08);border:1px solid rgba(245,216,66,.25);padding:5px 14px;border-radius:100px;margin-bottom:28px;}
+/* BREADCRUMB */
+.breadcrumb{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;
+  color:var(--td);
+  justify-content:center;
+  margin-bottom:20px;
+}
+.breadcrumb a{color:var(--td);transition:color .18s;}
+.breadcrumb a:hover{color:var(--tm);}
+.breadcrumb-sep{color:var(--td);font-size:10px;}
+.breadcrumb-current{color:var(--tm);}
 .hero-dot{width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;}
 h1.hero-h1{font-family:var(--serif);font-size:clamp(38px,6.5vw,80px);font-weight:700;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:24px;}
 h1.hero-h1 em{font-style:italic;color:var(--y);}
@@ -349,6 +360,13 @@ h1.hero-h1 em{font-style:italic;color:var(--y);}
     <div class="rv">
       <div class="hero-tag"><span class="hero-dot"></span>Free · No Commitment · Results in Minutes</div>
     </div>
+
+    <nav class="breadcrumb rv" aria-label="Breadcrumb">
+      <a href="/">5thelement.ai</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">AI Audit</span>
+    </nav>
+
     <h1 class="hero-h1 rv d1">
       Find Out Why AI Recommends<br>
       Your Competitors<br>
@@ -918,6 +936,7 @@ function runSim(){
 }
 
 document.getElementById('sim-url').addEventListener('keydown', e=>{ if(e.key==='Enter') runSim(); });
+const els=document.querySelectorAll('.rv');
 const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
 els.forEach(el=>ob.observe(el));
 document.querySelectorAll('#hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),80+i*110));
@@ -928,6 +947,10 @@ window.addEventListener('scroll',()=>{
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},
+    {"@type":"ListItem","position":2,"name":"AI Audit","item":"https://5thelement.ai/audit-ai"}
+  ]},
   {"@type":"WebPage","@id":"https://5thelement.ai/audit-ai","url":"https://5thelement.ai/audit-ai","name":"AI Audit — See Exactly How AI Sees Your Business","description":"Free AI Audit. 167 signals. 5 dimensions. Find out why ChatGPT, Perplexity and Claude recommend your competitors instead of you.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"AI Audit","item":"https://5thelement.ai/audit-ai"}]}},
   {"@type":"Service","name":"AI Visibility Audit","provider":{"@type":"Organization","name":"5thelement.ai"},"description":"Free AI audit checking 167 signals across 5 dimensions: Discoverability, Understanding, Trust, Signal Strength and EU AI Act Compliance.","offers":[{"@type":"Offer","price":"0","priceCurrency":"EUR","name":"Free AI Audit"},{"@type":"Offer","price":"149","priceCurrency":"EUR","name":"Full Visibility Report"},{"@type":"Offer","price":"2500","priceCurrency":"EUR","name":"Managed ADI™ Deployment"}]},
   {"@type":"FAQPage","mainEntity":[
