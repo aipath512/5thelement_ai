@@ -1,11 +1,735 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MKT-AI Demo</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MKT-AI — AI-Powered Marketing That Attracts, Converts and Compounds | 5thelement.ai</title>
+<meta name="description" content="Stop chasing traffic. Build a marketing engine that works 24/7 — attracting buyers through AI answers, converting them with precision content, and compounding authority over time."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://5thelement.ai/mkt-ai"/>
+<meta property="og:title" content="MKT-AI — AI-Powered Marketing for B2B"/>
+<meta property="og:description" content="Attract buyers through AI answers. Convert with precision content. Compound authority over time."/>
+<meta property="og:url" content="https://5thelement.ai/mkt-ai"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{background:#050a0f;color:#f0f4ff;font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+::selection{background:#f5d842;color:#050a0f;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#050a0f;}
+::-webkit-scrollbar-thumb{background:#f5d842;border-radius:2px;}
+:root{
+  --y:#f5d842;--b:#050a0f;--s1:#0a1220;--s2:#0d1828;--s3:#111f32;
+  --bd:rgba(255,255,255,0.08);--bdhi:rgba(255,255,255,0.16);
+  --tm:#b0bcd4;--td:#5a6a84;--gr:#34d399;--bl:#4d8ef5;--rd:#f87171;
+  --serif:'Playfair Display',Georgia,serif;--mono:'JetBrains Mono',monospace;
+  --r:10px;--rl:18px;--max:1140px;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.divider{height:1px;background:var(--bd);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#050a0f;border-bottom:1px solid rgba(255,255,255,0.08);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:6px;}
+.nav-logo{font-family:var(--serif);font-size:16px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.nav-logo span{color:var(--bl);}
+.logo-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--y);color:#050a0f;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:16px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;color:var(--tm);white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-actions{display:flex;gap:7px;align-items:center;flex-shrink:0;}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;white-space:nowrap;}
+.btn-ghost{background:transparent;color:var(--tm);border:1px solid var(--bd);}
+.btn-ghost:hover{color:#fff;border-color:var(--bdhi);}
+.btn-yellow{background:var(--y);color:#050a0f;}
+.btn-yellow:hover{background:#fce94f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,216,66,.3);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+.btn-outline:hover{background:rgba(255,255,255,.06);}
+.btn-lg{font-size:15px;padding:14px 28px;border-radius:10px;}
+@media(max-width:600px){.nav-links{display:none;}.nav-actions .btn-ghost{display:none;}}
+
+/* SECTIONS */
+.section{padding:88px 0;background:#050a0f;border-top:1px solid rgba(255,255,255,0.06);}
+.section-alt{padding:88px 0;background:#080e1a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.section-label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--y);border-radius:1px;}
+h2.display{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:16px;}
+h2.display em{font-style:italic;color:var(--y);}
+p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--tm);line-height:1.7;}
+.section-header{max-width:680px;margin-bottom:52px;}
+.section-header.centered{margin:0 auto 52px;text-align:center;}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--td);justify-content:center;margin-bottom:20px;}
+.breadcrumb a{color:var(--td);transition:color .18s;}
+.breadcrumb a:hover{color:var(--tm);}
+.breadcrumb-sep{font-size:10px;}
+.breadcrumb-current{color:var(--tm);}
+
+/* HERO */
+#hero{background:#050a0f;padding:130px 0 88px;min-height:80vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -10%,rgba(251,191,36,.09) 0%,transparent 70%);pointer-events:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--y);background:rgba(245,216,66,.08);border:1px solid rgba(245,216,66,.25);padding:5px 14px;border-radius:100px;margin-bottom:28px;}
+.hero-dot{width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;}
+h1.hero-h1{font-family:var(--serif);font-size:clamp(38px,6.5vw,80px);font-weight:700;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:24px;}
+h1.hero-h1 em{font-style:italic;color:var(--y);}
+.hero-sub{font-size:clamp(16px,1.8vw,20px);color:var(--tm);line-height:1.65;max-width:620px;margin:0 auto 40px;}
+.hero-proof{font-family:var(--mono);font-size:clamp(11px,1.2vw,13px);letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:40px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:52px;}
+.trust-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;}
+.trust-item{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--td);}
+.trust-item::before{content:'✓';color:var(--gr);}
+
+/* PROBLEM VS SOLUTION */
+.pvsol{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:0;}
+.pvsol-card{border-radius:var(--rl);padding:36px 30px;border:1px solid;}
+.pvsol-card.prob{background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.2);}
+.pvsol-card.sol{background:rgba(52,211,153,.05);border-color:rgba(52,211,153,.2);}
+.pvsol-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.pvsol-card.prob .pvsol-label{color:var(--rd);}
+.pvsol-card.sol .pvsol-label{color:var(--gr);}
+.pvsol-card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:#fff;margin-bottom:18px;}
+.pvsol-items{display:flex;flex-direction:column;gap:10px;}
+.pvsol-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--tm);line-height:1.5;}
+.pvsol-item .ico{flex-shrink:0;font-size:13px;margin-top:1px;}
+@media(max-width:680px){.pvsol{grid-template-columns:1fr;}}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.svc-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:30px 24px;position:relative;overflow:hidden;transition:border-color .18s,transform .18s;}
+.svc-card:hover{border-color:var(--bdhi);transform:translateY(-3px);}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.svc-card:nth-child(1)::before{background:var(--y);}
+.svc-card:nth-child(2)::before{background:var(--bl);}
+.svc-card:nth-child(3)::before{background:var(--gr);}
+.svc-card:nth-child(4)::before{background:#fb923c;}
+.svc-card:nth-child(5)::before{background:#a78bfa;}
+.svc-card:nth-child(6)::before{background:var(--rd);}
+.svc-icon{font-size:28px;margin-bottom:14px;}
+.svc-title{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;margin-bottom:10px;}
+.svc-desc{font-size:13.5px;color:var(--tm);line-height:1.65;margin-bottom:14px;}
+.svc-signals{display:flex;flex-direction:column;gap:4px;}
+.svc-signal{font-family:var(--mono);font-size:10.5px;color:var(--td);display:flex;align-items:center;gap:6px;}
+.svc-signal::before{content:'→';color:var(--y);}
+@media(max-width:860px){.services-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.services-grid{grid-template-columns:1fr;}}
+
+/* FUNNEL */
+.funnel{display:flex;flex-direction:column;gap:0;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;}
+.funnel-stage{display:grid;grid-template-columns:180px 1fr auto;gap:24px;align-items:center;padding:24px 28px;border-bottom:1px solid var(--bd);transition:background .18s;}
+.funnel-stage:last-child{border-bottom:none;}
+.funnel-stage:hover{background:var(--s2);}
+.funnel-stage-label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;text-align:center;}
+.funnel-stage:nth-child(1) .funnel-stage-label{color:#fbbf24;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);}
+.funnel-stage:nth-child(2) .funnel-stage-label{color:#fb923c;background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.2);}
+.funnel-stage:nth-child(3) .funnel-stage-label{color:var(--bl);background:rgba(77,142,245,.1);border:1px solid rgba(77,142,245,.2);}
+.funnel-stage:nth-child(4) .funnel-stage-label{color:var(--gr);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);}
+.funnel-stage:nth-child(5) .funnel-stage-label{color:var(--y);background:rgba(245,216,66,.1);border:1px solid rgba(245,216,66,.2);}
+.funnel-stage-content h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px;}
+.funnel-stage-content p{font-size:13px;color:var(--tm);line-height:1.5;}
+.funnel-stage-tool{font-family:var(--mono);font-size:10px;color:var(--td);text-align:right;white-space:nowrap;}
+@media(max-width:680px){.funnel-stage{grid-template-columns:1fr;gap:10px;}.funnel-stage-tool{display:none;}}
+
+/* CONTENT ENGINE */
+.engine-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.eng-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:24px 20px;}
+.eng-icon{font-size:24px;margin-bottom:12px;}
+.eng-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:7px;}
+.eng-desc{font-size:13px;color:var(--tm);line-height:1.6;}
+.eng-output{margin-top:12px;font-family:var(--mono);font-size:10px;color:var(--y);display:flex;align-items:center;gap:5px;}
+.eng-output::before{content:'→';}
+@media(max-width:680px){.engine-grid{grid-template-columns:1fr;}}
+
+/* RESULTS */
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.result-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 20px;text-align:center;}
+.result-num{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--y);line-height:1;margin-bottom:8px;}
+.result-label{font-size:13px;font-weight:500;color:#fff;margin-bottom:6px;}
+.result-desc{font-size:12px;color:var(--tm);line-height:1.5;}
+@media(max-width:760px){.results-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:440px){.results-grid{grid-template-columns:1fr;}}
+
+/* PLANS */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.plan-card{border-radius:var(--rl);padding:32px 26px;border:1px solid;display:flex;flex-direction:column;gap:12px;position:relative;}
+.plan-card.starter{background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2);}
+.plan-card.growth{background:rgba(77,142,245,.06);border-color:rgba(77,142,245,.3);}
+.plan-card.authority{background:rgba(245,216,66,.04);border-color:rgba(245,216,66,.2);}
+.plan-badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;display:inline-block;width:fit-content;}
+.plan-card.starter .plan-badge{color:var(--gr);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07);}
+.plan-card.growth .plan-badge{color:var(--bl);border-color:rgba(77,142,245,.3);background:rgba(77,142,245,.07);}
+.plan-card.authority .plan-badge{color:var(--y);border-color:rgba(245,216,66,.3);background:rgba(245,216,66,.07);}
+.plan-name{font-family:var(--serif);font-size:24px;font-weight:700;color:#fff;}
+.plan-price{font-family:var(--mono);font-size:26px;font-weight:700;}
+.plan-card.starter .plan-price{color:var(--gr);}
+.plan-card.growth .plan-price{color:var(--bl);}
+.plan-card.authority .plan-price{color:var(--y);}
+.plan-period{font-family:var(--mono);font-size:11px;color:var(--td);}
+.plan-divider{height:1px;background:var(--bd);}
+.plan-features{display:flex;flex-direction:column;gap:8px;}
+.plan-feature{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--tm);line-height:1.4;}
+.plan-feature::before{content:'✓';color:var(--gr);font-size:12px;flex-shrink:0;margin-top:1px;}
+.plan-feature.na{color:var(--td);}
+.plan-feature.na::before{content:'—';color:var(--td);}
+.plan-btn{display:block;text-align:center;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .18s;margin-top:auto;}
+.plan-card.starter .plan-btn{background:rgba(52,211,153,.12);color:var(--gr);border:1px solid rgba(52,211,153,.25);}
+.plan-card.starter .plan-btn:hover{background:rgba(52,211,153,.2);}
+.plan-card.growth .plan-btn{background:var(--bl);color:#fff;}
+.plan-card.growth .plan-btn:hover{background:#6ba3ff;transform:translateY(-1px);}
+.plan-card.authority .plan-btn{background:rgba(245,216,66,.12);color:var(--y);border:1px solid rgba(245,216,66,.25);}
+.plan-card.authority .plan-btn:hover{background:rgba(245,216,66,.2);}
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--bl);color:#fff;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;white-space:nowrap;}
+@media(max-width:760px){.plans{grid-template-columns:1fr;}}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:820px;}
+.faq-item{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:20px 24px;}
+.faq-q{font-size:15px;font-weight:600;color:#fff;margin-bottom:10px;}
+.faq-a{font-size:14px;color:var(--tm);line-height:1.7;}
+
+/* CTA */
+#cta{background:#04080f;padding:96px 0;text-align:center;border-top:1px solid rgba(245,216,66,.15);position:relative;overflow:hidden;}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(251,191,36,.08) 0%,transparent 68%);pointer-events:none;}
+.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+#cta h2{font-family:var(--serif);font-size:clamp(28px,5vw,54px);font-weight:700;line-height:1.1;color:#fff;margin-bottom:14px;}
+#cta h2 em{font-style:italic;color:var(--y);}
+#cta p{font-size:17px;color:rgba(255,255,255,.72);line-height:1.7;max-width:500px;margin:0 auto 36px;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px;}
+.cta-trust{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+.cta-trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.52);}
+.cta-trust-item::before{content:'✓';color:var(--gr);}
+
+/* FOOTER */
+#footer{background:#050a0f;border-top:1px solid var(--bd);padding:40px 0 28px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.footer-legal{font-family:var(--mono);font-size:10px;color:var(--td);line-height:1.8;}
+.footer-anchors{display:flex;gap:7px;}
+.anchor-pill{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;}
+.anchor-pill.btc{color:var(--y);border-color:rgba(245,216,66,.25);background:rgba(245,216,66,.07);}
+.anchor-pill.eu{color:var(--bl);border-color:rgba(77,142,245,.2);background:rgba(77,142,245,.07);}
+
+@media(max-width:768px){
+  h1.hero-h1{font-size:36px!important;}
+  h2.display{font-size:26px!important;}
+  p.lead{font-size:16px!important;}
+  .btn-lg{font-size:15px!important;padding:13px 22px!important;}
+}
+</style>
 </head>
 <body>
-<h1>MKT-AI Page</h1>
-<p>This file was generated for download. Replace with the full HTML content from the conversation.</p>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">5thelement<span>.ai</span><span class="logo-badge">ADI™</span></a>
+      <ul class="nav-links">
+        <li><a href="/audit-ai">Audit</a></li>
+        <li><a href="/ai-ready">AI-Ready</a></li>
+        <li><a href="/mkt-ai" class="active">MKT-AI</a></li>
+        <li><a href="/crm-ai">CRM-AI</a></li>
+        <li><a href="/proof">Proof</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/audit-ai" class="btn btn-ghost">Free Audit</a>
+        <a href="/audit-ai" class="btn btn-yellow">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- §1 HERO -->
+<section id="hero">
+  <div class="container">
+
+    <div class="rv">
+      <div class="hero-tag"><span class="hero-dot"></span>AI Marketing Infrastructure</div>
+    </div>
+
+    <nav class="breadcrumb rv" aria-label="Breadcrumb">
+      <a href="/">5thelement.ai</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/ai-ready">AI-Ready</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">MKT-AI</span>
+    </nav>
+
+    <h1 class="hero-h1 rv d1">
+      Marketing That Works<br>
+      While You Sleep —<br>
+      <em>Powered by AI.</em>
+    </h1>
+
+    <p class="hero-sub rv d2">
+      Stop chasing traffic. Build a marketing engine that attracts buyers through AI answers,
+      converts them with precision content, and compounds your authority over time — automatically.
+    </p>
+
+    <p class="hero-proof rv d2">
+      Attract · Promote · Sell · Grow — 24/7/365
+    </p>
+
+    <div class="hero-actions rv d3">
+      <a href="/audit-ai" class="btn btn-yellow btn-lg">
+        Start With a Free Audit →
+      </a>
+      <a href="#services" class="btn btn-outline btn-lg">See What's Included</a>
+    </div>
+
+    <div class="trust-bar rv d3">
+      <span class="trust-item">No agency retainer</span>
+      <span class="trust-item">AI-first content strategy</span>
+      <span class="trust-item">Intent-mapped campaigns</span>
+      <span class="trust-item">Compounding authority</span>
+      <span class="trust-item">Human-in-the-loop control</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §2 PROBLEM VS SOLUTION -->
+<section class="section-alt" id="problem">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 01 — The Marketing Shift</p>
+      <h2 class="display">Traditional marketing<br><em>is becoming invisible.</em></h2>
+      <p class="lead">Buyers no longer start with Google. They start with AI. If your marketing isn't built for the Answer Economy, you're spending budget on an audience that's already moved on.</p>
+    </div>
+    <div class="pvsol rv d1">
+      <div class="pvsol-card prob">
+        <div class="pvsol-label">❌ Traditional Marketing</div>
+        <h3>Built for Traffic. Broken for AI.</h3>
+        <div class="pvsol-items">
+          <div class="pvsol-item"><span class="ico">✕</span>Keyword-stuffed content AI engines ignore</div>
+          <div class="pvsol-item"><span class="ico">✕</span>Ad spend that stops working the moment you pause</div>
+          <div class="pvsol-item"><span class="ico">✕</span>Campaigns optimised for clicks, not citations</div>
+          <div class="pvsol-item"><span class="ico">✕</span>Content that ranks on Google but not in AI answers</div>
+          <div class="pvsol-item"><span class="ico">✕</span>No proof layer — just assertions no AI will cite</div>
+          <div class="pvsol-item"><span class="ico">✕</span>Buyers pre-filtered out before they see your brand</div>
+        </div>
+      </div>
+      <div class="pvsol-card sol">
+        <div class="pvsol-label">✓ MKT-AI Infrastructure</div>
+        <h3>Built for the Answer Economy.</h3>
+        <div class="pvsol-items">
+          <div class="pvsol-item"><span class="ico">✓</span>Structured content AI engines cite and recommend</div>
+          <div class="pvsol-item"><span class="ico">✓</span>Authority that compounds permanently with each signal</div>
+          <div class="pvsol-item"><span class="ico">✓</span>Campaigns mapped to buyer intent across all funnel stages</div>
+          <div class="pvsol-item"><span class="ico">✓</span>Content that appears in AI answers when buyers search</div>
+          <div class="pvsol-item"><span class="ico">✓</span>Cryptographic proof layer AI engines trust and verify</div>
+          <div class="pvsol-item"><span class="ico">✓</span>Your brand on shortlists before buyers contact anyone</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §3 SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 02 — MKT-AI Services</p>
+      <h2 class="display">Six marketing engines.<br><em>One integrated system.</em></h2>
+      <p class="lead">Each service operates independently — or as part of the full MKT-AI stack. Every output feeds the next, compounding your authority and citation frequency over time.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card rv">
+        <div class="svc-icon">🎯</div>
+        <div class="svc-title">AI Content Strategy</div>
+        <div class="svc-desc">A complete content architecture built for AI citation — not just Google ranking. Intent-mapped, entity-structured, and designed to answer the exact questions your buyers are asking AI.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">Buyer intent mapping (6 funnel stages)</div>
+          <div class="svc-signal">Topic cluster architecture</div>
+          <div class="svc-signal">FAQ block library (machine-readable)</div>
+          <div class="svc-signal">Multilingual intent coverage</div>
+        </div>
+      </div>
+
+      <div class="svc-card rv d1">
+        <div class="svc-icon">✍️</div>
+        <div class="svc-title">AI-Optimised Content Production</div>
+        <div class="svc-desc">Content written and structured for AI citation — not just human readers. Every piece includes FAQPage schema, entity references, and proof anchors that make it citable by ChatGPT, Perplexity and Claude.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">Schema-marked articles and guides</div>
+          <div class="svc-signal">Entity-explicit copywriting</div>
+          <div class="svc-signal">AI-extractable key claim blocks</div>
+          <div class="svc-signal">Structured case studies with proof</div>
+        </div>
+      </div>
+
+      <div class="svc-card rv d2">
+        <div class="svc-icon">📡</div>
+        <div class="svc-title">Signal Syndication</div>
+        <div class="svc-desc">Your content and signals distributed across trusted third-party sources — building the cross-web corroboration AI engines require before they will confidently cite your business.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">Third-party citation building</div>
+          <div class="svc-signal">Directory and profile optimisation</div>
+          <div class="svc-signal">Press and media signal layer</div>
+          <div class="svc-signal">Cross-domain entity corroboration</div>
+        </div>
+      </div>
+
+      <div class="svc-card rv">
+        <div class="svc-icon">🔁</div>
+        <div class="svc-title">AI-Driven Lead Nurture</div>
+        <div class="svc-desc">Automated sequences that match buyer intent signals to precision content — advancing prospects through the funnel without manual intervention. Context-aware, not generic drip.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">Intent-triggered email sequences</div>
+          <div class="svc-signal">Buyer stage content matching</div>
+          <div class="svc-signal">Behavioural signal integration</div>
+          <div class="svc-signal">WhatsApp + email multi-channel</div>
+        </div>
+      </div>
+
+      <div class="svc-card rv d1">
+        <div class="svc-icon">📊</div>
+        <div class="svc-title">AI Visibility Monitoring</div>
+        <div class="svc-desc">Continuous tracking of your citation frequency across 5 major AI engines — with monthly reports showing where you are cited, where competitors are winning, and what signals to prioritise next.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">Monthly AI citation report</div>
+          <div class="svc-signal">Competitor citation tracking</div>
+          <div class="svc-signal">Signal decay detection</div>
+          <div class="svc-signal">Priority fix recommendations</div>
+        </div>
+      </div>
+
+      <div class="svc-card rv d2">
+        <div class="svc-icon">🎬</div>
+        <div class="svc-title">VSL-AI & Video Content</div>
+        <div class="svc-desc">Video Sales Letters and short-form video content scripted and structured for AI citation — with transcripts, schema markup, and entity references that turn video content into AI-readable signals.</div>
+        <div class="svc-signals">
+          <div class="svc-signal">AI-scripted VSL sequences</div>
+          <div class="svc-signal">Video transcript schema markup</div>
+          <div class="svc-signal">Short-form content calendar</div>
+          <div class="svc-signal">Video entity references</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- §4 FUNNEL STAGES -->
+<section class="section-alt" id="funnel">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 03 — The MKT-AI Funnel</p>
+      <h2 class="display">Every stage covered.<br><em>Every buyer captured.</em></h2>
+      <p class="lead">MKT-AI maps your marketing to five buyer funnel stages — matching the right content, signal, and CTA to where each buyer is in their decision journey.</p>
+    </div>
+    <div class="funnel rv d1">
+      <div class="funnel-stage">
+        <div class="funnel-stage-label">Awareness</div>
+        <div class="funnel-stage-content">
+          <h4>"Why is AI recommending my competitors instead of me?"</h4>
+          <p>Buyer discovers the problem. AI-optimised educational content positions your brand as the authority on the Answer Economy before they know they need you.</p>
+        </div>
+        <div class="funnel-stage-tool">Blog · AI content · Signal layer</div>
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-stage-label">Interest</div>
+        <div class="funnel-stage-content">
+          <h4>"What is AI visibility and how does it work?"</h4>
+          <p>Buyer explores solutions. Structured guides, FAQ content and intent-mapped explainers pull them deeper into your ecosystem — and into AI shortlists for your category.</p>
+        </div>
+        <div class="funnel-stage-tool">Guides · FAQ schema · intents.json</div>
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-stage-label">Consideration</div>
+        <div class="funnel-stage-content">
+          <h4>"How does 5thelement.ai compare to other options?"</h4>
+          <p>Buyer evaluates vendors. Case studies, proof layers and comparison content ensure you are cited as the verified, credible choice — not just another option.</p>
+        </div>
+        <div class="funnel-stage-tool">Case studies · proof.json · Reviews</div>
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-stage-label">Decision</div>
+        <div class="funnel-stage-content">
+          <h4>"How do I get started with AI-Ready?"</h4>
+          <p>Buyer is ready to act. Clear CTAs, pricing pages and audit tools convert intent into action — while the AI co-pilot qualifies and advances the conversation automatically.</p>
+        </div>
+        <div class="funnel-stage-tool">Audit · Pricing · AI co-pilot</div>
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-stage-label">Advocacy</div>
+        <div class="funnel-stage-content">
+          <h4>"This worked — who should I tell?"</h4>
+          <p>Client becomes a signal source. Reviews, case studies and testimonials are structured with schema markup — feeding back into your proof layer and strengthening AI citations.</p>
+        </div>
+        <div class="funnel-stage-tool">Reviews · Referrals · Schema</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §5 CONTENT ENGINE -->
+<section class="section" id="engine">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 04 — The Content Engine</p>
+      <h2 class="display">Content that compounds.<br><em>Not content that decays.</em></h2>
+      <p class="lead">Traditional content decays — yesterday's blog post loses rank and becomes invisible. MKT-AI content compounds — each piece strengthens your entity signals, builds citations, and increases your AI recommendation frequency over time.</p>
+    </div>
+    <div class="engine-grid rv d1">
+      <div class="eng-card">
+        <div class="eng-icon">📝</div>
+        <div class="eng-title">V1 — Human-First Content</div>
+        <div class="eng-desc">Zero jargon. Written for the business owner who doesn't know what ADI™ means — yet. Emotional hooks, clear problem framing, free audit CTA.</div>
+        <div class="eng-output">Awareness blog posts, social content</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-icon">🤖</div>
+        <div class="eng-title">V2 — AEO/GEO Structured</div>
+        <div class="eng-desc">AI-extractable. Entity-explicit. Structured answers to exact buyer questions. Schema markup embedded. Designed to be cited verbatim by AI engines.</div>
+        <div class="eng-output">FAQPage schema, intents.json entries</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-icon">💰</div>
+        <div class="eng-title">V3 — B2B ROI Content</div>
+        <div class="eng-desc">Revenue risk framing. Category dominance positioning. For the CFO, the board, the decision committee. Makes the business case for AI visibility investment.</div>
+        <div class="eng-output">Case studies, ROI reports, proposals</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-icon">🔐</div>
+        <div class="eng-title">Proof Layer Content</div>
+        <div class="eng-desc">Every content asset anchored to your SHA-256 proof layer. Claims are verifiable. Dates are Bitcoin-timestamped. AI engines can cite with confidence.</div>
+        <div class="eng-output">ai-proof.json, OTS anchors</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-icon">🌐</div>
+        <div class="eng-title">Multilingual Content</div>
+        <div class="eng-desc">EN/FR/RO/DE intent mapping ensures your content appears in AI answers across all your target markets — not just the language you publish in.</div>
+        <div class="eng-output">intents.json multilingual layers</div>
+      </div>
+      <div class="eng-card">
+        <div class="eng-icon">📈</div>
+        <div class="eng-title">Signal Compounding</div>
+        <div class="eng-desc">Each content piece feeds back into your ADI™ signal layer — strengthening entity signals, increasing citation frequency, and widening your competitive moat.</div>
+        <div class="eng-output">Monthly signal reinforcement cycle</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §6 RESULTS -->
+<section class="section-alt" id="results">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 05 — What To Expect</p>
+      <h2 class="display">Measurable outcomes.<br><em>Not vanity metrics.</em></h2>
+    </div>
+    <div class="results-grid rv d1">
+      <div class="result-card">
+        <div class="result-num">24h</div>
+        <div class="result-label">First signals live</div>
+        <div class="result-desc">Your AI signal layer deployed and indexed by AI crawlers within 24 hours of deployment.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">72h</div>
+        <div class="result-label">First citations appear</div>
+        <div class="result-desc">AI engines begin updating citation indexes within 24–72 hours of signal deployment.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">30d</div>
+        <div class="result-label">Citation frequency measurable</div>
+        <div class="result-desc">By day 30, your citation frequency across 5 AI engines is tracked and reported monthly.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">∞</div>
+        <div class="result-label">Authority compounds</div>
+        <div class="result-desc">Unlike ad spend, AI authority signals compound over time. Every signal strengthens the next.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §7 PLANS -->
+<section class="section" id="plans">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 06 — MKT-AI Plans</p>
+      <h2 class="display">Start lean.<br><em>Scale as you grow.</em></h2>
+      <p class="lead">Three plans — from foundational AI content infrastructure to full managed marketing operations.</p>
+    </div>
+    <div class="plans rv d1">
+
+      <div class="plan-card starter">
+        <span class="plan-badge">Starter</span>
+        <div class="plan-name">AI Content Foundation</div>
+        <div class="plan-price">€1,200</div>
+        <div class="plan-period">One-time · Delivered in 5 days</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature">AI content strategy document</div>
+          <div class="plan-feature">Intent mapping (6 funnel stages)</div>
+          <div class="plan-feature">10 AI-optimised content briefs</div>
+          <div class="plan-feature">FAQPage schema for top 20 questions</div>
+          <div class="plan-feature">intents.json multilingual (EN + 1 lang)</div>
+          <div class="plan-feature">Citation-ready content templates</div>
+          <div class="plan-feature na">Content production</div>
+          <div class="plan-feature na">Signal syndication</div>
+          <div class="plan-feature na">Monthly monitoring</div>
+        </div>
+        <a href="/audit-ai" class="plan-btn">Get Started →</a>
+      </div>
+
+      <div class="plan-card growth">
+        <span class="popular-badge">Most Popular</span>
+        <span class="plan-badge">Growth</span>
+        <div class="plan-name">AI Marketing Engine</div>
+        <div class="plan-price">€2,400<span style="font-size:15px;font-weight:400;">/mo</span></div>
+        <div class="plan-period">Monthly · 3-month minimum</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature">Everything in Starter</div>
+          <div class="plan-feature">8 AI-optimised articles/month</div>
+          <div class="plan-feature">Full intents.json (EN/FR/RO/DE)</div>
+          <div class="plan-feature">Signal syndication (10 sources)</div>
+          <div class="plan-feature">Monthly AI citation report</div>
+          <div class="plan-feature">Lead nurture sequence (email + WA)</div>
+          <div class="plan-feature">Competitor citation tracking</div>
+          <div class="plan-feature na">VSL-AI production</div>
+        </div>
+        <a href="/audit-ai" class="plan-btn">Start Growing →</a>
+      </div>
+
+      <div class="plan-card authority">
+        <span class="plan-badge">Authority</span>
+        <div class="plan-name">Full MKT-AI Stack</div>
+        <div class="plan-price">From €4,800<span style="font-size:15px;font-weight:400;">/mo</span></div>
+        <div class="plan-period">Monthly · After evaluation</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature">Everything in Growth</div>
+          <div class="plan-feature">16+ content pieces/month</div>
+          <div class="plan-feature">VSL-AI production (2/month)</div>
+          <div class="plan-feature">Full signal syndication (25+ sources)</div>
+          <div class="plan-feature">AI co-pilot for lead qualification</div>
+          <div class="plan-feature">Weekly citation monitoring</div>
+          <div class="plan-feature">SHA-256 + Bitcoin proof anchoring</div>
+          <div class="plan-feature">Dedicated account strategist</div>
+        </div>
+        <a href="/audit-ai" class="plan-btn">Request Evaluation →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- §8 FAQ -->
+<section class="section-alt" id="faq">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 07 — Questions</p>
+      <h2 class="display">Everything you<br><em>need to know.</em></h2>
+    </div>
+    <div class="faq-list rv d1">
+      <div class="faq-item">
+        <div class="faq-q">How is MKT-AI different from a traditional marketing agency?</div>
+        <div class="faq-a">A traditional agency optimises for clicks, impressions, and Google rankings — metrics that matter less when buyers are using AI to research and shortlist vendors. MKT-AI optimises for AI citation frequency — making your business the answer AI engines give when buyers search for your category. Every piece of content we produce is structured, entity-explicit, and proof-anchored so AI models can cite it with confidence.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to already have AI-Ready deployed?</div>
+        <div class="faq-a">AI-Ready (the ADI™ signal layer) and MKT-AI work best together — the signal layer gives AI engines the foundation they need to find and trust your business, while MKT-AI builds the content and citation network on top. However, MKT-AI services like content strategy, production, and intent mapping can begin before the ADI™ layer is deployed. We recommend running a free AI audit first so we can prioritise correctly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long before I see results in AI answers?</div>
+        <div class="faq-a">First signals go live within 24 hours of deployment. AI engines begin updating their citation indexes within 24–72 hours. You will see measurable citation frequency within 30 days. Authority compounds progressively — month 3 results are significantly stronger than month 1. Unlike paid advertising, every signal we build persists and strengthens over time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the content produced by AI or by humans?</div>
+        <div class="faq-a">Both — strategically combined. Our content strategy and entity architecture is built by our team. Content production uses AI tools under human editorial control to maintain quality, consistency and brand voice. Every piece is reviewed, structured with schema markup, and anchored to your proof layer before publication. We never publish raw AI output.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can MKT-AI work alongside my existing marketing team?</div>
+        <div class="faq-a">Yes. MKT-AI is designed to augment existing teams, not replace them. We can operate as a specialist AI marketing layer on top of your existing agency or in-house team — providing the AI-specific infrastructure (signal layer, schema markup, intent mapping, proof anchoring) that most marketing teams don't have the expertise to build themselves.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §9 CTA -->
+<section id="cta">
+  <div class="cta-inner container">
+    <div class="rv">
+      <div style="display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 14px;border-radius:100px;margin-bottom:26px;">
+        <span style="width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;display:inline-block;"></span>
+        Start with a free audit · No commitment
+      </div>
+    </div>
+    <h2 class="rv">Your competitors are<br><em>already in AI answers.</em></h2>
+    <p class="rv">Find out exactly where your marketing gaps are — then build the engine that puts you ahead of them. Free audit. Results in 3 minutes.</p>
+    <div class="cta-actions rv">
+      <a href="/audit-ai" class="btn btn-yellow btn-lg">
+        Run My Free Audit →
+      </a>
+      <a href="#plans" class="btn btn-outline btn-lg">View Plans</a>
+    </div>
+    <div class="cta-trust rv">
+      <span class="cta-trust-item">No agency retainer to start</span>
+      <span class="cta-trust-item">Content live in 5 days</span>
+      <span class="cta-trust-item">AI citations in 72 hours</span>
+      <span class="cta-trust-item">Authority compounds forever</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        © 2025–2026 AiVenture S.R.L. · CUI 51415878 · București, România<br>
+        "AI Delivery Infrastructure™" and "ADI™" are registered trademarks of AiVenture S.R.L.<br>
+        SHA-256 proof supports readiness. Does not certify regulatory compliance.
+      </div>
+      <div class="footer-anchors">
+        <span class="anchor-pill btc">₿ BTC Anchored</span>
+        <span class="anchor-pill eu">EU AI Act Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const els=document.querySelectorAll('.rv');
+const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+els.forEach(el=>ob.observe(el));
+document.querySelectorAll('#hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),80+i*110));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.borderBottomColor=window.scrollY>20?'rgba(255,255,255,0.12)':'rgba(255,255,255,0.08)';
+},{passive:true});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},
+    {"@type":"ListItem","position":2,"name":"AI-Ready","item":"https://5thelement.ai/ai-ready"},
+    {"@type":"ListItem","position":3,"name":"MKT-AI","item":"https://5thelement.ai/mkt-ai"}
+  ]},
+  {"@type":"WebPage","@id":"https://5thelement.ai/mkt-ai","url":"https://5thelement.ai/mkt-ai","name":"MKT-AI — AI-Powered Marketing That Attracts, Converts and Compounds","description":"Stop chasing traffic. Build a marketing engine that attracts buyers through AI answers, converts with precision content, and compounds authority over time."},
+  {"@type":"Service","name":"MKT-AI","provider":{"@type":"Organization","name":"5thelement.ai","url":"https://5thelement.ai"},"description":"AI marketing infrastructure: content strategy, AI-optimised production, signal syndication, lead nurture, visibility monitoring and VSL-AI.","offers":[{"@type":"Offer","price":"1200","priceCurrency":"EUR","name":"AI Content Foundation"},{"@type":"Offer","price":"2400","priceCurrency":"EUR","name":"AI Marketing Engine (monthly)"},{"@type":"Offer","price":"4800","priceCurrency":"EUR","name":"Full MKT-AI Stack (monthly)"}]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is MKT-AI different from a traditional marketing agency?","acceptedAnswer":{"@type":"Answer","text":"MKT-AI optimises for AI citation frequency — making your business the answer AI engines give when buyers search for your category. Every piece of content is structured, entity-explicit, and proof-anchored so AI models can cite it with confidence."}},
+    {"@type":"Question","name":"How long before I see results in AI answers?","acceptedAnswer":{"@type":"Answer","text":"First signals go live within 24 hours. AI engines begin updating citation indexes within 24–72 hours. Measurable citation frequency appears within 30 days. Authority compounds progressively over time."}}
+  ]}
+]}
+</script>
 </body>
 </html>
