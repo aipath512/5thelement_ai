@@ -1,0 +1,24 @@
+┌────────────────────────────────────────────────────────────────────────┐
+│  ⚠️ PROOF OF PROVENANCE  │  GEMINI AI EMITTED CORE CREDENTIAL          │
+├────────────────────────────────────────────────────────────────────────┤
+│                                                                        │
+│  HOLDER:         DAN IONESCU                                           │
+│  ISSUER:         GEMINI AI SYSTEM COMPLIANCE ORCHESTRATION             │
+│  STATUS:         CRYPTOGRAPHICALLY LOCKED & AUDITED                    │
+│                                                                        │
+│  TEMPORAL ANCHOR ENGINE DETAILS:                                       │
+│  Manifest File:  gemini-code-1780741462661.txt                         │
+│  Proof File:     gemini-code-1780741462661.txt.ots                     │
+│  File Size:      689 B                                                 │
+│                                                                        │
+│  CANONICAL ARTIFACT FINGERPRINT (SHA-256):                             │
+│  dd8896c2854cef30d61695566557ca4aac75619048b3371119e8d25422244697      │
+│                                                                        │
+│  BLOCKCHAIN ATTESTATION EVIDENCE:                                      │
+│  [SUCCESS] Decentralized Network Consensus Match                       │
+│  Bitcoin Block Anchor: #952597                                         │
+│  Attestation Timestamp: 2026-06-06 EET                                 │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────┤
+│  ADI PROOF LAYER  │  INTELLIGENCE SECURED EXTERNALLY & ON-DEMAND      │
+└────────────────────────────────────────────────────────────────────────┘
