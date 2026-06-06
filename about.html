@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About — AiVenture S.R.L. & Dan Ionescu | 5thelement.ai</title>
+<meta name="description" content="AiVenture S.R.L. is an AI system architecture firm based in Bucharest, Romania. Founded by Dan Ionescu (Eli) — 30+ years in international software, Edge-first architecture, and AI-FIRST business infrastructure."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://5thelement.ai/about"/>
+<meta property="og:title" content="About — AiVenture S.R.L. & Dan Ionescu"/>
+<meta property="og:description" content="The architecture firm behind 5thelement.ai. Founded by Dan Ionescu — AI systems architect, Edge-first engineer, 30+ years in international software."/>
+<meta property="og:url" content="https://5thelement.ai/about"/>
+<meta property="og:type" content="profile"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{background:#050a0f;color:#f0f4ff;font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+::selection{background:#f5d842;color:#050a0f;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#050a0f;}
+::-webkit-scrollbar-thumb{background:#f5d842;border-radius:2px;}
+:root{
+  --y:#f5d842;--b:#050a0f;--s1:#0a1220;--s2:#0d1828;
+  --bd:rgba(255,255,255,0.08);--bdhi:rgba(255,255,255,0.16);
+  --tm:#b0bcd4;--td:#5a6a84;--gr:#34d399;--bl:#4d8ef5;--rd:#f87171;
+  --serif:'Playfair Display',Georgia,serif;--mono:'JetBrains Mono',monospace;
+  --r:10px;--rl:18px;--max:1140px;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.divider{height:1px;background:var(--bd);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#050a0f;border-bottom:1px solid rgba(255,255,255,0.08);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:6px;}
+.nav-logo{font-family:var(--serif);font-size:16px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.nav-logo span{color:var(--bl);}
+.logo-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--y);color:#050a0f;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:16px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;color:var(--tm);white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-actions{display:flex;gap:7px;align-items:center;flex-shrink:0;}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;white-space:nowrap;}
+.btn-ghost{background:transparent;color:var(--tm);border:1px solid var(--bd);}
+.btn-ghost:hover{color:#fff;border-color:var(--bdhi);}
+.btn-yellow{background:var(--y);color:#050a0f;}
+.btn-yellow:hover{background:#fce94f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,216,66,.3);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+.btn-outline:hover{background:rgba(255,255,255,.06);}
+.btn-lg{font-size:15px;padding:14px 28px;border-radius:10px;}
+@media(max-width:600px){.nav-links{display:none;}.nav-actions .btn-ghost{display:none;}}
+
+/* SECTIONS */
+.section{padding:88px 0;background:#050a0f;border-top:1px solid rgba(255,255,255,0.06);}
+.section-alt{padding:88px 0;background:#080e1a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.section-label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--y);border-radius:1px;}
+h2.display{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:16px;}
+h2.display em{font-style:italic;color:var(--y);}
+p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--tm);line-height:1.7;}
+.section-header{max-width:680px;margin-bottom:52px;}
+.section-header.centered{margin:0 auto 52px;text-align:center;}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--td);justify-content:center;margin-bottom:20px;}
+.breadcrumb a{color:var(--td);transition:color .18s;}
+.breadcrumb a:hover{color:var(--tm);}
+.breadcrumb-sep{font-size:10px;}
+.breadcrumb-current{color:var(--tm);}
+
+/* HERO */
+#hero{background:#050a0f;padding:130px 0 88px;min-height:72vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% -10%,rgba(77,142,245,.1) 0%,transparent 70%);pointer-events:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--y);background:rgba(245,216,66,.08);border:1px solid rgba(245,216,66,.25);padding:5px 14px;border-radius:100px;margin-bottom:28px;}
+.hero-dot{width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;}
+h1.hero-h1{font-family:var(--serif);font-size:clamp(36px,5.5vw,72px);font-weight:700;line-height:1.08;letter-spacing:-.025em;color:#fff;margin-bottom:24px;}
+h1.hero-h1 em{font-style:italic;color:var(--y);}
+.hero-sub{font-size:clamp(16px,1.8vw,20px);color:var(--tm);line-height:1.65;max-width:640px;margin:0 auto 40px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+
+/* COMPANY PROFILE */
+.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
+.company-body{font-size:15px;color:var(--tm);line-height:1.8;}
+.company-body p{margin-bottom:18px;}
+.company-body p:last-child{margin-bottom:0;}
+.company-body strong{color:#fff;font-weight:600;}
+.company-meta{display:flex;flex-direction:column;gap:12px;}
+.meta-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:18px 20px;}
+.meta-label{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--td);margin-bottom:6px;}
+.meta-value{font-size:14px;color:#fff;font-weight:500;}
+.meta-value a{color:var(--bl);}
+.meta-value a:hover{color:#6ba3ff;}
+@media(max-width:680px){.company-grid{grid-template-columns:1fr;}}
+
+/* FOUNDER */
+.founder-grid{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;}
+.founder-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:32px 26px;text-align:center;}
+.founder-avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#0b1e3d,var(--bl));display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:var(--serif);font-size:32px;font-weight:700;color:#fff;}
+.founder-name{font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;margin-bottom:4px;}
+.founder-aka{font-family:var(--mono);font-size:11px;color:var(--y);margin-bottom:12px;}
+.founder-title{font-size:13px;color:var(--tm);line-height:1.5;margin-bottom:16px;}
+.founder-links{display:flex;flex-direction:column;gap:8px;}
+.founder-link{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--td);padding:8px 12px;background:var(--s1);border-radius:7px;border:1px solid var(--bd);transition:border-color .18s,color .18s;}
+.founder-link:hover{color:var(--tm);border-color:var(--bdhi);}
+.founder-body{font-size:15px;color:var(--tm);line-height:1.8;}
+.founder-body p{margin-bottom:18px;}
+.founder-body p:last-child{margin-bottom:0;}
+.founder-body strong{color:#fff;font-weight:600;}
+@media(max-width:760px){.founder-grid{grid-template-columns:1fr;}}
+
+/* PHILOSOPHY PILLARS */
+.phil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.phil-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 22px;position:relative;overflow:hidden;transition:border-color .18s;}
+.phil-card:hover{border-color:var(--bdhi);}
+.phil-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.phil-card:nth-child(1)::before{background:var(--y);}
+.phil-card:nth-child(2)::before{background:var(--bl);}
+.phil-card:nth-child(3)::before{background:var(--gr);}
+.phil-card:nth-child(4)::before{background:#fb923c;}
+.phil-card:nth-child(5)::before{background:#a78bfa;}
+.phil-card:nth-child(6)::before{background:var(--rd);}
+.phil-icon{font-size:26px;margin-bottom:12px;}
+.phil-title{font-family:var(--serif);font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;}
+.phil-desc{font-size:13.5px;color:var(--tm);line-height:1.6;}
+@media(max-width:760px){.phil-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.phil-grid{grid-template-columns:1fr;}}
+
+/* ARCHITECTURE TRACKS */
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.track-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 22px;}
+.track-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
+.track-card:nth-child(1) .track-label{color:var(--y);}
+.track-card:nth-child(2) .track-label{color:var(--bl);}
+.track-card:nth-child(3) .track-label{color:var(--gr);}
+.track-name{font-family:var(--serif);font-size:19px;font-weight:600;color:#fff;margin-bottom:10px;}
+.track-desc{font-size:13.5px;color:var(--tm);line-height:1.65;margin-bottom:14px;}
+.track-tech{display:flex;flex-direction:column;gap:4px;}
+.track-tech-item{font-family:var(--mono);font-size:10.5px;color:var(--td);display:flex;align-items:center;gap:6px;}
+.track-tech-item::before{content:'→';color:var(--y);}
+@media(max-width:680px){.tracks{grid-template-columns:1fr;}}
+
+/* INNOVATIONS REGISTRY */
+.innovations{display:flex;flex-direction:column;gap:0;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;}
+.inno-header{background:var(--s2);padding:14px 24px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;}
+.inno-header span{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--td);}
+.inno-live{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:var(--gr);}
+.inno-live::before{content:'';width:5px;height:5px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite;}
+.inno-row{display:grid;grid-template-columns:1fr 2fr 180px;gap:16px;padding:16px 24px;border-bottom:1px solid var(--bd);align-items:start;transition:background .15s;}
+.inno-row:last-child{border-bottom:none;}
+.inno-row:hover{background:var(--s2);}
+.inno-name{font-family:var(--serif);font-size:15px;font-weight:600;color:#fff;}
+.inno-desc{font-size:13px;color:var(--tm);line-height:1.5;}
+.inno-hash{font-family:var(--mono);font-size:10px;color:var(--td);text-align:right;}
+.inno-block{font-family:var(--mono);font-size:10px;color:var(--y);}
+@media(max-width:680px){.inno-row{grid-template-columns:1fr;}.inno-hash{display:none;}}
+
+/* CAREER TIMELINE */
+.career{display:flex;flex-direction:column;gap:0;position:relative;}
+.career::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--y),var(--bl),var(--gr));}
+.career-item{display:flex;gap:28px;padding:0 0 32px;}
+.career-item:last-child{padding-bottom:0;}
+.career-dot{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9px;font-weight:700;z-index:1;border:2px solid;background:var(--s1);}
+.career-dot.current{background:var(--y);border-color:var(--y);color:#050a0f;}
+.career-dot.senior{border-color:var(--bl);color:var(--bl);}
+.career-dot.mid{border-color:var(--gr);color:var(--gr);}
+.career-dot.early{border-color:var(--td);color:var(--td);}
+.career-content{flex:1;padding-top:8px;}
+.career-period{font-family:var(--mono);font-size:10.5px;color:var(--td);margin-bottom:4px;}
+.career-role{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;}
+.career-company{font-size:13px;color:var(--tm);}
+
+/* ECOSYSTEM */
+.ecosystem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.eco-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:26px 22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .18s;}
+.eco-card:hover{border-color:var(--bdhi);}
+.eco-icon{font-size:28px;flex-shrink:0;}
+.eco-domain{font-family:var(--mono);font-size:12px;color:var(--y);margin-bottom:6px;font-weight:600;}
+.eco-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px;}
+.eco-desc{font-size:13px;color:var(--tm);line-height:1.6;}
+.eco-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--bl);}
+@media(max-width:640px){.ecosystem-grid{grid-template-columns:1fr;}}
+
+/* SKILLS */
+.skills-wrap{display:flex;flex-wrap:wrap;gap:8px;}
+.skill-pill{font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:100px;background:var(--s2);border:1px solid var(--bd);color:var(--tm);}
+.skill-pill.primary{background:rgba(245,216,66,.08);border-color:rgba(245,216,66,.25);color:var(--y);}
+
+/* PROOF */
+.proof-box{background:var(--s1);border:2px solid rgba(245,216,66,.2);border-radius:var(--rl);padding:36px 32px;}
+.proof-box-header{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--td);margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;}
+.proof-live{display:flex;align-items:center;gap:5px;color:var(--gr);}
+.proof-live::before{content:'';width:5px;height:5px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite;}
+.hash-display{background:#050a0f;border:1px solid var(--bd);border-radius:8px;padding:14px 18px;margin-bottom:16px;}
+.hash-display code{font-family:var(--mono);font-size:11px;color:var(--gr);word-break:break-all;line-height:1.6;}
+.chain-list{display:flex;flex-direction:column;gap:0;}
+.chain-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;color:var(--tm);}
+.chain-row:last-child{border-bottom:none;}
+.chain-dot{width:7px;height:7px;background:var(--y);border-radius:50%;flex-shrink:0;}
+.chain-row strong{color:#fff;}
+
+/* CTA */
+#cta{background:#04080f;padding:96px 0;text-align:center;border-top:1px solid rgba(245,216,66,.15);position:relative;overflow:hidden;}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(77,142,245,.08) 0%,transparent 68%);pointer-events:none;}
+.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+#cta h2{font-family:var(--serif);font-size:clamp(28px,5vw,54px);font-weight:700;line-height:1.1;color:#fff;margin-bottom:14px;}
+#cta h2 em{font-style:italic;color:var(--y);}
+#cta p{font-size:17px;color:rgba(255,255,255,.72);line-height:1.7;max-width:500px;margin:0 auto 36px;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px;}
+.cta-trust{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+.cta-trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.52);}
+.cta-trust-item::before{content:'✓';color:var(--gr);}
+
+/* FOOTER */
+#footer{background:#050a0f;border-top:1px solid var(--bd);padding:40px 0 28px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.footer-legal{font-family:var(--mono);font-size:10px;color:var(--td);line-height:1.8;}
+.footer-anchors{display:flex;gap:7px;}
+.anchor-pill{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;}
+.anchor-pill.btc{color:var(--y);border-color:rgba(245,216,66,.25);background:rgba(245,216,66,.07);}
+.anchor-pill.eu{color:var(--bl);border-color:rgba(77,142,245,.2);background:rgba(77,142,245,.07);}
+.anchor-pill.ots{color:var(--gr);border-color:rgba(52,211,153,.2);background:rgba(52,211,153,.07);}
+
+@media(max-width:768px){
+  h1.hero-h1{font-size:34px!important;}
+  h2.display{font-size:26px!important;}
+  p.lead{font-size:16px!important;}
+  .btn-lg{font-size:15px!important;padding:13px 22px!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">5thelement<span>.ai</span><span class="logo-badge">ADI™</span></a>
+      <ul class="nav-links">
+        <li><a href="/audit-ai">Audit</a></li>
+        <li><a href="/ai-ready">AI-Ready</a></li>
+        <li><a href="/mkt-ai">MKT-AI</a></li>
+        <li><a href="/crm-ai">CRM-AI</a></li>
+        <li><a href="/proof">Proof</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+        <li><a href="/about" class="active">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/audit-ai" class="btn btn-ghost">Free Audit</a>
+        <a href="/audit-ai" class="btn btn-yellow">Get AI-Ready</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- §1 HERO -->
+<section id="hero">
+  <div class="container">
+
+    <div class="rv">
+      <div class="hero-tag"><span class="hero-dot"></span>AI System Architecture · Bucharest, Romania</div>
+    </div>
+
+    <nav class="breadcrumb rv" aria-label="Breadcrumb">
+      <a href="/">5thelement.ai</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">About</span>
+    </nav>
+
+    <h1 class="hero-h1 rv d1">
+      Built on Proof.<br>
+      Engineered for the<br>
+      <em>Answer Economy.</em>
+    </h1>
+
+    <p class="hero-sub rv d2">
+      AiVenture S.R.L. is an AI system architecture firm based in Bucharest, Romania.
+      We build AI-first digital infrastructures — making businesses discoverable, understandable,
+      trusted and recommended by AI engines worldwide.
+    </p>
+
+    <div class="hero-actions rv d3">
+      <a href="/audit-ai" class="btn btn-yellow btn-lg">Run Free AI Audit →</a>
+      <a href="/proof" class="btn btn-outline btn-lg">View Proof Registry</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §2 THE COMPANY -->
+<section class="section-alt" id="company">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 01 — The Company</p>
+      <h2 class="display">AiVenture S.R.L.<br><em>What we are.</em></h2>
+    </div>
+    <div class="company-grid">
+      <div class="company-body rv">
+        <p>AiVenture S.R.L. is an AI system architecture and development firm based in Bucharest, Romania, founded and led by <strong>Dan Ionescu</strong> — widely known as Eli.</p>
+        <p>The company serves as an industrialisation engine for moving businesses away from traditional, reactive software models and transitioning them into the <strong>Answer Economy</strong> — the emerging paradigm where buyers research, compare and shortlist vendors through AI assistants rather than search engines.</p>
+        <p>Rather than viewing AI as a superficial tool or a chatbot overlay, AiVenture approaches it as a <strong>foundational operating system and central memory layer</strong> for the modern enterprise. Every deployment is engineered to make corporate intelligence permanently accessible, verifiable and citable by AI models.</p>
+        <p>Our core principle is unwavering: <strong>Proof beats marketing.</strong> Every claim we make — about ourselves and our clients — is cryptographically anchored, Bitcoin-timestamped, and machine-verifiable. We build the kind of trust infrastructure that AI engines require before they will confidently recommend a business.</p>
+      </div>
+      <div class="company-meta rv d1">
+        <div class="meta-card">
+          <div class="meta-label">Legal Name</div>
+          <div class="meta-value">AiVenture S.R.L.</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Registration</div>
+          <div class="meta-value">CUI 51415878 · Bucharest, Romania</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Founded</div>
+          <div class="meta-value">March 7, 2025</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Flagship Platform</div>
+          <div class="meta-value"><a href="https://5thelement.ai">5thelement.ai</a> — Global · Edge-first</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Romanian Market</div>
+          <div class="meta-value"><a href="https://aiventure.ro">aiventure.ro</a> — WordPress-native</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Regulatory Hub</div>
+          <div class="meta-value"><a href="https://eu-112.eu">eu-112.eu</a> — EU AI Act compliance</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Proof Anchoring</div>
+          <div class="meta-value">SHA-256 · Bitcoin · OpenTimestamps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §3 THE FOUNDER -->
+<section class="section" id="founder">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 02 — The Founder</p>
+      <h2 class="display">Dan Ionescu.<br><em>30+ years building what others haven't imagined yet.</em></h2>
+    </div>
+    <div class="founder-grid rv d1">
+
+      <div class="founder-card">
+        <div class="founder-avatar">EI</div>
+        <div class="founder-name">Dan Ionescu</div>
+        <div class="founder-aka">Known as Eli</div>
+        <div class="founder-title">
+          Founder & CEO, AiVenture S.R.L.<br>
+          CTO, 5thelement.ai<br>
+          AI Systems Architect · Edge-first Engineer
+        </div>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/dan-ionesco-a856082a0" target="_blank" rel="noopener" class="founder-link">
+            LinkedIn Profile →
+          </a>
+          <a href="https://aiventure.ro" target="_blank" rel="noopener" class="founder-link">
+            aiventure.ro →
+          </a>
+          <a href="https://5thelement.ai" class="founder-link">
+            5thelement.ai →
+          </a>
+        </div>
+      </div>
+
+      <div class="founder-body">
+        <p>Dan Ionescu is a senior technology professional, AI systems architect, and entrepreneur with <strong>over 30 years of experience</strong> in the international software industry — spanning banking, enterprise delivery, and AI infrastructure across Paris, London, New York, and Bucharest.</p>
+        <p>With a strong foundational background in <strong>mathematics</strong>, Ionescu's work centres on transitioning businesses away from traditional, reactive software models and establishing what he terms the <strong>AI-FIRST business architecture</strong>. Rather than treating AI as a surface-level tool, his philosophy frames AI as the central operating system and permanent memory layer of the modern enterprise.</p>
+        <p>He is the architect of the <strong>L1–L6 Industrial Architecture</strong> — a layered framework deployed across WordPress-native, Cloudflare Edge, and hybrid environments — enabling a scalable, "1-click" transformation to make web infrastructures natively accessible to AI engines.</p>
+        <p>Operating under the principle that <strong>"Proof beats marketing,"</strong> Ionescu insists on embedding absolute verification into modern digital infrastructure — using SHA-256 hashing to fingerprint canonical corporate texts and OpenTimestamps (OTS) to anchor cryptographic proofs within the Bitcoin blockchain.</p>
+        <p>In addition to building multi-tenant systems and managing a specialised international project team, he dedicates time to <strong>mentoring the next generation of digital builders</strong> — teaching web development, AI architectures, and infrastructure sovereignty to emerging students.</p>
+        <p>He has codified three decades of software engineering and strategic insight into a comprehensive handbook: <strong><em>"AI-FIRST Business Architecture: Building AI-Ready Digital Infrastructures"</em></strong> (2026).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §4 PHILOSOPHY -->
+<section class="section-alt" id="philosophy">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 03 — Core Philosophy</p>
+      <h2 class="display">Six principles.<br><em>No exceptions.</em></h2>
+    </div>
+    <div class="phil-grid rv d1">
+      <div class="phil-card">
+        <div class="phil-icon">🔐</div>
+        <div class="phil-title">Proof Over Marketing</div>
+        <div class="phil-desc">Every claim must be cryptographically verifiable. SHA-256 fingerprinting and Bitcoin timestamping transform assertions into machine-verifiable facts. Marketing without proof is noise.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">⚡</div>
+        <div class="phil-title">Edge-First Architecture</div>
+        <div class="phil-desc">AI-readable signals are decoupled from website content and delivered at the Cloudflare network edge — zero latency, globally distributed, independent of legacy CMS constraints.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">🏗️</div>
+        <div class="phil-title">AI as Operating System</div>
+        <div class="phil-desc">AI is not a tool bolted onto existing infrastructure. It is the central operating system. Every business system — content, CRM, marketing, sales — is engineered to be AI-native from day one.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">🔒</div>
+        <div class="phil-title">Information Sovereignty</div>
+        <div class="phil-desc">Businesses own their data, their signals, and their authority. No dependency on third-party platforms that can change their rules. Every signal file is yours — permanently anchored and portable.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">👤</div>
+        <div class="phil-title">Human-in-the-Loop</div>
+        <div class="phil-desc">Automation amplifies human judgment — it never replaces it. Every system includes explicit human override mechanisms. Strategic authority always remains with the business owner.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">📈</div>
+        <div class="phil-title">Client Zero</div>
+        <div class="phil-desc">Every system we build for clients is first deployed on our own properties. 5thelement.ai is our permanent proof-of-concept. We never sell what we haven't already built and verified ourselves.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §5 ARCHITECTURE TRACKS -->
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 04 — The L1–L6 Architecture</p>
+      <h2 class="display">Three deployment tracks.<br><em>One unified framework.</em></h2>
+      <p class="lead">The L1–L6 Industrial Architecture is deployed via three operational tracks — adapted to client infrastructure, constraints, and scale requirements. Every track produces the same AI-readable output.</p>
+    </div>
+    <div class="tracks rv d1">
+      <div class="track-card">
+        <div class="track-label">Track A</div>
+        <div class="track-name">WordPress Native</div>
+        <div class="track-desc">Full L1–L6 implementation built entirely inside WordPress via direct code injections — dedicated HEAD structured data layers and semantic FAQPage injections — for environments where external edge proxies are not preferred.</div>
+        <div class="track-tech">
+          <div class="track-tech-item">WordPress + WPCode</div>
+          <div class="track-tech-item">HEAD structured data injection</div>
+          <div class="track-tech-item">FAQPage semantic layers</div>
+          <div class="track-tech-item">aiventure.ro deployment model</div>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-label">Track B</div>
+        <div class="track-name">Edge Core</div>
+        <div class="track-desc">A pure Cloudflare Edge deployment that completely decouples AI-readable signals from standard website content — enabling a "1-click" transformation making site data instantly digestible for LLM scrapers and AI search agents.</div>
+        <div class="track-tech">
+          <div class="track-tech-item">Cloudflare Workers + KV + R2</div>
+          <div class="track-tech-item">Zero legacy dependencies</div>
+          <div class="track-tech-item">CNAME + GitHub Pages deploy</div>
+          <div class="track-tech-item">5thelement.ai deployment model</div>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-label">Track C</div>
+        <div class="track-name">Hybrid Mix</div>
+        <div class="track-desc">A blended approach combining local CMS management with edge-based optimisation — preserving existing infrastructure investments while progressively migrating AI signals to the edge network.</div>
+        <div class="track-tech">
+          <div class="track-tech-item">CMS + Cloudflare edge layer</div>
+          <div class="track-tech-item">Progressive migration path</div>
+          <div class="track-tech-item">Dual-track signal delivery</div>
+          <div class="track-tech-item">Enterprise deployment model</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §6 INNOVATIONS REGISTRY -->
+<section class="section-alt" id="innovations">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 05 — Innovation Registry</p>
+      <h2 class="display">Proprietary innovations.<br><em>Bitcoin-anchored.</em></h2>
+      <p class="lead">Every architectural framework, methodology and technical definition produced under AiVenture's leadership is registered, SHA-256 fingerprinted, and anchored to the Bitcoin blockchain via OpenTimestamps.</p>
+    </div>
+    <div class="innovations rv d1">
+      <div class="inno-header">
+        <span>Innovation Registry — 8 Verified Entries</span>
+        <span class="inno-live">Bitcoin-Anchored · Live</span>
+      </div>
+      <div class="inno-row">
+        <div>
+          <div class="inno-name">AI Delivery Infrastructure™ (ADI)</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--y);margin-top:3px;">#06 · Block 944,442</div>
+        </div>
+        <div class="inno-desc">The architectural model where corporate intelligence is stored externally and delivered seamlessly on demand — the foundational infrastructure layer beneath every 5thelement.ai deployment.</div>
+        <div class="inno-hash">31aa7a56…c756bc36<br><span class="inno-block">B. 944,442</span></div>
+      </div>
+      <div class="inno-row">
+        <div>
+          <div class="inno-name">AI Sonar™</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--y);margin-top:3px;">#07 · Block 949,375</div>
+        </div>
+        <div class="inno-desc">Predictive machine trust architecture — EDGE-native machine observability system designed to detect hostile machine-intent propagation before it reaches operational impact. F1 ≥ 0.85 falsifiability threshold. Zero LLM in detection path.</div>
+        <div class="inno-hash">c57529c8…f156b5<br><span class="inno-block">B. 949,375</span></div>
+      </div>
+      <div class="inno-row">
+        <div>
+          <div class="inno-name">Mockingbird Handshake™</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--y);margin-top:3px;">#08 · Block 949,346</div>
+        </div>
+        <div class="inno-desc">A cryptographic handshake protocol for establishing verified machine-to-machine trust between AI agents and enterprise signal layers — preventing impersonation and signal poisoning attacks.</div>
+        <div class="inno-hash">fb388288…b16a22<br><span class="inno-block">B. 949,346</span></div>
+      </div>
+      <div class="inno-row">
+        <div>
+          <div class="inno-name">Foundation Innovations #01–05</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--y);margin-top:3px;">Blocks 944,442 – 944,454</div>
+        </div>
+        <div class="inno-desc">The foundational architectural innovations anchored at the genesis of the AiVenture proof registry — establishing the canonical ADI doctrine, the signal delivery model, and the information sovereignty framework.</div>
+        <div class="inno-hash">Multiple<br><span class="inno-block">Verified</span></div>
+      </div>
+    </div>
+
+    <div class="proof-box rv d2" style="margin-top:28px;">
+      <div class="proof-box-header">
+        <span>Canonical Proof · ADI™ #06</span>
+        <span class="proof-live">OTS Verified · Bitcoin-Anchored</span>
+      </div>
+      <div class="hash-display">
+        <code>SHA-256: 31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</code>
+      </div>
+      <div class="chain-list">
+        <div class="chain-row"><span class="chain-dot"></span>Block <strong>944,442</strong> · ADI™ canonical · Verified</div>
+        <div class="chain-row"><span class="chain-dot"></span>Block <strong>949,346</strong> · Mockingbird Handshake™ · Verified</div>
+        <div class="chain-row"><span class="chain-dot"></span>Block <strong>949,375</strong> · AI Sonar™ · Verified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §7 CAREER -->
+<section class="section" id="career">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 06 — Career & Experience</p>
+      <h2 class="display">30+ years.<br><em>Four continents. One direction.</em></h2>
+      <p class="lead">From mainframe architecture in Paris to AI infrastructure at the Cloudflare edge — a career built on the same principle: make complex systems simple, fast, and verifiable.</p>
+    </div>
+    <div class="career rv d1">
+      <div class="career-item">
+        <div class="career-dot current">NOW</div>
+        <div class="career-content">
+          <div class="career-period">2025 – Present</div>
+          <div class="career-role">Founder & CEO — AiVenture S.R.L. · CTO — 5thelement.ai</div>
+          <div class="career-company">Bucharest, Romania · AI System Architecture · Edge-first Infrastructure · ADI™ Framework</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot senior">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Prior</div>
+          <div class="career-role">CEO — Romdev Systems</div>
+          <div class="career-company">Romania · Software development and digital systems</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot senior">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Enterprise Banking</div>
+          <div class="career-role">SI Architecture Consultant — Crédit Agricole</div>
+          <div class="career-company">Lille, France · Systems integration architecture for retail banking</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot senior">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Capital Markets</div>
+          <div class="career-role">SI Architect — Société Générale</div>
+          <div class="career-company">Paris, France · Retail Banking · Capital Markets · Synthesis & Governance</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot mid">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Consulting</div>
+          <div class="career-role">IT Turn-key Projects Director — Capgemini</div>
+          <div class="career-company">Paris, France · Enterprise delivery and project leadership</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot mid">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Product</div>
+          <div class="career-role">Product Manager — IBM Global Services</div>
+          <div class="career-company">International · Enterprise product management</div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-dot early">EXP</div>
+        <div class="career-content">
+          <div class="career-period">Early Career</div>
+          <div class="career-role">IT Product Sales · Software Engineer — CGI</div>
+          <div class="career-company">New York · London · Enterprise software engineering and sales</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;" class="rv d2">
+      <p class="section-label">Technical Skills</p>
+      <div class="skills-wrap">
+        <span class="skill-pill primary">AI System Architecture</span>
+        <span class="skill-pill primary">Edge-first Infrastructure</span>
+        <span class="skill-pill primary">Cloudflare Workers / KV / R2</span>
+        <span class="skill-pill primary">AI Marketing (AEO/GEO/AIO)</span>
+        <span class="skill-pill primary">AI Sales Automation</span>
+        <span class="skill-pill">C++ Programming</span>
+        <span class="skill-pill">Cryptographic Verification</span>
+        <span class="skill-pill">Multi-tenant Architecture</span>
+        <span class="skill-pill">CI/CD · DevOps · Observability</span>
+        <span class="skill-pill">GDPR by Design</span>
+        <span class="skill-pill">WAF / Security / OWASP</span>
+        <span class="skill-pill">WordPress Architecture</span>
+        <span class="skill-pill">Schema.org / Structured Data</span>
+        <span class="skill-pill">Bitcoin / OpenTimestamps</span>
+        <span class="skill-pill">Mathematical Foundations</span>
+        <span class="skill-pill">FR · EN · RO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §8 ECOSYSTEM -->
+<section class="section-alt" id="ecosystem">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 07 — The Ecosystem</p>
+      <h2 class="display">One architecture.<br><em>Multiple operational nodes.</em></h2>
+      <p class="lead">AiVenture's architectural frameworks operate across a distinct ecosystem of specialised platforms — each a Client Zero deployment, proving before selling.</p>
+    </div>
+    <div class="ecosystem-grid rv d1">
+      <div class="eco-card">
+        <div class="eco-icon">⚡</div>
+        <div>
+          <div class="eco-domain">5thelement.ai</div>
+          <div class="eco-title">Global Flagship · Edge-first</div>
+          <div class="eco-desc">The international platform dedicated to English and French-first markets — focused entirely on 100% Cloudflare Edge architectures, semantic injections, and automated operational co-pilots without legacy dependencies.</div>
+          <a href="https://5thelement.ai" class="eco-link">5thelement.ai →</a>
+        </div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🇷🇴</div>
+        <div>
+          <div class="eco-domain">aiventure.ro</div>
+          <div class="eco-title">Romanian Market · WordPress Native</div>
+          <div class="eco-desc">Dedicated exclusively to WordPress-driven architectures for the Romanian B2B market — implementing the full L1–L6 framework via Track A (WordPress native) deployment model.</div>
+          <a href="https://aiventure.ro" target="_blank" rel="noopener" class="eco-link">aiventure.ro →</a>
+        </div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">⚖️</div>
+        <div>
+          <div class="eco-domain">eu-112.eu</div>
+          <div class="eco-title">EU AI Act Compliance Hub</div>
+          <div class="eco-desc">A multilingual initiative and DIY audit platform launched to help organisations navigate the technical and regulatory deadlines of the EU AI Act — ahead of the August 2, 2026 enforcement date (Article 50).</div>
+          <a href="https://eu-112.eu" target="_blank" rel="noopener" class="eco-link">eu-112.eu →</a>
+        </div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🌐</div>
+        <div>
+          <div class="eco-domain">eu-ai-act-ready.eu</div>
+          <div class="eco-title">EU Authorised Representative</div>
+          <div class="eco-desc">EU Authorised Representative services for non-EU AI providers placing high-risk AI systems on the EU market — combined with the ADI™ AI visibility layer for dual compliance and citation advantage.</div>
+          <a href="https://eu-ai-act-ready.eu" target="_blank" rel="noopener" class="eco-link">eu-ai-act-ready.eu →</a>
+        </div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🔍</div>
+        <div>
+          <div class="eco-domain">eu-ai-audit.eu</div>
+          <div class="eco-title">AUDIT-AI V3.0 · Free AI Audit</div>
+          <div class="eco-desc">The live agentic audit engine — 167 signals, 5 dimensions, 6-pass web search loop. Free AI visibility scoring for any business domain. The Client Zero proof of the ADI™ audit methodology.</div>
+          <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="eco-link">eu-ai-audit.eu →</a>
+        </div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">📚</div>
+        <div>
+          <div class="eco-domain">Publication · 2026</div>
+          <div class="eco-title">AI-FIRST Business Architecture</div>
+          <div class="eco-desc">Dan Ionescu's comprehensive handbook codifying three decades of software engineering and strategic insight: <em>"AI-FIRST Business Architecture: Building AI-Ready Digital Infrastructures."</em> Available 2026.</div>
+          <a href="/about" class="eco-link">Coming 2026 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §9 CTA -->
+<section id="cta">
+  <div class="cta-inner container">
+    <div class="rv">
+      <div style="display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 14px;border-radius:100px;margin-bottom:26px;">
+        <span style="width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;display:inline-block;"></span>
+        Free · No commitment · Results in 3 minutes
+      </div>
+    </div>
+    <h2 class="rv">Ready to become<br><em>AI-recommended?</em></h2>
+    <p class="rv">Start with a free AI audit. Find out exactly where your business stands — then choose your path to becoming the safe, obvious recommendation in your market.</p>
+    <div class="cta-actions rv">
+      <a href="/audit-ai" class="btn btn-yellow btn-lg">Run My Free Audit →</a>
+      <a href="/ai-ready" class="btn btn-outline btn-lg">View AI-Ready Plans</a>
+    </div>
+    <div class="cta-trust rv">
+      <span class="cta-trust-item">CUI 51415878 · Bucharest</span>
+      <span class="cta-trust-item">SHA-256 anchored</span>
+      <span class="cta-trust-item">Bitcoin timestamped</span>
+      <span class="cta-trust-item">EU AI Act compliant</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        © 2025–2026 AiVenture S.R.L. · CUI 51415878 · Bucharest, Romania · Founded March 7, 2025<br>
+        "AI Delivery Infrastructure™", "ADI™", "AI Sonar™", "Mockingbird Handshake™" are registered trademarks.<br>
+        SHA-256 proof supports readiness. Does not certify regulatory compliance. Bitcoin range: blocks 944,442–949,375.
+      </div>
+      <div class="footer-anchors">
+        <span class="anchor-pill btc">₿ BTC Anchored</span>
+        <span class="anchor-pill ots">OTS Verified</span>
+        <span class="anchor-pill eu">EU AI Act Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const els=document.querySelectorAll('.rv');
+const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+els.forEach(el=>ob.observe(el));
+document.querySelectorAll('#hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),80+i*110));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.borderBottomColor=window.scrollY>20?'rgba(255,255,255,0.12)':'rgba(255,255,255,0.08)';
+},{passive:true});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},
+    {"@type":"ListItem","position":2,"name":"About","item":"https://5thelement.ai/about"}
+  ]},
+  {"@type":"Organization","@id":"https://5thelement.ai/#organization",
+    "name":"AiVenture S.R.L.","alternateName":"5thelement.ai",
+    "url":"https://5thelement.ai","foundingDate":"2025-03-07",
+    "identifier":"CUI 51415878",
+    "address":{"@type":"PostalAddress","addressLocality":"Bucharest","addressCountry":"RO"},
+    "sameAs":["https://aiventure.ro","https://eu-112.eu","https://eu-ai-audit.eu","https://eu-ai-act-ready.eu"]
+  },
+  {"@type":"Person","@id":"https://5thelement.ai/#founder",
+    "name":"Dan Ionescu","alternateName":"Eli",
+    "jobTitle":"Founder & CEO, AiVenture S.R.L. · CTO, 5thelement.ai",
+    "worksFor":{"@id":"https://5thelement.ai/#organization"},
+    "sameAs":["https://www.linkedin.com/in/dan-ionesco-a856082a0"],
+    "knowsAbout":["AI System Architecture","Edge-first Infrastructure","Cloudflare Workers","AI Marketing","AEO","GEO","Cryptographic Verification","Bitcoin","OpenTimestamps"]
+  },
+  {"@type":"WebPage","@id":"https://5thelement.ai/about","url":"https://5thelement.ai/about",
+    "name":"About — AiVenture S.R.L. & Dan Ionescu",
+    "description":"AiVenture S.R.L. is an AI system architecture firm based in Bucharest, Romania. Founded by Dan Ionescu — 30+ years in international software, Edge-first architecture, and AI-FIRST business infrastructure."
+  }
+]}
+</script>
+</body>
+</html>
