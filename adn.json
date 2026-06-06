@@ -1,0 +1,119 @@
+{
+  "schema": "https://5thelement.ai/schemas/adn.v1.json",
+  "version": "1.0",
+  "network_name": "AiVenture ADI Network",
+  "network_category": "Business AI Infrastructure powered by AI Delivery Infrastructure",
+  "root_domain": "https://5thelement.ai",
+  "root_role": "flagship_authority",
+  "operator": {
+    "name": "AiVenture SRL",
+    "legal_id": "CUI 51415878",
+    "contact": "contact@5thelement.ai"
+  },
+  "root_authority": "https://5thelement.ai/authority.json",
+  "root_proof": "https://5thelement.ai/ai-proof.json",
+  "root_innovations": "https://5thelement.ai/innovations.json",
+  "root_llms": "https://5thelement.ai/llms.txt",
+  "root_ai_json": "https://5thelement.ai/ai.json",
+  "belongs_to_value_ladder": {
+    "module": "MASTER",
+    "module_name": "Business AI Infrastructure",
+    "purpose": "Coordinate the complete attract-promote-sell-grow system across the AiVenture ADI Network.",
+    "manages_modules": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12"
+    ]
+  },
+  "nodes": [
+    {
+      "domain": "https://aiventure.ro",
+      "role": "delivery_node",
+      "status": "active",
+      "adn": "https://aiventure.ro/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "DELIVERY",
+        "module_name": "AiVenture Delivery Company",
+        "purpose": "Commercial delivery, implementation, support, Zoom sprints and client relationship management for the AiVenture ADI Network."
+      }
+    },
+    {
+      "domain": "https://eu-ai-audit.eu",
+      "role": "audit_node",
+      "status": "active",
+      "adn": "https://eu-ai-audit.eu/adn.json",
+      "repo_name": "audit-ai-real-app",
+      "belongs_to_value_ladder": {
+        "module": "M01",
+        "module_name": "AI Signals Audit",
+        "purpose": "Assess whether a firm site is crawlable, readable, citable, verifiable and actionable by AI systems.",
+        "next_module": "M02 AI READY Transformation"
+      }
+    },
+    {
+      "domain": "https://eu-ai-ready.eu",
+      "role": "ai_ready_node",
+      "status": "planned",
+      "adn": "https://eu-ai-ready.eu/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "M02",
+        "module_name": "AI READY Transformation",
+        "purpose": "Make firm websites AI-searchable and AI-readable.",
+        "next_module": "M03 Conversational AI Assistant"
+      }
+    },
+    {
+      "domain": "https://eu-ai-act-ready.eu",
+      "role": "governance_node",
+      "status": "planned",
+      "adn": "https://eu-ai-act-ready.eu/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "M10",
+        "module_name": "Governance and EU AI Act",
+        "purpose": "Prepare operational AI governance, transparency, evidence and Human-in-the-Loop readiness."
+      }
+    },
+    {
+      "domain": "https://eu-112.eu",
+      "role": "eu_ai_act_readiness_node",
+      "status": "active",
+      "adn": "https://eu-112.eu/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "M10",
+        "module_name": "EU AI Act Readiness",
+        "purpose": "Help EU firms understand, map and prepare their AI operations for EU AI Act obligations."
+      }
+    },
+    {
+      "domain": "https://1clic-ia.eu",
+      "role": "eu_market_gateway",
+      "status": "planned",
+      "adn": "https://1clic-ia.eu/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "M03",
+        "module_name": "Conversational AI Assistant",
+        "purpose": "EU market gateway for voice/text AI assistant activation and conversational lead capture."
+      }
+    },
+    {
+      "domain": "https://1clic-ia.fr",
+      "role": "fr_market_gateway",
+      "status": "planned",
+      "adn": "https://1clic-ia.fr/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "M03",
+        "module_name": "Assistant IA Conversationnel",
+        "purpose": "French market gateway for voice/text AI assistant activation and conversational lead capture."
+      }
+    }
+  ]
+}
