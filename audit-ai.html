@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AI Audit — See Exactly How AI Sees Your Business | 5thelement.ai</title>
+<meta name="description" content="Free AI Audit. Find out why ChatGPT, Perplexity and Claude are recommending your competitors instead of you. Get your AI visibility score in minutes."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://5thelement.ai/audit-ai"/>
+<meta property="og:title" content="AI Audit — See Exactly How AI Sees Your Business"/>
+<meta property="og:description" content="Free. No commitment. Results in minutes. Find out your AI visibility score across 5 dimensions."/>
+<meta property="og:url" content="https://5thelement.ai/audit-ai"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{background:#050a0f;color:#f0f4ff;font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+::selection{background:#f5d842;color:#050a0f;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#050a0f;}
+::-webkit-scrollbar-thumb{background:#f5d842;border-radius:2px;}
+
+:root{
+  --y:#f5d842;
+  --b:#050a0f;
+  --s1:#0a1220;
+  --s2:#0d1828;
+  --s3:#111f32;
+  --bd:rgba(255,255,255,0.08);
+  --bdhi:rgba(255,255,255,0.16);
+  --tm:#b0bcd4;
+  --td:#5a6a84;
+  --gr:#34d399;
+  --bl:#4d8ef5;
+  --rd:#f87171;
+  --serif:'Playfair Display',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+  --r:10px;
+  --rl:18px;
+  --max:1140px;
+}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.divider{height:1px;background:var(--bd);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#050a0f;border-bottom:1px solid rgba(255,255,255,0.08);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:6px;}
+.nav-logo{font-family:var(--serif);font-size:16px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.nav-logo span{color:var(--bl);}
+.logo-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--y);color:#050a0f;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:16px;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;color:var(--tm);white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-actions{display:flex;gap:7px;align-items:center;flex-shrink:0;}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;white-space:nowrap;}
+.btn-ghost{background:transparent;color:var(--tm);border:1px solid var(--bd);}
+.btn-ghost:hover{color:#fff;border-color:var(--bdhi);}
+.btn-yellow{background:var(--y);color:#050a0f;}
+.btn-yellow:hover{background:#fce94f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,216,66,.3);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+.btn-outline:hover{background:rgba(255,255,255,.06);}
+.btn-lg{font-size:15px;padding:14px 28px;border-radius:10px;}
+@media(max-width:600px){.nav-links{display:none;}.nav-actions .btn-ghost{display:none;}}
+
+/* SECTIONS */
+.section{padding:88px 0;background:#050a0f;border-top:1px solid rgba(255,255,255,0.06);}
+.section-alt{padding:88px 0;background:#080e1a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.section-label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--y);border-radius:1px;}
+h2.display{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:16px;}
+h2.display em{font-style:italic;color:var(--y);}
+p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--tm);line-height:1.7;}
+.section-header{max-width:680px;margin-bottom:52px;}
+.section-header.centered{margin:0 auto 52px;text-align:center;}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+
+/* HERO */
+#hero{background:#050a0f;padding:130px 0 88px;min-height:80vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -10%,rgba(77,142,245,.12) 0%,transparent 70%);pointer-events:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--y);background:rgba(245,216,66,.08);border:1px solid rgba(245,216,66,.25);padding:5px 14px;border-radius:100px;margin-bottom:28px;}
+.hero-dot{width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;}
+h1.hero-h1{font-family:var(--serif);font-size:clamp(38px,6.5vw,80px);font-weight:700;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:24px;}
+h1.hero-h1 em{font-style:italic;color:var(--y);}
+.hero-sub{font-size:clamp(16px,1.8vw,20px);color:var(--tm);line-height:1.65;max-width:600px;margin:0 auto 40px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:52px;}
+
+/* TRUST BAR */
+.trust-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:0;}
+.trust-item{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--td);}
+.trust-item::before{content:'✓';color:var(--gr);}
+
+/* SCORE MOCKUP */
+.score-mockup{
+  max-width:780px;margin:56px auto 0;
+  background:var(--s1);border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,.5);
+}
+.score-mockup-header{
+  background:var(--s2);padding:14px 24px;border-bottom:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.score-mockup-title{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--td);}
+.score-live{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:var(--gr);}
+.score-live::before{content:'';width:5px;height:5px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite;}
+.score-body{display:grid;grid-template-columns:180px 1fr;gap:0;}
+.score-circle-wrap{padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--bd);}
+.score-ring{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#0b1e3d,var(--bl));display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(77,142,245,.3);margin-bottom:12px;}
+.score-num{font-family:var(--serif);font-size:38px;font-weight:700;color:#fff;line-height:1;}
+.score-denom{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.5);}
+.score-grade{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);}
+.score-dims{padding:24px 28px;display:flex;flex-direction:column;gap:10px;justify-content:center;}
+.dim-row{display:flex;align-items:center;gap:12px;}
+.dim-label{font-family:var(--mono);font-size:11px;color:var(--td);width:100px;flex-shrink:0;}
+.dim-track{flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;}
+.dim-fill{height:100%;border-radius:3px;}
+.dim-score{font-family:var(--mono);font-size:11px;color:var(--tm);width:30px;text-align:right;flex-shrink:0;}
+.score-mockup-footer{background:var(--s2);border-top:1px solid var(--bd);padding:14px 24px;display:flex;align-items:center;gap:12px;}
+.score-mockup-footer code{font-family:var(--mono);font-size:10px;color:var(--gr);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.score-mockup-footer span{font-family:var(--mono);font-size:9px;color:var(--td);}
+@media(max-width:560px){.score-body{grid-template-columns:1fr;}.score-circle-wrap{border-right:none;border-bottom:1px solid var(--bd);}}
+
+/* WHAT WE CHECK */
+.check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.check-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 22px;position:relative;overflow:hidden;transition:border-color .18s;}
+.check-card:hover{border-color:var(--bdhi);}
+.check-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.check-card.c1::before{background:var(--rd);}
+.check-card.c2::before{background:#fb923c;}
+.check-card.c3::before{background:var(--y);}
+.check-card.c4::before{background:var(--gr);}
+.check-card.c5::before{background:var(--bl);}
+.check-num{font-family:var(--mono);font-size:11px;color:var(--td);margin-bottom:10px;}
+.check-title{font-family:var(--serif);font-size:19px;font-weight:600;color:#fff;margin-bottom:10px;line-height:1.2;}
+.check-desc{font-size:13.5px;color:var(--tm);line-height:1.6;margin-bottom:16px;}
+.check-signals{display:flex;flex-direction:column;gap:4px;}
+.check-signal{font-family:var(--mono);font-size:10.5px;color:var(--td);display:flex;align-items:center;gap:6px;}
+.check-signal::before{content:'→';color:var(--y);}
+@media(max-width:860px){.check-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.check-grid{grid-template-columns:1fr;}}
+
+/* HOW IT WORKS STEPS */
+.audit-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;}
+.audit-step{padding:32px 24px;text-align:center;border-right:1px solid var(--bd);position:relative;}
+.audit-step:last-child{border-right:none;}
+.audit-step::after{content:'→';position:absolute;top:50%;right:-12px;transform:translateY(-50%);font-family:var(--mono);font-size:14px;color:var(--td);z-index:2;}
+.audit-step:last-child::after{display:none;}
+.audit-step-num{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--y);line-height:1;margin-bottom:12px;}
+.audit-step-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
+.audit-step-desc{font-size:12.5px;color:var(--tm);line-height:1.5;}
+@media(max-width:760px){.audit-steps{grid-template-columns:1fr 1fr;}.audit-step::after{display:none;}}
+@media(max-width:480px){.audit-steps{grid-template-columns:1fr;}}
+
+/* WHAT YOU GET */
+.deliverables{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.deliv-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 24px;display:flex;gap:16px;align-items:flex-start;}
+.deliv-icon{font-size:26px;flex-shrink:0;margin-top:2px;}
+.deliv-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px;}
+.deliv-desc{font-size:13.5px;color:var(--tm);line-height:1.6;}
+.deliv-tag{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:9.5px;padding:2px 8px;border-radius:4px;background:rgba(52,211,153,.08);color:var(--gr);border:1px solid rgba(52,211,153,.2);}
+@media(max-width:640px){.deliverables{grid-template-columns:1fr;}}
+
+/* TIERS */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.tier-card{border-radius:var(--rl);padding:32px 26px;border:1px solid;display:flex;flex-direction:column;gap:12px;}
+.tier-card.free{background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2);}
+.tier-card.pro{background:rgba(77,142,245,.06);border-color:rgba(77,142,245,.3);position:relative;}
+.tier-card.agency{background:rgba(245,216,66,.04);border-color:rgba(245,216,66,.2);}
+.tier-badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;display:inline-block;width:fit-content;}
+.tier-card.free .tier-badge{color:var(--gr);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07);}
+.tier-card.pro .tier-badge{color:var(--bl);border-color:rgba(77,142,245,.3);background:rgba(77,142,245,.07);}
+.tier-card.agency .tier-badge{color:var(--y);border-color:rgba(245,216,66,.3);background:rgba(245,216,66,.07);}
+.tier-name{font-family:var(--serif);font-size:24px;font-weight:700;color:#fff;}
+.tier-price{font-family:var(--mono);font-size:22px;font-weight:700;}
+.tier-card.free .tier-price{color:var(--gr);}
+.tier-card.pro .tier-price{color:var(--bl);}
+.tier-card.agency .tier-price{color:var(--y);}
+.tier-period{font-family:var(--mono);font-size:11px;color:var(--td);}
+.tier-divider{height:1px;background:var(--bd);}
+.tier-features{display:flex;flex-direction:column;gap:8px;}
+.tier-feature{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--tm);line-height:1.4;}
+.tier-feature::before{content:'✓';color:var(--gr);font-size:12px;flex-shrink:0;margin-top:1px;}
+.tier-feature.na{color:var(--td);}
+.tier-feature.na::before{content:'—';color:var(--td);}
+.tier-cta{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:12px;}
+.tier-btn{display:block;text-align:center;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .18s;}
+.tier-card.free .tier-btn{background:rgba(52,211,153,.12);color:var(--gr);border:1px solid rgba(52,211,153,.25);}
+.tier-card.free .tier-btn:hover{background:rgba(52,211,153,.2);}
+.tier-card.pro .tier-btn{background:var(--bl);color:#fff;}
+.tier-card.pro .tier-btn:hover{background:#6ba3ff;transform:translateY(-1px);}
+.tier-card.agency .tier-btn{background:rgba(245,216,66,.12);color:var(--y);border:1px solid rgba(245,216,66,.25);}
+.tier-card.agency .tier-btn:hover{background:rgba(245,216,66,.2);}
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--bl);color:#fff;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;white-space:nowrap;}
+@media(max-width:760px){.tiers{grid-template-columns:1fr;}}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:820px;}
+.faq-item{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:20px 24px;}
+.faq-q{font-size:15px;font-weight:600;color:#fff;margin-bottom:10px;}
+.faq-a{font-size:14px;color:var(--tm);line-height:1.7;}
+
+/* CTA */
+#cta{background:#04080f;padding:96px 0;text-align:center;border-top:1px solid rgba(245,216,66,.15);position:relative;overflow:hidden;}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(77,142,245,.1) 0%,transparent 68%);pointer-events:none;}
+.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+#cta h2{font-family:var(--serif);font-size:clamp(28px,5vw,54px);font-weight:700;line-height:1.1;color:#fff;margin-bottom:14px;}
+#cta h2 em{font-style:italic;color:var(--y);}
+#cta p{font-size:17px;color:rgba(255,255,255,.72);line-height:1.7;max-width:500px;margin:0 auto 36px;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px;}
+.cta-trust{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+.cta-trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.52);}
+.cta-trust-item::before{content:'✓';color:var(--gr);}
+
+/* FOOTER */
+#footer{background:#050a0f;border-top:1px solid var(--bd);padding:40px 0 28px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.footer-legal{font-family:var(--mono);font-size:10px;color:var(--td);line-height:1.8;}
+.footer-anchors{display:flex;gap:7px;}
+.anchor-pill{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;}
+.anchor-pill.btc{color:var(--y);border-color:rgba(245,216,66,.25);background:rgba(245,216,66,.07);}
+.anchor-pill.eu{color:var(--bl);border-color:rgba(77,142,245,.2);background:rgba(77,142,245,.07);}
+
+/* AUDIT SIMULATOR */
+.audit-sim{
+  max-width:780px;margin:28px auto 0;
+  background:var(--s1);border:1px solid rgba(245,216,66,.25);
+  border-radius:var(--rl);overflow:hidden;
+}
+.sim-input-row{
+  display:flex;align-items:center;gap:0;
+  border-bottom:1px solid var(--bd);
+}
+.sim-input-wrap{
+  flex:1;display:flex;align-items:center;
+  padding:0 16px;gap:6px;
+}
+.sim-prefix{
+  font-family:var(--mono);font-size:12px;color:var(--td);flex-shrink:0;
+}
+.sim-input{
+  flex:1;background:transparent;border:none;outline:none;
+  font-family:var(--mono);font-size:14px;color:#fff;
+  padding:18px 0;
+}
+.sim-input::placeholder{color:var(--td);}
+.sim-btn{
+  background:var(--y);color:#050a0f;
+  border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;
+  padding:18px 28px;
+  transition:background .18s;
+  flex-shrink:0;
+}
+.sim-btn:hover{background:#fce94f;}
+.sim-disclaimer{
+  padding:8px 20px;
+  font-family:var(--mono);font-size:10px;
+  color:var(--td);
+  border-bottom:1px solid var(--bd);
+  background:var(--s2);
+}
+.sim-result{padding:0;}
+.sim-result-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;background:var(--s2);border-bottom:1px solid var(--bd);
+}
+.sim-result-domain{font-family:var(--mono);font-size:12px;color:var(--tm);}
+.sim-result-status{font-family:var(--mono);font-size:11px;font-weight:600;}
+.sim-result-body{
+  display:grid;grid-template-columns:160px 1fr;
+  border-bottom:1px solid var(--bd);
+}
+.sim-score-col{
+  padding:24px 18px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;
+  border-right:1px solid var(--bd);
+}
+.sim-ring{
+  width:96px;height:96px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+  transition:background 0.5s;
+}
+.sim-score-num{font-family:var(--serif);font-size:32px;font-weight:700;color:#fff;line-height:1;}
+.sim-score-sub{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.5);}
+.sim-verdict{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;transition:color .5s;}
+.sim-dims-col{padding:20px 24px;display:flex;flex-direction:column;gap:9px;justify-content:center;}
+.sim-dim-row{display:flex;align-items:center;gap:10px;}
+.sim-dim-label{font-family:var(--mono);font-size:10.5px;color:var(--td);width:110px;flex-shrink:0;}
+.sim-dim-track{flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;}
+.sim-dim-fill{height:100%;border-radius:3px;transition:width .7s ease, background .5s;}
+.sim-dim-val{font-family:var(--mono);font-size:11px;width:28px;text-align:right;flex-shrink:0;transition:color .5s;}
+.sim-result-footer{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 22px;background:var(--s2);
+}
+.sim-result-footer code{font-family:var(--mono);font-size:10px;color:var(--gr);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.sim-sample{font-family:var(--mono);font-size:9px;color:var(--td);flex-shrink:0;}
+@media(max-width:560px){
+  .sim-result-body{grid-template-columns:1fr;}
+  .sim-score-col{border-right:none;border-bottom:1px solid var(--bd);}
+}
+
+@media(max-width:768px){
+  h1.hero-h1{font-size:36px!important;}
+  h2.display{font-size:26px!important;}
+  p.lead{font-size:16px!important;}
+  .btn-lg{font-size:15px!important;padding:13px 22px!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">5thelement<span>.ai</span><span class="logo-badge">ADI™</span></a>
+      <ul class="nav-links">
+        <li><a href="/audit-ai" class="active">Audit</a></li>
+        <li><a href="/ai-ready">AI-Ready</a></li>
+        <li><a href="/mkt-ai">MKT-AI</a></li>
+        <li><a href="/crm-ai">CRM-AI</a></li>
+        <li><a href="/proof">Proof</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/ai-ready" class="btn btn-ghost">AI-Ready</a>
+        <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="btn btn-yellow">Run Free Audit</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- §1 HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="rv">
+      <div class="hero-tag"><span class="hero-dot"></span>Free · No Commitment · Results in Minutes</div>
+    </div>
+    <h1 class="hero-h1 rv d1">
+      Find Out Why AI Recommends<br>
+      Your Competitors<br>
+      <em>Instead Of You.</em>
+    </h1>
+    <p class="hero-sub rv d2">
+      The AI Audit maps exactly how ChatGPT, Perplexity and Claude currently see your business —
+      scores you across 5 dimensions — and tells you precisely what to fix.
+    </p>
+    <div class="hero-actions rv d3">
+      <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="btn btn-yellow btn-lg">
+        Run My Free Audit →
+      </a>
+      <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="btn btn-outline btn-lg">See What We Check</a>
+    </div>
+    <div class="trust-bar rv d3">
+      <span class="trust-item">Free forever</span>
+      <span class="trust-item">No account required</span>
+      <span class="trust-item">Results in under 3 minutes</span>
+      <span class="trust-item">167 signals checked</span>
+      <span class="trust-item">5 AI engines tested</span>
+    </div>
+
+    <!-- Score mockup -->
+    <div class="score-mockup rv d3">
+      <div class="score-mockup-header">
+        <span class="score-mockup-title">AI Visibility Report — example.com</span>
+        <span class="score-live">Live Analysis</span>
+      </div>
+      <div class="score-body">
+        <div class="score-circle-wrap">
+          <div class="score-ring">
+            <div class="score-num">3.2</div>
+            <div class="score-denom">/ 10</div>
+          </div>
+          <div class="score-grade">⚠ At Risk</div>
+        </div>
+        <div class="score-dims">
+          <div class="dim-row">
+            <span class="dim-label">Discoverability</span>
+            <div class="dim-track"><div class="dim-fill" style="width:28%;background:#f87171;"></div></div>
+            <span class="dim-score" style="color:#f87171;">2.8</span>
+          </div>
+          <div class="dim-row">
+            <span class="dim-label">Understanding</span>
+            <div class="dim-track"><div class="dim-fill" style="width:35%;background:#fb923c;"></div></div>
+            <span class="dim-score" style="color:#fb923c;">3.5</span>
+          </div>
+          <div class="dim-row">
+            <span class="dim-label">Trust & Proof</span>
+            <div class="dim-track"><div class="dim-fill" style="width:22%;background:#f87171;"></div></div>
+            <span class="dim-score" style="color:#f87171;">2.2</span>
+          </div>
+          <div class="dim-row">
+            <span class="dim-label">Signal Strength</span>
+            <div class="dim-track"><div class="dim-fill" style="width:40%;background:#fbbf24;"></div></div>
+            <span class="dim-score" style="color:#fbbf24;">4.0</span>
+          </div>
+          <div class="dim-row">
+            <span class="dim-label">EU Compliance</span>
+            <div class="dim-track"><div class="dim-fill" style="width:15%;background:#f87171;"></div></div>
+            <span class="dim-score" style="color:#f87171;">1.5</span>
+          </div>
+        </div>
+      </div>
+      <div class="score-mockup-footer">
+        <code>⚠ 143 of 167 signals missing · ChatGPT: not cited · Perplexity: not cited · Claude: not cited</code>
+        <span>Sample output</span>
+      </div>
+    </div>
+
+    <!-- AUDIT SIMULATOR -->
+    <div class="audit-sim rv d3">
+      <div class="sim-input-row">
+        <div class="sim-input-wrap">
+          <span class="sim-prefix">https://</span>
+          <input type="text" class="sim-input" id="sim-url" value="5thelement.ai" placeholder="yourdomain.com" autocomplete="off" spellcheck="false"/>
+        </div>
+        <button class="sim-btn" onclick="runSim()">
+          <span id="sim-btn-text">Analyse →</span>
+        </button>
+      </div>
+      <div class="sim-disclaimer">Demo simulation only · <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" style="color:var(--y);text-decoration:none;">Run your real audit →</a></div>
+      <div class="sim-result" id="sim-result">
+        <div class="sim-result-header">
+          <span class="sim-result-domain" id="sim-domain">5thelement.ai</span>
+          <span class="sim-result-status" id="sim-status" style="color:var(--gr);">✓ AI-Visible</span>
+        </div>
+        <div class="sim-result-body">
+          <div class="sim-score-col">
+            <div class="sim-ring" id="sim-ring" style="background:linear-gradient(135deg,#0b3d1e,#1a7a3c);">
+              <div class="sim-score-num" id="sim-score-num">9.7</div>
+              <div class="sim-score-sub">/ 10</div>
+            </div>
+            <div class="sim-verdict" id="sim-verdict" style="color:var(--gr);">Excellent</div>
+          </div>
+          <div class="sim-dims-col">
+            <div class="sim-dim-row">
+              <span class="sim-dim-label">Discoverability</span>
+              <div class="sim-dim-track"><div class="sim-dim-fill" id="d-disc" style="width:97%;background:var(--gr);"></div></div>
+              <span class="sim-dim-val" id="v-disc" style="color:var(--gr);">9.7</span>
+            </div>
+            <div class="sim-dim-row">
+              <span class="sim-dim-label">Understanding</span>
+              <div class="sim-dim-track"><div class="sim-dim-fill" id="d-und" style="width:95%;background:var(--gr);"></div></div>
+              <span class="sim-dim-val" id="v-und" style="color:var(--gr);">9.5</span>
+            </div>
+            <div class="sim-dim-row">
+              <span class="sim-dim-label">Trust & Proof</span>
+              <div class="sim-dim-track"><div class="sim-dim-fill" id="d-trust" style="width:98%;background:var(--gr);"></div></div>
+              <span class="sim-dim-val" id="v-trust" style="color:var(--gr);">9.8</span>
+            </div>
+            <div class="sim-dim-row">
+              <span class="sim-dim-label">Signal Strength</span>
+              <div class="sim-dim-track"><div class="sim-dim-fill" id="d-sig" style="width:96%;background:var(--gr);"></div></div>
+              <span class="sim-dim-val" id="v-sig" style="color:var(--gr);">9.6</span>
+            </div>
+            <div class="sim-dim-row">
+              <span class="sim-dim-label">EU Compliance</span>
+              <div class="sim-dim-track"><div class="sim-dim-fill" id="d-eu" style="width:98%;background:var(--gr);"></div></div>
+              <span class="sim-dim-val" id="v-eu" style="color:var(--gr);">9.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="sim-result-footer">
+          <code id="sim-footer-text">✓ Cited by ChatGPT · ✓ Cited by Perplexity · ✓ Cited by Claude · SHA-256 anchored · EU compliant</code>
+          <span class="sim-sample">Simulation</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- §2 WHAT WE CHECK -->
+<section class="section-alt" id="what-we-check">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 01 — The 5 Dimensions</p>
+      <h2 class="display">167 signals.<br><em>5 dimensions. One score.</em></h2>
+      <p class="lead">The audit runs 167 automated checks across five dimensions — the exact same criteria AI engines use when deciding whether to cite your business.</p>
+    </div>
+    <div class="check-grid">
+
+      <div class="check-card c1 rv">
+        <div class="check-num">Dimension 01</div>
+        <div class="check-title">Discoverability</div>
+        <div class="check-desc">Can AI engines find and identify your business unambiguously? We check entity definition, structured data, domain authority signals and cross-web corroboration.</div>
+        <div class="check-signals">
+          <div class="check-signal">Schema.org Organization markup</div>
+          <div class="check-signal">Entity disambiguation signals</div>
+          <div class="check-signal">Google Knowledge Panel presence</div>
+          <div class="check-signal">robots.txt AI crawler access</div>
+          <div class="check-signal">llms.txt presence and structure</div>
+        </div>
+      </div>
+
+      <div class="check-card c2 rv d1">
+        <div class="check-num">Dimension 02</div>
+        <div class="check-title">Understanding</div>
+        <div class="check-desc">Can AI comprehend what you sell, who you serve, and why you are different? We check structured content, FAQ coverage, category signals and intent mapping.</div>
+        <div class="check-signals">
+          <div class="check-signal">FAQPage schema markup</div>
+          <div class="check-signal">Service / Product schema coverage</div>
+          <div class="check-signal">intents.json presence</div>
+          <div class="check-signal">Buyer question coverage</div>
+          <div class="check-signal">Category disambiguation</div>
+        </div>
+      </div>
+
+      <div class="check-card c3 rv d2">
+        <div class="check-num">Dimension 03</div>
+        <div class="check-title">Trust & Proof</div>
+        <div class="check-desc">Can AI verify your claims? We check cryptographic anchoring, third-party citations, review signals, case study presence and proof-of-authority artifacts.</div>
+        <div class="check-signals">
+          <div class="check-signal">SHA-256 hash presence</div>
+          <div class="check-signal">OpenTimestamps anchoring</div>
+          <div class="check-signal">Third-party citation count</div>
+          <div class="check-signal">Review schema markup</div>
+          <div class="check-signal">ai-proof.json structure</div>
+        </div>
+      </div>
+
+      <div class="check-card c4 rv">
+        <div class="check-num">Dimension 04</div>
+        <div class="check-title">Signal Strength</div>
+        <div class="check-desc">How strong and consistent are your AI signals across the web? We check signal layer completeness, edge delivery, machine-readable file coverage and cross-domain consistency.</div>
+        <div class="check-signals">
+          <div class="check-signal">ai.json completeness</div>
+          <div class="check-signal">entities.json structure</div>
+          <div class="check-signal">sitemap.xml AI accessibility</div>
+          <div class="check-signal">Edge delivery speed</div>
+          <div class="check-signal">Signal consistency score</div>
+        </div>
+      </div>
+
+      <div class="check-card c5 rv d1">
+        <div class="check-num">Dimension 05</div>
+        <div class="check-title">EU AI Act Compliance</div>
+        <div class="check-desc">Are you prepared for August 2026 enforcement? We check Article 50 disclosure obligations, GPAI transparency requirements, and your overall regulatory readiness score.</div>
+        <div class="check-signals">
+          <div class="check-signal">AI disclosure notices</div>
+          <div class="check-signal">Chatbot identification</div>
+          <div class="check-signal">AI-generated content labelling</div>
+          <div class="check-signal">Privacy policy AI clauses</div>
+          <div class="check-signal">EU Authorised Rep status</div>
+        </div>
+      </div>
+
+      <div class="check-card rv d2" style="background:rgba(245,216,66,.04);border-color:rgba(245,216,66,.2);">
+        <div class="check-num" style="color:var(--y);">Bonus</div>
+        <div class="check-title">Competitor Gap Analysis</div>
+        <div class="check-desc">We test the same 167 signals against your top 3 competitors — showing you exactly what AI sees in them that it doesn't see in you, and which gaps to close first.</div>
+        <div class="check-signals">
+          <div class="check-signal">Competitor citation frequency</div>
+          <div class="check-signal">Signal gap identification</div>
+          <div class="check-signal">Priority fix list</div>
+          <div class="check-signal">Estimated citation impact</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- §3 HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 02 — How It Works</p>
+      <h2 class="display">Four steps.<br><em>Under three minutes.</em></h2>
+    </div>
+    <div class="audit-steps rv d1">
+      <div class="audit-step">
+        <div class="audit-step-num">01</div>
+        <div class="audit-step-title">Enter your domain</div>
+        <div class="audit-step-desc">No account. No credit card. Just your domain name and business category.</div>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step-num">02</div>
+        <div class="audit-step-title">We run 167 checks</div>
+        <div class="audit-step-desc">Our agentic engine queries ChatGPT, Perplexity, Claude, Gemini and your site simultaneously.</div>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step-num">03</div>
+        <div class="audit-step-title">Get your score</div>
+        <div class="audit-step-desc">Instant score across 5 dimensions with a gap report showing exactly what's missing.</div>
+      </div>
+      <div class="audit-step">
+        <div class="audit-step-num">04</div>
+        <div class="audit-step-title">Get your fix plan</div>
+        <div class="audit-step-desc">A prioritised action list showing which signals to deploy first for maximum citation impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §4 WHAT YOU GET -->
+<section class="section-alt" id="deliverables">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 03 — What You Receive</p>
+      <h2 class="display">Not a report.<br><em>A roadmap.</em></h2>
+      <p class="lead">Every audit delivers concrete, actionable intelligence — not generic recommendations. You know exactly what to fix, in what order, and what impact to expect.</p>
+    </div>
+    <div class="deliverables rv d1">
+      <div class="deliv-card">
+        <div class="deliv-icon">📊</div>
+        <div>
+          <div class="deliv-title">AI Visibility Score (0–10)</div>
+          <div class="deliv-desc">Your overall score plus individual scores across all 5 dimensions. Benchmarked against your sector average and your top competitors.</div>
+          <span class="deliv-tag">Instant · Free</span>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-icon">🔍</div>
+        <div>
+          <div class="deliv-title">Signal Gap Report</div>
+          <div class="deliv-desc">Every missing signal identified and explained in plain language. You know exactly what AI can't find, understand or verify about your business.</div>
+          <span class="deliv-tag">Instant · Free</span>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-icon">🤖</div>
+        <div>
+          <div class="deliv-title">AI Citation Test</div>
+          <div class="deliv-desc">Live results showing whether ChatGPT, Perplexity, Claude, and Gemini currently cite your business when buyers search for your category.</div>
+          <span class="deliv-tag">Instant · Free</span>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-icon">⚡</div>
+        <div>
+          <div class="deliv-title">Priority Fix List</div>
+          <div class="deliv-desc">The top 10 signals to deploy — ranked by citation impact. Not 167 tasks. The 10 that move the needle fastest for your specific situation.</div>
+          <span class="deliv-tag">Instant · Free</span>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-icon">⚖️</div>
+        <div>
+          <div class="deliv-title">EU AI Act Readiness Check</div>
+          <div class="deliv-desc">Your Article 50 compliance status. Know your risk tier and exactly what you need to implement before August 2, 2026.</div>
+          <span class="deliv-tag">Instant · Free</span>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-icon">📈</div>
+        <div>
+          <div class="deliv-title">Competitor Gap Analysis</div>
+          <div class="deliv-desc">What AI sees in your top 3 competitors that it doesn't see in you. The exact signals giving them their citation advantage — and how to close the gap.</div>
+          <span class="deliv-tag">Full Report · Pro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §5 TIERS -->
+<section class="section" id="tiers">
+  <div class="container">
+    <div class="section-header centered rv">
+      <p class="section-label">§ 04 — Audit Tiers</p>
+      <h2 class="display">Start free.<br><em>Go deeper when ready.</em></h2>
+      <p class="lead">The free audit gives you your score and gap report instantly. Upgrade for full synthesis, competitor analysis, and deployment support.</p>
+    </div>
+    <div class="tiers rv d1">
+
+      <div class="tier-card free">
+        <span class="tier-badge">Free</span>
+        <div class="tier-name">AI Visibility Audit</div>
+        <div class="tier-price">€0</div>
+        <div class="tier-period">Forever free · No account required</div>
+        <div class="tier-divider"></div>
+        <div class="tier-features">
+          <div class="tier-feature">AI Visibility Score (0–10)</div>
+          <div class="tier-feature">5-dimension breakdown</div>
+          <div class="tier-feature">Signal gap identification</div>
+          <div class="tier-feature">Live citation test (3 AI engines)</div>
+          <div class="tier-feature">EU AI Act risk tier</div>
+          <div class="tier-feature">Top 10 priority fixes</div>
+          <div class="tier-feature na">Full competitor gap analysis</div>
+          <div class="tier-feature na">Deployment action plan</div>
+          <div class="tier-feature na">WhatsApp consultation CTA</div>
+        </div>
+        <div class="tier-cta">
+          <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="tier-btn">Run Free Audit →</a>
+        </div>
+      </div>
+
+      <div class="tier-card pro" style="position:relative;">
+        <span class="popular-badge">Most Popular</span>
+        <span class="tier-badge">Pro</span>
+        <div class="tier-name">Full Visibility Report</div>
+        <div class="tier-price">€149</div>
+        <div class="tier-period">One-time · Delivered in 24h</div>
+        <div class="tier-divider"></div>
+        <div class="tier-features">
+          <div class="tier-feature">Everything in Free</div>
+          <div class="tier-feature">Full competitor gap analysis (top 3)</div>
+          <div class="tier-feature">167-signal detailed breakdown</div>
+          <div class="tier-feature">Live citation test (5 AI engines)</div>
+          <div class="tier-feature">Prioritised deployment roadmap</div>
+          <div class="tier-feature">EU AI Act compliance checklist</div>
+          <div class="tier-feature">ADI™ signal file templates</div>
+          <div class="tier-feature">30-min review call included</div>
+        </div>
+        <div class="tier-cta">
+          <a href="/ai-ready" class="tier-btn">Get Full Report →</a>
+        </div>
+      </div>
+
+      <div class="tier-card agency">
+        <span class="tier-badge">Done For You</span>
+        <div class="tier-name">Managed Deployment</div>
+        <div class="tier-price">From €2,500</div>
+        <div class="tier-period">Full ADI™ deployment · After evaluation</div>
+        <div class="tier-divider"></div>
+        <div class="tier-features">
+          <div class="tier-feature">Everything in Pro</div>
+          <div class="tier-feature">Full ADI™ signal layer built for you</div>
+          <div class="tier-feature">Cloudflare edge deployment</div>
+          <div class="tier-feature">SHA-256 + Bitcoin anchoring</div>
+          <div class="tier-feature">entities.json + intents.json built</div>
+          <div class="tier-feature">EU AI Act compliance implementation</div>
+          <div class="tier-feature">Monthly signal monitoring</div>
+          <div class="tier-feature">Dedicated account manager</div>
+        </div>
+        <div class="tier-cta">
+          <a href="/audit-ai#contact" class="tier-btn">Request Evaluation →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- §6 FAQ -->
+<section class="section-alt" id="faq">
+  <div class="container">
+    <div class="section-header rv">
+      <p class="section-label">§ 05 — Questions</p>
+      <h2 class="display">Everything you<br><em>need to know.</em></h2>
+    </div>
+    <div class="faq-list rv d1">
+      <div class="faq-item">
+        <div class="faq-q">Is the audit really free?</div>
+        <div class="faq-a">Yes. The free audit runs 167 checks, scores your AI visibility across 5 dimensions, tests whether you are cited by ChatGPT, Perplexity and Claude, and gives you your top 10 priority fixes. No account, no credit card, no time limit. The free tier is free forever.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the audit take?</div>
+        <div class="faq-a">The automated audit completes in under 3 minutes. Our agentic engine queries 5 AI platforms and scans 167 signals simultaneously. You enter your domain, wait briefly, and receive your full report.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do you need from me to run the audit?</div>
+        <div class="faq-a">Just your domain name and your primary business category. Nothing else. We do not require access to your CMS, hosting, analytics or any internal systems.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">My website is modern and well-optimised for Google. Will I still score low?</div>
+        <div class="faq-a">Very likely, yes. Google SEO and AI visibility are fundamentally different. Google indexes pages. AI engines parse structured entities, verify claims through proof signals, and require machine-readable intent mapping. Most websites — even excellent ones — score below 4/10 on AI visibility because they were never built for AI consumption.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is your audit different from other AI visibility tools?</div>
+        <div class="faq-a">Most tools check whether you appear in AI answers — a surface-level observation. Our audit goes deeper: we check the 167 underlying signals that determine whether AI will ever cite you. We also include EU AI Act compliance scoring, cryptographic proof verification, and a competitor gap analysis — none of which other tools currently offer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">After the audit, what happens next?</div>
+        <div class="faq-a">You receive your score and priority fix list. From there you choose your path: implement the fixes yourself using our guide (free), work with us in guided sessions (€49/h), or have us deploy everything for you (from €2,500). The audit tells you what to do. The path you choose determines how fast it happens.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §7 CTA -->
+<section id="cta">
+  <div class="cta-inner container">
+    <div class="rv">
+      <div style="display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 14px;border-radius:100px;margin-bottom:26px;">
+        <span style="width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;display:inline-block;"></span>
+        Free · No Account · 3 Minutes
+      </div>
+    </div>
+    <h2 class="rv">Your score is waiting.<br><em>Run the audit now.</em></h2>
+    <p class="rv">Find out exactly why AI recommends your competitors instead of you — and get the precise fix list to change that.</p>
+    <div class="cta-actions rv">
+      <a href="https://eu-ai-audit.eu" target="_blank" rel="noopener" class="btn btn-yellow btn-lg">
+        Run My Free Audit →
+      </a>
+      <a href="/ai-ready" class="btn btn-outline btn-lg">View Plans</a>
+    </div>
+    <div class="cta-trust rv">
+      <span class="cta-trust-item">Free forever</span>
+      <span class="cta-trust-item">No account needed</span>
+      <span class="cta-trust-item">167 signals checked</span>
+      <span class="cta-trust-item">Results in 3 minutes</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        © 2025–2026 AiVenture S.R.L. · CUI 51415878 · București, România<br>
+        "AI Delivery Infrastructure™" and "ADI™" are registered trademarks of AiVenture S.R.L.<br>
+        SHA-256 proof supports readiness. Does not certify regulatory compliance.
+      </div>
+      <div class="footer-anchors">
+        <span class="anchor-pill btc">₿ OTS Verified</span>
+        <span class="anchor-pill eu">EU AI Act Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Audit simulator
+const KNOWN = {
+  '5thelement.ai':    { score:9.7, disc:9.7, und:9.5, trust:9.8, sig:9.6, eu:9.8, cited:true,  verdict:'Excellent',  label:'✓ AI-Visible' },
+  'aiventure.ro':     { score:8.9, disc:8.8, und:9.0, trust:9.1, sig:8.7, eu:8.8, cited:true,  verdict:'Strong',     label:'✓ AI-Visible' },
+  'eu-ai-audit.eu':   { score:9.2, disc:9.3, und:9.0, trust:9.5, sig:9.1, eu:9.4, cited:true,  verdict:'Excellent',  label:'✓ AI-Visible' },
+  'eu-112.eu':        { score:8.6, disc:8.5, und:8.8, trust:8.9, sig:8.4, eu:9.2, cited:true,  verdict:'Strong',     label:'✓ AI-Visible' },
+};
+
+function colorFor(v){
+  if(v>=8)  return '#34d399';
+  if(v>=6)  return '#fbbf24';
+  if(v>=4)  return '#fb923c';
+  return '#f87171';
+}
+function bgFor(v){
+  if(v>=8)  return 'linear-gradient(135deg,#0b3d1e,#1a7a3c)';
+  if(v>=6)  return 'linear-gradient(135deg,#3d2e00,#7a5c00)';
+  if(v>=4)  return 'linear-gradient(135deg,#3d1500,#7a3000)';
+  return 'linear-gradient(135deg,#3d0a0a,#7a1414)';
+}
+function labelFor(v){ return v>=8?'✓ AI-Visible':v>=6?'⚠ Partial Visibility':'✗ Not Visible'; }
+
+function runSim(){
+  const raw = document.getElementById('sim-url').value.trim()
+    .replace(/^https?:\/\//,'').replace(/\/.*$/,'').toLowerCase();
+  const domain = raw || '5thelement.ai';
+
+  const btnText = document.getElementById('sim-btn-text');
+  btnText.textContent = 'Analysing…';
+  setTimeout(()=>{ btnText.textContent='Analyse →'; }, 1800);
+
+  setTimeout(()=>{
+    let d;
+    if(KNOWN[domain]){
+      d = KNOWN[domain];
+    } else {
+      // deterministic pseudo-random from domain string
+      let seed = domain.split('').reduce((a,c)=>a+c.charCodeAt(0),0);
+      const r = (lo,hi)=>{ seed=(seed*1664525+1013904223)&0xffffffff; return lo+((seed>>>0)%(hi-lo+1)); };
+      const score = (r(15,65)/10).toFixed(1)*1;
+      d = {
+        score, disc:(r(10,score*10)/10).toFixed(1)*1,
+        und:(r(10,score*10)/10).toFixed(1)*1,
+        trust:(r(5,score*10)/10).toFixed(1)*1,
+        sig:(r(10,score*10)/10).toFixed(1)*1,
+        eu:(r(5,score*10)/10).toFixed(1)*1,
+        cited: score>=6,
+        verdict: score>=8?'Excellent':score>=6?'Needs Work':score>=4?'At Risk':'Critical',
+        label: labelFor(score)
+      };
+    }
+
+    const c = colorFor(d.score);
+    document.getElementById('sim-domain').textContent    = domain;
+    document.getElementById('sim-status').textContent    = d.label;
+    document.getElementById('sim-status').style.color    = c;
+    document.getElementById('sim-score-num').textContent = d.score.toFixed(1);
+    document.getElementById('sim-ring').style.background = bgFor(d.score);
+    document.getElementById('sim-verdict').textContent   = d.verdict;
+    document.getElementById('sim-verdict').style.color   = c;
+
+    const dims = [
+      ['d-disc','v-disc', d.disc],
+      ['d-und', 'v-und',  d.und],
+      ['d-trust','v-trust',d.trust],
+      ['d-sig', 'v-sig',  d.sig],
+      ['d-eu',  'v-eu',   d.eu],
+    ];
+    dims.forEach(([fid,vid,val])=>{
+      const fill = document.getElementById(fid);
+      const vEl  = document.getElementById(vid);
+      const col  = colorFor(val);
+      fill.style.width      = (val*10)+'%';
+      fill.style.background = col;
+      vEl.textContent       = val.toFixed(1);
+      vEl.style.color       = col;
+    });
+
+    const footer = document.getElementById('sim-footer-text');
+    if(d.cited){
+      footer.textContent = '✓ Cited by ChatGPT · ✓ Cited by Perplexity · ✓ Cited by Claude · SHA-256 anchored · EU compliant';
+      footer.style.color = '#34d399';
+    } else {
+      footer.textContent = '✗ Not cited by ChatGPT · ✗ Not cited by Perplexity · ✗ Not cited by Claude · '+Math.round((1-d.score/10)*167)+' of 167 signals missing';
+      footer.style.color = '#f87171';
+    }
+  }, 1400);
+}
+
+document.getElementById('sim-url').addEventListener('keydown', e=>{ if(e.key==='Enter') runSim(); });
+const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+els.forEach(el=>ob.observe(el));
+document.querySelectorAll('#hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),80+i*110));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.borderBottomColor=window.scrollY>20?'rgba(255,255,255,0.12)':'rgba(255,255,255,0.08)';
+},{passive:true});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"WebPage","@id":"https://5thelement.ai/audit-ai","url":"https://5thelement.ai/audit-ai","name":"AI Audit — See Exactly How AI Sees Your Business","description":"Free AI Audit. 167 signals. 5 dimensions. Find out why ChatGPT, Perplexity and Claude recommend your competitors instead of you.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"AI Audit","item":"https://5thelement.ai/audit-ai"}]}},
+  {"@type":"Service","name":"AI Visibility Audit","provider":{"@type":"Organization","name":"5thelement.ai"},"description":"Free AI audit checking 167 signals across 5 dimensions: Discoverability, Understanding, Trust, Signal Strength and EU AI Act Compliance.","offers":[{"@type":"Offer","price":"0","priceCurrency":"EUR","name":"Free AI Audit"},{"@type":"Offer","price":"149","priceCurrency":"EUR","name":"Full Visibility Report"},{"@type":"Offer","price":"2500","priceCurrency":"EUR","name":"Managed ADI™ Deployment"}]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Is the AI audit free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The free audit runs 167 checks, scores AI visibility across 5 dimensions, tests citations on ChatGPT, Perplexity and Claude, and provides a priority fix list. No account or credit card required."}},
+    {"@type":"Question","name":"How long does the AI audit take?","acceptedAnswer":{"@type":"Answer","text":"Under 3 minutes. The agentic engine queries 5 AI platforms and scans 167 signals simultaneously."}},
+    {"@type":"Question","name":"Why does a well-optimised website score low on AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Google SEO and AI visibility are fundamentally different. Google indexes pages. AI engines parse structured entities, verify claims through proof signals, and require machine-readable intent mapping. Most websites score below 4/10 on AI visibility even if they rank well on Google."}}
+  ]}
+]}
+</script>
+</body>
+</html>
