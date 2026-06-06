@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CRM-AI | 5thelement.ai</title>
+<meta name="description" content="CRM-AI connects your website, leads, buyer intents and follow-up workflows into an AI-assisted commercial system." />
+
+<style>
+:root{
+  --bg:#050b12;
+  --bg2:#08111d;
+  --card:#0b1623;
+  --card2:#0d213a;
+  --line:#1d2d3d;
+  --text:#f7f7f5;
+  --muted:#b9c7d8;
+  --blue:#7db7ff;
+  --gold:#ffdf27;
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at 50% 0%,#0b1625 0%,#050b12 42%,#03070d 100%);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+}
+
+a{text-decoration:none;color:inherit}
+
+header{
+  height:64px;
+  border-bottom:1px solid var(--line);
+  background:#050b12;
+}
+
+.nav{
+  max-width:var(--max);
+  height:64px;
+  margin:auto;
+  padding:0 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:18px;
+  font-weight:900;
+}
+.logo span{color:#49a3ff}
+.logo b{
+  font-family:Inter,Arial,sans-serif;
+  font-size:10px;
+  background:var(--gold);
+  color:#06101a;
+  padding:4px 6px;
+  border-radius:5px;
+  margin-left:6px;
+}
+
+.menu{
+  display:flex;
+  gap:24px;
+  font-size:13px;
+  color:#dce8ff;
+}
+.menu .active{color:var(--gold)}
+
+.actions{display:flex;gap:10px}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:44px;
+  padding:0 22px;
+  border-radius:9px;
+  border:1px solid var(--line);
+  font-size:14px;
+  font-weight:800;
+}
+.btn.gold{
+  background:var(--gold);
+  color:#03070d;
+  border-color:var(--gold);
+}
+
+.breadcrumb{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:34px 22px 0;
+  color:#8798ad;
+  font-size:14px;
+}
+.breadcrumb span{color:var(--gold)}
+
+.hero{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:58px 22px 42px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  margin-bottom:34px;
+}
+.eyebrow:before{
+  content:"";
+  width:22px;
+  height:2px;
+  background:var(--gold);
+}
+
+h1{
+  max-width:1000px;
+  margin:0 auto 26px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:76px;
+  line-height:.98;
+  letter-spacing:-.055em;
+  font-weight:900;
+}
+h1 em{
+  color:var(--gold);
+  font-style:italic;
+}
+
+.hero p{
+  max-width:760px;
+  margin:0 auto 34px;
+  color:#d6e3f5;
+  font-size:21px;
+  line-height:1.55;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-bottom:62px;
+}
+
+.flow{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:30px;
+  align-items:stretch;
+  margin-bottom:46px;
+}
+
+.flow-card{
+  min-height:230px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(12,25,40,.92),rgba(6,13,22,.92));
+  padding:38px 30px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+}
+.flow-card.middle{
+  background:linear-gradient(180deg,#102b4f,#0b1d35);
+  box-shadow:0 0 0 1px rgba(255,255,255,.04) inset;
+}
+.flow-card:first-child{border-radius:24px 0 0 24px}
+.flow-card:last-child{border-radius:0 24px 24px 0}
+.flow-card:not(:last-child)::after{
+  content:"→";
+  position:absolute;
+  right:-22px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:24px;
+  z-index:2;
+}
+
+.icon{
+  font-size:30px;
+  margin-bottom:24px;
+}
+.kicker{
+  color:#5d789a;
+  font-size:11px;
+  letter-spacing:.27em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.flow-card h3{
+  margin:0 0 14px;
+  font-size:20px;
+}
+.flow-card p{
+  margin:0;
+  color:#c9d8ea;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  min-height:215px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:linear-gradient(180deg,rgba(13,28,45,.95),rgba(7,15,26,.95));
+  padding:34px 30px;
+}
+.card .icon{
+  margin-bottom:24px;
+}
+.card h3{
+  margin:0 0 14px;
+  font-size:19px;
+}
+.card p{
+  margin:0;
+  color:#c6d6e9;
+  font-size:17px;
+  line-height:1.55;
+}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .actions .btn:first-child{display:none}
+  h1{font-size:52px}
+  .hero p{font-size:18px}
+  .hero-buttons{flex-direction:column;align-items:center}
+  .flow,.cards{grid-template-columns:1fr}
+  .flow-card,
+  .flow-card:first-child,
+  .flow-card:last-child{border-radius:20px}
+  .flow-card::after{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/">5thelement <span>.ai</span><b>ADI™</b></a>
+
+    <nav class="menu">
+      <a href="/ai-audit">Audit</a>
+      <a href="/ai-ready">AI-Ready</a>
+      <a href="/mkt-ai">MKT-AI</a>
+      <a class="active" href="/crm-ai">CRM-AI</a>
+      <a href="/proof">Proof</a>
+      <a href="/eu-ai-act">EU AI Act</a>
+      <a href="/about">About</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn" href="/ai-audit">Free Audit</a>
+      <a class="btn gold" href="/ai-ready">Get AI-Ready</a>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  Home &nbsp;›&nbsp; Solutions &nbsp;›&nbsp; <span>CRM-AI</span>
+</nav>
+
+<main class="hero">
+
+  <div class="eyebrow">CRM-AI — AI Sales Follow-Up Infrastructure</div>
+
+  <h1>
+    Turn Website Visitors Into
+    <em>AI-Assisted</em> Sales Conversations.
+  </h1>
+
+  <p>
+    CRM-AI connects forms, leads, buyer intents, follow-up messages and sales tasks into a structured
+    commercial workflow so your business can respond faster, qualify better and lose fewer opportunities.
+  </p>
+
+  <div class="hero-buttons">
+    <a class="btn gold" href="/ai-audit">Get My Free AI Audit →</a>
+    <a class="btn" href="#how">See How It Works</a>
+  </div>
+
+  <section class="flow" id="how">
+    <article class="flow-card">
+      <div class="icon">👤</div>
+      <div class="kicker">Lead Source</div>
+      <h3>Visitor or Buyer</h3>
+      <p>Someone asks, clicks, submits, calls, books or requests information.</p>
+    </article>
+
+    <article class="flow-card middle">
+      <div class="icon">⚡</div>
+      <div class="kicker">CRM-AI Layer</div>
+      <h3>Qualification + Follow-Up</h3>
+      <p>Intent, source, need, urgency and next action are structured for the sales process.</p>
+    </article>
+
+    <article class="flow-card">
+      <div class="icon">📈</div>
+      <div class="kicker">Sales Outcome</div>
+      <h3>Pipeline Action</h3>
+      <p>Your team knows who to contact, what to say and what to do next.</p>
+    </article>
+  </section>
+
+  <section class="cards">
+    <article class="card">
+      <div class="icon">🔧</div>
+      <h3>No Website Rebuild</h3>
+      <p>CRM-AI can sit above your current website, forms, landing pages and contact flows.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">⏱️</div>
+      <h3>Faster Follow-Up</h3>
+      <p>Leads can be classified, routed and prepared for response before attention is lost.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎯</div>
+      <h3>Intent-Based Qualification</h3>
+      <p>Discovery, pricing, urgency, service interest and objection signals are captured clearly.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">💬</div>
+      <h3>AI-Assisted Replies</h3>
+      <p>Prepare email, WhatsApp or CRM notes based on the buyer question and business context.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌐</div>
+      <h3>Multi-Channel Ready</h3>
+      <p>Website forms, chat, email, WhatsApp, booking pages and CRM records can work together.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🔐</div>
+      <h3>Human-in-the-Loop</h3>
+      <p>AI helps structure the process, but your team keeps control over decisions and client communication.</p>
+    </article>
+  </section>
+
+</main>
+
+</body>
+</html>
