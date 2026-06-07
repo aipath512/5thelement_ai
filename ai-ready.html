@@ -1,680 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>AI-Ready — Deploy Your AI Visibility Layer in 24 Hours | 5thelement.ai</title>
-<meta name="description" content="Make your business discoverable, understandable, trusted and recommended by AI. ADI™ deployed at the Cloudflare edge. No code changes. Live in 24 hours."/>
-<meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://5thelement.ai/ai-ready"/>
-<meta property="og:title" content="AI-Ready — Deploy Your AI Visibility Layer in 24 Hours"/>
-<meta property="og:description" content="167 signals. 5 dimensions. Cloudflare edge. No code changes. Live in 24 hours."/>
-<meta property="og:url" content="https://5thelement.ai/ai-ready"/>
-<meta property="og:type" content="website"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-READY™ — AiVenture | Transition to the Answer Economy</title>
+<meta name="description" content="AI-READY™ by AiVenture S.R.L. — 167-signal audit, AI Maturity Model L1–L6, and three delivery paths to make your firm findable, understandable, verifiable, and recommendable by ChatGPT, Gemini, Claude, and Perplexity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","@id":"https://aiventure.ro/#organization","name":"AiVenture S.R.L.","url":"https://aiventure.ro","sameAs":["https://5thelement.ai","https://www.linkedin.com/company/aiventure"]},
+    {"@type":"Service","@id":"https://5thelement.ai/ai-ready/#service","name":"AI-READY™","description":"A 167-signal AI visibility audit and infrastructure layer by AiVenture S.R.L. that makes firms findable, understandable, trusted, and recommendable by AI systems such as ChatGPT, Gemini, Claude, and Perplexity.","provider":{"@id":"https://aiventure.ro/#organization"},"offers":[{"@type":"Offer","name":"Free Audit","price":"0","priceCurrency":"EUR"},{"@type":"Offer","name":"Private Support","price":"49","priceCurrency":"EUR"},{"@type":"Offer","name":"Done For You","price":"2500","priceCurrency":"EUR"}]},
+    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI-READY™?","acceptedAnswer":{"@type":"Answer","text":"AI-READY™ is an AI Delivery Infrastructure (ADI) layer by AiVenture S.R.L. that audits 167 signals across 6 maturity levels and makes firms findable, understandable, trusted, and recommendable by AI systems such as ChatGPT, Gemini, Claude, and Perplexity."}},{"@type":"Question","name":"What are the 6 AI Maturity Levels?","acceptedAnswer":{"@type":"Answer","text":"L1 Edge and Crawl Access, L2 Semantic Clarity, L3 Voice CRM and Intent, L4 Vectorial Entity Layer, L5 Economic Twin, L6 Predictive AI Mastery."}},{"@type":"Question","name":"What is the Answer Economy?","acceptedAnswer":{"@type":"Answer","text":"The Answer Economy is the shift from Google-era traffic (Keywords to Pages to Clicks) to AI-era discovery (Intent to Understanding to Trust to Answers). Businesses no longer compete only for rankings — they compete to become the easiest answer for AI to discover, understand, verify, cite, and recommend."}}]}
+  ]
+}
+</script>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;}
-body{background:#050a0f;color:#f0f4ff;font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
-::selection{background:#f5d842;color:#050a0f;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:#050a0f;}
-::-webkit-scrollbar-thumb{background:#f5d842;border-radius:2px;}
+:root{--navy:#0b1e3d;--blue:#1252cc;--accent:#7ec8ff;--gold:#c9a84c;--white:#ffffff;--off:#f4f6fa;--mid:#4a5568;--border:#e2e8f0;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:#0a0a0a;line-height:1.6;overflow-x:hidden}
 
-:root{
-  --y:#f5d842;
-  --b:#050a0f;
-  --s1:#0a1220;
-  --s2:#0d1828;
-  --s3:#111f32;
-  --bd:rgba(255,255,255,0.08);
-  --bdhi:rgba(255,255,255,0.16);
-  --tm:#b0bcd4;
-  --td:#5a6a84;
-  --gr:#34d399;
-  --bl:#4d8ef5;
-  --rd:#f87171;
-  --serif:'Playfair Display',Georgia,serif;
-  --mono:'JetBrains Mono',monospace;
-  --r:10px;
-  --rl:18px;
-  --max:1140px;
-}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo span{color:var(--blue)}
+nav{display:flex;gap:1.5rem;align-items:center}
+nav a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff!important;padding:.5rem 1.25rem;border-radius:6px;font-weight:600!important}
 
-.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
-.divider{height:1px;background:var(--bd);}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.hero{padding:140px 2rem 80px;max-width:900px;margin:0 auto;text-align:center}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.15em;color:var(--blue);text-transform:uppercase;margin-bottom:1.5rem;display:inline-flex;align-items:center;gap:.5rem}
+.eyebrow::before,.eyebrow::after{content:'';display:block;width:32px;height:1px;background:var(--blue)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;color:var(--navy);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:1.15rem;color:var(--mid);max-width:640px;margin:0 auto 2.5rem;line-height:1.7}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-p{background:var(--navy);color:#fff;padding:.875rem 2rem;border-radius:8px;font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s;border:2px solid var(--navy)}
+.btn-p:hover{background:var(--blue);border-color:var(--blue)}
+.btn-s{background:transparent;color:var(--navy);padding:.875rem 2rem;border-radius:8px;font-size:.95rem;font-weight:600;text-decoration:none;border:2px solid var(--navy);transition:all .2s}
+.btn-s:hover{background:var(--navy);color:#fff}
 
-/* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#050a0f;border-bottom:1px solid rgba(255,255,255,0.08);}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:6px;}
-.nav-logo{font-family:var(--serif);font-size:16px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;flex-shrink:0;}
-.nav-logo span{color:var(--bl);}
-.logo-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--y);color:#050a0f;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0;}
-.nav-links{display:flex;align-items:center;gap:16px;list-style:none;}
-.nav-links a{font-size:12px;font-weight:500;color:var(--tm);white-space:nowrap;}
-.nav-links a:hover,.nav-links a.active{color:#fff;}
-.nav-actions{display:flex;gap:7px;align-items:center;flex-shrink:0;}
-.btn{display:inline-flex;align-items:center;gap:7px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;white-space:nowrap;}
-.btn-ghost{background:transparent;color:var(--tm);border:1px solid var(--bd);}
-.btn-ghost:hover{color:#fff;border-color:var(--bdhi);}
-.btn-yellow{background:var(--y);color:#050a0f;}
-.btn-yellow:hover{background:#fce94f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,216,66,.3);}
-.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
-.btn-outline:hover{background:rgba(255,255,255,.06);}
-.btn-lg{font-size:15px;padding:14px 28px;border-radius:10px;}
-@media(max-width:600px){.nav-links{display:none;}.nav-actions .btn-ghost{display:none;}}
+.strip{background:var(--navy);padding:1rem 2rem;text-align:center}
+.strip p{font-family:var(--mono);font-size:.75rem;color:var(--accent);letter-spacing:.08em}
 
-/* SECTIONS */
-.section{padding:88px 0;background:#050a0f;border-top:1px solid rgba(255,255,255,0.06);}
-.section-alt{padding:88px 0;background:#080e1a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
-.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.section-label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--y);border-radius:1px;}
-h2.display{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:16px;}
-h2.display em{font-style:italic;color:var(--y);}
-p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--tm);line-height:1.7;}
-.section-header{max-width:680px;margin-bottom:52px;}
-.section-header.centered{margin:0 auto 52px;text-align:center;}
+.sec{padding:80px 2rem;max-width:1100px;margin:0 auto}
+.sec-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;margin-bottom:1rem}
+.sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1.5rem}
+hr.div{border:none;border-top:1px solid var(--border);margin:0}
 
-/* REVEAL */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
-.rv.on{opacity:1;transform:none;}
-.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+.lor-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:3rem 0;border:2px solid var(--navy);border-radius:12px;overflow:hidden}
+.lor-old{padding:2.5rem;background:#f8f9fb}
+.lor-new{padding:2.5rem;background:var(--navy)}
+.lor-old h3,.lor-new h3{font-family:var(--mono);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem}
+.lor-old h3{color:var(--mid)}.lor-new h3{color:var(--accent)}
+.lor-flow{display:flex;flex-direction:column;gap:.5rem}
+.lor-step{display:flex;align-items:center;gap:.75rem;font-size:.95rem}
+.lor-old .lor-step{color:var(--mid)}.lor-new .lor-step{color:#e2e8f0}
+.arr{font-family:var(--mono);color:var(--blue);font-size:.8rem}
+.lor-new .arr{color:var(--accent)}
+.lor-step strong{color:var(--navy)}.lor-new .lor-step strong{color:#fff}
+.metrics{margin-top:2rem;padding-top:1.5rem}
+.lor-old .metrics{border-top:1px solid #e2e8f0}.lor-new .metrics{border-top:1px solid rgba(255,255,255,.1)}
+.metrics p{font-size:.8rem;margin-bottom:.5rem}
+.lor-old .metrics p{color:var(--mid)}.lor-new .metrics p{color:#94a3b8}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag-old{background:#fee2e2;color:#991b1b;font-size:.7rem;padding:.2rem .5rem;border-radius:3px;font-family:var(--mono)}
+.tag-new{background:rgba(126,200,255,.15);color:var(--accent);font-size:.7rem;padding:.2rem .5rem;border-radius:3px;font-family:var(--mono)}
 
-/* BREADCRUMB */
-.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--td);justify-content:center;margin-bottom:20px;}
-.breadcrumb a{color:var(--td);transition:color .18s;}
-.breadcrumb a:hover{color:var(--tm);}
-.breadcrumb-sep{color:var(--td);font-size:10px;}
-.breadcrumb-current{color:var(--tm);}
+.quote-block{border-left:4px solid var(--blue);padding:1.5rem 2rem;margin:2rem 0;background:var(--off);border-radius:0 8px 8px 0}
+.quote-block p{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--navy);line-height:1.6}
+.quote-block cite{display:block;margin-top:.75rem;font-family:var(--mono);font-size:.75rem;color:var(--blue);font-style:normal}
 
-/* HERO */
-#hero{background:#050a0f;padding:130px 0 88px;min-height:80vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center;}
-#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -10%,rgba(52,211,153,.1) 0%,transparent 70%);pointer-events:none;}
-.hero-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--y);background:rgba(245,216,66,.08);border:1px solid rgba(245,216,66,.25);padding:5px 14px;border-radius:100px;margin-bottom:28px;}
-.hero-dot{width:6px;height:6px;background:var(--y);border-radius:50%;animation:pulse 2s infinite;}
-h1.hero-h1{font-family:var(--serif);font-size:clamp(38px,6.5vw,80px);font-weight:700;line-height:1.06;letter-spacing:-.025em;color:#fff;margin-bottom:24px;}
-h1.hero-h1 em{font-style:italic;color:var(--y);}
-.hero-sub{font-size:clamp(16px,1.8vw,20px);color:var(--tm);line-height:1.65;max-width:600px;margin:0 auto 40px;}
-.hero-proof{font-family:var(--mono);font-size:clamp(11px,1.2vw,13px);letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:40px;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:52px;}
-.trust-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;}
-.trust-item{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--td);}
-.trust-item::before{content:'✓';color:var(--gr);}
+.compete{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:2rem 0}
+.comp-item{border:1px solid var(--border);border-radius:8px;padding:1.25rem;display:flex;align-items:center;gap:.75rem}
+.comp-check{width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.comp-item span{font-size:.95rem;font-weight:600;color:var(--navy)}
 
-/* WHAT IS AI-READY */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.pillar{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:28px 22px;text-align:center;position:relative;overflow:hidden;transition:border-color .18s,transform .18s;}
-.pillar:hover{border-color:var(--bdhi);transform:translateY(-3px);}
-.pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.pillar:nth-child(1)::before{background:var(--rd);}
-.pillar:nth-child(2)::before{background:#fb923c;}
-.pillar:nth-child(3)::before{background:var(--bl);}
-.pillar:nth-child(4)::before{background:var(--gr);}
-.pillar-icon{font-size:32px;margin-bottom:14px;}
-.pillar-num{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--td);margin-bottom:8px;}
-.pillar-title{font-family:var(--serif);font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;}
-.pillar-desc{font-size:13px;color:var(--tm);line-height:1.6;}
-@media(max-width:760px){.pillars{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.pillars{grid-template-columns:1fr;}}
+.tagline-blk{background:var(--navy);padding:60px 2rem;text-align:center}
+.tagline-blk h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.2rem);color:#fff;line-height:1.3;margin-bottom:1rem}
+.tagline-blk h2 em{font-style:italic;color:var(--accent)}
+.tagline-blk p{color:#94a3b8;font-size:1rem;max-width:600px;margin:0 auto}
+.brand-lk{margin-bottom:2rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
 
-/* HOW IT WORKS */
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.how-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rl);padding:32px 28px;display:flex;gap:20px;align-items:flex-start;transition:border-color .18s;}
-.how-card:hover{border-color:var(--bdhi);}
-.how-num{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--y);line-height:1;flex-shrink:0;width:52px;}
-.how-title{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px;}
-.how-desc{font-size:13.5px;color:var(--tm);line-height:1.65;}
-.how-tag{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:10px;padding:2px 9px;border-radius:5px;background:rgba(245,216,66,.07);color:var(--y);border:1px solid rgba(245,216,66,.2);}
-@media(max-width:680px){.how-grid{grid-template-columns:1fr;}}
+.master{background:var(--off);border:1px solid var(--border);border-radius:12px;padding:2.5rem;margin:3rem 0;position:relative}
+.master::before{content:'CANONICAL DEFINITION';position:absolute;top:-12px;left:2rem;background:var(--blue);color:#fff;font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;padding:.25rem .75rem;border-radius:4px}
+.master p{font-size:1.05rem;line-height:1.8;color:var(--navy)}
 
-/* WHAT'S INCLUDED */
-.included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.inc-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:22px 18px;}
-.inc-icon{font-size:22px;margin-bottom:10px;}
-.inc-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:6px;}
-.inc-desc{font-size:13px;color:var(--tm);line-height:1.6;}
-.inc-tag{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:9.5px;padding:2px 8px;border-radius:4px;}
-.inc-tag.core{background:rgba(52,211,153,.08);color:var(--gr);border:1px solid rgba(52,211,153,.2);}
-.inc-tag.pro{background:rgba(77,142,245,.08);color:var(--bl);border:1px solid rgba(77,142,245,.2);}
-@media(max-width:860px){.included-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:520px){.included-grid{grid-template-columns:1fr;}}
+.chain-wrap{overflow-x:auto;padding:1.5rem 0}
+.chain{display:flex;align-items:center;gap:0;min-width:max-content}
+.cn{background:var(--navy);color:#fff;padding:.6rem 1rem;border-radius:6px;font-size:.8rem;font-weight:600;text-align:center;white-space:nowrap}
+.ca{color:var(--blue);font-size:1.2rem;padding:0 .5rem;font-weight:700}
+.cbreak{background:#fee2e2;color:var(--red);padding:.4rem .75rem;border-radius:4px;font-family:var(--mono);font-size:.7rem;margin-left:1rem;white-space:nowrap}
 
-/* ARCH */
-.arch-row{display:flex;align-items:stretch;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;margin-bottom:48px;}
-.arch-block{flex:1;padding:28px 22px;text-align:center;background:var(--s2);border-right:1px solid var(--bd);}
-.arch-block:last-child{border-right:none;}
-.arch-block.edge{background:#0b1e3d;flex:1.2;}
-.arch-arrow{padding:0 6px;display:flex;align-items:center;justify-content:center;background:var(--s1);border-right:1px solid var(--bd);color:var(--td);font-size:16px;}
-.arch-icon{font-size:26px;margin-bottom:10px;}
-.arch-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--td);margin-bottom:5px;}
-.arch-block.edge .arch-lbl{color:rgba(255,255,255,.5);}
-.arch-name{font-size:14px;font-weight:600;color:#fff;}
-.arch-desc{font-size:12.5px;color:var(--tm);line-height:1.5;margin-top:5px;}
-.arch-block.edge .arch-desc{color:rgba(255,255,255,.65);}
+.etable{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.875rem}
+.etable th{background:var(--navy);color:#fff;padding:.875rem 1rem;text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.etable th:first-child{border-radius:8px 0 0 0}.etable th:last-child{border-radius:0 8px 0 0}
+.etable td{padding:.875rem 1rem;border-bottom:1px solid var(--border);vertical-align:top}
+.etable tr:last-child td{border-bottom:none}
+.etable tr:nth-child(even) td{background:var(--off)}
+.en{font-weight:700;color:var(--navy);display:block;margin-bottom:.2rem}
+.et{font-family:var(--mono);font-size:.65rem;color:var(--blue)}
 
-/* SIGNAL FILES */
-.files-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-.file-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:18px 16px;}
-.file-name{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--y);margin-bottom:6px;}
-.file-desc{font-size:12px;color:var(--tm);line-height:1.5;}
-@media(max-width:760px){.files-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:440px){.files-grid{grid-template-columns:1fr;}}
+.drop-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin:2rem 0}
+.drop-item{background:#fff;padding:1.5rem;display:grid;grid-template-columns:auto 1fr;gap:1rem}
+.dcause{font-family:var(--mono);font-size:.7rem;background:#fee2e2;color:var(--red);padding:.2rem .5rem;border-radius:3px;align-self:start;white-space:nowrap}
+.drop-item p{font-size:.875rem;color:var(--mid)}
+.drop-item strong{display:block;color:var(--navy);margin-bottom:.25rem;font-size:.9rem}
 
-/* PLANS */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.plan-card{border-radius:var(--rl);padding:32px 26px;border:1px solid;display:flex;flex-direction:column;gap:12px;position:relative;}
-.plan-card.diy{background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2);}
-.plan-card.guided{background:rgba(77,142,245,.06);border-color:rgba(77,142,245,.3);}
-.plan-card.done{background:rgba(245,216,66,.04);border-color:rgba(245,216,66,.2);}
-.plan-badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;display:inline-block;width:fit-content;}
-.plan-card.diy .plan-badge{color:var(--gr);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.07);}
-.plan-card.guided .plan-badge{color:var(--bl);border-color:rgba(77,142,245,.3);background:rgba(77,142,245,.07);}
-.plan-card.done .plan-badge{color:var(--y);border-color:rgba(245,216,66,.3);background:rgba(245,216,66,.07);}
-.plan-name{font-family:var(--serif);font-size:24px;font-weight:700;color:#fff;}
-.plan-price{font-family:var(--mono);font-size:26px;font-weight:700;}
-.plan-card.diy .plan-price{color:var(--gr);}
-.plan-card.guided .plan-price{color:var(--bl);}
-.plan-card.done .plan-price{color:var(--y);}
-.plan-period{font-family:var(--mono);font-size:11px;color:var(--td);}
-.plan-divider{height:1px;background:var(--bd);}
-.plan-features{display:flex;flex-direction:column;gap:8px;}
-.plan-feature{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--tm);line-height:1.4;}
-.plan-feature::before{content:'✓';color:var(--gr);font-size:12px;flex-shrink:0;margin-top:1px;}
-.plan-feature.na{color:var(--td);}
-.plan-feature.na::before{content:'—';color:var(--td);}
-.plan-btn{display:block;text-align:center;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .18s;margin-top:auto;}
-.plan-card.diy .plan-btn{background:rgba(52,211,153,.12);color:var(--gr);border:1px solid rgba(52,211,153,.25);}
-.plan-card.diy .plan-btn:hover{background:rgba(52,211,153,.2);}
-.plan-card.guided .plan-btn{background:var(--bl);color:#fff;}
-.plan-card.guided .plan-btn:hover{background:#6ba3ff;transform:translateY(-1px);}
-.plan-card.done .plan-btn{background:rgba(245,216,66,.12);color:var(--y);border:1px solid rgba(245,216,66,.25);}
-.plan-card.done .plan-btn:hover{background:rgba(245,216,66,.2);}
-.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--bl);color:#fff;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;white-space:nowrap;}
-@media(max-width:760px){.plans{grid-template-columns:1fr;}}
+.layers{display:flex;flex-direction:column;gap:1.5rem;margin:2rem 0}
+.lcard{border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.lhdr{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;background:var(--off);border-bottom:1px solid var(--border)}
+.lnum{width:40px;height:40px;background:var(--navy);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:.9rem;flex-shrink:0}
+.lhdr h3{font-size:1rem;font-weight:700;color:var(--navy)}
+.lctl{margin-left:auto;font-family:var(--mono);font-size:.65rem;padding:.2rem .5rem;border-radius:3px;white-space:nowrap}
+.ctl-y{background:#dcfce7;color:#166534}.ctl-h{background:#fef9c3;color:#854d0e}
+.lbody{padding:1.5rem}
+.lbody p{font-size:.9rem;color:var(--mid);margin-bottom:1rem}
+.spills{display:flex;flex-wrap:wrap;gap:.5rem}
+.sp{font-family:var(--mono);font-size:.7rem;background:var(--off);color:var(--navy);border:1px solid var(--border);padding:.25rem .6rem;border-radius:4px}
 
-/* TIMELINE */
-.deploy-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;}
-.dt-step{padding:28px 20px;text-align:center;border-right:1px solid var(--bd);background:var(--s2);position:relative;}
-.dt-step:last-child{border-right:none;}
-.dt-time{font-family:var(--mono);font-size:11px;color:var(--y);letter-spacing:.1em;margin-bottom:10px;}
-.dt-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:6px;}
-.dt-desc{font-size:12px;color:var(--tm);line-height:1.5;}
-@media(max-width:680px){.deploy-timeline{grid-template-columns:1fr 1fr;}}
-@media(max-width:440px){.deploy-timeline{grid-template-columns:1fr;}}
+.mat-wrap{margin:3rem 0}
+.ml{display:grid;grid-template-columns:80px 1fr;gap:0;margin-bottom:2px;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.mbadge{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.25rem .75rem;text-align:center;gap:.25rem}
+.mbadge .lv{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;opacity:.8}
+.mbadge .mn{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;line-height:1}
+.mcont{padding:1.25rem 1.5rem;background:#fff}
+.mcont h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.mcont p{font-size:.825rem;color:var(--mid);margin-bottom:.75rem}
+.sc{font-family:var(--mono);font-size:.7rem;color:var(--blue);font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.pill{font-size:.65rem;padding:.15rem .5rem;border-radius:3px;font-family:var(--mono);background:var(--off);color:var(--mid);border:1px solid var(--border)}
+.l1 .mbadge{background:#eff6ff;color:#1e40af}
+.l2 .mbadge{background:#f0fdf4;color:#166534}
+.l3 .mbadge{background:#fefce8;color:#854d0e}
+.l4 .mbadge{background:#fdf4ff;color:#7e22ce}
+.l5 .mbadge{background:#fff7ed;color:#9a3412}
+.l6 .mbadge{background:#0b1e3d;color:#7ec8ff}
 
-/* FAQ */
-.faq-list{display:flex;flex-direction:column;gap:10px;max-width:820px;}
-.faq-item{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:20px 24px;}
-.faq-q{font-size:15px;font-weight:600;color:#fff;margin-bottom:10px;}
-.faq-a{font-size:14px;color:var(--tm);line-height:1.7;}
+.audit-hero{background:linear-gradient(135deg,var(--navy) 0%,#1a3a6e 100%);border-radius:16px;padding:3rem;margin:3rem 0;text-align:center;position:relative;overflow:hidden}
+.audit-hero::before{content:'167';position:absolute;right:-20px;top:-30px;font-family:'Playfair Display',serif;font-size:12rem;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none}
+.audit-hero h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;margin-bottom:1rem}
+.audit-hero p{color:#94a3b8;max-width:600px;margin:0 auto 2rem}
+.ac{display:inline-flex;align-items:baseline;gap:.5rem;margin-bottom:.5rem}
+.ac .anum{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:var(--accent);line-height:1}
+.ac .albl{font-family:var(--mono);font-size:.85rem;color:#94a3b8}
 
-/* CTA */
-#cta{background:#04080f;padding:96px 0;text-align:center;border-top:1px solid rgba(245,216,66,.15);position:relative;overflow:hidden;}
-#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(52,211,153,.08) 0%,transparent 68%);pointer-events:none;}
-.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;}
-#cta h2{font-family:var(--serif);font-size:clamp(28px,5vw,54px);font-weight:700;line-height:1.1;color:#fff;margin-bottom:14px;}
-#cta h2 em{font-style:italic;color:var(--y);}
-#cta p{font-size:17px;color:rgba(255,255,255,.72);line-height:1.7;max-width:500px;margin:0 auto 36px;}
-.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px;}
-.cta-trust{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
-.cta-trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.52);}
-.cta-trust-item::before{content:'✓';color:var(--gr);}
+.scats{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
+.scat{border:1px solid var(--border);border-radius:10px;padding:1.5rem;background:#fff}
+.scat-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
+.scat h4{font-size:.9rem;font-weight:700;color:var(--navy)}
+.sbadge{font-family:var(--mono);font-size:.7rem;background:var(--navy);color:#fff;padding:.2rem .5rem;border-radius:4px;white-space:nowrap}
+.slist{list-style:none}
+.slist li{font-size:.8rem;color:var(--mid);padding:.3rem 0;border-bottom:1px solid var(--off);display:flex;align-items:center;gap:.5rem}
+.slist li:last-child{border-bottom:none}
+.sdot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
 
-/* FOOTER */
-#footer{background:#050a0f;border-top:1px solid var(--bd);padding:40px 0 28px;}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-.footer-legal{font-family:var(--mono);font-size:10px;color:var(--td);line-height:1.8;}
-.footer-anchors{display:flex;gap:7px;}
-.anchor-pill{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid;}
-.anchor-pill.btc{color:var(--y);border-color:rgba(245,216,66,.25);background:rgba(245,216,66,.07);}
-.anchor-pill.eu{color:var(--bl);border-color:rgba(77,142,245,.2);background:rgba(77,142,245,.07);}
-.anchor-pill.ots{color:var(--gr);border-color:rgba(52,211,153,.2);background:rgba(52,211,153,.07);}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:3rem 0;align-items:start}
+.pcard{border-radius:12px;overflow:hidden;border:2px solid var(--border);transition:transform .2s,box-shadow .2s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.1)}
+.pcard.feat{border-color:var(--blue)}
+.phdr{padding:2rem}
+.pcard.free .phdr{background:var(--off)}
+.pcard.sup .phdr{background:#eff6ff}
+.pcard.dfy .phdr{background:var(--navy)}
+.ppath{font-family:var(--mono);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+.pcard.free .ppath{color:var(--mid)}.pcard.sup .ppath{color:var(--blue)}.pcard.dfy .ppath{color:var(--accent)}
+.phdr h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.pcard.free .phdr h3,.pcard.sup .phdr h3{color:var(--navy)}.pcard.dfy .phdr h3{color:#fff}
+.pamt{display:flex;align-items:baseline;gap:.25rem;margin-bottom:.5rem}
+.pamt .cur{font-size:1.1rem;font-weight:600}
+.pamt .amt{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;line-height:1}
+.pamt .per{font-size:.85rem}
+.pcard.free .pamt,.pcard.sup .pamt{color:var(--navy)}.pcard.dfy .pamt{color:#fff}
+.pdesc{font-size:.825rem}
+.pcard.free .pdesc,.pcard.sup .pdesc{color:var(--mid)}.pcard.dfy .pdesc{color:#94a3b8}
+.pbody{padding:1.5rem 2rem 2rem}
+.pfeat{list-style:none;margin-bottom:1.5rem}
+.pfeat li{font-size:.85rem;padding:.5rem 0;border-bottom:1px solid var(--off);display:flex;gap:.5rem;align-items:flex-start;color:var(--mid)}
+.pfeat li:last-child{border-bottom:none}
+.ck{color:var(--green);font-size:.9rem;flex-shrink:0;margin-top:.05rem}
+.cx{color:var(--red);font-size:.9rem;flex-shrink:0;margin-top:.05rem}
+.pcta{display:block;text-align:center;padding:.875rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s}
+.pcard.free .pcta{background:var(--navy);color:#fff}
+.pcard.sup .pcta{background:var(--blue);color:#fff}
+.pcard.dfy .pcta{background:var(--accent);color:var(--navy)}
+.pcta:hover{opacity:.9}
+.fbadge{text-align:center;padding:.35rem;background:var(--blue);color:#fff;font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
 
-@media(max-width:768px){
-  h1.hero-h1{font-size:36px!important;}
-  h2.display{font-size:26px!important;}
-  p.lead{font-size:16px!important;}
-  .btn-lg{font-size:15px!important;padding:13px 22px!important;}
-}
+.proof{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:3rem 0;font-family:var(--mono);font-size:.75rem;color:var(--mid)}
+.proof .ptitle{color:var(--blue);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem}
+.proof .pr{margin-bottom:.4rem}
+.proof .pr span{color:var(--navy);font-weight:500}
+
+footer{background:var(--navy);padding:3rem 2rem;text-align:center}
+footer p{color:#64748b;font-size:.8rem;font-family:var(--mono)}
+footer strong{color:var(--accent)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:fadeUp .6s ease both}
+.hero>*:nth-child(1){animation-delay:.1s}
+.hero>*:nth-child(2){animation-delay:.2s}
+.hero>*:nth-child(3){animation-delay:.3s}
+.hero>*:nth-child(4){animation-delay:.4s}
+
+@media(max-width:768px){.lor-grid,.pgrid,.drop-grid{grid-template-columns:1fr}nav{display:none}.ml{grid-template-columns:60px 1fr}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">5thelement<span>.ai</span><span class="logo-badge">ADI™</span></a>
-      <ul class="nav-links">
-        <li><a href="/audit-ai">Audit</a></li>
-        <li><a href="/ai-ready" class="active">AI-Ready</a></li>
-        <li><a href="/mkt-ai">MKT-AI</a></li>
-        <li><a href="/crm-ai">CRM-AI</a></li>
-        <li><a href="/proof">Proof</a></li>
-        <li><a href="/eu-ai-act">EU AI Act</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="/audit-ai" class="btn btn-ghost">Free Audit</a>
-        <a href="/audit-ai" class="btn btn-yellow">Get AI-Ready</a>
-      </div>
-    </div>
+<header>
+  <a href="https://5thelement.ai" class="logo">5the<span>lement</span>.ai</a>
+  <nav>
+    <a href="#shift">The Shift</a>
+    <a href="#synthesis">Synthesis</a>
+    <a href="#maturity">Maturity Model</a>
+    <a href="#audit">167 Signals</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#audit" class="nav-cta">Free Audit →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">AI-READY™ — AiVenture S.R.L.</div>
+  <h1>The Observer<br>Has <em>Changed</em></h1>
+  <p class="hero-sub">Most businesses are still optimizing for Google. For 20 years, the discovery model assumed one observer — the human searcher. Today, the observer is AI. And when the observer changes, the rules for describing reality change too.</p>
+  <div class="hero-ctas">
+    <a href="#audit" class="btn-p">Run Your Free 167-Signal Audit</a>
+    <a href="#shift" class="btn-s">Understand the Shift</a>
   </div>
-</nav>
+</div>
 
-<!-- §1 HERO -->
-<section id="hero">
-  <div class="container">
+<div class="strip">
+  <p>AI-READY™ · AI Delivery Infrastructure (ADI) · AiVenture S.R.L. · CUI 51415878 · SHA-256 Anchored · Bitcoin OTS Verified</p>
+</div>
 
-    <div class="rv">
-      <div class="hero-tag"><span class="hero-dot"></span>AI Delivery Infrastructure™</div>
-    </div>
+<!-- SECTION 1: THE SHIFT -->
+<section class="sec" id="shift">
+  <div class="sec-label">§ 01 — The Reference Frame Shift</div>
+  <h2>From the Traffic Economy<br>to the Answer Economy</h2>
+  <p style="color:var(--mid);max-width:680px;margin-bottom:2rem;">For 20 years, success online was measured by rankings, clicks, traffic, and visitors. The discovery model was built around one observer: the human searcher entering keywords into Google. That model is being superseded.</p>
 
-    <nav class="breadcrumb rv" aria-label="Breadcrumb">
-      <a href="/">5thelement.ai</a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">AI-Ready</span>
-    </nav>
-
-    <h1 class="hero-h1 rv d1">
-      Your Business.<br>
-      <em>AI-Ready</em><br>
-      in 24 Hours.
-    </h1>
-
-    <p class="hero-sub rv d2">
-      We deploy an AI signal layer on top of your existing site — making your business
-      discoverable, understandable, trusted and recommended by ChatGPT, Perplexity and Claude.
-    </p>
-
-    <p class="hero-proof rv d2">
-      No code changes · Cloudflare Edge · 167 signals · Live in 24 hours
-    </p>
-
-    <div class="hero-actions rv d3">
-      <a href="/audit-ai" class="btn btn-yellow btn-lg">
-        Start With a Free Audit →
-      </a>
-      <a href="#plans" class="btn btn-outline btn-lg">View Plans</a>
-    </div>
-
-    <div class="trust-bar rv d3">
-      <span class="trust-item">Works on any CMS</span>
-      <span class="trust-item">No developer needed</span>
-      <span class="trust-item">EU AI Act compliant</span>
-      <span class="trust-item">SHA-256 anchored</span>
-      <span class="trust-item">Bitcoin timestamped</span>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- §2 THE 4 PILLARS -->
-<section class="section-alt" id="pillars">
-  <div class="container">
-    <div class="section-header centered rv">
-      <p class="section-label">§ 01 — What AI-Ready Means</p>
-      <h2 class="display">Four gates AI checks<br><em>before it recommends anyone.</em></h2>
-      <p class="lead">AI engines don't recommend businesses randomly. They run a silent verification pass. AI-Ready means you pass all four gates — automatically.</p>
-    </div>
-    <div class="pillars rv d1">
-      <div class="pillar">
-        <div class="pillar-icon">🔍</div>
-        <div class="pillar-num">Gate 01</div>
-        <div class="pillar-title">Discoverable</div>
-        <div class="pillar-desc">AI can find and unambiguously identify your business entity across structured sources. You exist in the model — clearly, not approximately.</div>
+  <div class="lor-grid">
+    <div class="lor-old">
+      <h3>Google Era — Traffic Economy</h3>
+      <div class="lor-flow">
+        <div class="lor-step"><span class="arr">01</span><div><strong>Human</strong> enters Keywords</div></div>
+        <div class="lor-step"><span class="arr">↓</span><div>Keywords → Google Index</div></div>
+        <div class="lor-step"><span class="arr">02</span><div><strong>Google</strong> returns Pages</div></div>
+        <div class="lor-step"><span class="arr">↓</span><div>Pages → Human clicks</div></div>
+        <div class="lor-step"><span class="arr">03</span><div><strong>Website</strong> delivers Answer</div></div>
       </div>
-      <div class="pillar">
-        <div class="pillar-icon">🧠</div>
-        <div class="pillar-num">Gate 02</div>
-        <div class="pillar-title">Understandable</div>
-        <div class="pillar-desc">AI can read what you sell, who you serve, and why you are different. Structured answers to buyer questions — machine-readable, not marketing copy.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🔐</div>
-        <div class="pillar-num">Gate 03</div>
-        <div class="pillar-title">Trusted</div>
-        <div class="pillar-desc">AI can verify your claims. Cryptographic proof, third-party citations, and Bitcoin-anchored timestamps make your authority undeniable and machine-verifiable.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">⭐</div>
-        <div class="pillar-num">Gate 04</div>
-        <div class="pillar-title">Recommended</div>
-        <div class="pillar-desc">AI can safely stake its own credibility on recommending you. You appear on shortlists. Buyers read your name first. Deals start with you already trusted.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- §3 HOW IT WORKS -->
-<section class="section" id="how">
-  <div class="container">
-    <div class="section-header rv">
-      <p class="section-label">§ 02 — How It Works</p>
-      <h2 class="display">Deployed on top of<br><em>your existing site.</em></h2>
-      <p class="lead">The ADI™ layer sits at the Cloudflare network edge — between the internet and your site. Nothing on your infrastructure is touched.</p>
-    </div>
-
-    <div class="arch-row rv d1">
-      <div class="arch-block">
-        <div class="arch-icon">🏢</div>
-        <div class="arch-lbl">Your Infrastructure</div>
-        <div class="arch-name">Existing Site</div>
-        <div class="arch-desc">WordPress, Webflow, custom, legacy. Completely unchanged.</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-block edge">
-        <div class="arch-icon">⚡</div>
-        <div class="arch-lbl">ADI™ Edge Layer</div>
-        <div class="arch-name">Cloudflare Worker</div>
-        <div class="arch-desc">167 verified signals injected at the network edge. Zero latency. Zero code changes.</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-block">
-        <div class="arch-icon">🤖</div>
-        <div class="arch-lbl">AI Engines</div>
-        <div class="arch-name">ChatGPT · Claude · Perplexity</div>
-        <div class="arch-desc">Your business cited. Your competitors left behind.</div>
-      </div>
-    </div>
-
-    <div class="how-grid rv d2">
-      <div class="how-card">
-        <div class="how-num">01</div>
-        <div>
-          <div class="how-title">Run your free AI audit</div>
-          <div class="how-desc">We scan 167 signals across 5 dimensions and show you exactly where your AI visibility gaps are. Free, no account required, results in 3 minutes.</div>
-          <span class="how-tag">Free · 3 minutes</span>
+      <div class="metrics">
+        <p>Success metrics:</p>
+        <div class="tags">
+          <span class="tag-old">Rankings</span>
+          <span class="tag-old">Clicks</span>
+          <span class="tag-old">Traffic</span>
+          <span class="tag-old">Visitors</span>
         </div>
       </div>
-      <div class="how-card">
-        <div class="how-num">02</div>
-        <div>
-          <div class="how-title">We build your signal layer</div>
-          <div class="how-desc">Our team builds your complete ADI™ signal layer — entities.json, intents.json, ai-proof.json, schema markup, llms.txt — everything AI engines need to find, understand and trust you.</div>
-          <span class="how-tag">24–48 hours</span>
-        </div>
+    </div>
+    <div class="lor-new">
+      <h3>AI Era — Answer Economy</h3>
+      <div class="lor-flow">
+        <div class="lor-step"><span class="arr">01</span><div><strong>Human</strong> expresses Intent</div></div>
+        <div class="lor-step"><span class="arr">↓</span><div>Intent → AI understands context</div></div>
+        <div class="lor-step"><span class="arr">02</span><div><strong>AI</strong> synthesizes Answer</div></div>
+        <div class="lor-step"><span class="arr">↓</span><div>Answer → becomes destination</div></div>
+        <div class="lor-step"><span class="arr">03</span><div><strong>Website</strong> becomes Evidence</div></div>
+        <div class="lor-step"><span class="arr">↓</span><div>Evidence → Recommendation → Action</div></div>
       </div>
-      <div class="how-card">
-        <div class="how-num">03</div>
-        <div>
-          <div class="how-title">We deploy to Cloudflare Edge</div>
-          <div class="how-desc">Your signal layer is deployed via Cloudflare Workers to the global edge network. CNAME setup takes minutes. Your signals propagate worldwide instantly.</div>
-          <span class="how-tag">Same day</span>
-        </div>
-      </div>
-      <div class="how-card">
-        <div class="how-num">04</div>
-        <div>
-          <div class="how-title">AI starts citing you</div>
-          <div class="how-desc">Within 24–72 hours of deployment, AI engines begin updating their indexes with your new signals. Your citation frequency increases. Your competitors' advantage shrinks.</div>
-          <span class="how-tag">24–72 hours post-deploy</span>
+      <div class="metrics">
+        <p>Success metrics:</p>
+        <div class="tags">
+          <span class="tag-new">Citations</span>
+          <span class="tag-new">Answers</span>
+          <span class="tag-new">Recommendations</span>
+          <span class="tag-new">Actions</span>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="quote-block">
+    <p>"This is the Lorentz Transformation of business visibility. The world does not necessarily change. The frame of reference changes. And when the observer changes, the rules for describing reality change as well. The Transformation and Transition from the Traffic Economy to the Answer Economy is not a technology shift — it is a change of reference frame."</p>
+    <cite>— AiVenture™ · Accelerating the Transition from the Traffic Economy to the Answer Economy</cite>
+  </div>
+
+  <p style="font-size:1rem;color:var(--mid);max-width:720px;line-height:1.8;">Businesses are no longer competing only for rankings. They are competing to become the easiest answer for AI to:</p>
+  <div class="compete" style="margin-top:1.5rem;">
+    <div class="comp-item"><div class="comp-check">✓</div><span>Discover</span></div>
+    <div class="comp-item"><div class="comp-check">✓</div><span>Understand</span></div>
+    <div class="comp-item"><div class="comp-check">✓</div><span>Verify</span></div>
+    <div class="comp-item"><div class="comp-check">✓</div><span>Cite</span></div>
+    <div class="comp-item"><div class="comp-check">✓</div><span>Recommend</span></div>
+  </div>
 </section>
 
-<!-- §4 SIGNAL FILES -->
-<section class="section-alt" id="signals">
-  <div class="container">
-    <div class="section-header rv">
-      <p class="section-label">§ 03 — What We Build</p>
-      <h2 class="display">167 signals.<br><em>8 core files.</em></h2>
-      <p class="lead">Every AI-Ready deployment includes a complete set of machine-readable signal files — the exact files AI crawlers parse when building their knowledge of your business.</p>
+<hr class="div">
+
+<div class="tagline-blk">
+  <div class="brand-lk">AiVenture™</div>
+  <h2>The Operating System<br>for the <em>Answer Economy</em></h2>
+  <p>Helping businesses move from traffic, clicks, and rankings — to answers, recommendations, and AI-assisted growth.</p>
+</div>
+
+<hr class="div">
+
+<!-- SECTION 2: SYNTHESIS -->
+<section class="sec" id="synthesis">
+  <div class="sec-label">§ 02 — The Canonical Synthesis</div>
+  <h2>How AI Systems Find, Read<br>&amp; Recommend a Site</h2>
+
+  <div class="master">
+    <p>"5thelement.ai is an <strong>AI Delivery Infrastructure (ADI)</strong> layer by <strong>AiVenture S.R.L.</strong> that makes firms findable, understandable, trusted, and recommendable by AI systems such as ChatGPT, Gemini, Claude, and Perplexity — by injecting machine-readable entity, intent, trust, proof, and governance signals at the Cloudflare Edge, with SHA-256 fingerprints and OpenTimestamps (OTS) for immutable provenance."</p>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">The Universal Rule</h3>
+  <p style="color:var(--mid);font-size:.9rem;margin-bottom:1rem;">No AI system recommends a site because it exists. A site becomes recommendable only when every link holds:</p>
+  <div class="chain-wrap">
+    <div class="chain">
+      <div class="cn">User Intent</div><div class="ca">→</div>
+      <div class="cn">Extractable Block</div><div class="ca">→</div>
+      <div class="cn">Clear Entity</div><div class="ca">→</div>
+      <div class="cn">Accessible Source</div><div class="ca">→</div>
+      <div class="cn">Corroboration</div><div class="ca">→</div>
+      <div class="cn">Confidence</div><div class="ca">→</div>
+      <div class="cn" style="background:var(--blue);">Brand Named</div>
+      <div class="cbreak">Break any link → concept reused, brand dropped</div>
     </div>
-    <div class="files-grid rv d1">
-      <div class="file-card">
-        <div class="file-name">ai.json</div>
-        <div class="file-desc">Primary AI discovery file. Declares your entity, services, authority signals and ADI™ proof layer.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">entities.json</div>
-        <div class="file-desc">Structured entity definition. Business name, type, location, founding date, identifiers — unambiguous identity for AI models.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">intents.json</div>
-        <div class="file-desc">Multilingual intent mapping (EN/FR/RO/DE). Maps buyer questions to your services across 6 funnel stages.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">ai-proof.json</div>
-        <div class="file-desc">Cryptographic proof layer. SHA-256 hashes, OpenTimestamps anchors, Bitcoin block references. Machine-verifiable authority.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">llms.txt</div>
-        <div class="file-desc">LLM discovery file. Tells AI crawlers what your business does, what to cite, and what permissions apply.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">schema markup</div>
-        <div class="file-desc">25+ Schema.org types injected: Organization, Service, FAQPage, BreadcrumbList, Product, Review and more.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">robots.txt</div>
-        <div class="file-desc">AI crawler access configuration. Explicit allow-lanes for ChatGPT, Claude, Perplexity, Gemini and other AI bots.</div>
-      </div>
-      <div class="file-card">
-        <div class="file-name">sitemap.xml</div>
-        <div class="file-desc">AI-optimised sitemap with priority signals, last-modified dates and content-type annotations for machine parsing.</div>
-      </div>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:2.5rem 0 1rem;">The 5 Engines</h3>
+  <table class="etable">
+    <thead><tr><th>Engine</th><th>Architecture</th><th>Core Requirement</th></tr></thead>
+    <tbody>
+      <tr><td><span class="en">Perplexity</span><span class="et">Always-live RAG</span></td><td style="font-size:.85rem;color:var(--mid)">Own crawl + RAG, citations first-class</td><td style="font-size:.85rem;color:var(--mid)">3+ independent recent sources agreeing on who you are</td></tr>
+      <tr><td><span class="en">Gemini</span><span class="et">Google-grounded</span></td><td style="font-size:.85rem;color:var(--mid)">Google live index + Knowledge Graph</td><td style="font-size:.85rem;color:var(--mid)">Clean entity node with schema + external corroboration</td></tr>
+      <tr><td><span class="en">ChatGPT</span><span class="et">Hybrid</span></td><td style="font-size:.85rem;color:var(--mid)">GPTBot (training) + OAI-SearchBot (live)</td><td style="font-size:.85rem;color:var(--mid)">Crawlable answer blocks + off-site authority</td></tr>
+      <tr><td><span class="en">Claude</span><span class="et">Frozen Aug 2025</span></td><td style="font-size:.85rem;color:var(--mid)">Frozen weights + optional search layer</td><td style="font-size:.85rem;color:var(--mid)">Pre-cutoff corpus footprint; search mode = Perplexity-like</td></tr>
+      <tr><td><span class="en">DeepSeek</span><span class="et">Frozen Jul 2024</span></td><td style="font-size:.85rem;color:var(--mid)">Frozen weights + optional Bing RAG</td><td style="font-size:.85rem;color:var(--mid)">User must enable search; otherwise pure training footprint</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.8rem;color:var(--blue);font-family:var(--mono);margin-top:.5rem;">Convergence: all 5 normalize toward entities + corroboration + fresh extractable chunks.</p>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:2.5rem 0 1rem;">Why You Get Paraphrased But Not Named</h3>
+  <div class="drop-grid">
+    <div class="drop-item"><div class="dcause">CAUSE 1</div><div><strong>Concept on own domain only</strong><p>Treated as local jargon, not a global entity by the model's confidence layer.</p></div></div>
+    <div class="drop-item"><div class="dcause">CAUSE 2</div><div><strong>No third-party corroboration</strong><p>Self-assertion ≠ world fact. Without external sources, brand cut at generation.</p></div></div>
+    <div class="drop-item"><div class="dcause">CAUSE 3</div><div><strong>Inconsistent naming</strong><p>"AiVenture" ≠ "AI Venture" ≠ "5th Element" — entity graph fragmented.</p></div></div>
+    <div class="drop-item"><div class="dcause">CAUSE 4</div><div><strong>Terminology too new</strong><p>Model hedges with function description, skips coined name until reuse seen.</p></div></div>
+    <div class="drop-item"><div class="dcause">CAUSE 5</div><div><strong>Marketing language</strong><p>"Revolutionary" adds entropy. Clinical definitions win every time.</p></div></div>
+    <div class="drop-item" style="background:var(--off)"><div class="dcause" style="background:#dcfce7;color:#166534">RESULT</div><div><strong>The concept is reused.</strong><p>The brand is dropped. AI describes what you built — under no name at all.</p></div></div>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:2.5rem 0 1rem;">The 3 Visibility Layers</h3>
+  <div class="layers">
+    <div class="lcard">
+      <div class="lhdr"><div class="lnum">L→</div><div><h3>Layer 1 — Extractable Content</h3></div><span class="lctl ctl-y">You control this</span></div>
+      <div class="lbody"><p>One 40–80 word clinical definition block per intent. No slogans. No abstractions. Answers the query directly. Factual density beats volume for all 5 engines.</p><div class="spills"><span class="sp">H1 exact-match</span><span class="sp">60-word definition</span><span class="sp">FAQ blocks</span><span class="sp">QAPage JSON-LD</span><span class="sp">TL;DR top-of-page</span><span class="sp">No marketing fluff</span></div></div>
+    </div>
+    <div class="lcard">
+      <div class="lhdr"><div class="lnum">L≡</div><div><h3>Layer 2 — Entity Consistency</h3></div><span class="lctl ctl-y">You control this</span></div>
+      <div class="lbody"><p>One canonical triplet everywhere: <strong>AiVenture S.R.L. → 5thelement.ai → AI Delivery Infrastructure (ADI)</strong>. Any drift = shadow entity = confidence drop = brand omitted.</p><div class="spills"><span class="sp">JSON-LD @id + sameAs</span><span class="sp">ai.json</span><span class="sp">entities.json</span><span class="sp">llms.txt</span><span class="sp">GitHub</span><span class="sp">LinkedIn</span><span class="sp">Directories</span><span class="sp">robots.txt SHA-256</span></div></div>
+    </div>
+    <div class="lcard" style="border-color:var(--amber)">
+      <div class="lhdr" style="background:#fef9c3"><div class="lnum" style="background:var(--amber)">L!</div><div><h3>Layer 3 — Independent Corroboration</h3></div><span class="lctl ctl-h">The Bottleneck</span></div>
+      <div class="lbody"><p>3–5 external sources explicitly naming the triplet. Without this, Perplexity and Gemini cut the brand at answer composition regardless of technical perfection. Freshness multiplies impact.</p><div class="spills"><span class="sp">GitHub repos (public)</span><span class="sp">Technical blogs</span><span class="sp">Medium / Dev.to</span><span class="sp">EU tech media</span><span class="sp">LinkedIn articles</span><span class="sp">NPM / Schema.org</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- §5 DEPLOYMENT TIMELINE -->
-<section class="section" id="timeline">
-  <div class="container">
-    <div class="section-header centered rv">
-      <p class="section-label">§ 04 — Deployment Timeline</p>
-      <h2 class="display">From zero to<br><em>AI-cited in 24 hours.</em></h2>
+<hr class="div">
+
+<!-- SECTION 3: MATURITY MODEL -->
+<section class="sec" id="maturity">
+  <div class="sec-label">§ 03 — AI Maturity Model</div>
+  <h2>Six Levels from Invisible<br>to Predictive AI Mastery</h2>
+  <p style="color:var(--mid);max-width:680px;margin-bottom:2rem;">The AI-READY™ Value Ladder maps 150–400 atomic signals across 6 maturity levels. Each level unlocks the next. Sequential by design — you cannot skip levels.</p>
+
+  <div class="mat-wrap">
+    <div class="ml l1">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">1</span><span class="lv">EDGE</span></div>
+      <div class="mcont"><h4>Edge &amp; Crawl Access</h4><p>The foundation. AI systems cannot discover, understand, or cite what they cannot read. L1 ensures your infrastructure is crawlable, machine-readable, and correctly permissioned for every major AI bot.</p><div class="sc">~28 signals</div><div class="pills"><span class="pill">robots.txt bot rules</span><span class="pill">llms.txt</span><span class="pill">ai.json</span><span class="pill">Crawl paths clear</span><span class="pill">Google-Extended</span><span class="pill">PerplexityBot</span><span class="pill">OAI-SearchBot</span><span class="pill">ClaudeBot</span><span class="pill">HTTPS</span><span class="pill">Sitemap.xml</span></div></div>
     </div>
-    <div class="deploy-timeline rv d1">
-      <div class="dt-step">
-        <div class="dt-time">Hour 0</div>
-        <div class="dt-title">Audit & Brief</div>
-        <div class="dt-desc">Free AI audit run. Gap report reviewed. Signal file brief confirmed with you.</div>
-      </div>
-      <div class="dt-step">
-        <div class="dt-time">Hours 1–12</div>
-        <div class="dt-title">Signal Build</div>
-        <div class="dt-desc">All 8 core signal files built, verified and SHA-256 fingerprinted.</div>
-      </div>
-      <div class="dt-step">
-        <div class="dt-time">Hours 12–18</div>
-        <div class="dt-title">Edge Deployment</div>
-        <div class="dt-desc">CNAME setup. Cloudflare Worker deployed. Global propagation confirmed.</div>
-      </div>
-      <div class="dt-step">
-        <div class="dt-time">Hours 18–24</div>
-        <div class="dt-title">Live & Verified</div>
-        <div class="dt-desc">All 167 signals green. Bitcoin timestamp confirmed. AI crawlers begin indexing.</div>
-      </div>
+    <div class="ml l2" style="margin-top:2px">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">2</span><span class="lv">SEMANTIC</span></div>
+      <div class="mcont"><h4>Semantic Clarity</h4><p>AI systems understand entities, not just text. L2 installs the machine-readable identity layer: structured data, entity declarations, and factual density blocks that AI can extract and cite with confidence.</p><div class="sc">~35 signals</div><div class="pills"><span class="pill">entities.json</span><span class="pill">Organization JSON-LD</span><span class="pill">Product schema</span><span class="pill">FAQPage markup</span><span class="pill">BreadcrumbList</span><span class="pill">60-word definitions</span><span class="pill">Canonical triplet</span><span class="pill">sameAs cross-domain</span><span class="pill">Meta title ≤60</span></div></div>
     </div>
+    <div class="ml l3" style="margin-top:2px">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">3</span><span class="lv">INTENT</span></div>
+      <div class="mcont"><h4>Voice, CRM &amp; Intent Mapping</h4><p>AI systems answer intent, not keywords. L3 maps your offer to the exact queries AI receives — deploying intents.json, QAPage schema, and AEO-optimized content that turns pages into default RAG chunks.</p><div class="sc">~32 signals</div><div class="pills"><span class="pill">intents.json</span><span class="pill">QAPage schema</span><span class="pill">FAQ per intent page</span><span class="pill">Speakable schema</span><span class="pill">AEO intent mapping</span><span class="pill">Buyer stage tagging</span><span class="pill">Lead gate structure</span><span class="pill">WhatsApp CTA</span></div></div>
+    </div>
+    <div class="ml l4" style="margin-top:2px">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">4</span><span class="lv">VECTOR</span></div>
+      <div class="mcont"><h4>Vectorial Entity Layer</h4><p>Knowledge graphs and entity relationships. L4 deploys the full entity-relationship metamodel: structured relationships between company, product, market, proof, and regulatory signals that AI systems can traverse and reason over.</p><div class="sc">~38 signals</div><div class="pills"><span class="pill">entity-relationship-metamodel.json</span><span class="pill">entity-graph.public.jsonld</span><span class="pill">allow-lane-matrix.json</span><span class="pill">sha256-manifest.json</span><span class="pill">@graph nested JSON-LD</span><span class="pill">Cross-domain entity binding</span><span class="pill">Off-page signal pattern</span></div></div>
+    </div>
+    <div class="ml l5" style="margin-top:2px">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">5</span><span class="lv">TWIN</span></div>
+      <div class="mcont"><h4>Economic Twin</h4><p>The AI-readable revenue model. L5 deploys a machine-readable economic twin: pricing structure, delivery modes, ROI signals, and regulatory compliance markers that AI systems use when recommending solutions in commercial contexts.</p><div class="sc">~30 signals</div><div class="pills"><span class="pill">Offer schema with price</span><span class="pill">Service delivery model</span><span class="pill">ROI signal layer</span><span class="pill">EU AI Act readiness map</span><span class="pill">Compliance markers</span><span class="pill">Risk tier classification</span><span class="pill">Partner schema</span></div></div>
+    </div>
+    <div class="ml l6" style="margin-top:2px">
+      <div class="mbadge"><span class="lv">LEVEL</span><span class="mn">6</span><span class="lv">MASTERY</span></div>
+      <div class="mcont"><h4>Predictive AI Mastery</h4><p>Cryptographic provenance + Predictive Machine Trust. L6 anchors your AI identity to the Bitcoin blockchain via OpenTimestamps, deploys AI Sonar™ observability, and positions you as the category-defining authority across AI search graphs.</p><div class="sc">~37 signals</div><div class="pills"><span class="pill">SHA-256 canonical hash</span><span class="pill">OTS Bitcoin anchor</span><span class="pill">ai-proof.json v1.1</span><span class="pill">Innovation Registry</span><span class="pill">ADI #06 block 944442</span><span class="pill">AI Sonar™</span><span class="pill">PMT F1 ≥ 0.85</span><span class="pill">Category authority</span></div></div>
+    </div>
+  </div>
+
+  <div style="background:var(--off);border-radius:10px;padding:1.5rem;margin-top:2rem;display:flex;gap:1rem;align-items:flex-start">
+    <div style="font-size:1.5rem">📐</div>
+    <div><p style="font-weight:700;color:var(--navy);margin-bottom:.25rem">Total: 150–400 atomic signals across 6 levels</p><p style="font-size:.875rem;color:var(--mid)">Signal count varies by site complexity and target AI engines. The free 167-signal audit establishes your L1–L3 baseline and shows exactly where you stand on the maturity ladder.</p></div>
   </div>
 </section>
 
-<!-- §6 PLANS -->
-<section class="section-alt" id="plans">
-  <div class="container">
-    <div class="section-header centered rv">
-      <p class="section-label">§ 05 — Plans</p>
-      <h2 class="display">Choose your<br><em>path to AI-Ready.</em></h2>
-      <p class="lead">Three ways to get your business cited by AI. Same result — different level of involvement.</p>
+<hr class="div">
+
+<!-- SECTION 4: AUDIT -->
+<section class="sec" id="audit">
+  <div class="sec-label">§ 04 — The Audit</div>
+  <div class="audit-hero">
+    <div><div class="ac"><span class="anum">167</span><span class="albl">verified signals</span></div></div>
+    <h2>The AI-READY™ Audit</h2>
+    <p>Not a generic SEO scan. A structured evaluation of your entity, intent, trust, proof, and governance layer — across all 5 AI engines. Built on the ADI doctrine.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="#pricing" class="btn-p" style="background:var(--accent);color:var(--navy);border-color:var(--accent)">Run Free Audit →</a>
+      <a href="#pricing" class="btn-s" style="border-color:rgba(255,255,255,.3);color:#fff">See All Paths</a>
     </div>
-    <div class="plans rv d1">
+  </div>
 
-      <div class="plan-card diy">
-        <span class="plan-badge">DIY</span>
-        <div class="plan-name">Do It Yourself</div>
-        <div class="plan-price">Free</div>
-        <div class="plan-period">Full guide + templates · No time limit</div>
-        <div class="plan-divider"></div>
-        <div class="plan-features">
-          <div class="plan-feature">Free AI visibility audit</div>
-          <div class="plan-feature">Complete ADI™ framework guide</div>
-          <div class="plan-feature">Signal file templates (all 8 files)</div>
-          <div class="plan-feature">Schema markup examples</div>
-          <div class="plan-feature">Cloudflare deployment guide</div>
-          <div class="plan-feature na">Expert review of your files</div>
-          <div class="plan-feature na">Deployment support</div>
-          <div class="plan-feature na">Bitcoin anchoring</div>
-        </div>
-        <a href="/guide" class="plan-btn">Get the Guide →</a>
-      </div>
-
-      <div class="plan-card guided">
-        <span class="popular-badge">Most Chosen</span>
-        <span class="plan-badge">Guided</span>
-        <div class="plan-name">Private Support</div>
-        <div class="plan-price">€49<span style="font-size:16px;font-weight:400;">/h</span></div>
-        <div class="plan-period">On demand · 8AM–8PM · No retainer</div>
-        <div class="plan-divider"></div>
-        <div class="plan-features">
-          <div class="plan-feature">Everything in Free</div>
-          <div class="plan-feature">Expert guidance per session</div>
-          <div class="plan-feature">File review and correction</div>
-          <div class="plan-feature">Deployment troubleshooting</div>
-          <div class="plan-feature">Schema validation</div>
-          <div class="plan-feature">Available 8AM–8PM</div>
-          <div class="plan-feature na">We build the files for you</div>
-          <div class="plan-feature na">Full managed deployment</div>
-        </div>
-        <a href="/audit-ai" class="plan-btn">Book a Session →</a>
-      </div>
-
-      <div class="plan-card done">
-        <span class="plan-badge">Done For You</span>
-        <div class="plan-name">Full Deployment</div>
-        <div class="plan-price">From €2,500</div>
-        <div class="plan-period">After evaluation · All-inclusive</div>
-        <div class="plan-divider"></div>
-        <div class="plan-features">
-          <div class="plan-feature">Everything in Guided</div>
-          <div class="plan-feature">Full ADI™ signal layer built</div>
-          <div class="plan-feature">All 8 signal files created</div>
-          <div class="plan-feature">Cloudflare edge deployment</div>
-          <div class="plan-feature">SHA-256 + Bitcoin anchoring</div>
-          <div class="plan-feature">EU AI Act compliance layer</div>
-          <div class="plan-feature">Monthly signal monitoring</div>
-          <div class="plan-feature">Priority account support</div>
-        </div>
-        <a href="/audit-ai" class="plan-btn">Request Evaluation →</a>
-      </div>
-
-    </div>
+  <div class="scats">
+    <div class="scat"><div class="scat-hdr"><h4>D1 — Crawl &amp; Access</h4><span class="sbadge">28 signals</span></div><ul class="slist"><li><span class="sdot"></span>robots.txt bot permissions (9 AI bots)</li><li><span class="sdot"></span>llms.txt presence &amp; structure</li><li><span class="sdot"></span>ai.json canonical declaration</li><li><span class="sdot"></span>Sitemap.xml completeness</li><li><span class="sdot"></span>Core Web Vitals baseline</li><li><span class="sdot"></span>HTTPS enforcement</li><li><span class="sdot"></span>Cloudflare edge configuration</li><li><span class="sdot"></span>404/redirect signal health</li></ul></div>
+    <div class="scat"><div class="scat-hdr"><h4>D2 — Entity &amp; Schema</h4><span class="sbadge">35 signals</span></div><ul class="slist"><li><span class="sdot"></span>Organization JSON-LD (@id, sameAs)</li><li><span class="sdot"></span>Product / Service schema</li><li><span class="sdot"></span>FAQPage markup (5+5 machine)</li><li><span class="sdot"></span>BreadcrumbList structure</li><li><span class="sdot"></span>entities.json deployment</li><li><span class="sdot"></span>Canonical triplet consistency</li><li><span class="sdot"></span>Meta title ≤60 / desc ≤160</li><li><span class="sdot"></span>25 schema.org types coverage</li></ul></div>
+    <div class="scat"><div class="scat-hdr"><h4>D3 — Intent &amp; Content</h4><span class="sbadge">32 signals</span></div><ul class="slist"><li><span class="sdot"></span>intents.json (global router)</li><li><span class="sdot"></span>Module-level intent contracts</li><li><span class="sdot"></span>Exact-match H1 per intent</li><li><span class="sdot"></span>60-word definition blocks</li><li><span class="sdot"></span>Buyer stage mapping</li><li><span class="sdot"></span>QAPage schema per page</li><li><span class="sdot"></span>AEO content score</li><li><span class="sdot"></span>Factual density ratio</li></ul></div>
+    <div class="scat"><div class="scat-hdr"><h4>D4 — Trust &amp; Proof</h4><span class="sbadge">30 signals</span></div><ul class="slist"><li><span class="sdot"></span>SHA-256 identity in robots.txt</li><li><span class="sdot"></span>sha256-manifest.json</li><li><span class="sdot"></span>ai-proof.json v1.1</li><li><span class="sdot"></span>OpenTimestamps (OTS) anchor</li><li><span class="sdot"></span>Bitcoin block reference</li><li><span class="sdot"></span>Innovation Registry entries</li><li><span class="sdot"></span>Epistemic hedge compliance</li><li><span class="sdot"></span>EU AI Act transparency markers</li></ul></div>
+    <div class="scat"><div class="scat-hdr"><h4>D5 — Corroboration</h4><span class="sbadge">22 signals</span></div><ul class="slist"><li><span class="sdot"></span>External branded mentions count</li><li><span class="sdot"></span>GitHub public footprint</li><li><span class="sdot"></span>LinkedIn entity consistency</li><li><span class="sdot"></span>Third-party article citations</li><li><span class="sdot"></span>Freshness of external sources</li><li><span class="sdot"></span>Technical blog coverage</li><li><span class="sdot"></span>Directory listing accuracy</li><li><span class="sdot"></span>Cross-lingual entity stability</li></ul></div>
+    <div class="scat"><div class="scat-hdr"><h4>D6 — Governance</h4><span class="sbadge">20 signals</span></div><ul class="slist"><li><span class="sdot"></span>allow-lane-matrix.json</li><li><span class="sdot"></span>AI usage disclosure</li><li><span class="sdot"></span>Data processing transparency</li><li><span class="sdot"></span>Risk tier classification</li><li><span class="sdot"></span>EU AI Act Art. 50 compliance</li><li><span class="sdot"></span>AI-generated content labels</li><li><span class="sdot"></span>Logging &amp; traceability</li><li><span class="sdot"></span>Consent layer alignment</li></ul></div>
   </div>
 </section>
 
-<!-- §7 FAQ -->
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-header rv">
-      <p class="section-label">§ 06 — Questions</p>
-      <h2 class="display">Everything you<br><em>need to know.</em></h2>
+<hr class="div">
+
+<!-- SECTION 5: PRICING -->
+<section class="sec" id="pricing">
+  <div class="sec-label">§ 05 — Three Paths</div>
+  <h2>Choose How You Want<br>to Become AI-READY™</h2>
+  <p style="color:var(--mid);max-width:640px;margin-bottom:3rem;">Every path starts with the same 167-signal audit. What differs is who does the work — and how fast you move up the maturity ladder.</p>
+
+  <div class="pgrid">
+    <!-- FREE -->
+    <div class="pcard free">
+      <div class="phdr">
+        <div class="ppath">Path 01 — Free Help</div>
+        <h3>Self-Service Audit</h3>
+        <div class="pamt"><span class="cur">€</span><span class="amt">0</span></div>
+        <p class="pdesc">Run the audit yourself. Get your score. Understand exactly where you stand on the AI Maturity Model.</p>
+      </div>
+      <div class="pbody">
+        <ul class="pfeat">
+          <li><span class="ck">✓</span> 167-signal automated audit</li>
+          <li><span class="ck">✓</span> L1–L3 maturity score</li>
+          <li><span class="ck">✓</span> Dimension breakdown (D1–D6)</li>
+          <li><span class="ck">✓</span> Priority gap report</li>
+          <li><span class="ck">✓</span> Master extractable block template</li>
+          <li><span class="cx">✗</span> Implementation guidance</li>
+          <li><span class="cx">✗</span> JSON-LD file generation</li>
+          <li><span class="cx">✗</span> L4–L6 signals</li>
+          <li><span class="cx">✗</span> SHA-256 / OTS anchoring</li>
+        </ul>
+        <a href="https://eu-ai-audit.eu" class="pcta">Run Free Audit →</a>
+      </div>
     </div>
-    <div class="faq-list rv d1">
-      <div class="faq-item">
-        <div class="faq-q">Will this break my existing website?</div>
-        <div class="faq-a">No. The ADI™ layer is deployed at the Cloudflare network edge — completely separate from your existing site infrastructure. Your WordPress, Webflow, or custom site remains 100% unchanged. We add signals above your site, not inside it.</div>
+
+    <!-- PRIVATE SUPPORT -->
+    <div class="pcard sup feat">
+      <div class="fbadge">Most Popular</div>
+      <div class="phdr">
+        <div class="ppath">Path 02 — Private Support</div>
+        <h3>Guided Implementation</h3>
+        <div class="pamt"><span class="cur">€</span><span class="amt">49</span><span class="per">setup + €19/mo</span></div>
+        <p class="pdesc">You implement. We guide. Weekly async support to move you through L1–L4 systematically.</p>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">How is this different from SEO?</div>
-        <div class="faq-a">SEO optimises your pages for Google's crawler. AI-Ready optimises your signals for AI language models. Google indexes pages. AI engines parse structured entities, verify claims through proof signals, and require machine-readable intent mapping. They are completely different systems requiring completely different approaches.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How long until I appear in AI answers?</div>
-        <div class="faq-a">Deployment completes within 24 hours. AI engines typically begin updating their indexes within 24–72 hours of your signals going live. Citation frequency increases progressively over the first 2–4 weeks as AI models re-crawl and update their knowledge of your business.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do I need a developer?</div>
-        <div class="faq-a">For the DIY path: basic technical comfort is enough — if you can set up a CNAME record and push files to GitHub, you can deploy ADI™ yourself using our guide. For Guided support: we walk you through every step. For Done For You: you need nothing — we handle everything from build to deployment.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What is the SHA-256 anchoring and Bitcoin timestamping?</div>
-        <div class="faq-a">Every signal file we create is fingerprinted with a SHA-256 hash — a mathematical proof that the file's content is exactly as published. That hash is then anchored to the Bitcoin blockchain via OpenTimestamps, giving it an immutable, decentralised timestamp. AI engines can verify both the integrity of your data and the date it was established — making your authority claims machine-verifiable rather than just asserted.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Does AI-Ready include EU AI Act compliance?</div>
-        <div class="faq-a">Yes. Every Done For You deployment includes an EU AI Act Article 50 compliance layer — AI disclosure notices, chatbot identification, AI-generated content labelling, and privacy policy AI clauses. The Guided path includes compliance review. The DIY guide covers the basic requirements you need to implement yourself.</div>
+      <div class="pbody">
+        <ul class="pfeat">
+          <li><span class="ck">✓</span> Full 167-signal audit + report</li>
+          <li><span class="ck">✓</span> L1–L4 maturity roadmap</li>
+          <li><span class="ck">✓</span> JSON-LD generation (all types)</li>
+          <li><span class="ck">✓</span> intents.json + entities.json</li>
+          <li><span class="ck">✓</span> llms.txt + ai.json structure</li>
+          <li><span class="ck">✓</span> SHA-256 manifest setup</li>
+          <li><span class="ck">✓</span> Monthly progress audit</li>
+          <li><span class="ck">✓</span> Async support (48h response)</li>
+          <li><span class="cx">✗</span> Done-for-you deployment</li>
+        </ul>
+        <a href="mailto:contact@aiventure.ro?subject=AI-READY Private Support" class="pcta">Start for €49 →</a>
       </div>
     </div>
+
+    <!-- DONE FOR YOU -->
+    <div class="pcard dfy">
+      <div class="phdr">
+        <div class="ppath">Path 03 — Done For You</div>
+        <h3>Full Deployment</h3>
+        <div class="pamt"><span class="cur">€</span><span class="amt">2,500</span><span class="per">from</span></div>
+        <p class="pdesc">We build and deploy the full AI-READY™ infrastructure stack. L1–L6 complete. 90-day visibility guarantee.</p>
+      </div>
+      <div class="pbody">
+        <ul class="pfeat">
+          <li><span class="ck">✓</span> Full 167-signal audit</li>
+          <li><span class="ck">✓</span> L1–L6 complete deployment</li>
+          <li><span class="ck">✓</span> All signal files built &amp; deployed</li>
+          <li><span class="ck">✓</span> Cloudflare Edge configuration</li>
+          <li><span class="ck">✓</span> SHA-256 + OTS Bitcoin anchor</li>
+          <li><span class="ck">✓</span> Innovation Registry entry</li>
+          <li><span class="ck">✓</span> 8 intent pages built</li>
+          <li><span class="ck">✓</span> External corroboration plan</li>
+          <li><span class="ck">✓</span> 90-day visibility guarantee</li>
+        </ul>
+        <a href="mailto:contact@aiventure.ro?subject=AI-READY Done For You" class="pcta">Book a Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <p style="text-align:center;font-size:.8rem;color:var(--mid);margin-top:1rem">All paths include the same 167-signal audit baseline. No lock-in on Path 02. EU AI Act compliance covered in all paths.</p>
+</section>
+
+<hr class="div">
+
+<!-- PROOF BLOCK -->
+<section class="sec">
+  <div class="proof">
+    <div class="ptitle">§ Provenance — AI-READY™ Canonical Proof Layer</div>
+    <div class="pr">Entity: <span>AiVenture S.R.L. → 5thelement.ai → AI Delivery Infrastructure (ADI)</span></div>
+    <div class="pr">CUI: <span>51415878</span></div>
+    <div class="pr">ADI Canonical SHA-256: <span>31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</span></div>
+    <div class="pr">OTS File: <span>ai-delivery-infrastructure_canonical_txt.ots (479b)</span></div>
+    <div class="pr">Bitcoin Block Range: <span>944442 – 949375</span></div>
+    <div class="pr">Innovation Registry: <span>8 verified entries · ADI #06 · AI Sonar™ #07 · Mockingbird Handshake™ #08</span></div>
+    <div class="pr">Epistemic standard: <span>"supports readiness" — NEVER "certifies" or "satisfies"</span></div>
+    <div class="pr">EU AI Act: <span>Art. 50 transparency obligations · August 2, 2026 enforcement deadline</span></div>
   </div>
 </section>
 
-<!-- §8 CTA -->
-<section id="cta">
-  <div class="cta-inner container">
-    <div class="rv">
-      <div style="display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 14px;border-radius:100px;margin-bottom:26px;">
-        <span style="width:6px;height:6px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite;display:inline-block;"></span>
-        Start with a free audit · No commitment
-      </div>
-    </div>
-    <h2 class="rv">Your competitors<br><em>are already AI-Ready.</em></h2>
-    <p class="rv">Find out exactly where your AI visibility gaps are — then choose your path to close them. Free audit. Results in 3 minutes.</p>
-    <div class="cta-actions rv">
-      <a href="/audit-ai" class="btn btn-yellow btn-lg">
-        Run My Free Audit →
-      </a>
-      <a href="#plans" class="btn btn-outline btn-lg">View Plans</a>
-    </div>
-    <div class="cta-trust rv">
-      <span class="cta-trust-item">Free audit forever</span>
-      <span class="cta-trust-item">No code changes</span>
-      <span class="cta-trust-item">Live in 24 hours</span>
-      <span class="cta-trust-item">EU AI Act compliant</span>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        © 2025–2026 AiVenture S.R.L. · CUI 51415878 · București, România<br>
-        "AI Delivery Infrastructure™" and "ADI™" are registered trademarks of AiVenture S.R.L.<br>
-        SHA-256 proof supports readiness. Does not certify regulatory compliance.
-      </div>
-      <div class="footer-anchors">
-        <span class="anchor-pill btc">₿ BTC Anchored</span>
-        <span class="anchor-pill ots">OTS Verified</span>
-        <span class="anchor-pill eu">EU AI Act Ready</span>
-      </div>
-    </div>
-  </div>
+<footer>
+  <p style="margin-bottom:.5rem"><strong>AiVenture™</strong> — Accelerating the Transition from the Traffic Economy to the Answer Economy</p>
+  <p>5thelement.ai · AiVenture.ro · eu-ai-audit.eu · eu-112.eu · CUI 51415878 · București, România</p>
+  <p style="margin-top:1rem">AI-READY™ · AI Delivery Infrastructure (ADI)™ · AI Sonar™ · Mockingbird Handshake™ are registered innovations of AiVenture S.R.L.</p>
 </footer>
 
-<script>
-const els=document.querySelectorAll('.rv');
-const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ob.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
-els.forEach(el=>ob.observe(el));
-document.querySelectorAll('#hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('on'),80+i*110));
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').style.borderBottomColor=window.scrollY>20?'rgba(255,255,255,0.12)':'rgba(255,255,255,0.08)';
-},{passive:true});
-</script>
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-  {"@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},
-    {"@type":"ListItem","position":2,"name":"AI-Ready","item":"https://5thelement.ai/ai-ready"}
-  ]},
-  {"@type":"WebPage","@id":"https://5thelement.ai/ai-ready","url":"https://5thelement.ai/ai-ready","name":"AI-Ready — Deploy Your AI Visibility Layer in 24 Hours","description":"Make your business discoverable, understandable, trusted and recommended by AI. ADI™ deployed at the Cloudflare edge. No code changes. Live in 24 hours.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"AI-Ready","item":"https://5thelement.ai/ai-ready"}]}},
-  {"@type":"Service","name":"AI-Ready Deployment","provider":{"@type":"Organization","name":"5thelement.ai","url":"https://5thelement.ai"},"description":"AI signal layer deployment at the Cloudflare edge. 167 signals. 8 core files. No code changes. Live in 24 hours.","offers":[{"@type":"Offer","price":"0","priceCurrency":"EUR","name":"DIY Guide"},{"@type":"Offer","price":"49","priceCurrency":"EUR","name":"Private Support per hour"},{"@type":"Offer","price":"2500","priceCurrency":"EUR","name":"Full Deployment"}]},
-  {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Will AI-Ready break my existing website?","acceptedAnswer":{"@type":"Answer","text":"No. The ADI™ layer is deployed at the Cloudflare network edge — completely separate from your existing site. Your infrastructure remains 100% unchanged."}},
-    {"@type":"Question","name":"How is AI-Ready different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO optimises pages for Google's crawler. AI-Ready optimises signals for AI language models. They are completely different systems requiring different approaches."}},
-    {"@type":"Question","name":"How long until I appear in AI answers?","acceptedAnswer":{"@type":"Answer","text":"Deployment completes within 24 hours. AI engines typically begin updating their indexes within 24–72 hours of your signals going live."}}
-  ]}
-]}
-</script>
 </body>
 </html>
