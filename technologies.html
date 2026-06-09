@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Technologies — 5thelement.ai</title>
+<meta name="description" content="The full technology stack behind 5thelement.ai — GitHub, Cloudflare Pages, Workers KV, OpenTimestamps, Bitcoin, Schema.org, and the ADI Factory pipeline."/>
+<link rel="canonical" href="https://5thelement.ai/resources/technologies"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* PIPELINE */
+.pipeline{background:#111318}
+.pipe-flow{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.pipe-step{display:grid;grid-template-columns:140px 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:center;transition:background 0.2s}
+.pipe-step:last-child{border-bottom:none}
+.pipe-step:hover{background:#0a0c0f}
+.pipe-stage{font-family:'Courier New',monospace;font-size:0.88rem;font-weight:700;color:#f5c842}
+.pipe-body h4{font-size:0.92rem;font-weight:700;color:#ffffff;margin-bottom:0.25rem}
+.pipe-body p{font-size:0.85rem;color:#cccccc;line-height:1.6}
+
+/* TECH STACK */
+.stack{background:#0a0c0f}
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.tech-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.tech-card:hover{border-color:rgba(245,200,66,0.35)}
+.tech-layer{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.tech-card h3{font-size:1rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.tech-card .tech-name{font-size:0.82rem;font-weight:700;color:#f5c842;display:block;margin-bottom:0.5rem}
+.tech-card p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+.tech-tag{display:inline-block;font-size:0.68rem;font-weight:600;background:rgba(255,255,255,0.05);border:1px solid #1e2329;border-radius:4px;padding:0.15rem 0.4rem;color:#888;margin-top:0.5rem;font-family:'Courier New',monospace}
+
+/* SIGNAL ARCHITECTURE */
+.signals{background:#111318}
+.sig-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.sig-cat{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.sig-cat h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.25rem}
+.sig-count{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#f5c842;display:block;margin-bottom:0.5rem;line-height:1}
+.sig-cat p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.sig-examples{display:flex;flex-direction:column;gap:0.3rem}
+.sig-ex{font-size:0.72rem;font-family:'Courier New',monospace;color:#888}
+
+/* ARCHITECTURE PRINCIPLES */
+.arch{background:#0a0c0f}
+.arch-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.arch-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.arch-icon{font-size:1.5rem;margin-bottom:0.75rem}
+.arch-card h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.arch-card p{font-size:0.85rem;color:#cccccc;line-height:1.7}
+.arch-card code{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;background:#0a0c0f;padding:0.1rem 0.3rem;border-radius:3px}
+
+/* CTA */
+.ctabar{background:#111318;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .pipe-step{grid-template-columns:1fr;gap:0.4rem}
+  .stack-grid{grid-template-columns:1fr}
+  .sig-cats{grid-template-columns:1fr}
+  .arch-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources" class="active">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/resources">Resources</a><span class="bc-sep">›</span><span>Technologies</span></div></div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Technology Stack</span>
+    <h1>Infrastructure Built<br><em>to Last.</em></h1>
+    <p>No proprietary lock-in. No fragile integrations. The ADI™ stack uses open standards, public blockchains, and edge infrastructure that will still be running in 20 years. Everything is verifiable. Everything is replaceable. Nothing is magic.</p>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="pipeline">
+  <div class="c">
+    <span class="ey">The ADI Pipeline</span>
+    <h2 class="sh">RAW → FILE in Six Deterministic Stages</h2>
+    <p class="sl">The canonical pipeline that transforms raw business data into deployed AI signals. Each stage is deterministic. No ambiguity. No AI in the delivery path.</p>
+    <div class="pipe-flow">
+      <div class="pipe-step"><div class="pipe-stage">RAW</div><div class="pipe-body"><h4>Raw Business Data</h4><p>Unstructured business information — website copy, service descriptions, team bios, certifications, and client data. The starting material.</p></div></div>
+      <div class="pipe-step"><div class="pipe-stage">FACT</div><div class="pipe-body"><h4>Fact Extraction</h4><p>Raw data is parsed into discrete facts. Each fact is categorised, validated, and tagged with source and confidence level. Ambiguous facts are flagged for human review (HITL).</p></div></div>
+      <div class="pipe-step"><div class="pipe-stage">ENTITY</div><div class="pipe-body"><h4>Entity Construction</h4><p>Facts are assembled into structured entities — business, services, team, location, certifications. Each entity has a canonical identifier and relationship map.</p></div></div>
+      <div class="pipe-step"><div class="pipe-stage">RELATIONSHIP</div><div class="pipe-body"><h4>Relationship Mapping</h4><p>Entities are connected into a knowledge graph. Service → sector → buyer intent. Business → founder → credentials. Location → market → competitors.</p></div></div>
+      <div class="pipe-step"><div class="pipe-stage">SIGNAL</div><div class="pipe-body"><h4>Signal Generation</h4><p>The entity graph is compiled into 167 atomic AI signals across three categories: Identity &amp; Entity (48), Trust &amp; Proof (61), Intent &amp; Governance (58).</p></div></div>
+      <div class="pipe-step"><div class="pipe-stage">FILE</div><div class="pipe-body"><h4>File Deployment</h4><p>Signals are serialised into deployment files — ai.json, entities.json, intents.json, llms.txt, schema.jsonld — and pushed to Cloudflare Workers KV at the edge.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="stack">
+  <div class="c">
+    <span class="ey">The Stack</span>
+    <h2 class="sh">Every Technology We Use and Why</h2>
+    <p class="sl">No proprietary tools. Every technology in this stack is open, public, and independently verifiable.</p>
+    <div class="stack-grid">
+
+      <div class="tech-card">
+        <span class="tech-layer">Content Layer</span>
+        <h3>Source of Truth</h3>
+        <span class="tech-name">GitHub</span>
+        <p>All content files live in GitHub. Version controlled. Public. Deployable via git push. The canonical SSOT for all human-facing content.</p>
+        <span class="tech-tag">github.com/aipath512</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Hosting Layer</span>
+        <h3>Static Site Hosting</h3>
+        <span class="tech-name">Cloudflare Pages</span>
+        <p>GitHub → Cloudflare Pages auto-deploy on every push to main. Zero server management. Global CDN. Free tier covers all static deployments.</p>
+        <span class="tech-tag">pages.cloudflare.com</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Signal Layer</span>
+        <h3>Edge Key-Value Store</h3>
+        <span class="tech-name">Cloudflare Workers KV</span>
+        <p>167 AI signals stored as tenant-first key-value pairs. Served via Cloudflare Workers at the edge. Sub-millisecond latency globally. Zero origin server.</p>
+        <span class="tech-tag">GET /v1/{tenant}/{file}</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Execution Layer</span>
+        <h3>Edge Computing</h3>
+        <span class="tech-name">Cloudflare Workers</span>
+        <p>Serverless JavaScript execution at the edge. Handles signal routing, tenant isolation, and request transformation. Zero LLM in the execution path.</p>
+        <span class="tech-tag">workers.cloudflare.com</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Proof Layer</span>
+        <h3>Cryptographic Hashing</h3>
+        <span class="tech-name">SHA-256</span>
+        <p>Every core document is fingerprinted using SHA-256. The industry standard for cryptographic content verification. Deterministic. Collision-resistant. Universally supported.</p>
+        <span class="tech-tag">sha256sum document.txt</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Proof Layer</span>
+        <h3>Timestamp Anchoring</h3>
+        <span class="tech-name">OpenTimestamps</span>
+        <p>SHA-256 hashes are anchored to the Bitcoin blockchain via OpenTimestamps. Creates immutable, publicly verifiable proof of when a document existed. Open source. No trusted third party required.</p>
+        <span class="tech-tag">opentimestamps.org</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Proof Layer</span>
+        <h3>Immutable Ledger</h3>
+        <span class="tech-name">Bitcoin Blockchain</span>
+        <p>The Bitcoin blockchain is the anchor for all OpenTimestamps proofs. The most secure, most decentralised, longest-running public ledger in existence. Blocks 944442–952597.</p>
+        <span class="tech-tag">bitcoin.org</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Signal Layer</span>
+        <h3>Structured Data Standard</h3>
+        <span class="tech-name">Schema.org</span>
+        <p>The universal vocabulary for structured data. Used by all major AI systems and search engines to understand entity types, service categories, and relationship graphs.</p>
+        <span class="tech-tag">schema.org</span>
+      </div>
+
+      <div class="tech-card">
+        <span class="tech-layer">Signal Layer</span>
+        <h3>Knowledge Graph Format</h3>
+        <span class="tech-name">JSON-LD</span>
+        <p>JSON for Linked Data — the canonical format for entity graphs. Embedded in HTML or served as standalone files. The format that connects business entities to the global knowledge graph.</p>
+        <span class="tech-tag">json-ld.org</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL ARCHITECTURE -->
+<section class="signals">
+  <div class="c">
+    <span class="ey">Signal Architecture</span>
+    <h2 class="sh">167 Signals Across Three Categories</h2>
+    <p class="sl">Every signal has a purpose. Every category targets a specific AI system behaviour.</p>
+    <div class="sig-cats">
+      <div class="sig-cat">
+        <span class="sig-count">48</span>
+        <h3>Identity &amp; Entity</h3>
+        <p>Signals that establish who the business is — name, category, location, founding date, legal registration, team, and entity relationships.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">entity.name</span>
+          <span class="sig-ex">entity.category</span>
+          <span class="sig-ex">entity.location</span>
+          <span class="sig-ex">entity.founding-date</span>
+          <span class="sig-ex">entity.legal-registration</span>
+        </div>
+      </div>
+      <div class="sig-cat">
+        <span class="sig-count">61</span>
+        <h3>Trust &amp; Proof</h3>
+        <p>Signals that prove the business is who it claims to be — certifications, proof files, external references, citation layer, and cryptographic anchors.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">proof.sha256</span>
+          <span class="sig-ex">proof.ots-anchor</span>
+          <span class="sig-ex">trust.certifications</span>
+          <span class="sig-ex">trust.citations</span>
+          <span class="sig-ex">trust.external-refs</span>
+        </div>
+      </div>
+      <div class="sig-cat">
+        <span class="sig-count">58</span>
+        <h3>Intent &amp; Governance</h3>
+        <p>Signals that map the business to buyer intent — service categories, buyer personas, use cases, compliance status, and AI system permissions.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">intent.service-category</span>
+          <span class="sig-ex">intent.buyer-persona</span>
+          <span class="sig-ex">governance.eu-ai-act</span>
+          <span class="sig-ex">governance.gdpr</span>
+          <span class="sig-ex">intent.use-cases</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE PRINCIPLES -->
+<section class="arch">
+  <div class="c">
+    <span class="ey">Architecture Principles</span>
+    <h2 class="sh">Why We Built It This Way</h2>
+    <p class="sl">Every architectural decision was made for a reason. Here are the six core principles.</p>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="arch-icon">🔀</div>
+        <h3>Fully Decoupled</h3>
+        <p>Site=CONTENT (GitHub). Edge=SIGNALS (Cloudflare KV). These never touch. Updating signals does not require touching the website. Updating the website does not affect signals.</p>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">⚡</div>
+        <h3>Zero Origin Dependency</h3>
+        <p>All signals are served from the Cloudflare edge via <code>GET /v1/{'{'}tenant{'}'}/{'{'}file{'}'}</code>. No origin server involved. No downtime. No CMS dependency. Sub-millisecond globally.</p>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🏗️</div>
+        <h3>Tenant-First at Scale</h3>
+        <p>Every tenant key is prefixed: <code>tenant:signal-file</code>. Zero cross-tenant leakage. Onboarding is two steps: git add + CNAME. Designed to scale to 12M EU businesses.</p>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🤖</div>
+        <h3>Zero LLM in Delivery</h3>
+        <p>The delivery edge is 100% deterministic. No AI processing in the serving path. LLMs are only permitted in the Signal Processing Layer during signal generation — never in delivery.</p>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🔐</div>
+        <h3>Cryptographic Proof at Every Layer</h3>
+        <p>SHA-256 at the document layer. OpenTimestamps at the proof layer. Bitcoin at the anchor layer. Every claim is traceable to a mathematically verifiable origin.</p>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🇪🇺</div>
+        <h3>EU-First by Design</h3>
+        <p>GDPR compliance is structural. EU AI Act readiness is built in. All data processing follows EU law. Cloudflare edge nodes in EU serve EU tenants. We support readiness. We never certify.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>The Same Stack.<br><em>Deployed for You.</em></h2>
+    <p>This is the infrastructure we deploy for every client. Start with AI LENS™ — free — to see which layers your business is missing.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/resources/ai-era-website" class="bcw">Read the Doctrine →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
