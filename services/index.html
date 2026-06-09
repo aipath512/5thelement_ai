@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — 5thelement.ai</title>
+<meta name="description" content="AI LENS™, AI READY™, AI SIGNALS™, and Trust Authority Module™ — four services that make your business recommendable by AI."/>
+<link rel="canonical" href="https://5thelement.ai/services"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* PAGE HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* SERVICE CARDS — full detail */
+.svc-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:2.25rem}
+.svc-card{background:#111318;border:1px solid #1e2329;border-radius:12px;overflow:hidden;transition:border-color 0.2s}
+.svc-card:hover{border-color:rgba(245,200,66,0.35)}
+.svc-header{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;padding:2rem 2rem 1.5rem}
+.svc-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;line-height:1;flex-shrink:0}
+.svc-title-block .svc-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.4rem}
+.svc-title-block h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:#ffffff;line-height:1.15}
+.svc-title-block .svc-meta{font-size:0.78rem;color:#888;display:block;margin-top:0.3rem}
+.svc-badge{font-size:0.75rem;font-weight:700;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;padding:0.4rem 1rem;border-radius:999px;white-space:nowrap;align-self:flex-start}
+.svc-body{padding:0 2rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;border-top:1px solid #1e2329;padding-top:1.75rem}
+.svc-desc p{font-size:0.92rem;color:#cccccc;line-height:1.75;margin-bottom:1rem}
+.svc-desc p:last-child{margin-bottom:0}
+.svc-includes h4{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.svc-includes ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.svc-includes ul li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start}
+.svc-includes ul li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+.svc-footer{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;background:#0a0c0f;border-top:1px solid #1e2329;flex-wrap:wrap;gap:1rem}
+.svc-price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#ffffff}
+.svc-price small{font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:400;color:#888}
+.svc-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:700;font-size:0.88rem;padding:0.7rem 1.5rem;border-radius:8px;display:inline-block}
+.btnw{background:transparent;color:#ffffff;font-weight:700;font-size:0.88rem;padding:0.7rem 1.5rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* COMPARE TABLE */
+.compare{background:#111318}
+.ctable{width:100%;border-collapse:collapse;margin-top:2.25rem;font-size:0.88rem}
+.ctable th{font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#888;padding:0.9rem 1.25rem;text-align:left;border-bottom:1px solid #1e2329}
+.ctable th:not(:first-child){text-align:center;color:#f5c842}
+.ctable td{padding:0.9rem 1.25rem;border-bottom:1px solid #1e2329;color:#cccccc;vertical-align:top}
+.ctable td:not(:first-child){text-align:center}
+.ctable tr:last-child td{border-bottom:none}
+.ctable tr:hover td{background:rgba(255,255,255,0.02)}
+.ctable .yes{color:#4ade80;font-weight:700}
+.ctable .no{color:#374151}
+.ctable .feat{font-weight:600;color:#ffffff}
+
+/* CTA */
+.ctabar{background:#0a0c0f;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .svc-header{grid-template-columns:auto 1fr;gap:1rem}
+  .svc-badge{display:none}
+  .svc-body{grid-template-columns:1fr}
+  .svc-footer{flex-direction:column;align-items:flex-start}
+  .ctable{display:block;overflow-x:auto}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+  .svc-header{padding:1.5rem 1.25rem 1.25rem}
+  .svc-body{padding:1.25rem}
+  .svc-footer{padding:1rem 1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services" class="active">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/services">Services</a></div></div>
+
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Services</span>
+    <h1>Four Services.<br><em>One Sequence.</em></h1>
+    <p>From free audit to full authority implementation. Each service is a concrete deliverable with a measurable outcome. Each builds on the previous. The sequence is the product.</p>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section style="background:#0a0c0f">
+  <div class="c">
+    <span class="ey">The Four Services</span>
+    <h2 class="sh">What We Deliver</h2>
+    <p class="sl">Every service has a fixed scope, a defined output, and a verifiable result.</p>
+
+    <div class="svc-list">
+
+      <!-- AI LENS -->
+      <div class="svc-card">
+        <div class="svc-header">
+          <div class="svc-num">01</div>
+          <div class="svc-title-block">
+            <span class="svc-label">AI Visibility™ · Entry Point</span>
+            <h2>AI LENS™</h2>
+            <span class="svc-meta">Free · DIY · Delivered in 24 hours</span>
+          </div>
+          <span class="svc-badge">Findable™</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-desc">
+            <p>AI LENS™ is the entry point. We analyze whether AI systems can find, understand, and accurately describe your business across seven visibility dimensions.</p>
+            <p>You receive a complete AI Visibility Information Map™ — 100 questions with green and red answers showing exactly where your business is invisible to AI and why.</p>
+            <p>This is the diagnostic that every subsequent service is built on. Zero cost. No website changes. No setup required.</p>
+          </div>
+          <div class="svc-includes">
+            <h4>What You Receive</h4>
+            <ul>
+              <li>100 AI visibility questions answered</li>
+              <li>Green / red answer map per dimension</li>
+              <li>AI Visibility Information Map™</li>
+              <li>Priority gap list — ranked by impact</li>
+              <li>Full Findable™ stage assessment</li>
+              <li>Recommended next steps</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-footer">
+          <div class="svc-price">Free <small>/ 24h delivery</small></div>
+          <div class="svc-btns">
+            <a href="/contact" class="btng">Start Free Audit →</a>
+            <a href="/services/ai-lens" class="btnw">Full Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI READY -->
+      <div class="svc-card">
+        <div class="svc-header">
+          <div class="svc-num">02</div>
+          <div class="svc-title-block">
+            <span class="svc-label">AI Visibility™ · Implementation</span>
+            <h2>AI READY™</h2>
+            <span class="svc-meta">HELP · €49/hour · Delivered in 24 hours</span>
+          </div>
+          <span class="svc-badge">Understandable™</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-desc">
+            <p>AI READY™ fixes what AI LENS™ identified. We take the red answers from your visibility map and implement the corrections — without touching your existing website, CMS, or hosting.</p>
+            <p>All work is deployed at the Cloudflare network edge. Your business information becomes readable, structured, and aligned with buyer intent for both AI systems and human visitors.</p>
+            <p>Scope is defined on a call. Billed at €49/hour. Typical engagements run 5–15 hours depending on existing infrastructure.</p>
+          </div>
+          <div class="svc-includes">
+            <h4>What You Receive</h4>
+            <ul>
+              <li>All red gaps from AI LENS™ fixed</li>
+              <li>AI-readable business description layer</li>
+              <li>Structured service and product data</li>
+              <li>Buyer intent alignment</li>
+              <li>llms.txt + ai.json deployment</li>
+              <li>Understandable™ stage verified</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-footer">
+          <div class="svc-price">€49<small>/hour · scope on call</small></div>
+          <div class="svc-btns">
+            <a href="/contact" class="btng">Book a Session →</a>
+            <a href="/services/ai-ready" class="btnw">Full Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI SIGNALS -->
+      <div class="svc-card">
+        <div class="svc-header">
+          <div class="svc-num">03</div>
+          <div class="svc-title-block">
+            <span class="svc-label">AI Authority™ · Signals Layer</span>
+            <h2>AI SIGNALS™</h2>
+            <span class="svc-meta">HELP · €49/hour · Delivered in 1 week</span>
+          </div>
+          <span class="svc-badge">Verifiable™</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-desc">
+            <p>AI SIGNALS™ optimizes the atomic machine-readable signals that help AI systems classify, verify, and connect your business across the web and AI knowledge graphs.</p>
+            <p>This is the layer that turns a readable business into a verifiable one. AI systems can now cross-reference your claims, confirm consistency across sources, and weight your data with higher confidence.</p>
+            <p>167 signals across three categories: Identity &amp; Entity, Trust &amp; Proof, Intent &amp; Governance. Deployed via Cloudflare Workers KV.</p>
+          </div>
+          <div class="svc-includes">
+            <h4>What You Receive</h4>
+            <ul>
+              <li>Schema.org markup — full implementation</li>
+              <li>Entity data layer (entities.json)</li>
+              <li>Intent files (intents.json)</li>
+              <li>Structured FAQ deployment</li>
+              <li>AI-readable metadata layer</li>
+              <li>Verifiable™ + Trustable™ stages verified</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-footer">
+          <div class="svc-price">€49<small>/hour · scope on call</small></div>
+          <div class="svc-btns">
+            <a href="/contact" class="btng">Book a Session →</a>
+            <a href="/services/ai-signals" class="btnw">Full Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST AUTHORITY -->
+      <div class="svc-card">
+        <div class="svc-header">
+          <div class="svc-num">04</div>
+          <div class="svc-title-block">
+            <span class="svc-label">AI Authority™ · Full Implementation</span>
+            <h2>Trust Authority Module™</h2>
+            <span class="svc-meta">Done For You · Evaluation Required</span>
+          </div>
+          <span class="svc-badge">Recommendable™</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-desc">
+            <p>Trust Authority Module™ is the full authority enforcement layer. We build the cryptographic proof layer, establish cross-references, deploy citations, and create an immutable evidence layer that makes AI confident in recommending your business over competitors.</p>
+            <p>Every core document is fingerprinted via SHA-256 and anchored to the Bitcoin blockchain using OpenTimestamps. Your authority becomes mathematically verifiable and publicly accessible.</p>
+            <p>Scope is assessed on evaluation. Includes ongoing signal maintenance and EU AI Act readiness verification by eu-ai-audit.eu.</p>
+          </div>
+          <div class="svc-includes">
+            <h4>What You Receive</h4>
+            <ul>
+              <li>SHA-256 content fingerprinting</li>
+              <li>Bitcoin blockchain anchoring (OTS)</li>
+              <li>Authority pages + cross-references</li>
+              <li>Citation layer deployment</li>
+              <li>External consistency enforcement</li>
+              <li>EU AI Act readiness verification</li>
+              <li>Ongoing signal maintenance</li>
+              <li>Recommendable™ stage verified</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-footer">
+          <div class="svc-price">Custom <small>/ evaluation required</small></div>
+          <div class="svc-btns">
+            <a href="/contact" class="btng">Request Evaluation →</a>
+            <a href="/services/trust-authority" class="btnw">Full Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section class="compare">
+  <div class="c">
+    <span class="ey">Comparison</span>
+    <h2 class="sh">What Each Service Includes</h2>
+    <p class="sl">Every service builds on the previous. Start at AI LENS™ and progress as needed.</p>
+    <div style="overflow-x:auto">
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>AI LENS™</th>
+            <th>AI READY™</th>
+            <th>AI SIGNALS™</th>
+            <th>Trust Authority™</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="feat">Visibility audit (100 questions)</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Green / red answer map</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Gap fix implementation</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">AI-readable content layer</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">llms.txt + ai.json</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Schema.org markup</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Entity + intent files</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">167 AI signals layer</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">SHA-256 fingerprinting</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Bitcoin blockchain anchor</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">EU AI Act readiness</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td class="feat">Ongoing maintenance</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Start Free.<br><em>Scale When Ready.</em></h2>
+    <p>Begin with AI LENS™ — zero cost, 24 hour delivery, no website changes. Upgrade when you see the gaps.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/contact" class="bcw">Book a Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
