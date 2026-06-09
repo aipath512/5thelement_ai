@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Innovation Registry — 5thelement.ai</title>
+<meta name="description" content="Nine verified innovations. Each SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Publicly verifiable. Blocks 944442–952597."/>
+<link rel="canonical" href="https://5thelement.ai/resources/innovation-registry"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* STATS BAR */
+.statsbar{background:#111318;padding:2rem 0;border-bottom:1px solid #1e2329}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat-item .stat-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#f5c842;display:block;line-height:1}
+.stat-item .stat-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-top:0.4rem}
+
+/* HOW IT WORKS */
+.how{background:#0a0c0f}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.how-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.how-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2d3748;display:block;margin-bottom:0.75rem;line-height:1}
+.how-card h3{font-size:1rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.how-card p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* REGISTRY ENTRIES */
+.registry{background:#111318}
+.reg-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:2.25rem}
+.reg-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;overflow:hidden;transition:border-color 0.2s}
+.reg-card:hover{border-color:rgba(245,200,66,0.3)}
+.reg-header{display:grid;grid-template-columns:3.5rem 1fr auto;align-items:center;gap:1.25rem;padding:1.5rem 2rem;cursor:pointer}
+.reg-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2d3748;line-height:1}
+.reg-title-block .reg-label{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.3rem}
+.reg-title-block h3{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2vw,1.35rem);font-weight:800;color:#ffffff;line-height:1.2}
+.reg-status{font-size:0.7rem;font-weight:700;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);color:#4ade80;padding:0.3rem 0.7rem;border-radius:999px;white-space:nowrap}
+.reg-status.ext{background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.3);color:#a78bfa}
+.reg-body{padding:0 2rem 2rem;border-top:1px solid #1e2329;padding-top:1.5rem}
+.reg-desc{font-size:0.92rem;color:#cccccc;line-height:1.75;margin-bottom:1.5rem;max-width:720px}
+.proof-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.proof-field{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:1rem}
+.proof-field .pf-label{font-size:0.62rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.4rem}
+.proof-field .pf-val{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;word-break:break-all;line-height:1.5}
+.proof-field .pf-val.green{color:#4ade80}
+.proof-field .pf-val.white{color:#ffffff;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600}
+
+/* VERIFICATION */
+.verify{background:#0a0c0f}
+.verify-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.verify-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.verify-card h3{font-size:1rem;font-weight:700;color:#ffffff;margin-bottom:0.75rem}
+.verify-card p{font-size:0.88rem;color:#cccccc;line-height:1.7;margin-bottom:1rem}
+.verify-card code{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;background:#0a0c0f;padding:0.2rem 0.4rem;border-radius:4px}
+
+/* CTA */
+.ctabar{background:#111318;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr}
+  .reg-header{grid-template-columns:2.5rem 1fr;gap:1rem}
+  .reg-status{display:none}
+  .proof-row{grid-template-columns:1fr}
+  .verify-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources" class="active">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/resources">Resources</a><span class="bc-sep">›</span><span>Innovation Registry</span></div></div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Innovation Registry</span>
+    <h1>Nine Innovations.<br><em>All Verified.</em></h1>
+    <p>Every methodology, protocol, and framework we have created is SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Not claimed — proven. Publicly verifiable by anyone.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="statsbar">
+  <div class="c">
+    <div class="stats-grid">
+      <div class="stat-item"><span class="stat-val">9</span><span class="stat-label">Verified Innovations</span></div>
+      <div class="stat-item"><span class="stat-val">₿</span><span class="stat-label">Bitcoin Anchored</span></div>
+      <div class="stat-item"><span class="stat-val">944442</span><span class="stat-label">First Block</span></div>
+      <div class="stat-item"><span class="stat-val">952597</span><span class="stat-label">Latest Block</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="c">
+    <span class="ey">Verification Method</span>
+    <h2 class="sh">How Blockchain Anchoring Works</h2>
+    <p class="sl">Three steps. Immutable result. Anyone can verify.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="how-n">01</span>
+        <h3>SHA-256 Fingerprint</h3>
+        <p>Every document is hashed using SHA-256. The hash is a unique mathematical fingerprint. If even one character in the document changes, the hash changes completely. The document cannot be altered without detection.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-n">02</span>
+        <h3>OpenTimestamps Anchoring</h3>
+        <p>The SHA-256 hash is submitted to OpenTimestamps, which creates a proof file (.ots) and anchors it to the Bitcoin blockchain. The Bitcoin block number and timestamp prove when the document existed.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-n">03</span>
+        <h3>Public Verification</h3>
+        <p>Anyone can verify the timestamp using the .ots proof file and the original document. The Bitcoin blockchain is public and immutable. No authority is required — the math is the proof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRY -->
+<section class="registry">
+  <div class="c">
+    <span class="ey">The Registry</span>
+    <h2 class="sh">Nine Verified Innovations</h2>
+    <p class="sl">Registered in chronological order. Every entry is publicly verifiable.</p>
+    <div class="reg-list">
+
+      <!-- #1 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">01</div>
+          <div class="reg-title-block">
+            <span class="reg-label">AI Delivery Infrastructure™ — Canonical</span>
+            <h3>ADI™ — Core Architecture Doctrine</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The canonical definition of AI Delivery Infrastructure™ — the three-layer architecture that separates CONTENT (GitHub), SIGNALS (Cloudflare Workers KV), and EXECUTION (Worker). The foundational doctrine for all subsequent innovations.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944442</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #2 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">02</div>
+          <div class="reg-title-block">
+            <span class="reg-label">ADI™ — Manifest</span>
+            <h3>ADI™ Manifest Root</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The manifest root file that binds all ADI™ components into a single verifiable package. The root hash that anchors the entire methodology tree.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944443</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #3 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">03</div>
+          <div class="reg-title-block">
+            <span class="reg-label">ADI™ — Pipeline Protocol</span>
+            <h3>RAW→FACT→ENTITY→RELATIONSHIP→SIGNAL→FILE</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The deterministic six-stage transformation pipeline. The canonical rule that Signals→Files (never Files→Signals). The protocol that governs all ADI™ deployments.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944444</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #4 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">04</div>
+          <div class="reg-title-block">
+            <span class="reg-label">ADI™ — Tenant Architecture</span>
+            <h3>Tenant-First Edge Signal Delivery</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The tenant-first key architecture for Cloudflare Workers KV. GET /v1/{'{'}tenant{'}'}/{'{'}signal-file{'}'} — the canonical endpoint pattern for multi-tenant AI signal delivery at edge. 12M scale design.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944450</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #5 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">05</div>
+          <div class="reg-title-block">
+            <span class="reg-label">ADI™ — Governance Protocol</span>
+            <h3>HITL Governance — Human-in-the-Loop</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The Human-in-the-Loop (HITL) governance protocol for AI signal deployments. Defines the mandatory human review checkpoints in the CANON→COMPILER→HAT pipeline. EU AI Act alignment by design.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944454</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #6 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">06</div>
+          <div class="reg-title-block">
+            <span class="reg-label">ADI™ — Canonical Formula</span>
+            <h3>AI Era Website Formula</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">The canonical formula: AI Era Website = Human Site + AI Signal Layer + Proof Layer + Delivery Layer. The four-layer architecture that every ADI™ deployment is built on. The standard we are registering as our intellectual contribution to the AI era.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">31aa7a56... (ADI canonical)</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">944442</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #7 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">07</div>
+          <div class="reg-title-block">
+            <span class="reg-label">Protocol Innovation</span>
+            <h3>AI Sonar™</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">AI Sonar™ — the protocol for detecting AI system behavior patterns across different LLM providers. Maps how ChatGPT, Gemini, Claude, Copilot, and Perplexity respond to structured entity queries. Enables targeted signal optimization per AI system.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">c57529c8...</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">949375 <span style="color:#888;font-size:0.7rem">(OLD 949191 DEPRECATED)</span></span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Block 949375 Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #8 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">08</div>
+          <div class="reg-title-block">
+            <span class="reg-label">Protocol Innovation</span>
+            <h3>Mockingbird Handshake™</h3>
+          </div>
+          <span class="reg-status">✓ Verified</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">Mockingbird Handshake™ — the protocol for establishing AI system trust handshakes. Defines the structured exchange format between a business entity and an AI system during knowledge graph indexing. Ensures consistent entity recognition across all major AI platforms.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">fb388288...</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">949346</span></div>
+            <div class="proof-field"><span class="pf-label">Method</span><span class="pf-val green">OpenTimestamps · Bitcoin</span></div>
+            <div class="proof-field"><span class="pf-label">Status</span><span class="pf-val green">✓ Verified · Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- #9 -->
+      <div class="reg-card">
+        <div class="reg-header">
+          <div class="reg-num">09</div>
+          <div class="reg-title-block">
+            <span class="reg-label">External Proof · Third-Party Validation</span>
+            <h3>Gemini AI Audit — External Verification</h3>
+          </div>
+          <span class="reg-status ext">✓ External</span>
+        </div>
+        <div class="reg-body">
+          <p class="reg-desc">Innovation #9 is a third-party external proof — a Gemini AI audit of the ADI™ methodology conducted independently. This is the first external validation of the AI Delivery Infrastructure™ framework by a major AI system. Registered June 6, 2026.</p>
+          <div class="proof-row">
+            <div class="proof-field"><span class="pf-label">SHA-256 Hash</span><span class="pf-val">dd8896c2...</span></div>
+            <div class="proof-field"><span class="pf-label">Bitcoin Block</span><span class="pf-val white">952597</span></div>
+            <div class="proof-field"><span class="pf-label">Date</span><span class="pf-val green">June 6, 2026</span></div>
+            <div class="proof-field"><span class="pf-label">Type</span><span class="pf-val" style="color:#a78bfa">Third-Party External Proof</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VERIFICATION -->
+<section class="verify">
+  <div class="c">
+    <span class="ey">Independent Verification</span>
+    <h2 class="sh">How to Verify Any Entry</h2>
+    <p class="sl">No trust required. The Bitcoin blockchain is public. Anyone can verify.</p>
+    <div class="verify-grid">
+      <div class="verify-card">
+        <h3>Using OpenTimestamps</h3>
+        <p>Download the .ots proof file for any entry. Download the original document. Use the OpenTimestamps client to verify:</p>
+        <p><code>ots verify document.txt document.txt.ots</code></p>
+        <p style="margin-top:0.75rem">The tool will confirm the Bitcoin block number and timestamp. No account required. Fully open source.</p>
+      </div>
+      <div class="verify-card">
+        <h3>Using the Bitcoin Block Explorer</h3>
+        <p>Each entry references a Bitcoin block number. You can verify the block timestamp using any public Bitcoin block explorer:</p>
+        <p><code>blockstream.info/block/{'{'}block_number{'}'}</code></p>
+        <p style="margin-top:0.75rem">The block timestamp proves the document existed before that block was mined. Immutable. Public. Permanent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>We Prove Everything.<br><em>Including Our Own Claims.</em></h2>
+    <p>The same proof layer we deploy for our innovations is what we deploy for your business. Start with AI LENS™ — free.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/resources" class="bcw">Back to Resources →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
