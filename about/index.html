@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — 5thelement.ai</title>
+<meta name="description" content="5thelement.ai is built by AiVenture S.R.L. — a Romanian AI infrastructure company founded by Dan Ionescu. We help B2B businesses become recommendable by AI."/>
+<link rel="canonical" href="https://5thelement.ai/about"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* PAGE HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* FOUNDER */
+.founder{background:#111318}
+.founder-grid{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;margin-top:2.25rem}
+.founder-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem;text-align:center}
+.founder-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#f5c842,#d4a800);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#0a0c0f;margin:0 auto 1.25rem}
+.founder-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#ffffff;margin-bottom:0.25rem}
+.founder-card .title{font-size:0.8rem;color:#f5c842;font-weight:600;display:block;margin-bottom:1rem}
+.founder-card .tags{display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;margin-top:1rem}
+.founder-card .tag{font-size:0.68rem;font-weight:600;background:rgba(255,255,255,0.05);border:1px solid #1e2329;border-radius:999px;padding:0.25rem 0.65rem;color:#cccccc}
+.founder-links{display:flex;flex-direction:column;gap:0.5rem;margin-top:1.25rem}
+.founder-link{font-size:0.8rem;color:#cccccc;display:flex;align-items:center;gap:0.5rem;justify-content:center}
+.founder-link:hover{color:#f5c842}
+.founder-bio h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#ffffff;margin-bottom:1.25rem}
+.founder-bio p{font-size:0.95rem;color:#cccccc;line-height:1.8;margin-bottom:1rem}
+.founder-bio p:last-child{margin-bottom:0}
+.founder-bio strong{color:#ffffff;font-weight:600}
+
+/* COMPANY */
+.company{background:#0a0c0f}
+.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.comp-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.comp-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:#ffffff;margin-bottom:0.75rem}
+.comp-card p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+.comp-card .val{font-size:1.5rem;font-weight:900;font-family:'Playfair Display',serif;color:#f5c842;display:block;margin-bottom:0.4rem}
+
+/* TIMELINE */
+.timeline{background:#111318}
+.tl-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.tl-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.tl-item:last-child{border-bottom:none}
+.tl-date{font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#f5c842;padding-top:0.2rem}
+.tl-body h4{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.3rem}
+.tl-body p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* PROPERTIES */
+.properties{background:#0a0c0f}
+.prop-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.25rem}
+.prop-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;gap:1.25rem;align-items:flex-start;transition:border-color 0.2s}
+.prop-card:hover{border-color:rgba(245,200,66,0.35)}
+.prop-icon{font-size:1.5rem;flex-shrink:0;line-height:1.2}
+.prop-card h3{font-size:1rem;font-weight:700;color:#ffffff;margin-bottom:0.25rem}
+.prop-card a.prop-url{font-size:0.8rem;color:#f5c842;display:block;margin-bottom:0.5rem}
+.prop-card p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* MISSION VISION LINKS */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.mv-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2.25rem;transition:border-color 0.2s}
+.mv-card:hover{border-color:rgba(245,200,66,0.4)}
+.mv-card .mv-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.75rem}
+.mv-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#ffffff;margin-bottom:0.75rem}
+.mv-card p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin-bottom:1.25rem}
+.mv-link{font-size:0.88rem;font-weight:700;color:#f5c842}
+.mv-link:hover{text-decoration:underline}
+
+/* CTA */
+.ctabar{background:#111318;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .founder-grid{grid-template-columns:1fr}
+  .company-grid{grid-template-columns:1fr}
+  .prop-grid{grid-template-columns:1fr}
+  .mv-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr;gap:0.5rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about" class="active">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><span>About</span></div></div>
+
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">About</span>
+    <h1>Built by an Engineer.<br><em>For Business Owners.</em></h1>
+    <p>5thelement.ai is the global AI visibility authority platform of AiVenture S.R.L. — a Romanian AI infrastructure company built to help B2B businesses become findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="c">
+    <span class="ey">The Founder</span>
+    <h2 class="sh">Dan Ionescu</h2>
+    <div class="founder-grid">
+      <div class="founder-card">
+        <div class="founder-avatar">DI</div>
+        <h3>Dan Ionescu</h3>
+        <span class="title">Founder &amp; CEO — AiVenture S.R.L.</span>
+        <div class="tags">
+          <span class="tag">Enterprise Architecture</span>
+          <span class="tag">AI Infrastructure</span>
+          <span class="tag">30+ Years IT</span>
+          <span class="tag">French-Romanian</span>
+          <span class="tag">IBM France</span>
+          <span class="tag">CGI Informatique</span>
+        </div>
+        <div class="founder-links">
+          <a href="https://linkedin.com/in/dan-ionesco-a856082a0" target="_blank" class="founder-link">🔗 LinkedIn — dan-ionesco-a856082a0</a>
+          <a href="https://x.com/aipath512" target="_blank" class="founder-link">✖ X / Twitter — @aipath512</a>
+          <a href="https://github.com/aipath512" target="_blank" class="founder-link">⌥ GitHub — aipath512</a>
+          <a href="https://medium.com/@aipath512" target="_blank" class="founder-link">✍ Medium — @aipath512</a>
+          <a href="https://wa.me/40737123540" target="_blank" class="founder-link">💬 WhatsApp — +40 737 123 540</a>
+        </div>
+      </div>
+      <div class="founder-bio">
+        <h3>30 Years of Enterprise Architecture. One New Category.</h3>
+        <p>Dan Ionescu is a French-Romanian enterprise architect with over 30 years of experience in large-scale IT infrastructure — including IBM France, CGI Informatique, and CICS/COBOL/mainframe systems at enterprise scale.</p>
+        <p>In March 2025, Dan founded AiVenture S.R.L. in Bucharest with a single thesis: <strong>AI visibility is not a ranking game — it is a graph-confidence game.</strong> The company that structures its information correctly, proves its claims verifiably, and deploys the right machine-readable signals will be recommended by AI. Everyone else will be invisible.</p>
+        <p>5thelement.ai is the result of applying enterprise architecture discipline — deterministic pipelines, structured data, cryptographic proof, and edge deployment — to the problem of AI visibility for B2B companies. The methodology is the same. The target is different. The opportunity is 12 million EU businesses that are currently invisible to AI.</p>
+        <p>Dan signs as <strong>Ionesco</strong> in French contexts and <strong>Ionescu</strong> in Romanian and English contexts. Both are intentional and correct.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY FACTS -->
+<section class="company">
+  <div class="c">
+    <span class="ey">The Company</span>
+    <h2 class="sh">AiVenture S.R.L.</h2>
+    <p class="sl">Founded March 2025. Registered in Bucharest, Romania. Operating under EU law.</p>
+    <div class="company-grid">
+      <div class="comp-card">
+        <span class="val">March 2025</span>
+        <h3>Founded</h3>
+        <p>J40/2501/2025 · CUI 51415878 · NACE 6210 · București, Romania. EU VAT registered. Operating under GDPR and EU AI Act compliance frameworks.</p>
+      </div>
+      <div class="comp-card">
+        <span class="val">12M+</span>
+        <h3>Target Market</h3>
+        <p>12 million EU B2B businesses currently invisible to AI systems. We collapse the SEO and AEO silos into one Information Sovereignty layer.</p>
+      </div>
+      <div class="comp-card">
+        <span class="val">5</span>
+        <h3>Active Properties</h3>
+        <p>5thelement.ai · eu-ai-audit.eu · eu-ai-act-ready.eu · eu-112.eu · aiventure.ro — each serving a distinct segment of the AI readiness market.</p>
+      </div>
+      <div class="comp-card">
+        <span class="val">9</span>
+        <h3>Verified Innovations</h3>
+        <p>Nine registered innovations. Each SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Publicly verifiable. Bitcoin blocks 944442–952597.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="c">
+    <span class="ey">Company Timeline</span>
+    <h2 class="sh">From Concept to Category</h2>
+    <p class="sl">Built in public. Every milestone verifiable.</p>
+    <div class="tl-list">
+      <div class="tl-item">
+        <div class="tl-date">Mar 2025</div>
+        <div class="tl-body"><h4>AiVenture S.R.L. Founded</h4><p>Company registered in Bucharest. J40/2501/2025. NACE 6210. Core architecture doctrine established: GitHub=CONTENT, KV=SIGNALS, Worker=EXECUTION.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar 2025</div>
+        <div class="tl-body"><h4>Innovation Registry #1 — ADI™ Canonical</h4><p>AI Delivery Infrastructure™ canonical document anchored to Bitcoin blockchain. SHA-256: 31aa7a56… Block 944442. First innovation registered.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Apr 2025</div>
+        <div class="tl-body"><h4>5thelement.ai Launched</h4><p>Global English authority platform for AI Delivery Infrastructure goes live. Positioning: AI visibility standards and B2B infrastructure layer.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2025</div>
+        <div class="tl-body"><h4>AUDIT-AI V3.0 — eu-ai-audit.eu Live</h4><p>Agentic 6-pass AI audit engine deployed on Cloudflare Pages. Free AI visibility scoring for any business. Lead gate with synthesis and WhatsApp CTA.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2025</div>
+        <div class="tl-body"><h4>Innovations #7 &amp; #8 Registered</h4><p>AI Sonar™ (SHA-256: c57529c8… block 949375) and Mockingbird Handshake™ (SHA-256: fb388288… block 949346) anchored to Bitcoin.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun 2025</div>
+        <div class="tl-body"><h4>WEB-AI ENGINE Locked</h4><p>CANON™ → COMPILER™ → HAT™ pipeline locked. RAW→FACT→ENTITY→RELATIONSHIP→SIGNAL→FILE. Critical rule: Signals→Files. ADI Factory v1.0 complete.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun 2025</div>
+        <div class="tl-body"><h4>Innovation #9 — Gemini AI Audit</h4><p>Third-party external proof registered. Gemini AI audit SHA-256: dd8896c2… Bitcoin Block 952597. First external validation of the ADI methodology.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun 2025</div>
+        <div class="tl-body"><h4>Homepage Repositioning</h4><p>Category shift from Infrastructure-First to Outcome-First. AI Visibility™ and AI Authority™ become the two public categories. Four modules remain as delivery architecture.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="properties">
+  <div class="c">
+    <span class="ey">Our Properties</span>
+    <h2 class="sh">Five Sites. One Ecosystem.</h2>
+    <p class="sl">Each property serves a distinct segment of the AI readiness and compliance market.</p>
+    <div class="prop-grid">
+      <div class="prop-card">
+        <div class="prop-icon">🌐</div>
+        <div>
+          <h3>5thelement.ai</h3>
+          <a href="https://5thelement.ai" class="prop-url" target="_blank">5thelement.ai</a>
+          <p>Global English authority platform for AI Delivery Infrastructure. B2B AI visibility and authority services. The flagship brand.</p>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">🔍</div>
+        <div>
+          <h3>EU AI Audit</h3>
+          <a href="https://eu-ai-audit.eu" class="prop-url" target="_blank">eu-ai-audit.eu</a>
+          <p>AUDIT-AI V3.0 engine. Free AI visibility scoring for any business. Independent verification for Gold and Platinum engagements. Agentic 6-pass web audit.</p>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">🇪🇺</div>
+        <div>
+          <h3>EU AI Act Ready</h3>
+          <a href="https://eu-ai-act-ready.eu" class="prop-url" target="_blank">eu-ai-act-ready.eu</a>
+          <p>EU Authorized Representative service for non-EU AI providers. Article 50 enforcement deadline August 2, 2026. EN/FR/ES/IT/RO multilingual.</p>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">🚨</div>
+        <div>
+          <h3>EU-112</h3>
+          <a href="https://eu-112.eu" class="prop-url" target="_blank">eu-112.eu</a>
+          <p>EU AI Act Operational Readiness site. 10 AEO intents with trilingual Q&amp;A. 6-stage compliance funnel. Epistemic rule: supports readiness, never certifies.</p>
+        </div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">🇷🇴</div>
+        <div>
+          <h3>AiVenture.ro</h3>
+          <a href="https://aiventure.ro" class="prop-url" target="_blank">aiventure.ro</a>
+          <p>Romanian B2B market delivery platform. AI visibility and authority services in Romanian. Off-page AI signal architecture for 12 money pages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION + VISION LINKS -->
+<section style="background:#111318;padding:4.5rem 0;border-bottom:1px solid #1e2329">
+  <div class="c">
+    <span class="ey">Our Direction</span>
+    <h2 class="sh">Mission &amp; Vision</h2>
+    <p class="sl">Where we are going and why it matters.</p>
+    <div class="mv-grid">
+      <div class="mv-card">
+        <span class="mv-label">Mission</span>
+        <h3>Make Every B2B Business Recommendable by AI</h3>
+        <p>12 million EU businesses are currently invisible to AI systems. We exist to fix that — one business at a time — with verifiable infrastructure, not marketing promises.</p>
+        <a href="/about/mission" class="mv-link">Read Our Mission →</a>
+      </div>
+      <div class="mv-card">
+        <span class="mv-label">Vision</span>
+        <h3>Own the Category of AI Visibility</h3>
+        <p>AI Visibility™ and AI Authority™ are the two concepts that will define how businesses compete in the AI era. We intend to own both — through methodology, proof, and infrastructure.</p>
+        <a href="/about/vision" class="mv-link">Read Our Vision →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Work With Us.<br><em>Start Free Today.</em></h2>
+    <p>Begin with a free AI LENS™ audit. 100 questions. Full visibility map. Delivered in 24 hours.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/contact" class="bcw">Book a Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
