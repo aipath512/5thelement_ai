@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resources — 5thelement.ai</title>
+<meta name="description" content="AI Era Website doctrine, Innovation Registry, technology stack, and research resources from 5thelement.ai — the AI visibility authority platform."/>
+<link rel="canonical" href="https://5thelement.ai/resources"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* RESOURCE CARDS — featured */
+.featured{background:#111318}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.feat-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2.25rem;display:flex;flex-direction:column;gap:1rem;transition:border-color 0.2s}
+.feat-card:hover{border-color:rgba(245,200,66,0.4)}
+.feat-card.primary{border-color:rgba(245,200,66,0.3)}
+.feat-tag{font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842}
+.feat-card h2{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:800;color:#ffffff;line-height:1.2}
+.feat-card p{font-size:0.92rem;color:#cccccc;line-height:1.75;flex:1}
+.feat-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.88rem;font-weight:700;color:#f5c842}
+.feat-link:hover{text-decoration:underline}
+
+/* ALL RESOURCES GRID */
+.allres{background:#0a0c0f}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.res-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;transition:border-color 0.2s}
+.res-card:hover{border-color:rgba(245,200,66,0.35)}
+.res-icon{font-size:1.6rem}
+.res-type{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888}
+.res-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#ffffff;line-height:1.25}
+.res-card p{font-size:0.85rem;color:#cccccc;line-height:1.7;flex:1}
+.res-link{font-size:0.82rem;font-weight:700;color:#f5c842;display:inline-flex;align-items:center;gap:0.3rem}
+.res-link:hover{text-decoration:underline}
+
+/* SIGNAL FILES */
+.signals{background:#111318}
+.sig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.25rem}
+.sig-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.sig-card h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.4rem}
+.sig-card .sig-path{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;display:block;margin-bottom:0.75rem}
+.sig-card p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* PROOF BOX */
+.proof-section{background:#0a0c0f}
+.proof-box{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:1.5rem;font-family:'Courier New',monospace;font-size:0.78rem;color:#cccccc;line-height:2;word-break:break-all;margin-top:2.25rem}
+.pl{color:#f5c842}
+
+/* CTA */
+.ctabar{background:#111318;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .feat-grid{grid-template-columns:1fr}
+  .res-grid{grid-template-columns:1fr}
+  .sig-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources" class="active">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><span>Resources</span></div></div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Resources</span>
+    <h1>Doctrine, Proof,<br><em>and Infrastructure.</em></h1>
+    <p>Everything we know about AI visibility — published, verified, and publicly accessible. Doctrine pages, innovation registry, signal files, and technology references.</p>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured">
+  <div class="c">
+    <span class="ey">Featured Resources</span>
+    <h2 class="sh">The Most Important Pages</h2>
+    <p class="sl">Start here. These two resources define the entire methodology.</p>
+    <div class="feat-grid">
+      <div class="feat-card primary">
+        <span class="feat-tag">Doctrine · Canonical</span>
+        <h2>The AI Era Website</h2>
+        <p>The canonical doctrine page for what an AI Era Website is, why it matters, and how it is structured. Defines the four-layer formula: Human Site + AI Signal Layer + Proof Layer + Delivery Layer.</p>
+        <a href="/resources/ai-era-website" class="feat-link">Read the Doctrine →</a>
+      </div>
+      <div class="feat-card">
+        <span class="feat-tag">Proof · Bitcoin Anchored</span>
+        <h2>Innovation Registry #1–9</h2>
+        <p>Nine verified innovations. Each SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Publicly verifiable. The proof layer that underlies everything we claim.</p>
+        <a href="/resources/innovation-registry" class="feat-link">View the Registry →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL RESOURCES -->
+<section class="allres">
+  <div class="c">
+    <span class="ey">All Resources</span>
+    <h2 class="sh">Reference Library</h2>
+    <p class="sl">Doctrine, technology, and proof — everything in one place.</p>
+    <div class="res-grid">
+
+      <div class="res-card">
+        <div class="res-icon">📐</div>
+        <span class="res-type">Doctrine</span>
+        <h3>The AI Era Website</h3>
+        <p>The canonical definition of what separates a traditional website from an AI Era Website. Four layers. One formula. The standard we deploy for every client.</p>
+        <a href="/resources/ai-era-website" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">🔐</div>
+        <span class="res-type">Proof · Registry</span>
+        <h3>Innovation Registry</h3>
+        <p>Nine registered innovations with SHA-256 hashes and Bitcoin blockchain anchors. ADI™, AI Sonar™, Mockingbird Handshake™, and six more. Fully public and verifiable.</p>
+        <a href="/resources/innovation-registry" class="res-link">View →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">⚙️</div>
+        <span class="res-type">Technology</span>
+        <h3>Technology Stack</h3>
+        <p>The full technology architecture behind 5thelement.ai — GitHub, Cloudflare Pages, Workers KV, OpenTimestamps, Bitcoin, Schema.org, and the ADI Factory pipeline.</p>
+        <a href="/resources/technologies" class="res-link">Explore →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">🎯</div>
+        <span class="res-type">Stage · Doctrine</span>
+        <h3>Findable™</h3>
+        <p>Stage 1 of the AI maturity ladder. Definition, the 6 questions AI asks, numbered actions with file names, and before/after result.</p>
+        <a href="/findable" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">📖</div>
+        <span class="res-type">Stage · Doctrine</span>
+        <h3>Understandable™</h3>
+        <p>Stage 2. How AI reads and interprets business information. What structured data must say. How to fix unreadable content without touching your website.</p>
+        <a href="/understandable" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">✅</div>
+        <span class="res-type">Stage · Doctrine</span>
+        <h3>Verifiable™</h3>
+        <p>Stage 3. How AI cross-references claims. What signals enable verification. How schema, entity data, and intent files work together to raise graph confidence.</p>
+        <a href="/verifiable" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">🛡️</div>
+        <span class="res-type">Stage · Doctrine</span>
+        <h3>Trustable™</h3>
+        <p>Stage 4. What makes AI treat a business as a credible source. Authority signals, citation layers, external consistency, and cryptographic proof of origin.</p>
+        <a href="/trustable" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">🏆</div>
+        <span class="res-type">Stage · Doctrine</span>
+        <h3>Recommendable™</h3>
+        <p>Stage 5. The goal. What must be true for AI to name your business when buyers ask for a recommendation. The full stack in action.</p>
+        <a href="/recommendable" class="res-link">Read →</a>
+      </div>
+
+      <div class="res-card">
+        <div class="res-icon">🔍</div>
+        <span class="res-type">Tool · External</span>
+        <h3>EU AI Audit Engine</h3>
+        <p>Free AI visibility scoring for any business. AUDIT-AI V3.0. Agentic 6-pass web audit. Independent verification for all paid 5thelement.ai engagements.</p>
+        <a href="https://eu-ai-audit.eu" target="_blank" class="res-link">Visit →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI SIGNAL FILES -->
+<section class="signals">
+  <div class="c">
+    <span class="ey">AI Signal Files</span>
+    <h2 class="sh">Priority Discovery Signals</h2>
+    <p class="sl">The eight core AI discovery files deployed on 5thelement.ai. Each serves a specific function in the AI knowledge graph.</p>
+    <div class="sig-grid">
+      <div class="sig-card">
+        <h3>AI Entity Definition</h3>
+        <span class="sig-path">/ai.json</span>
+        <p>Primary AI identity file. Defines the entity, category, services, and canonical properties for AI systems crawling the site.</p>
+      </div>
+      <div class="sig-card">
+        <h3>Entity Graph</h3>
+        <span class="sig-path">/entities.json + /entity-graph.public.jsonld</span>
+        <p>Structured entity relationships in JSON-LD format. Enables AI systems to map the full business graph — founder, company, services, products, and properties.</p>
+      </div>
+      <div class="sig-card">
+        <h3>Intent Router</h3>
+        <span class="sig-path">/intents.json</span>
+        <p>Global intent router. Maps buyer queries to the correct module and response. Two-layer system — global router + module-level contracts.</p>
+      </div>
+      <div class="sig-card">
+        <h3>LLM Instructions</h3>
+        <span class="sig-path">/llms.txt</span>
+        <p>Canonical instructions for large language models accessing this domain. Defines what AI can read, reference, and cite — and what requires verification.</p>
+      </div>
+      <div class="sig-card">
+        <h3>Crawler Permissions</h3>
+        <span class="sig-path">/robots.txt</span>
+        <p>Standard crawler permissions combined with AI-specific directives. Allow-lane matrix for different AI systems and crawlers.</p>
+      </div>
+      <div class="sig-card">
+        <h3>Sitemap</h3>
+        <span class="sig-path">/sitemap.xml</span>
+        <p>Full site structure with priority weighting. Signals to both search engines and AI crawlers which pages carry the highest authority and freshness.</p>
+      </div>
+      <div class="sig-card">
+        <h3>AI Proof File</h3>
+        <span class="sig-path">/ai-proof.json + /ai-proof.json.ots</span>
+        <p>Cryptographic proof file. SHA-256 hash anchored to Bitcoin via OpenTimestamps. OTS verification file publicly accessible. Schema version 1.1 locked.</p>
+      </div>
+      <div class="sig-card">
+        <h3>Allow Lane Matrix</h3>
+        <span class="sig-path">/allow-lane-matrix.json</span>
+        <p>Defines which AI systems have access to which signal tiers. Governs the permission layer between public signals and tenant-specific edge delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF REFERENCE -->
+<section class="proof-section">
+  <div class="c">
+    <span class="ey">Proof Reference</span>
+    <h2 class="sh">Canonical Hashes</h2>
+    <p class="sl">Every methodology claim is cryptographically anchored. These are the public reference values.</p>
+    <div class="proof-box">
+      <div><span class="pl">ADI_CANONICAL:</span> 31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</div>
+      <div><span class="pl">MANIFEST_ROOT:</span> 82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30</div>
+      <div><span class="pl">AI_SONAR:</span> c57529c8... [Bitcoin Block 949375 — OLD 949191 DEPRECATED]</div>
+      <div><span class="pl">MOCKINGBIRD:</span> fb388288... [Bitcoin Block 949346]</div>
+      <div><span class="pl">GEMINI_AUDIT:</span> dd8896c2... [Bitcoin Block 952597 — June 6, 2026]</div>
+      <div><span class="pl">BLOCK_RANGE:</span> 944442 — 952597</div>
+      <div><span class="pl">OTS_METHOD:</span> OpenTimestamps</div>
+      <div><span class="pl">ANCHOR_CHAIN:</span> Bitcoin</div>
+      <div><span class="pl">OTS_STATUS:</span> verified</div>
+      <div><span class="pl">FULL_REGISTRY:</span> /resources/innovation-registry</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Ready to Apply<br><em>This to Your Business?</em></h2>
+    <p>Start with a free AI LENS™ audit. See where you stand. Then build from there.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/resources/ai-era-website" class="bcw">Read the Doctrine →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
