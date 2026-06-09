@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Vision — 5thelement.ai</title>
+<meta name="description" content="Our vision: own the category of AI Visibility. AI Visibility and AI Authority are the two concepts that will define how businesses compete in the AI era."/>
+<link rel="canonical" href="https://5thelement.ai/about/vision"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.05;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.1rem;color:#cccccc;max-width:640px;line-height:1.85}
+
+/* CATEGORY */
+.category{background:#111318}
+.cat-body{max-width:760px}
+.cat-body p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1.25rem}
+.cat-body p strong{color:#ffffff;font-weight:600}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.cat-card{background:#0a0c0f;border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:2rem}
+.cat-card .cat-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.75rem}
+.cat-card h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#ffffff;margin-bottom:0.5rem}
+.cat-card .cat-q{font-size:1rem;font-style:italic;color:#cccccc;display:block;margin-bottom:1rem}
+.cat-card p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+
+/* WORLD WE BUILD */
+.world{background:#0a0c0f}
+.world-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.world-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.world-icon{font-size:1.75rem;margin-bottom:0.85rem}
+.world-card h3{font-size:1rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.world-card p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* THE SHIFT */
+.shift{background:#111318}
+.shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:2.25rem}
+.shift-col h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#ffffff;margin-bottom:1.25rem}
+.shift-item{display:flex;gap:0.85rem;align-items:flex-start;margin-bottom:1.1rem}
+.shift-item:last-child{margin-bottom:0}
+.shift-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:0.45rem}
+.shift-dot.old{background:#374151}
+.shift-dot.new{background:#f5c842}
+.shift-item h4{font-size:0.92rem;font-weight:700;color:#ffffff;margin-bottom:0.2rem}
+.shift-item p{font-size:0.85rem;color:#cccccc;line-height:1.6}
+
+/* ROADMAP */
+.roadmap{background:#0a0c0f}
+.rm-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.rm-item{display:grid;grid-template-columns:140px 1fr;gap:1.5rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.rm-item:last-child{border-bottom:none}
+.rm-phase{font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding-top:0.2rem}
+.rm-phase.done{color:#4ade80}
+.rm-phase.now{color:#f5c842}
+.rm-phase.next{color:#888}
+.rm-body h4{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.3rem}
+.rm-body p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* MANIFESTO */
+.manifesto{background:#111318}
+.man-box{border-left:4px solid #f5c842;padding-left:2rem;max-width:760px}
+.man-box p{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.5vw,1.25rem);font-weight:700;color:#ffffff;line-height:1.65;margin-bottom:1.1rem}
+.man-box p:last-child{margin-bottom:0}
+.man-box p em{color:#f5c842;font-style:italic}
+
+/* CTA */
+.ctabar{background:#0a0c0f;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .cat-grid{grid-template-columns:1fr}
+  .world-grid{grid-template-columns:1fr}
+  .shift-grid{grid-template-columns:1fr}
+  .rm-item{grid-template-columns:1fr;gap:0.5rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about" class="active">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/about">About</a><span class="bc-sep">›</span><span>Vision</span></div></div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Our Vision</span>
+    <h1>Own the Category of<br><em>AI Visibility.</em></h1>
+    <p>AI Visibility™ and AI Authority™ are the two concepts that will define how businesses compete in the AI era. We intend to own both — through methodology, verifiable proof, and infrastructure that no competitor can replicate through marketing alone.</p>
+  </div>
+</section>
+
+<!-- THE CATEGORY -->
+<section class="category">
+  <div class="c">
+    <span class="ey">The Category We Are Creating</span>
+    <h2 class="sh">A New Layer Between Business and AI</h2>
+    <div class="cat-body">
+      <p>Every major technology shift creates a new category that did not exist before. Search created SEO. Social created community management. Cloud created DevOps. The AI era creates <strong>AI Visibility Infrastructure</strong> — and we are building the canonical definition of what that means.</p>
+      <p>We are not optimising for AI. We are not prompting AI. We are not writing content for AI. We are building the infrastructure layer that makes a business <strong>structurally legible to AI systems</strong> — permanently, verifiably, and at scale.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <span class="cat-label">Category 1</span>
+        <h3>AI Visibility™</h3>
+        <span class="cat-q">Can AI understand your business?</span>
+        <p>The first question every business must answer. We define the standard, deploy the infrastructure, and verify the result. When buyers use AI to search, Findable™ · Understandable™ · Verifiable™ businesses appear.</p>
+      </div>
+      <div class="cat-card">
+        <span class="cat-label">Category 2</span>
+        <h3>AI Authority™</h3>
+        <span class="cat-q">Will AI recommend your business?</span>
+        <p>The second question — and the harder one to answer. We enforce it through cryptographic proof, trust signals, and an immutable evidence layer. Trustable™ · Recommendable™ · Inevitable™ businesses win.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE WORLD WE BUILD -->
+<section class="world">
+  <div class="c">
+    <span class="ey">The World We Are Building</span>
+    <h2 class="sh">What the AI Era Looks Like When We Win</h2>
+    <p class="sl">When our vision is realised, the playing field changes permanently for B2B businesses.</p>
+    <div class="world-grid">
+      <div class="world-card">
+        <div class="world-icon">🏆</div>
+        <h3>Quality Wins</h3>
+        <p>AI recommends businesses based on verifiable proof — not advertising spend. The best-structured, best-proven business wins. Not the one with the biggest marketing budget.</p>
+      </div>
+      <div class="world-card">
+        <div class="world-icon">🌍</div>
+        <h3>Geography Disappears</h3>
+        <p>A Romanian manufacturer with the right AI signals can appear in a German procurement director's AI query. A Bucharest law firm can be recommended to a London investor. Geography is no longer a barrier.</p>
+      </div>
+      <div class="world-card">
+        <div class="world-icon">📐</div>
+        <h3>Infrastructure Becomes Standard</h3>
+        <p>Just as every business today has a website, every business in 5 years will have an AI signal layer. We are building the standard now — before the market knows it needs it.</p>
+      </div>
+      <div class="world-card">
+        <div class="world-icon">🔐</div>
+        <h3>Proof Becomes Currency</h3>
+        <p>Cryptographic proof replaces unverifiable claims. Bitcoin-anchored timestamps replace marketing language. Authority becomes something you can point to — not something you say about yourself.</p>
+      </div>
+      <div class="world-card">
+        <div class="world-icon">⚖️</div>
+        <h3>Compliance Is Built In</h3>
+        <p>EU AI Act readiness is structural — not optional. Every deployment we make today is compliant by design. The businesses we serve are ready before the regulations require it.</p>
+      </div>
+      <div class="world-card">
+        <div class="world-icon">🚀</div>
+        <h3>12M Businesses Activated</h3>
+        <p>12 million EU B2B businesses currently invisible to AI. We intend to make a significant portion of them visible, verifiable, and recommendable — starting with the ones who move first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE SHIFT -->
+<section class="shift">
+  <div class="c">
+    <span class="ey">The Shift We See</span>
+    <h2 class="sh">From the Old Web to the AI Era</h2>
+    <p class="sl">Everything that defined digital success in the last 20 years is being replaced. We are building for what comes next.</p>
+    <div class="shift-grid">
+      <div class="shift-col">
+        <h3>The Old Web — Fading</h3>
+        <div class="shift-item">
+          <div class="shift-dot old"></div>
+          <div><h4>SEO Rankings</h4><p>Optimise for Google's ranking algorithm. Chase keywords. Build backlinks. The game most businesses are still playing.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot old"></div>
+          <div><h4>Human-First Content</h4><p>Write for humans who browse, read, and decide. Design for visual impact. Optimise for click-through rates.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot old"></div>
+          <div><h4>Self-Declared Authority</h4><p>Claim expertise on your own website. Publish content. Hope Google agrees. Authority is asserted, not proven.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot old"></div>
+          <div><h4>Traffic as the Metric</h4><p>Website visitors, page views, bounce rates. Success measured by humans arriving at your site.</p></div>
+        </div>
+      </div>
+      <div class="shift-col">
+        <h3>The AI Era — Emerging</h3>
+        <div class="shift-item">
+          <div class="shift-dot new"></div>
+          <div><h4>AI Graph Confidence</h4><p>Structure your information so AI can classify, verify, and weight it with high confidence. The new game — and most businesses have not started.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot new"></div>
+          <div><h4>Machine-First Signals</h4><p>Deploy structured data, entity graphs, and intent files that AI systems can parse deterministically. Humans see the website. AI reads the signals.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot new"></div>
+          <div><h4>Cryptographic Proof</h4><p>SHA-256 fingerprinting + Bitcoin blockchain anchoring. Authority is not claimed — it is mathematically verifiable and publicly accessible.</p></div>
+        </div>
+        <div class="shift-item">
+          <div class="shift-dot new"></div>
+          <div><h4>Recommendations as the Metric</h4><p>How often does AI recommend your business when buyers ask? That is the new metric. We measure it. We improve it. We verify it.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap">
+  <div class="c">
+    <span class="ey">Where We Are Going</span>
+    <h2 class="sh">The Roadmap</h2>
+    <p class="sl">Built in public. Every milestone verifiable on the Bitcoin blockchain.</p>
+    <div class="rm-list">
+      <div class="rm-item">
+        <div class="rm-phase done">✓ Complete</div>
+        <div class="rm-body"><h4>Foundation — ADI™ Architecture</h4><p>AI Delivery Infrastructure canonical doctrine locked. CANON™ → COMPILER™ → HAT™ pipeline. 9 verified innovations. Bitcoin-anchored. Innovation Registry #1–9.</p></div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-phase done">✓ Complete</div>
+        <div class="rm-body"><h4>Audit Engine — eu-ai-audit.eu</h4><p>AUDIT-AI V3.0 live. Agentic 6-pass web audit. Free AI visibility scoring for any business. Independent verification layer for all paid engagements.</p></div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-phase now">→ Now</div>
+        <div class="rm-body"><h4>Category Definition — 5thelement.ai</h4><p>AI Visibility™ and AI Authority™ as the two canonical categories. Full site architecture — 45 pages. Service delivery at scale. Silver / Gold / Platinum tiers live.</p></div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-phase next">Next</div>
+        <div class="rm-body"><h4>EU Compliance Layer — eu-ai-act-ready.eu</h4><p>EU Authorized Representative service for non-EU AI providers. Article 50 enforcement August 2026. Multilingual EN/FR/ES/IT/RO delivery.</p></div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-phase next">Future</div>
+        <div class="rm-body"><h4>Platform — ADI Factory at Scale</h4><p>Self-service AI visibility platform. Tenant-first architecture. 12M EU businesses onboarded via git add + CNAME. One-click AI signal deployment. Zero LLM in delivery edge.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="c">
+    <span class="ey">The Manifesto</span>
+    <h2 class="sh">What We Believe</h2>
+    <div class="man-box">
+      <p>We believe <em>the best businesses deserve to be found</em> — not just the ones with the biggest advertising budgets.</p>
+      <p>We believe <em>authority should be provable</em> — not just claimable. SHA-256 and Bitcoin exist for exactly this purpose.</p>
+      <p>We believe <em>AI is not the enemy of small business</em> — invisibility is. AI simply makes the cost of invisibility higher and faster.</p>
+      <p>We believe <em>infrastructure beats content</em>. One correctly structured entity file does more for AI visibility than a hundred blog posts.</p>
+      <p>We believe <em>the EU can lead the world</em> in AI readiness — not by regulating later, but by building the standard now.</p>
+      <p>We believe <em>every B2B business in Europe deserves a fair shot</em> at being recommended by the AI systems that are already routing their market's decisions.</p>
+      <p>That is what we are building. That is why we are here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Be Part of<br><em>What Comes Next.</em></h2>
+    <p>Start with a free AI LENS™ audit. See exactly where you stand. Then decide how fast you want to move.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/about/mission" class="bcw">Read Our Mission →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
