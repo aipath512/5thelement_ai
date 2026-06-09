@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The AI Era Website — 5thelement.ai</title>
+<meta name="description" content="The canonical doctrine for AI Era Websites. AI Era Website = Human Site + AI Signal Layer + Proof Layer + Delivery Layer. The standard we deploy for every client."/>
+<link rel="canonical" href="https://5thelement.ai/resources/ai-era-website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* FORMULA */
+.formula{background:#111318}
+.formula-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:2.5rem;margin-top:2.25rem;text-align:center}
+.formula-text{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:800;color:#ffffff;line-height:1.6}
+.formula-text em{color:#f5c842;font-style:normal}
+.formula-eq{font-size:clamp(1.5rem,3vw,2rem);color:#f5c842;margin:0.5rem 0;display:block}
+.formula-sub{font-size:0.88rem;color:#cccccc;margin-top:1.25rem;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.75}
+
+/* FOUR LAYERS */
+.layers{background:#0a0c0f}
+.layer-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:2.25rem}
+.layer-card{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;align-items:start;transition:border-color 0.2s}
+.layer-card:hover{border-color:rgba(245,200,66,0.35)}
+.layer-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2d3748;line-height:1}
+.layer-body .layer-label{font-size:0.65rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.4rem}
+.layer-body h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#ffffff;margin-bottom:0.75rem}
+.layer-body p{font-size:0.92rem;color:#cccccc;line-height:1.75;margin-bottom:1rem}
+.layer-body p:last-child{margin-bottom:0}
+.layer-files{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem}
+.layer-file{font-family:'Courier New',monospace;font-size:0.72rem;color:#cccccc;background:#0a0c0f;border:1px solid #1e2329;padding:0.25rem 0.6rem;border-radius:4px}
+
+/* BEFORE AFTER */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-label.before{color:#888}
+.ba-label.after{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list li::before{font-weight:700;flex-shrink:0}
+.ba-list.before-list li::before{content:"✗";color:#f87171}
+.ba-list.after-list li::before{content:"✓";color:#4ade80}
+
+/* TWO AUDIENCES */
+.audiences{background:#0a0c0f}
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.aud-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.aud-icon{font-size:1.75rem;margin-bottom:0.85rem}
+.aud-card h3{font-size:1.1rem;font-weight:700;color:#ffffff;margin-bottom:0.75rem}
+.aud-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.aud-list li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem}
+.aud-list li::before{content:"→";color:#f5c842;flex-shrink:0}
+
+/* DOCTRINE RULES */
+.doctrine{background:#111318}
+.rule-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.rule-item{display:grid;grid-template-columns:2.5rem 1fr;gap:1.25rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.rule-item:last-child{border-bottom:none}
+.rule-item:hover{background:#0a0c0f}
+.rule-n{font-size:0.72rem;font-weight:800;color:#f5c842}
+.rule-body h4{font-size:0.92rem;font-weight:700;color:#ffffff;margin-bottom:0.25rem}
+.rule-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* CTA */
+.ctabar{background:#0a0c0f;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .layer-card{grid-template-columns:1fr;gap:0.75rem}
+  .ba-grid{grid-template-columns:1fr}
+  .aud-grid{grid-template-columns:1fr}
+  .rule-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources" class="active">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/resources">Resources</a><span class="bc-sep">›</span><span>AI Era Website</span></div></div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Doctrine · Canonical</span>
+    <h1>The AI Era<br><em>Website.</em></h1>
+    <p>A traditional website is built for humans who browse and read. An AI Era Website is built for both humans and AI systems — with a machine-readable signal layer, a cryptographic proof layer, and an edge delivery layer that no traditional website has.</p>
+  </div>
+</section>
+
+<!-- FORMULA -->
+<section class="formula">
+  <div class="c">
+    <span class="ey">The Canonical Formula</span>
+    <h2 class="sh">One Formula. Four Layers.</h2>
+    <div class="formula-box">
+      <div class="formula-text">
+        <em>AI Era Website</em>
+      </div>
+      <span class="formula-eq">=</span>
+      <div class="formula-text">
+        Human Site<br/>
+        <span style="color:#888;font-size:0.85em">+</span><br/>
+        AI Signal Layer<br/>
+        <span style="color:#888;font-size:0.85em">+</span><br/>
+        Proof Layer<br/>
+        <span style="color:#888;font-size:0.85em">+</span><br/>
+        <em>Delivery Layer</em>
+      </div>
+      <p class="formula-sub">Remove any one layer and the chain breaks. AI systems require all four to assign high confidence to a recommendation. This is the architecture we deploy for every client, every time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR LAYERS -->
+<section class="layers">
+  <div class="c">
+    <span class="ey">The Four Layers</span>
+    <h2 class="sh">What Each Layer Does</h2>
+    <p class="sl">Each layer serves a distinct function. Each is required. Together they make a business recommendable by AI.</p>
+    <div class="layer-list">
+
+      <div class="layer-card">
+        <div class="layer-n">01</div>
+        <div class="layer-body">
+          <span class="layer-label">Layer 1 — Foundation</span>
+          <h3>Human Site</h3>
+          <p>The existing website — built for human visitors. Communicates clearly what the business does, who it serves, and why it should be trusted. Must be accurate, up to date, and written in plain language that both humans and AI can parse.</p>
+          <p>The Human Site is the source of truth for all other layers. If the human site is inaccurate or incomplete, every layer built on top of it will amplify those errors.</p>
+          <div class="layer-files">
+            <span class="layer-file">index.html</span>
+            <span class="layer-file">services/*.html</span>
+            <span class="layer-file">about.html</span>
+            <span class="layer-file">contact.html</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-card">
+        <div class="layer-n">02</div>
+        <div class="layer-body">
+          <span class="layer-label">Layer 2 — Machine Readability</span>
+          <h3>AI Signal Layer</h3>
+          <p>The machine-readable layer that AI systems actually read. Structured entity data, service definitions, intent files, schema markup, and AI-specific metadata that tells AI systems exactly what the business is, what it sells, and who it serves.</p>
+          <p>This layer does not replace the human site — it runs in parallel. Humans see the website. AI reads the signals. Both get exactly what they need.</p>
+          <div class="layer-files">
+            <span class="layer-file">ai.json</span>
+            <span class="layer-file">entities.json</span>
+            <span class="layer-file">intents.json</span>
+            <span class="layer-file">llms.txt</span>
+            <span class="layer-file">schema.jsonld</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-card">
+        <div class="layer-n">03</div>
+        <div class="layer-body">
+          <span class="layer-label">Layer 3 — Trust and Authority</span>
+          <h3>Proof Layer</h3>
+          <p>The cryptographic evidence layer that makes claims verifiable. SHA-256 fingerprinting of core documents. Bitcoin blockchain anchoring via OpenTimestamps. Cross-references, citations, and external consistency enforcement.</p>
+          <p>AI systems weigh verifiable claims with higher confidence than unverified ones. The Proof Layer is the difference between being listed and being recommended.</p>
+          <div class="layer-files">
+            <span class="layer-file">ai-proof.json</span>
+            <span class="layer-file">ai-proof.json.ots</span>
+            <span class="layer-file">innovation-registry</span>
+            <span class="layer-file">citations.json</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-card">
+        <div class="layer-n">04</div>
+        <div class="layer-body">
+          <span class="layer-label">Layer 4 — Edge Deployment</span>
+          <h3>Delivery Layer</h3>
+          <p>The infrastructure that serves the right signals to the right AI system at the right moment. Deployed via Cloudflare Workers at the network edge — zero latency, zero CMS dependency, tenant-first architecture.</p>
+          <p>The Delivery Layer ensures that when an AI system crawls a business, it receives perfectly structured, always-current signals — regardless of what the underlying website platform is doing.</p>
+          <div class="layer-files">
+            <span class="layer-file">_worker.js</span>
+            <span class="layer-file">KV signals</span>
+            <span class="layer-file">edge.tenant/v1/</span>
+            <span class="layer-file">robots.txt</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Transformation</span>
+    <h2 class="sh">Before and After</h2>
+    <p class="sl">What changes when a traditional website becomes an AI Era Website.</p>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-label before">Before — Traditional Website</span>
+        <ul class="ba-list before-list">
+          <li>AI cannot reliably identify what the business sells</li>
+          <li>Service descriptions are narrative, not structured</li>
+          <li>No machine-readable entity data exists</li>
+          <li>Claims are unverified and unanchored</li>
+          <li>AI assigns low confidence to recommendations</li>
+          <li>Business does not appear in AI-generated answers</li>
+          <li>Competitors with better signals win every recommendation</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-label after">After — AI Era Website</span>
+        <ul class="ba-list after-list">
+          <li>AI correctly identifies services, sector, and geography</li>
+          <li>Structured data maps every service to buyer intent</li>
+          <li>Entity graph connects business to knowledge graph</li>
+          <li>Claims are SHA-256 fingerprinted and Bitcoin-anchored</li>
+          <li>AI assigns high confidence — recommends the business</li>
+          <li>Business appears in AI answers for relevant queries</li>
+          <li>Authority compounds over time as signals accumulate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO AUDIENCES -->
+<section class="audiences">
+  <div class="c">
+    <span class="ey">Dual Audience Design</span>
+    <h2 class="sh">Built for Humans and AI Simultaneously</h2>
+    <p class="sl">An AI Era Website does not choose between human visitors and AI systems. It serves both perfectly — at the same time.</p>
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="aud-icon">👤</div>
+        <h3>What Human Visitors See</h3>
+        <ul class="aud-list">
+          <li>Clear service descriptions in plain language</li>
+          <li>Compelling proof of expertise and results</li>
+          <li>Easy navigation to contact and pricing</li>
+          <li>Fast, responsive design on all devices</li>
+          <li>Trust signals — testimonials, certifications, team</li>
+        </ul>
+      </div>
+      <div class="aud-card">
+        <div class="aud-icon">🤖</div>
+        <h3>What AI Systems Read</h3>
+        <ul class="aud-list">
+          <li>Structured entity definition (ai.json, entities.json)</li>
+          <li>Service schema with intent mapping (schema.jsonld)</li>
+          <li>LLM instructions and permissions (llms.txt)</li>
+          <li>Cryptographic proof of claims (ai-proof.json.ots)</li>
+          <li>167 atomic signals via Cloudflare Workers KV edge</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTRINE RULES -->
+<section class="doctrine">
+  <div class="c">
+    <span class="ey">The Rules</span>
+    <h2 class="sh">Eight Doctrine Rules</h2>
+    <p class="sl">Every AI Era Website we build follows these rules. No exceptions.</p>
+    <div class="rule-list">
+      <div class="rule-item"><div class="rule-n">R1</div><div class="rule-body"><h4>Signals→Files. Never Files→Signals.</h4><p>The pipeline is RAW→FACT→ENTITY→RELATIONSHIP→SIGNAL→FILE. You derive files from signals. You never derive signals from files. Reversing this rule breaks the entire architecture.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R2</div><div class="rule-body"><h4>Site=CONTENT. Edge=SIGNALS.</h4><p>GitHub hosts the content. Cloudflare Workers KV hosts the signals. These are completely decoupled systems. Never mix content and signal concerns in the same layer.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R3</div><div class="rule-body"><h4>Zero LLM in Delivery Edge.</h4><p>The edge delivery layer is deterministic. No AI processing at the edge. LLMs are only permitted in the Signal Processing Layer — never in the serving layer.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R4</div><div class="rule-body"><h4>Every claim requires proof.</h4><p>Unverifiable claims are not deployed. If a service claim cannot be anchored to a verifiable source, it does not enter the signal layer. The proof layer is mandatory, not optional.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R5</div><div class="rule-body"><h4>GDPR and EU AI Act by default.</h4><p>Every deployment supports GDPR compliance and EU AI Act readiness as structural requirements. We support readiness. We never claim certification. Independent verification is always available.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R6</div><div class="rule-body"><h4>Human-in-the-Loop at every stage.</h4><p>No signal is deployed without human review. The HITL governance protocol is mandatory at every stage of the CANON→COMPILER→HAT pipeline. AI generates. Humans verify. Edge serves.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R7</div><div class="rule-body"><h4>Tenant-first architecture.</h4><p>Every deployment uses tenant-first keys: GET /v1/{'{'}tenant{'}'}/{'{'}signal-file{'}'}. No cross-tenant data leakage. Every tenant's signals are isolated and independently verifiable.</p></div></div>
+      <div class="rule-item"><div class="rule-n">R8</div><div class="rule-body"><h4>Onboard via git add + CNAME.</h4><p>The deployment process is two steps: git add the content files, add a CNAME record. Nothing else. No CMS access. No server configuration. No website changes required.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Build Your<br><em>AI Era Website.</em></h2>
+    <p>Start with AI LENS™ — free. See which layers are missing. Then we build what is needed.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/resources/innovation-registry" class="bcw">View Innovation Registry →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
