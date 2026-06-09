@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Understandable™ — Stage 2 of AI Visibility — 5thelement.ai</title>
+<meta name="description" content="Understandable™ is Stage 2 of AI Visibility. Can AI correctly interpret what your business sells? 6 questions. 8 numbered actions. Before and after result."/>
+<link rel="canonical" href="https://5thelement.ai/understandable"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.stage-nav{background:#111318;padding:1.25rem 0;border-bottom:1px solid #1e2329}
+.stage-nav-inner{display:flex;align-items:center;gap:0;overflow-x:auto}
+.stage-nav-item{display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1.25rem;font-size:0.75rem;font-weight:700;color:#888;white-space:nowrap;border-right:1px solid #1e2329;text-decoration:none;transition:color 0.2s}
+.stage-nav-item:hover{color:#f5c842}
+.stage-nav-item.active{color:#f5c842}
+.stage-nav-item .stage-dot{width:8px;height:8px;border-radius:50%;background:#888;flex-shrink:0}
+.stage-nav-item.active .stage-dot{background:#f5c842}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.stage-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+.definition{background:#111318}
+.def-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.def-box h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#ffffff;margin-bottom:1rem}
+.def-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.def-box p:last-child{margin-bottom:0}
+.def-box strong{color:#ffffff;font-weight:600}
+.questions{background:#0a0c0f}
+.q-list{display:flex;flex-direction:column;gap:1rem;margin-top:2.25rem}
+.q-item{display:grid;grid-template-columns:2.5rem 1fr;gap:1.25rem;background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem 2rem;align-items:start}
+.q-n{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#2d3748;line-height:1}
+.q-body h4{font-size:0.95rem;font-weight:700;color:#f5c842;margin-bottom:0.35rem}
+.q-body p{font-size:0.9rem;color:#cccccc;line-height:1.7}
+.actions{background:#111318}
+.action-list{display:flex;flex-direction:column;gap:1rem;margin-top:2.25rem}
+.action-item{display:grid;grid-template-columns:2.5rem 1fr;gap:1.25rem;background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.5rem 2rem;align-items:start}
+.action-n{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#2d3748;line-height:1}
+.action-body h4{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem}
+.action-body p{font-size:0.9rem;color:#cccccc;line-height:1.7;margin-bottom:0.5rem}
+.action-file{font-family:'Courier New',monospace;font-size:0.75rem;color:#f5c842;background:#111318;border:1px solid #1e2329;padding:0.2rem 0.5rem;border-radius:4px;display:inline-block}
+.beforeafter{background:#0a0c0f}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-label.before{color:#888}
+.ba-label.after{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.before-list li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.after-list li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+.nextstage{background:#111318;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-card .next-label{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#ffffff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .q-item,.action-item{grid-template-columns:1fr;gap:0.5rem}
+  .ba-grid,.next-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/solutions">Solutions</a><span class="bc-sep">›</span><span>Understandable™</span></div></div>
+
+<div class="stage-nav">
+  <div class="c">
+    <div class="stage-nav-inner">
+      <a href="/findable" class="stage-nav-item"><span class="stage-dot"></span>01 Findable™</a>
+      <a href="/understandable" class="stage-nav-item active"><span class="stage-dot"></span>02 Understandable™</a>
+      <a href="/verifiable" class="stage-nav-item"><span class="stage-dot"></span>03 Verifiable™</a>
+      <a href="/trustable" class="stage-nav-item"><span class="stage-dot"></span>04 Trustable™</a>
+      <a href="/recommendable" class="stage-nav-item"><span class="stage-dot"></span>05 Recommendable™</a>
+    </div>
+  </div>
+</div>
+
+<section class="phero">
+  <div class="c">
+    <div class="stage-badge">Stage 02 of 05 · AI Visibility™</div>
+    <h1>Understandable™</h1>
+    <p>Stage 2 of AI visibility. AI has found your business. Now it must correctly read what you sell, who you serve, and why a buyer should choose you. Most businesses fail here because their content is written for humans — not for AI interpretation.</p>
+  </div>
+</section>
+
+<section class="definition">
+  <div class="c">
+    <span class="ey">Definition</span>
+    <h2 class="sh">What Understandable™ Means</h2>
+    <div class="def-box">
+      <h3>A business is Understandable™ when AI systems can correctly parse, classify, and describe its services, target clients, and value proposition without ambiguity.</h3>
+      <p>Being Findable™ means AI knows you exist. Being Understandable™ means AI knows <strong>what you do, for whom, and why it matters</strong>. These are separate problems. A business can be perfectly findable and completely misunderstood.</p>
+      <p>Most business websites are written for human persuasion — narrative, emotional, and context-dependent. AI reads differently. It looks for <strong>explicit structured signals</strong>: service type, target sector, client size, problem solved, and outcome delivered. Implicit information that humans infer from context is invisible to AI.</p>
+    </div>
+  </div>
+</section>
+
+<section class="questions">
+  <div class="c">
+    <span class="ey">The AI Test</span>
+    <h2 class="sh">6 Questions AI Must Be Able to Answer</h2>
+    <p class="sl">If AI cannot answer these six questions accurately, you are not Understandable™.</p>
+    <div class="q-list">
+      <div class="q-item"><div class="q-n">Q1</div><div class="q-body"><h4>What specific services or products does this business sell?</h4><p>Not a general category — specific service names with descriptions. AI must be able to generate an accurate list of your services without visiting your website.</p></div></div>
+      <div class="q-item"><div class="q-n">Q2</div><div class="q-body"><h4>Who is the target client for each service?</h4><p>Sector, company size, geography, and role. AI uses this to match your services to buyer queries. Without explicit buyer persona data, AI guesses — and guesses wrong.</p></div></div>
+      <div class="q-item"><div class="q-n">Q3</div><div class="q-body"><h4>What problem does each service solve?</h4><p>AI matches services to buyer intent by problem category. If your service description does not explicitly state the problem it solves, AI cannot include you in problem-specific recommendation queries.</p></div></div>
+      <div class="q-item"><div class="q-n">Q4</div><div class="q-body"><h4>What is the delivery format — remote, on-site, hybrid, digital product?</h4><p>Buyers increasingly specify delivery format in AI queries. A consulting firm that does not declare remote capability will be excluded from queries for remote consulting services.</p></div></div>
+      <div class="q-item"><div class="q-n">Q5</div><div class="q-body"><h4>What languages does the business operate in?</h4><p>Language coverage determines which buyer markets AI assigns the business to. Without explicit language signals, AI defaults to the primary website language only — excluding all other markets.</p></div></div>
+      <div class="q-item"><div class="q-n">Q6</div><div class="q-body"><h4>What is the typical engagement size and timeline?</h4><p>Buyers use AI to filter by project size and timeline. Without explicit scope signals, AI cannot match your business to queries that specify budget range, project duration, or company size fit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="c">
+    <span class="ey">The Fix</span>
+    <h2 class="sh">8 Actions to Become Understandable™</h2>
+    <p class="sl">Numbered actions. Each with the exact file name and location.</p>
+    <div class="action-list">
+      <div class="action-item"><div class="action-n">1</div><div class="action-body"><h4>Create service definitions in ai.json</h4><p>Add a structured services array to ai.json. Each service must include: name, description, targetClient, problemSolved, deliveryFormat, and priceRange.</p><span class="action-file">📄 /ai.json → services[]</span></div></div>
+      <div class="action-item"><div class="action-n">2</div><div class="action-body"><h4>Deploy Service schema for each service page</h4><p>Add JSON-LD Service schema to every service page. Include serviceType, provider, areaServed, audience, and hasOfferCatalog properties.</p><span class="action-file">📄 /services/*.html → JSON-LD</span></div></div>
+      <div class="action-item"><div class="action-n">3</div><div class="action-body"><h4>Create intents.json with buyer query mapping</h4><p>Map each service to the exact buyer queries that should trigger a recommendation. Include primary intent, secondary intents, and negative intents (queries you should NOT appear for).</p><span class="action-file">📄 /intents.json</span></div></div>
+      <div class="action-item"><div class="action-n">4</div><div class="action-body"><h4>Add target client profiles to entities.json</h4><p>Define buyer personas as structured entities. Include sector, company size, geography, role, and pain points. Connect each persona to the services that address them.</p><span class="action-file">📄 /entities.json → buyerPersonas[]</span></div></div>
+      <div class="action-item"><div class="action-n">5</div><div class="action-body"><h4>Structure FAQ as machine-readable Q&amp;A schema</h4><p>Convert existing FAQ content to FAQPage schema with explicit Question and Answer pairs. Each answer must directly address the question — no narrative padding.</p><span class="action-file">📄 /faq.html or service pages → FAQPage JSON-LD</span></div></div>
+      <div class="action-item"><div class="action-n">6</div><div class="action-body"><h4>Add language and geography signals to llms.txt</h4><p>Explicitly declare all operating languages, service geographies, and market segments in llms.txt. AI uses this to determine which buyer markets to include the business in.</p><span class="action-file">📄 /llms.txt → languages, markets</span></div></div>
+      <div class="action-item"><div class="action-n">7</div><div class="action-body"><h4>Deploy ai-ready.json with full service catalogue</h4><p>Create a machine-readable service catalogue file that mirrors the service structure in ai.json with additional detail: case examples, typical outcomes, and delivery specifications.</p><span class="action-file">📄 /ai-ready.json</span></div></div>
+      <div class="action-item"><div class="action-n">8</div><div class="action-body"><h4>Rewrite service page H1s and meta descriptions for AI parsing</h4><p>Service page headlines and meta descriptions must be explicit and structured. Replace narrative headlines with declarative ones: "Accounting Services for Romanian SMEs" not "Your Financial Growth Partner".</p><span class="action-file">📄 /services/*.html → &lt;title&gt; &lt;meta description&gt; &lt;h1&gt;</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After Understandable™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-label before">Before — Not Understandable™</span>
+        <ul class="ba-list before-list">
+          <li>AI describes the business incorrectly or too vaguely</li>
+          <li>Services are listed but not defined in machine-readable form</li>
+          <li>Target client is inferred incorrectly from context</li>
+          <li>AI excludes business from relevant buyer queries</li>
+          <li>FAQ exists but is not structured as AI-readable Q&amp;A</li>
+          <li>Service pages use narrative not declarative language</li>
+          <li>Language and geography coverage is assumed not stated</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-label after">After — Understandable™</span>
+        <ul class="ba-list after-list">
+          <li>AI accurately describes all services with correct detail</li>
+          <li>Each service has structured name, problem, client, and outcome</li>
+          <li>Target client profiles are explicitly mapped in entities.json</li>
+          <li>Business appears in buyer queries for each service category</li>
+          <li>FAQ deployed as FAQPage schema — AI can cite answers directly</li>
+          <li>Service page H1s are declarative and AI-parseable</li>
+          <li>All languages and service geographies explicitly declared</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nextstage">
+  <div class="c">
+    <span class="ey">Continue the Journey</span>
+    <h2 class="sh">Understandable™ is Stage 2 of 5</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-label">Next Stage</span>
+        <h3>Verifiable™</h3>
+        <p>Once AI understands what you sell, it must be able to verify that your claims are accurate and consistent across multiple data sources before it will recommend you.</p>
+        <a href="/verifiable" class="next-link">Go to Stage 3 →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-label">Previous Stage</span>
+        <h3>Findable™</h3>
+        <p>Before a business can be Understandable™ it must be Findable™. Make sure Stage 1 is complete before implementing Stage 2 actions.</p>
+        <a href="/findable" class="next-link">Review Stage 1 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>The 5 Stages</h5><ul>
+        <li><a href="/findable">Findable™</a></li>
+        <li><a href="/understandable">Understandable™</a></li>
+        <li><a href="/verifiable">Verifiable™</a></li>
+        <li><a href="/trustable">Trustable™</a></li>
+        <li><a href="/recommendable">Recommendable™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Services</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
