@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Use Cases — 5thelement.ai</title>
+<meta name="description" content="Real B2B use cases for AI visibility and AI authority. Law firms, accounting firms, logistics, consulting, technology, healthcare, and more."/>
+<link rel="canonical" href="https://5thelement.ai/use-cases"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* PAGE HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8}
+
+/* THE PROBLEM */
+.problem{background:#111318}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.prob-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.prob-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:#ffffff;margin-bottom:0.75rem}
+.prob-card p{font-size:0.92rem;color:#cccccc;line-height:1.75}
+.prob-q{font-size:1rem;font-style:italic;color:#f5c842;display:block;margin-bottom:0.75rem;font-weight:600}
+
+/* USE CASE CARDS */
+.usecases{background:#0a0c0f}
+.uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.uc-card{background:#111318;border:1px solid #1e2329;border-radius:12px;overflow:hidden;transition:border-color 0.2s}
+.uc-card:hover{border-color:rgba(245,200,66,0.35)}
+.uc-header{padding:1.75rem 2rem 1.25rem;border-bottom:1px solid #1e2329}
+.uc-icon{font-size:2rem;margin-bottom:0.75rem}
+.uc-sector{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.4rem}
+.uc-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#ffffff}
+.uc-body{padding:1.5rem 2rem}
+.uc-trigger{font-size:0.82rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.5rem}
+.uc-question{font-size:1rem;font-style:italic;color:#ffffff;display:block;margin-bottom:1.25rem;line-height:1.5}
+.uc-body p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin-bottom:1.25rem}
+.uc-outcome{background:#0a0c0f;border:1px solid #1e2329;border-radius:8px;padding:1rem 1.25rem}
+.uc-outcome-label{font-size:0.65rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#4ade80;display:block;margin-bottom:0.5rem}
+.uc-outcome p{font-size:0.88rem;color:#cccccc;line-height:1.65;margin:0}
+.uc-stages{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.25rem}
+.uc-stage{font-size:0.7rem;font-weight:700;background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2);color:#f5c842;padding:0.25rem 0.65rem;border-radius:999px}
+
+/* THE QUESTION -->
+.thequestion{background:#111318}
+.q-big{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.25rem);font-weight:800;color:#ffffff;line-height:1.3;margin-bottom:2rem;max-width:700px}
+.q-big em{color:#f5c842;font-style:italic}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.check-item{display:flex;gap:0.75rem;align-items:flex-start}
+.check-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem}
+.check-item h4{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.2rem}
+.check-item p{font-size:0.85rem;color:#cccccc;line-height:1.6}
+
+/* CTA */
+.ctabar{background:#0a0c0f;padding:4rem 0;text-align:center;border-bottom:none}
+.ctabar h2{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:1rem}
+.ctabar h2 em{color:#f5c842;font-style:italic}
+.ctabar p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
+.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* FOOTER */
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .problem-grid{grid-template-columns:1fr}
+  .uc-grid{grid-template-columns:1fr}
+  .checks{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  section{padding:3rem 0}
+  .uc-header,.uc-body{padding:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases" class="active">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/use-cases">Use Cases</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><span>Use Cases</span></div></div>
+
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="c">
+    <span class="ey">Use Cases</span>
+    <h1>When AI Is Asked,<br><em>Will It Name You?</em></h1>
+    <p>Every day, buyers ask AI systems to recommend businesses like yours. These are the real scenarios where AI visibility and AI authority determine who wins the client — and who is never mentioned.</p>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Core Problem</span>
+    <h2 class="sh">Two Reasons Businesses Lose to AI</h2>
+    <p class="sl">It is not about being bad. It is about being invisible or unverifiable to AI systems.</p>
+    <div class="problem-grid">
+      <div class="prob-card">
+        <span class="prob-q">"Who are the best accounting firms in Bucharest?"</span>
+        <h3>Problem 1 — Not Findable</h3>
+        <p>AI cannot locate your business in its knowledge graph. Your name, services, location, and expertise are not machine-readable. You do not appear in the answer — even if you are the best firm in the city.</p>
+      </div>
+      <div class="prob-card">
+        <span class="prob-q">"Which logistics company should I trust for EU freight?"</span>
+        <h3>Problem 2 — Not Trustable</h3>
+        <p>AI can find your business but cannot verify your claims. Your proof layer is missing, inconsistent, or unverifiable. AI recommends a competitor with stronger authority signals — even if your service is superior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="usecases">
+  <div class="c">
+    <span class="ey">Real Scenarios</span>
+    <h2 class="sh">Eight Industries. One Problem. One Solution.</h2>
+    <p class="sl">These are the exact AI queries your potential clients are already running today.</p>
+    <div class="uc-grid">
+
+      <!-- LAW -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">⚖️</div>
+          <span class="uc-sector">Law Firms</span>
+          <h3>Legal Services</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Which law firm in Bucharest specialises in commercial contracts and M&A for mid-size companies?"</span>
+          <p>A CEO preparing an acquisition asks ChatGPT for a trusted legal advisor. AI cross-references entity data, practice area descriptions, client testimonials, and authority signals. The firm with the strongest machine-readable proof layer gets named.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We structure your practice areas, partner profiles, and proof layer so AI can accurately describe what you do and why you should be trusted.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Findable™</span>
+            <span class="uc-stage">Understandable™</span>
+            <span class="uc-stage">Trustable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCOUNTING -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">📊</div>
+          <span class="uc-sector">Accounting &amp; Finance</span>
+          <h3>Accounting Firms</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Find me a certified accounting firm in Romania that handles EU VAT compliance for e-commerce businesses."</span>
+          <p>A Dutch e-commerce operator expanding into Romania asks Perplexity for a local accountant. AI needs to match your certifications, service scope, and geographic coverage — all in machine-readable format.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We deploy your certifications, service scope, and compliance specialisations as verifiable AI signals that match high-intent buyer queries.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Findable™</span>
+            <span class="uc-stage">Verifiable™</span>
+            <span class="uc-stage">Recommendable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGISTICS -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">🚚</div>
+          <span class="uc-sector">Logistics &amp; Supply Chain</span>
+          <h3>Freight &amp; Logistics</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Which freight companies offer temperature-controlled transport from Romania to Germany with EU certification?"</span>
+          <p>A food manufacturer needs a logistics partner. AI looks for verifiable certifications, route coverage, fleet specifications, and compliance data. Unstructured websites with no machine-readable data are invisible.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We structure your fleet data, certifications, routes, and compliance documentation as AI-readable entity signals.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Understandable™</span>
+            <span class="uc-stage">Verifiable™</span>
+            <span class="uc-stage">Trustable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONSULTING -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">💼</div>
+          <span class="uc-sector">Consulting &amp; Advisory</span>
+          <h3>Management Consulting</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Recommend a digital transformation consulting firm for a 200-person manufacturing company in Central Europe."</span>
+          <p>A board member asks Claude to shortlist consultants before a major transformation project. AI cross-references case studies, sector expertise, team credentials, and client outcomes. Generic websites with no structured proof lose every time.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We structure your methodology, case data, sector focus, and outcomes as a verifiable authority layer AI can cite and recommend.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Understandable™</span>
+            <span class="uc-stage">Trustable™</span>
+            <span class="uc-stage">Recommendable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNOLOGY -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">💻</div>
+          <span class="uc-sector">Technology &amp; SaaS</span>
+          <h3>Software &amp; Tech Companies</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"What is the best HR software for a 50-person company in Romania that integrates with SAP?"</span>
+          <p>An HR director asks Gemini to compare solutions. AI needs your integration specs, pricing structure, company size fit, and customer proof to include you in the comparison. Missing signals mean you are excluded before the shortlist.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We deploy your product specs, integrations, use cases, and proof as structured AI signals that appear in software comparisons.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Findable™</span>
+            <span class="uc-stage">Understandable™</span>
+            <span class="uc-stage">Verifiable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEALTHCARE -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">🏥</div>
+          <span class="uc-sector">Healthcare &amp; Medical</span>
+          <h3>Medical Clinics &amp; Specialists</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Find a private cardiology clinic in Bucharest that accepts international patients and has English-speaking doctors."</span>
+          <p>An expat asks Copilot for a cardiac specialist. AI needs your specialties, languages, accreditations, location, and availability — structured and verifiable. Clinics with unstructured websites are invisible to this query.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We structure your specialties, team credentials, languages, and accreditations as machine-readable health entity signals.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Findable™</span>
+            <span class="uc-stage">Understandable™</span>
+            <span class="uc-stage">Trustable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- REAL ESTATE -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">🏗️</div>
+          <span class="uc-sector">Construction &amp; Real Estate</span>
+          <h3>Developers &amp; Contractors</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Which real estate developer in Bucharest has completed certified green buildings in the last 3 years?"</span>
+          <p>An institutional investor asks AI to shortlist developers for a sustainability-focused project. AI looks for verifiable certifications, completed project data, and environmental compliance. Developers without structured proof are invisible.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We structure your completed projects, certifications, and sustainability credentials as verifiable AI-readable entity data.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Verifiable™</span>
+            <span class="uc-stage">Trustable™</span>
+            <span class="uc-stage">Recommendable™</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MANUFACTURING -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-icon">🏭</div>
+          <span class="uc-sector">Manufacturing &amp; Industry</span>
+          <h3>Industrial Manufacturers</h3>
+        </div>
+        <div class="uc-body">
+          <span class="uc-trigger">The AI Query</span>
+          <span class="uc-question">"Find a Romanian manufacturer of precision metal components with ISO 9001 certification and export capacity to Western Europe."</span>
+          <p>A German procurement director asks AI to source a new supplier. AI must verify your production capacity, certifications, export history, and compliance. Without structured signals, you do not appear — regardless of your actual capability.</p>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">What We Fix</span>
+            <p>We deploy your production specs, ISO certifications, export markets, and capacity data as verifiable B2B supplier signals.</p>
+          </div>
+          <div class="uc-stages">
+            <span class="uc-stage">Findable™</span>
+            <span class="uc-stage">Verifiable™</span>
+            <span class="uc-stage">Recommendable™</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE QUESTION -->
+<section class="thequestion" style="background:#111318">
+  <div class="c">
+    <span class="ey">The Universal Test</span>
+    <p class="q-big">Ask AI right now: <em>"What are the best [your service] companies in [your city]?"</em><br>Did your business appear?</p>
+    <p style="font-size:1rem;color:#cccccc;line-height:1.8;max-width:640px;margin-bottom:2rem">If the answer is no — or if the description is wrong, incomplete, or missing your proof — that is your AI visibility gap. We fix it.</p>
+    <div class="checks">
+      <div class="check-item"><div class="check-icon">🔍</div><div><h4>AI cannot find you</h4><p>Your business is not in the AI knowledge graph. You need AI LENS™ + AI READY™.</p></div></div>
+      <div class="check-item"><div class="check-icon">📖</div><div><h4>AI describes you incorrectly</h4><p>Your information is outdated, incomplete, or misread. You need AI READY™ + AI SIGNALS™.</p></div></div>
+      <div class="check-item"><div class="check-icon">❓</div><div><h4>AI cannot verify your claims</h4><p>Your proof layer is missing or unstructured. You need AI SIGNALS™ + Trust Authority Module™.</p></div></div>
+      <div class="check-item"><div class="check-icon">🏆</div><div><h4>AI recommends your competitors</h4><p>Your authority is weaker than theirs. You need the full sequence — start today with AI LENS™ free.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctabar">
+  <div class="c">
+    <h2>Find Your<br><em>AI Visibility Gap.</em></h2>
+    <p>Start with AI LENS™ — free. 100 questions. Full visibility map. Delivered in 24 hours. No website changes required.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="bcg">Start Free Audit →</a>
+      <a href="/products" class="bcw">View Pricing →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Quick Links</h5><ul>
+        <li><a href="/services/ai-lens">AI LENS™</a></li>
+        <li><a href="/services/ai-ready">AI READY™</a></li>
+        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/services/trust-authority">Trust Authority™</a></li>
+        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
+        <li><a href="/products">Pricing</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Pages</h5><ul>
+        <li><a href="/solutions">Solutions</a></li>
+        <li><a href="/use-cases">Use Cases</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about/mission">Mission</a></li>
+        <li><a href="/about/vision">Vision</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/cookie-policy">Cookie Policy</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>
