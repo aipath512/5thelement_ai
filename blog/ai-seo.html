@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI-SEO — How AI Changes Search for B2B Businesses | 5thelement.ai</title>
+<meta name="description" content="AI-SEO is the technical signal layer that makes businesses machine-readable for AI systems. Files, schema, crawlers, edge delivery. How AI changes B2B search permanently."/>
+<link rel="canonical" href="https://5thelement.ai/blog/ai-seo"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://5thelement.ai/#website","url":"https://5thelement.ai","name":"5thelement.ai"},
+{"@type":"Organization","@id":"https://5thelement.ai/#org","name":"AiVenture S.R.L.","url":"https://5thelement.ai","sameAs":["https://linkedin.com/company/107338970","https://x.com/aipath512"]},
+{"@type":"WebPage","@id":"https://5thelement.ai/blog/ai-seo#webpage","url":"https://5thelement.ai/blog/ai-seo","name":"AI-SEO — How AI Changes Search for B2B","isPartOf":{"@id":"https://5thelement.ai/#website"}},
+{"@type":"BreadcrumbList","@id":"https://5thelement.ai/blog/ai-seo#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://5thelement.ai/blog"},{"@type":"ListItem","position":3,"name":"AI-SEO","item":"https://5thelement.ai/blog/ai-seo"}]},
+{"@type":"Article","@id":"https://5thelement.ai/blog/ai-seo#article","headline":"AI-SEO — How AI Changes Search for B2B Businesses","author":{"@id":"https://5thelement.ai/#org"},"publisher":{"@id":"https://5thelement.ai/#org"},"datePublished":"2026-06-10","dateModified":"2026-06-10","mainEntityOfPage":{"@id":"https://5thelement.ai/blog/ai-seo#webpage"},"about":{"@type":"Thing","name":"AI SEO"},"keywords":"AI-SEO, AI search, B2B SEO, schema markup, llms.txt, ai.json, structured data"},
+{"@type":"TechArticle","headline":"AI-SEO — How AI Changes Search","author":{"@id":"https://5thelement.ai/#org"},"proficiencyLevel":"Intermediate"},
+{"@type":"FAQPage","@id":"https://5thelement.ai/blog/ai-seo#faq","mainEntity":[
+{"@type":"Question","name":"What is AI-SEO?","acceptedAnswer":{"@type":"Answer","text":"AI-SEO is the technical discipline of making business information machine-readable for AI systems through structured files, schema markup, crawler permissions, and edge delivery infrastructure. It is the technical layer that enables AEO and GEO."}},
+{"@type":"Question","name":"Does traditional SEO still matter?","acceptedAnswer":{"@type":"Answer","text":"Traditional SEO still matters for human search engine traffic. AI-SEO is an additional layer — not a replacement. A business needs both: SEO for search engine ranking and AI-SEO for AI system discovery and recommendation."}},
+{"@type":"Question","name":"What is llms.txt and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"llms.txt is a plain-text file deployed at a domain root that provides instructions and context to large language models about the business. It is the AI equivalent of robots.txt — it tells AI systems what the business is, what it sells, and what it permits AI to do with its content."}},
+{"@type":"Question","name":"What is ai.json?","acceptedAnswer":{"@type":"Answer","text":"ai.json is the primary machine-readable entity definition file for AI systems. It contains structured business identity data — name, category, services, location, legal identifiers, and canonical URL — in a format AI systems can reliably parse and cross-reference."}},
+{"@type":"Question","name":"How does edge delivery improve AI-SEO?","acceptedAnswer":{"@type":"Answer","text":"Edge delivery via Cloudflare Workers KV serves AI signal files from the nearest network edge node — in under 10ms globally. This ensures AI crawlers always receive current, correctly structured signals regardless of the origin server's state or the website platform's performance."}}
+]},
+{"@type":"HowTo","name":"How to implement AI-SEO for your B2B website","step":[
+{"@type":"HowToStep","name":"Deploy ai.json","text":"Create machine-readable entity definition at domain root"},
+{"@type":"HowToStep","name":"Deploy llms.txt","text":"Create LLM instruction file with canonical entity and permissions"},
+{"@type":"HowToStep","name":"Update robots.txt","text":"Explicitly permit all major AI crawlers"},
+{"@type":"HowToStep","name":"Add Schema.org markup","text":"Deploy Organization, Service, FAQPage JSON-LD on all relevant pages"},
+{"@type":"HowToStep","name":"Deploy to edge","text":"Serve all signal files from Cloudflare Workers KV"}
+]},
+{"@type":"DefinedTerm","name":"AI-SEO","description":"The technical discipline of making business information machine-readable for AI systems","url":"https://5thelement.ai/blog/glossary#ai-seo"},
+{"@type":"DefinedTerm","name":"llms.txt","description":"A plain-text file at domain root providing instructions to large language models","url":"https://5thelement.ai/blog/glossary#llms-txt"},
+{"@type":"DefinedTerm","name":"ai.json","description":"Machine-readable entity definition file for AI system discovery","url":"https://5thelement.ai/blog/glossary#ai-json"},
+{"@type":"SoftwareApplication","name":"AI AUDIT™","applicationCategory":"BusinessApplication","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI READY™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI SIGNALS™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"EDGE INJECTOR™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"KNOWLEDGE GRAPH™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"CreativeWork","name":"ADI™ — AI Delivery Infrastructure","author":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"ItemList","name":"AI Visibility Blog","url":"https://5thelement.ai/blog"},
+{"@type":"DefinedTermSet","name":"AI Visibility Glossary","url":"https://5thelement.ai/blog/glossary"},
+{"@type":"Claim","text":"AI-SEO is not optional — every business website must be machine-readable for AI crawlers or it is effectively invisible to the AI systems that B2B buyers increasingly rely on"},
+{"@type":"SpecialAnnouncement","name":"AI-SEO Guide for B2B","datePosted":"2026-06-10"},
+{"@type":"Course","name":"AI-SEO Technical Implementation","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"ItemList","name":"167 AI Signals","numberOfItems":167,"url":"https://5thelement.ai/blog/the-167-ai-signals"},
+{"@type":"WebPage","name":"Technologies","url":"https://5thelement.ai/resources/technologies"}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:0.35rem}.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}.nav-links a:hover{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.post-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;padding:3rem 0 5rem;align-items:start}
+.post-body{min-width:0}
+.post-sidebar{position:sticky;top:84px}
+.post-cat{display:inline-flex;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.7rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:999px;margin-bottom:1.25rem}
+.post-body h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
+.post-meta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:0.82rem;color:#888;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid #1e2329}
+.post-content h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin:2.5rem 0 1rem}
+.post-content h3{font-size:1.1rem;font-weight:700;color:#fff;margin:2rem 0 0.75rem}
+.post-content p{font-size:0.97rem;color:#cccccc;line-height:1.85;margin-bottom:1.25rem}
+.post-content strong{color:#fff;font-weight:600}
+.post-content a{color:#f5c842;text-decoration:underline}
+.post-content ul,.post-content ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.post-content ul li,.post-content ol li{font-size:0.95rem;color:#cccccc;line-height:1.8;margin-bottom:0.35rem}
+.post-content blockquote{border-left:3px solid #f5c842;padding:1rem 1.5rem;background:#111318;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:1rem;color:#cccccc;font-style:italic}
+.callout{background:#111318;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0}
+.callout h4{font-size:0.88rem;font-weight:700;color:#f5c842;margin-bottom:0.5rem}
+.callout p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.file-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.file-card{background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.5rem}
+.file-name{font-family:'Courier New',monospace;font-size:0.88rem;color:#f5c842;font-weight:700;display:block;margin-bottom:0.5rem}
+.file-card h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.4rem}
+.file-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin:0}
+.crawler-list{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:1.5rem 0}
+.crawler-item{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:0.85rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.crawler-name{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;font-weight:700}
+.crawler-system{font-size:0.75rem;color:#888}
+.code-block{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:1.25rem 1.5rem;font-family:'Courier New',monospace;font-size:0.82rem;color:#cccccc;line-height:1.8;margin:1.25rem 0;overflow-x:auto}
+.code-block .ck{color:#f5c842}.code-block .cv{color:#4ade80}.code-block .cc{color:#888}
+.faq-section{background:#111318;border-radius:12px;padding:2rem;margin:2.5rem 0}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.faq-item{border-bottom:1px solid #1e2329;padding-bottom:1.25rem;margin-bottom:1.25rem}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-item h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.faq-item p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.sidebar-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#f5c842;margin-bottom:1rem}
+.sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.sidebar-card ul li a{font-size:0.85rem;color:#cccccc;display:flex;gap:0.4rem;line-height:1.5}.sidebar-card ul li a:hover{color:#f5c842}
+.sidebar-card ul li a::before{content:"→";color:#f5c842;flex-shrink:0;font-size:0.8rem}
+.sidebar-cta{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:1.5rem;text-align:center}
+.sidebar-cta h4{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.sidebar-cta p{font-size:0.82rem;color:#cccccc;line-height:1.6;margin-bottom:1rem}
+.sidebar-cta a{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.85rem;padding:0.7rem 1.25rem;border-radius:6px}
+.related{border-top:1px solid #1e2329;padding-top:3rem;margin-top:3rem}
+.related h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.related-card{background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s}
+.related-card:hover{border-color:rgba(245,200,66,0.4)}
+.related-cat{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.4rem}
+.related-card h4{font-size:0.9rem;font-weight:700;color:#fff;line-height:1.4}.related-card:hover h4{color:#f5c842}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:900px){.post-layout{grid-template-columns:1fr}.post-sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:block}.file-grid,.crawler-list{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}.fbot{flex-direction:column;text-align:center}}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu"><ul>
+    <li><a href="/solutions">Solutions</a></li><li><a href="/services">Services</a></li>
+    <li><a href="/products">Products</a></li><li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li><li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+  </ul></div>
+</nav>
+
+<div class="wrap"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/blog">Blog</a><span class="bc-sep">›</span><span>AI-SEO</span></div></div>
+
+<div class="wrap">
+  <div class="post-layout">
+    <article class="post-body">
+      <span class="post-cat">AI-SEO</span>
+      <h1>AI-SEO — How AI Changes Search for B2B Businesses</h1>
+      <div class="post-meta-row">
+        <span>📅 June 10, 2026</span>
+        <span>🏢 AiVenture S.R.L.</span>
+        <span>⏱ 11 min read</span>
+        <span>🔗 <a href="/blog/glossary#ai-seo" style="color:#f5c842;text-decoration:none">Glossary: AI-SEO</a></span>
+      </div>
+
+      <div class="post-content">
+
+        <h2>What Is AI-SEO?</h2>
+        <p><strong>AI-SEO</strong> is the technical discipline of making business information machine-readable for AI systems through structured files, schema markup, crawler permissions, and edge delivery infrastructure. It is the technical layer that enables <a href="/blog/what-is-aeo">AEO</a> and <a href="/blog/what-is-geo">GEO</a> — the implementation substrate on which AI visibility is built.</p>
+        <p>Where traditional SEO focuses on HTML content, backlinks, and page authority, AI-SEO focuses on machine-readable structured data — files that AI crawlers read directly, schema markup that AI systems parse without rendering the page, and edge infrastructure that serves these signals reliably at sub-10ms latency globally.</p>
+
+        <blockquote>Traditional SEO optimises the page for the human who clicks. AI-SEO optimises the signal layer for the AI system that never visits the page — it reads the structured data directly and constructs its understanding without human-style browsing.</blockquote>
+
+        <h2>The Core AI-SEO Files Every B2B Business Needs</h2>
+        <p>AI-SEO begins with deploying a set of machine-readable files at the domain root. These are the files AI crawlers look for first when they try to understand a business.</p>
+
+        <div class="file-grid">
+          <div class="file-card">
+            <span class="file-name">📄 /ai.json</span>
+            <h4>Primary Entity Definition</h4>
+            <p>The most important AI-SEO file. Defines the business entity — name, category, services, location, canonical URL, legal identifiers. Read by all major AI systems on first crawl.</p>
+          </div>
+          <div class="file-card">
+            <span class="file-name">📄 /llms.txt</span>
+            <h4>LLM Instruction File</h4>
+            <p>Tells large language models what the business is, what it sells, and what it permits AI to do with its content. The AI equivalent of robots.txt. See full guide: <a href="/blog/llms-txt">llms.txt →</a></p>
+          </div>
+          <div class="file-card">
+            <span class="file-name">📄 /entities.json</span>
+            <h4>Entity Relationship Graph</h4>
+            <p>Complete structured graph of all business entities — services, team, locations, certifications — with typed relationships. Input for the AI knowledge graph.</p>
+          </div>
+          <div class="file-card">
+            <span class="file-name">📄 /intents.json</span>
+            <h4>Buyer Intent Registry</h4>
+            <p>Maps every service to the buyer queries that should trigger a recommendation. Includes negative intents — queries the business should NOT appear for.</p>
+          </div>
+          <div class="file-card">
+            <span class="file-name">📄 /robots.txt</span>
+            <h4>Updated AI Crawler Permissions</h4>
+            <p>Must explicitly permit all major AI crawlers. Many businesses accidentally block them with legacy rules. See below for the full list of crawlers to permit.</p>
+          </div>
+          <div class="file-card">
+            <span class="file-name">📄 /ai-proof.json</span>
+            <h4>Proof Registry</h4>
+            <p>SHA-256 hashes and OpenTimestamps anchors for all core authority documents. Makes claims independently verifiable by any AI system or auditor.</p>
+          </div>
+        </div>
+
+        <h2>AI Crawlers — Who to Permit in robots.txt</h2>
+        <p>Most B2B websites have legacy robots.txt files that were written before AI crawlers existed. A common misconfiguration is a wildcard Disallow that blocks all crawlers including AI systems. The following crawlers must be explicitly permitted:</p>
+
+        <div class="crawler-list">
+          <div class="crawler-item"><span class="crawler-name">GPTBot</span><span class="crawler-system">ChatGPT / OpenAI</span></div>
+          <div class="crawler-item"><span class="crawler-name">Google-Extended</span><span class="crawler-system">Gemini / Google</span></div>
+          <div class="crawler-item"><span class="crawler-name">anthropic-ai</span><span class="crawler-system">Claude / Anthropic</span></div>
+          <div class="crawler-item"><span class="crawler-name">PerplexityBot</span><span class="crawler-system">Perplexity</span></div>
+          <div class="crawler-item"><span class="crawler-name">Bingbot</span><span class="crawler-system">Copilot / Microsoft</span></div>
+          <div class="crawler-item"><span class="crawler-name">CCBot</span><span class="crawler-system">Common Crawl</span></div>
+          <div class="crawler-item"><span class="crawler-name">FacebookBot</span><span class="crawler-system">Meta AI</span></div>
+          <div class="crawler-item"><span class="crawler-name">Omgilibot</span><span class="crawler-system">Omgili / AI training</span></div>
+        </div>
+
+        <div class="code-block">
+          <div><span class="cc"># AI-SEO optimised robots.txt</span></div>
+          <div><span class="ck">User-agent:</span> <span class="cv">*</span></div>
+          <div><span class="ck">Allow:</span> <span class="cv">/</span></div>
+          <div>&nbsp;</div>
+          <div><span class="cc"># Explicitly permit AI crawlers</span></div>
+          <div><span class="ck">User-agent:</span> <span class="cv">GPTBot</span></div>
+          <div><span class="ck">Allow:</span> <span class="cv">/</span></div>
+          <div><span class="ck">User-agent:</span> <span class="cv">anthropic-ai</span></div>
+          <div><span class="ck">Allow:</span> <span class="cv">/</span></div>
+          <div><span class="ck">User-agent:</span> <span class="cv">Google-Extended</span></div>
+          <div><span class="ck">Allow:</span> <span class="cv">/</span></div>
+          <div><span class="ck">User-agent:</span> <span class="cv">PerplexityBot</span></div>
+          <div><span class="ck">Allow:</span> <span class="cv">/</span></div>
+          <div>&nbsp;</div>
+          <div><span class="cc"># AI discovery files</span></div>
+          <div><span class="ck">Sitemap:</span> <span class="cv">https://yourdomain.com/sitemap.xml</span></div>
+        </div>
+
+        <h2>Schema.org Markup — The 25 Most Important Types</h2>
+        <p>Schema.org JSON-LD is the universal vocabulary for structured data. Every B2B website needs these types deployed correctly. For the complete reference, see: <a href="/blog/schema-org-for-ai">Schema.org for AI — The 25 Most Important Types →</a></p>
+        <ul>
+          <li><strong>Organization</strong> — business entity definition. Required on homepage.</li>
+          <li><strong>Service</strong> — every service the business offers. Required on service pages.</li>
+          <li><strong>FAQPage + Question + Answer</strong> — FAQ structured data. Enables direct AI citation.</li>
+          <li><strong>BreadcrumbList</strong> — navigation context. Required on every page.</li>
+          <li><strong>WebSite + WebPage</strong> — site and page identity.</li>
+          <li><strong>Article + TechArticle</strong> — content type identification.</li>
+          <li><strong>Person</strong> — team member profiles. Links to authority signals.</li>
+          <li><strong>LocalBusiness</strong> — for businesses with physical locations.</li>
+          <li><strong>HowTo + HowToStep</strong> — process and methodology content.</li>
+          <li><strong>DefinedTerm + DefinedTermSet</strong> — glossary and terminology pages.</li>
+        </ul>
+
+        <h2>The ai.json Structure</h2>
+        <p>The ai.json file is the primary entity definition that AI systems retrieve first. It must include at minimum:</p>
+        <div class="code-block">
+          <div><span class="cc">{</span></div>
+          <div>&nbsp;&nbsp;<span class="ck">"@context"</span>: <span class="cv">"https://schema.org"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"@type"</span>: <span class="cv">"Organization"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"name"</span>: <span class="cv">"Your Business Name"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"legalName"</span>: <span class="cv">"Your Legal Entity Name S.R.L."</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"url"</span>: <span class="cv">"https://yourdomain.com"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"foundingDate"</span>: <span class="cv">"2024"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"areaServed"</span>: <span class="cv">"EU"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"services"</span>: <span class="cc">[...]</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"sameAs"</span>: <span class="cc">["LinkedIn URL", "Crunchbase URL"]</span></div>
+          <div><span class="cc">}</span></div>
+        </div>
+
+        <h2>Edge Delivery — Why It Matters for AI-SEO</h2>
+        <p>Traditional websites serve content from an origin server — one location, subject to downtime, cache issues, and platform dependency. For AI crawlers that need reliable, always-current signal files, origin delivery creates risk.</p>
+        <p><a href="/products/edge-injector">EDGE INJECTOR™</a> deploys all AI signal files to Cloudflare Workers KV — served from 300+ edge nodes globally in under 10ms. AI crawlers always receive the current, correctly structured signals regardless of what the origin website is doing. The signal layer and the website are completely decoupled.</p>
+
+        <div class="callout">
+          <h4>The Canonical AI-SEO Rule</h4>
+          <p>Site = CONTENT. Edge = SIGNALS. These must be fully decoupled. The website serves human visitors. The edge serves AI signals. Changes to one never affect the other. This is the architectural principle behind the ADI™ platform. See: <a href="/resources/ai-era-website" style="color:#f5c842">The AI Era Website →</a></p>
+        </div>
+
+        <h2>AI-SEO vs Traditional SEO — What Stays, What Changes</h2>
+        <p><strong>What stays the same:</strong> Quality content still matters. Accurate business information still matters. Consistent NAP (name, address, phone) still matters. Canonical URLs still matter.</p>
+        <p><strong>What changes:</strong> The primary audience for structured data is now AI systems, not just search engines. The format requirements are stricter — JSON-LD entity graphs, not just meta tags. The delivery infrastructure must be edge-first. The proof layer — SHA-256 and OTS anchoring — has no equivalent in traditional SEO.</p>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions About AI-SEO</h2>
+          <div class="faq-item">
+            <h3>What is AI-SEO?</h3>
+            <p>AI-SEO is the technical discipline of making business information machine-readable for AI systems through structured files, schema markup, crawler permissions, and edge delivery infrastructure. It is the technical layer that enables AEO and GEO.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does traditional SEO still matter?</h3>
+            <p>Traditional SEO still matters for human search engine traffic. AI-SEO is an additional layer — not a replacement. A business needs both: SEO for search engine ranking and AI-SEO for AI system discovery and recommendation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is llms.txt and why does it matter?</h3>
+            <p>llms.txt is a plain-text file deployed at a domain root that provides instructions and context to large language models about the business. It tells AI systems what the business is, what it sells, and what it permits AI to do with its content.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is ai.json?</h3>
+            <p>ai.json is the primary machine-readable entity definition file for AI systems. It contains structured business identity data — name, category, services, location, legal identifiers, and canonical URL — in a format AI systems can reliably parse and cross-reference.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How does edge delivery improve AI-SEO?</h3>
+            <p>Edge delivery via Cloudflare Workers KV serves AI signal files from the nearest network edge node in under 10ms globally. This ensures AI crawlers always receive current, correctly structured signals regardless of the origin server's state.</p>
+          </div>
+        </div>
+
+        <div class="related">
+          <h3>Related Articles</h3>
+          <div class="related-grid">
+            <a href="/blog/llms-txt" class="related-card"><span class="related-cat">AI-SEO</span><h4>llms.txt — What It Is and Why Every Business Needs One</h4></a>
+            <a href="/blog/ai-json-file" class="related-card"><span class="related-cat">AI-SEO</span><h4>ai.json — The Machine-Readable Business Identity File</h4></a>
+            <a href="/blog/schema-org-for-ai" class="related-card"><span class="related-cat">AI-SEO</span><h4>Schema.org for AI — The 25 Most Important Types</h4></a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-cta">
+        <h4>Check Your AI-SEO Setup</h4>
+        <p>AI AUDIT™ checks all 74 technical signals — files, schema, crawlers, edge delivery. Free. 24 hours.</p>
+        <a href="/contact">Start Free Audit →</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Core AI-SEO Files</h4>
+        <ul>
+          <li><a href="/blog/ai-json-file">ai.json guide</a></li>
+          <li><a href="/blog/llms-txt">llms.txt guide</a></li>
+          <li><a href="/blog/schema-org-for-ai">Schema.org for AI</a></li>
+          <li><a href="/resources/technologies">Technologies</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Technical Products</h4>
+        <ul>
+          <li><a href="/products/ai-ready">AI READY™</a></li>
+          <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+          <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+          <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related Posts</h4>
+        <ul>
+          <li><a href="/blog/what-is-aeo">What Is AEO?</a></li>
+          <li><a href="/blog/what-is-geo">What Is GEO?</a></li>
+          <li><a href="/blog/what-is-aio">What Is AIO?</a></li>
+          <li><a href="/blog/the-167-ai-signals">The 167 AI Signals</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Glossary Terms</h4>
+        <ul>
+          <li><a href="/blog/glossary#ai-seo">AI-SEO</a></li>
+          <li><a href="/blog/glossary#ai-json">ai.json</a></li>
+          <li><a href="/blog/glossary#llms-txt">llms.txt</a></li>
+          <li><a href="/blog/glossary#schema-org">Schema.org</a></li>
+          <li><a href="/blog/glossary#edge-delivery">Edge Delivery</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc"><a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a><a href="https://x.com/aipath512" target="_blank">X</a><a href="https://github.com/aipath512" target="_blank">GitHub</a></div>
+      </div>
+      <div class="fcol"><h5>Blog</h5><ul>
+        <li><a href="/blog">All Posts</a></li>
+        <li><a href="/blog/glossary">Glossary</a></li>
+        <li><a href="/blog/ai-seo">AI-SEO</a></li>
+        <li><a href="/blog/llms-txt">llms.txt Guide</a></li>
+        <li><a href="/blog/schema-org-for-ai">Schema.org Guide</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products">All Products</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem"><a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a><a href="https://aiventure.ro" target="_blank">AiVenture.ro</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>
