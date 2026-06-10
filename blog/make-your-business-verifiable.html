@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to Make Your Business Verifiable by AI | 5thelement.ai</title>
+<meta name="description" content="Stage 3 — Verifiable™. How to build the sameAs chain, external references, and registry links that let AI confirm your claims from independent sources."/>
+<link rel="canonical" href="https://5thelement.ai/blog/make-your-business-verifiable"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://5thelement.ai/#website","url":"https://5thelement.ai","name":"5thelement.ai"},
+{"@type":"Organization","@id":"https://5thelement.ai/#org","name":"AiVenture S.R.L.","url":"https://5thelement.ai"},
+{"@type":"WebPage","@id":"https://5thelement.ai/blog/make-your-business-verifiable#webpage","url":"https://5thelement.ai/blog/make-your-business-verifiable","name":"How to Make Your Business Verifiable by AI","isPartOf":{"@id":"https://5thelement.ai/#website"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://5thelement.ai/blog"},{"@type":"ListItem","position":3,"name":"How to Make Your Business Verifiable by AI","item":"https://5thelement.ai/blog/make-your-business-verifiable"}]},
+{"@type":"Article","headline":"How to Make Your Business Verifiable by AI","author":{"@id":"https://5thelement.ai/#org"},"publisher":{"@id":"https://5thelement.ai/#org"},"datePublished":"2026-06-10","dateModified":"2026-06-10"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Verifiable™?","acceptedAnswer":{"@type":"Answer","text":"Verifiable™ is Stage 3 of the AI Visibility Ladder. It means AI systems can confirm the business entity and its claims from external, independent sources — not just from the business's own website."}},
+{"@type":"Question","name":"How long does it take to achieve Verifiable™?","acceptedAnswer":{"@type":"Answer","text":"2-4 weeks after Understandable™ with sameAs chain, external references, and registry links deployed"}},
+{"@type":"Question","name":"What signals are needed for Verifiable™?","acceptedAnswer":{"@type":"Answer","text":"Active sameAs chain with LinkedIn, Crunchbase, company registry; external directory presence; certification registry URLs"}},
+{"@type":"Question","name":"Is Verifiable™ different from the next stage?","acceptedAnswer":{"@type":"Answer","text":"Yes. Verifiable™ means AI can confirm claims independently. Trustable™ means AI treats the business as an authority source."}},
+{"@type":"Question","name":"How do I verify Verifiable™ status?","acceptedAnswer":{"@type":"Answer","text":"Check that each sameAs URL in entities.json is active, resolves to the correct entity, and uses consistent business data."}}
+]},
+{"@type":"DefinedTerm","name":"Verifiable™","description":"Verifiable™ is Stage 3 of the AI Visibility Ladder. It means AI systems can confirm the business entity and its claims from external, independent sources — not just from the business's own website.","url":"https://5thelement.ai/blog/glossary#verifiable"},
+{"@type":"SoftwareApplication","name":"AI AUDIT™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI READY™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"AI SONAR™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"TRUST LAYER™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"PROOF LAYER™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"CreativeWork","name":"ADI™","author":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"DefinedTermSet","name":"AI Visibility Glossary","url":"https://5thelement.ai/blog/glossary"},
+{"@type":"ItemList","name":"AI Visibility Blog","url":"https://5thelement.ai/blog"},
+{"@type":"Claim","text":"Verifiable™ is Stage 3 of the AI Visibility Ladder"},
+{"@type":"Course","name":"AI Visibility Stages","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"SpecialAnnouncement","name":"Verifiable™ Guide","datePosted":"2026-06-10"},
+{"@type":"WebPage","name":"Verifiable™ Stage","url":"https://5thelement.ai/verifiable"},
+{"@type":"WebPage","name":"AI Visibility Ladder","url":"https://5thelement.ai/blog/ai-visibility-ladder"}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:0.35rem}.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}.nav-links a:hover{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329;flex-wrap:wrap}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.post-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;padding:3rem 0 5rem;align-items:start}
+.post-body{min-width:0}.post-sidebar{position:sticky;top:84px}
+.post-cat{display:inline-flex;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.7rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:999px;margin-bottom:1.25rem}
+.post-body h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
+.post-meta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:0.82rem;color:#888;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid #1e2329}
+.post-content h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin:2.5rem 0 1rem}
+.post-content h3{font-size:1.1rem;font-weight:700;color:#fff;margin:2rem 0 0.75rem}
+.post-content p{font-size:0.97rem;color:#cccccc;line-height:1.85;margin-bottom:1.25rem}
+.post-content strong{color:#fff;font-weight:600}
+.post-content a{color:#f5c842;text-decoration:underline}
+.post-content ul{padding-left:1.5rem;margin-bottom:1.25rem}
+.post-content ul li{font-size:0.95rem;color:#cccccc;line-height:1.8;margin-bottom:0.35rem}
+.post-content blockquote{border-left:3px solid #f5c842;padding:1rem 1.5rem;background:#111318;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:1rem;color:#cccccc;font-style:italic}
+.callout{background:#111318;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0}
+.callout h4{font-size:0.88rem;font-weight:700;color:#f5c842;margin-bottom:0.5rem}
+.callout p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.stage-nav{display:flex;gap:0.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.stage-pill{font-size:0.75rem;font-weight:700;padding:0.4rem 0.85rem;border-radius:999px;border:1px solid #1e2329;color:#888;text-decoration:none}
+.stage-pill.current{background:rgba(245,200,66,0.12);border-color:rgba(245,200,66,0.4);color:#f5c842}
+.stage-pill:hover{border-color:rgba(245,200,66,0.3);color:#f5c842}
+.howto-steps{display:flex;flex-direction:column;gap:1.25rem;margin:1.5rem 0}
+.howto-step{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.5rem;align-items:start}
+.hs-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.hs-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.35rem}
+.hs-body p{font-size:0.88rem;color:#cccccc;line-height:1.7;margin:0}
+.faq-section{background:#111318;border-radius:12px;padding:2rem;margin:2.5rem 0}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.faq-item{border-bottom:1px solid #1e2329;padding-bottom:1.25rem;margin-bottom:1.25rem}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-item h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.faq-item p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.sidebar-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#f5c842;margin-bottom:1rem}
+.sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.sidebar-card ul li a{font-size:0.85rem;color:#cccccc;display:flex;gap:0.4rem;line-height:1.5}.sidebar-card ul li a:hover{color:#f5c842}
+.sidebar-card ul li a::before{content:"→";color:#f5c842;flex-shrink:0;font-size:0.8rem}
+.sidebar-cta{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:1.5rem;text-align:center}
+.sidebar-cta h4{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.sidebar-cta p{font-size:0.82rem;color:#cccccc;line-height:1.6;margin-bottom:1rem}
+.sidebar-cta a{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.85rem;padding:0.7rem 1.25rem;border-radius:6px}
+.stage-next{background:#111318;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:1.75rem;margin-top:3rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.stage-next p{font-size:0.88rem;color:#cccccc;margin:0}
+.stage-next strong{color:#fff}
+.stage-next a{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.88rem;padding:0.75rem 1.5rem;border-radius:6px;white-space:nowrap}
+.related{border-top:1px solid #1e2329;padding-top:3rem;margin-top:3rem}
+.related h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.related-card{background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s}
+.related-card:hover{border-color:rgba(245,200,66,0.4)}
+.related-cat{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.4rem}
+.related-card h4{font-size:0.9rem;font-weight:700;color:#fff;line-height:1.4}.related-card:hover h4{color:#f5c842}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:900px){.post-layout{grid-template-columns:1fr}.post-sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:block}.howto-step{grid-template-columns:2rem 1fr}.fgrid{grid-template-columns:1fr 1fr}.fbot{flex-direction:column;text-align:center}}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li><li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li><li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/about">About</a></li><li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu"><ul>
+    <li><a href="/solutions">Solutions</a></li><li><a href="/services">Services</a></li>
+    <li><a href="/products">Products</a></li><li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li><li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+  </ul></div>
+</nav>
+
+<div class="wrap"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/blog">Blog</a><span class="bc-sep">›</span><span>Stage 3 — Verifiable™</span></div></div>
+
+<div class="wrap">
+  <div class="post-layout">
+    <article class="post-body">
+      <span class="post-cat">GEO · Stage 3 of 5</span>
+      <h1>How to Make Your Business Verifiable by AI</h1>
+      <div class="post-meta-row">
+        <span>📅 June 10, 2026</span><span>🏢 AiVenture S.R.L.</span>
+        <span>⏱ 9 min read</span>
+        <span>🔗 <a href="/blog/glossary#verifiable" style="color:#f5c842;text-decoration:none">Glossary: Verifiable™</a></span>
+      </div>
+      <div class="post-content">
+        <div class="stage-nav">
+          <a href="/blog/make-your-business-findable" class="stage-pill">1 · Findable™</a>
+          <a href="/blog/make-your-business-understandable" class="stage-pill">2 · Understandable™</a>
+          <a href="/blog/make-your-business-verifiable" class="stage-pill">3 · Verifiable™</a>
+          <a href="/blog/make-your-business-trustable" class="stage-pill">4 · Trustable™</a>
+          <a href="/blog/make-your-business-recommendable" class="stage-pill">5 · Recommendable™</a>
+        </div>
+
+        <h2>What Does Verifiable™ Mean?</h2>
+        <p>Verifiable™ is Stage 3 of the AI Visibility Ladder. It means AI systems can confirm the business entity and its claims from external, independent sources — not just from the business's own website.</p>
+        <p>This stage builds directly on the previous stage. Each stage in the AI Visibility Ladder is a prerequisite for the next — you cannot skip to <strong>Verifiable™</strong> without first achieving the stages below it.</p>
+
+        <blockquote>Verifiable™ is not a destination — it is a threshold. Once crossed, it must be maintained through continuous signal health monitoring and regular authority layer updates.</blockquote>
+
+        <h2>What Verifiable™ Requires</h2>
+        <p>Active sameAs chain with LinkedIn, Crunchbase, company registry; external directory presence; certification registry URLs</p>
+        <p>The exact signals required depend on the business's current position on the AI Visibility Ladder. <a href="/products/ai-audit">AI AUDIT™</a> produces a precise gap matrix showing exactly which signals are missing, inconsistent, or unverifiable — mapped to this specific stage.</p>
+
+        <h2>How to Achieve Verifiable™</h2>
+        <div class="howto-steps">
+          <div class="howto-step"><div class="hs-n">01</div><div class="hs-body"><h4>Measure current position</h4><p>Run <a href="/products/ai-audit">AI AUDIT™</a> to establish baseline score and identify every gap blocking Verifiable™ status. The gap matrix is stage-specific — it shows exactly which signals are missing for this stage.</p></div></div>
+          <div class="howto-step"><div class="hs-n">02</div><div class="hs-body"><h4>Build the required signals</h4><p>Use <a href="/products/ai-lens">AI LENS™</a> to acquire all business knowledge needed for the stage-specific signals. Then use <a href="/products/ai-ready">AI READY™</a> to generate the structured files and <a href="/products/ai-signals">AI SIGNALS™</a> to deploy them.</p></div></div>
+          <div class="howto-step"><div class="hs-n">03</div><div class="hs-body"><h4>Deploy to the edge</h4><p>All new signal files are deployed via <a href="/products/edge-injector">EDGE INJECTOR™</a> to the Cloudflare edge — available to AI crawlers globally in under 10ms without touching the existing website.</p></div></div>
+          <div class="howto-step"><div class="hs-n">04</div><div class="hs-body"><h4>Verify across all five AI systems</h4><p>Check that each sameAs URL in entities.json is active, resolves to the correct entity, and uses consistent business data. <a href="/products/ai-sonar">AI SONAR™</a> automates this verification weekly and alerts immediately when status drops below the threshold.</p></div></div>
+        </div>
+
+        <div class="callout">
+          <h4>Maintaining Verifiable™ Status</h4>
+          <p>Verifiable™ status is not permanent. Signal decay, competitor authority gains, and AI system knowledge graph updates can all reduce visibility. <a href="/products/ai-sonar" style="color:#f5c842">AI SONAR™</a> monitors Verifiable™ status continuously across all five AI systems and alerts when corrective action is needed.</p>
+        </div>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions About Verifiable™</h2>
+          <div class="faq-item"><h3>What is Verifiable™?</h3><p>Verifiable™ is Stage 3 of the AI Visibility Ladder. It means AI systems can confirm the business entity and its claims from external, independent sources — not just from the business's own website.</p></div>
+          <div class="faq-item"><h3>How long does it take to achieve Verifiable™?</h3><p>2-4 weeks after Understandable™ with sameAs chain, external references, and registry links deployed</p></div>
+          <div class="faq-item"><h3>What signals are needed for Verifiable™?</h3><p>Active sameAs chain with LinkedIn, Crunchbase, company registry; external directory presence; certification registry URLs</p></div>
+          <div class="faq-item"><h3>Is Verifiable™ different from the next stage?</h3><p>Yes. Verifiable™ means AI can confirm claims independently. Trustable™ means AI treats the business as an authority source.</p></div>
+          <div class="faq-item"><h3>How do I verify Verifiable™ status?</h3><p>Check that each sameAs URL in entities.json is active, resolves to the correct entity, and uses consistent business data.</p></div>
+        </div>
+
+        <div class="stage-next">
+          <p><strong>Stage 3 complete?</strong> Continue to the next stage of the AI Visibility Ladder.</p>
+          <a href="/blog/make-your-business-trustable">4 · Trustable™ →</a>
+        </div>
+
+        <div class="related">
+          <h3>Continue the Stage Series</h3>
+          <div class="related-grid">
+            <a href="/blog/make-your-business-understandable" class="related-card"><span class="related-cat">Previous Stage</span><h4>2 · Understandable™</h4></a>
+            <a href="/blog/make-your-business-trustable" class="related-card"><span class="related-cat">Next Stage</span><h4>4 · Trustable™</h4></a>
+            <a href="/blog/ai-visibility-ladder" class="related-card"><span class="related-cat">AEO / GEO</span><h4>The AI Visibility Ladder — L1 to L6 Explained</h4></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-cta"><h4>Check Your Verifiable™ Status</h4><p>AI AUDIT™ shows exactly which signals are missing for Stage 3. Free. 24 hours.</p><a href="/contact">Start Free Audit →</a></div>
+      <div class="sidebar-card"><h4>The 5 Stages</h4><ul>
+        <li><a href="/blog/make-your-business-findable">1 · Findable™</a></li>
+        <li><a href="/blog/make-your-business-understandable">2 · Understandable™</a></li>
+        <li><a href="/blog/make-your-business-verifiable">3 · Verifiable™</a></li>
+        <li><a href="/blog/make-your-business-trustable">4 · Trustable™</a></li>
+        <li><a href="/blog/make-your-business-recommendable">5 · Recommendable™</a></li>
+      </ul></div>
+      <div class="sidebar-card"><h4>Key Products</h4><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+      </ul></div>
+      <div class="sidebar-card"><h4>Glossary Terms</h4><ul>
+        <li><a href="/blog/glossary#verifiable">Verifiable™</a></li>
+        <li><a href="/blog/glossary#ai-visibility-ladder">AI Visibility Ladder</a></li>
+        <li><a href="/blog/glossary#signal">Signal</a></li>
+        <li><a href="/blog/glossary#adi">ADI™</a></li>
+      </ul></div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand"><a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a><p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p><div class="fsoc"><a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a><a href="https://x.com/aipath512" target="_blank">X</a></div></div>
+      <div class="fcol"><h5>The 5 Stages</h5><ul>
+        <li><a href="/findable">Findable™</a></li><li><a href="/understandable">Understandable™</a></li>
+        <li><a href="/verifiable">Verifiable™</a></li><li><a href="/trustable">Trustable™</a></li>
+        <li><a href="/recommendable">Recommendable™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li><li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li><li><a href="/products">All Products</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Blog</h5><ul>
+        <li><a href="/blog">All Posts</a></li><li><a href="/blog/glossary">Glossary</a></li>
+        <li><a href="/blog/the-167-ai-signals">167 AI Signals</a></li><li><a href="/blog/ai-visibility-ladder">AI Visibility Ladder</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot"><span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span><span style="display:flex;gap:1.25rem"><a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a><a href="https://aiventure.ro" target="_blank">AiVenture.ro</a></span></div>
+  </div>
+</footer>
+<script>var hbtn=document.getElementById('hbtn');var mmenu=document.getElementById('mmenu');hbtn.addEventListener('click',function(){mmenu.classList.contains('open')?(mmenu.classList.remove('open'),hbtn.textContent='☰'):(mmenu.classList.add('open'),hbtn.textContent='✕');});</script>
+</body>
+</html>
