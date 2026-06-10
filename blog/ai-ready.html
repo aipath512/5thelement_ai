@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI READY™ — Automatic Transformation Engine — 5thelement.ai</title>
+<meta name="description" content="AI READY™ transforms business knowledge into structured files AI systems require. Content, schema, FAQs, entity graph, AI files — generated automatically. Without touching your website."/>
+<link rel="canonical" href="https://5thelement.ai/products/ai-ready"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* FIVE OUTPUTS */
+.fiveout{background:#0a0c0f}
+.five-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.25rem}
+.five-card{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;align-items:start;transition:border-color 0.2s}
+.five-card:hover{border-color:rgba(245,200,66,0.3)}
+.five-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;line-height:1}
+.five-body h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.five-body p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin-bottom:0.5rem}
+.five-body .files{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.25rem}
+.five-body .file{font-family:'Courier New',monospace;font-size:0.72rem;color:#f5c842;background:#0a0c0f;border:1px solid #1e2329;padding:0.2rem 0.5rem;border-radius:4px}
+
+/* TRANSFORMATION */
+.transform{background:#111318}
+.tr-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;margin-top:2.25rem;align-items:start}
+.tr-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.tr-card.after{border-color:rgba(74,222,128,0.3)}
+.tr-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem;color:#888}
+.tr-card.after .tr-label{color:#4ade80}
+.tr-list{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.tr-list li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem;align-items:flex-start;line-height:1.5}
+.tr-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.tr-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+.tr-arrow{display:flex;align-items:center;justify-content:center;font-size:2rem;color:#f5c842;padding-top:2rem}
+
+/* WHAT CHANGES */
+.changes{background:#0a0c0f}
+.ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.ch-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.ch-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.75rem}
+.ch-card h3.yes{color:#4ade80}
+.ch-card h3.no{color:#f87171}
+.ch-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.ch-list li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem}
+.ch-list.yes li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+.ch-list.no li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-name{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* PROCESS */
+.process{background:#0a0c0f}
+.proc-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.pstep{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.pstep:last-child{border-bottom:none}
+.pstep:hover{background:#111318}
+.pstep-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.pstep-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.3rem}
+.pstep-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* NEXT */
+.next-prod{background:#111318;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .five-card{grid-template-columns:1fr;gap:0.75rem}
+  .tr-grid{grid-template-columns:1fr;gap:1rem}
+  .tr-arrow{display:none}
+  .ch-grid,.next-grid{grid-template-columns:1fr}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .pstep{grid-template-columns:2.5rem 1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>AI READY™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 03 · Transformation Engine</div>
+    <h1>AI READY™<br><em>Fix What AI Cannot Read.</em></h1>
+    <p>AI READY™ is the Automatic Transformation Engine. It takes the structured knowledge from AI LENS™ and transforms it into every structured file, schema, and content format that AI systems require — without touching your existing website, CMS, or hosting infrastructure.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">5</span><span class="lbl">Generation Types</span></div>
+      <div class="hstat"><span class="val">0</span><span class="lbl">CMS Changes</span></div>
+      <div class="hstat"><span class="val">Auto</span><span class="lbl">From Knowledge Graph</span></div>
+      <div class="hstat"><span class="val">HITL</span><span class="lbl">Human Review</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Start Transformation →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">Knowing What Is Missing Is Not the Same as Fixing It</h2>
+    <div class="prob-box">
+      <p>AI LENS™ delivers the gap list. AI AUDIT™ delivers the score. But neither of these makes the business more visible to AI. That requires implementation — and implementation is where most businesses stall.</p>
+      <p>The traditional path requires a developer, a content writer, a schema specialist, and a project manager. Weeks of work. High cost. High coordination overhead. AI READY™ removes all of this. <strong>It implements the fixes automatically — from the Business Knowledge Graph™ — without any manual content creation, without any developer involvement, and without touching the existing website.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="fiveout">
+  <div class="c">
+    <span class="ey">Five Generation Types</span>
+    <h2 class="sh">What AI READY™ Generates</h2>
+    <p class="sl">Every generation type is derived from the Business Knowledge Graph™. Nothing invented. Everything verified before output.</p>
+    <div class="five-list">
+      <div class="five-card">
+        <div class="five-n">01</div>
+        <div class="five-body">
+          <h3>Content Generation</h3>
+          <p>Service descriptions, entity statements, FAQ content, team profiles, and location descriptions — written in the declarative, AI-parseable format that produces the highest AI visibility impact. Not narrative content for human persuasion. Structured declarative content that serves both humans and AI systems simultaneously.</p>
+          <p>Every generated content item is grounded in the Business Knowledge Graph™. Nothing is invented. Everything derived from verified business information. Human review mandatory before deployment.</p>
+        </div>
+      </div>
+      <div class="five-card">
+        <div class="five-n">02</div>
+        <div class="five-body">
+          <h3>Schema Generation</h3>
+          <p>Complete Schema.org markup for every page type — Organization on the homepage, Service on every service page, FAQPage on FAQ sections, BreadcrumbList on every page, and sector-specific schema types where applicable.</p>
+          <p>Every schema validated against the Schema.org specification and against the specific requirements of each major AI system before output. Common errors — missing required properties, incorrect types, conflicting markup — identified and corrected automatically.</p>
+          <div class="files">
+            <span class="file">Organization JSON-LD</span>
+            <span class="file">Service JSON-LD</span>
+            <span class="file">FAQPage JSON-LD</span>
+            <span class="file">BreadcrumbList JSON-LD</span>
+          </div>
+        </div>
+      </div>
+      <div class="five-card">
+        <div class="five-n">03</div>
+        <div class="five-body">
+          <h3>FAQ Generation</h3>
+          <p>Structured question-and-answer pairs mapped directly to real buyer queries. Every FAQ entry derived from the Intent Registry — the question from buyer query patterns, the answer from the Business Knowledge Graph™.</p>
+          <p>Delivered in two formats: human-readable HTML content for the FAQ page, and FAQPage JSON-LD schema for the page head. AI systems can cite FAQ answers directly — without visiting the page — when the schema is correctly deployed.</p>
+        </div>
+      </div>
+      <div class="five-card">
+        <div class="five-n">04</div>
+        <div class="five-body">
+          <h3>Entity Graph Generation</h3>
+          <p>The complete entity graph in JSON-LD format — ready for deployment at the domain root and edge endpoint. Every entity correctly typed, every relationship directional, every identifier stable, and every sameAs reference validated before output.</p>
+          <div class="files">
+            <span class="file">entities.json</span>
+            <span class="file">entity-graph.public.jsonld</span>
+          </div>
+        </div>
+      </div>
+      <div class="five-card">
+        <div class="five-n">05</div>
+        <div class="five-body">
+          <h3>AI Files Generation</h3>
+          <p>The primary AI discovery files generated from the Business Knowledge Graph™. Every file validated before output. Every file version-stamped and ready for SHA-256 fingerprinting by PROOF LAYER™.</p>
+          <div class="files">
+            <span class="file">ai.json</span>
+            <span class="file">llms.txt</span>
+            <span class="file">robots.txt</span>
+            <span class="file">intents.json</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="transform">
+  <div class="c">
+    <span class="ey">The Transformation</span>
+    <h2 class="sh">Concrete. Measurable. Verifiable.</h2>
+    <p class="sl">Every gap identified in AI LENS™ and ranked in AI AUDIT™ is addressed. The before/after is concrete.</p>
+    <div class="tr-grid">
+      <div class="tr-card">
+        <span class="tr-label">Before AI READY™</span>
+        <ul class="tr-list bl">
+          <li>Narrative service descriptions on HTML pages</li>
+          <li>No schema markup on any page</li>
+          <li>No machine-readable entity data</li>
+          <li>AI crawlers blocked in robots.txt</li>
+          <li>No llms.txt at domain root</li>
+          <li>No ai.json deployed</li>
+          <li>AI cannot describe the business accurately</li>
+          <li>FAQ exists but not structured as schema</li>
+        </ul>
+      </div>
+      <div class="tr-arrow">→</div>
+      <div class="tr-card after">
+        <span class="tr-label">After AI READY™</span>
+        <ul class="tr-list al">
+          <li>Declarative service descriptions with Service schema</li>
+          <li>Organization schema on homepage</li>
+          <li>FAQPage schema on FAQ sections</li>
+          <li>All AI crawlers explicitly permitted</li>
+          <li>llms.txt deployed at domain root</li>
+          <li>ai.json live — entity defined</li>
+          <li>AI describes business accurately and completely</li>
+          <li>FAQ deployed as FAQPage — AI can cite directly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="changes">
+  <div class="c">
+    <span class="ey">What Changes. What Does Not.</span>
+    <h2 class="sh">Zero Website Risk. Full AI Transformation.</h2>
+    <div class="ch-grid">
+      <div class="ch-card">
+        <h3 class="yes">What Gets Added</h3>
+        <ul class="ch-list yes">
+          <li>JSON-LD script tags in page heads (invisible to visitors)</li>
+          <li>robots.txt updated — AI crawlers permitted</li>
+          <li>ai.json at domain root</li>
+          <li>llms.txt at domain root</li>
+          <li>entities.json at domain root</li>
+          <li>intents.json at domain root</li>
+          <li>New FAQ page with FAQPage schema</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <h3 class="no">What Is Never Touched</h3>
+        <ul class="ch-list no">
+          <li>Website design or layout</li>
+          <li>CMS configuration or plugins</li>
+          <li>Existing page content or copy</li>
+          <li>Hosting configuration</li>
+          <li>Database or backend systems</li>
+          <li>Any existing HTML, CSS, or JavaScript</li>
+          <li>Content management workflow</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Every Structured Asset Generated</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-name">AI-ready pages</span><div class="out-body"><h4>Service, Team, Location, and FAQ Pages</h4><p>Complete structured content and schema markup. Declarative language. AI-parseable and human-readable simultaneously.</p></div></div>
+      <div class="out-item"><span class="out-name">Structured data</span><div class="out-body"><h4>JSON-LD Schema for Every Page Type</h4><p>Validated against Schema.org specification. Ready for deployment via EDGE INJECTOR™ or direct page injection.</p></div></div>
+      <div class="out-item"><span class="out-name">Machine-readable assets</span><div class="out-body"><h4>ai.json · llms.txt · robots.txt · entities.json</h4><p>All primary AI discovery files generated from the Business Knowledge Graph™. Version-stamped and SHA-256 ready.</p></div></div>
+      <div class="out-item"><span class="out-name">Knowledge graph components</span><div class="out-body"><h4>Entity Definitions and Relationship Maps</h4><p>Ready for KNOWLEDGE GRAPH™ and EDGE INJECTOR™ consumption. Full sameAs reference arrays validated.</p></div></div>
+      <div class="out-item"><span class="out-name">AI visibility improvements</span><div class="out-body"><h4>Measurable Score Improvement</h4><p>AI Readiness Score improvement verified by AI AUDIT™ post-implementation. Findable™ and Understandable™ confirmed.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="c">
+    <span class="ey">The Process</span>
+    <h2 class="sh">Five Steps. From Gap List to Deployed Files.</h2>
+    <div class="proc-steps">
+      <div class="pstep"><div class="pstep-n">01</div><div class="pstep-body"><h4>Input — Business Knowledge Graph™</h4><p>AI READY™ consumes the Business Knowledge Graph™ from AI LENS™ and the Gap Registry from AI AUDIT™. No additional input required from the business.</p></div></div>
+      <div class="pstep"><div class="pstep-n">02</div><div class="pstep-body"><h4>Automated Generation</h4><p>All five generation types run automatically. Content, schema, FAQ, entity graph, and AI files generated from verified knowledge graph data. No manual writing or schema coding required.</p></div></div>
+      <div class="pstep"><div class="pstep-n">03</div><div class="pstep-body"><h4>Validation</h4><p>Every generated item validated. Schema checked against Schema.org specification. sameAs references verified. AI file formats validated. No invalid output is passed to the next step.</p></div></div>
+      <div class="pstep"><div class="pstep-n">04</div><div class="pstep-body"><h4>Human Review — HITL Checkpoint</h4><p>Every generated item reviewed by a human analyst. Content accuracy confirmed. Schema completeness verified. Nothing deployed without human sign-off.</p></div></div>
+      <div class="pstep"><div class="pstep-n">05</div><div class="pstep-body"><h4>Delivery for Deployment</h4><p>All generated files packaged for deployment. Ready for direct deployment or EDGE INJECTOR™ deployment. AI AUDIT™ post-implementation score verification included.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Files to Signals</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 04</span>
+        <h3>AI SIGNALS™</h3>
+        <p>AI SIGNALS™ takes the files from AI READY™ and compiles them into the full 167-signal layer — the complete machine-readable signal set that AI systems use to discover, verify, and recommend businesses.</p>
+        <a href="/products/ai-signals" class="next-link">Go to AI SIGNALS™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>AI LENS™</h3>
+        <p>AI READY™ requires the Business Knowledge Graph™ built by AI LENS™. If not yet complete, start there.</p>
+        <a href="/products/ai-lens" class="next-link">← Back to AI LENS™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready" style="color:#f5c842">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>

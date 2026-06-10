@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EDGE INJECTOR™ — Deploy AI Infrastructure Without Touching Your Website — 5thelement.ai</title>
+<meta name="description" content="EDGE INJECTOR™ deploys your complete AI signal layer to the Cloudflare network edge instantly. No website changes. No CMS access. One CNAME. Live in 24 hours."/>
+<link rel="canonical" href="https://5thelement.ai/products/edge-injector"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* ARCHITECTURE */
+.arch{background:#0a0c0f}
+.arch-diagram{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.arch-flow{display:flex;flex-direction:column;gap:0;align-items:center}
+.arch-layer{background:#0a0c0f;border:1px solid #1e2329;border-radius:8px;padding:1rem 2rem;text-align:center;width:100%;max-width:480px}
+.arch-layer h3{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.arch-layer p{font-size:0.82rem;color:#cccccc}
+.arch-layer.highlight{border-color:rgba(245,200,66,0.5);background:rgba(245,200,66,0.05)}
+.arch-layer.highlight h3{color:#f5c842}
+.arch-arrow{color:#888;font-size:1.25rem;padding:0.5rem 0;text-align:center}
+.arch-note{font-size:0.82rem;color:#888;text-align:center;margin-top:1.5rem;font-style:italic}
+
+/* TENANT */
+.tenant{background:#111318}
+.tenant-box{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem;margin-top:2.25rem;font-family:'Courier New',monospace;font-size:0.85rem;color:#cccccc;line-height:2}
+.tenant-box .tl{color:#f5c842;font-weight:700}
+.tenant-box .tc{color:#4ade80}
+.tenant-note{font-size:0.88rem;color:#cccccc;margin-top:1.25rem;line-height:1.75}
+
+/* WHAT GETS DEPLOYED */
+.deployed{background:#0a0c0f}
+.dep-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.dep-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;padding:1.1rem 2rem;border-bottom:1px solid #1e2329}
+.dep-item:last-child{border-bottom:none}
+.dep-item:hover{background:#111318}
+.dep-file{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;white-space:nowrap}
+.dep-desc{font-size:0.85rem;color:#cccccc}
+.dep-loc{font-size:0.72rem;font-weight:700;color:#888;white-space:nowrap;text-align:right}
+
+/* REQUIRES / NOT REQUIRES */
+.requires{background:#111318}
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.req-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.req-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.75rem}
+.req-card h3.yes{color:#4ade80}
+.req-card h3.no{color:#f87171}
+.req-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.req-list li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem;align-items:flex-start}
+.req-list.yes li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+.req-list.no li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+
+/* ONBOARDING */
+.onboard{background:#0a0c0f}
+.ob-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.ob-step{display:grid;grid-template-columns:3rem 1fr auto;align-items:center;gap:1.25rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329}
+.ob-step:last-child{border-bottom:none}
+.ob-step:hover{background:#111318}
+.ob-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.ob-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.2rem}
+.ob-body p{font-size:0.85rem;color:#cccccc;line-height:1.6}
+.ob-time{font-size:0.75rem;font-weight:700;color:#f5c842;white-space:nowrap}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-name{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#0a0c0f}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#111318;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .dep-item{grid-template-columns:auto 1fr;gap:0.75rem}.dep-loc{display:none}
+  .req-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .ob-step{grid-template-columns:2.5rem 1fr;gap:1rem}.ob-time{display:none}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>EDGE INJECTOR™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 06 · Edge Deployment</div>
+    <h1>EDGE INJECTOR™<br><em>Deploy Without Rebuilding.</em></h1>
+    <p>EDGE INJECTOR™ deploys your complete AI signal layer, entity graph, and machine-readable files to the Cloudflare network edge — globally, instantly, and without any modification to your existing website, CMS, hosting, or code.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">&lt;10ms</span><span class="lbl">Global Latency</span></div>
+      <div class="hstat"><span class="val">300+</span><span class="lbl">Edge Nodes</span></div>
+      <div class="hstat"><span class="val">1</span><span class="lbl">CNAME Record</span></div>
+      <div class="hstat"><span class="val">24h</span><span class="lbl">Live Deployment</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Deploy Now →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">Signal Files Are Worthless Until They Are Deployed.</h2>
+    <div class="prob-box">
+      <p>The most common reason businesses do not deploy AI signals is not lack of knowledge — it is lack of a safe deployment path. Modifying an existing website carries risk. Changing CMS configuration can break things. Adding schema markup incorrectly creates structured data errors. Updating robots.txt carelessly can block crawlers that should be permitted.</p>
+      <p>EDGE INJECTOR™ removes all of these risks. <strong>It does not modify the existing website.</strong> It deploys a parallel AI infrastructure layer at the network edge — between the internet and the origin server — that serves AI signals independently of whatever the website is doing.</p>
+      <p>The existing website continues to operate exactly as before. The AI signal layer operates alongside it — transparently, permanently, and without creating any dependency between the two systems.</p>
+    </div>
+  </div>
+</section>
+
+<section class="arch">
+  <div class="c">
+    <span class="ey">The Architecture</span>
+    <h2 class="sh">Two Independent Systems. One Domain.</h2>
+    <p class="sl">The website and the AI signal layer are completely decoupled. One change to either does not affect the other.</p>
+    <div class="arch-diagram">
+      <div class="arch-flow">
+        <div class="arch-layer"><h3>AI Crawler or Browser</h3><p>Any request to the domain</p></div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-layer highlight"><h3>Cloudflare Edge — EDGE INJECTOR™</h3><p>Intercepts every request · serves AI signals from KV · injects schema into page responses</p></div>
+        <div class="arch-arrow">↓ (human browser requests only)</div>
+        <div class="arch-layer"><h3>Origin Server — Your Existing Website</h3><p>WordPress · Webflow · Squarespace · custom HTML · any platform · completely unchanged</p></div>
+      </div>
+      <p class="arch-note">AI crawlers receive signal files directly from the edge — the origin server is never reached. Human browsers receive page HTML with schema injected at the edge before delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tenant">
+  <div class="c">
+    <span class="ey">Tenant-First Architecture</span>
+    <h2 class="sh">Complete Tenant Isolation at Scale</h2>
+    <p class="sl">Every business has a tenant-specific key prefix. All signal files stored and served under that prefix. Zero cross-tenant data leakage.</p>
+    <div class="tenant-box">
+      <div><span class="tl">GET</span> /v1/<span class="tc">your-domain.com</span>/ai.json → served from KV in &lt;10ms</div>
+      <div><span class="tl">GET</span> /v1/<span class="tc">your-domain.com</span>/entities.json → served from KV in &lt;10ms</div>
+      <div><span class="tl">GET</span> /v1/<span class="tc">your-domain.com</span>/intents.json → served from KV in &lt;10ms</div>
+      <div><span class="tl">GET</span> /v1/<span class="tc">your-domain.com</span>/ai-actions.json → served from KV in &lt;10ms</div>
+      <div><span class="tl">GET</span> /v1/<span class="tc">your-domain.com</span>/allow-lane-matrix.json → served from KV in &lt;10ms</div>
+    </div>
+    <p class="tenant-note">Tenant-first key structure ensures that every business's signals are completely isolated. Onboarding a new tenant is two steps: upload signal files to KV under the tenant prefix, add CNAME record. Nothing else.</p>
+  </div>
+</section>
+
+<section class="deployed">
+  <div class="c">
+    <span class="ey">What Gets Deployed</span>
+    <h2 class="sh">Every Signal File. Every Page. Globally.</h2>
+    <p class="sl">All files generated by AI SIGNALS™ and KNOWLEDGE GRAPH™ are deployed to the edge in one operation.</p>
+    <div class="dep-list">
+      <div class="dep-item"><span class="dep-file">llms.txt</span><span class="dep-desc">LLM instruction file — canonical entity declaration and permission layer for large language models</span><span class="dep-loc">Domain root</span></div>
+      <div class="dep-item"><span class="dep-file">ai.json</span><span class="dep-desc">Primary AI identity file — entity definition, service catalogue, canonical properties</span><span class="dep-loc">Domain root</span></div>
+      <div class="dep-item"><span class="dep-file">robots.txt</span><span class="dep-desc">Updated to explicitly permit GPTBot, anthropic-ai, Google-Extended, PerplexityBot, and all major AI crawlers</span><span class="dep-loc">Domain root</span></div>
+      <div class="dep-item"><span class="dep-file">entities.json</span><span class="dep-desc">Complete entity graph — business, services, team, locations, certifications with relationship maps</span><span class="dep-loc">Domain root</span></div>
+      <div class="dep-item"><span class="dep-file">intents.json</span><span class="dep-desc">Buyer intent registry — all service-to-query mappings, negative intents, and intent filters</span><span class="dep-loc">Domain root</span></div>
+      <div class="dep-item"><span class="dep-file">ai-actions.json</span><span class="dep-desc">AI action permissions — what AI systems are permitted to do when referencing this business</span><span class="dep-loc">Edge KV</span></div>
+      <div class="dep-item"><span class="dep-file">ai-routes.json</span><span class="dep-desc">Query routing — connects buyer intent to the most relevant page, signal file, or contact route</span><span class="dep-loc">Edge KV</span></div>
+      <div class="dep-item"><span class="dep-file">allow-lane-matrix.json</span><span class="dep-desc">Permission layer — which AI systems have access to which signal tiers</span><span class="dep-loc">Edge KV</span></div>
+      <div class="dep-item"><span class="dep-file">Schema JSON-LD</span><span class="dep-desc">All Schema.org markup injected into every page response at the edge — invisible to human visitors, readable by AI crawlers</span><span class="dep-loc">All pages</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="requires">
+  <div class="c">
+    <span class="ey">Requirements</span>
+    <h2 class="sh">What You Need. What You Do Not.</h2>
+    <div class="req-grid">
+      <div class="req-card">
+        <h3 class="yes">What You Need</h3>
+        <ul class="req-list yes">
+          <li>A Cloudflare account — free tier is sufficient</li>
+          <li>One CNAME DNS record at your domain registrar</li>
+          <li>Signal files generated by AI SIGNALS™</li>
+          <li>30 seconds to add the CNAME record</li>
+        </ul>
+      </div>
+      <div class="req-card">
+        <h3 class="no">What You Do Not Need</h3>
+        <ul class="req-list no">
+          <li>WordPress admin or any CMS access</li>
+          <li>cPanel, FTP, or SSH credentials</li>
+          <li>Database or backend system access</li>
+          <li>Any developer involvement from your team</li>
+          <li>Changes to existing HTML, CSS, or JavaScript</li>
+          <li>Changes to hosting configuration</li>
+          <li>Any plugin installation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="onboard">
+  <div class="c">
+    <span class="ey">Onboarding</span>
+    <h2 class="sh">Live in Five Steps. Under 24 Hours Total.</h2>
+    <div class="ob-steps">
+      <div class="ob-step"><div class="ob-n">01</div><div class="ob-body"><h4>Cloudflare Account</h4><p>Create or connect an existing Cloudflare account. Free tier is sufficient for all standard deployments.</p></div><span class="ob-time">5 min</span></div>
+      <div class="ob-step"><div class="ob-n">02</div><div class="ob-body"><h4>CNAME Record</h4><p>Add one CNAME DNS record at your domain registrar pointing traffic through Cloudflare. Standard configuration — 30 seconds to complete.</p></div><span class="ob-time">30 sec</span></div>
+      <div class="ob-step"><div class="ob-n">03</div><div class="ob-body"><h4>Signal Files Uploaded</h4><p>All signal files from AI SIGNALS™ and KNOWLEDGE GRAPH™ uploaded to Cloudflare Workers KV under your tenant key. Automated process.</p></div><span class="ob-time">Automated</span></div>
+      <div class="ob-step"><div class="ob-n">04</div><div class="ob-body"><h4>Edge Worker Deployed</h4><p>Cloudflare Worker deployed — configured to serve signal files, inject schema markup, and enforce AI crawler permissions. Automated.</p></div><span class="ob-time">Automated</span></div>
+      <div class="ob-step"><div class="ob-n">05</div><div class="ob-body"><h4>Verification and Live</h4><p>All signal files checked for accessibility. All AI crawlers confirmed permitted. Schema injection verified on all pages. Deployment report delivered.</p></div><span class="ob-time">&lt;24h total</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output</span>
+    <h2 class="sh">Four Deployment Confirmations</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-name">AI Layer</span><div class="out-body"><h4>Complete Signal Layer Live</h4><p>All signal files deployed and accessible at domain root and edge endpoint. Every file returns HTTP 200 with correct content-type headers for every major AI crawler.</p></div></div>
+      <div class="out-item"><span class="out-name">Edge Delivery</span><div class="out-body"><h4>Sub-10ms Global Response</h4><p>Signal files served from Cloudflare's 300+ edge nodes. Response time under 10ms from every major global location. No origin server dependency.</p></div></div>
+      <div class="out-item"><span class="out-name">AI Discovery Assets</span><div class="out-body"><h4>All Files Accessible to AI Crawlers</h4><p>GPTBot, anthropic-ai, Google-Extended, PerplexityBot, and all major AI crawlers confirmed permitted and able to retrieve all signal files.</p></div></div>
+      <div class="out-item"><span class="out-name">Infrastructure Report</span><div class="out-body"><h4>Full Deployment Confirmation</h4><p>Structured report confirming every deployed file, every accessibility check result, every crawler permission status, and every schema injection verification.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After EDGE INJECTOR™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Signal files exist locally but not deployed</li>
+          <li>AI crawlers cannot access any signal file</li>
+          <li>Schema markup absent from all pages</li>
+          <li>robots.txt blocks major AI crawlers</li>
+          <li>Origin server must serve every request</li>
+          <li>Website changes required to add any signal</li>
+          <li>No way to deploy without developer involvement</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>All signal files live at domain root and edge endpoint</li>
+          <li>Every major AI crawler can access all signal files</li>
+          <li>Schema markup injected into every page at the edge</li>
+          <li>All AI crawlers explicitly permitted in robots.txt</li>
+          <li>Edge serves AI signals in under 10ms globally</li>
+          <li>Website completely unchanged — zero risk</li>
+          <li>Deployed without any developer involvement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Deployment to Trust</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 07</span>
+        <h3>TRUST LAYER™</h3>
+        <p>With signals deployed and accessible, the next layer is trust. TRUST LAYER™ builds the governance, transparency, and citation signals that move a business from Verifiable™ to Trustable™.</p>
+        <a href="/products/trust-layer" class="next-link">Go to TRUST LAYER™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>KNOWLEDGE GRAPH™</h3>
+        <p>EDGE INJECTOR™ deploys the files generated by KNOWLEDGE GRAPH™ and AI SIGNALS™. Complete both before deploying to the edge.</p>
+        <a href="/products/knowledge-graph" class="next-link">← Back to KNOWLEDGE GRAPH™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector" style="color:#f5c842">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>

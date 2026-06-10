@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI LENS™ — Business Knowledge Acquisition Engine — 5thelement.ai</title>
+<meta name="description" content="AI LENS™ identifies, extracts, structures, and maps everything AI systems need to understand your business. Business Knowledge Graph™. 100-dimension visibility map. Entity Registry. Intent Registry."/>
+<link rel="canonical" href="https://5thelement.ai/products/ai-lens"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* PROBLEM */
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* WHAT IT DOES */
+.whatitdoes{background:#0a0c0f}
+.wid-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.wid-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.wid-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.75rem}
+.wid-card p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+
+/* 7 CATEGORIES */
+.categories{background:#111318}
+.cat-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.cat-item{display:grid;grid-template-columns:3.5rem 1fr auto;align-items:start;gap:1.25rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;transition:background 0.2s}
+.cat-item:last-child{border-bottom:none}
+.cat-item:hover{background:#0a0c0f}
+.cat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2d3748;line-height:1}
+.cat-body h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.4rem}
+.cat-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+.cat-dim{font-size:0.72rem;font-weight:700;color:#f5c842;white-space:nowrap;padding-top:0.2rem}
+
+/* INPUTS */
+.inputs{background:#0a0c0f}
+.inp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.25rem}
+.inp-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;gap:1rem;align-items:flex-start}
+.inp-icon{font-size:1.4rem;flex-shrink:0}
+.inp-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.4rem}
+.inp-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-name{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.3rem}
+.out-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* PROCESS */
+.process{background:#0a0c0f}
+.proc-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.pstep{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.pstep:last-child{border-bottom:none}
+.pstep:hover{background:#111318}
+.pstep-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.pstep-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.3rem}
+.pstep-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* BA */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#0a0c0f;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .wid-grid,.inp-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .cat-item{grid-template-columns:2.5rem 1fr;gap:1rem}.cat-dim{display:none}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .pstep{grid-template-columns:2.5rem 1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>AI LENS™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 02 · Knowledge Acquisition Engine</div>
+    <h1>AI LENS™<br><em>Discover What AI Needs.</em></h1>
+    <p>AI LENS™ is the Business Knowledge Acquisition Engine. Before AI can understand your business, all relevant knowledge must be identified, extracted, structured, and mapped. AI LENS™ does this systematically — across 100 dimensions, seven visibility categories, and five output files.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">100</span><span class="lbl">Dimensions</span></div>
+      <div class="hstat"><span class="val">7</span><span class="lbl">Categories</span></div>
+      <div class="hstat"><span class="val">5</span><span class="lbl">Output Files</span></div>
+      <div class="hstat"><span class="val">24h</span><span class="lbl">Delivery</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Start AI LENS™ →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">AI Cannot Understand What Has Never Been Structured</h2>
+    <div class="prob-box">
+      <p>AI systems do not understand businesses the way humans do. A human reading a website can infer context, fill in gaps, and make reasonable assumptions. AI systems cannot. They rely on explicit, structured, machine-readable data.</p>
+      <p>The first question is not how to fix visibility. The first question is <strong>what information exists, what is missing, and what must be created</strong> before any signal can be deployed. AI LENS™ answers this question. It is the diagnostic and knowledge-building engine that every other product in the platform depends on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="whatitdoes">
+  <div class="c">
+    <span class="ey">What It Does</span>
+    <h2 class="sh">Five Core Functions</h2>
+    <p class="sl">AI LENS™ performs a complete business knowledge acquisition across five structured functions.</p>
+    <div class="wid-grid">
+      <div class="wid-card">
+        <h3>Information Inventory</h3>
+        <p>Catalogues all existing business information — website content, documents, service brochures, team profiles, case studies, certifications, social profiles, and directory listings. Every piece assessed for accuracy, completeness, machine-readability, and AI-visibility relevance.</p>
+      </div>
+      <div class="wid-card">
+        <h3>Entity and Relationship Mapping</h3>
+        <p>Every identified entity is mapped — the business, every service, every team member, every location, every certification, every award, every client type, every partner, and every competitor. Relationships typed and directional.</p>
+      </div>
+      <div class="wid-card">
+        <h3>Gap Identification</h3>
+        <p>Every piece of information AI systems need but that does not yet exist in structured form is logged in the Gap Registry. Missing service descriptions, absent founding date, no intent mapping — all gaps ranked by impact and referenced to the downstream fix.</p>
+      </div>
+      <div class="wid-card">
+        <h3>AI Visibility Information Map™</h3>
+        <p>The primary output. A structured visual representation of everything AI can and cannot find about the business — across 100 dimensions, seven categories, with green (present), red (missing), and amber (inconsistent) status for each dimension.</p>
+      </div>
+      <div class="wid-card">
+        <h3>Business Knowledge Graph™</h3>
+        <p>The canonical structured representation of the business as AI systems need to understand it. The primary source of truth for all downstream products — AI READY™, SIGNAL COMPILER™, KNOWLEDGE GRAPH™, and TRUST LAYER™.</p>
+      </div>
+      <div class="wid-card">
+        <h3>Intent Registry</h3>
+        <p>A structured map of all buyer intents the business should appear for — the queries that trigger them, the services that satisfy them, and the negative intents it should be excluded from. Input for AI SIGNALS™ and KNOWLEDGE GRAPH™.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="c">
+    <span class="ey">The 100 Dimensions</span>
+    <h2 class="sh">Seven Visibility Categories</h2>
+    <p class="sl">Every dimension is assessed with a green, red, or amber status. The result is the AI Visibility Information Map™.</p>
+    <div class="cat-list">
+      <div class="cat-item"><div class="cat-n">01</div><div class="cat-body"><h3>Entity Identity</h3><p>Legal name, trading name, all name variants, primary category, subcategory, NACE/SIC code, founding date, canonical URL, social profiles, company registration, VAT, entity type, sameAs references, and all legal identifier types.</p></div><span class="cat-dim">16 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">02</div><div class="cat-body"><h3>Geographic Presence</h3><p>Primary location, registered address, operating locations, service geography, country coverage, city coverage, language coverage, time zone, currency, market segment, regulatory jurisdiction, and local directory presence.</p></div><span class="cat-dim">12 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">03</div><div class="cat-body"><h3>Service Clarity</h3><p>Service names, descriptions, categories, types, target client sector and size, problem solved, solution approach, delivery format and timeline, pricing model and range, outcome delivered, differentiator, guarantee, case evidence, and technology used.</p></div><span class="cat-dim">18 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">04</div><div class="cat-body"><h3>Buyer Intent Alignment</h3><p>Primary and secondary buyer intents, negative intents, FAQ coverage, query-to-service alignment, buyer persona definitions, buyer journey stage coverage, seasonal demand signals, urgency triggers, and all intent filter types.</p></div><span class="cat-dim">14 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">05</div><div class="cat-body"><h3>Technical Signals</h3><p>ai.json, llms.txt, robots.txt AI-permissive status, sitemap currency, all Schema.org types, JSON-LD validity, canonical URL consistency, page speed, mobile readiness, HTTPS, structured data errors, AI crawler accessibility, and edge delivery status.</p></div><span class="cat-dim">16 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">06</div><div class="cat-body"><h3>External Consistency</h3><p>LinkedIn, Crunchbase, company registry, directory consistency. sameAs link validity, external mention consistency, name, address, founding date, service description, team profile, and certification reference consistency across all sources.</p></div><span class="cat-dim">12 dimensions</span></div>
+      <div class="cat-item"><div class="cat-n">07</div><div class="cat-body"><h3>Authority Signals</h3><p>Citation count and quality, sector directory presence, professional body membership, award and certification schema, case study presence and schema markup, proof file status, OTS anchor, third-party verification, and review schema.</p></div><span class="cat-dim">12 dimensions</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="inputs">
+  <div class="c">
+    <span class="ey">Inputs</span>
+    <h2 class="sh">What AI LENS™ Reads</h2>
+    <p class="sl">No website access required. AI LENS™ reads publicly accessible sources and any documents you provide.</p>
+    <div class="inp-grid">
+      <div class="inp-card"><div class="inp-icon">🌐</div><div><h3>Website URL</h3><p>All machine-readable content extracted and structured. Schema markup validated. AI crawler accessibility checked.</p></div></div>
+      <div class="inp-card"><div class="inp-icon">📄</div><div><h3>Documents</h3><p>Service brochures, capability statements, case studies, and certification documents — any PDF or text document you can provide.</p></div></div>
+      <div class="inp-card"><div class="inp-icon">🏢</div><div><h3>Business Data</h3><p>Registration details, certifications, team profiles, founding date, and any other structured business information.</p></div></div>
+      <div class="inp-card"><div class="inp-icon">🔗</div><div><h3>Existing Profiles</h3><p>LinkedIn company page, Crunchbase profile, directory listings, and any other public external representations of the business.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Five Structured Deliverables</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-name">Business Information Inventory</span><div class="out-body"><h4>Complete Information Catalogue</h4><p>Every piece of business information that exists — format, location, and AI-visibility status. The audit of what you have before building what is missing.</p></div></div>
+      <div class="out-item"><span class="out-name">Entity Registry</span><div class="out-body"><h4>All Business Entities Structured</h4><p>Every entity — business, services, team, locations, certifications — with stable identifiers, full property sets, and relationship maps. Primary input for KNOWLEDGE GRAPH™.</p></div></div>
+      <div class="out-item"><span class="out-name">Intent Registry</span><div class="out-body"><h4>Buyer Intent Map</h4><p>All buyer intents the business should appear for, all queries that trigger them, all services that satisfy them, and all negative intents. Primary input for AI SIGNALS™.</p></div></div>
+      <div class="out-item"><span class="out-name">Gap Registry</span><div class="out-body"><h4>Everything That Is Missing</h4><p>Complete list of every piece of information AI systems need that does not exist in machine-readable form. Ranked by impact. Referenced to the downstream product that closes each gap.</p></div></div>
+      <div class="out-item"><span class="out-name">Business Knowledge Graph™</span><div class="out-body"><h4>The Canonical Knowledge Base</h4><p>The structured representation of the business as AI understands it. Source of truth for AI READY™, SIGNAL COMPILER™, KNOWLEDGE GRAPH™, and TRUST LAYER™.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="c">
+    <span class="ey">The Process</span>
+    <h2 class="sh">Six Steps. 24 Hours.</h2>
+    <div class="proc-steps">
+      <div class="pstep"><div class="pstep-n">01</div><div class="pstep-body"><h4>Input Collection</h4><p>Business provides website URL, primary service category, target geography, and any existing documents. No credentials required.</p></div></div>
+      <div class="pstep"><div class="pstep-n">02</div><div class="pstep-body"><h4>Automated Extraction</h4><p>AI LENS™ extracts all machine-readable information from the website and documents. Entity candidates identified. Service descriptions parsed. Certifications catalogued.</p></div></div>
+      <div class="pstep"><div class="pstep-n">03</div><div class="pstep-body"><h4>Structured Mapping</h4><p>Every extracted piece of information structured into the entity and relationship model. Every gap identified against the 100-dimension framework.</p></div></div>
+      <div class="pstep"><div class="pstep-n">04</div><div class="pstep-body"><h4>Human Review</h4><p>Every extraction reviewed by a human analyst. Ambiguous classifications resolved. Missing information flagged for creation. HITL checkpoint — nothing invented.</p></div></div>
+      <div class="pstep"><div class="pstep-n">05</div><div class="pstep-body"><h4>Output Generation</h4><p>All five output files generated. Business Knowledge Graph™ built. AI Visibility Information Map™ produced. Gap Registry finalised.</p></div></div>
+      <div class="pstep"><div class="pstep-n">06</div><div class="pstep-body"><h4>Delivery and Debrief</h4><p>All outputs delivered within 24 hours. Optional 30-minute debrief call to walk through findings and recommended next actions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After AI LENS™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Business information scattered and unstructured</li>
+          <li>No machine-readable entity definition exists</li>
+          <li>Service descriptions narrative — not AI-parseable</li>
+          <li>No buyer intent mapping for any service</li>
+          <li>No gap list — no prioritised action plan</li>
+          <li>No knowledge graph — no canonical source of truth</li>
+          <li>Downstream products cannot operate without this base</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>All business information catalogued and structured</li>
+          <li>Entity Registry with stable identifiers and relationships</li>
+          <li>All service descriptions ready for AI READY™ implementation</li>
+          <li>Intent Registry mapping all services to buyer queries</li>
+          <li>Gap Registry with ranked impact scores and fix references</li>
+          <li>Business Knowledge Graph™ — canonical source of truth built</li>
+          <li>AI READY™, SIGNAL COMPILER™, KNOWLEDGE GRAPH™ can now operate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Knowledge to Implementation</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 03</span>
+        <h3>AI READY™</h3>
+        <p>AI READY™ takes the Business Knowledge Graph™ and Gap Registry from AI LENS™ and transforms them into every structured file AI systems require — automatically.</p>
+        <a href="/products/ai-ready" class="next-link">Go to AI READY™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>AI AUDIT™</h3>
+        <p>Run AI AUDIT™ first to understand your score and gap ranking before AI LENS™ builds the knowledge base for implementation.</p>
+        <a href="/products/ai-audit" class="next-link">← Back to AI AUDIT™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens" style="color:#f5c842">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>

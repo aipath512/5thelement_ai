@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KNOWLEDGE GRAPH™ — Business Entity Relationship Engine — 5thelement.ai</title>
+<meta name="description" content="KNOWLEDGE GRAPH™ models your business as AI understands it. Entities, relationships, cardinalities, cross-references. JSON-LD. The complete graph AI systems need for high-confidence reasoning."/>
+<link rel="canonical" href="https://5thelement.ai/products/knowledge-graph"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* ENTITY TYPES */
+.entities{background:#0a0c0f}
+.ent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.ent-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.ent-card:hover{border-color:rgba(245,200,66,0.3)}
+.ent-icon{font-size:1.5rem;display:block;margin-bottom:0.75rem}
+.ent-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.ent-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+.ent-props{font-family:'Courier New',monospace;font-size:0.7rem;color:#888;display:block;margin-top:0.5rem;line-height:1.8}
+
+/* RELATIONSHIPS */
+.rels{background:#111318}
+.rel-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.rel-item{display:grid;grid-template-columns:auto auto auto 1fr;align-items:center;gap:1rem;padding:1.1rem 2rem;border-bottom:1px solid #1e2329}
+.rel-item:last-child{border-bottom:none}
+.rel-item:hover{background:#0a0c0f}
+.rel-from{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;font-weight:700}
+.rel-type{font-family:'Courier New',monospace;font-size:0.78rem;color:#cccccc;background:#0a0c0f;padding:0.2rem 0.6rem;border-radius:4px;border:1px solid #1e2329}
+.rel-to{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;font-weight:700}
+.rel-desc{font-size:0.82rem;color:#888}
+
+/* CARDINALITIES */
+.cards{background:#0a0c0f}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.card-c{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.card-c h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.card-c .type{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;display:block;margin-bottom:0.5rem}
+.card-c p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+.card-c .example{font-size:0.8rem;color:#888;font-style:italic;margin-top:0.5rem;display:block}
+
+/* CROSS REFS */
+.crossrefs{background:#111318}
+.cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.cr-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.cr-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.75rem}
+.cr-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.cr-list li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem}
+.cr-list li::before{content:"→";color:#f5c842;flex-shrink:0}
+
+/* OUTPUTS */
+.outputs{background:#0a0c0f}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#111318}
+.out-file{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#0a0c0f;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .ent-grid,.card-grid{grid-template-columns:1fr}
+  .rel-item{grid-template-columns:1fr;gap:0.4rem}
+  .rel-desc{display:none}
+  .cr-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>KNOWLEDGE GRAPH™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 05 · Entity Relationship Engine</div>
+    <h1>KNOWLEDGE GRAPH™<br><em>Model Your Business as AI Sees It.</em></h1>
+    <p>KNOWLEDGE GRAPH™ is the Business Entity Relationship Engine. It builds, maintains, and publishes the complete graph of your business — entities, relationships, cardinalities, and cross-references — in the formats AI knowledge systems require for high-confidence reasoning and recommendation.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">9</span><span class="lbl">Entity Types</span></div>
+      <div class="hstat"><span class="val">10</span><span class="lbl">Relationship Types</span></div>
+      <div class="hstat"><span class="val">JSON-LD</span><span class="lbl">Output Format</span></div>
+      <div class="hstat"><span class="val">3</span><span class="lbl">Output Files</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Build Your Graph →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">AI Sees Nodes in a Graph. Not Pages on a Website.</h2>
+    <div class="prob-box">
+      <p>AI systems do not see businesses as collections of web pages. They see them as nodes in a knowledge graph — connected to other nodes by typed, directional relationships. A business that exists only as web pages is processed differently from a business whose entities, relationships, and cross-references are explicitly modelled and published.</p>
+      <p>The difference is not just visibility — it is confidence. An AI system that can traverse a complete, consistent, cross-referenced entity graph assigns <strong>higher confidence to its understanding of that business</strong> — and higher confidence leads to more frequent, more accurate recommendations.</p>
+      <p>KNOWLEDGE GRAPH™ builds and maintains this graph — explicitly, completely, and in the format AI knowledge systems require.</p>
+    </div>
+  </div>
+</section>
+
+<section class="entities">
+  <div class="c">
+    <span class="ey">Entity Types</span>
+    <h2 class="sh">Nine Entity Types. Every Node Modelled.</h2>
+    <p class="sl">Every entity in the business graph is modelled with a stable identifier, full property set, and relationship map.</p>
+    <div class="ent-grid">
+      <div class="ent-card">
+        <span class="ent-icon">🏢</span>
+        <h3>Business</h3>
+        <p>The primary entity. Legal name, trading name, category, founding date, location, legal identifiers, canonical URL, and all property types.</p>
+        <span class="ent-props">legalName · tradingName · category · foundingDate · headquarters · registrationNumber · vatNumber · canonicalUrl</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">⚙️</span>
+        <h3>Service</h3>
+        <p>Every service the business offers. Name, description, type, target client, problem solved, delivery format, pricing model, and outcome delivered.</p>
+        <span class="ent-props">name · description · serviceType · targetClient · problemSolved · deliveryFormat · priceRange · outcome</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">👤</span>
+        <h3>Person</h3>
+        <p>Every team member. Name, role, credentials, expertise areas, professional profiles, and relationship to the business entity.</p>
+        <span class="ent-props">name · jobTitle · credentials · expertiseAreas · linkedInUrl · publicationUrls</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">📍</span>
+        <h3>Location</h3>
+        <p>Every office, facility, or service location. Address, coordinates, type, and service area covered from that location.</p>
+        <span class="ent-props">streetAddress · city · country · coordinates · locationType · serviceArea</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">🏅</span>
+        <h3>Certification</h3>
+        <p>Every certification, accreditation, or qualification. Name, issuing body, validity period, and registry URL for independent verification.</p>
+        <span class="ent-props">name · issuingBody · issuingBodyUrl · validFrom · validUntil · registryUrl</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">🏆</span>
+        <h3>Award</h3>
+        <p>Every award or recognition. Name, awarding body, year received, and reference URL pointing to the awarding body's announcement.</p>
+        <span class="ent-props">name · awardingBody · year · referenceUrl · category</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">🤝</span>
+        <h3>Client</h3>
+        <p>Every named client or client type. Name or sector, relationship type, service engaged, and outcome achieved — anonymised where required.</p>
+        <span class="ent-props">name · sector · companySize · serviceEngaged · outcomeAchieved · relationshipType</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">🔗</span>
+        <h3>Partner</h3>
+        <p>Every partner organisation. Name, relationship type, collaboration scope, and mutual reference URLs.</p>
+        <span class="ent-props">name · partnershipType · collaborationScope · partnerUrl · mutualReference</span>
+      </div>
+      <div class="ent-card">
+        <span class="ent-icon">⚔️</span>
+        <h3>Competitor</h3>
+        <p>Every identified competitor. Name, category overlap, geographic overlap, service overlap, and relative AI visibility positioning.</p>
+        <span class="ent-props">name · categoryOverlap · geographicOverlap · serviceOverlap · aiVisibilityScore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rels">
+  <div class="c">
+    <span class="ey">Relationship Types</span>
+    <h2 class="sh">Ten Typed Directional Relationships</h2>
+    <p class="sl">Every relationship typed, directional, and bidirectional. AI systems traverse the graph in any direction from any entry point.</p>
+    <div class="rel-list">
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">provides</span><span class="rel-to">Service</span><span class="rel-desc">One business, many services. Bidirectional: Service isProvidedBy Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">employs</span><span class="rel-to">Person</span><span class="rel-desc">One business, many team members. Bidirectional: Person isEmployedBy Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">locatedIn</span><span class="rel-to">Location</span><span class="rel-desc">One business, many locations. Bidirectional: Location isLocationOf Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">certifiedBy</span><span class="rel-to">Certification</span><span class="rel-desc">One business, many certifications. Bidirectional: Certification certifies Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">awardedBy</span><span class="rel-to">Award</span><span class="rel-desc">One business, many awards. Bidirectional: Award awardsRecognition Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">servesClient</span><span class="rel-to">Client</span><span class="rel-desc">One business, many client types. Bidirectional: Client isServedBy Business.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">partnersWith</span><span class="rel-to">Partner</span><span class="rel-desc">Many-to-many. Both directions equally valid and equally valued.</span></div>
+      <div class="rel-item"><span class="rel-from">Business</span><span class="rel-type">competingWith</span><span class="rel-to">Competitor</span><span class="rel-desc">Symmetric. If A competingWith B, then B competingWith A.</span></div>
+      <div class="rel-item"><span class="rel-from">Person</span><span class="rel-type">leadsTeam</span><span class="rel-to">Department</span><span class="rel-desc">One person, one or more departments. Leadership hierarchy modelled explicitly.</span></div>
+      <div class="rel-item"><span class="rel-from">Content</span><span class="rel-type">authoredBy</span><span class="rel-to">Person</span><span class="rel-desc">Every content item attributed. Essential for authority layer and editorial transparency.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="c">
+    <span class="ey">Cardinalities</span>
+    <h2 class="sh">Every Relationship Typed with Correct Cardinality</h2>
+    <p class="sl">Cardinalities tell AI systems the nature of each relationship. Incorrect cardinalities produce incorrect knowledge graph inferences.</p>
+    <div class="card-grid">
+      <div class="card-c">
+        <span class="type">One-to-One</span>
+        <h3>Single unique relationship</h3>
+        <p>Used where exactly one entity relates to exactly one other. Ensures AI does not infer multiple instances where only one exists.</p>
+        <span class="example">Business hasFounder Person (one founder per business)</span>
+      </div>
+      <div class="card-c">
+        <span class="type">One-to-Many</span>
+        <h3>Single entity, multiple targets</h3>
+        <p>The most common cardinality. One business provides many services. One business employs many people. One service solves many problems.</p>
+        <span class="example">Business provides Service (one business, many services)</span>
+      </div>
+      <div class="card-c">
+        <span class="type">Many-to-Many</span>
+        <h3>Multiple entities on both sides</h3>
+        <p>Used for partnership and competition relationships where multiple businesses relate to multiple others simultaneously.</p>
+        <span class="example">Person hasExpertise Topic (many people, many topics)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="crossrefs">
+  <div class="c">
+    <span class="ey">Cross-References</span>
+    <h2 class="sh">Every Entity Linked to Its External Representations</h2>
+    <p class="sl">Cross-references are the mechanism by which AI systems verify entity consistency across sources. Without them, the same business may appear as multiple conflicting nodes.</p>
+    <div class="cr-grid">
+      <div class="cr-card">
+        <h3>Business Entity Cross-References</h3>
+        <ul class="cr-list">
+          <li>LinkedIn company page URL</li>
+          <li>Crunchbase organisation URL</li>
+          <li>National company registry URL</li>
+          <li>Relevant sector directory listings</li>
+          <li>Google Business Profile URL</li>
+          <li>Wikipedia or Wikidata entry (if applicable)</li>
+          <li>Industry association membership registry</li>
+        </ul>
+      </div>
+      <div class="cr-card">
+        <h3>Person Entity Cross-References</h3>
+        <ul class="cr-list">
+          <li>LinkedIn personal profile URL</li>
+          <li>Professional body registry entry</li>
+          <li>Published content URLs (articles, papers)</li>
+          <li>Speaker profile URLs</li>
+          <li>Industry directory listings</li>
+          <li>GitHub or portfolio URL (if relevant)</li>
+          <li>ORCID or professional ID (academic/research)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Three Structured Graph Files</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-file">entities.json</span><div class="out-body"><h4>All Entities Structured</h4><p>Every entity in the business graph in structured JSON format. Stable identifiers. Full property sets. Relationship references. Used by AI SIGNALS™, EDGE INJECTOR™, and AI SONAR™.</p></div></div>
+      <div class="out-item"><span class="out-file">entity-graph.public.jsonld</span><div class="out-body"><h4>The Complete Linked Data Graph</h4><p>Every relationship typed and directional. Every entity connected. Every cross-reference explicit. The file AI systems use to build their knowledge graph entry for the business. Published at domain root.</p></div></div>
+      <div class="out-item"><span class="out-file">knowledge-graph.json</span><div class="out-body"><h4>Human-Readable Graph Structure</h4><p>Full relationship map with cardinalities, bidirectional links, and cross-reference arrays. Used as the primary input for EDGE INJECTOR™ and AI SONAR™. Versioned and SHA-256 ready.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After KNOWLEDGE GRAPH™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Business exists as a fragmented, partially-connected node</li>
+          <li>AI identifies some properties but cannot traverse relationships</li>
+          <li>Services not connected to clients, outcomes, or evidence</li>
+          <li>Team members not linked to expertise or authority claims</li>
+          <li>No cross-references — AI cannot verify entity consistency</li>
+          <li>AI confidence low — recommendations inconsistent</li>
+          <li>Complex service portfolio appears simple or unclear to AI</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>Business is a fully-connected, traversable entity in the AI knowledge graph</li>
+          <li>All nine entity types modelled and connected</li>
+          <li>Services connected to clients, outcomes, and evidence</li>
+          <li>Team authority linked to expertise, credentials, and publications</li>
+          <li>Full cross-reference network — AI confirms entity consistency</li>
+          <li>AI confidence high — recommendations consistent and accurate</li>
+          <li>Complex service portfolio fully mapped — AI matches each service to the right buyer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Graph to Edge</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 06</span>
+        <h3>EDGE INJECTOR™</h3>
+        <p>EDGE INJECTOR™ deploys your complete knowledge graph and signal layer to the Cloudflare network edge — instantly, globally, and without any changes to your existing website.</p>
+        <a href="/products/edge-injector" class="next-link">Go to EDGE INJECTOR™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>AI SIGNALS™</h3>
+        <p>KNOWLEDGE GRAPH™ works alongside AI SIGNALS™. The entity graph is the source for the Identity &amp; Entity signal category.</p>
+        <a href="/products/ai-signals" class="next-link">← Back to AI SIGNALS™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph" style="color:#f5c842">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>
