@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Intent and Governance Signals — The 58 Signals Explained | 5thelement.ai</title>
+<meta name="description" content="Complete reference for the 58 Intent and Governance AI signals. Service-to-intent mapping, buyer personas, negative intents, permission declarations, governance files. The buyer matching layer."/>
+<link rel="canonical" href="https://5thelement.ai/blog/intent-and-governance-signals"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://5thelement.ai/#website","url":"https://5thelement.ai","name":"5thelement.ai"},
+{"@type":"Organization","@id":"https://5thelement.ai/#org","name":"AiVenture S.R.L.","url":"https://5thelement.ai","sameAs":["https://linkedin.com/company/107338970","https://x.com/aipath512"]},
+{"@type":"WebPage","@id":"https://5thelement.ai/blog/intent-and-governance-signals#webpage","url":"https://5thelement.ai/blog/intent-and-governance-signals","name":"Intent and Governance Signals — The 58 Signals","isPartOf":{"@id":"https://5thelement.ai/#website"}},
+{"@type":"BreadcrumbList","@id":"https://5thelement.ai/blog/intent-and-governance-signals#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://5thelement.ai/blog"},{"@type":"ListItem","position":3,"name":"The 167 AI Signals","item":"https://5thelement.ai/blog/the-167-ai-signals"},{"@type":"ListItem","position":4,"name":"Intent and Governance Signals","item":"https://5thelement.ai/blog/intent-and-governance-signals"}]},
+{"@type":"Article","@id":"https://5thelement.ai/blog/intent-and-governance-signals#article","headline":"Intent and Governance Signals — The 58 Signals Explained","author":{"@id":"https://5thelement.ai/#org"},"publisher":{"@id":"https://5thelement.ai/#org"},"datePublished":"2026-06-10","dateModified":"2026-06-10","mainEntityOfPage":{"@id":"https://5thelement.ai/blog/intent-and-governance-signals#webpage"},"about":{"@type":"Thing","name":"Intent Signals"},"keywords":"intent signals, governance signals, AI signals, intents.json, buyer intent, negative intent, AI permissions"},
+{"@type":"TechArticle","headline":"Intent and Governance Signals — The 58 Signals","author":{"@id":"https://5thelement.ai/#org"},"proficiencyLevel":"Advanced"},
+{"@type":"FAQPage","@id":"https://5thelement.ai/blog/intent-and-governance-signals#faq","mainEntity":[
+{"@type":"Question","name":"What are Intent and Governance signals?","acceptedAnswer":{"@type":"Answer","text":"Intent and Governance signals are the 58 data points that map a business to buyer intent and declare its governance posture. They cover service-to-intent mappings, buyer personas, negative intents, AI crawler permissions, and all governance and compliance file statuses."}},
+{"@type":"Question","name":"What is a negative intent signal?","acceptedAnswer":{"@type":"Answer","text":"A negative intent signal explicitly tells AI systems which buyer queries the business should NOT appear for. Without negative intents, AI systems may match a business to queries where it cannot help or is not relevant — damaging recommendation accuracy and buyer trust."}},
+{"@type":"Question","name":"What is intents.json?","acceptedAnswer":{"@type":"Answer","text":"intents.json is the machine-readable buyer intent registry deployed at the domain root. It maps every service to the buyer queries that should trigger a recommendation, defines buyer personas, declares negative intents, and specifies geographic and sector filters."}},
+{"@type":"Question","name":"Why do Intent signals matter for AI recommendation?","acceptedAnswer":{"@type":"Answer","text":"Without Intent signals, AI systems cannot match the business to the correct buyer queries. A business with no intent mapping will appear for generic queries at best. Intent signals enable precise buyer matching — the specific queries where conversion probability is highest."}},
+{"@type":"Question","name":"What is the allow-lane-matrix.json file?","acceptedAnswer":{"@type":"Answer","text":"allow-lane-matrix.json is the permission layer that specifies which AI systems have access to which signal tiers. It enables tiered access control — for example, public signals available to all AI systems, gated signals available only to specific platforms."}}
+]},
+{"@type":"ItemList","name":"The 58 Intent and Governance Signals","numberOfItems":58,"url":"https://5thelement.ai/blog/intent-and-governance-signals"},
+{"@type":"DefinedTerm","name":"Intent Signal","description":"A machine-readable data point that maps a business to buyer queries and intent patterns","url":"https://5thelement.ai/blog/glossary#intent-signal"},
+{"@type":"DefinedTerm","name":"Negative Intent","description":"An explicit declaration of buyer queries the business should NOT appear for","url":"https://5thelement.ai/blog/glossary#negative-intent"},
+{"@type":"DefinedTerm","name":"intents.json","description":"Machine-readable buyer intent registry mapping services to buyer queries","url":"https://5thelement.ai/blog/glossary#intents-json"},
+{"@type":"SoftwareApplication","name":"AI AUDIT™","applicationCategory":"BusinessApplication","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI LENS™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI READY™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI SIGNALS™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"EDGE INJECTOR™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"CreativeWork","name":"ADI™ — AI Delivery Infrastructure","author":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"ItemList","name":"AI Visibility Blog","url":"https://5thelement.ai/blog"},
+{"@type":"DefinedTermSet","name":"AI Visibility Glossary","url":"https://5thelement.ai/blog/glossary"},
+{"@type":"Claim","text":"Intent signals are the buyer matching layer — without them a business is visible but not findable for the right queries at the right moment"},
+{"@type":"Course","name":"Intent Signal Implementation","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"SpecialAnnouncement","name":"Intent and Governance Signals Reference","datePosted":"2026-06-10"},
+{"@type":"HowTo","name":"How to deploy Intent and Governance signals","step":[{"@type":"HowToStep","name":"Map intents","text":"Map every service to buyer queries in AI LENS™"},{"@type":"HowToStep","name":"Define personas","text":"Define all buyer personas with filters"},{"@type":"HowToStep","name":"Declare negatives","text":"List all negative intent queries"},{"@type":"HowToStep","name":"Deploy intents.json","text":"Publish buyer intent registry at domain root"},{"@type":"HowToStep","name":"Add governance files","text":"Deploy governance.json and allow-lane-matrix.json"}]},
+{"@type":"WebPage","name":"intents.json","url":"https://5thelement.ai/products/ai-signals"},
+{"@type":"WebPage","name":"Recommendable™","url":"https://5thelement.ai/recommendable"}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:0.35rem}.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}.nav-links a:hover{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329;flex-wrap:wrap}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.post-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;padding:3rem 0 5rem;align-items:start}
+.post-body{min-width:0}
+.post-sidebar{position:sticky;top:84px}
+.post-cat{display:inline-flex;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.7rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:999px;margin-bottom:1.25rem}
+.post-body h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
+.post-meta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:0.82rem;color:#888;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid #1e2329}
+.post-content h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin:2.5rem 0 1rem}
+.post-content h3{font-size:1.1rem;font-weight:700;color:#fff;margin:2rem 0 0.75rem}
+.post-content p{font-size:0.97rem;color:#cccccc;line-height:1.85;margin-bottom:1.25rem}
+.post-content strong{color:#fff;font-weight:600}
+.post-content a{color:#f5c842;text-decoration:underline}
+.post-content ul{padding-left:1.5rem;margin-bottom:1.25rem}
+.post-content ul li{font-size:0.95rem;color:#cccccc;line-height:1.8;margin-bottom:0.35rem}
+.post-content blockquote{border-left:3px solid #f5c842;padding:1rem 1.5rem;background:#111318;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:1rem;color:#cccccc;font-style:italic}
+.callout{background:#111318;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0}
+.callout h4{font-size:0.88rem;font-weight:700;color:#f5c842;margin-bottom:0.5rem}
+.callout p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.signal-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.83rem}
+.signal-table th{background:#111318;color:#fff;font-weight:700;padding:0.7rem 1rem;text-align:left;border-bottom:2px solid #1e2329}
+.signal-table td{padding:0.65rem 1rem;border-bottom:1px solid #1e2329;color:#cccccc;vertical-align:top;line-height:1.5}
+.signal-table tr:last-child td{border-bottom:none}
+.signal-table tr:hover td{background:rgba(255,255,255,0.02)}
+.sn{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;font-weight:700;white-space:nowrap}
+.si{font-size:0.78rem;color:#888;font-style:italic}
+.tag-h{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.2);color:#f87171;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.tag-m{background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.2);color:#fbbf24;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.tag-l{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);color:#4ade80;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.tag-vh{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);color:#a78bfa;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.group-header{background:rgba(245,200,66,0.05);border:1px solid rgba(245,200,66,0.15);border-radius:8px;padding:0.85rem 1.25rem;margin:1.75rem 0 0.75rem;display:flex;align-items:center;gap:0.75rem}
+.group-header h3{font-size:0.92rem;font-weight:700;color:#fff;margin:0}
+.group-count{font-size:0.72rem;font-weight:800;color:#f5c842;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.2);padding:0.15rem 0.6rem;border-radius:999px}
+.code-block{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:1.25rem 1.5rem;font-family:'Courier New',monospace;font-size:0.82rem;color:#cccccc;line-height:1.9;margin:1.25rem 0;overflow-x:auto}
+.ck{color:#f5c842}.cv{color:#4ade80}.cc{color:#888}
+.faq-section{background:#111318;border-radius:12px;padding:2rem;margin:2.5rem 0}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.faq-item{border-bottom:1px solid #1e2329;padding-bottom:1.25rem;margin-bottom:1.25rem}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-item h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.faq-item p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.sidebar-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#f5c842;margin-bottom:1rem}
+.sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.sidebar-card ul li a{font-size:0.85rem;color:#cccccc;display:flex;gap:0.4rem;line-height:1.5}.sidebar-card ul li a:hover{color:#f5c842}
+.sidebar-card ul li a::before{content:"→";color:#f5c842;flex-shrink:0;font-size:0.8rem}
+.sidebar-cta{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:1.5rem;text-align:center}
+.sidebar-cta h4{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.sidebar-cta p{font-size:0.82rem;color:#cccccc;line-height:1.6;margin-bottom:1rem}
+.sidebar-cta a{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.85rem;padding:0.7rem 1.25rem;border-radius:6px}
+.related{border-top:1px solid #1e2329;padding-top:3rem;margin-top:3rem}
+.related h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.related-card{background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s}
+.related-card:hover{border-color:rgba(245,200,66,0.4)}
+.related-cat{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.4rem}
+.related-card h4{font-size:0.9rem;font-weight:700;color:#fff;line-height:1.4}.related-card:hover h4{color:#f5c842}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:900px){.post-layout{grid-template-columns:1fr}.post-sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:block}.signal-table{display:block;overflow-x:auto}.fgrid{grid-template-columns:1fr 1fr}.fbot{flex-direction:column;text-align:center}}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu"><ul>
+    <li><a href="/solutions">Solutions</a></li><li><a href="/services">Services</a></li>
+    <li><a href="/products">Products</a></li><li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li><li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+  </ul></div>
+</nav>
+
+<div class="wrap"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/blog">Blog</a><span class="bc-sep">›</span><a href="/blog/the-167-ai-signals">The 167 AI Signals</a><span class="bc-sep">›</span><span>Intent and Governance</span></div></div>
+
+<div class="wrap">
+  <div class="post-layout">
+    <article class="post-body">
+      <span class="post-cat">AI Signals · Category 03</span>
+      <h1>Intent and Governance Signals — The 58 Signals Explained</h1>
+      <div class="post-meta-row">
+        <span>📅 June 10, 2026</span>
+        <span>🏢 AiVenture S.R.L.</span>
+        <span>⏱ 12 min read</span>
+        <span>🔗 <a href="/blog/glossary#intent-signal" style="color:#f5c842;text-decoration:none">Glossary: Intent Signal</a></span>
+      </div>
+
+      <div class="post-content">
+
+        <h2>What Are Intent and Governance Signals?</h2>
+        <p>Intent and Governance signals are the <strong>58 data points</strong> that map a business to buyer intent and declare its governance posture. Where <a href="/blog/identity-and-entity-signals">Identity signals</a> establish who the business is and <a href="/blog/trust-and-proof-signals">Trust signals</a> prove it can be relied upon, Intent signals answer a more precise question: <em>for which buyer queries, which buyer types, and which geographies should this business be recommended?</em></p>
+        <p>Without Intent signals, AI systems perform generic category matching — they may find the business for broad queries but miss the specific, high-intent buyer queries where conversion probability is highest. Intent signals are the buyer matching layer that transforms general AI visibility into precise buyer-query alignment.</p>
+
+        <blockquote>A business without Intent signals is like a skilled specialist with no appointment book. AI knows they exist. AI does not know who to send to them, when, or for what problem.</blockquote>
+
+        <h2>Intent vs Governance — Two Distinct Functions</h2>
+        <p><strong>Intent signals</strong> map services to buyer queries — who should find this business, for what reason, at what point in the buying journey, and in which geographic or sector context.</p>
+        <p><strong>Governance signals</strong> declare the rules of engagement — what AI systems are permitted to do with the business's content, which signal tiers are accessible to which AI systems, and what compliance posture the business declares to AI governance evaluators.</p>
+
+        <h2>The Six Intent and Governance Signal Groups</h2>
+
+        <div class="group-header"><h3>Group 1 — Service Category Mapping</h3><span class="group-count">9 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">intent.primary-service-category</td><td>Primary service category as defined in the canonical taxonomy<span class="si"> — must match entity.category</span></td><td><span class="tag-vh">Very High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.secondary-service-categories</td><td>All secondary service categories the business operates in</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.service-to-intent-map</td><td>Explicit mapping of each service to the buyer queries that should trigger it</td><td><span class="tag-vh">Very High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.problem-to-service-map</td><td>Maps buyer problems to the services that solve them — enables problem-based query matching</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.primary-problem-solved</td><td>Primary problem the business solves — stated in buyer language, not company language</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.secondary-problems-solved</td><td>All secondary problems addressed across the service portfolio</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.delivery-format</td><td>How services are delivered<span class="si"> — remote, on-site, hybrid, SaaS, consulting, software</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.engagement-model</td><td>How the business engages clients<span class="si"> — project, retainer, subscription, one-off</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.primary-outcome</td><td>Primary measurable outcome delivered to clients — stated quantitatively where possible</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 2 — Buyer Personas</h3><span class="group-count">9 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">intent.primary-buyer-persona</td><td>Primary buyer — role, sector, company size, and decision authority</td><td><span class="tag-vh">Very High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.secondary-buyer-personas</td><td>All secondary buyer types the business serves</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.buyer-role-filter</td><td>Specific job titles or roles of primary buyers<span class="si"> — CFO, Head of IT, Operations Manager</span></td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.company-size-filter</td><td>Target company size range<span class="si"> — SME, Mid-market, Enterprise</span></td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.sector-filter</td><td>Target sectors — enables sector-specific query matching</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.buyer-journey-stage</td><td>Buyer journey stages covered<span class="si"> — awareness, consideration, decision</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.buying-trigger</td><td>Events that trigger a buying decision for this service category</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.decision-timeline</td><td>Typical decision timeline for the primary service</td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.budget-range</td><td>Budget range signal — enables matching to queries with budget context</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 3 — Geographic and Language Filters</h3><span class="group-count">7 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">intent.primary-geography</td><td>Primary geographic market with explicit country or region declaration</td><td><span class="tag-vh">Very High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.secondary-geographies</td><td>All secondary geographic markets served</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.excluded-geographies</td><td>Explicit list of geographies where the business does NOT operate</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.primary-language</td><td>Primary service delivery language</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.secondary-languages</td><td>All secondary service delivery languages</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.currency-filter</td><td>Currencies accepted — enables matching for location-specific queries</td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.timezone-coverage</td><td>Timezone coverage for service delivery</td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 4 — Negative Intents</h3><span class="group-count">7 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">intent.negative-queries</td><td>Explicit list of buyer queries the business should NOT appear for</td><td><span class="tag-vh">Very High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.negative-sectors</td><td>Sectors the business explicitly does not serve</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.negative-geographies</td><td>Geographies explicitly excluded from service delivery</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.negative-company-sizes</td><td>Company sizes the business does not serve<span class="si"> — e.g. consumer, micro-business</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.negative-service-types</td><td>Service types explicitly outside scope<span class="si"> — prevents AI from recommending for wrong services</span></td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.competitor-disambiguation</td><td>Explicit disambiguation from named competitors with similar names or categories</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.not-a-service-declaration</td><td>Explicit declaration of capabilities the business does not offer to prevent misclassification</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 5 — AI Permission and Access Control</h3><span class="group-count">12 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">gov.llms-txt-status</td><td>llms.txt present, accessible, and correctly structured at domain root</td><td><span class="tag-vh">Very High</span></td><td>llms.txt</td></tr>
+            <tr><td class="sn">gov.ai-json-status</td><td>ai.json present, accessible, and schema-valid at domain root</td><td><span class="tag-vh">Very High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">gov.intents-json-status</td><td>intents.json present, accessible, and correctly structured at domain root</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">gov.ai-actions-json-status</td><td>ai-actions.json present — declares what AI systems are permitted to do</td><td><span class="tag-h">High</span></td><td>ai-actions.json</td></tr>
+            <tr><td class="sn">gov.ai-routes-json-status</td><td>ai-routes.json present — routes buyer intent to specific pages or contact methods</td><td><span class="tag-m">Medium</span></td><td>ai-routes.json</td></tr>
+            <tr><td class="sn">gov.allow-lane-matrix-status</td><td>allow-lane-matrix.json present — tiered access control for AI system signal access</td><td><span class="tag-m">Medium</span></td><td>allow-lane-matrix.json</td></tr>
+            <tr><td class="sn">gov.robots-txt-ai-permissions</td><td>robots.txt explicitly permits all major AI crawlers — GPTBot, anthropic-ai, Google-Extended</td><td><span class="tag-vh">Very High</span></td><td>robots.txt</td></tr>
+            <tr><td class="sn">gov.crawler-gptbot</td><td>GPTBot explicitly permitted in robots.txt</td><td><span class="tag-h">High</span></td><td>robots.txt</td></tr>
+            <tr><td class="sn">gov.crawler-anthropic</td><td>anthropic-ai explicitly permitted in robots.txt</td><td><span class="tag-h">High</span></td><td>robots.txt</td></tr>
+            <tr><td class="sn">gov.crawler-google-extended</td><td>Google-Extended explicitly permitted in robots.txt</td><td><span class="tag-h">High</span></td><td>robots.txt</td></tr>
+            <tr><td class="sn">gov.crawler-perplexity</td><td>PerplexityBot explicitly permitted in robots.txt</td><td><span class="tag-h">High</span></td><td>robots.txt</td></tr>
+            <tr><td class="sn">gov.ai-content-usage</td><td>Explicit declaration of permitted AI content usage — training, retrieval, citation</td><td><span class="tag-m">Medium</span></td><td>llms.txt</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 6 — Pricing and Commercial Signals</h3><span class="group-count">7 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">intent.pricing-model</td><td>Pricing model<span class="si"> — fixed fee, hourly, retainer, subscription, custom</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.pricing-range</td><td>Indicative price range — enables matching for budget-qualified queries</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.free-tier</td><td>Whether a free tier, trial, or entry-level offer exists</td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.minimum-engagement</td><td>Minimum engagement size or commitment</td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.payment-methods</td><td>Accepted payment methods — relevant for geographic query matching</td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.contract-type</td><td>Contract type available<span class="si"> — project contract, MSA, NDA, framework agreement</span></td><td><span class="tag-l">Low</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">intent.procurement-compatibility</td><td>Compatibility with procurement frameworks<span class="si"> — public sector, EU procurement</span></td><td><span class="tag-m">Medium</span></td><td>intents.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 7 — Governance Declarations</h3><span class="group-count">9 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">gov.eu-ai-act-readiness</td><td>EU AI Act readiness posture declaration — supports readiness, never certifies</td><td><span class="tag-h">High</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.hitl-declaration</td><td>Human-in-the-Loop governance protocol documented and machine-readable</td><td><span class="tag-h">High</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.gdpr-posture</td><td>GDPR compliance posture with legal basis references</td><td><span class="tag-m">Medium</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.data-residency</td><td>Data residency declaration — EU data only, specific country, global</td><td><span class="tag-m">Medium</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.ai-tool-usage</td><td>Declaration of AI tools used in business operations</td><td><span class="tag-m">Medium</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.epistemic-standard</td><td>Claims standards declaration — what the business will and will not assert</td><td><span class="tag-m">Medium</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.content-policy</td><td>Content policy declaration — editorial standards and authorship attribution</td><td><span class="tag-l">Low</span></td><td>policy.json</td></tr>
+            <tr><td class="sn">gov.terms-of-use</td><td>Terms of use URL — machine-readable reference</td><td><span class="tag-l">Low</span></td><td>governance.json</td></tr>
+            <tr><td class="sn">gov.privacy-policy</td><td>Privacy policy URL — must be consistent with GDPR declaration</td><td><span class="tag-l">Low</span></td><td>governance.json</td></tr>
+          </tbody>
+        </table>
+
+        <h2>The intents.json Structure</h2>
+        <p>intents.json is the primary file for Intent signals. It is deployed at the domain root and read by AI systems to perform buyer-query matching. A minimal valid intents.json includes:</p>
+        <div class="code-block">
+          <div><span class="cc">{</span></div>
+          <div>&nbsp;&nbsp;<span class="ck">"entity"</span>: <span class="cv">"https://yourdomain.com"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"primary_service"</span>: <span class="cv">"AI Visibility Infrastructure"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"primary_buyer"</span>: <span class="cv">"B2B Marketing and Digital Leaders"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="ck">"service_intents"</span>: <span class="cc">[</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cc">{</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">"service"</span>: <span class="cv">"AI AUDIT™"</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">"triggers"</span>: <span class="cc">[</span><span class="cv">"how visible is my business to AI"</span>, <span class="cv">"AI readiness assessment"</span><span class="cc">]</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">"buyer_role"</span>: <span class="cv">"CMO, Head of Digital"</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">"geography"</span>: <span class="cv">"EU"</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cc">}</span></div>
+          <div>&nbsp;&nbsp;<span class="cc">],</span></div>
+          <div>&nbsp;&nbsp;<span class="ck">"negative_intents"</span>: <span class="cc">[</span><span class="cv">"consumer marketing"</span>, <span class="cv">"social media management"</span><span class="cc">]</span></div>
+          <div><span class="cc">}</span></div>
+        </div>
+
+        <div class="callout">
+          <h4>Negative Intents — The Most Underdeployed Signal</h4>
+          <p>Negative intents are the most commonly missing Intent signal. Businesses that deploy service-to-intent mappings but skip negative intents risk being recommended for queries where they cannot help — damaging the AI recommendation accuracy and, ultimately, buyer trust. A well-defined negative intent list is as valuable as a well-defined positive intent list. Both are built during the <a href="/products/ai-lens" style="color:#f5c842">AI LENS™</a> knowledge acquisition phase.</p>
+        </div>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>What are Intent and Governance signals?</h3>
+            <p>Intent and Governance signals are the 58 data points that map a business to buyer intent and declare its governance posture. They cover service-to-intent mappings, buyer personas, negative intents, AI crawler permissions, and all governance and compliance file statuses.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is a negative intent signal?</h3>
+            <p>A negative intent signal explicitly tells AI systems which buyer queries the business should NOT appear for. Without negative intents, AI systems may match a business to queries where it cannot help — damaging recommendation accuracy and buyer trust.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is intents.json?</h3>
+            <p>intents.json is the machine-readable buyer intent registry deployed at the domain root. It maps every service to the buyer queries that should trigger a recommendation, defines buyer personas, declares negative intents, and specifies geographic and sector filters.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why do Intent signals matter for AI recommendation?</h3>
+            <p>Without Intent signals, AI systems cannot match the business to the correct buyer queries. A business with no intent mapping will appear for generic queries at best — and miss the specific buyer intent queries where conversion probability is highest.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is the allow-lane-matrix.json file?</h3>
+            <p>allow-lane-matrix.json is the permission layer that specifies which AI systems have access to which signal tiers. It enables tiered access control — public signals available to all AI systems, gated signals available only to specific platforms.</p>
+          </div>
+        </div>
+
+        <div class="related">
+          <h3>Signal Category Deep Dives</h3>
+          <div class="related-grid">
+            <a href="/blog/the-167-ai-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>The 167 AI Signals — Complete Overview</h4></a>
+            <a href="/blog/identity-and-entity-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>Identity and Entity Signals — The 48 Signals</h4></a>
+            <a href="/blog/trust-and-proof-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>Trust and Proof Signals — The 61 Signals</h4></a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-cta">
+        <h4>Map Your Buyer Intent</h4>
+        <p>AI LENS™ builds your complete intent registry — positive and negative — from structured business interviews. Free assessment.</p>
+        <a href="/contact">Start Free Audit →</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Signal Groups</h4>
+        <ul>
+          <li><a href="#group-1">Service Mapping (9)</a></li>
+          <li><a href="#group-2">Buyer Personas (9)</a></li>
+          <li><a href="#group-3">Geographic Filters (7)</a></li>
+          <li><a href="#group-4">Negative Intents (7)</a></li>
+          <li><a href="#group-5">AI Permissions (12)</a></li>
+          <li><a href="#group-6">Commercial Signals (7)</a></li>
+          <li><a href="#group-7">Governance (9)</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Intent Products</h4>
+        <ul>
+          <li><a href="/products/ai-lens">AI LENS™ — Build Intents</a></li>
+          <li><a href="/products/ai-ready">AI READY™ — Generate Files</a></li>
+          <li><a href="/products/ai-signals">AI SIGNALS™ — Deploy</a></li>
+          <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Other Signal Categories</h4>
+        <ul>
+          <li><a href="/blog/identity-and-entity-signals">Identity and Entity (48)</a></li>
+          <li><a href="/blog/trust-and-proof-signals">Trust and Proof (61)</a></li>
+          <li><a href="/blog/the-167-ai-signals">All 167 Signals</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Glossary Terms</h4>
+        <ul>
+          <li><a href="/blog/glossary#intent-signal">Intent Signal</a></li>
+          <li><a href="/blog/glossary#negative-intent">Negative Intent</a></li>
+          <li><a href="/blog/glossary#intents-json">intents.json</a></li>
+          <li><a href="/blog/glossary#buyer-persona">Buyer Persona</a></li>
+          <li><a href="/blog/glossary#governance">Governance</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc"><a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a><a href="https://x.com/aipath512" target="_blank">X</a><a href="https://github.com/aipath512" target="_blank">GitHub</a></div>
+      </div>
+      <div class="fcol"><h5>Blog</h5><ul>
+        <li><a href="/blog">All Posts</a></li>
+        <li><a href="/blog/the-167-ai-signals">167 AI Signals</a></li>
+        <li><a href="/blog/intent-and-governance-signals">Intent Signals</a></li>
+        <li><a href="/blog/trust-and-proof-signals">Trust Signals</a></li>
+        <li><a href="/blog/glossary">Glossary</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products">All Products</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem"><a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a><a href="https://aiventure.ro" target="_blank">AiVenture.ro</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.contains('open')?(mmenu.classList.remove('open'),hbtn.textContent='☰'):(mmenu.classList.add('open'),hbtn.textContent='✕');});
+</script>
+</body>
+</html>
