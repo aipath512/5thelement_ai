@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI SONAR™ — Monitor AI Visibility Across All Major Systems — 5thelement.ai</title>
+<meta name="description" content="AI SONAR™ continuously monitors how your business appears across ChatGPT, Gemini, Claude, Copilot and Perplexity. Mentions. Rankings. Competitors. Signal health. Weekly reports."/>
+<link rel="canonical" href="https://5thelement.ai/products/ai-sonar"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* FIVE SYSTEMS */
+.systems{background:#0a0c0f}
+.sys-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.25rem}
+.sys-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;text-align:center;transition:border-color 0.2s}
+.sys-card:hover{border-color:rgba(245,200,66,0.4)}
+.sys-icon{font-size:1.75rem;display:block;margin-bottom:0.75rem}
+.sys-card h3{font-size:0.88rem;font-weight:700;color:#fff;margin-bottom:0.4rem}
+.sys-card p{font-size:0.78rem;color:#cccccc;line-height:1.6}
+
+/* SIX MONITORS */
+.monitors{background:#111318}
+.mon-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.25rem}
+.mon-card{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem;align-items:start;transition:border-color 0.2s}
+.mon-card:hover{border-color:rgba(245,200,66,0.3)}
+.mon-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;line-height:1}
+.mon-body h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.mon-body p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+.mon-body .freq{font-size:0.72rem;font-weight:700;color:#f5c842;display:block;margin-top:0.5rem;font-family:'Courier New',monospace}
+
+/* ALERT TYPES */
+.alerts{background:#0a0c0f}
+.alert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.alert-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;gap:1rem;align-items:flex-start}
+.alert-icon{font-size:1.4rem;flex-shrink:0}
+.alert-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.35rem}
+.alert-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-name{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* METHODOLOGY */
+.method{background:#0a0c0f}
+.meth-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.meth-step{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.meth-step:last-child{border-bottom:none}
+.meth-step:hover{background:#111318}
+.meth-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.meth-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.meth-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* BA */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#0a0c0f;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .sys-grid{grid-template-columns:1fr 1fr}
+  .mon-card{grid-template-columns:1fr;gap:0.75rem}
+  .alert-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .meth-step{grid-template-columns:2.5rem 1fr}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}.sys-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>AI SONAR™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 09 · Visibility Monitoring</div>
+    <h1>AI SONAR™<br><em>Monitor Every AI System. Track Every Mention.</em></h1>
+    <p>AI SONAR™ continuously monitors how your business appears across ChatGPT, Gemini, Claude, Copilot, and Perplexity — delivering structured reports on visibility status, mention accuracy, competitor movements, and signal health before problems cost you recommendations.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">5</span><span class="lbl">AI Systems</span></div>
+      <div class="hstat"><span class="val">6</span><span class="lbl">Monitor Types</span></div>
+      <div class="hstat"><span class="val">24/7</span><span class="lbl">Continuous</span></div>
+      <div class="hstat"><span class="val">Weekly</span><span class="lbl">Reports</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Start Monitoring →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">AI Visibility Is Not a Destination. It Is a Dynamic State.</h2>
+    <div class="prob-box">
+      <p>AI systems continuously update their knowledge graphs, re-index content, adjust weighting algorithms, and respond to new information from competitors, industry sources, and user feedback patterns. A business that achieves Recommendable™ status today is not guaranteed to maintain it tomorrow.</p>
+      <p>Signals decay when they are not maintained. Competitors strengthen their authority layers. New AI systems enter the market. Events — a name change, a new competitor, a regulatory development — can alter how AI systems classify and recommend a business <strong>without any action on the business's part.</strong></p>
+      <p>AI SONAR™ is the monitoring layer that ensures a business always knows exactly where it stands — in real time, across every major AI system, against every relevant competitor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="systems">
+  <div class="c">
+    <span class="ey">Five AI Systems</span>
+    <h2 class="sh">Every Major AI System. Monitored Simultaneously.</h2>
+    <p class="sl">Consistent recommendation across all five systems is the mark of true AI authority. AI SONAR™ monitors all five simultaneously.</p>
+    <div class="sys-grid">
+      <div class="sys-card"><span class="sys-icon">🤖</span><h3>ChatGPT</h3><p>OpenAI's GPT-4o and successors — the most widely used AI assistant globally</p></div>
+      <div class="sys-card"><span class="sys-icon">♊</span><h3>Gemini</h3><p>Google's AI system — deeply integrated with Google Search and Workspace</p></div>
+      <div class="sys-card"><span class="sys-icon">⚡</span><h3>Claude</h3><p>Anthropic's Claude — increasingly used for professional and enterprise queries</p></div>
+      <div class="sys-card"><span class="sys-icon">🪟</span><h3>Copilot</h3><p>Microsoft's AI — integrated into Bing, Edge, and Microsoft 365</p></div>
+      <div class="sys-card"><span class="sys-icon">🔍</span><h3>Perplexity</h3><p>AI-native search engine — high adoption among research-oriented buyers</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="monitors">
+  <div class="c">
+    <span class="ey">What It Monitors</span>
+    <h2 class="sh">Six Monitor Types. Continuous Coverage.</h2>
+    <p class="sl">Each monitor type targets a specific aspect of AI visibility. Together they provide complete situational awareness.</p>
+    <div class="mon-list">
+      <div class="mon-card">
+        <div class="mon-n">01</div>
+        <div class="mon-body">
+          <h3>Mentions</h3>
+          <p>Every time the business is mentioned in an AI-generated answer — across all five systems. Records the query that triggered the mention, the context, the accuracy of the description, and the sentiment. Distinguishes between primary recommendation, secondary mention, and comparison mention.</p>
+          <span class="freq">Frequency: Continuous · 24/7</span>
+        </div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-n">02</div>
+        <div class="mon-body">
+          <h3>Rankings</h3>
+          <p>For every target buyer query in the Intent Registry, tracks the business's current position in AI recommendation responses — first, second, third, or absent. Week-over-week trend with directional indicator. Competitor ranking positions tracked on the same queries for direct comparison.</p>
+          <span class="freq">Frequency: Weekly per query · Daily for high-priority queries</span>
+        </div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-n">03</div>
+        <div class="mon-body">
+          <h3>Visibility Score</h3>
+          <p>Maintains a continuous AI Visibility Score — updated weekly — reflecting the business's current AI visibility across all five stages of the AI Visibility Ladder from Findable™ to Recommendable™. Benchmarked against the baseline from the most recent AI AUDIT™ and trended over time with week, month, quarter, and year views.</p>
+          <span class="freq">Frequency: Weekly update · Monthly trend analysis</span>
+        </div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-n">04</div>
+        <div class="mon-body">
+          <h3>Competitor Monitoring</h3>
+          <p>Monitors the top three competitors on the same target queries. Tracks their mention frequency, ranking positions, description accuracy, and any changes to their signal layer or authority profile. When a competitor strengthens their position or deploys new signals, AI SONAR™ detects this and flags it as a competitive event requiring strategic response.</p>
+          <span class="freq">Frequency: Weekly · Monthly competitive intelligence report</span>
+        </div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-n">05</div>
+        <div class="mon-body">
+          <h3>Signal Health</h3>
+          <p>Monitors the health of all 167 deployed signals. Checks every signal file for accessibility, consistency, and currency. Detects signal decay — where a previously deployed signal has become inaccessible, inconsistent, or outdated — and triggers an alert before the decay impacts the visibility score.</p>
+          <span class="freq">Frequency: Daily health check · Immediate alert on anomaly</span>
+        </div>
+      </div>
+      <div class="mon-card">
+        <div class="mon-n">06</div>
+        <div class="mon-body">
+          <h3>Description Accuracy</h3>
+          <p>Evaluates whether AI systems are describing the business correctly — correct name, correct category, correct services, correct location. Inaccuracies are flagged and traced to the specific signal gap or inconsistency causing the error. Correction recommendations are included in the next weekly report.</p>
+          <span class="freq">Frequency: Weekly · Immediate alert on significant inaccuracy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alerts">
+  <div class="c">
+    <span class="ey">Alert System</span>
+    <h2 class="sh">Immediate Alerts for Every Significant Change</h2>
+    <p class="sl">Do not wait for the weekly report to learn about critical changes. AI SONAR™ alerts immediately when it matters.</p>
+    <div class="alert-grid">
+      <div class="alert-card"><div class="alert-icon">📉</div><div><h3>Visibility Score Drop</h3><p>Immediate alert when AI Visibility Score drops 5 or more points in a single week. Includes dimensional breakdown identifying which layer is causing the decline.</p></div></div>
+      <div class="alert-card"><div class="alert-icon">🚨</div><div><h3>Signal File Inaccessibility</h3><p>Immediate alert when any signal file becomes inaccessible to AI crawlers — within hours of the failure occurring. Includes affected file and recommended corrective action.</p></div></div>
+      <div class="alert-card"><div class="alert-icon">⚔️</div><div><h3>Competitor Mention Surge</h3><p>Alert when a competitor's mention frequency for shared target queries increases by 20% or more in a single week — indicating a significant authority signal deployment.</p></div></div>
+      <div class="alert-card"><div class="alert-icon">❌</div><div><h3>Description Accuracy Degradation</h3><p>Alert when AI systems begin describing the business incorrectly in two or more monitored query responses — indicating a knowledge graph conflict requiring immediate resolution.</p></div></div>
+      <div class="alert-card"><div class="alert-icon">🆕</div><div><h3>New AI System Entry</h3><p>Alert when a new AI system enters the market that requires signal format updates or crawler permission additions — with recommended technical actions.</p></div></div>
+      <div class="alert-card"><div class="alert-icon">📊</div><div><h3>Ranking Loss</h3><p>Alert when the business drops out of the top three recommendation positions for any high-priority target query — with competitive analysis of which business has taken the position.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Deliverables</span>
+    <h2 class="sh">Five Structured Monitoring Outputs</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-name">Visibility Dashboard</span><div class="out-body"><h4>Real-Time AI Visibility Status</h4><p>Current AI Visibility Score, mention frequency, ranking positions for all target queries, signal health status, and competitor positions — updated continuously.</p></div></div>
+      <div class="out-item"><span class="out-name">Weekly Visibility Report</span><div class="out-body"><h4>Structured Weekly Summary</h4><p>AI Visibility Score and trend, mention count and accuracy, ranking positions and trend, competitor movements and events, signal health anomalies, and recommended actions for the coming week.</p></div></div>
+      <div class="out-item"><span class="out-name">Alert Notifications</span><div class="out-body"><h4>Immediate Critical Change Alerts</h4><p>Six alert types delivered immediately when triggered. Each alert includes the event, the dimensional analysis, and the recommended corrective action.</p></div></div>
+      <div class="out-item"><span class="out-name">Trend Data</span><div class="out-body"><h4>Historical Visibility Archive</h4><p>Complete historical visibility data from the first monitoring date. Week, month, quarter, and year views. Used to demonstrate ROI of AI visibility investments and identify long-term patterns.</p></div></div>
+      <div class="out-item"><span class="out-name">Competitor Intelligence</span><div class="out-body"><h4>Monthly Competitive Analysis</h4><p>Structured monthly reports on competitor AI visibility movements, signal layer changes, authority gains, and strategic positioning shifts — with recommended strategic responses.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="c">
+    <span class="ey">The Monitoring Methodology</span>
+    <h2 class="sh">How AI SONAR™ Works</h2>
+    <div class="meth-steps">
+      <div class="meth-step"><div class="meth-n">01</div><div class="meth-body"><h4>Target Query Set Construction</h4><p>All target buyer queries are drawn from the Intent Registry built by AI LENS™. Queries cover direct recommendation requests, comparison requests, category searches, location-filtered searches, and problem-based searches across all target markets and languages.</p></div></div>
+      <div class="meth-step"><div class="meth-n">02</div><div class="meth-body"><h4>Structured Query Execution</h4><p>Every target query is run on a defined schedule — daily for high-priority queries, weekly for secondary queries — across all five AI systems. Results are captured, structured, and stored in the monitoring database.</p></div></div>
+      <div class="meth-step"><div class="meth-n">03</div><div class="meth-body"><h4>Expected vs Actual Comparison</h4><p>Results are evaluated against the expected mention, expected description, and expected ranking position defined in the AI Visibility baseline from the most recent AI AUDIT™. Every deviation is classified and severity-scored.</p></div></div>
+      <div class="meth-step"><div class="meth-n">04</div><div class="meth-body"><h4>Anomaly Classification</h4><p>Every anomaly — unexpected mention, unexpected absence, unexpected competitor gain, description inaccuracy, signal health failure — is classified by type, severity, and likely cause. Classification determines alert priority and corrective action.</p></div></div>
+      <div class="meth-step"><div class="meth-n">05</div><div class="meth-body"><h4>Report and Alert Generation</h4><p>Alerts are dispatched immediately for critical anomalies. Weekly reports are compiled from all monitoring data and dispatched every Monday. Monthly competitor intelligence reports are compiled from weekly data and dispatched on the first Monday of each month.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After AI SONAR™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>AI visibility changes go undetected — positive and negative</li>
+          <li>Signal decay not identified until it has impacted the score</li>
+          <li>Competitor authority gains not noticed until recommendations are lost</li>
+          <li>Description inaccuracies persist for months without detection</li>
+          <li>No historical data — no way to demonstrate ROI of AI investments</li>
+          <li>No alert system — critical changes discovered accidentally</li>
+          <li>Strategy based on assumption — not real-time data</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>Every mention tracked across all five AI systems</li>
+          <li>Signal decay detected within hours — corrected before impact</li>
+          <li>Competitor moves flagged immediately — strategic response possible</li>
+          <li>Description inaccuracies identified and resolved within one week</li>
+          <li>Full historical visibility archive — ROI demonstrable to leadership</li>
+          <li>Six alert types — critical changes never missed</li>
+          <li>Strategy informed by structured real-time competitive intelligence</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Monitoring to Strategy</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 10</span>
+        <h3>ECONOMIC TWIN™</h3>
+        <p>ECONOMIC TWIN™ uses AI SONAR™ data to build digital models of your business, market, and competitors — enabling strategic scenario simulation before decisions are made.</p>
+        <a href="/products/economic-twin" class="next-link">Go to ECONOMIC TWIN™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>PROOF LAYER™</h3>
+        <p>AI SONAR™ monitors whether AI systems are recognising your proof layer. Ensure PROOF LAYER™ is deployed before starting monitoring.</p>
+        <a href="/products/proof-layer" class="next-link">← Back to PROOF LAYER™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar" style="color:#f5c842">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PROOF LAYER™ — Make Every Claim Permanently Verifiable — 5thelement.ai</title>
+<meta name="description" content="PROOF LAYER™ fingerprints your core documents with SHA-256 and anchors them to the Bitcoin blockchain via OpenTimestamps. Immutable. Publicly verifiable. Permanently proven."/>
+<link rel="canonical" href="https://5thelement.ai/products/proof-layer"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* PROBLEM */
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* TECH STACK */
+.techstack{background:#0a0c0f}
+.tech-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.25rem}
+.tech-card{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;align-items:start;transition:border-color 0.2s}
+.tech-card:hover{border-color:rgba(245,200,66,0.3)}
+.tech-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;line-height:1}
+.tech-body h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.tech-body p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+.tech-body code{font-family:'Courier New',monospace;font-size:0.82rem;color:#f5c842;background:#0a0c0f;padding:0.1rem 0.35rem;border-radius:3px}
+
+/* WHAT GETS ANCHORED */
+.anchored{background:#111318}
+.anch-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.anch-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;gap:1rem;align-items:flex-start}
+.anch-icon{font-size:1.4rem;flex-shrink:0}
+.anch-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.4rem}
+.anch-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* PROOF PIPELINE */
+.pipeline{background:#0a0c0f}
+.pipe-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.pipe-step{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.pipe-step:last-child{border-bottom:none}
+.pipe-step:hover{background:#111318}
+.pipe-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.pipe-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.3rem}
+.pipe-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+.pipe-body code{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842}
+
+/* LIVE PROOF */
+.liveproof{background:#111318}
+.proof-box{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem;margin-top:2.25rem;font-family:'Courier New',monospace;font-size:0.8rem;color:#cccccc;line-height:2;word-break:break-all}
+.pl{color:#f5c842;font-weight:700}
+.pv{color:#4ade80}
+
+/* SCHEMA */
+.schema{background:#0a0c0f}
+.schema-box{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;margin-top:2.25rem;font-family:'Courier New',monospace;font-size:0.82rem;color:#cccccc;line-height:1.9}
+.sk{color:#f5c842}
+.sv{color:#4ade80}
+.sc{color:#888}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-file{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#0a0c0f}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#111318;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .tech-card{grid-template-columns:1fr;gap:0.75rem}
+  .anch-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .pipe-step{grid-template-columns:2.5rem 1fr}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>PROOF LAYER™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 08 · Evidence and Provenance</div>
+    <h1>PROOF LAYER™<br><em>Make Every Claim Permanently Verifiable.</em></h1>
+    <p>PROOF LAYER™ fingerprints your core documents with SHA-256, anchors them to the Bitcoin blockchain via OpenTimestamps, and maintains a public, immutable registry of everything you have proven — so AI systems and human auditors can verify your authority claims without trusting your word.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">SHA-256</span><span class="lbl">Fingerprinting</span></div>
+      <div class="hstat"><span class="val">₿</span><span class="lbl">Bitcoin Anchored</span></div>
+      <div class="hstat"><span class="val">OTS</span><span class="lbl">OpenTimestamps</span></div>
+      <div class="hstat"><span class="val">Public</span><span class="lbl">Verifiable by Anyone</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Build Proof Layer →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">Self-Declared Authority Is the Weakest Form of Authority.</h2>
+    <div class="prob-box">
+      <p>A business that says it is an expert in its field, that its methodology is proven, and that its results are measurable is making claims that AI systems have no mechanism to verify — unless a proof layer exists.</p>
+      <p>AI systems assign higher confidence to claims that are independently verifiable and lower confidence to claims that exist only on the claimant's own website. <strong>PROOF LAYER™ makes your authority independently verifiable.</strong> Not by a third party vouching for you — by mathematical proof that cannot be fabricated, altered, or disputed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="techstack">
+  <div class="c">
+    <span class="ey">The Technology</span>
+    <h2 class="sh">Three Layers of Mathematical Proof</h2>
+    <p class="sl">Each layer is open, public, and independently verifiable by anyone. No trusted third party required.</p>
+    <div class="tech-list">
+      <div class="tech-card">
+        <div class="tech-n">01</div>
+        <div class="tech-body">
+          <h3>SHA-256 Fingerprinting</h3>
+          <p>SHA-256 is the cryptographic hash function used to fingerprint documents. When a document is hashed, the result is a 64-character string unique to that exact document. If even a single character changes, the hash changes completely. A SHA-256 hash is mathematical proof of the exact content of a document at the moment it was hashed.</p>
+          <p>Anyone with the document and the hash can verify that the document has not been altered. No trusted party required. The mathematics is the verification.</p>
+          <p>Command: <code>sha256sum document.pdf</code> → 64-character hash → published in ai-proof.json</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-n">02</div>
+        <div class="tech-body">
+          <h3>OpenTimestamps</h3>
+          <p>OpenTimestamps is an open-source protocol for anchoring SHA-256 hashes to the Bitcoin blockchain. When a hash is submitted to OpenTimestamps, it is included in a Bitcoin transaction. When that transaction is confirmed in a Bitcoin block, the block's timestamp becomes an immutable proof that the hash existed before that block was mined.</p>
+          <p>This means anyone with the document, the hash, and the OTS proof file can verify that the document existed before the Bitcoin block was mined, the document has not changed since the hash was generated, and the hash is anchored to the Bitcoin blockchain.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-n">03</div>
+        <div class="tech-body">
+          <h3>Bitcoin Blockchain</h3>
+          <p>The Bitcoin blockchain is the anchor — the most secure, most decentralised, longest-running public ledger in existence. A proof anchored to the Bitcoin blockchain cannot be altered, removed, or disputed by any individual, organisation, or government. It exists permanently in the public record.</p>
+          <p>5thelement.ai's own proofs are anchored across Bitcoin blocks <code>944442</code> through <code>952597</code>. Every entry in our Innovation Registry is verified and immutable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="anchored">
+  <div class="c">
+    <span class="ey">What Gets Anchored</span>
+    <h2 class="sh">Six Document Categories — All Permanently Proven</h2>
+    <div class="anch-grid">
+      <div class="anch-card"><div class="anch-icon">📋</div><div><h3>Core Authority Documents</h3><p>Methodology documents, capability statements, and service definitions that represent the business's primary authority claims. Anchoring proves originality and integrity.</p></div></div>
+      <div class="anch-card"><div class="anch-icon">📊</div><div><h3>Case Studies</h3><p>Structured case studies with client sector, problem, solution, and measurable outcome. Anchoring prevents retroactive alteration of claimed results.</p></div></div>
+      <div class="anch-card"><div class="anch-icon">🏅</div><div><h3>Certifications</h3><p>Certification documents and references. Anchoring proves the certification existed and was authentic at the time of anchoring — even if the issuing body's registry changes.</p></div></div>
+      <div class="anch-card"><div class="anch-icon">💡</div><div><h3>Innovation Registry Entries</h3><p>Proprietary methodologies, frameworks, and innovations. Anchoring establishes priority of invention before a competitor can make the same claim.</p></div></div>
+      <div class="anch-card"><div class="anch-icon">📣</div><div><h3>Key Business Claims</h3><p>Founding date, methodology originality, result claims, market position statements — any claim that underpins authority positioning and could be disputed.</p></div></div>
+      <div class="anch-card"><div class="anch-icon">🤝</div><div><h3>Partnership Agreements</h3><p>Key partnership documents, collaboration agreements, and client consent statements — anchored to provide immutable proof of relationship existence and scope.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pipeline">
+  <div class="c">
+    <span class="ey">The Proof Pipeline</span>
+    <h2 class="sh">From Document to Immutable Proof in Five Steps</h2>
+    <div class="pipe-steps">
+      <div class="pipe-step"><div class="pipe-n">01</div><div class="pipe-body"><h4>Document Preparation</h4><p>Core authority document finalised and reviewed. Human sign-off required. HITL checkpoint — no document is anchored without human confirmation that the content is accurate and final.</p></div></div>
+      <div class="pipe-step"><div class="pipe-n">02</div><div class="pipe-body"><h4>SHA-256 Fingerprinting</h4><p>Document hashed using SHA-256. Hash recorded in <code>ai-proof.json</code> with document name, fingerprint date, and verification reference. Hash is deterministic — same document produces same hash every time.</p></div></div>
+      <div class="pipe-step"><div class="pipe-n">03</div><div class="pipe-body"><h4>OpenTimestamps Submission</h4><p>SHA-256 hash submitted to OpenTimestamps protocol. Hash is aggregated with other hashes in a Merkle tree and included in a Bitcoin transaction.</p></div></div>
+      <div class="pipe-step"><div class="pipe-n">04</div><div class="pipe-body"><h4>Bitcoin Block Confirmation</h4><p>Bitcoin transaction confirmed in a block. Block number and timestamp recorded. OTS proof file (<code>.ots</code>) generated — contains the cryptographic proof path from hash to Bitcoin block.</p></div></div>
+      <div class="pipe-step"><div class="pipe-n">05</div><div class="pipe-body"><h4>Public Deployment</h4><p>OTS proof file deployed at domain root and linked from <code>ai-proof.json</code>. Proof Registry updated. Publicly accessible to any AI system, auditor, regulator, or interested party.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="liveproof">
+  <div class="c">
+    <span class="ey">Live Proof Reference</span>
+    <h2 class="sh">Our Own Proof Layer — Live on Bitcoin</h2>
+    <p class="sl">5thelement.ai runs on the same PROOF LAYER™ we build for clients. Every entry below is immutable and publicly verifiable.</p>
+    <div class="proof-box">
+      <div><span class="pl">ADI_CANONICAL:</span> <span class="pv">31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</span></div>
+      <div><span class="pl">BLOCK:</span> <span class="pv">944442</span> · <span class="pl">STATUS:</span> <span class="pv">verified</span></div>
+      <div>&nbsp;</div>
+      <div><span class="pl">AI_SONAR™:</span> <span class="pv">c57529c8...</span> · BLOCK <span class="pv">949375</span></div>
+      <div><span class="pl">MOCKINGBIRD™:</span> <span class="pv">fb388288...</span> · BLOCK <span class="pv">949346</span></div>
+      <div><span class="pl">GEMINI_EXTERNAL:</span> <span class="pv">dd8896c2...</span> · BLOCK <span class="pv">952597</span> · June 6, 2026</div>
+      <div>&nbsp;</div>
+      <div><span class="pl">BLOCK_RANGE:</span> <span class="pv">944442 — 952597</span></div>
+      <div><span class="pl">ANCHOR:</span> Bitcoin via OpenTimestamps</div>
+      <div><span class="pl">OTS_STATUS:</span> <span class="pv">verified</span></div>
+      <div><span class="pl">REGISTRY_ENTRIES:</span> #1–9 · all verified · immutable</div>
+    </div>
+  </div>
+</section>
+
+<section class="schema">
+  <div class="c">
+    <span class="ey">The Proof Schema</span>
+    <h2 class="sh">ai-proof.json v1.1 — Canonical Structure</h2>
+    <p class="sl">Every proof entry follows this schema. Machine-readable by any AI system. Human-verifiable by anyone with the OpenTimestamps client.</p>
+    <div class="schema-box">
+      <div><span class="sc">{</span></div>
+      <div>&nbsp;&nbsp;<span class="sk">"document"</span>: <span class="sv">"methodology-v1.pdf"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="sk">"sha256"</span>: <span class="sv">"31aa7a56..."</span>,</div>
+      <div>&nbsp;&nbsp;<span class="sk">"fingerprint_date"</span>: <span class="sv">"2025-03-15"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="sk">"ots_status"</span>: <span class="sv">"verified"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="sk">"ots_file"</span>: <span class="sv">"/ai-proof.json.ots"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="sk">"ots_anchors"</span>: <span class="sc">{</span></div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"method"</span>: <span class="sv">"OpenTimestamps"</span>,</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"chain"</span>: <span class="sv">"Bitcoin"</span>,</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"block"</span>: <span class="sv">944442</span>,</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"status"</span>: <span class="sv">"verified"</span></div>
+      <div>&nbsp;&nbsp;<span class="sc">}</span></div>
+      <div><span class="sc">}</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Five Proof Deliverables</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-file">SHA-256 Hashes</span><div class="out-body"><h4>Cryptographic Fingerprints</h4><p>One SHA-256 hash per anchored document. Stored in ai-proof.json with document name, fingerprint date, and verification reference.</p></div></div>
+      <div class="out-item"><span class="out-file">*.ots files</span><div class="out-body"><h4>OpenTimestamps Proof Files</h4><p>One .ots file per anchored document. Publicly accessible at domain root. Verifiable by anyone using the open-source OpenTimestamps client at opentimestamps.org.</p></div></div>
+      <div class="out-item"><span class="out-file">ai-proof.json</span><div class="out-body"><h4>Proof Registry — Machine-Readable</h4><p>Complete, versioned registry of all proof entries. Document name, SHA-256 hash, OTS file URL, Bitcoin block number, block timestamp, and verification status for every entry.</p></div></div>
+      <div class="out-item"><span class="out-file">Evidence Registry</span><div class="out-body"><h4>External Evidence Map</h4><p>Structured map of all external evidence supporting authority claims — citations, media mentions, directory listings, partner references, and client outcome records.</p></div></div>
+      <div class="out-item"><span class="out-file">OTS Verification Guide</span><div class="out-body"><h4>Public Verification Instructions</h4><p>A public document explaining how to verify any proof entry using the OpenTimestamps client. Accessible to AI systems, auditors, regulators, and any interested party.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After PROOF LAYER™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Authority claims exist only on the business's own website</li>
+          <li>AI cannot verify claims independently</li>
+          <li>Claims weighted as self-declared — low confidence</li>
+          <li>No proof registry — no structured evidence map</li>
+          <li>Competitor can make identical claims without consequence</li>
+          <li>No cryptographic priority of invention for innovations</li>
+          <li>AI recommends competitors with stronger proof layers</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>Every core claim SHA-256 fingerprinted and Bitcoin-anchored</li>
+          <li>AI can verify claims via public OTS proof files</li>
+          <li>Claims weighted as independently verified — high confidence</li>
+          <li>ai-proof.json live — machine-readable proof registry public</li>
+          <li>Priority of invention established — competitor claims arrive after proof</li>
+          <li>Innovation Registry entries anchored and immutable</li>
+          <li>AI authority proven mathematically — recommendation frequency rises</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Proof to Monitoring</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 09</span>
+        <h3>AI SONAR™</h3>
+        <p>With proof deployed, AI SONAR™ monitors whether AI systems are recognising and referencing your proof layer — and tracks your visibility across all five major AI systems continuously.</p>
+        <a href="/products/ai-sonar" class="next-link">Go to AI SONAR™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>TRUST LAYER™</h3>
+        <p>PROOF LAYER™ builds on TRUST LAYER™. Trust signals and governance declarations should be deployed before anchoring authority claims to the blockchain.</p>
+        <a href="/products/trust-layer" class="next-link">← Back to TRUST LAYER™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer" style="color:#f5c842">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TRUST LAYER™ — Build the Trust Signals AI Uses to Evaluate Your Business — 5thelement.ai</title>
+<meta name="description" content="TRUST LAYER™ builds, deploys and maintains trust signals, governance declarations, and transparency layers that AI systems use to determine whether to recommend your business."/>
+<link rel="canonical" href="https://5thelement.ai/products/trust-layer"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* THREE PILLARS */
+.pillars{background:#0a0c0f}
+.pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.pil-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;display:flex;flex-direction:column;gap:0.75rem}
+.pil-icon{font-size:2rem}
+.pil-card h3{font-size:1rem;font-weight:700;color:#fff}
+.pil-card p{font-size:0.9rem;color:#cccccc;line-height:1.75;flex:1}
+
+/* TRUST REGISTRY */
+.registry{background:#111318}
+.reg-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.reg-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.25rem;padding:1.1rem 2rem;border-bottom:1px solid #1e2329}
+.reg-item:last-child{border-bottom:none}
+.reg-item:hover{background:#0a0c0f}
+.reg-type{font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#f5c842;white-space:nowrap}
+.reg-desc{font-size:0.88rem;color:#cccccc}
+.reg-weight{font-size:0.72rem;font-weight:700;color:#888;white-space:nowrap}
+
+/* GOVERNANCE */
+.governance{background:#0a0c0f}
+.gov-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.gov-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.gov-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.gov-ref{font-size:0.72rem;font-weight:700;color:#f5c842;display:block;margin-bottom:0.6rem;font-family:'Courier New',monospace}
+.gov-card p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-file{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* SCORES */
+.scores{background:#0a0c0f}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.score-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;text-align:center}
+.score-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.score-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#0a0c0f;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .pil-grid,.score-grid{grid-template-columns:1fr}
+  .gov-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .reg-item{grid-template-columns:1fr;gap:0.4rem}.reg-weight{display:none}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>TRUST LAYER™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 07 · Trust Management</div>
+    <h1>TRUST LAYER™<br><em>Build Confidence AI Can Measure.</em></h1>
+    <p>TRUST LAYER™ builds, deploys, and maintains the trust signals, governance declarations, and transparency layer that AI systems use to determine whether a business is credible, reliable, and authoritative enough to recommend to buyers.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">4</span><span class="lbl">Output Files</span></div>
+      <div class="hstat"><span class="val">3</span><span class="lbl">Trust Scores</span></div>
+      <div class="hstat"><span class="val">EU</span><span class="lbl">AI Act Aligned</span></div>
+      <div class="hstat"><span class="val">HITL</span><span class="lbl">Governed</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Build Trust Layer →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">Verification and Trust Are Not the Same Thing.</h2>
+    <div class="prob-box">
+      <p>Verification proves claims are accurate. Trust proves something different — that the business is a reliable, consistent, and transparent source of information that AI systems can reference with confidence. These are different problems. A business can be verified and still score low on trust.</p>
+      <p>AI systems weight trust signals separately from verification signals. A business that is verified but untrusted will appear in AI answers. <strong>It will rarely be recommended.</strong> TRUST LAYER™ builds the signals that move a business from verified to trusted — from appearing in answers to being chosen as the answer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="c">
+    <span class="ey">Three Trust Pillars</span>
+    <h2 class="sh">Trustability. Governance. Transparency.</h2>
+    <p class="sl">Each pillar addresses a distinct dimension of how AI systems evaluate business credibility.</p>
+    <div class="pil-grid">
+      <div class="pil-card">
+        <div class="pil-icon">🤝</div>
+        <h3>Trustability</h3>
+        <p>Does AI treat your business as a credible, consistent source in its category? Built from external citations, sector directory presence, client testimonials with schema markup, peer reviews, and professional body memberships — all structured in the Trust Registry.</p>
+      </div>
+      <div class="pil-card">
+        <div class="pil-icon">⚖️</div>
+        <h3>Governance</h3>
+        <p>Are your AI usage, data handling, and editorial policies declared and machine-readable? HITL protocol documentation, EU AI Act readiness declarations, GDPR compliance posture, and algorithmic transparency statements — all published in structured format.</p>
+      </div>
+      <div class="pil-card">
+        <div class="pil-icon">🔍</div>
+        <h3>Transparency</h3>
+        <p>Can AI systems verify how your content is produced, who is responsible for it, and what standards it meets? Editorial standards declaration, content authorship attribution, data processing declaration, and AI usage declaration — all machine-readable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="registry">
+  <div class="c">
+    <span class="ey">The Trust Registry</span>
+    <h2 class="sh">Every Trust Signal Structured and Published</h2>
+    <p class="sl">The Trust Registry is published as authority.json — a machine-readable file AI systems access directly to evaluate the business's trust profile.</p>
+    <div class="reg-list">
+      <div class="reg-item"><span class="reg-type">External Citation</span><span class="reg-desc">References from industry publications, media outlets, and sector bodies that mention the business in an authoritative context</span><span class="reg-weight">High weight</span></div>
+      <div class="reg-item"><span class="reg-type">Directory Listing</span><span class="reg-desc">Presence in authoritative sector-specific directories and professional registries with consistent entity data</span><span class="reg-weight">Medium-high weight</span></div>
+      <div class="reg-item"><span class="reg-type">Professional Body</span><span class="reg-desc">Membership in recognised professional associations with registry URL for independent verification</span><span class="reg-weight">High weight</span></div>
+      <div class="reg-item"><span class="reg-type">Client Testimonial</span><span class="reg-desc">Third-party client statements with Review schema markup, attribution, and sector context</span><span class="reg-weight">Medium weight</span></div>
+      <div class="reg-item"><span class="reg-type">Aggregate Review</span><span class="reg-desc">AggregateRating schema referencing external review platforms — Google, Trustpilot, or sector-specific platforms</span><span class="reg-weight">Medium weight</span></div>
+      <div class="reg-item"><span class="reg-type">Case Outcome</span><span class="reg-desc">Structured case studies with measurable outcomes, client sector, and delivery timeline — published with Case schema markup</span><span class="reg-weight">High weight</span></div>
+      <div class="reg-item"><span class="reg-type">Award Reference</span><span class="reg-desc">Industry awards and recognitions with awarding body URL and award schema markup</span><span class="reg-weight">Medium weight</span></div>
+      <div class="reg-item"><span class="reg-type">Partner Reference</span><span class="reg-desc">Partner organisations that publicly reference the business on their own websites or directories</span><span class="reg-weight">Medium weight</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="governance">
+  <div class="c">
+    <span class="ey">Governance Documentation</span>
+    <h2 class="sh">Machine-Readable Governance. EU AI Act Aligned.</h2>
+    <p class="sl">Every governance declaration is published in both machine-readable JSON and human-readable PDF. AI systems read the JSON. Auditors and regulators read the PDF.</p>
+    <div class="gov-grid">
+      <div class="gov-card">
+        <h3>HITL Protocol Declaration</h3>
+        <span class="gov-ref">governance.json → hitl</span>
+        <p>Documents the Human-in-the-Loop governance process used in all AI deployments. Every stage of the ADI™ pipeline where human review is mandatory. The declaration AI systems and EU AI Act auditors look for when assessing responsible AI use.</p>
+      </div>
+      <div class="gov-card">
+        <h3>EU AI Act Readiness Declaration</h3>
+        <span class="gov-ref">governance.json → eu-ai-act</span>
+        <p>Structured declaration of EU AI Act readiness activities completed and in progress. Not a certification — a machine-readable statement of readiness posture. Updated quarterly. We support readiness. We never certify.</p>
+      </div>
+      <div class="gov-card">
+        <h3>GDPR Compliance Declaration</h3>
+        <span class="gov-ref">governance.json → gdpr</span>
+        <p>Machine-readable statement of data processing activities, legal bases, data subject rights provisions, and data retention policies. Aligned with Romanian ANSPDCP requirements and EU GDPR.</p>
+      </div>
+      <div class="gov-card">
+        <h3>Algorithmic Transparency Statement</h3>
+        <span class="gov-ref">governance.json → algorithmic-transparency</span>
+        <p>Declaration of what AI tools are used in business operations, for what purposes, with what human oversight, and with what safeguards. Required for high-trust AI visibility positioning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Four Structured Trust Files</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-file">authority.json</span><div class="out-body"><h4>Trust Registry — Machine-Readable</h4><p>All trust signals, citations, external references, and authority indicators in structured JSON. Updated automatically as new signals are added. Publicly accessible at domain root.</p></div></div>
+      <div class="out-item"><span class="out-file">trust-state.json</span><div class="out-body"><h4>Current Trust State</h4><p>Composite trust score with dimensional breakdown, verification status, last audit date, open gaps, and trend data. Input for AI SONAR™ continuous monitoring.</p></div></div>
+      <div class="out-item"><span class="out-file">policy.json</span><div class="out-body"><h4>Policy Declarations</h4><p>Machine-readable policy declarations covering data handling, AI usage, content authorship, and editorial standards. Both machine-readable JSON and human-readable PDF.</p></div></div>
+      <div class="out-item"><span class="out-file">governance.json</span><div class="out-body"><h4>Governance Documentation</h4><p>HITL protocol, EU AI Act readiness declarations, GDPR compliance posture, and algorithmic transparency statements. Updated quarterly. Both formats.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="scores">
+  <div class="c">
+    <span class="ey">What It Measures</span>
+    <h2 class="sh">Three Trust Scores. Continuously Updated.</h2>
+    <div class="score-grid">
+      <div class="score-card">
+        <h3>Trustability Score</h3>
+        <p>Composite score reflecting the density, quality, and consistency of trust signals across all trust signal categories — citations, reviews, case studies, and professional body presence.</p>
+      </div>
+      <div class="score-card">
+        <h3>Governance Score</h3>
+        <p>Score reflecting the completeness and currency of governance documentation against EU AI Act, GDPR, and sector-specific standards. Updated every time a governance document changes.</p>
+      </div>
+      <div class="score-card">
+        <h3>Transparency Score</h3>
+        <p>Score reflecting the completeness and currency of editorial standards, authorship declarations, data processing declarations, and AI usage declarations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After TRUST LAYER™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Business is verified — AI confirms claims are accurate</li>
+          <li>No trust signals — AI does not treat business as authoritative</li>
+          <li>No governance documentation deployed</li>
+          <li>No transparency declarations — editorial standards unknown to AI</li>
+          <li>No Trust Registry — no machine-readable authority file</li>
+          <li>Appears in AI answers but not as recommended choice</li>
+          <li>EU AI Act readiness not declared — regulatory risk</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>Trust signal layer complete — AI treats business as credible source</li>
+          <li>Trust Registry published — authority.json live and accessible</li>
+          <li>Governance documentation deployed — HITL, EU AI Act, GDPR declared</li>
+          <li>Transparency declarations live — editorial standards machine-readable</li>
+          <li>Three trust scores tracked and improving quarterly</li>
+          <li>AI weights business as trusted authority — recommendation frequency increases</li>
+          <li>EU AI Act readiness documented — regulatory posture declared</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Trust to Proof</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 08</span>
+        <h3>PROOF LAYER™</h3>
+        <p>PROOF LAYER™ takes trust to the next level — cryptographic, immutable, permanently verifiable. SHA-256 fingerprinting and Bitcoin blockchain anchoring for every core authority claim.</p>
+        <a href="/products/proof-layer" class="next-link">Go to PROOF LAYER™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>EDGE INJECTOR™</h3>
+        <p>TRUST LAYER™ files are deployed via EDGE INJECTOR™. Ensure EDGE INJECTOR™ is configured before deploying the trust layer.</p>
+        <a href="/products/edge-injector" class="next-link">← Back to EDGE INJECTOR™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer" style="color:#f5c842">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>
