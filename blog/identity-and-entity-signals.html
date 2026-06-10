@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Identity and Entity Signals — The 48 Signals Explained | 5thelement.ai</title>
+<meta name="description" content="Complete reference for the 48 Identity and Entity AI signals. Every signal listed, explained, and mapped to the product that deploys it. The prerequisite signal category."/>
+<link rel="canonical" href="https://5thelement.ai/blog/identity-and-entity-signals"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://5thelement.ai/#website","url":"https://5thelement.ai","name":"5thelement.ai"},
+{"@type":"Organization","@id":"https://5thelement.ai/#org","name":"AiVenture S.R.L.","url":"https://5thelement.ai","sameAs":["https://linkedin.com/company/107338970","https://x.com/aipath512"]},
+{"@type":"WebPage","@id":"https://5thelement.ai/blog/identity-and-entity-signals#webpage","url":"https://5thelement.ai/blog/identity-and-entity-signals","name":"Identity and Entity Signals — The 48 Signals","isPartOf":{"@id":"https://5thelement.ai/#website"}},
+{"@type":"BreadcrumbList","@id":"https://5thelement.ai/blog/identity-and-entity-signals#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://5thelement.ai"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://5thelement.ai/blog"},{"@type":"ListItem","position":3,"name":"The 167 AI Signals","item":"https://5thelement.ai/blog/the-167-ai-signals"},{"@type":"ListItem","position":4,"name":"Identity and Entity Signals","item":"https://5thelement.ai/blog/identity-and-entity-signals"}]},
+{"@type":"Article","@id":"https://5thelement.ai/blog/identity-and-entity-signals#article","headline":"Identity and Entity Signals — The 48 Signals Explained","author":{"@id":"https://5thelement.ai/#org"},"publisher":{"@id":"https://5thelement.ai/#org"},"datePublished":"2026-06-10","dateModified":"2026-06-10","mainEntityOfPage":{"@id":"https://5thelement.ai/blog/identity-and-entity-signals#webpage"},"about":{"@type":"Thing","name":"Entity Signals"},"keywords":"entity signals, identity signals, AI signals, ai.json, entities.json, sameAs, knowledge graph"},
+{"@type":"TechArticle","headline":"Identity and Entity Signals — The 48 Signals","author":{"@id":"https://5thelement.ai/#org"},"proficiencyLevel":"Advanced"},
+{"@type":"FAQPage","@id":"https://5thelement.ai/blog/identity-and-entity-signals#faq","mainEntity":[
+{"@type":"Question","name":"What are Identity and Entity signals?","acceptedAnswer":{"@type":"Answer","text":"Identity and Entity signals are the 48 atomic data points that establish who a business is in the AI knowledge graph — legal name, category, location, founding date, legal identifiers, and sameAs references to authoritative external profiles. They are the prerequisite signal category."}},
+{"@type":"Question","name":"Why are Entity signals the prerequisite category?","acceptedAnswer":{"@type":"Answer","text":"AI systems cannot process Trust or Intent signals for a business they cannot identify. Without a correctly modelled entity identity, the business's knowledge graph entry is fragmented — Trust and Intent signals from other sources cannot be attributed to the correct entity node."}},
+{"@type":"Question","name":"What is sameAs in entity signals?","acceptedAnswer":{"@type":"Answer","text":"sameAs is a Schema.org property that links a business entity to its external representations — LinkedIn company page, Crunchbase profile, national company registry URL, and sector directories. It allows AI systems to confirm entity consistency across independent sources."}},
+{"@type":"Question","name":"Which file contains the Identity and Entity signals?","acceptedAnswer":{"@type":"Answer","text":"The primary Identity and Entity signal file is ai.json — deployed at the domain root. The complete entity graph is published in entities.json and entity-graph.public.jsonld. Schema.org Organization markup in the page head is also a key delivery mechanism."}},
+{"@type":"Question","name":"How many of the 48 signals does the average B2B website have?","acceptedAnswer":{"@type":"Answer","text":"Based on AI AUDIT™ assessments, the average B2B website has between 8 and 16 of the 48 Identity and Entity signals correctly deployed. Most have a business name and URL, but lack category, NACE code, founding date, sameAs references, legal identifiers, and machine-readable subsidiary or team entities."}}
+]},
+{"@type":"ItemList","name":"The 48 Identity and Entity Signals","numberOfItems":48,"url":"https://5thelement.ai/blog/identity-and-entity-signals"},
+{"@type":"DefinedTerm","name":"Entity Signal","description":"A machine-readable data point that establishes business identity in the AI knowledge graph","url":"https://5thelement.ai/blog/glossary#entity-signal"},
+{"@type":"DefinedTerm","name":"sameAs","description":"Schema.org property linking an entity to its external representations","url":"https://5thelement.ai/blog/glossary#same-as"},
+{"@type":"SoftwareApplication","name":"AI AUDIT™","applicationCategory":"BusinessApplication","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI LENS™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI READY™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Service","name":"AI SIGNALS™","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"KNOWLEDGE GRAPH™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"Product","name":"EDGE INJECTOR™","brand":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"CreativeWork","name":"ADI™ — AI Delivery Infrastructure","author":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"ItemList","name":"AI Visibility Blog","url":"https://5thelement.ai/blog"},
+{"@type":"DefinedTermSet","name":"AI Visibility Glossary","url":"https://5thelement.ai/blog/glossary"},
+{"@type":"Claim","text":"The 48 Identity and Entity signals are the foundation — without them, no other signal category can function correctly"},
+{"@type":"Course","name":"Entity Signal Implementation","provider":{"@id":"https://5thelement.ai/#org"}},
+{"@type":"SpecialAnnouncement","name":"Identity and Entity Signals Reference","datePosted":"2026-06-10"},
+{"@type":"HowTo","name":"How to deploy Identity and Entity signals","step":[{"@type":"HowToStep","name":"Deploy ai.json","text":"Create entity definition at domain root"},{"@type":"HowToStep","name":"Add Organization schema","text":"Add JSON-LD Organization to homepage"},{"@type":"HowToStep","name":"Add sameAs references","text":"Link to LinkedIn, Crunchbase, company registry"},{"@type":"HowToStep","name":"Publish entities.json","text":"Deploy complete entity graph"},{"@type":"HowToStep","name":"Deploy to edge","text":"Serve via EDGE INJECTOR™"}]},
+{"@type":"WebPage","name":"Findable™","url":"https://5thelement.ai/findable"},
+{"@type":"WebPage","name":"AI LENS™","url":"https://5thelement.ai/products/ai-lens"}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:0.35rem}.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}.nav-links a:hover{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329;flex-wrap:wrap}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.post-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;padding:3rem 0 5rem;align-items:start}
+.post-body{min-width:0}
+.post-sidebar{position:sticky;top:84px}
+.post-cat{display:inline-flex;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.7rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:999px;margin-bottom:1.25rem}
+.post-body h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
+.post-meta-row{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:0.82rem;color:#888;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid #1e2329}
+.post-content h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin:2.5rem 0 1rem}
+.post-content h3{font-size:1.1rem;font-weight:700;color:#fff;margin:2rem 0 0.75rem}
+.post-content p{font-size:0.97rem;color:#cccccc;line-height:1.85;margin-bottom:1.25rem}
+.post-content strong{color:#fff;font-weight:600}
+.post-content a{color:#f5c842;text-decoration:underline}
+.post-content ul{padding-left:1.5rem;margin-bottom:1.25rem}
+.post-content ul li{font-size:0.95rem;color:#cccccc;line-height:1.8;margin-bottom:0.35rem}
+.post-content blockquote{border-left:3px solid #f5c842;padding:1rem 1.5rem;background:#111318;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:1rem;color:#cccccc;font-style:italic}
+.callout{background:#111318;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0}
+.callout h4{font-size:0.88rem;font-weight:700;color:#f5c842;margin-bottom:0.5rem}
+.callout p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+
+/* SIGNAL TABLE */
+.signal-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.83rem}
+.signal-table th{background:#111318;color:#fff;font-weight:700;padding:0.7rem 1rem;text-align:left;border-bottom:2px solid #1e2329}
+.signal-table td{padding:0.65rem 1rem;border-bottom:1px solid #1e2329;color:#cccccc;vertical-align:top;line-height:1.5}
+.signal-table tr:last-child td{border-bottom:none}
+.signal-table tr:hover td{background:rgba(255,255,255,0.02)}
+.sn{font-family:'Courier New',monospace;font-size:0.78rem;color:#f5c842;font-weight:700;white-space:nowrap}
+.si{font-size:0.78rem;color:#888;font-style:italic}
+.tag-h{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.2);color:#f87171;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.tag-m{background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.2);color:#fbbf24;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+.tag-l{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);color:#4ade80;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.68rem;font-weight:700}
+
+/* GROUP HEADERS */
+.group-header{background:rgba(245,200,66,0.05);border:1px solid rgba(245,200,66,0.15);border-radius:8px;padding:0.85rem 1.25rem;margin:1.75rem 0 0.75rem;display:flex;align-items:center;gap:0.75rem}
+.group-header h3{font-size:0.92rem;font-weight:700;color:#fff;margin:0}
+.group-count{font-size:0.72rem;font-weight:800;color:#f5c842;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.2);padding:0.15rem 0.6rem;border-radius:999px}
+
+.faq-section{background:#111318;border-radius:12px;padding:2rem;margin:2.5rem 0}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.faq-item{border-bottom:1px solid #1e2329;padding-bottom:1.25rem;margin-bottom:1.25rem}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-item h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.faq-item p{font-size:0.9rem;color:#cccccc;line-height:1.75;margin:0}
+.sidebar-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#f5c842;margin-bottom:1rem}
+.sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.sidebar-card ul li a{font-size:0.85rem;color:#cccccc;display:flex;gap:0.4rem;line-height:1.5}.sidebar-card ul li a:hover{color:#f5c842}
+.sidebar-card ul li a::before{content:"→";color:#f5c842;flex-shrink:0;font-size:0.8rem}
+.sidebar-cta{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:1.5rem;text-align:center}
+.sidebar-cta h4{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.sidebar-cta p{font-size:0.82rem;color:#cccccc;line-height:1.6;margin-bottom:1rem}
+.sidebar-cta a{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.85rem;padding:0.7rem 1.25rem;border-radius:6px}
+.related{border-top:1px solid #1e2329;padding-top:3rem;margin-top:3rem}
+.related h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.related-card{background:#111318;border:1px solid #1e2329;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s}
+.related-card:hover{border-color:rgba(245,200,66,0.4)}
+.related-cat{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.4rem}
+.related-card h4{font-size:0.9rem;font-weight:700;color:#fff;line-height:1.4}.related-card:hover h4{color:#f5c842}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:900px){.post-layout{grid-template-columns:1fr}.post-sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.hamburger{display:block}.signal-table{display:block;overflow-x:auto}.fgrid{grid-template-columns:1fr 1fr}.fbot{flex-direction:column;text-align:center}}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu"><ul>
+    <li><a href="/solutions">Solutions</a></li><li><a href="/services">Services</a></li>
+    <li><a href="/products">Products</a></li><li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li><li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+  </ul></div>
+</nav>
+
+<div class="wrap"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/blog">Blog</a><span class="bc-sep">›</span><a href="/blog/the-167-ai-signals">The 167 AI Signals</a><span class="bc-sep">›</span><span>Identity and Entity</span></div></div>
+
+<div class="wrap">
+  <div class="post-layout">
+    <article class="post-body">
+      <span class="post-cat">AI Signals · Category 01</span>
+      <h1>Identity and Entity Signals — The 48 Signals Explained</h1>
+      <div class="post-meta-row">
+        <span>📅 June 10, 2026</span>
+        <span>🏢 AiVenture S.R.L.</span>
+        <span>⏱ 12 min read</span>
+        <span>🔗 <a href="/blog/glossary#entity-signal" style="color:#f5c842;text-decoration:none">Glossary: Entity Signal</a></span>
+      </div>
+
+      <div class="post-content">
+
+        <h2>What Are Identity and Entity Signals?</h2>
+        <p>Identity and Entity signals are the <strong>48 atomic data points</strong> that establish who a business is in the AI knowledge graph. They answer the most fundamental question an AI system asks before it considers recommending a business: <em>Does this entity exist, and can I reliably identify it?</em></p>
+        <p>These 48 signals are the prerequisite category. AI systems cannot process <a href="/blog/trust-and-proof-signals">Trust and Proof signals</a> or <a href="/blog/intent-and-governance-signals">Intent and Governance signals</a> for a business whose identity they cannot confirm. A fragmented or inconsistent entity identity means that trust signals from external sources cannot be attributed to the correct knowledge graph node — they float without attachment, contributing nothing to the business's authority score.</p>
+
+        <blockquote>Every other signal category depends on Identity and Entity being correctly deployed first. Without a correctly modelled entity, the entire signal architecture is built on sand.</blockquote>
+
+        <h2>The Six Identity and Entity Signal Groups</h2>
+        <p>The 48 signals are organised into six functional groups. Each group addresses a distinct dimension of entity identity.</p>
+
+        <div class="group-header"><h3>Group 1 — Name and Designation</h3><span class="group-count">8 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.legal-name</td><td>Full legal registered name of the business entity<span class="si"> — must match company registry exactly</span></td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.trading-name</td><td>Commercial or brand name used in market-facing contexts</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.name-variants</td><td>All known abbreviations, acronyms, and alternate spellings</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.previous-names</td><td>Former legal or trading names with date ranges</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.name-language-variants</td><td>Official name in all operating languages</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.tagline</td><td>Canonical value proposition statement</td><td><span class="tag-l">Low</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.acronym</td><td>Officially used acronym if applicable</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.brand-name</td><td>Primary brand identifier separate from legal name</td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 2 — Classification</h3><span class="group-count">7 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.category</td><td>Primary business category — the type of business<span class="si"> e.g. Accounting Firm, IT Consultancy</span></td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.subcategory</td><td>Specific subcategory within the primary category</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.nace-code</td><td>NACE Rev. 2 sector classification code<span class="si"> — EU standard</span></td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.sic-code</td><td>SIC sector code<span class="si"> — for non-EU markets</span></td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.type</td><td>Entity type<span class="si"> — Corporation, Partnership, Sole Trader, etc.</span></td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.status</td><td>Current operational status<span class="si"> — Active, Dormant, Dissolved</span></td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.sector</td><td>Broad sector classification<span class="si"> — Finance, Technology, Healthcare, etc.</span></td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 3 — Legal Identity</h3><span class="group-count">6 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.registration-number</td><td>Company registration number from national registry</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.vat-number</td><td>VAT / tax identification number</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.lei-code</td><td>Legal Entity Identifier<span class="si"> — for financial sector entities</span></td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.duns-number</td><td>Dun and Bradstreet identifier</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.founding-date</td><td>Date of legal entity formation — must be consistent across all sources</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.jurisdiction</td><td>Legal jurisdiction of incorporation</td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 4 — Location and Geography</h3><span class="group-count">9 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.headquarters</td><td>Primary business address — city, country, postcode</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.registered-address</td><td>Official registered address if different from headquarters</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.operating-locations</td><td>All office and facility locations with addresses</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.service-geography</td><td>Geographic area served — countries, regions, cities</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.country-coverage</td><td>Explicit list of countries where services are offered</td><td><span class="tag-h">High</span></td><td>intents.json</td></tr>
+            <tr><td class="sn">entity.language-coverage</td><td>All operating languages for service delivery</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.timezone</td><td>Primary operating timezone</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.currency</td><td>Primary currency for transactions</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.market-segment</td><td>Primary market segment<span class="si"> — Local, Regional, National, EU, Global</span></td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 5 — Digital Presence</h3><span class="group-count">10 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.canonical-url</td><td>Single authoritative URL for the business — must be consistent everywhere</td><td><span class="tag-h">High</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.linkedin-url</td><td>LinkedIn company page URL</td><td><span class="tag-h">High</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.crunchbase-url</td><td>Crunchbase organisation profile URL</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.x-url</td><td>X / Twitter profile URL</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.github-url</td><td>GitHub organisation URL<span class="si"> — relevant for technology companies</span></td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.youtube-url</td><td>YouTube channel URL if content is published</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.primary-contact</td><td>Primary contact method — email or phone</td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.whatsapp</td><td>WhatsApp business contact number</td><td><span class="tag-l">Low</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.logo-url</td><td>URL to canonical logo file</td><td><span class="tag-m">Medium</span></td><td>ai.json</td></tr>
+            <tr><td class="sn">entity.primary-color</td><td>Brand primary colour — hex code</td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+          </tbody>
+        </table>
+
+        <div class="group-header"><h3>Group 6 — Entity Relationships</h3><span class="group-count">8 signals</span></div>
+        <table class="signal-table">
+          <thead><tr><th>Signal</th><th>Description</th><th>Weight</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="sn">entity.same-as</td><td>Array of all authoritative external profile URLs for cross-reference verification</td><td><span class="tag-h">High</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.parent-entity</td><td>Parent company or holding entity if applicable</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.subsidiaries</td><td>All subsidiary entities with canonical URLs</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.founder</td><td>Founding person entity with LinkedIn and professional profile</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.key-persons</td><td>All key team members as linked person entities</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.registry-url</td><td>Direct URL to company registry entry for this entity</td><td><span class="tag-h">High</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.wikidata-id</td><td>Wikidata entity ID if applicable<span class="si"> — secondary signal only</span></td><td><span class="tag-l">Low</span></td><td>entities.json</td></tr>
+            <tr><td class="sn">entity.industry-body-id</td><td>Identifier in relevant professional or industry body registry</td><td><span class="tag-m">Medium</span></td><td>entities.json</td></tr>
+          </tbody>
+        </table>
+
+        <h2>The Most Critical Identity Signals</h2>
+        <p>Of the 48, these eight have the highest impact on AI knowledge graph entry quality and must be correct and consistent across all sources:</p>
+        <ul>
+          <li><strong>entity.legal-name</strong> — must match the national company registry exactly</li>
+          <li><strong>entity.category</strong> — determines which buyer queries the business appears for</li>
+          <li><strong>entity.nace-code</strong> — enables sector-specific AI query matching</li>
+          <li><strong>entity.canonical-url</strong> — the single authoritative URL — must be identical in every file</li>
+          <li><strong>entity.founding-date</strong> — must be consistent across website, LinkedIn, registry</li>
+          <li><strong>entity.same-as</strong> — enables cross-source verification by AI systems</li>
+          <li><strong>entity.registration-number</strong> — enables registry verification</li>
+          <li><strong>entity.status</strong> — Active status must be declared — absence is interpreted as uncertainty</li>
+        </ul>
+
+        <div class="callout">
+          <h4>The sameAs Chain — How AI Verifies Entity Consistency</h4>
+          <p>The sameAs property is how AI systems verify that the business entity they found on your website is the same entity referenced in LinkedIn, Crunchbase, and the company registry. If the sameAs chain is broken — dead links, mismatched names, or missing references — AI confidence in the entity drops. Every sameAs URL in entities.json must be validated and active before deployment. See: <a href="/blog/what-is-aeo" style="color:#f5c842">What Is AEO? →</a></p>
+        </div>
+
+        <h2>Where Identity Signals Are Deployed</h2>
+        <p>Identity and Entity signals are deployed across four locations, each serving a different AI system access pattern:</p>
+        <ul>
+          <li><strong>ai.json at domain root</strong> — primary machine-readable entity definition. Read by all AI systems on first crawl.</li>
+          <li><strong>entities.json at domain root</strong> — complete entity graph with all relationships.</li>
+          <li><strong>Organization JSON-LD in homepage head</strong> — Schema.org structured data for search engine and AI crawler consumption.</li>
+          <li><strong>entity-graph.public.jsonld at domain root</strong> — linked data format for knowledge graph integration.</li>
+        </ul>
+        <p>All four locations are deployed and served by <a href="/products/edge-injector">EDGE INJECTOR™</a> from the Cloudflare network edge — ensuring sub-10ms response to any AI crawler globally, regardless of origin server state.</p>
+
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>What are Identity and Entity signals?</h3>
+            <p>Identity and Entity signals are the 48 atomic data points that establish who a business is in the AI knowledge graph — legal name, category, location, founding date, legal identifiers, and sameAs references to authoritative external profiles.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why are Entity signals the prerequisite category?</h3>
+            <p>AI systems cannot process Trust or Intent signals for a business they cannot identify. Without a correctly modelled entity identity, the business's knowledge graph entry is fragmented — Trust and Intent signals cannot be attributed to the correct entity node.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is sameAs in entity signals?</h3>
+            <p>sameAs is a Schema.org property that links a business entity to its external representations — LinkedIn company page, Crunchbase profile, national company registry URL, and sector directories. It allows AI systems to confirm entity consistency across independent sources.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Which file contains the Identity and Entity signals?</h3>
+            <p>The primary file is ai.json — deployed at the domain root. The complete entity graph is published in entities.json and entity-graph.public.jsonld. Schema.org Organization markup in the page head is also a key delivery mechanism.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How many of the 48 signals does the average B2B website have?</h3>
+            <p>Based on AI AUDIT™ assessments, the average B2B website has between 8 and 16 of the 48 signals correctly deployed. Most have a name and URL, but lack NACE code, sameAs references, legal identifiers, and machine-readable subsidiary or team entities.</p>
+          </div>
+        </div>
+
+        <div class="related">
+          <h3>Signal Category Deep Dives</h3>
+          <div class="related-grid">
+            <a href="/blog/the-167-ai-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>The 167 AI Signals — Complete Overview</h4></a>
+            <a href="/blog/trust-and-proof-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>Trust and Proof Signals — The 61 Signals</h4></a>
+            <a href="/blog/intent-and-governance-signals" class="related-card"><span class="related-cat">AI Signals</span><h4>Intent and Governance Signals — The 58 Signals</h4></a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-cta">
+        <h4>Check Your 48 Entity Signals</h4>
+        <p>AI AUDIT™ assesses all 48 Identity and Entity signals and shows exactly which are missing or inconsistent.</p>
+        <a href="/contact">Start Free Audit →</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Signal Groups</h4>
+        <ul>
+          <li><a href="#group-1">Name and Designation (8)</a></li>
+          <li><a href="#group-2">Classification (7)</a></li>
+          <li><a href="#group-3">Legal Identity (6)</a></li>
+          <li><a href="#group-4">Location (9)</a></li>
+          <li><a href="#group-5">Digital Presence (10)</a></li>
+          <li><a href="#group-6">Relationships (8)</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related Products</h4>
+        <ul>
+          <li><a href="/products/ai-lens">AI LENS™ — Build Knowledge Graph</a></li>
+          <li><a href="/products/ai-ready">AI READY™ — Generate Files</a></li>
+          <li><a href="/products/ai-signals">AI SIGNALS™ — Deploy Signals</a></li>
+          <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+          <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Other Signal Categories</h4>
+        <ul>
+          <li><a href="/blog/trust-and-proof-signals">Trust and Proof (61)</a></li>
+          <li><a href="/blog/intent-and-governance-signals">Intent and Governance (58)</a></li>
+          <li><a href="/blog/the-167-ai-signals">All 167 Signals</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Glossary Terms</h4>
+        <ul>
+          <li><a href="/blog/glossary#entity">Entity</a></li>
+          <li><a href="/blog/glossary#same-as">sameAs</a></li>
+          <li><a href="/blog/glossary#nace">NACE Code</a></li>
+          <li><a href="/blog/glossary#knowledge-graph">Knowledge Graph</a></li>
+          <li><a href="/blog/glossary#canonical-url">Canonical URL</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc"><a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a><a href="https://x.com/aipath512" target="_blank">X</a><a href="https://github.com/aipath512" target="_blank">GitHub</a></div>
+      </div>
+      <div class="fcol"><h5>Blog</h5><ul>
+        <li><a href="/blog">All Posts</a></li>
+        <li><a href="/blog/the-167-ai-signals">167 AI Signals</a></li>
+        <li><a href="/blog/identity-and-entity-signals">Entity Signals</a></li>
+        <li><a href="/blog/trust-and-proof-signals">Trust Signals</a></li>
+        <li><a href="/blog/intent-and-governance-signals">Intent Signals</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products">All Products</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem"><a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a><a href="https://aiventure.ro" target="_blank">AiVenture.ro</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>
