@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI AUDIT™ — Measure AI Readiness — 5thelement.ai</title>
+<meta name="description" content="AI AUDIT™ measures AI visibility, authority and readiness across six layers. AI Readiness Score. Gap Matrix. 167 signal assessment. Competitor benchmark. Delivered in 24h."/>
+<link rel="canonical" href="https://5thelement.ai/products/ai-audit"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+
+/* HERO */
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#ffffff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#ffffff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#ffffff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+
+/* PROBLEM */
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#ffffff;font-weight:600}
+
+/* SIX LAYERS */
+.layers{background:#0a0c0f}
+.layer-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.25rem}
+.layer-card{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;align-items:start;transition:border-color 0.2s}
+.layer-card:hover{border-color:rgba(245,200,66,0.3)}
+.layer-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;line-height:1}
+.layer-body .layer-pct{font-size:0.65rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.4rem}
+.layer-body h3{font-size:1.05rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.layer-body p{font-size:0.9rem;color:#cccccc;line-height:1.75}
+
+/* SCORE */
+.score-section{background:#111318}
+.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.score-band{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem}
+.score-range{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#f5c842;display:block;margin-bottom:0.5rem}
+.score-band h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem}
+.score-band p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* GAP MATRIX */
+.gapmatrix{background:#0a0c0f}
+.gap-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.gap-col h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:1rem}
+.gap-items{display:flex;flex-direction:column;gap:0.75rem}
+.gap-item{background:#111318;border:1px solid #1e2329;border-radius:8px;padding:1rem 1.25rem}
+.gap-item h4{font-size:0.85rem;font-weight:700;color:#f5c842;margin-bottom:0.25rem}
+.gap-item p{font-size:0.82rem;color:#cccccc;line-height:1.6}
+
+/* SIGNALS */
+.signals{background:#111318}
+.sig-status{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.25rem}
+.sig-stat{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.5rem;text-align:center}
+.sig-stat .sig-icon{font-size:1.5rem;display:block;margin-bottom:0.5rem}
+.sig-stat h3{font-size:0.9rem;font-weight:700;color:#ffffff;margin-bottom:0.4rem}
+.sig-stat p{font-size:0.82rem;color:#cccccc;line-height:1.6}
+
+/* OUTPUTS */
+.outputs{background:#0a0c0f}
+.output-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.output-item{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.output-item:last-child{border-bottom:none}
+.output-item:hover{background:#111318}
+.output-file{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.output-body h4{font-size:0.92rem;font-weight:700;color:#ffffff;margin-bottom:0.2rem}
+.output-body p{font-size:0.85rem;color:#cccccc;line-height:1.6}
+
+/* PROCESS */
+.process{background:#111318}
+.process-steps{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.pstep{display:grid;grid-template-columns:3rem 1fr;gap:1.25rem;padding:1.5rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.pstep:last-child{border-bottom:none}
+.pstep:hover{background:#0a0c0f}
+.pstep-n{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;color:#2d3748;line-height:1}
+.pstep-body h4{font-size:0.92rem;font-weight:700;color:#ffffff;margin-bottom:0.3rem}
+.pstep-body p{font-size:0.88rem;color:#cccccc;line-height:1.7}
+
+/* FOR WHO */
+.forwho{background:#0a0c0f}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
+.who-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;display:flex;gap:1rem;align-items:flex-start}
+.who-icon{font-size:1.4rem;flex-shrink:0}
+.who-card h3{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.4rem}
+.who-card p{font-size:0.88rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#111318}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-label{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-label.before{color:#888}
+.ba-label.after{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.before-list li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.after-list li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#0a0c0f;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#ffffff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .layer-card{grid-template-columns:1fr;gap:0.75rem}
+  .score-grid,.gap-cols,.who-grid,.ba-grid,.next-grid{grid-template-columns:1fr}
+  .sig-status{grid-template-columns:1fr 1fr}
+  .output-item{grid-template-columns:1fr;gap:0.4rem}
+  .pstep{grid-template-columns:2.5rem 1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}
+  .btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}.sig-status{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>AI AUDIT™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 01 · Measurement Engine</div>
+    <h1>AI AUDIT™<br><em>Measure AI Readiness.</em></h1>
+    <p>AI AUDIT™ evaluates how visible, understandable, verifiable, and trustable your business is from the perspective of AI systems. Six layers. One composite score. A ranked gap list. A prioritised action plan. Delivered in 24 hours.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">6</span><span class="lbl">Audit Layers</span></div>
+      <div class="hstat"><span class="val">167</span><span class="lbl">Signals Assessed</span></div>
+      <div class="hstat"><span class="val">24h</span><span class="lbl">Delivery</span></div>
+      <div class="hstat"><span class="val">0–100</span><span class="lbl">Readiness Score</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Start Your Audit →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">Most Businesses Have No Idea How AI Sees Them</h2>
+    <div class="prob-box">
+      <p>Most businesses investing in digital presence have never asked the question that now determines whether a buyer finds them or their competitor: <strong>what does ChatGPT say when asked to recommend a business like mine?</strong></p>
+      <p>The answer is almost always one of three things. Either AI cannot find the business at all. Or AI finds it but describes it incorrectly. Or AI finds it, describes it partially, but recommends a competitor instead — because that competitor has stronger authority signals.</p>
+      <p>AI AUDIT™ answers this question precisely, systematically, and verifiably. <strong>Not with an opinion. With a score.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- SIX LAYERS -->
+<section class="layers">
+  <div class="c">
+    <span class="ey">The Audit Framework</span>
+    <h2 class="sh">Six Layers. Weighted Contributions.</h2>
+    <p class="sl">Each layer is scored independently and combined into a composite AI Readiness Score. Weighting reflects the impact of each layer on AI recommendation probability.</p>
+    <div class="layer-list">
+      <div class="layer-card">
+        <div class="layer-n">01</div>
+        <div class="layer-body">
+          <span class="layer-pct">15% weight</span>
+          <h3>Entity Identity</h3>
+          <p>Can AI correctly identify this business? Legal name, trading name, category, location, founding date, and legal identifiers — consistent across all sources and present in the knowledge graph.</p>
+        </div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-n">02</div>
+        <div class="layer-body">
+          <span class="layer-pct">20% weight</span>
+          <h3>Service Clarity</h3>
+          <p>Can AI accurately describe what this business sells? Services named, categorised, and described in machine-readable format. Each service mapped to a buyer intent with target client defined.</p>
+        </div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-n">03</div>
+        <div class="layer-body">
+          <span class="layer-pct">15% weight</span>
+          <h3>External Verification</h3>
+          <p>Can AI confirm claims from sources it did not generate itself? sameAs references active, certifications schema-marked, company registry data consistent with website data.</p>
+        </div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-n">04</div>
+        <div class="layer-body">
+          <span class="layer-pct">20% weight</span>
+          <h3>Signal Architecture</h3>
+          <p>Are the 167 atomic AI signals deployed? Which are present, missing, inconsistent, or unverifiable? Is the signal layer served from the edge? Are AI crawlers permitted?</p>
+        </div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-n">05</div>
+        <div class="layer-body">
+          <span class="layer-pct">20% weight</span>
+          <h3>Authority Layer</h3>
+          <p>Does AI treat this business as a credible, authoritative source? External citations, case studies with schema markup, sector directory presence, cryptographic proof layer, third-party verification.</p>
+        </div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-n">06</div>
+        <div class="layer-body">
+          <span class="layer-pct">10% weight</span>
+          <h3>Recommendation Readiness</h3>
+          <p>Does AI name this business when buyers ask for a recommendation? On which AI systems does it appear? For which queries? With what description accuracy? How does it compare to top competitors?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORE BANDS -->
+<section class="score-section">
+  <div class="c">
+    <span class="ey">The Score</span>
+    <h2 class="sh">AI Readiness Score — 0 to 100</h2>
+    <p class="sl">A composite number calculated from all six layers. Each band represents a distinct AI visibility and authority state.</p>
+    <div class="score-grid">
+      <div class="score-band">
+        <span class="score-range">0 — 39</span>
+        <h3>Invisible or Misrepresented</h3>
+        <p>AI cannot find the business or describes it incorrectly. Immediate action required across all six layers before any marketing investment will have AI visibility impact.</p>
+      </div>
+      <div class="score-band">
+        <span class="score-range">40 — 69</span>
+        <h3>Partially Visible</h3>
+        <p>AI can find the business and partially describe it. Not yet recommendable. Competitors with higher scores will capture AI recommendations for shared target queries.</p>
+      </div>
+      <div class="score-band">
+        <span class="score-range">70 — 89</span>
+        <h3>Visible and Verifiable</h3>
+        <p>AI can find, understand, and verify the business. May still lack authority signals required for consistent recommendation. Focus shifts to TRUST LAYER™ and PROOF LAYER™.</p>
+      </div>
+      <div class="score-band">
+        <span class="score-range">90 — 100</span>
+        <h3>Recommendable™</h3>
+        <p>AI names this business in recommendation responses for target buyer queries. Consistent across ChatGPT, Gemini, Claude, Copilot, and Perplexity. Verified by eu-ai-audit.eu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAP MATRIX -->
+<section class="gapmatrix">
+  <div class="c">
+    <span class="ey">The Gap Matrix</span>
+    <h2 class="sh">Every Gap. Ranked by Impact.</h2>
+    <p class="sl">Every identified gap is entered into the Gap Matrix — structured, ranked, and referenced to the product that closes it.</p>
+    <div class="gap-cols">
+      <div>
+        <h3>What Each Gap Entry Contains</h3>
+        <div class="gap-items">
+          <div class="gap-item"><h4>Gap ID</h4><p>Unique identifier for tracking and cross-referencing across audit cycles.</p></div>
+          <div class="gap-item"><h4>Layer</h4><p>Which of the six audit layers the gap belongs to.</p></div>
+          <div class="gap-item"><h4>Impact Score</h4><p>How much closing this gap improves the overall AI Readiness Score.</p></div>
+          <div class="gap-item"><h4>Effort Estimate</h4><p>Low, medium, or high implementation effort.</p></div>
+          <div class="gap-item"><h4>Fix Reference</h4><p>Which product or action closes this specific gap.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3>Before/After Simulation</h3>
+        <div class="gap-items">
+          <div class="gap-item"><h4>Before State</h4><p>Current status of the gap — missing, inconsistent, or unverifiable.</p></div>
+          <div class="gap-item"><h4>After State</h4><p>Projected status once the gap is closed — present, consistent, and verified.</p></div>
+          <div class="gap-item"><h4>Score Projection</h4><p>Exact projected improvement to AI Readiness Score if this gap is closed.</p></div>
+          <div class="gap-item"><h4>Priority Rank</h4><p>Impact divided by effort — highest value gaps surfaced first.</p></div>
+          <div class="gap-item"><h4>machine-readable</h4><p>gap-matrix.json consumed directly by AI READY™ and SIGNAL COMPILER™.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 167 SIGNALS -->
+<section class="signals">
+  <div class="c">
+    <span class="ey">Signal Assessment</span>
+    <h2 class="sh">167 Signals. Four Status Tags.</h2>
+    <p class="sl">Every signal is assessed individually and tagged. The assessment file is consumed directly by AI SIGNALS™ for systematic deployment.</p>
+    <div class="sig-status">
+      <div class="sig-stat">
+        <span class="sig-icon">🟢</span>
+        <h3>Present</h3>
+        <p>Signal exists, is correctly structured, and is accessible to AI systems.</p>
+      </div>
+      <div class="sig-stat">
+        <span class="sig-icon">🔴</span>
+        <h3>Missing</h3>
+        <p>Signal does not exist in any accessible location.</p>
+      </div>
+      <div class="sig-stat">
+        <span class="sig-icon">🟡</span>
+        <h3>Inconsistent</h3>
+        <p>Signal exists but conflicts with data in another source.</p>
+      </div>
+      <div class="sig-stat">
+        <span class="sig-icon">⚪</span>
+        <h3>Unverifiable</h3>
+        <p>Signal exists but cannot be confirmed from an external source.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTPUTS -->
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Five Structured Deliverables</h2>
+    <div class="output-list">
+      <div class="output-item">
+        <span class="output-file">audit-score.json</span>
+        <div class="output-body"><h4>AI Readiness Score</h4><p>Machine-readable composite score with dimensional breakdown, trend data, and benchmark comparison. Input for all downstream products.</p></div>
+      </div>
+      <div class="output-item">
+        <span class="output-file">gap-matrix.json</span>
+        <div class="output-body"><h4>Gap Matrix</h4><p>Structured gap list ranked by impact score with effort estimates and fix references. Direct input for AI READY™ and SIGNAL COMPILER™.</p></div>
+      </div>
+      <div class="output-item">
+        <span class="output-file">signal-assessment.json</span>
+        <div class="output-body"><h4>167 Signal Status Map</h4><p>Complete signal assessment ready for AI SIGNALS™ consumption. Every signal tagged with status, source, and confidence score.</p></div>
+      </div>
+      <div class="output-item">
+        <span class="output-file">competitor-benchmark.json</span>
+        <div class="output-body"><h4>Competitor Benchmark</h4><p>Relative AI visibility positioning vs top three competitors. Score comparison, signal gap analysis, and opportunity identification.</p></div>
+      </div>
+      <div class="output-item">
+        <span class="output-file">audit-report.pdf</span>
+        <div class="output-body"><h4>Full Audit Report</h4><p>Human-readable report with executive summary, six-layer findings, gap matrix, competitor benchmark, and prioritised action plan.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="c">
+    <span class="ey">The Process</span>
+    <h2 class="sh">Five Steps. 24 Hours.</h2>
+    <div class="process-steps">
+      <div class="pstep"><div class="pstep-n">01</div><div class="pstep-body"><h4>Submission</h4><p>Submit domain, primary service category, target geography, and top three competitors. No website access required. No credentials. No login.</p></div></div>
+      <div class="pstep"><div class="pstep-n">02</div><div class="pstep-body"><h4>Automated Assessment</h4><p>All six layers assessed automatically. Entity data retrieved from public sources. Signal files checked. Schema validated. External references cross-referenced. AI systems queried for recommendation frequency.</p></div></div>
+      <div class="pstep"><div class="pstep-n">03</div><div class="pstep-body"><h4>Human Review</h4><p>Every automated finding reviewed by a human analyst before the report is finalised. HITL checkpoint — no gap is reported without human confirmation.</p></div></div>
+      <div class="pstep"><div class="pstep-n">04</div><div class="pstep-body"><h4>Delivery</h4><p>Full output package — score, gap matrix, signal assessment, competitor benchmark, and audit report — delivered within 24 hours of submission.</p></div></div>
+      <div class="pstep"><div class="pstep-n">05</div><div class="pstep-body"><h4>Debrief</h4><p>Optional 30-minute debrief call. Analyst walks through findings, answers questions, and recommends highest-impact next actions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="forwho">
+  <div class="c">
+    <span class="ey">Who This Is For</span>
+    <h2 class="sh">Any Business That Needs to Know Its Score</h2>
+    <div class="who-grid">
+      <div class="who-card"><div class="who-icon">🏢</div><div><h3>B2B businesses entering the AI era</h3><p>That have never measured AI visibility and want to understand their current position before investing in implementation.</p></div></div>
+      <div class="who-card"><div class="who-icon">🔍</div><div><h3>Businesses that have invested in SEO</h3><p>That want to understand whether that investment is translating into AI visibility. SEO and AI visibility are related but not the same.</p></div></div>
+      <div class="who-card"><div class="who-icon">⚔️</div><div><h3>Businesses preparing for competitive analysis</h3><p>That want to understand where competitors stand before deciding where to invest their own AI visibility budget.</p></div></div>
+      <div class="who-card"><div class="who-icon">📊</div><div><h3>Marketing and digital teams</h3><p>That need a structured, measurable baseline to report to leadership. A score — not an opinion — that can be tracked over time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE AFTER -->
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After AI AUDIT™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-label before">Before</span>
+        <ul class="ba-list before-list">
+          <li>No idea how AI systems perceive the business</li>
+          <li>Investment decisions based on assumption</li>
+          <li>Competitor comparisons anecdotal</li>
+          <li>No baseline to measure improvement against</li>
+          <li>No ranked gap list — no prioritised action plan</li>
+          <li>No signal assessment — no deployment roadmap</li>
+          <li>No way to demonstrate ROI of AI visibility work</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-label after">After</span>
+        <ul class="ba-list after-list">
+          <li>Precise AI Readiness Score — 0 to 100</li>
+          <li>Every gap identified, ranked, and referenced</li>
+          <li>Top three competitors benchmarked</li>
+          <li>Clear measurable baseline established</li>
+          <li>Ranked gap list with impact scores and effort estimates</li>
+          <li>167-signal status map ready for implementation</li>
+          <li>Path from current state to Recommendable™ is clear</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Measurement to Action</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 02</span>
+        <h3>AI LENS™</h3>
+        <p>Before implementing fixes, all business knowledge must be acquired, structured, and mapped. AI LENS™ builds the Business Knowledge Graph™ that every downstream product uses.</p>
+        <a href="/products/ai-lens" class="next-link">Go to AI LENS™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Start Here</span>
+        <h3>Request Your Audit</h3>
+        <p>Submit your domain and we will deliver your AI Readiness Score, Gap Matrix, and Signal Assessment within 24 hours. No website access required.</p>
+        <a href="/contact" class="next-link">Start Audit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit" style="color:#f5c842">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){
+  mmenu.classList.toggle('open');
+  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
+});
+</script>
+</body>
+</html>

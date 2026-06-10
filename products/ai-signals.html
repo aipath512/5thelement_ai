@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI SIGNALS™ — Machine-Readable Visibility Layer — 5thelement.ai</title>
+<meta name="description" content="AI SIGNALS™ generates, organises, validates and maintains 167 atomic signals across three categories. The machine-readable layer AI systems use to discover, classify and verify businesses."/>
+<link rel="canonical" href="https://5thelement.ai/products/ai-signals"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
+.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
+.logo-dot{color:#f5c842}
+.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#f5c842}
+.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
+.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-menu ul a{font-size:0.95rem;color:#cccccc;display:block;padding:0.25rem 0}
+.mobile-menu ul a:hover{color:#f5c842}
+.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px}
+.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
+.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;line-height:1.15}
+.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
+.bc{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#888;border-bottom:1px solid #1e2329}
+.bc a{color:#888}.bc a:hover{color:#f5c842}.bc-sep{color:#333}
+.phero{background:#0a0c0f;padding:4rem 0 3rem}
+.prod-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:1.5rem}
+.phero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.25rem}
+.phero h1 em{color:#f5c842;font-style:italic}
+.phero p{font-size:1.05rem;color:#cccccc;max-width:600px;line-height:1.8;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hstat .val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+.hstat .lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#888;display:block;margin-top:0.3rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btng{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1rem;padding:1rem 2rem;border-radius:8px;display:inline-block;box-shadow:0 4px 24px rgba(245,200,66,0.3)}
+.btnw{background:transparent;color:#fff;font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
+.problem{background:#111318}
+.prob-box{background:#0a0c0f;border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:2.5rem;margin-top:2.25rem}
+.prob-box p{font-size:1rem;color:#cccccc;line-height:1.85;margin-bottom:1rem}
+.prob-box p:last-child{margin-bottom:0}
+.prob-box strong{color:#fff;font-weight:600}
+
+/* THREE CATEGORIES */
+.cats{background:#0a0c0f}
+.cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
+.cat-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.cat-count{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:#f5c842;display:block;line-height:1;margin-bottom:0.5rem}
+.cat-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.75rem}
+.cat-card p{font-size:0.88rem;color:#cccccc;line-height:1.7;margin-bottom:1rem}
+.sig-examples{display:flex;flex-direction:column;gap:0.3rem}
+.sig-ex{font-family:'Courier New',monospace;font-size:0.72rem;color:#888}
+
+/* PIPELINE */
+.pipeline{background:#111318}
+.pipe-rule{background:#0a0c0f;border:1px solid rgba(245,200,66,0.3);border-radius:12px;padding:2rem;margin-top:2.25rem;text-align:center}
+.pipe-rule h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:0.75rem}
+.pipe-rule p{font-size:0.95rem;color:#cccccc;line-height:1.8;max-width:600px;margin:0 auto}
+.pipe-flow{display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:2rem}
+.pipe-step{font-family:'Courier New',monospace;font-size:0.85rem;font-weight:700;color:#f5c842;background:#111318;border:1px solid #1e2329;padding:0.5rem 1rem;border-radius:6px}
+.pipe-arrow{color:#888;font-size:1.1rem}
+
+/* VALIDATION */
+.validation{background:#0a0c0f}
+.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.25rem}
+.val-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;text-align:center}
+.val-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#2d3748;display:block;margin-bottom:0.5rem}
+.val-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.5rem}
+.val-card p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* OUTPUTS */
+.outputs{background:#111318}
+.out-list{display:flex;flex-direction:column;gap:0;margin-top:2.25rem;border:1px solid #1e2329;border-radius:12px;overflow:hidden}
+.out-item{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:1.35rem 2rem;border-bottom:1px solid #1e2329;align-items:start}
+.out-item:last-child{border-bottom:none}
+.out-item:hover{background:#0a0c0f}
+.out-file{font-family:'Courier New',monospace;font-size:0.8rem;color:#f5c842;white-space:nowrap;padding-top:0.1rem}
+.out-body h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.out-body p{font-size:0.85rem;color:#cccccc;line-height:1.65}
+
+/* BA */
+.beforeafter{background:#0a0c0f}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.25rem}
+.ba-card{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem}
+.ba-card.after{border-color:rgba(74,222,128,0.3)}
+.ba-lbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:1rem}
+.ba-lbl.b{color:#888}.ba-lbl.a{color:#4ade80}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.ba-list li{font-size:0.9rem;color:#cccccc;display:flex;gap:0.6rem;align-items:flex-start;line-height:1.5}
+.ba-list.bl li::before{content:"✗";color:#f87171;font-weight:700;flex-shrink:0}
+.ba-list.al li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
+
+/* NEXT */
+.next-prod{background:#111318;padding:3rem 0;border-bottom:none}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+.next-card{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.75rem;transition:border-color 0.2s}
+.next-card:hover{border-color:rgba(245,200,66,0.4)}
+.next-lbl{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#888;display:block;margin-bottom:0.5rem}
+.next-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:0.5rem}
+.next-card p{font-size:0.85rem;color:#cccccc;line-height:1.65;margin-bottom:1rem}
+.next-link{font-size:0.85rem;font-weight:700;color:#f5c842}
+.next-link:hover{text-decoration:underline}
+footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
+.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
+.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;margin-bottom:0.9rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
+.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
+.fbot a{color:#888}.fbot a:hover{color:#f5c842}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:block}
+  .cats-grid{grid-template-columns:1fr}
+  .val-grid{grid-template-columns:1fr 1fr}
+  .ba-grid,.next-grid{grid-template-columns:1fr}
+  .out-item{grid-template-columns:1fr;gap:0.4rem}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+  .fbot{flex-direction:column;text-align:center}
+  .btns{flex-direction:column}.btns a{width:100%;max-width:320px;text-align:center}
+}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}section{padding:3rem 0}.val-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products" class="active">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <ul>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="c"><div class="bc"><a href="/">Home</a><span class="bc-sep">›</span><a href="/products">Products</a><span class="bc-sep">›</span><span>AI SIGNALS™</span></div></div>
+
+<section class="phero">
+  <div class="c">
+    <div class="prod-badge">Product 04 · Signal Layer</div>
+    <h1>AI SIGNALS™<br><em>Build Machine-Readable Visibility.</em></h1>
+    <p>AI SIGNALS™ generates, organises, validates, and maintains the 167 atomic machine-readable signals that AI systems use to discover, classify, verify, and recommend businesses. The structured signal layer is the difference between being on a website and being in the AI knowledge graph.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="val">167</span><span class="lbl">Atomic Signals</span></div>
+      <div class="hstat"><span class="val">3</span><span class="lbl">Categories</span></div>
+      <div class="hstat"><span class="val">4</span><span class="lbl">Validation Stages</span></div>
+      <div class="hstat"><span class="val">Live</span><span class="lbl">Monitoring</span></div>
+    </div>
+    <div class="btns">
+      <a href="/contact" class="btng">Deploy Signal Layer →</a>
+      <a href="/products" class="btnw">← All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="c">
+    <span class="ey">The Problem</span>
+    <h2 class="sh">AI Systems Read Signals. Not Websites.</h2>
+    <div class="prob-box">
+      <p>Most businesses understand that content matters for search engines. Far fewer understand that AI systems do not primarily read content — they read signals. Structured, atomic, machine-readable data points that tell AI systems precisely what a business is, what it does, who it serves, what it has proven, and whether it can be trusted.</p>
+      <p>These signals are not embedded in website copy. They are deployed in structured files, schema markup, edge-delivered JSON, and linked data graphs. <strong>A business without a signal layer is not just less visible — it is categorically different in how AI systems process and weight it.</strong></p>
+      <p>AI SIGNALS™ builds and maintains the complete signal layer — 167 signals across three categories — ensuring every signal is present, correctly structured, consistently maintained, and accessible to every AI system that queries it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cats">
+  <div class="c">
+    <span class="ey">The 167 Signals</span>
+    <h2 class="sh">Three Categories. Every Signal Has a Purpose.</h2>
+    <p class="sl">Each category targets a distinct AI system behaviour. All three must be complete for full signal coverage.</p>
+    <div class="cats-grid">
+      <div class="cat-card">
+        <span class="cat-count">48</span>
+        <h3>Identity &amp; Entity</h3>
+        <p>Signals that establish who the business is at the entity level. Legal name, all name variants, category, NACE/SIC code, founding date, headquarters, all locations, canonical URL, social profiles, registration number, VAT, entity type, entity status, parent entity, subsidiaries, and all sameAs references to authoritative external profiles.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">entity.legal-name</span>
+          <span class="sig-ex">entity.category</span>
+          <span class="sig-ex">entity.nace-code</span>
+          <span class="sig-ex">entity.founding-date</span>
+          <span class="sig-ex">entity.same-as[]</span>
+          <span class="sig-ex">entity.canonical-url</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-count">61</span>
+        <h3>Trust &amp; Proof</h3>
+        <p>Signals that prove the business is who it claims to be. All certification references with issuing body URLs, awards, professional body memberships, case study schema, client testimonials, third-party reviews, citation count, sector directory presence, SHA-256 proof files, OpenTimestamps anchors, and all verification statuses.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">proof.sha256</span>
+          <span class="sig-ex">proof.ots-anchor</span>
+          <span class="sig-ex">trust.certifications[]</span>
+          <span class="sig-ex">trust.citations[]</span>
+          <span class="sig-ex">trust.verification-status</span>
+          <span class="sig-ex">trust.case-outcomes[]</span>
+        </div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-count">58</span>
+        <h3>Intent &amp; Governance</h3>
+        <p>Signals that map the business to buyer intent and declare its governance posture. Primary and secondary service categories, all service-to-intent mappings, buyer personas, problem solved, delivery formats, pricing model, geographic and sector intent filters, negative intents, AI crawler permissions, and all governance file statuses.</p>
+        <div class="sig-examples">
+          <span class="sig-ex">intent.service-category</span>
+          <span class="sig-ex">intent.buyer-persona[]</span>
+          <span class="sig-ex">intent.negative[]</span>
+          <span class="sig-ex">governance.eu-ai-act</span>
+          <span class="sig-ex">governance.gdpr</span>
+          <span class="sig-ex">governance.hitl-status</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pipeline">
+  <div class="c">
+    <span class="ey">The Canonical Rule</span>
+    <h2 class="sh">Signals → Files. Never Files → Signals.</h2>
+    <div class="pipe-rule">
+      <h3>The ADI™ Pipeline Rule</h3>
+      <p>Signal values are determined first — from the Business Knowledge Graph™. Files are generated from those signal values. Reversing this order produces inconsistent, error-prone deployments that create conflicting data in the AI knowledge graph. This rule is never violated.</p>
+      <div class="pipe-flow">
+        <span class="pipe-step">RAW</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-step">FACT</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-step">ENTITY</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-step">RELATIONSHIP</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-step">SIGNAL</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-step">FILE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="validation">
+  <div class="c">
+    <span class="ey">Signal Validation</span>
+    <h2 class="sh">Four Validation Stages Before Deployment</h2>
+    <p class="sl">Every signal passes through four validation stages. No unvalidated signal is ever deployed.</p>
+    <div class="val-grid">
+      <div class="val-card">
+        <span class="val-n">01</span>
+        <h3>Completeness</h3>
+        <p>Is every required property present? Missing required fields are flagged before any file is generated.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-n">02</span>
+        <h3>Consistency</h3>
+        <p>Does this signal conflict with any other signal in the set? Cross-signal conflicts are resolved before deployment.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-n">03</span>
+        <h3>Verifiability</h3>
+        <p>Can this signal's value be confirmed from an external source? Unverifiable signals are flagged for human review.</p>
+      </div>
+      <div class="val-card">
+        <span class="val-n">04</span>
+        <h3>Accessibility</h3>
+        <p>Is this signal accessible to the AI crawlers that need it? Deployment path verified before the signal goes live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outputs">
+  <div class="c">
+    <span class="ey">Output Files</span>
+    <h2 class="sh">Four Structured Deliverables</h2>
+    <div class="out-list">
+      <div class="out-item"><span class="out-file">AI Signals Registry</span><div class="out-body"><h4>Complete Signal Manifest</h4><p>All 167 signals in a versioned registry with current status, last validation date, next review date, and source reference for every signal.</p></div></div>
+      <div class="out-item"><span class="out-file">Signal Files</span><div class="out-body"><h4>All Structured Signal Files</h4><p>ai.json · entities.json · intents.json · ai-actions.json · ai-routes.json · ai-validation.json · allow-lane-matrix.json · adn.json — all generated from the signal set.</p></div></div>
+      <div class="out-item"><span class="out-file">Signal Validation Report</span><div class="out-body"><h4>Status of Every Signal</h4><p>Structured report of every signal's validation status — completeness, consistency, verifiability, and accessibility — with findings and corrective actions for every failing signal.</p></div></div>
+      <div class="out-item"><span class="out-file">Signal Monitoring</span><div class="out-body"><h4>Continuous Health Dashboard</h4><p>Real-time view of signal health across all 167 signals with trend data and anomaly alerts. Powered by AI SONAR™ once the signal layer is deployed.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div class="c">
+    <span class="ey">The Result</span>
+    <h2 class="sh">Before and After AI SIGNALS™</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <span class="ba-lbl b">Before</span>
+        <ul class="ba-list bl">
+          <li>Some schema markup exists — no complete signal layer</li>
+          <li>Signal files incomplete, inconsistent, or absent</li>
+          <li>No signal validation — errors go undetected</li>
+          <li>AI classifies business incorrectly or partially</li>
+          <li>No monitoring — signal decay goes unnoticed</li>
+          <li>Buyer intent not mapped to any service</li>
+          <li>Governance posture not declared — AI trust low</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <span class="ba-lbl a">After</span>
+        <ul class="ba-list al">
+          <li>All 167 signals deployed and validated</li>
+          <li>Eight signal files live and edge-accessible</li>
+          <li>Four-stage validation — no invalid signal deployed</li>
+          <li>AI correctly classifies business across all dimensions</li>
+          <li>Continuous monitoring — signal decay detected immediately</li>
+          <li>Buyer intent mapped — business appears for right queries</li>
+          <li>Governance declared — AI treats business as trustworthy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-prod">
+  <div class="c">
+    <span class="ey">Next Step</span>
+    <h2 class="sh">From Signals to Graph</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <span class="next-lbl">Product 05</span>
+        <h3>KNOWLEDGE GRAPH™</h3>
+        <p>KNOWLEDGE GRAPH™ builds the complete entity relationship graph — connecting every entity, typing every relationship, and publishing the result in JSON-LD for AI knowledge graph integration.</p>
+        <a href="/products/knowledge-graph" class="next-link">Go to KNOWLEDGE GRAPH™ →</a>
+      </div>
+      <div class="next-card">
+        <span class="next-lbl">Previous</span>
+        <h3>AI READY™</h3>
+        <p>AI SIGNALS™ builds on the files generated by AI READY™. If not yet complete, start with AI READY™.</p>
+        <a href="/products/ai-ready" class="next-link">← Back to AI READY™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
+        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI.</p>
+        <div class="fsoc">
+          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
+          <a href="https://x.com/aipath512" target="_blank">X</a>
+          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
+          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
+        </div>
+      </div>
+      <div class="fcol"><h5>Products</h5><ul>
+        <li><a href="/products/ai-audit">AI AUDIT™</a></li>
+        <li><a href="/products/ai-lens">AI LENS™</a></li>
+        <li><a href="/products/ai-ready">AI READY™</a></li>
+        <li><a href="/products/ai-signals" style="color:#f5c842">AI SIGNALS™</a></li>
+        <li><a href="/products/knowledge-graph">KNOWLEDGE GRAPH™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>More Products</h5><ul>
+        <li><a href="/products/edge-injector">EDGE INJECTOR™</a></li>
+        <li><a href="/products/trust-layer">TRUST LAYER™</a></li>
+        <li><a href="/products/proof-layer">PROOF LAYER™</a></li>
+        <li><a href="/products/ai-sonar">AI SONAR™</a></li>
+        <li><a href="/products/economic-twin">ECONOMIC TWIN™</a></li>
+      </ul></div>
+      <div class="fcol"><h5>Legal</h5><ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+        <li><a href="/eu-ai-act">EU AI Act</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
+      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
+        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
+        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+var hbtn=document.getElementById('hbtn');
+var mmenu=document.getElementById('mmenu');
+hbtn.addEventListener('click',function(){mmenu.classList.toggle('open');hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';});
+</script>
+</body>
+</html>
