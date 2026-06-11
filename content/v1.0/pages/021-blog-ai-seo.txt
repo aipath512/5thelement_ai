@@ -1,0 +1,262 @@
+TITLE: AI-SEO — How AI Changes Search for B2B Businesses
+
+BREADCRUMB: Home › Blog › AI-SEO
+
+Category: AI-SEO
+
+Date: June 10, 2026
+
+Reading Time: 11 min
+
+── WHAT IS AI-SEO ──
+
+AI-SEO is the technical discipline of making business information
+machine-readable for AI systems through:
+
+Structured files
+
+Schema markup
+
+Crawler permissions
+
+Edge delivery
+
+AI-SEO is the technical layer that enables:
+
+AEO
+
+GEO
+
+AIO
+
+Traditional SEO optimizes pages for humans.
+
+AI-SEO optimizes signals for AI systems.
+
+── CORE AI-SEO FILES ──
+
+/ai.json
+
+Primary Entity Definition
+
+---
+
+/llms.txt
+
+LLM Instruction File
+
+---
+
+/entities.json
+
+Entity Relationship Graph
+
+---
+
+/intents.json
+
+Buyer Intent Registry
+
+---
+
+/robots.txt
+
+AI Crawler Permissions
+
+---
+
+/ai-proof.json
+
+Proof Registry
+
+SHA-256 + OTS
+
+── AI CRAWLERS TO ALLOW ──
+
+GPTBot
+
+(OpenAI)
+
+---
+
+Google-Extended
+
+(Gemini)
+
+---
+
+anthropic-ai
+
+(Claude)
+
+---
+
+PerplexityBot
+
+(Perplexity)
+
+---
+
+Bingbot
+
+(Copilot)
+
+---
+
+CCBot
+
+---
+
+FacebookBot
+
+---
+
+Omgilibot
+
+── SCHEMA.ORG TYPES ──
+
+25 Recommended Types
+
+Organization
+
+Service
+
+FAQPage
+
+Question
+
+Answer
+
+BreadcrumbList
+
+WebSite
+
+WebPage
+
+Article
+
+TechArticle
+
+Person
+
+LocalBusiness
+
+HowTo
+
+HowToStep
+
+DefinedTerm
+
+DefinedTermSet
+
+and additional sector-specific types.
+
+── ai.json MINIMUM STRUCTURE ──
+
+@context
+
+@type = Organization
+
+name
+
+legalName
+
+url
+
+foundingDate
+
+areaServed
+
+services[]
+
+sameAs[]
+
+── EDGE DELIVERY ──
+
+EDGE INJECTOR™
+
+↓
+
+Cloudflare Workers KV
+
+↓
+
+300+ Edge Nodes
+
+↓
+
+<10ms Global Delivery
+
+Signal Layer and Website remain fully decoupled.
+
+Canonical Rule:
+
+Site = Content
+
+Edge = Signals
+
+── AI-SEO vs TRADITIONAL SEO ──
+
+Still Important:
+
+Quality content
+
+Accurate information
+
+Consistent NAP
+
+Canonical URLs
+
+---
+
+New Requirements:
+
+JSON-LD Entity Graphs
+
+Machine-readable files
+
+Edge-first delivery
+
+Proof Layer
+
+SHA-256
+
+OpenTimestamps
+
+── FAQ ──
+
+1. What is AI-SEO?
+
+Technical optimization for AI systems.
+
+2. Does traditional SEO still matter?
+
+Yes.
+
+AI-SEO complements SEO.
+
+3. What is llms.txt?
+
+A plain-text file for AI systems.
+
+4. What is ai.json?
+
+A machine-readable business identity file.
+
+5. Why edge delivery?
+
+Faster and independent from website technology.
+
+── RELATED ──
+
+What Is AEO?
+
+What Is GEO?
+
+What Is AIO?
+
+The 167 AI Signals
+
+llms.txt Guide
+
+ai.json Guide
