@@ -1,0 +1,339 @@
+TITLE: AI READY™ — Automatic Transformation Engine
+
+BREADCRUMB: Home › Products › AI READY™
+
+Product 03
+
+Transformation Engine
+
+5 Generation Types
+
+0 CMS Changes
+
+Auto from Knowledge Graph
+
+HITL Controlled
+
+── THE PROBLEM ──
+
+Knowing what is missing is not the same as fixing it.
+
+Most businesses discover gaps but then need:
+
+Developers
+
+Writers
+
+Schema specialists
+
+Project managers
+
+Time
+
+Budget
+
+Coordination
+
+AI READY™ automates the transformation process.
+
+It converts the Business Knowledge Graph™ into deployable assets.
+
+No website rebuild.
+
+No CMS migration.
+
+No developer required.
+
+── WHAT AI READY™ DOES ──
+
+AI READY™ automatically generates:
+
+Content
+
+Schema
+
+FAQs
+
+Entity Graphs
+
+AI Files
+
+Everything is derived from structured business knowledge.
+
+Nothing is invented.
+
+Everything is reviewed by humans before deployment.
+
+── FIVE GENERATION TYPES ──
+
+TYPE 1
+
+Content Generation
+
+Creates:
+
+Service descriptions
+
+Entity descriptions
+
+Company summaries
+
+Team profiles
+
+Business explanations
+
+Written for AI understanding.
+
+Not marketing hype.
+
+---
+
+TYPE 2
+
+Schema Generation
+
+Creates:
+
+Organization
+
+Service
+
+FAQPage
+
+BreadcrumbList
+
+Person
+
+Article
+
+Industry-specific schema
+
+Validated before deployment.
+
+---
+
+TYPE 3
+
+FAQ Generation
+
+Creates:
+
+Questions
+
+Answers
+
+Intent-driven FAQs
+
+FAQPage JSON-LD
+
+Generated from buyer intent patterns.
+
+---
+
+TYPE 4
+
+Entity Graph Generation
+
+Creates:
+
+entities.json
+
+entity-graph.public.jsonld
+
+Relationships
+
+Cross-references
+
+Entity identifiers
+
+---
+
+TYPE 5
+
+AI Files Generation
+
+Creates:
+
+ai.json
+
+llms.txt
+
+robots.txt
+
+intents.json
+
+AI infrastructure files
+
+Version controlled.
+
+── WHAT CHANGES ──
+
+Added:
+
+Structured Data
+
+Schema
+
+AI Files
+
+Entity Graphs
+
+Intent Files
+
+FAQ Assets
+
+AI Signals
+
+---
+
+Not Changed:
+
+Website Design
+
+CMS
+
+Hosting
+
+Database
+
+CSS
+
+JavaScript
+
+Visual Layout
+
+Existing Content
+
+── OUTPUTS ──
+
+AI-ready content
+
+Schema files
+
+AI files
+
+Entity files
+
+FAQ assets
+
+Validation reports
+
+Deployment package
+
+── PROCESS ──
+
+STEP 1
+
+Consume Business Knowledge Graph™
+
+---
+
+STEP 2
+
+Generate Assets
+
+Automatically
+
+---
+
+STEP 3
+
+Validate
+
+Schema
+
+Files
+
+Relationships
+
+References
+
+---
+
+STEP 4
+
+Human Review
+
+HITL mandatory
+
+---
+
+STEP 5
+
+Deliver Deployment Package
+
+Ready for deployment
+
+── BEFORE ──
+
+Missing schema
+
+Missing AI files
+
+Missing entity structure
+
+Missing FAQs
+
+Low AI understanding
+
+---
+
+AFTER
+
+Structured assets generated
+
+Schema complete
+
+Entity graph available
+
+AI files ready
+
+Recommendation readiness improved
+
+── BENEFITS ──
+
+Faster implementation
+
+Lower cost
+
+Consistent structure
+
+Repeatable process
+
+No website disruption
+
+AI-friendly architecture
+
+── FAQ ──
+
+1. What is AI READY™?
+
+An automatic transformation engine.
+
+2. Does it modify my website?
+
+No.
+
+3. Does it require developers?
+
+No.
+
+4. What does it generate?
+
+Content, schema, FAQs, graphs and AI files.
+
+5. Is human review required?
+
+Yes.
+
+HITL is mandatory.
+
+── PREVIOUS PRODUCT ──
+
+AI LENS™
+
+── NEXT PRODUCT ──
+
+AI SIGNALS™
+
+Machine-Readable Visibility Layer.
