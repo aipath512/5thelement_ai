@@ -1,0 +1,99 @@
+TITLE: Verifiable™ — Stage 3 of AI Visibility
+
+BREADCRUMB: Home › Solutions › Verifiable™
+
+STAGE NAV:
+01 Findable™ ·
+02 Understandable™ ·
+03 Verifiable™ ·
+04 Trustable™ ·
+05 Recommendable™
+
+── HERO ──
+
+Stage 03 of 05 · AI Authority™
+
+Verifiable™
+
+Stage 3.
+
+AI has found you and understood what you sell.
+
+Now it must confirm your claims are true.
+
+AI cross-references every claim against external data sources
+before assigning high confidence.
+
+── DEFINITION ──
+
+A business is Verifiable™ when AI can independently confirm its claims
+using external data sources — without relying solely on the business's
+own website.
+
+Consistency across sources = high confidence.
+
+Inconsistency or absence = low confidence.
+
+── 6 AI TEST QUESTIONS ──
+
+Q1 — Do external sources confirm this business exists at the stated
+address and legal name?
+
+Q2 — Are certifications verifiable in public registries?
+
+Q3 — Do third-party mentions match the claims on its own website?
+
+Q4 — Is founding date and history consistent across all sources?
+
+Q5 — Are sameAs references consistent and active?
+
+Q6 — Is cryptographic proof of key documents publicly accessible?
+
+── 8 ACTIONS ──
+
+1. Add sameAs references → /ai.json → sameAs[]
+
+2. Ensure company registry data matches website exactly
+
+3. Deploy ai-proof.json with SHA-256 hashes
+
+4. Publish OpenTimestamps files →
+   /ai-proof.json.ots
+
+5. Add certification schema to credential pages
+
+6. Create ai-validation.json with external reference map
+
+7. Ensure LinkedIn and Crunchbase profiles match website exactly
+
+8. Add Review and AggregateRating schema where applicable
+
+── BEFORE / AFTER ──
+
+Before:
+
+AI cannot confirm claims ·
+certifications not in schema ·
+sameAs missing or dead ·
+registry data inconsistent ·
+no proof files
+
+After:
+
+AI confirms entity across registry +
+LinkedIn +
+Crunchbase ·
+
+all certifications marked up ·
+
+sameAs chain active ·
+
+SHA-256 files accessible ·
+
+AI assigns high verification confidence
+
+── NAVIGATION ──
+
+Next → Trustable™ Stage 4
+
+Previous → Understandable™ Stage 2
