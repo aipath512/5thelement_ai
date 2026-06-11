@@ -32,6 +32,14 @@
 </script>
 
 <style>
+/* ============================================================
+   DESIGN SYSTEM
+   Playfair Display (editorial weight) + Inter (precision body)
+   Dark: #0a0c0f bg, #f5c842 gold, #ffffff text
+   Signature element: the "live pulse" — a single animated dot
+   that travels across AI brand names, implying real-time signal
+   ============================================================ */
+
 :root {
   --bg: #0a0c0f;
   --surface: #0f1318;
@@ -49,7 +57,9 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -59,6 +69,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* THEME TOGGLE */
 #tt {
   position: fixed;
   top: 68px; left: 16px;
@@ -75,6 +86,7 @@ body {
 }
 #tt:hover { border-color: var(--gold); }
 
+/* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -120,6 +132,7 @@ nav {
 }
 .nav-cta:hover { opacity: 0.88; }
 
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column; gap: 5px;
@@ -143,6 +156,9 @@ nav {
   font-size: 22px; font-weight: 300; font-family: var(--serif);
 }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   min-height: 100vh;
   display: flex; align-items: center;
@@ -150,6 +166,8 @@ nav {
   position: relative;
   overflow: hidden;
 }
+
+/* subtle grid */
 .hero::before {
   content: '';
   position: absolute; inset: 0;
@@ -160,6 +178,8 @@ nav {
   opacity: 0.3;
   pointer-events: none;
 }
+
+/* gold gradient bottom-fade */
 .hero::after {
   content: '';
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -167,6 +187,7 @@ nav {
   background: linear-gradient(to top, var(--bg), transparent);
   pointer-events: none;
 }
+
 .hero-inner {
   max-width: 1140px; margin: 0 auto;
   position: relative; z-index: 1;
@@ -174,6 +195,7 @@ nav {
   align-items: center;
   width: 100%;
 }
+
 .hero-eyebrow {
   font-size: 11px;
   font-weight: 600;
@@ -188,6 +210,7 @@ nav {
   width: 32px; height: 1px;
   background: var(--gold);
 }
+
 .hero-h1 {
   font-family: var(--serif);
   font-size: clamp(38px, 5vw, 64px);
@@ -197,7 +220,11 @@ nav {
   color: var(--text);
   margin-bottom: 28px;
 }
-.hero-h1 em { font-style: italic; color: var(--gold); }
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
 .hero-sub {
   font-size: 18px;
   font-weight: 300;
@@ -207,9 +234,11 @@ nav {
   max-width: 520px;
 }
 .hero-sub strong { color: var(--text); font-weight: 500; }
+
 .hero-actions {
   display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
 }
+
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--gold);
@@ -224,6 +253,7 @@ nav {
   border: none; cursor: pointer;
 }
 .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   color: var(--mid);
@@ -237,7 +267,9 @@ nav {
 .btn-ghost::after { content: '→'; transition: transform .2s; }
 .btn-ghost:hover::after { transform: translateX(3px); }
 
+/* AI ENGINE LIST — hero right */
 .hero-right { position: relative; }
+
 .ai-signal-card {
   background: var(--surface);
   border: 1px solid var(--border2);
@@ -252,6 +284,7 @@ nav {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
+
 .asc-label {
   font-size: 10px;
   letter-spacing: .15em;
@@ -259,14 +292,18 @@ nav {
   color: var(--dim);
   margin-bottom: 20px;
 }
+
 .engine-list { display: flex; flex-direction: column; gap: 0; }
+
 .engine-row {
   display: flex; align-items: center; gap: 14px;
   padding: 11px 0;
   border-bottom: 1px solid var(--border);
+  position: relative;
   cursor: default;
 }
 .engine-row:last-child { border: none; }
+
 .engine-dot {
   width: 8px; height: 8px;
   border-radius: 50%;
@@ -278,6 +315,7 @@ nav {
   background: var(--gold);
   box-shadow: 0 0 10px rgba(245,200,66,0.5);
 }
+
 .engine-name {
   font-size: 15px;
   font-weight: 400;
@@ -286,6 +324,7 @@ nav {
   transition: color .3s;
 }
 .engine-row.active .engine-name { color: var(--text); }
+
 .engine-status {
   font-size: 10px;
   letter-spacing: .08em;
@@ -294,6 +333,7 @@ nav {
   transition: color .3s;
 }
 .engine-row.active .engine-status { color: var(--gold); }
+
 .asc-footer {
   margin-top: 20px;
   padding-top: 16px;
@@ -304,8 +344,17 @@ nav {
 }
 .asc-footer strong { color: var(--mid); }
 
-section { padding: 100px 40px; }
-.container { max-width: 1140px; margin: 0 auto; }
+/* ============================================================
+   SECTIONS — shared
+   ============================================================ */
+section {
+  padding: 100px 40px;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .section-eyebrow {
   font-size: 11px;
   font-weight: 600;
@@ -315,17 +364,22 @@ section { padding: 100px 40px; }
   margin-bottom: 16px;
 }
 
+/* ============================================================
+   WHY THIS MATTERS
+   ============================================================ */
 .why {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
 .why-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 .why-h2 {
   font-family: var(--serif);
   font-size: clamp(32px, 4vw, 52px);
@@ -335,6 +389,7 @@ section { padding: 100px 40px; }
   margin-bottom: 24px;
 }
 .why-h2 em { font-style: italic; color: var(--gold); }
+
 .why-body {
   font-size: 17px;
   color: var(--mid);
@@ -342,6 +397,7 @@ section { padding: 100px 40px; }
   margin-bottom: 24px;
 }
 .why-body strong { color: var(--text); font-weight: 500; }
+
 .why-risk {
   background: var(--surface2);
   border: 1px solid var(--border2);
@@ -352,7 +408,13 @@ section { padding: 100px 40px; }
   color: var(--text);
   line-height: 1.6;
 }
-.questions-list { display: flex; flex-direction: column; gap: 0; }
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 .q-item {
   padding: 18px 0;
   border-bottom: 1px solid var(--border);
@@ -375,6 +437,9 @@ section { padding: 100px 40px; }
   margin-top: 2px;
 }
 
+/* ============================================================
+   WHAT YOU GAIN
+   ============================================================ */
 .gains-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -385,13 +450,20 @@ section { padding: 100px 40px; }
   overflow: hidden;
   margin-top: 48px;
 }
+
 .gain-card {
   background: var(--surface);
   padding: 32px 24px;
   transition: background .2s;
 }
 .gain-card:hover { background: var(--surface2); }
-.gain-icon { font-size: 24px; margin-bottom: 14px; display: block; }
+
+.gain-icon {
+  font-size: 24px;
+  margin-bottom: 14px;
+  display: block;
+}
+
 .gain-title {
   font-family: var(--serif);
   font-size: 18px;
@@ -400,19 +472,29 @@ section { padding: 100px 40px; }
   margin-bottom: 10px;
   line-height: 1.2;
 }
-.gain-body { font-size: 14px; color: var(--mid); line-height: 1.6; }
 
+.gain-body {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   NO REBUILD
+   ============================================================ */
 .no-rebuild {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
 .rebuild-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 .rebuild-h2 {
   font-family: var(--serif);
   font-size: clamp(28px, 3.5vw, 46px);
@@ -421,13 +503,18 @@ section { padding: 100px 40px; }
   letter-spacing: -.02em;
   margin-bottom: 24px;
 }
+
 .rebuild-body {
   font-size: 17px;
   color: var(--mid);
   line-height: 1.7;
   margin-bottom: 32px;
 }
-.keep-list { display: flex; flex-direction: column; gap: 8px; }
+
+.keep-list {
+  display: flex; flex-direction: column; gap: 8px;
+}
+
 .keep-item {
   display: flex; align-items: center; gap: 12px;
   font-size: 15px; color: var(--mid);
@@ -441,12 +528,15 @@ section { padding: 100px 40px; }
   font-size: 10px;
   color: var(--gold);
 }
+
 .layer-diagram {
   background: var(--surface2);
   border: 1px solid var(--border2);
   border-radius: 10px;
   padding: 32px;
+  position: relative;
 }
+
 .layer-row {
   display: flex; align-items: center;
   padding: 14px 16px;
@@ -455,11 +545,13 @@ section { padding: 100px 40px; }
   font-size: 14px;
 }
 .layer-row:last-child { margin: 0; }
+
 .layer-existing {
   background: rgba(255,255,255,0.04);
   color: var(--mid);
   border: 1px dashed var(--border2);
 }
+
 .layer-new {
   background: var(--gold-soft);
   color: var(--text);
@@ -476,6 +568,7 @@ section { padding: 100px 40px; }
   padding: 2px 7px;
   border-radius: 3px;
 }
+
 .layer-plus {
   text-align: center;
   font-size: 18px;
@@ -484,6 +577,9 @@ section { padding: 100px 40px; }
   font-weight: 300;
 }
 
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
 .how-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -494,6 +590,7 @@ section { padding: 100px 40px; }
   overflow: hidden;
   margin-top: 48px;
 }
+
 .how-card {
   background: var(--surface);
   padding: 36px 28px;
@@ -501,6 +598,7 @@ section { padding: 100px 40px; }
   cursor: default;
 }
 .how-card:hover { background: var(--surface2); }
+
 .how-num {
   font-family: var(--serif);
   font-size: 48px;
@@ -510,6 +608,7 @@ section { padding: 100px 40px; }
   margin-bottom: 6px;
   opacity: 0.35;
 }
+
 .how-title {
   font-family: var(--serif);
   font-size: 22px;
@@ -517,12 +616,14 @@ section { padding: 100px 40px; }
   color: var(--text);
   margin-bottom: 12px;
 }
+
 .how-body {
   font-size: 15px;
   color: var(--mid);
   line-height: 1.65;
   margin-bottom: 20px;
 }
+
 .how-time {
   font-size: 12px;
   color: var(--gold);
@@ -530,21 +631,32 @@ section { padding: 100px 40px; }
   letter-spacing: .06em;
   display: flex; align-items: center; gap: 6px;
 }
-.how-time::before { content: ''; width: 20px; height: 1px; background: var(--gold); }
+.how-time::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--gold);
+}
 
+/* ============================================================
+   EFFORT + VERIFICATION — two col
+   ============================================================ */
 .effort-verify {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
 .ev-grid {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
   gap: 0;
 }
+
 .ev-divider { background: var(--border); }
+
 .ev-col { padding: 60px 56px 60px 0; }
 .ev-col:last-child { padding: 60px 0 60px 56px; }
+
 .ev-h3 {
   font-family: var(--serif);
   font-size: clamp(24px, 2.5vw, 36px);
@@ -553,12 +665,14 @@ section { padding: 100px 40px; }
   line-height: 1.15;
   margin-bottom: 20px;
 }
+
 .ev-body {
   font-size: 16px;
   color: var(--mid);
   line-height: 1.7;
   margin-bottom: 24px;
 }
+
 .ev-big {
   font-family: var(--serif);
   font-size: 64px;
@@ -568,7 +682,13 @@ section { padding: 100px 40px; }
   margin-bottom: 8px;
   opacity: 0.7;
 }
-.ev-big-label { font-size: 14px; color: var(--mid); margin-bottom: 24px; }
+
+.ev-big-label {
+  font-size: 14px;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+
 .query-example {
   background: var(--surface2);
   border: 1px solid var(--border2);
@@ -591,12 +711,16 @@ section { padding: 100px 40px; }
   vertical-align: -4px;
 }
 
+/* ============================================================
+   WHY US
+   ============================================================ */
 .why-us-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 .why-us-h2 {
   font-family: var(--serif);
   font-size: clamp(30px, 3.5vw, 48px);
@@ -606,12 +730,14 @@ section { padding: 100px 40px; }
   margin-bottom: 24px;
 }
 .why-us-h2 em { font-style: italic; color: var(--gold); }
+
 .why-us-body {
   font-size: 17px;
   color: var(--mid);
   line-height: 1.7;
   margin-bottom: 32px;
 }
+
 .proof-row {
   display: flex; align-items: flex-start; gap: 16px;
   padding: 16px 0;
@@ -622,12 +748,21 @@ section { padding: 100px 40px; }
 .proof-text { font-size: 14px; color: var(--mid); line-height: 1.6; }
 .proof-text strong { color: var(--text); font-weight: 500; }
 
+/* ============================================================
+   FREE AUDIT + GUARANTEE — two col
+   ============================================================ */
 .free-guarantee {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
-.fg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+
+.fg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
 .fg-card {
   padding: 40px;
   border: 1px solid var(--border2);
@@ -642,10 +777,12 @@ section { padding: 100px 40px; }
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
+
 .fg-tag {
   font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 14px;
 }
+
 .fg-h3 {
   font-family: var(--serif);
   font-size: 26px; font-weight: 700;
@@ -653,7 +790,9 @@ section { padding: 100px 40px; }
   margin-bottom: 20px;
   line-height: 1.2;
 }
+
 .fg-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
 .fg-item {
   display: flex; align-items: flex-start; gap: 10px;
   font-size: 15px; color: var(--mid); line-height: 1.5;
@@ -662,26 +801,36 @@ section { padding: 100px 40px; }
   width: 5px; height: 5px; border-radius: 50%;
   background: var(--gold); flex-shrink: 0; margin-top: 8px;
 }
-.fg-note { font-size: 13px; color: var(--dim); line-height: 1.6; }
 
+.fg-note {
+  font-size: 13px; color: var(--dim); line-height: 1.6;
+}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
 .final-cta {
   padding: 120px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
+
 .final-cta::before {
   content: '';
-  position: absolute; top: 50%; left: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   width: 600px; height: 600px;
   background: radial-gradient(circle, rgba(245,200,66,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
+
 .final-eyebrow {
   font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 28px;
 }
+
 .final-h2 {
   font-family: var(--serif);
   font-size: clamp(32px, 5vw, 64px);
@@ -691,6 +840,7 @@ section { padding: 100px 40px; }
   color: var(--mid);
   margin-bottom: 16px;
 }
+
 .final-h2-accent {
   font-family: var(--serif);
   font-size: clamp(32px, 5vw, 64px);
@@ -701,17 +851,23 @@ section { padding: 100px 40px; }
   margin-bottom: 40px;
 }
 .final-h2-accent em { font-style: italic; color: var(--gold); }
+
 .final-sub {
   font-size: 18px; color: var(--mid);
   max-width: 480px; margin: 0 auto 40px;
   line-height: 1.65;
 }
+
 .final-actions {
   display: flex; align-items: center; justify-content: center;
   gap: 24px; flex-wrap: wrap;
 }
 
-footer { border-top: 1px solid var(--border); padding: 32px 40px; }
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 40px;
+}
 .footer-inner {
   max-width: 1140px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
@@ -722,36 +878,51 @@ footer { border-top: 1px solid var(--border); padding: 32px 40px; }
 .footer-left a:hover { color: var(--gold); }
 .footer-right { font-size: 11px; color: var(--dim); letter-spacing: .05em; }
 
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
 body.light-mode {
-  --bg: #f5f7fa; --surface: #ffffff; --surface2: #eef1f6;
-  --border: #d0d8e4; --border2: #b8c5d4;
-  --text: #0a0c0f; --mid: #4a5568; --dim: #8a9ab0;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface2: #eef1f6;
+  --border: #d0d8e4;
+  --border2: #b8c5d4;
+  --text: #0a0c0f;
+  --mid: #4a5568;
+  --dim: #8a9ab0;
   --gold: #a07800;
   --gold-soft: rgba(160,120,0,0.07);
   --gold-line: rgba(160,120,0,0.25);
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
+
   section { padding: 70px 20px; }
   .hero { padding: 100px 20px 70px; }
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-right { display: none; }
+
   .why-grid, .rebuild-grid, .why-us-grid,
   .ev-grid, .fg-grid { grid-template-columns: 1fr; gap: 40px; }
   .ev-col, .ev-col:last-child { padding: 40px 0; }
   .ev-divider { display: none; }
+
   .gains-grid { grid-template-columns: 1fr 1fr; }
   .how-grid { grid-template-columns: 1fr; }
+
   .final-cta { padding: 80px 20px; }
   footer { padding: 24px 20px; }
 }
+
 @media (max-width: 500px) {
   .gains-grid { grid-template-columns: 1fr; }
   .fg-grid { grid-template-columns: 1fr; }
 }
+
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
@@ -761,6 +932,7 @@ body.light-mode {
 
 <button id="tt" onclick="toggleTheme()">☀</button>
 
+<!-- NAV -->
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo">5the<span>element</span>.ai</a>
@@ -783,6 +955,9 @@ body.light-mode {
   <a href="#free" onclick="toggleMenu()" style="color:var(--gold)">Free AI Audit →</a>
 </div>
 
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <section class="hero" aria-label="Hero">
   <div class="hero-inner">
     <div class="hero-content">
@@ -806,17 +981,46 @@ body.light-mode {
       </div>
     </div>
 
+    <!-- AI SIGNAL CARD -->
     <div class="hero-right" aria-label="AI systems covered">
       <div class="ai-signal-card">
         <div class="asc-label">Active AI systems</div>
         <div class="engine-list" id="engine-list">
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">ChatGPT</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">Gemini</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">Claude</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">Perplexity</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">Copilot</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">DeepSeek</span><span class="engine-status">monitoring</span></div>
-          <div class="engine-row"><div class="engine-dot"></div><span class="engine-name">You.com</span><span class="engine-status">monitoring</span></div>
+          <div class="engine-row" data-engine="chatgpt">
+            <div class="engine-dot"></div>
+            <span class="engine-name">ChatGPT</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="gemini">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Gemini</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="claude">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Claude</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="perplexity">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Perplexity</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="copilot">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Copilot</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="deepseek">
+            <div class="engine-dot"></div>
+            <span class="engine-name">DeepSeek</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="youcom">
+            <div class="engine-dot"></div>
+            <span class="engine-name">You.com</span>
+            <span class="engine-status">monitoring</span>
+          </div>
         </div>
         <div class="asc-footer">
           <strong>Your business needs to be understood</strong> by all of these —
@@ -827,13 +1031,22 @@ body.light-mode {
   </div>
 </section>
 
+<!-- ============================================================
+     WHY THIS MATTERS
+     ============================================================ -->
 <section class="why" aria-labelledby="why-heading">
   <div class="container">
     <div class="why-grid">
       <div>
         <div class="section-eyebrow">Why this matters</div>
-        <h2 class="why-h2" id="why-heading">Every Day,<br>AI <em>Recommends</em><br>Someone.</h2>
-        <p class="why-body">Thousands of business buyers are asking AI right now. They are not searching for keywords. They are asking for <strong>recommendations</strong>.</p>
+        <h2 class="why-h2" id="why-heading">
+          Every Day,<br>AI <em>Recommends</em><br>Someone.
+        </h2>
+        <p class="why-body">
+          Thousands of business buyers are asking AI right now.
+          They are not searching for keywords.
+          They are asking for <strong>recommendations</strong>.
+        </p>
         <div class="why-risk">
           The risk is not losing Google traffic.<br>
           The risk is becoming <strong>invisible in the next generation of customer discovery.</strong>
@@ -841,38 +1054,87 @@ body.light-mode {
       </div>
       <div>
         <div class="questions-list">
-          <div class="q-item"><span class="q-mark">"</span>Who should I hire for this project?</div>
-          <div class="q-item"><span class="q-mark">"</span>Which supplier should I trust?</div>
-          <div class="q-item"><span class="q-mark">"</span>What company is best for my needs?</div>
-          <div class="q-item"><span class="q-mark">"</span>Which solution should I choose?</div>
-          <div class="q-item" style="opacity:.5"><span class="q-mark">"</span><em>If AI cannot clearly understand your business,<br>it may never include you in the answer.</em></div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Who should I hire for this project?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Which supplier should I trust?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            What company is best for my needs?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Which solution should I choose?
+          </div>
+          <div class="q-item" style="opacity:.5">
+            <span class="q-mark">"</span>
+            <em>If AI cannot clearly understand your business,<br>it may never include you in the answer.</em>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     WHAT YOU GAIN
+     ============================================================ -->
 <section aria-labelledby="gains-heading">
   <div class="container">
     <div class="section-eyebrow">What you gain</div>
-    <h2 id="gains-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">Five things that change<br>when AI understands you.</h2>
+    <h2 id="gains-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
+      Five things that change<br>when AI understands you.
+    </h2>
     <div class="gains-grid">
-      <div class="gain-card"><span class="gain-icon">◎</span><div class="gain-title">More Visibility</div><p class="gain-body">AI systems find and understand your business without guesswork.</p></div>
-      <div class="gain-card"><span class="gain-icon">◈</span><div class="gain-title">Qualified Opportunities</div><p class="gain-body">Be present when buyers are actively searching for what you offer.</p></div>
-      <div class="gain-card"><span class="gain-icon">◇</span><div class="gain-title">Better Positioning</div><p class="gain-body">Help AI understand what makes your company different from competitors.</p></div>
-      <div class="gain-card"><span class="gain-icon">◆</span><div class="gain-title">Stronger Trust</div><p class="gain-body">Connect claims to evidence, proof, and verified credibility signals.</p></div>
-      <div class="gain-card"><span class="gain-icon">◉</span><div class="gain-title">Future Readiness</div><p class="gain-body">Prepared for AI-driven search, assistants, agents, and what comes next.</p></div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◎</span>
+        <div class="gain-title">More Visibility</div>
+        <p class="gain-body">AI systems find and understand your business without guesswork.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◈</span>
+        <div class="gain-title">Qualified Opportunities</div>
+        <p class="gain-body">Be present when buyers are actively searching for what you offer.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◇</span>
+        <div class="gain-title">Better Positioning</div>
+        <p class="gain-body">Help AI understand what makes your company different from competitors.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◆</span>
+        <div class="gain-title">Stronger Trust</div>
+        <p class="gain-body">Connect claims to evidence, proof, and verified credibility signals.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◉</span>
+        <div class="gain-title">Future Readiness</div>
+        <p class="gain-body">Prepared for AI-driven search, assistants, agents, and what comes next.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     NO REBUILD
+     ============================================================ -->
 <section class="no-rebuild" aria-labelledby="rebuild-heading">
   <div class="container">
     <div class="rebuild-grid">
       <div>
         <div class="section-eyebrow">No website rebuild required</div>
-        <h2 class="rebuild-h2" id="rebuild-heading">You keep everything<br>you already have.</h2>
-        <p class="rebuild-body">Most companies assume AI readiness means a redesign. It doesn't. We add an AI layer <em>alongside</em> your website. Not inside it.</p>
+        <h2 class="rebuild-h2" id="rebuild-heading">
+          You keep everything<br>you already have.
+        </h2>
+        <p class="rebuild-body">
+          Most companies assume AI readiness means a redesign.
+          It doesn't. We add an AI layer <em>alongside</em> your website.
+          Not inside it.
+        </p>
         <div class="keep-list">
           <div class="keep-item"><div class="keep-check">✓</div>Your website</div>
           <div class="keep-item"><div class="keep-check">✓</div>Your CMS</div>
@@ -882,87 +1144,172 @@ body.light-mode {
         </div>
       </div>
       <div>
-        <div class="layer-diagram">
+        <div class="layer-diagram" role="img" aria-label="Layer diagram showing AI layer added alongside existing website">
           <div class="layer-row layer-existing">Your website (unchanged)</div>
           <div class="layer-plus">+</div>
-          <div class="layer-row layer-new">AI visibility layer<span class="layer-new-tag">New</span></div>
+          <div class="layer-row layer-new">
+            AI visibility layer
+            <span class="layer-new-tag">New</span>
+          </div>
           <div style="height:16px"></div>
-          <div style="font-size:13px;color:var(--dim);line-height:1.6">Delivered at the network edge.<br>Injected alongside your content.<br>Your source files stay untouched.</div>
+          <div style="font-size:13px;color:var(--dim);line-height:1.6">
+            Delivered at the network edge.<br>
+            Injected alongside your content.<br>
+            Your source files stay untouched.
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
 <section id="how" aria-labelledby="how-heading">
   <div class="container">
     <div class="section-eyebrow" id="products">Products</div>
-    <h2 id="how-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">Three steps.<br>Most done for you.</h2>
+    <h2 id="how-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
+      Three steps.<br>Most done for you.
+    </h2>
     <div class="how-grid">
       <div class="how-card">
-        <div class="how-num">01</div>
+        <div class="how-num" aria-hidden="true">01</div>
         <div class="how-title">AI Lens™</div>
-        <p class="how-body">We find exactly what information AI needs to understand your business. What's there. What's missing. What's unclear.</p>
+        <p class="how-body">
+          We find exactly what information AI needs to understand your business.
+          What's there. What's missing. What's unclear.
+        </p>
         <div class="how-time">Typical delivery: 24 hours</div>
       </div>
       <div class="how-card">
-        <div class="how-num">02</div>
+        <div class="how-num" aria-hidden="true">02</div>
         <div class="how-title">AI Audit™</div>
-        <p class="how-body">We measure your current visibility, trust signals, and recommendation readiness across every major AI system.</p>
+        <p class="how-body">
+          We measure your current visibility, trust signals, and recommendation
+          readiness across every major AI system.
+        </p>
         <div class="how-time">Typical delivery: 24 hours</div>
       </div>
       <div class="how-card">
-        <div class="how-num">03</div>
+        <div class="how-num" aria-hidden="true">03</div>
         <div class="how-title">AI Ready™</div>
-        <p class="how-body">We implement the missing layer. Your business becomes readable, understandable, and citable by AI — without touching your website.</p>
+        <p class="how-body">
+          We implement the missing layer. Your business becomes readable,
+          understandable, and citable by AI — without touching your website.
+        </p>
         <div class="how-time">Typical delivery: 1–7 days</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     EFFORT + VERIFICATION
+     ============================================================ -->
 <section class="effort-verify" aria-labelledby="effort-heading">
   <div class="container">
     <div class="ev-grid">
       <div class="ev-col">
         <div class="section-eyebrow">Your effort</div>
-        <h2 class="ev-h3" id="effort-heading">Usually 30 to 90 minutes<br>of your time.</h2>
-        <div class="ev-big">90<span style="font-size:32px;opacity:.6">min</span></div>
+        <h2 class="ev-h3" id="effort-heading">
+          Usually 30 to 90 minutes<br>of your time.
+        </h2>
+        <div class="ev-big" aria-hidden="true">90<span style="font-size:32px;opacity:.6">min</span></div>
         <div class="ev-big-label">Maximum time investment for you</div>
-        <p class="ev-body">We ask questions about your company, services, customers, and what makes you different. After that, we do most of the work. You validate results before deployment.</p>
+        <p class="ev-body">
+          We ask questions about your company, services, customers, and
+          what makes you different. After that, we do most of the work.
+          You validate results before deployment.
+        </p>
       </div>
-      <div class="ev-divider"></div>
+      <div class="ev-divider" role="separator"></div>
       <div class="ev-col" style="padding-left:56px;padding-right:0">
         <div class="section-eyebrow">Verification</div>
-        <h2 class="ev-h3" id="verify-heading">You test it directly<br>with AI systems.</h2>
-        <p class="ev-body">Before-and-after verification. Ask any AI system the same questions and see the difference yourself.</p>
-        <div class="query-example">Who provides [your service] in [your market]?</div>
-        <div class="query-example">Who should I hire for [your problem]?</div>
-        <div class="query-example">What companies specialize in [your expertise]?</div>
+        <h2 class="ev-h3" id="verify-heading">
+          You test it directly<br>with AI systems.
+        </h2>
+        <p class="ev-body">
+          Before-and-after verification. Ask any AI system the same questions
+          and see the difference yourself.
+        </p>
+        <div class="query-example">
+          Who provides [your service] in [your market]?
+        </div>
+        <div class="query-example">
+          Who should I hire for [your problem]?
+        </div>
+        <div class="query-example">
+          What companies specialize in [your expertise]?
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     WHY US
+     ============================================================ -->
 <section id="why" aria-labelledby="whyus-heading">
   <div class="container">
     <div class="why-us-grid">
       <div>
         <div class="section-eyebrow">Why 5thelement.ai</div>
-        <h2 class="why-us-h2" id="whyus-heading">Most companies optimize<br>for search engines.<br>We help businesses become<br><em>understood by AI.</em></h2>
-        <p class="why-us-body">There is a difference between being indexed and being understood. Between being crawled and being recommended. We build the layer that crosses that gap.</p>
+        <h2 class="why-us-h2" id="whyus-heading">
+          Most companies optimize<br>for search engines.<br>
+          We help businesses become<br>
+          <em>understood by AI.</em>
+        </h2>
+        <p class="why-us-body">
+          There is a difference between being indexed and being understood.
+          Between being crawled and being recommended.
+          We build the layer that crosses that gap.
+        </p>
       </div>
       <div>
-        <div class="proof-row"><span class="proof-icon">◈</span><p class="proof-text"><strong>Business analysis first.</strong> We understand what makes your company different before we build anything.</p></div>
-        <div class="proof-row"><span class="proof-icon">◎</span><p class="proof-text"><strong>No website changes required.</strong> The AI layer sits alongside your existing site. No migration. No redesign.</p></div>
-        <div class="proof-row"><span class="proof-icon">◆</span><p class="proof-text"><strong>Verified results.</strong> Before-and-after testing across ChatGPT, Gemini, Claude, Perplexity, and more.</p></div>
-        <div class="proof-row"><span class="proof-icon">◇</span><p class="proof-text"><strong>We implement on ourselves first.</strong> 5thelement.ai is the live proof-of-concept of every product we sell.</p></div>
-        <div class="proof-row"><span class="proof-icon">◉</span><p class="proof-text"><strong>Trusted by named clients.</strong> Roxana Deak, FCCA CPA — ECBTax.com. Real results, documented.</p></div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◈</span>
+          <p class="proof-text">
+            <strong>Business analysis first.</strong> We understand what makes
+            your company different before we build anything.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◎</span>
+          <p class="proof-text">
+            <strong>No website changes required.</strong> The AI layer sits
+            alongside your existing site. No migration. No redesign.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◆</span>
+          <p class="proof-text">
+            <strong>Verified results.</strong> Before-and-after testing across
+            ChatGPT, Gemini, Claude, Perplexity, and more.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◇</span>
+          <p class="proof-text">
+            <strong>We implement on ourselves first.</strong> 5thelement.ai
+            is the live proof-of-concept of every product we sell.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◉</span>
+          <p class="proof-text">
+            <strong>Trusted by named clients.</strong> Roxana Deak, FCCA CPA —
+            ECBTax.com. Real results, documented.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     FREE AUDIT + GUARANTEE
+     ============================================================ -->
 <section class="free-guarantee" id="free" aria-labelledby="free-heading">
   <div class="container">
     <div class="fg-grid">
@@ -988,12 +1335,18 @@ body.light-mode {
           <div class="fg-item"><div class="fg-bullet"></div>Measurable before-and-after verification</div>
           <div class="fg-item"><div class="fg-bullet"></div>Transparent reporting of progress</div>
         </div>
-        <p class="fg-note">Nobody can guarantee that any AI system will recommend a specific company. We guarantee the work. You measure the results.</p>
+        <p class="fg-note">
+          Nobody can guarantee that any AI system will recommend a specific company.
+          We guarantee the work. You measure the results.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
 <section class="final-cta" aria-labelledby="final-heading">
   <div class="container" style="position:relative;z-index:1">
     <div class="final-eyebrow">The shift has already started</div>
@@ -1001,12 +1354,15 @@ body.light-mode {
     <p class="final-h2-accent">We help businesses become <em>understood by AI.</em></p>
     <p class="final-sub">See how AI currently sees your business. It takes 24 hours. It costs nothing.</p>
     <div class="final-actions">
-      <a href="#free" class="btn-primary" style="font-size:17px;padding:16px 32px">Start Your Free AI Audit →</a>
+      <a href="#free" class="btn-primary" style="font-size:17px;padding:16px 32px">
+        Start Your Free AI Audit →
+      </a>
       <a href="#how" class="btn-ghost" style="font-size:15px">See how it works</a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
@@ -1021,40 +1377,64 @@ body.light-mode {
 </footer>
 
 <script>
+// ============================================================
+// THEME TOGGLE
+// ============================================================
 function toggleTheme() {
   const btn = document.getElementById('tt');
   document.body.classList.toggle('light-mode');
   btn.textContent = document.body.classList.contains('light-mode') ? '☾' : '☀';
 }
 
+// ============================================================
+// MOBILE MENU
+// ============================================================
 function toggleMenu() {
   document.getElementById('mobile-menu').classList.toggle('open');
 }
 
+// ============================================================
+// AI ENGINE PULSE — signature animation
+// Travels dot by dot through engine list, implying live monitoring
+// ============================================================
 const engines = document.querySelectorAll('.engine-row');
 let currentEngine = 0;
+
 function pulseNextEngine() {
   engines.forEach(e => {
     e.classList.remove('active');
     e.querySelector('.engine-dot').classList.remove('active');
   });
+
   const row = engines[currentEngine];
   if (row) {
     row.classList.add('active');
     row.querySelector('.engine-dot').classList.add('active');
   }
+
   currentEngine = (currentEngine + 1) % engines.length;
 }
+
+// Start immediately, then cycle
 pulseNextEngine();
 setInterval(pulseNextEngine, 1400);
 
+// ============================================================
+// SMOOTH SCROLL for anchor links
+// ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
+// ============================================================
+// SCROLL REVEAL — subtle opacity/translate on section entry
+// ============================================================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
