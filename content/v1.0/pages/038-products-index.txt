@@ -1,0 +1,301 @@
+TITLE: Products — AI Software and Infrastructure for the AI Era
+
+BREADCRUMB: Home › Products
+
+ADI™ Product Platform
+
+10 Products
+
+── HEADLINE ──
+
+AI Software and Infrastructure for the AI Era
+
+Most websites were built for search engines.
+
+The next generation must also work for AI systems.
+
+Our products help organizations become:
+
+Findable™
+
+Understandable™
+
+Verifiable™
+
+Trustable™
+
+Recommendable™
+
+Selectable™
+
+Without rebuilding websites.
+
+Without CMS changes.
+
+Without developers.
+
+Deployed at Cloudflare Edge in under 24 hours.
+
+── THE 10 PRODUCT PIPELINE ──
+
+01 — AI AUDIT™
+
+Measure
+
+Output:
+
+audit-score.json
+
+gap-matrix.json
+
+167 signal assessment
+
+---
+
+02 — AI LENS™
+
+Discover
+
+Output:
+
+Entity Registry
+
+Intent Registry
+
+Business Knowledge Graph
+
+---
+
+03 — AI READY™
+
+Transform
+
+Output:
+
+ai.json
+
+llms.txt
+
+Schema.org JSON-LD
+
+FAQ Generation
+
+---
+
+04 — AI SIGNALS™
+
+Signal
+
+Output:
+
+167 atomic signals
+
+Validation reports
+
+Signal files
+
+---
+
+05 — KNOWLEDGE GRAPH™
+
+Structure
+
+Output:
+
+entities.json
+
+entity-graph.public.jsonld
+
+knowledge-graph.json
+
+---
+
+06 — EDGE INJECTOR™
+
+Deploy
+
+Output:
+
+Global deployment
+
+Cloudflare Edge
+
+<10ms response
+
+---
+
+07 — TRUST LAYER™
+
+Trust
+
+Output:
+
+authority.json
+
+governance.json
+
+policy.json
+
+trust-state.json
+
+---
+
+08 — PROOF LAYER™
+
+Prove
+
+Output:
+
+ai-proof.json
+
+SHA-256
+
+OpenTimestamps
+
+Bitcoin Anchoring
+
+---
+
+09 — AI SONAR™
+
+Monitor
+
+Output:
+
+Visibility monitoring
+
+Recommendation tracking
+
+Alerting
+
+Weekly reports
+
+---
+
+10 — ECONOMIC TWIN™
+
+Strategize
+
+Output:
+
+Company Twin
+
+Market Twin
+
+Competitor Twin
+
+Scenario Simulation
+
+── FIVE PHASES ──
+
+PHASE 1
+
+Find
+
+AI AUDIT™
+
+AI LENS™
+
+---
+
+PHASE 2
+
+Fix
+
+AI READY™
+
+AI SIGNALS™
+
+---
+
+PHASE 3
+
+Deploy
+
+KNOWLEDGE GRAPH™
+
+EDGE INJECTOR™
+
+---
+
+PHASE 4
+
+Prove
+
+TRUST LAYER™
+
+PROOF LAYER™
+
+---
+
+PHASE 5
+
+Grow
+
+AI SONAR™
+
+ECONOMIC TWIN™
+
+── THREE LAYERS ──
+
+Solutions
+
+Business outcomes.
+
+AI Visibility™
+
+AI Authority™
+
+---
+
+Services
+
+Human implementation.
+
+AI LENS™
+
+AI READY™
+
+AI SIGNALS™
+
+Trust Authority Module™
+
+---
+
+Products
+
+Software engines.
+
+The 10 ADI™ products.
+
+── BENEFITS ──
+
+No website rebuild.
+
+No CMS migration.
+
+No platform lock-in.
+
+No developer dependency.
+
+Fast deployment.
+
+Global edge delivery.
+
+Machine-readable AI infrastructure.
+
+── CTA ──
+
+Start with AI AUDIT™
+
+Measure before changing anything.
+
+── RELATED ──
+
+AI Visibility™
+
+AI Authority™
+
+AI AUDIT™
+
+AI LENS™
