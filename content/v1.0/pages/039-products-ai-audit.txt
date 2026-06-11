@@ -1,0 +1,349 @@
+TITLE: AI AUDIT™ — Measure AI Readiness
+
+BREADCRUMB: Home › Products › AI AUDIT™
+
+Product 01
+
+Measurement Engine
+
+6 Layers
+
+167 Signals
+
+24h Delivery
+
+0–100 Score
+
+── THE PROBLEM ──
+
+Most businesses have never asked:
+
+What does AI say about my company?
+
+When a buyer asks AI for a recommendation, three outcomes are common:
+
+1. AI cannot find the business.
+
+2. AI finds the business but describes it incorrectly.
+
+3. AI recommends a competitor instead.
+
+AI AUDIT™ measures where the business stands today.
+
+── THE SIX AUDIT LAYERS ──
+
+LAYER 1
+
+Entity Identity
+
+Weight: 15%
+
+Measures:
+
+Legal Name
+
+Category
+
+sameAs
+
+Entity Consistency
+
+---
+
+LAYER 2
+
+Service Clarity
+
+Weight: 20%
+
+Measures:
+
+Services
+
+Buyer Personas
+
+Intent Mapping
+
+Problem-Solution Clarity
+
+---
+
+LAYER 3
+
+External Verification
+
+Weight: 15%
+
+Measures:
+
+Registries
+
+sameAs References
+
+Certifications
+
+Directory Presence
+
+---
+
+LAYER 4
+
+Signal Architecture
+
+Weight: 20%
+
+Measures:
+
+167 Signals
+
+AI Files
+
+Schema
+
+Edge Delivery
+
+---
+
+LAYER 5
+
+Authority Layer
+
+Weight: 20%
+
+Measures:
+
+Citations
+
+Case Studies
+
+Proof Layer
+
+Governance
+
+Verification
+
+---
+
+LAYER 6
+
+Recommendation Readiness
+
+Weight: 10%
+
+Measures:
+
+AI Mentions
+
+Recommendation Frequency
+
+Description Accuracy
+
+Competitor Comparison
+
+── SCORE BANDS ──
+
+0–39
+
+Invisible or Misrepresented
+
+Immediate action required.
+
+---
+
+40–69
+
+Partially Visible
+
+Not yet recommendable.
+
+Competitors have advantage.
+
+---
+
+70–89
+
+Visible and Verifiable
+
+Focus shifts toward trust and authority.
+
+---
+
+90–100
+
+Recommendable™
+
+AI consistently recognizes and recommends the business.
+
+── THE GAP MATRIX ──
+
+gap-matrix.json
+
+Each gap contains:
+
+Gap ID
+
+Layer
+
+Impact Score
+
+Effort
+
+Priority
+
+Before State
+
+After State
+
+Score Projection
+
+Recommended Fix
+
+── SIGNAL ASSESSMENT ──
+
+signal-assessment.json
+
+Every signal classified as:
+
+Present
+
+Missing
+
+Inconsistent
+
+Unverifiable
+
+All 167 signals assessed individually.
+
+── FIVE OUTPUT FILES ──
+
+audit-score.json
+
+gap-matrix.json
+
+signal-assessment.json
+
+competitor-benchmark.json
+
+audit-report.pdf
+
+── PROCESS ──
+
+STEP 1
+
+Submit:
+
+Domain
+
+Industry
+
+Geography
+
+Top Competitors
+
+---
+
+STEP 2
+
+Automated Assessment
+
+Public sources
+
+Signal analysis
+
+Entity analysis
+
+---
+
+STEP 3
+
+Human Review
+
+HITL validation
+
+No automated conclusions without review.
+
+---
+
+STEP 4
+
+Report Generation
+
+All outputs produced.
+
+---
+
+STEP 5
+
+Delivery
+
+Within 24 hours.
+
+Optional review session available.
+
+── BEFORE ──
+
+No baseline.
+
+No visibility score.
+
+No signal inventory.
+
+No roadmap.
+
+No competitor benchmark.
+
+── AFTER ──
+
+Visibility score.
+
+Gap matrix.
+
+Signal inventory.
+
+Competitor benchmark.
+
+Prioritized roadmap.
+
+Clear next actions.
+
+── WHO IT IS FOR ──
+
+B2B Businesses
+
+Marketing Teams
+
+Consultancies
+
+Technology Firms
+
+Professional Services
+
+Organizations preparing for AI visibility.
+
+── FAQ ──
+
+1. What does AI AUDIT™ do?
+
+Measures AI visibility and readiness.
+
+2. How long does it take?
+
+24 hours.
+
+3. Does it change my website?
+
+No.
+
+4. How many signals are checked?
+
+167.
+
+5. What is the output?
+
+Score, gaps, benchmark and roadmap.
+
+── NEXT PRODUCT ──
+
+AI LENS™
+
+Business Knowledge Acquisition Engine.
