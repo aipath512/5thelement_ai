@@ -1,528 +1,1457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>5thelement.ai — When AI Recommends, Make Sure It's You</title>
-<meta name="description" content="We help businesses become visible, understandable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity."/>
-<link rel="canonical" href="https://5thelement.ai/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5thelement.ai — When Customers Ask AI, Make Sure It Recommends You</title>
+<meta name="description" content="We help B2B companies become visible, understandable, and recommendable by AI. No website changes. No migration. No redesign.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://5thelement.ai/#organization",
+      "@type": "Organization",
+      "name": "5thelement.ai",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://5thelement.ai/",
+      "description": "We help B2B companies become visible, understandable, and recommendable by AI systems."
+    },
+    {
+      "@id": "https://5thelement.ai/",
+      "@type": "WebPage",
+      "name": "When Customers Ask AI, Make Sure It Recommends You",
+      "isPartOf": { "@id": "https://5thelement.ai/#organization" }
+    }
+  ]
+}
+</script>
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#0a0c0f;color:#ffffff;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
+/* ============================================================
+   DESIGN SYSTEM
+   Playfair Display (editorial weight) + Inter (precision body)
+   Dark: #0a0c0f bg, #f5c842 gold, #ffffff text
+   Signature element: the "live pulse" — a single animated dot
+   that travels across AI brand names, implying real-time signal
+   ============================================================ */
 
-/* ── NAV ── */
-nav{position:sticky;top:0;z-index:100;background:#0a0c0f;border-bottom:1px solid #1e2329}
-.ni{max-width:1100px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.logo{font-size:1rem;font-weight:800;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:0.35rem}
-.logo-dot{color:#f5c842}
-.logo-badge{font-size:0.6rem;font-weight:700;background:rgba(245,200,66,0.12);color:#f5c842;border:1px solid rgba(245,200,66,0.3);padding:0.15rem 0.4rem;border-radius:3px;letter-spacing:0.04em}
-.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
-.nav-links a{font-size:0.82rem;font-weight:500;color:#cccccc;white-space:nowrap}
-.nav-links a:hover{color:#fff}
-.nav-cta{background:#f5c842 !important;color:#0a0c0f !important;font-weight:700 !important;padding:0.45rem 1.1rem;border-radius:6px}
-.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;padding:0.25rem}
-.mobile-menu{display:none;background:#111318;border-top:1px solid #1e2329;padding:1rem 1.25rem 1.5rem}
-.mobile-menu.open{display:block}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
-.mobile-menu ul a{font-size:0.95rem;font-weight:500;color:#cccccc;display:block;padding:0.25rem 0}
-.mobile-menu ul a:hover{color:#f5c842}
-.mobile-cta{display:inline-block;margin-top:0.5rem;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.7rem 1.5rem;border-radius:6px;font-size:0.95rem}
-
-/* ── LAYOUT ── */
-.c{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-section{padding:4.5rem 0;border-bottom:1px solid #1e2329}
-.ey{display:block;font-size:0.68rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;margin-bottom:1.1rem}
-.sh{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;color:#ffffff;margin-bottom:0.75rem;line-height:1.15}
-.sl{font-size:1rem;color:#cccccc;margin-bottom:2.25rem;line-height:1.8;max-width:640px}
-
-/* ── HERO ── */
-.hero{padding:5rem 0 4rem;text-align:center;background:#0a0c0f}
-.hbadge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#cccccc;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:999px;margin-bottom:2rem}
-.hbdot{width:6px;height:6px;border-radius:50%;background:#f5c842;flex-shrink:0}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,8vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em;color:#ffffff;margin-bottom:1.5rem}
-.hero h1 em{color:#f5c842;font-style:italic;display:block}
-.hsub{font-size:clamp(1rem,2.5vw,1.2rem);font-weight:600;color:#ffffff;margin-bottom:0.75rem;line-height:1.55;max-width:540px;margin-left:auto;margin-right:auto}
-.hsys{font-size:0.7rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#f5c842;margin-bottom:2.5rem}
-.btnhero{display:inline-block;background:#f5c842;color:#0a0c0f;font-weight:800;font-size:1.05rem;padding:1rem 2.5rem;border-radius:8px;box-shadow:0 4px 28px rgba(245,200,66,0.3);transition:opacity 0.2s,transform 0.2s}
-.btnhero:hover{opacity:0.92;transform:translateY(-2px)}
-
-/* ── WHY NOW ── */
-.whynow{background:#111318}
-.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:2.5rem 0 2.25rem}
-.wcol{background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:2rem}
-.wcol.now{border-color:rgba(245,200,66,0.4);background:rgba(245,200,66,0.03)}
-.wera{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#666;display:block;margin-bottom:1.5rem}
-.wcol.now .wera{color:#f5c842}
-.wstep{font-family:'Playfair Display',serif;font-size:clamp(1.35rem,3vw,1.8rem);font-weight:800;color:#ffffff;line-height:1.2;display:block}
-.wstep.g{color:#f5c842}
-.wstep.r{color:#f87171;font-style:italic}
-.warr{display:block;font-size:1.1rem;color:#2d3748;padding:0.25rem 0}
-.warr.g{color:rgba(245,200,66,0.45)}
-.warr.r{color:#f87171}
-.wconc{font-size:1rem;color:#cccccc;line-height:1.8;max-width:600px;border-left:3px solid #f5c842;padding-left:1.5rem}
-
-/* ── TWO QUESTIONS ── */
-.twoq{background:#0a0c0f}
-.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.25rem}
-.qcard{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2.25rem;transition:border-color 0.2s}
-.qcard:hover{border-color:rgba(245,200,66,0.4)}
-.qlbl{font-size:0.65rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.75rem}
-.qcard h3{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:#ffffff;margin-bottom:0.4rem}
-.qques{font-size:0.95rem;font-style:italic;color:#cccccc;display:block;margin-bottom:1.1rem}
-.qcard p{font-size:0.92rem;color:#cccccc;line-height:1.75}
-.tags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:1.25rem}
-.tag{font-size:0.75rem;font-weight:600;background:rgba(255,255,255,0.06);border:1px solid #1e2329;border-radius:999px;padding:0.28rem 0.8rem;color:#ffffff}
-
-/* ── SEQUENCE ── */
-.seq{background:#111318}
-.seqlist{display:flex;flex-direction:column;gap:0.9rem;margin-top:2.25rem}
-.sitem{display:grid;grid-template-columns:3rem 1fr auto;align-items:center;gap:1.25rem;background:#0a0c0f;border:1px solid #1e2329;border-radius:12px;padding:1.5rem 1.75rem;transition:border-color 0.2s}
-.sitem:hover{border-color:rgba(245,200,66,0.3)}
-.snum{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2d3748;line-height:1}
-.sbody h4{font-size:1.05rem;font-weight:700;color:#ffffff;margin-bottom:0.2rem}
-.smeta{font-size:0.67rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:0.4rem}
-.sbody p{font-size:0.9rem;color:#cccccc;line-height:1.65}
-.sbadge{font-size:0.72rem;font-weight:700;background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.3);color:#f5c842;padding:0.35rem 0.85rem;border-radius:999px;white-space:nowrap}
-
-/* ── PRICING ── */
-.price{background:#0a0c0f}
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem}
-.pcard{background:#111318;border:1px solid #1e2329;border-radius:12px;padding:2rem;display:flex;flex-direction:column;gap:1.1rem}
-.pcard.feat{border-color:rgba(245,200,66,0.5);box-shadow:0 0 40px rgba(245,200,66,0.07)}
-.ptier{font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;display:block}
-.ptier.s{color:#888}.ptier.g{color:#f5c842}.ptier.p{color:#a78bfa}
-.pcard h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:#ffffff}
-.pmod{font-size:0.8rem;color:#888}
-.pamt{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#ffffff}
-.pamt small{font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:400;color:#888}
-.pcard ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem;flex:1}
-.pcard ul li{font-size:0.88rem;color:#cccccc;display:flex;gap:0.5rem;align-items:flex-start}
-.pcard ul li::before{content:"✓";color:#4ade80;font-weight:700;flex-shrink:0}
-.btng{display:block;text-align:center;background:#f5c842;color:#0a0c0f;font-weight:700;padding:0.85rem;border-radius:8px;font-size:0.9rem}
-.btnw{display:block;text-align:center;background:transparent;color:#ffffff;font-weight:700;padding:0.85rem;border-radius:8px;border:1px solid #1e2329;font-size:0.9rem}
-.btnb{display:block;text-align:center;background:#0051A8;color:#ffffff;font-weight:700;padding:0.85rem;border-radius:8px;font-size:0.9rem}
-
-/* ── PROOF ── */
-.proof{background:#111318}
-.pgr{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-top:2.25rem}
-.ppts{display:flex;flex-direction:column;gap:1.5rem}
-.ppt{display:flex;gap:1rem}
-.pico{font-size:1.4rem;flex-shrink:0;line-height:1.2}
-.ppt h4{font-size:0.95rem;font-weight:700;color:#ffffff;margin-bottom:0.25rem}
-.ppt p{font-size:0.88rem;color:#cccccc;line-height:1.65}
-.ppt a{color:#f5c842}
-.pbox{background:#0a0c0f;border:1px solid #1e2329;border-radius:8px;padding:1.35rem;font-family:'Courier New',monospace;font-size:0.75rem;color:#cccccc;line-height:2;word-break:break-all}
-.pl{color:#f5c842}
-
-/* ── FAQ ── */
-.faq{background:#0a0c0f}
-.faqlist{max-width:700px;margin:2.25rem auto 0}
-.fitem{border-bottom:1px solid #1e2329}
-.fq{width:100%;background:none;border:none;text-align:left;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;color:#ffffff;padding:1.35rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.fq:hover{color:#f5c842}
-.ficon{font-size:1.2rem;color:#f5c842;flex-shrink:0;transition:transform 0.2s}
-.fa{display:none;font-size:0.92rem;color:#cccccc;line-height:1.8;padding-bottom:1.35rem}
-.fitem.open .fa{display:block}
-.fitem.open .ficon{transform:rotate(45deg)}
-
-/* ── FINAL CTA ── */
-.ctafinal{background:#111318;text-align:center}
-.ctafinal h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,5vw,3rem);font-weight:900;color:#ffffff;margin-bottom:1rem;line-height:1.1}
-.ctafinal h2 em{color:#f5c842;font-style:italic}
-.ctafinal p{font-size:1rem;color:#cccccc;max-width:500px;margin:0 auto 2.25rem;line-height:1.75}
-.ctabtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.bcg{background:#f5c842;color:#0a0c0f;font-weight:800;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;display:inline-block}
-.bcw{background:transparent;color:#ffffff;font-weight:700;font-size:0.95rem;padding:0.9rem 1.75rem;border-radius:8px;border:1px solid #1e2329;display:inline-block}
-
-/* ── FOOTER ── */
-footer{background:#0a0c0f;border-top:1px solid #1e2329;padding:3.5rem 0 2rem}
-.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
-.fbrand p{font-size:0.82rem;color:#cccccc;margin-top:0.75rem;max-width:240px;line-height:1.7}
-.fsoc{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
-.fsoc a{font-size:0.75rem;color:#888}.fsoc a:hover{color:#f5c842}
-.fcol h5{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#ffffff;margin-bottom:0.9rem}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
-.fcol ul a{font-size:0.82rem;color:#cccccc}.fcol ul a:hover{color:#f5c842}
-.fbot{border-top:1px solid #1e2329;padding-top:1.35rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.75rem;color:#888}
-.fbot a{color:#888}.fbot a:hover{color:#f5c842}
-
-/* ── MOBILE RESPONSIVE ── */
-@media(max-width:900px){
-  .pgrid{grid-template-columns:1fr 1fr}
+:root {
+  --bg: #0a0c0f;
+  --surface: #0f1318;
+  --surface2: #141a22;
+  --border: #1c2530;
+  --border2: #243040;
+  --text: #f0f4f8;
+  --mid: #8090a4;
+  --dim: #3a4a5c;
+  --gold: #f5c842;
+  --gold-soft: rgba(245,200,66,0.08);
+  --gold-line: rgba(245,200,66,0.20);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
 }
-@media(max-width:768px){
-  .nav-links{display:none}
-  .hamburger{display:block}
-  .wgrid{grid-template-columns:1fr}
-  .qgrid{grid-template-columns:1fr}
-  .sitem{grid-template-columns:2.5rem 1fr;gap:1rem}
-  .sbadge{display:none}
-  .pgrid{grid-template-columns:1fr}
-  .pgr{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
-  .fbot{flex-direction:column;text-align:center}
-  .ctabtns{flex-direction:column;align-items:center}
-  .ctabtns a{width:100%;max-width:320px;text-align:center}
-  .hero h1{font-size:clamp(2.4rem,10vw,3.5rem)}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-@media(max-width:480px){
-  .fgrid{grid-template-columns:1fr}
-  section{padding:3rem 0}
-  .hero{padding:3.5rem 0 3rem}
-  .wcol{padding:1.5rem}
-  .wstep{font-size:1.4rem}
-  .pcard{padding:1.5rem}
+
+/* THEME TOGGLE */
+#tt {
+  position: fixed;
+  top: 68px; left: 16px;
+  z-index: 1000;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  width: 34px; height: 34px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .2s;
+}
+#tt:hover { border-color: var(--gold); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10,12,15,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+}
+.nav-inner {
+  max-width: 1140px; margin: 0 auto;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -.01em;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--mid);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--gold);
+  color: #0a0c0f !important;
+  font-weight: 600 !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px !important;
+  transition: opacity .2s !important;
+}
+.nav-cta:hover { opacity: 0.88; }
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 1px;
+  background: var(--text); transition: all .25s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed; inset: 0; top: 60px;
+  background: var(--bg);
+  padding: 32px 40px;
+  flex-direction: column; gap: 24px;
+  z-index: 99;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: var(--text); text-decoration: none;
+  font-size: 22px; font-weight: 300; font-family: var(--serif);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 120px 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle grid */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* gold gradient bottom-fade */
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 420px; gap: 80px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.65;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+.hero-actions {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold);
+  color: #0a0c0f;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity .2s, transform .2s;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--mid);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color .2s;
+  border: none; background: none; cursor: pointer;
+  font-family: var(--sans);
+}
+.btn-ghost:hover { color: var(--text); }
+.btn-ghost::after { content: '→'; transition: transform .2s; }
+.btn-ghost:hover::after { transform: translateX(3px); }
+
+/* AI ENGINE LIST — hero right */
+.hero-right { position: relative; }
+
+.ai-signal-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.ai-signal-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.asc-label {
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 20px;
+}
+
+.engine-list { display: flex; flex-direction: column; gap: 0; }
+
+.engine-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  cursor: default;
+}
+.engine-row:last-child { border: none; }
+
+.engine-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--dim);
+  flex-shrink: 0;
+  transition: background .4s, box-shadow .4s;
+}
+.engine-dot.active {
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(245,200,66,0.5);
+}
+
+.engine-name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--mid);
+  flex: 1;
+  transition: color .3s;
+}
+.engine-row.active .engine-name { color: var(--text); }
+
+.engine-status {
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color .3s;
+}
+.engine-row.active .engine-status { color: var(--gold); }
+
+.asc-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--dim);
+  line-height: 1.5;
+}
+.asc-footer strong { color: var(--mid); }
+
+/* ============================================================
+   SECTIONS — shared
+   ============================================================ */
+section {
+  padding: 100px 40px;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   WHY THIS MATTERS
+   ============================================================ */
+.why {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: 24px;
+}
+.why-h2 em { font-style: italic; color: var(--gold); }
+
+.why-body {
+  font-size: 17px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.why-body strong { color: var(--text); font-weight: 500; }
+
+.why-risk {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 18px 22px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.q-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 17px;
+  color: var(--mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: color .2s;
+}
+.q-item:hover { color: var(--text); }
+.q-item:last-child { border: none; }
+.q-mark {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--gold);
+  line-height: 1;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   WHAT YOU GAIN
+   ============================================================ */
+.gains-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.gain-card {
+  background: var(--surface);
+  padding: 32px 24px;
+  transition: background .2s;
+}
+.gain-card:hover { background: var(--surface2); }
+
+.gain-icon {
+  font-size: 24px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.gain-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.gain-body {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   NO REBUILD
+   ============================================================ */
+.no-rebuild {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.rebuild-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.rebuild-h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: 24px;
+}
+
+.rebuild-body {
+  font-size: 17px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.keep-list {
+  display: flex; flex-direction: column; gap: 8px;
+}
+
+.keep-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; color: var(--mid);
+}
+.keep-check {
+  width: 18px; height: 18px;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.layer-diagram {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 32px;
+  position: relative;
+}
+
+.layer-row {
+  display: flex; align-items: center;
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.layer-row:last-child { margin: 0; }
+
+.layer-existing {
+  background: rgba(255,255,255,0.04);
+  color: var(--mid);
+  border: 1px dashed var(--border2);
+}
+
+.layer-new {
+  background: var(--gold-soft);
+  color: var(--text);
+  border: 1px solid var(--gold-line);
+  font-weight: 500;
+}
+.layer-new-tag {
+  margin-left: auto;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-line);
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+
+.layer-plus {
+  text-align: center;
+  font-size: 18px;
+  color: var(--dim);
+  margin: 6px 0;
+  font-weight: 300;
+}
+
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.how-card {
+  background: var(--surface);
+  padding: 36px 28px;
+  transition: background .2s;
+  cursor: default;
+}
+.how-card:hover { background: var(--surface2); }
+
+.how-num {
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+  opacity: 0.35;
+}
+
+.how-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.how-body {
+  font-size: 15px;
+  color: var(--mid);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.how-time {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: .06em;
+  display: flex; align-items: center; gap: 6px;
+}
+.how-time::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--gold);
+}
+
+/* ============================================================
+   EFFORT + VERIFICATION — two col
+   ============================================================ */
+.effort-verify {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ev-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+}
+
+.ev-divider { background: var(--border); }
+
+.ev-col { padding: 60px 56px 60px 0; }
+.ev-col:last-child { padding: 60px 0 60px 56px; }
+
+.ev-h3 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.ev-body {
+  font-size: 16px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.ev-big {
+  font-family: var(--serif);
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.ev-big-label {
+  font-size: 14px;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+
+.query-example {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--gold-line);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--mid);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.query-example::before {
+  content: '"';
+  color: var(--gold);
+  font-size: 20px;
+  font-family: var(--serif);
+  margin-right: 4px;
+  line-height: 0;
+  vertical-align: -4px;
+}
+
+/* ============================================================
+   WHY US
+   ============================================================ */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-us-h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: 24px;
+}
+.why-us-h2 em { font-style: italic; color: var(--gold); }
+
+.why-us-body {
+  font-size: 17px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.proof-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.proof-row:last-child { border: none; }
+.proof-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.proof-text { font-size: 14px; color: var(--mid); line-height: 1.6; }
+.proof-text strong { color: var(--text); font-weight: 500; }
+
+/* ============================================================
+   FREE AUDIT + GUARANTEE — two col
+   ============================================================ */
+.free-guarantee {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.fg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.fg-card {
+  padding: 40px;
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.fg-card.featured { border-color: var(--gold-line); background: var(--gold-soft); }
+.fg-card.featured::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.fg-tag {
+  font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px;
+}
+
+.fg-h3 {
+  font-family: var(--serif);
+  font-size: 26px; font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.fg-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
+.fg-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 15px; color: var(--mid); line-height: 1.5;
+}
+.fg-bullet {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0; margin-top: 8px;
+}
+
+.fg-note {
+  font-size: 13px; color: var(--dim); line-height: 1.6;
+}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.final-cta {
+  padding: 120px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(245,200,66,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-eyebrow {
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px;
+}
+
+.final-h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--mid);
+  margin-bottom: 16px;
+}
+
+.final-h2-accent {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+.final-h2-accent em { font-style: italic; color: var(--gold); }
+
+.final-sub {
+  font-size: 18px; color: var(--mid);
+  max-width: 480px; margin: 0 auto 40px;
+  line-height: 1.65;
+}
+
+.final-actions {
+  display: flex; align-items: center; justify-content: center;
+  gap: 24px; flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 40px;
+}
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-left { font-size: 13px; color: var(--dim); line-height: 1.6; }
+.footer-left a { color: var(--dim); text-decoration: none; transition: color .2s; }
+.footer-left a:hover { color: var(--gold); }
+.footer-right { font-size: 11px; color: var(--dim); letter-spacing: .05em; }
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+body.light-mode {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface2: #eef1f6;
+  --border: #d0d8e4;
+  --border2: #b8c5d4;
+  --text: #0a0c0f;
+  --mid: #4a5568;
+  --dim: #8a9ab0;
+  --gold: #a07800;
+  --gold-soft: rgba(160,120,0,0.07);
+  --gold-line: rgba(160,120,0,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  section { padding: 70px 20px; }
+  .hero { padding: 100px 20px 70px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-right { display: none; }
+
+  .why-grid, .rebuild-grid, .why-us-grid,
+  .ev-grid, .fg-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ev-col, .ev-col:last-child { padding: 40px 0; }
+  .ev-divider { display: none; }
+
+  .gains-grid { grid-template-columns: 1fr 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+
+  .final-cta { padding: 80px 20px; }
+  footer { padding: 24px 20px; }
+}
+
+@media (max-width: 500px) {
+  .gains-grid { grid-template-columns: 1fr; }
+  .fg-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }
 </style>
 </head>
 <body>
 
+<button id="tt" onclick="toggleTheme()">☀</button>
+
 <!-- NAV -->
-<nav>
-  <div class="ni">
-    <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span><span class="logo-badge">ADI™</span></a>
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">5the<span>element</span>.ai</a>
     <ul class="nav-links">
-      <li><a href="/solutions">Solutions</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/use-cases">Use Cases</a></li>
-      <li><a href="/resources">Resources</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact" class="nav-cta">Get AI-Ready</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why">Why us</a></li>
+      <li><a href="#free" class="nav-cta">Free AI Audit →</a></li>
     </ul>
-    <button class="hamburger" id="hbtn" aria-label="Menu">☰</button>
-  </div>
-  <div class="mobile-menu" id="mmenu">
-    <ul>
-      <li><a href="/solutions">Solutions</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/use-cases">Use Cases</a></li>
-      <li><a href="/resources">Resources</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact" class="mobile-cta">Get AI-Ready</a></li>
-    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#how" onclick="toggleMenu()">How it works</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#why" onclick="toggleMenu()">Why us</a>
+  <a href="#free" onclick="toggleMenu()" style="color:var(--gold)">Free AI Audit →</a>
+</div>
 
-<!-- CONTENT_VERSION: 5THELEMENT_INDEX_V1_2_AI_DATA_DICTIONARY_2026-06-11 -->
-
-<!-- HERO -->
-<section class="hero">
-  <div class="c">
-    <div class="hbadge"><span class="hbdot"></span>AI Visibility for B2B</div>
-    <h1>When AI Recommends,<br><em>Make Sure It's You.</em></h1>
-    <p class="hsub">We help businesses become visible, understandable, and recommendable by AI.</p>
-    <p class="hsys">ChatGPT · Gemini · Claude · Copilot · Perplexity · DeepSeek · You.com</p>
-    <a href="/services/ai-audit" class="btnhero">Get My Free AI Audit →</a>
-  </div>
-</section>
-
-<!-- SHIFT -->
-<section class="whynow">
-  <div class="c">
-    <span class="ey">The Shift Has Already Happened</span>
-    <h2 class="sh">Your Customer Now Asks AI First</h2>
-    <p class="sl">The old road was customer → Google → website. The new road is customer → AI → shortlist → contact.</p>
-
-    <div class="wgrid">
-      <div class="wcol">
-        <span class="wera">Old Road</span>
-        <span class="wstep">Customer</span>
-        <span class="warr">↓</span>
-        <span class="wstep">Google Search</span>
-        <span class="warr">↓</span>
-        <span class="wstep">Website List</span>
-        <span class="warr">↓</span>
-        <span class="wstep">Manual Choice</span>
-      </div>
-
-      <div class="wcol now">
-        <span class="wera">AI Road</span>
-        <span class="wstep">Customer</span>
-        <span class="warr g">↓</span>
-        <span class="wstep g">AI Assistant</span>
-        <span class="warr g">↓</span>
-        <span class="wstep g">Recommendation</span>
-        <span class="warr g">↓</span>
-        <span class="wstep g">Selected Provider</span>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">AI Visibility Infrastructure</div>
+      <h1 class="hero-h1">
+        When Customers<br>
+        Ask AI, Make Sure<br>
+        It <em>Recommends You.</em>
+      </h1>
+      <p class="hero-sub">
+        AI is becoming the first place buyers go for answers.<br>
+        We help <strong>B2B companies</strong> become visible, understandable,
+        and recommendable by AI — <strong>without touching your website.</strong>
+      </p>
+      <div class="hero-actions">
+        <a href="#free" class="btn-primary">
+          See How AI Sees Your Business
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#how" class="btn-ghost">See how it works</a>
       </div>
     </div>
 
-    <p class="wconc">If AI cannot find, understand, verify, and trust your business, it may recommend someone else.</p>
-  </div>
-</section>
-
-<!-- AI DATA DICTIONARY -->
-<section class="twoq">
-  <div class="c">
-    <span class="ey">The New Layer</span>
-    <h2 class="sh">From Static Website to AI-Readable Knowledge Graph</h2>
-    <p class="sl">Your website should not be only 62 pages of text. It should become a structured map of entities, intents, relationships, proof, and offers.</p>
-
-    <div class="qgrid">
-      <div class="qcard">
-        <span class="qlbl">For Humans</span>
-        <h3>Clear Business Meaning</h3>
-        <span class="qques">What do you do, for whom, and why should I trust you?</span>
-        <p>The homepage explains the offer in plain language: AI Lens finds missing business information, AI Audit measures atomic signals, and AI Ready fixes what can be fixed.</p>
-        <div class="tags">
-          <span class="tag">Offer clarity</span>
-          <span class="tag">Trust</span>
-          <span class="tag">Next step</span>
+    <!-- AI SIGNAL CARD -->
+    <div class="hero-right" aria-label="AI systems covered">
+      <div class="ai-signal-card">
+        <div class="asc-label">Active AI systems</div>
+        <div class="engine-list" id="engine-list">
+          <div class="engine-row" data-engine="chatgpt">
+            <div class="engine-dot"></div>
+            <span class="engine-name">ChatGPT</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="gemini">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Gemini</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="claude">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Claude</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="perplexity">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Perplexity</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="copilot">
+            <div class="engine-dot"></div>
+            <span class="engine-name">Copilot</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="deepseek">
+            <div class="engine-dot"></div>
+            <span class="engine-name">DeepSeek</span>
+            <span class="engine-status">monitoring</span>
+          </div>
+          <div class="engine-row" data-engine="youcom">
+            <div class="engine-dot"></div>
+            <span class="engine-name">You.com</span>
+            <span class="engine-status">monitoring</span>
+          </div>
         </div>
-      </div>
-
-      <div class="qcard">
-        <span class="qlbl">For AI</span>
-        <h3>Deterministic Context</h3>
-        <span class="qques">What entity is this, what concepts does it own, and where is the proof?</span>
-        <p>The AI Data Dictionary maps pages to concepts, concepts to definitions, offers to intents, and claims to proof files.</p>
-        <div class="tags">
-          <span class="tag">Entities</span>
-          <span class="tag">Relationships</span>
-          <span class="tag">Proof</span>
+        <div class="asc-footer">
+          <strong>Your business needs to be understood</strong> by all of these —
+          not just indexed by one.
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUESTION ENGINE -->
-<section class="seq">
-  <div class="c">
-    <span class="ey">Implementation Engine</span>
-    <h2 class="sh">Questions Become Intents. Intents Become Entities.</h2>
-    <p class="sl">The system starts by asking structured questions. The answers generate the entity relationship metamodel used by humans, Google, and AI systems.</p>
-
-    <div class="seqlist">
-      <div class="sitem">
-        <div class="snum">01</div>
-        <div class="sbody">
-          <h4>Ask the 100 Questions</h4>
-          <span class="smeta">Findable · Understandable · Verifiable · Trustable · Recommendable · Selectable</span>
-          <p>We collect the business facts AI needs: identity, services, audience, proof, differentiators, geography, guarantees, risks, and next actions.</p>
-        </div>
-        <span class="sbadge">Input</span>
-      </div>
-
-      <div class="sitem">
-        <div class="snum">02</div>
-        <div class="sbody">
-          <h4>Convert Answers into Intent Pairs</h4>
-          <span class="smeta">Actor · Action · Object · Context · Constraint · Expected Answer</span>
-          <p>Each answer becomes a structured buyer or AI intent, such as: B2B owner wants to know if the company can become visible in AI answers.</p>
-        </div>
-        <span class="sbadge">Intent</span>
-      </div>
-
-      <div class="sitem">
-        <div class="snum">03</div>
-        <div class="sbody">
-          <h4>Generate the Entity Relationship Metamodel</h4>
-          <span class="smeta">Entities · Properties · Cardinalities · Reverse References</span>
-          <p>The model connects Organization, WebPage, Service, Concept, Proof, FAQ, Offer, Claim, Intent, and Source nodes.</p>
-        </div>
-        <span class="sbadge">Model</span>
-      </div>
-
-      <div class="sitem">
-        <div class="snum">04</div>
-        <div class="sbody">
-          <h4>Publish the AI Data Dictionary</h4>
-          <span class="smeta">JSON-LD · ai.json · llms.txt · page-map · proof-manifest</span>
-          <p>The graph is delivered as root machine files and page-specific structured data so AI systems do not have to guess.</p>
-        </div>
-        <span class="sbadge">Deploy</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRIAD -->
-<section class="price">
-  <div class="c">
-    <span class="ey">The 5thelement.ai Method</span>
-    <h2 class="sh">AI Lens, AI Audit, AI Ready</h2>
-    <p class="sl">Three clear stages: first find the missing information, then measure the atomic signals, then fix what can be fixed automatically.</p>
-
-    <div class="pgrid">
-      <div class="pcard">
-        <span class="ptier s">Step 1</span>
-        <h3>AI LENS™</h3>
-        <p class="pmod">Business Information Inventory</p>
-        <div class="pamt">Find <small>what is missing</small></div>
-        <ul>
-          <li>Company identity and service clarity</li>
-          <li>Audience, problems, benefits, proof</li>
-          <li>On-site, on-page, off-page, business layer</li>
-          <li>Output: AI Visibility Information Map™</li>
-        </ul>
-        <a href="/services/ai-lens" class="btnw">Start With AI Lens →</a>
+<!-- ============================================================
+     WHY THIS MATTERS
+     ============================================================ -->
+<section class="why" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-eyebrow">Why this matters</div>
+        <h2 class="why-h2" id="why-heading">
+          Every Day,<br>AI <em>Recommends</em><br>Someone.
+        </h2>
+        <p class="why-body">
+          Thousands of business buyers are asking AI right now.
+          They are not searching for keywords.
+          They are asking for <strong>recommendations</strong>.
+        </p>
+        <div class="why-risk">
+          The risk is not losing Google traffic.<br>
+          The risk is becoming <strong>invisible in the next generation of customer discovery.</strong>
+        </div>
       </div>
-
-      <div class="pcard feat">
-        <span class="ptier g">Step 2</span>
-        <h3>AI AUDIT™</h3>
-        <p class="pmod">Atomic Signal Audit</p>
-        <div class="pamt">Measure <small>the signals</small></div>
-        <ul>
-          <li>167 atomic AI visibility signals</li>
-          <li>Pass, fail, weak, missing status</li>
-          <li>Findable to selectable readiness</li>
-          <li>Output: AI Audit Scorecard™</li>
-        </ul>
-        <a href="/services/ai-audit" class="btng">Get My Free AI Audit →</a>
-      </div>
-
-      <div class="pcard">
-        <span class="ptier p">Step 3</span>
-        <h3>AI READY™</h3>
-        <p class="pmod">Automatic Transformation Engine</p>
-        <div class="pamt">Fix <small>what can be fixed</small></div>
-        <ul>
-          <li>AI-readable files and schema</li>
-          <li>Entity graph and data dictionary</li>
-          <li>Proof and trust layer</li>
-          <li>Cloudflare Edge delivery optional</li>
-        </ul>
-        <a href="/services/ai-ready" class="btnb">Make My Site AI Ready →</a>
+      <div>
+        <div class="questions-list">
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Who should I hire for this project?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Which supplier should I trust?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            What company is best for my needs?
+          </div>
+          <div class="q-item">
+            <span class="q-mark">"</span>
+            Which solution should I choose?
+          </div>
+          <div class="q-item" style="opacity:.5">
+            <span class="q-mark">"</span>
+            <em>If AI cannot clearly understand your business,<br>it may never include you in the answer.</em>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- METAMODEL -->
-<section class="proof">
-  <div class="c">
-    <span class="ey" style="text-align:center;display:block">Entity Relationship Metamodel</span>
-    <h2 class="sh" style="text-align:center">The Data Dictionary Makes the Site Disambiguated</h2>
-    <p class="sl" style="text-align:center;margin-left:auto;margin-right:auto">Every page, concept, service, offer, proof, and intent gets a clear name, properties, cardinalities, and bidirectional cross-references.</p>
-
-    <div class="pgr">
-      <div class="ppts">
-        <div class="ppt"><div class="pico">◉</div><div><h4>Entity Nodes</h4><p>Organization, WebSite, WebPageArtifact, Service, DefinedTerm, Offer, FAQ, Claim, ProofArtifact, Intent.</p></div></div>
-        <div class="ppt"><div class="pico">↔</div><div><h4>Bidirectional References</h4><p>If a page defines a concept, the concept points back to the page. No orphan nodes. No machine ambiguity.</p></div></div>
-        <div class="ppt"><div class="pico">1:N</div><div><h4>Cardinalities</h4><p>One organization owns many pages. One page mentions many concepts. One concept appears on many pages.</p></div></div>
-        <div class="ppt"><div class="pico">🔐</div><div><h4>Proof Layer</h4><p>Important artifacts can connect to SHA-256 hashes, proof manifests, and OpenTimestamps references.</p></div></div>
+<!-- ============================================================
+     WHAT YOU GAIN
+     ============================================================ -->
+<section aria-labelledby="gains-heading">
+  <div class="container">
+    <div class="section-eyebrow">What you gain</div>
+    <h2 id="gains-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
+      Five things that change<br>when AI understands you.
+    </h2>
+    <div class="gains-grid">
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◎</span>
+        <div class="gain-title">More Visibility</div>
+        <p class="gain-body">AI systems find and understand your business without guesswork.</p>
       </div>
-
-      <div class="pbox">
-        <div><span class="pl">ROOT:</span> https://5thelement.ai/#organization</div>
-        <div><span class="pl">WEBSITE:</span> https://5thelement.ai/#website</div>
-        <div><span class="pl">DICTIONARY:</span> /data-dictionary.jsonld</div>
-        <div><span class="pl">ENTITY_GRAPH:</span> /entity-graph.jsonld</div>
-        <div><span class="pl">PAGE_MAP:</span> /page-map.json</div>
-        <div><span class="pl">INTENTS:</span> /ai-intents.json</div>
-        <div><span class="pl">SIGNALS:</span> /ai-signals.json</div>
-        <div><span class="pl">PROOF:</span> /ai-proof.json</div>
-        <div><span class="pl">DELIVERY:</span> GitHub + Cloudflare Edge</div>
-        <div><span class="pl">VERSION:</span> V1.2 semantic root layer</div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◈</span>
+        <div class="gain-title">Qualified Opportunities</div>
+        <p class="gain-body">Be present when buyers are actively searching for what you offer.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◇</span>
+        <div class="gain-title">Better Positioning</div>
+        <p class="gain-body">Help AI understand what makes your company different from competitors.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◆</span>
+        <div class="gain-title">Stronger Trust</div>
+        <p class="gain-body">Connect claims to evidence, proof, and verified credibility signals.</p>
+      </div>
+      <div class="gain-card">
+        <span class="gain-icon" aria-hidden="true">◉</span>
+        <div class="gain-title">Future Readiness</div>
+        <p class="gain-body">Prepared for AI-driven search, assistants, agents, and what comes next.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq">
-  <div class="c">
-    <span class="ey" style="text-align:center;display:block">FAQ</span>
-    <h2 class="sh" style="text-align:center">Questions From Business Owners</h2>
-
-    <div class="faqlist">
-      <div class="fitem"><button class="fq">What does 5thelement.ai do?<span class="ficon">+</span></button><div class="fa">5thelement.ai helps B2B businesses become findable, understandable, verifiable, trustable, recommendable, and selectable by AI systems.</div></div>
-      <div class="fitem"><button class="fq">What is the AI Data Dictionary?<span class="ficon">+</span></button><div class="fa">It is a machine-readable map of your business entities, offers, concepts, pages, proof, and intents. It helps humans, Google, and AI systems understand the business without guessing.</div></div>
-      <div class="fitem"><button class="fq">Is this only SEO?<span class="ficon">+</span></button><div class="fa">No. SEO helps search engines index and rank pages. AI Discovery Infrastructure helps AI systems understand entities, relationships, proof, and intent structure.</div></div>
-      <div class="fitem"><button class="fq">Does this guarantee AI recommendations?<span class="ficon">+</span></button><div class="fa">No. It improves the foundation for discovery, understanding, verification, and trust. Recommendation also depends on market proof, authority, citations, reviews, and competitive strength.</div></div>
-      <div class="fitem"><button class="fq">Can it sit on top of a frozen GitHub site?<span class="ficon">+</span></button><div class="fa">Yes. The frozen pages can remain in GitHub. The semantic graph can be added through root files and optionally injected with Cloudflare Workers at the Edge.</div></div>
+<!-- ============================================================
+     NO REBUILD
+     ============================================================ -->
+<section class="no-rebuild" aria-labelledby="rebuild-heading">
+  <div class="container">
+    <div class="rebuild-grid">
+      <div>
+        <div class="section-eyebrow">No website rebuild required</div>
+        <h2 class="rebuild-h2" id="rebuild-heading">
+          You keep everything<br>you already have.
+        </h2>
+        <p class="rebuild-body">
+          Most companies assume AI readiness means a redesign.
+          It doesn't. We add an AI layer <em>alongside</em> your website.
+          Not inside it.
+        </p>
+        <div class="keep-list">
+          <div class="keep-item"><div class="keep-check">✓</div>Your website</div>
+          <div class="keep-item"><div class="keep-check">✓</div>Your CMS</div>
+          <div class="keep-item"><div class="keep-check">✓</div>Your hosting</div>
+          <div class="keep-item"><div class="keep-check">✓</div>Your design</div>
+          <div class="keep-item"><div class="keep-check">✓</div>Your content</div>
+        </div>
+      </div>
+      <div>
+        <div class="layer-diagram" role="img" aria-label="Layer diagram showing AI layer added alongside existing website">
+          <div class="layer-row layer-existing">Your website (unchanged)</div>
+          <div class="layer-plus">+</div>
+          <div class="layer-row layer-new">
+            AI visibility layer
+            <span class="layer-new-tag">New</span>
+          </div>
+          <div style="height:16px"></div>
+          <div style="font-size:13px;color:var(--dim);line-height:1.6">
+            Delivered at the network edge.<br>
+            Injected alongside your content.<br>
+            Your source files stay untouched.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="ctafinal">
-  <div class="c">
-    <h2>Stop Making AI Guess.<br><em>Give It the Map.</em></h2>
-    <p>Start with the free AI Audit and see what your business is missing across visibility, understanding, verification, trust, and recommendation readiness.</p>
-    <div class="ctabtns">
-      <a href="/services/ai-audit" class="bcg">Get My Free AI Audit →</a>
-      <a href="/services/ai-lens" class="bcw">Start With AI Lens →</a>
-      <a href="/contact" class="bcw">Request Done For You →</a>
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section id="how" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="section-eyebrow" id="products">Products</div>
+    <h2 id="how-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
+      Three steps.<br>Most done for you.
+    </h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num" aria-hidden="true">01</div>
+        <div class="how-title">AI Lens™</div>
+        <p class="how-body">
+          We find exactly what information AI needs to understand your business.
+          What's there. What's missing. What's unclear.
+        </p>
+        <div class="how-time">Typical delivery: 24 hours</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num" aria-hidden="true">02</div>
+        <div class="how-title">AI Audit™</div>
+        <p class="how-body">
+          We measure your current visibility, trust signals, and recommendation
+          readiness across every major AI system.
+        </p>
+        <div class="how-time">Typical delivery: 24 hours</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num" aria-hidden="true">03</div>
+        <div class="how-title">AI Ready™</div>
+        <p class="how-body">
+          We implement the missing layer. Your business becomes readable,
+          understandable, and citable by AI — without touching your website.
+        </p>
+        <div class="how-time">Typical delivery: 1–7 days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EFFORT + VERIFICATION
+     ============================================================ -->
+<section class="effort-verify" aria-labelledby="effort-heading">
+  <div class="container">
+    <div class="ev-grid">
+      <div class="ev-col">
+        <div class="section-eyebrow">Your effort</div>
+        <h2 class="ev-h3" id="effort-heading">
+          Usually 30 to 90 minutes<br>of your time.
+        </h2>
+        <div class="ev-big" aria-hidden="true">90<span style="font-size:32px;opacity:.6">min</span></div>
+        <div class="ev-big-label">Maximum time investment for you</div>
+        <p class="ev-body">
+          We ask questions about your company, services, customers, and
+          what makes you different. After that, we do most of the work.
+          You validate results before deployment.
+        </p>
+      </div>
+      <div class="ev-divider" role="separator"></div>
+      <div class="ev-col" style="padding-left:56px;padding-right:0">
+        <div class="section-eyebrow">Verification</div>
+        <h2 class="ev-h3" id="verify-heading">
+          You test it directly<br>with AI systems.
+        </h2>
+        <p class="ev-body">
+          Before-and-after verification. Ask any AI system the same questions
+          and see the difference yourself.
+        </p>
+        <div class="query-example">
+          Who provides [your service] in [your market]?
+        </div>
+        <div class="query-example">
+          Who should I hire for [your problem]?
+        </div>
+        <div class="query-example">
+          What companies specialize in [your expertise]?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY US
+     ============================================================ -->
+<section id="why" aria-labelledby="whyus-heading">
+  <div class="container">
+    <div class="why-us-grid">
+      <div>
+        <div class="section-eyebrow">Why 5thelement.ai</div>
+        <h2 class="why-us-h2" id="whyus-heading">
+          Most companies optimize<br>for search engines.<br>
+          We help businesses become<br>
+          <em>understood by AI.</em>
+        </h2>
+        <p class="why-us-body">
+          There is a difference between being indexed and being understood.
+          Between being crawled and being recommended.
+          We build the layer that crosses that gap.
+        </p>
+      </div>
+      <div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◈</span>
+          <p class="proof-text">
+            <strong>Business analysis first.</strong> We understand what makes
+            your company different before we build anything.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◎</span>
+          <p class="proof-text">
+            <strong>No website changes required.</strong> The AI layer sits
+            alongside your existing site. No migration. No redesign.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◆</span>
+          <p class="proof-text">
+            <strong>Verified results.</strong> Before-and-after testing across
+            ChatGPT, Gemini, Claude, Perplexity, and more.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◇</span>
+          <p class="proof-text">
+            <strong>We implement on ourselves first.</strong> 5thelement.ai
+            is the live proof-of-concept of every product we sell.
+          </p>
+        </div>
+        <div class="proof-row">
+          <span class="proof-icon" aria-hidden="true">◉</span>
+          <p class="proof-text">
+            <strong>Trusted by named clients.</strong> Roxana Deak, FCCA CPA —
+            ECBTax.com. Real results, documented.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FREE AUDIT + GUARANTEE
+     ============================================================ -->
+<section class="free-guarantee" id="free" aria-labelledby="free-heading">
+  <div class="container">
+    <div class="fg-grid">
+      <div class="fg-card featured">
+        <div class="fg-tag">No credit card. No obligation.</div>
+        <h2 class="fg-h3" id="free-heading">Free AI Audit</h2>
+        <div class="fg-list">
+          <div class="fg-item"><div class="fg-bullet"></div>AI Visibility Score</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Missing Information Report</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Key Opportunities Identified</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Recommended Next Steps</div>
+        </div>
+        <p class="fg-note" style="color:var(--mid);margin-bottom:24px">Delivered within 24 hours.</p>
+        <a href="#" class="btn-primary">Start Free Audit →</a>
+      </div>
+      <div class="fg-card">
+        <div class="fg-tag">Our guarantee</div>
+        <h2 class="fg-h3">What we can honestly promise.</h2>
+        <div class="fg-list">
+          <div class="fg-item"><div class="fg-bullet"></div>Clear analysis of how AI currently sees you</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Identification of missing information</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Implementation of agreed improvements</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Measurable before-and-after verification</div>
+          <div class="fg-item"><div class="fg-bullet"></div>Transparent reporting of progress</div>
+        </div>
+        <p class="fg-note">
+          Nobody can guarantee that any AI system will recommend a specific company.
+          We guarantee the work. You measure the results.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section class="final-cta" aria-labelledby="final-heading">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="final-eyebrow">The shift has already started</div>
+    <p class="final-h2">Most businesses were built to be found by Google.</p>
+    <p class="final-h2-accent">We help businesses become <em>understood by AI.</em></p>
+    <p class="final-sub">See how AI currently sees your business. It takes 24 hours. It costs nothing.</p>
+    <div class="final-actions">
+      <a href="#free" class="btn-primary" style="font-size:17px;padding:16px 32px">
+        Start Your Free AI Audit →
+      </a>
+      <a href="#how" class="btn-ghost" style="font-size:15px">See how it works</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-  <div class="c">
-    <div class="fgrid">
-      <div class="fbrand">
-        <a href="/" class="logo">5thelement<span class="logo-dot">.ai</span></a>
-        <p>We make your business findable, understandable, verifiable, trustable, and recommendable by AI systems such as ChatGPT, Gemini, Claude, Copilot, and Perplexity.</p>
-        <div class="fsoc">
-          <a href="https://linkedin.com/company/107338970" target="_blank">LinkedIn</a>
-          <a href="https://x.com/aipath512" target="_blank">X</a>
-          <a href="https://github.com/aipath512" target="_blank">GitHub</a>
-          <a href="https://medium.com/@aipath512" target="_blank">Medium</a>
-        </div>
-      </div>
-      <div class="fcol"><h5>Quick Links</h5><ul>
-        <li><a href="/services/ai-lens">AI LENS™</a></li>
-        <li><a href="/services/ai-ready">AI READY™</a></li>
-        <li><a href="/services/ai-signals">AI SIGNALS™</a></li>
-        <li><a href="/services/trust-authority">Trust Authority™</a></li>
-        <li><a href="/resources/innovation-registry">Innovation Registry</a></li>
-        <li><a href="/products">Pricing</a></li>
-      </ul></div>
-      <div class="fcol"><h5>Pages</h5><ul>
-        <li><a href="/solutions">Solutions</a></li>
-        <li><a href="/use-cases">Use Cases</a></li>
-        <li><a href="/resources">Resources</a></li>
-        <li><a href="/about/mission">Mission</a></li>
-        <li><a href="/about/vision">Vision</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul></div>
-      <div class="fcol"><h5>Legal</h5><ul>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
-        <li><a href="/cookie-policy">Cookie Policy</a></li>
-        <li><a href="/gdpr">GDPR</a></li>
-        <li><a href="/eu-ai-act">EU AI Act</a></li>
-      </ul></div>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <strong>5thelement.ai</strong> — AiVenture S.R.L., CUI 51415878, București, Romania<br>
+      <a href="https://aiventure.ro">aiventure.ro</a> ·
+      <a href="/ai-proof.json">ai-proof.json</a> ·
+      <a href="/llms.txt">llms.txt</a> ·
+      <a href="/sitemap.xml">sitemap.xml</a>
     </div>
-    <div class="fbot">
-      <span>© 2025–2026 AiVenture S.R.L. — CUI 51415878 — București, Romania</span>
-      <span style="display:flex;gap:1.25rem;flex-wrap:wrap">
-        <a href="https://eu-ai-audit.eu" target="_blank">EU AI Audit™</a>
-        <a href="https://eu-ai-act-ready.eu" target="_blank">EU AI Act Ready</a>
-        <a href="https://aiventure.ro" target="_blank">AiVenture.ro</a>
-      </span>
-    </div>
+    <div class="footer-right">ADI™ · AI Delivery Infrastructure</div>
   </div>
 </footer>
 
 <script>
-var hbtn=document.getElementById('hbtn');
-var mmenu=document.getElementById('mmenu');
-hbtn.addEventListener('click',function(){
-  mmenu.classList.toggle('open');
-  hbtn.textContent=mmenu.classList.contains('open')?'✕':'☰';
-});
-document.querySelectorAll('.fq').forEach(function(b){
-  b.addEventListener('click',function(){
-    var i=this.closest('.fitem'),o=i.classList.contains('open');
-    document.querySelectorAll('.fitem').forEach(function(x){x.classList.remove('open')});
-    if(!o)i.classList.add('open');
+// ============================================================
+// THEME TOGGLE
+// ============================================================
+function toggleTheme() {
+  const btn = document.getElementById('tt');
+  document.body.classList.toggle('light-mode');
+  btn.textContent = document.body.classList.contains('light-mode') ? '☾' : '☀';
+}
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ============================================================
+// AI ENGINE PULSE — signature animation
+// Travels dot by dot through engine list, implying live monitoring
+// ============================================================
+const engines = document.querySelectorAll('.engine-row');
+let currentEngine = 0;
+
+function pulseNextEngine() {
+  engines.forEach(e => {
+    e.classList.remove('active');
+    e.querySelector('.engine-dot').classList.remove('active');
+  });
+
+  const row = engines[currentEngine];
+  if (row) {
+    row.classList.add('active');
+    row.querySelector('.engine-dot').classList.add('active');
+  }
+
+  currentEngine = (currentEngine + 1) % engines.length;
+}
+
+// Start immediately, then cycle
+pulseNextEngine();
+setInterval(pulseNextEngine, 1400);
+
+// ============================================================
+// SMOOTH SCROLL for anchor links
+// ============================================================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
+
+// ============================================================
+// SCROLL REVEAL — subtle opacity/translate on section entry
+// ============================================================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.gain-card, .how-card, .proof-row, .q-item, .fg-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
 </script>
+
 </body>
 </html>
