@@ -1,0 +1,239 @@
+TITLE: AI READY™ Service — Expert Implementation
+
+BREADCRUMB: Home › Services › AI READY™
+
+Expert Implementation
+
+€49 / Hour
+
+L1–L4 Improvements
+
+No Website Changes
+
+No CMS Changes
+
+── WHAT IS AI READY™ ──
+
+AI READY™ is the implementation service.
+
+AI LENS™ identifies the gaps.
+
+AI READY™ fixes the gaps.
+
+The goal is to move a business from:
+
+Findable™
+
+↓
+
+Understandable™
+
+↓
+
+Verifiable™
+
+Without changing the website design.
+
+Without rebuilding the website.
+
+Without migrating the CMS.
+
+── WHAT'S INCLUDED ──
+
+Everything from AI LENS™
+
+Gap Action Plan
+
+AI Files
+
+Schema Generation
+
+Entity Graph
+
+Intent Mapping
+
+Signal Preparation
+
+Robots.txt Review
+
+AI Crawler Access
+
+Written Audit Report
+
+Before / After Comparison
+
+Edge Deployment Package
+
+── AI FILES GENERATED ──
+
+ai.json
+
+llms.txt
+
+entities.json
+
+intents.json
+
+robots.txt
+
+entity-graph.public.jsonld
+
+Supporting Files
+
+All generated from the Business Knowledge Graph™.
+
+── SCHEMA GENERATED ──
+
+Organization
+
+Service
+
+FAQPage
+
+BreadcrumbList
+
+Person
+
+Article
+
+Additional industry-specific schema
+
+Validated before delivery.
+
+── PROCESS ──
+
+STEP 1
+
+Review AI LENS™ Outputs
+
+---
+
+STEP 2
+
+Create Knowledge Structure
+
+---
+
+STEP 3
+
+Generate AI Assets
+
+---
+
+STEP 4
+
+Validate Assets
+
+---
+
+STEP 5
+
+Human Review
+
+HITL Mandatory
+
+---
+
+STEP 6
+
+Deliver Implementation Package
+
+── BEFORE ──
+
+Missing AI files.
+
+Missing schema.
+
+Missing intent mapping.
+
+Low AI understanding.
+
+Poor AI visibility.
+
+---
+
+AFTER
+
+AI files generated.
+
+Schema complete.
+
+Intent mapping complete.
+
+Entity structure complete.
+
+Improved AI understanding.
+
+Improved AI visibility.
+
+── DELIVERY ──
+
+Typical Project:
+
+24–48 Hours
+
+Depending on complexity.
+
+── WHO IT IS FOR ──
+
+Businesses that already know they have gaps.
+
+Businesses wanting rapid improvement.
+
+Businesses preparing for AI recommendation systems.
+
+── BENEFITS ──
+
+Fast implementation.
+
+No redesign.
+
+No CMS migration.
+
+No developer dependency.
+
+Structured AI assets.
+
+Improved visibility.
+
+Improved understanding.
+
+── GUARANTEE ──
+
+Target score defined before engagement.
+
+If agreed target is not reached:
+
+Work continues at no additional cost.
+
+According to engagement terms.
+
+── FAQ ──
+
+1. What does AI READY™ do?
+
+It fixes the gaps identified by AI LENS™.
+
+2. Does it change my website design?
+
+No.
+
+3. Do I need developers?
+
+No.
+
+4. What files are generated?
+
+AI files, schema, entity files and intent files.
+
+5. What comes next?
+
+AI SIGNALS™.
+
+── PREVIOUS PAGE ──
+
+AI LENS™ Service
+
+── NEXT PAGE ──
+
+AI SIGNALS™ Service
