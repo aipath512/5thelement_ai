@@ -1,0 +1,275 @@
+TITLE: EU AI Act and AI Visibility — What B2B Businesses Must Know
+
+BREADCRUMB: Home › Blog › EU AI Act and AI Visibility
+
+Category: AIO
+
+Post: 20
+
+Reading Time: 10 min
+
+── WHAT IS THE EU AI ACT ──
+
+The EU AI Act is the first comprehensive AI regulation in the world.
+
+Official Name:
+
+Regulation (EU) 2024/1689
+
+Purpose:
+
+Create rules for the development, deployment, and use of AI systems.
+
+The regulation introduces:
+
+Transparency
+
+Governance
+
+Risk Management
+
+Human Oversight
+
+Documentation
+
+Accountability
+
+── WHY IT MATTERS ──
+
+AI is becoming part of business operations.
+
+The EU wants organizations to:
+
+Understand their AI usage.
+
+Document their AI systems.
+
+Manage risks.
+
+Protect users.
+
+Provide transparency.
+
+The EU AI Act affects:
+
+AI Providers
+
+AI Deployers
+
+Importers
+
+Distributors
+
+Businesses using AI
+
+Public organizations
+
+── KEY DATES ──
+
+August 1, 2024
+
+EU AI Act entered into force.
+
+---
+
+February 2, 2025
+
+Rules on prohibited AI practices begin.
+
+---
+
+August 2, 2025
+
+General Purpose AI obligations begin.
+
+---
+
+August 2, 2026
+
+High-risk AI obligations begin.
+
+Major milestone for many organizations.
+
+---
+
+August 2, 2027
+
+Additional provisions become fully applicable.
+
+── AI VISIBILITY AND THE EU AI ACT ──
+
+AI Visibility is not legal compliance.
+
+AI Visibility helps organizations become:
+
+Findable™
+
+Understandable™
+
+Verifiable™
+
+Trustable™
+
+Recommendable™
+
+The EU AI Act focuses on:
+
+Governance
+
+Transparency
+
+Documentation
+
+Human Oversight
+
+These areas overlap.
+
+But they are not the same thing.
+
+── IMPORTANT RULE ──
+
+Use:
+
+"Supports Readiness"
+
+Do NOT use:
+
+"Certified"
+
+"Compliant"
+
+"Approved"
+
+unless there is legal evidence supporting the claim.
+
+This is called the Epistemic Rule.
+
+── GOVERNANCE SIGNALS ──
+
+Examples:
+
+GDPR Declaration
+
+EU AI Act Declaration
+
+Human-in-the-Loop (HITL)
+
+AI Usage Disclosure
+
+Data Processing Declaration
+
+Content Policy
+
+Terms of Use
+
+Privacy Policy
+
+Transparency Statements
+
+These signals help AI understand governance posture.
+
+── DOCUMENTATION LAYER ──
+
+Organizations should maintain:
+
+Policies
+
+Procedures
+
+Declarations
+
+Registers
+
+Evidence
+
+Version History
+
+Proof Files
+
+Documentation improves transparency.
+
+Documentation improves trust.
+
+Documentation improves audit readiness.
+
+── HUMAN OVERSIGHT ──
+
+Human-in-the-Loop (HITL) means:
+
+Humans review important decisions.
+
+Humans approve deployments.
+
+Humans validate outputs.
+
+Human oversight is a major principle of the EU AI Act.
+
+── AI VISIBILITY BENEFITS ──
+
+Better AI understanding.
+
+Better transparency.
+
+Better documentation.
+
+Better governance.
+
+Better consistency.
+
+Better readiness.
+
+AI Visibility does not replace legal advice.
+
+AI Visibility does not certify compliance.
+
+── HOW TO VERIFY ──
+
+Ask:
+
+Do governance documents exist?
+
+Are declarations published?
+
+Are policies accessible?
+
+Is human oversight documented?
+
+Are transparency statements available?
+
+If yes,
+
+The organization is improving readiness.
+
+── FAQ ──
+
+1. What is the EU AI Act?
+
+The European Union AI regulation.
+
+2. Does AI Visibility equal compliance?
+
+No.
+
+They are different concepts.
+
+3. What phrase should be used?
+
+"Supports Readiness"
+
+4. What phrase should be avoided?
+
+"Certified" or "Compliant" without evidence.
+
+5. Why does governance matter?
+
+Because trust and accountability matter.
+
+── RELATED ──
+
+What Is AIO?
+
+Trust and Proof Signals
+
+AI Visibility Ladder
+
+EU AI Act Readiness
