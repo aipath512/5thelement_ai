@@ -1,0 +1,245 @@
+TITLE: How to Make Your Business Verifiable by AI — Stage 3
+
+BREADCRUMB: Home › Blog › Stage 3 — Verifiable™
+
+Category: AEO
+
+Stage: 3 of 5
+
+── WHAT IS VERIFIABLE™ ──
+
+Verifiable™ is Stage 3 of the AI Visibility Ladder.
+
+AI has found your business.
+
+AI understands your business.
+
+Now AI must verify your claims.
+
+Verification means:
+
+AI can independently confirm information using sources outside your website.
+
+The business is no longer self-declared.
+
+The business becomes externally confirmed.
+
+── WHY BUSINESSES FAIL STAGE 3 ──
+
+Reason 1
+
+No sameAs references.
+
+AI cannot connect profiles together.
+
+---
+
+Reason 2
+
+Business information differs between sources.
+
+Different names.
+
+Different addresses.
+
+Different dates.
+
+Different categories.
+
+---
+
+Reason 3
+
+Missing external references.
+
+No registry listings.
+
+No directory presence.
+
+No social verification.
+
+---
+
+Reason 4
+
+Certifications cannot be verified.
+
+No public registry URLs.
+
+No proof.
+
+---
+
+Reason 5
+
+No cryptographic proof layer.
+
+Claims exist.
+
+Evidence does not.
+
+── THE CORE VERIFIABLE™ SIGNALS ──
+
+sameAs
+
+Company Registry
+
+LinkedIn
+
+Crunchbase
+
+Professional Directories
+
+Certification Registries
+
+Review Platforms
+
+External Citations
+
+SHA-256 Proof
+
+OpenTimestamps
+
+Verification Badge
+
+AI Validation Registry
+
+── SIX STEPS TO VERIFIABLE™ ──
+
+STEP 1
+
+Create sameAs Chain
+
+Website
+
+LinkedIn
+
+Company Registry
+
+Industry Directories
+
+Other Official Profiles
+
+---
+
+STEP 2
+
+Verify Identity Consistency
+
+Same name.
+
+Same address.
+
+Same registration number.
+
+Same category.
+
+---
+
+STEP 3
+
+Publish Certification References
+
+Certification Name
+
+Issuing Body
+
+Registry URL
+
+Expiry Date
+
+---
+
+STEP 4
+
+Deploy ai-validation.json
+
+External verification map.
+
+---
+
+STEP 5
+
+Deploy ai-proof.json
+
+Proof registry.
+
+---
+
+STEP 6
+
+Anchor Important Documents
+
+SHA-256
+
+OpenTimestamps
+
+Bitcoin verification
+
+── BEFORE ──
+
+Claims are self-declared.
+
+External validation weak.
+
+Identity fragmented.
+
+Low confidence.
+
+── AFTER ──
+
+Claims externally verified.
+
+Identity connected.
+
+Proof accessible.
+
+High confidence.
+
+AI trusts facts more.
+
+── HOW TO VERIFY ──
+
+Ask:
+
+Can this business be independently verified?
+
+Can certifications be confirmed?
+
+Can AI connect all references?
+
+If yes,
+
+Stage 3 is working.
+
+── FAQ ──
+
+1. What is Verifiable™?
+
+The ability for AI to confirm claims using external sources.
+
+2. What is the most important signal?
+
+sameAs consistency.
+
+3. Why are registries important?
+
+They provide independent confirmation.
+
+4. What is ai-validation.json?
+
+A map of verification sources.
+
+5. How long does this stage take?
+
+Usually 2–4 weeks after Understandable™.
+
+── PREVIOUS STAGE ──
+
+Understandable™
+
+── NEXT STAGE ──
+
+Trustable™
+
+Stage 4 of AI Authority.
