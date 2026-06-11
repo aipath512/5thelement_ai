@@ -1,0 +1,348 @@
+TITLE: The 167 AI Signals — Complete Reference for B2B
+
+BREADCRUMB: Home › Blog › The 167 AI Signals
+
+Category: AI Signals
+
+Date: June 10, 2026
+
+Reading Time: 15 min
+
+── WHAT ARE THE 167 AI SIGNALS? ──
+
+167 atomic machine-readable data points that AI systems use to:
+
+Discover businesses
+
+Classify businesses
+
+Verify businesses
+
+Recommend businesses
+
+These are not content.
+
+They are infrastructure.
+
+They exist in:
+
+JSON files
+
+Schema markup
+
+Linked Data graphs
+
+Edge-delivered signals
+
+── THREE SIGNAL CATEGORIES ──
+
+Identity and Entity
+
+48 Signals
+
+Who the business is.
+
+---
+
+Trust and Proof
+
+61 Signals
+
+Why the business can be trusted.
+
+Highest-weight category.
+
+---
+
+Intent and Governance
+
+58 Signals
+
+What the business sells.
+
+Who it sells to.
+
+How it governs AI interactions.
+
+---
+
+Total:
+
+167 Signals
+
+── FOUR SIGNAL STATES ──
+
+🟢 Present
+
+Signal exists and is correctly deployed.
+
+---
+
+🔴 Missing
+
+Signal does not exist.
+
+---
+
+🟡 Inconsistent
+
+Signal conflicts with another source.
+
+---
+
+⚪ Unverifiable
+
+Signal exists but cannot be independently verified.
+
+── CATEGORY 1 — IDENTITY AND ENTITY ──
+
+48 Signals
+
+Examples:
+
+Legal Name
+
+Trading Name
+
+Category
+
+Subcategory
+
+NACE Code
+
+Founding Date
+
+Registration Number
+
+VAT Number
+
+Headquarters
+
+Canonical URL
+
+sameAs References
+
+Social Profiles
+
+Parent Company
+
+Subsidiaries
+
+Status
+
+Location Coverage
+
+Language Coverage
+
+Purpose:
+
+AI cannot trust or recommend an entity
+it cannot identify.
+
+── CATEGORY 2 — TRUST AND PROOF ──
+
+61 Signals
+
+Examples:
+
+Certifications
+
+Professional Memberships
+
+Awards
+
+Case Studies
+
+Testimonials
+
+Reviews
+
+External Citations
+
+Directory Presence
+
+SHA-256 Proof Files
+
+OpenTimestamps Anchors
+
+Governance Declarations
+
+Verification Badges
+
+Purpose:
+
+Provides evidence.
+
+Creates confidence.
+
+Supports recommendation.
+
+Highest weighted category.
+
+── CATEGORY 3 — INTENT AND GOVERNANCE ──
+
+58 Signals
+
+Examples:
+
+Service Categories
+
+Buyer Personas
+
+Problem-Solution Mapping
+
+Pricing Model
+
+Delivery Format
+
+Geography Filters
+
+Language Filters
+
+Negative Intents
+
+Crawler Permissions
+
+EU AI Act Declarations
+
+GDPR Declarations
+
+HITL Declarations
+
+Purpose:
+
+Connects businesses to buyer intent.
+
+Controls AI interaction rules.
+
+── DEPLOYMENT PIPELINE ──
+
+01 AI LENS™
+
+Build Knowledge Graph
+
+↓
+
+02 AI SIGNALS™
+
+Generate Signals
+
+↓
+
+03 AI SIGNALS™
+
+Validate Signals
+
+↓
+
+04 SIGNAL COMPILER™
+
+Compile Files
+
+↓
+
+05 EDGE INJECTOR™
+
+Deploy
+
+↓
+
+06 AI SONAR™
+
+Monitor
+
+── SCORE WEIGHTING ──
+
+Identity and Entity
+
+35%
+
+---
+
+Trust and Proof
+
+45%
+
+---
+
+Intent and Governance
+
+20%
+
+---
+
+Recommendable™ Threshold
+
+90–100
+
+── HIGHEST-WEIGHT SIGNALS ──
+
+External Citations
+
+Very High
+
+---
+
+Third-Party Verification
+
+Very High
+
+---
+
+SHA-256 + OTS Proof
+
+High
+
+---
+
+Professional Memberships
+
+High
+
+---
+
+Case Study Outcomes
+
+High
+
+---
+
+sameAs Consistency
+
+Medium-High
+
+── FAQ ──
+
+1. What are AI Signals?
+
+Atomic machine-readable business signals.
+
+2. Why exactly 167?
+
+Current AI Visibility framework structure.
+
+3. Which category matters most?
+
+Trust and Proof.
+
+4. How are signals deployed?
+
+Through structured files and edge delivery.
+
+5. What happens if signals conflict?
+
+AI confidence decreases significantly.
+
+── RELATED ──
+
+Identity and Entity Signals
+
+Trust and Proof Signals
+
+Intent and Governance Signals
+
+AI Visibility Ladder
+
+AI Audit™
+
+AI Signals™
