@@ -1,0 +1,329 @@
+TITLE: ai.json — The Machine-Readable Business Identity File
+
+BREADCRUMB: Home › Blog › ai.json Guide
+
+Category: AI-SEO
+
+Post: 15
+
+Reading Time: 8 min
+
+── WHAT IS ai.json ──
+
+ai.json is the primary machine-readable identity file for a business.
+
+It acts as the central AI identity document.
+
+Location:
+
+https://yourdomain.com/ai.json
+
+AI systems can use it to understand:
+
+Who the business is
+
+What the business does
+
+Where the business operates
+
+What services it offers
+
+How the business connects to other entities
+
+Think of ai.json as:
+
+A digital business passport for AI.
+
+── WHY ai.json EXISTS ──
+
+Most websites are built for humans.
+
+AI systems need structured data.
+
+Without ai.json:
+
+AI must guess.
+
+With ai.json:
+
+AI receives structured facts.
+
+This improves:
+
+Discovery
+
+Understanding
+
+Verification
+
+Trust
+
+Recommendation potential
+
+── WHAT ai.json CONTAINS ──
+
+Identity
+
+Legal Name
+
+Trading Name
+
+Registration Number
+
+VAT Number
+
+Founding Date
+
+Entity Type
+
+Status
+
+Category
+
+Industry Codes
+
+---
+
+Geography
+
+Headquarters
+
+Countries Served
+
+Languages
+
+Timezone
+
+Currency
+
+---
+
+Services
+
+Service Catalog
+
+Descriptions
+
+Target Clients
+
+Delivery Models
+
+---
+
+Relationships
+
+Founder
+
+Key People
+
+Social Profiles
+
+Company Registry
+
+sameAs References
+
+---
+
+Governance
+
+GDPR
+
+EU AI Act
+
+HITL
+
+Transparency
+
+---
+
+Proof
+
+Verification References
+
+Proof Files
+
+Authority Sources
+
+── MINIMUM STRUCTURE ──
+
+@context
+
+@type
+
+name
+
+legalName
+
+url
+
+foundingDate
+
+category
+
+headquarters
+
+services
+
+sameAs
+
+contactPoint
+
+── EXAMPLE STRUCTURE ──
+
+Organization
+
+Name
+
+Legal Name
+
+Website
+
+Founded
+
+Headquarters
+
+Services
+
+sameAs
+
+Contact
+
+No marketing language.
+
+Facts only.
+
+── IMPLEMENTATION PATH ──
+
+Step 1
+
+AI AUDIT™
+
+Measure current state.
+
+---
+
+Step 2
+
+AI LENS™
+
+Collect business information.
+
+---
+
+Step 3
+
+AI READY™
+
+Generate ai.json automatically.
+
+---
+
+Step 4
+
+EDGE INJECTOR™
+
+Deploy at domain root.
+
+---
+
+Step 5
+
+AI SONAR™
+
+Monitor continuously.
+
+── COMMON MISTAKES ──
+
+Using marketing claims.
+
+---
+
+Missing sameAs references.
+
+---
+
+Missing services.
+
+---
+
+Inconsistent legal information.
+
+---
+
+Broken URLs.
+
+---
+
+Outdated data.
+
+── HOW TO VERIFY ──
+
+Open:
+
+https://yourdomain.com/ai.json
+
+Check:
+
+Loads publicly
+
+Valid JSON
+
+No errors
+
+Current information
+
+Correct URLs
+
+Consistent identity
+
+── BENEFITS ──
+
+AI discovers business faster.
+
+AI understands business better.
+
+AI verifies identity easier.
+
+AI confidence increases.
+
+Recommendation probability improves.
+
+── FAQ ──
+
+1. What is ai.json?
+
+The machine-readable business identity file.
+
+2. Is ai.json a standard?
+
+It is an emerging AI infrastructure pattern.
+
+3. Does ai.json replace Schema.org?
+
+No.
+
+Use both.
+
+4. Does ai.json replace llms.txt?
+
+No.
+
+Use both.
+
+5. Where should it be deployed?
+
+At the root of the domain.
+
+Example:
+
+https://yourdomain.com/ai.json
+
+── RELATED ──
+
+llms.txt
+
+AI-SEO
+
+Schema.org for AI
+
+The 167 AI Signals
