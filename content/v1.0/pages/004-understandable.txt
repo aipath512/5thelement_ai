@@ -1,0 +1,54 @@
+TITLE: Understandable™ — Stage 2 of AI Visibility — 5thelement.ai
+BREADCRUMB: Home › Solutions › Understandable™
+STAGE NAV: 01 Findable™ · 02 Understandable™ · 03 Verifiable™ · 04 Trustable™ · 05 Recommendable™
+
+── HERO ──
+Stage 02 of 05 · AI Visibility™
+Understandable™
+Stage 2 of AI visibility. AI has found your business. Now it must
+correctly read what you sell, who you serve, and why a buyer should
+choose you. Most businesses fail here because their content is written
+for humans — not for AI interpretation.
+
+── DEFINITION ──
+A business is Understandable™ when AI systems can correctly parse,
+classify, and describe its services, target clients, and value
+proposition without ambiguity.
+
+Being Findable™ means AI knows you exist. Being Understandable™ means
+AI knows what you do, for whom, and why it matters.
+
+Most business websites are written for human persuasion — narrative,
+emotional, and context-dependent. AI looks for explicit structured
+signals: service type, target sector, client size, problem solved,
+outcome delivered.
+
+── 6 AI TEST QUESTIONS ──
+Q1 — What specific services does this business sell?
+Q2 — Who is the target client for each service?
+Q3 — What problem does each service solve?
+Q4 — What is the delivery format — remote, on-site, hybrid, digital?
+Q5 — What languages does the business operate in?
+Q6 — What is the typical engagement size and timeline?
+
+── 8 ACTIONS ──
+1. Create service definitions in ai.json → /ai.json → services[]
+2. Deploy Service schema for each service page → /services/*.html
+3. Create intents.json with buyer query mapping → /intents.json
+4. Add target client profiles to entities.json → buyerPersonas[]
+5. Structure FAQ as FAQPage schema → FAQPage JSON-LD
+6. Add language and geography signals to llms.txt
+7. Deploy ai-ready.json with full service catalogue → /ai-ready.json
+8. Rewrite service page H1s for AI parsing → declarative language
+
+── BEFORE / AFTER ──
+Before: AI describes business vaguely · services not machine-readable ·
+target client inferred incorrectly · FAQ not structured
+
+After: AI accurately describes all services · each service has
+structured name/problem/client/outcome · FAQPage schema deployed ·
+declarative H1s · all languages and geographies declared
+
+── NAVIGATION ──
+Next → Verifiable™ Stage 3
+Previous → Findable™ Stage 1
