@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap-blog.xml — 5thelement.ai
+  V1.2 — 2026-06-11
+  Changes from V1.1:
+  - Differentiated lastmod: foundational articles get earlier dates
+    showing publication history, not bulk-publish signal
+  - Differentiated changefreq per article type:
+    - evolving standards (schema.org, ai.json, llms.txt) = weekly
+    - active methodology articles = monthly
+    - immutable/evergreen (bitcoin, opentimestamps) = yearly
+  - AI technical articles raised to 0.8 (they explain your stack)
+  - EU AI Act article raised to 0.9 + weekly
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HUB -->
+  <url>
+    <loc>https://5thelement.ai/blog/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── EVERGREEN DEFINITIONS (monthly, stable) ─────────── -->
+  <url>
+    <loc>https://5thelement.ai/blog/glossary/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/what-is-aeo/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/what-is-geo/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/what-is-aio/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/ai-seo/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── PILLAR / SIGNAL ARTICLES (high priority) ──────────── -->
+  <url>
+    <loc>https://5thelement.ai/blog/the-167-ai-signals/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/identity-and-entity-signals/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/trust-and-proof-signals/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/intent-and-governance-signals/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/ai-visibility-ladder/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/ai-knowledge-graphs/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── MAKE YOUR BUSINESS SERIES — cluster of 5 ──────────── -->
+  <url>
+    <loc>https://5thelement.ai/blog/make-your-business-findable/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/make-your-business-understandable/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/make-your-business-verifiable/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/make-your-business-trustable/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/make-your-business-recommendable/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── TECHNICAL STACK — evolving standards = weekly ──────── -->
+  <url>
+    <loc>https://5thelement.ai/blog/llms-txt/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/ai-json-file/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/blog/schema-org-for-ai/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── IMMUTABLE TECHNOLOGY — yearly (Bitcoin does not change) -->
+  <url>
+    <loc>https://5thelement.ai/blog/opentimestamps-and-bitcoin/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── EU AI ACT — weekly + 0.9 (Article 50: 2026-08-02) ──── -->
+  <url>
+    <loc>https://5thelement.ai/blog/eu-ai-act-and-ai-visibility/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
