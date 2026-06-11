@@ -1,0 +1,311 @@
+TITLE: OpenTimestamps and Bitcoin — Proof of Authority for AI
+
+BREADCRUMB: Home › Blog › OpenTimestamps and Bitcoin
+
+Category: AI Signals
+
+Post: 17
+
+Reading Time: 10 min
+
+── WHAT IS OPENTIMESTAMPS ──
+
+OpenTimestamps (OTS) is a protocol that proves a document existed at a specific point in time.
+
+It uses:
+
+SHA-256
+
+Bitcoin
+
+Cryptographic verification
+
+No central authority is required.
+
+No trust in a company is required.
+
+Verification is public.
+
+Verification is independent.
+
+── THE PROBLEM ──
+
+Anyone can claim:
+
+"We invented this."
+
+"We published this first."
+
+"We created this methodology."
+
+But proving it later is difficult.
+
+OpenTimestamps solves this problem.
+
+It creates independent proof.
+
+── HOW IT WORKS ──
+
+STEP 1
+
+Create a document.
+
+Example:
+
+Research paper
+
+Methodology
+
+Innovation
+
+Policy
+
+Framework
+
+---
+
+STEP 2
+
+Generate SHA-256 hash.
+
+Example:
+
+31aa7a56...
+
+The hash becomes the document fingerprint.
+
+Any change creates a different hash.
+
+---
+
+STEP 3
+
+Submit hash to OpenTimestamps.
+
+The hash joins many other hashes.
+
+---
+
+STEP 4
+
+OTS creates a Merkle Tree.
+
+Hashes are grouped together.
+
+---
+
+STEP 5
+
+Bitcoin records proof.
+
+The Merkle Root becomes anchored to Bitcoin.
+
+---
+
+STEP 6
+
+Receive .ots file.
+
+Example:
+
+document.pdf.ots
+
+This file contains verification information.
+
+── WHAT IS SHA-256 ──
+
+SHA-256 is a cryptographic hashing algorithm.
+
+Input:
+
+Document
+
+Output:
+
+Unique fingerprint
+
+Example:
+
+Document A
+
+↓
+
+31aa7a56...
+
+If one character changes:
+
+↓
+
+Different hash
+
+This makes tampering detectable.
+
+── WHAT IS THE BITCOIN BLOCKCHAIN ──
+
+Bitcoin stores immutable records.
+
+Once anchored:
+
+Nobody can modify the timestamp.
+
+Nobody can rewrite history.
+
+Nobody can remove the proof.
+
+This makes Bitcoin useful as a proof system.
+
+── AI BENEFITS ──
+
+Proof of publication date.
+
+Proof of authorship.
+
+Proof of methodology existence.
+
+Proof of innovation existence.
+
+Proof of governance documents.
+
+Proof of authority claims.
+
+AI systems can verify evidence.
+
+AI confidence increases.
+
+── EXAMPLES ──
+
+ADI™ Canonical
+
+SHA-256:
+
+31aa7a56...
+
+Bitcoin Block:
+
+944442
+
+---
+
+AI Sonar™
+
+SHA-256:
+
+c57529c8...
+
+Bitcoin Block:
+
+949375
+
+---
+
+Mockingbird Handshake™
+
+SHA-256:
+
+fb388288...
+
+Bitcoin Block:
+
+949346
+
+---
+
+Gemini AI Audit
+
+SHA-256:
+
+dd8896c2...
+
+Bitcoin Block:
+
+952597
+
+── VERIFICATION RULES ──
+
+Rule 1
+
+Never invent hashes.
+
+---
+
+Rule 2
+
+Never invent Bitcoin blocks.
+
+---
+
+Rule 3
+
+Never claim verification without .ots proof.
+
+---
+
+Rule 4
+
+Mark status as:
+
+Pending
+
+or
+
+Verified
+
+Never guess.
+
+── HOW TO VERIFY ──
+
+You need:
+
+Original document
+
+Original SHA-256 hash
+
+Original .ots file
+
+Verification software
+
+Result:
+
+Verified
+
+or
+
+Not Verified
+
+Verification is independent.
+
+Anyone can perform it.
+
+── FAQ ──
+
+1. What is OpenTimestamps?
+
+A protocol proving a document existed at a specific time.
+
+2. Why use Bitcoin?
+
+Because Bitcoin is immutable.
+
+3. What is a .ots file?
+
+A proof file used for verification.
+
+4. Does OpenTimestamps store documents?
+
+No.
+
+Only proof information.
+
+5. Why does this matter for AI?
+
+It creates verifiable authority signals.
+
+── RELATED ──
+
+Proof Layer™
+
+Trust and Proof Signals
+
+Innovation Registry
+
+AI Visibility Ladder
