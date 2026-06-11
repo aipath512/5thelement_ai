@@ -1,0 +1,375 @@
+TITLE: AI LENS™ — Business Knowledge Acquisition Engine
+
+BREADCRUMB: Home › Products › AI LENS™
+
+Product 02
+
+Knowledge Acquisition Engine
+
+100 Dimensions
+
+7 Categories
+
+5 Output Files
+
+24h Delivery
+
+── THE PROBLEM ──
+
+AI cannot understand what has never been structured.
+
+Before fixing AI visibility, a business must first understand:
+
+What information already exists?
+
+What information is missing?
+
+What information is inconsistent?
+
+What information must be created?
+
+AI LENS™ answers these questions.
+
+── FIVE CORE FUNCTIONS ──
+
+1. Information Inventory
+
+Catalogues all existing business information.
+
+---
+
+2. Entity and Relationship Mapping
+
+Identifies entities.
+
+Maps relationships.
+
+Defines connections.
+
+---
+
+3. Gap Identification
+
+Detects missing information.
+
+Builds Gap Registry.
+
+---
+
+4. AI Visibility Information Map™
+
+Measures 100 dimensions.
+
+Shows:
+
+Green
+
+Amber
+
+Red
+
+Status.
+
+---
+
+5. Business Knowledge Graph™
+
+Creates the canonical business model.
+
+Single Source of Truth.
+
+---
+
+Bonus:
+
+Intent Registry™
+
+Maps buyer intent.
+
+Positive intent.
+
+Negative intent.
+
+Decision intent.
+
+Buying intent.
+
+── 100 DIMENSIONS ACROSS 7 CATEGORIES ──
+
+CATEGORY 1
+
+Entity Identity
+
+16 Dimensions
+
+Examples:
+
+Name
+
+Category
+
+NACE
+
+Founding Date
+
+Legal Status
+
+sameAs
+
+---
+
+CATEGORY 2
+
+Geographic Presence
+
+12 Dimensions
+
+Examples:
+
+Headquarters
+
+Countries Served
+
+Languages
+
+Markets
+
+Locations
+
+---
+
+CATEGORY 3
+
+Service Clarity
+
+18 Dimensions
+
+Examples:
+
+Services
+
+Problems Solved
+
+Outcomes
+
+Pricing
+
+Differentiators
+
+---
+
+CATEGORY 4
+
+Buyer Intent Alignment
+
+14 Dimensions
+
+Examples:
+
+Buyer Personas
+
+Questions
+
+Triggers
+
+Intent Mapping
+
+Negative Intents
+
+---
+
+CATEGORY 5
+
+Technical Signals
+
+16 Dimensions
+
+Examples:
+
+ai.json
+
+llms.txt
+
+Schema
+
+Robots
+
+Crawlers
+
+---
+
+CATEGORY 6
+
+External Consistency
+
+12 Dimensions
+
+Examples:
+
+LinkedIn
+
+Registry
+
+Directories
+
+External References
+
+---
+
+CATEGORY 7
+
+Authority Signals
+
+12 Dimensions
+
+Examples:
+
+Citations
+
+Reviews
+
+Case Studies
+
+Proof Layer
+
+Memberships
+
+── INPUTS ──
+
+Website URL
+
+Business Documents
+
+PDF Files
+
+Company Information
+
+Profiles
+
+Existing Content
+
+No website access required.
+
+── FIVE OUTPUT FILES ──
+
+Business Information Inventory
+
+Entity Registry
+
+Intent Registry
+
+Gap Registry
+
+Business Knowledge Graph™
+
+── PROCESS ──
+
+STEP 1
+
+Collect Inputs
+
+---
+
+STEP 2
+
+Extract Information
+
+---
+
+STEP 3
+
+Structure Information
+
+---
+
+STEP 4
+
+Human Review
+
+HITL Validation
+
+Nothing invented.
+
+---
+
+STEP 5
+
+Generate Outputs
+
+---
+
+STEP 6
+
+Deliver Results
+
+Within 24 hours.
+
+── BEFORE ──
+
+Information scattered.
+
+No entity model.
+
+No intent model.
+
+No graph.
+
+No inventory.
+
+── AFTER ──
+
+Complete inventory.
+
+Structured entities.
+
+Structured relationships.
+
+Intent Registry.
+
+Gap Registry.
+
+Knowledge Graph.
+
+Source of Truth established.
+
+── WHY IT MATTERS ──
+
+AI READY™ depends on AI LENS™.
+
+AI SIGNALS™ depends on AI LENS™.
+
+KNOWLEDGE GRAPH™ depends on AI LENS™.
+
+Everything starts here.
+
+── FAQ ──
+
+1. What is AI LENS™?
+
+A business information discovery engine.
+
+2. Does it change my website?
+
+No.
+
+3. Does it require developer access?
+
+No.
+
+4. What is the main output?
+
+Business Knowledge Graph™.
+
+5. How long does it take?
+
+24 hours.
+
+── PREVIOUS PRODUCT ──
+
+AI AUDIT™
+
+── NEXT PRODUCT ──
+
+AI READY™
+
+Automatic Transformation Engine.
