@@ -1,0 +1,295 @@
+TITLE: KNOWLEDGE GRAPH™ — Business Entity Relationship Engine
+
+BREADCRUMB: Home › Products › KNOWLEDGE GRAPH™
+
+Product 05
+
+Entity Relationship Engine
+
+9 Entity Types
+
+10 Relationship Types
+
+JSON-LD Output
+
+3 Output Files
+
+── THE PROBLEM ──
+
+AI does not see pages.
+
+AI sees entities.
+
+AI sees relationships.
+
+AI sees connections.
+
+A website may contain information.
+
+A Knowledge Graph™ contains meaning.
+
+The better the graph:
+
+The higher the confidence.
+
+The better the recommendations.
+
+── WHAT IS A KNOWLEDGE GRAPH™ ──
+
+A structured network of entities and relationships.
+
+Example:
+
+Business
+  ↓ provides
+Service
+  ↓ solves
+Problem
+  ↓ helps
+Customer
+
+AI can follow these relationships.
+
+AI can reason about them.
+
+AI can recommend with higher confidence.
+
+── 9 ENTITY TYPES ──
+
+1. Business
+
+The company.
+
+---
+
+2. Service
+
+What the company sells.
+
+---
+
+3. Person
+
+Founders.
+
+Experts.
+
+Team members.
+
+---
+
+4. Location
+
+Countries.
+
+Cities.
+
+Regions.
+
+---
+
+5. Certification
+
+Professional certifications.
+
+---
+
+6. Award
+
+Awards and recognitions.
+
+---
+
+7. Client
+
+Customer entities.
+
+---
+
+8. Partner
+
+Business partners.
+
+---
+
+9. Competitor
+
+Market competitors.
+
+── 10 RELATIONSHIP TYPES ──
+
+Business provides Service
+
+Business employs Person
+
+Business locatedIn Location
+
+Business certifiedBy Certification
+
+Business awardedBy Award
+
+Business servesClient Client
+
+Business partnersWith Partner
+
+Business competingWith Competitor
+
+Person leadsTeam Department
+
+Content authoredBy Person
+
+── CARDINALITIES ──
+
+One-to-One
+
+Example:
+
+Business → Founder
+
+---
+
+One-to-Many
+
+Example:
+
+Business → Services
+
+---
+
+Many-to-Many
+
+Example:
+
+Person → Expertise
+
+── CROSS REFERENCES ──
+
+Business Entity
+
+LinkedIn
+
+Company Registry
+
+Crunchbase
+
+Directories
+
+Google Business
+
+Industry Registries
+
+---
+
+Person Entity
+
+LinkedIn
+
+GitHub
+
+Portfolio
+
+Published Articles
+
+Professional Registries
+
+── OUTPUT FILES ──
+
+entities.json
+
+Complete entity registry.
+
+---
+
+entity-graph.public.jsonld
+
+Public graph.
+
+AI-readable.
+
+---
+
+knowledge-graph.json
+
+Human-readable graph.
+
+Versioned.
+
+SHA-256 ready.
+
+── BENEFITS ──
+
+Higher AI confidence.
+
+Clear relationships.
+
+Better reasoning.
+
+More accurate recommendations.
+
+Reduced ambiguity.
+
+Improved authority.
+
+── BEFORE ──
+
+Disconnected information.
+
+No entity structure.
+
+No relationships.
+
+No graph.
+
+Low confidence.
+
+---
+
+AFTER
+
+Connected entities.
+
+Connected services.
+
+Connected people.
+
+Connected evidence.
+
+Connected authority.
+
+High confidence.
+
+── FAQ ──
+
+1. What is a Knowledge Graph™?
+
+A structured entity and relationship model.
+
+2. Why is it important?
+
+AI reasons using graphs.
+
+3. Is it public?
+
+Yes.
+
+Through JSON-LD outputs.
+
+4. Does it replace schema?
+
+No.
+
+It complements schema.
+
+5. What comes next?
+
+Deployment.
+
+── PREVIOUS PRODUCT ──
+
+AI SIGNALS™
+
+── NEXT PRODUCT ──
+
+EDGE INJECTOR™
+
+Deploy AI Infrastructure Without Touching Website.
