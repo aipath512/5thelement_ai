@@ -1,0 +1,347 @@
+TITLE: Trust and Proof Signals — The 61 Signals Explained
+
+BREADCRUMB: Home › Blog › The 167 AI Signals › Trust and Proof
+
+Category: AI Signals
+
+Date: June 10, 2026
+
+Reading Time: 14 min
+
+── WHAT THEY ARE ──
+
+Trust and Proof Signals are the 61 data points that help AI determine:
+
+Can this business be trusted?
+
+Can its claims be verified?
+
+Should it be recommended?
+
+This is the highest-weight category in AI recommendation systems.
+
+Trust builds credibility.
+
+Proof builds verifiability.
+
+Together they create confidence.
+
+── TRUST vs PROOF ──
+
+Trust Signals
+
+External validation.
+
+Other people and organizations reference the business.
+
+Examples:
+
+Citations
+
+Reviews
+
+Professional memberships
+
+Awards
+
+Case studies
+
+Directories
+
+---
+
+Proof Signals
+
+Cryptographic and documentary evidence.
+
+Examples:
+
+SHA-256 hashes
+
+OpenTimestamps anchors
+
+Bitcoin verification
+
+Proof files
+
+Governance declarations
+
+Verification records
+
+── SEVEN GROUPS ──
+
+GROUP 1 — CERTIFICATIONS
+
+8 Signals
+
+certification-count
+
+certification-schema
+
+certification-registry-url
+
+iso-certification
+
+professional-qualification
+
+accreditation-body
+
+cert-valid-until
+
+regulatory-approval
+
+---
+
+GROUP 2 — CITATIONS
+
+10 Signals
+
+citation-count
+
+citation-quality
+
+tier1-citation-count
+
+sector-publication-mention
+
+academic-citation
+
+press-mention-count
+
+mention-consistency
+
+government-reference
+
+eu-institution-mention
+
+external-link-count
+
+---
+
+GROUP 3 — REVIEWS
+
+8 Signals
+
+aggregate-rating-schema
+
+review-platform-url
+
+review-count
+
+average-rating
+
+testimonial-schema
+
+testimonial-count
+
+video-testimonial
+
+named-client-count
+
+---
+
+GROUP 4 — CASE STUDIES
+
+7 Signals
+
+case-study-count
+
+case-study-schema
+
+measurable-outcome
+
+client-sector-diversity
+
+case-study-client-size
+
+case-study-geography
+
+before-after-schema
+
+---
+
+GROUP 5 — AWARDS AND PROFESSIONAL BODIES
+
+6 Signals
+
+award-count
+
+award-schema
+
+professional-body-membership
+
+professional-body-registry-url
+
+industry-association
+
+sector-directory-presence
+
+---
+
+GROUP 6 — CRYPTOGRAPHIC PROOF
+
+12 Signals
+
+proof.sha256-hash
+
+proof.ots-status
+
+proof.bitcoin-block
+
+proof.ots-file-url
+
+proof.proof-registry-url
+
+proof.anchored-document-count
+
+proof.innovation-registry
+
+proof.manifest-hash
+
+proof.external-audit-hash
+
+proof.verification-badge
+
+proof.verification-body-url
+
+proof.verification-date
+
+---
+
+GROUP 7 — GOVERNANCE
+
+10 Signals
+
+hitl-protocol
+
+eu-ai-act-declaration
+
+gdpr-declaration
+
+algorithmic-transparency
+
+editorial-standards
+
+content-authorship
+
+data-processing-declaration
+
+ai-usage-declaration
+
+epistemic-discipline
+
+trust-score
+
+── TOP 7 HIGHEST-WEIGHT SIGNALS ──
+
+1. proof.verification-badge
+
+Independent verification
+
+---
+
+2. certification-registry-url
+
+Public verification
+
+---
+
+3. case-study-schema
+
+With measurable outcomes
+
+---
+
+4. tier1-citation-count
+
+Trusted sources
+
+---
+
+5. professional-body-registry-url
+
+Industry trust
+
+---
+
+6. proof.ots-status = verified
+
+Cryptographic verification
+
+---
+
+7. eu-ai-act-declaration
+
+Governance trust
+
+── EPISTEMIC DISCIPLINE RULE ──
+
+Every claim must be classified as:
+
+self_declared
+
+publicly_verifiable
+
+independently_certified
+
+Rule:
+
+Use:
+
+"supports readiness"
+
+Never use:
+
+"certified"
+
+"compliant"
+
+"satisfies"
+
+unless legally proven.
+
+── WHY THIS CATEGORY MATTERS MOST ──
+
+Identity tells AI who you are.
+
+Intent tells AI what you do.
+
+Trust and Proof tell AI whether it should recommend you.
+
+Recommendation depends heavily on this category.
+
+── FAQ ──
+
+1. Which signal category has the highest weight?
+
+Trust and Proof.
+
+2. What is the most important proof signal?
+
+Verified OpenTimestamps status.
+
+3. What is the most important trust signal?
+
+External citations.
+
+4. Why are case studies important?
+
+They provide evidence of outcomes.
+
+5. Can AI recommend a business without proof?
+
+Sometimes.
+
+But confidence and recommendation frequency remain lower.
+
+── RELATED ──
+
+The 167 AI Signals
+
+Identity and Entity Signals
+
+Intent and Governance Signals
+
+Proof Layer™
+
+Trust Layer™
