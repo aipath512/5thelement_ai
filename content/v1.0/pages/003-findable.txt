@@ -1,0 +1,50 @@
+TITLE: Findable™ — Stage 1 of AI Visibility — 5thelement.ai
+BREADCRUMB: Home › Solutions › Findable™
+STAGE NAV: 01 Findable™ · 02 Understandable™ · 03 Verifiable™ · 04 Trustable™ · 05 Recommendable™
+
+── HERO ──
+Stage 01 of 05 · AI Visibility™
+Findable™
+The first stage of AI visibility. Before AI can recommend your business,
+it must be able to locate it. Most B2B businesses fail at this stage —
+not because they are unknown, but because their information is
+machine-invisible.
+
+── DEFINITION ──
+What Findable™ Means
+A business is Findable™ when AI systems can locate it in the knowledge
+graph and retrieve basic identifying information about it.
+
+Findable™ is not about being famous. It is about being machine-readable
+at the entity level. A business that has existed for 30 years can still
+be invisible to AI if it has no structured entity data.
+
+── 6 AI TEST QUESTIONS ──
+Q1 — What is the exact legal name and trading name?
+Q2 — What category or industry does this business operate in?
+Q3 — Where is this business located and what geography does it serve?
+Q4 — When was this business founded and is it currently active?
+Q5 — What is the canonical URL and primary contact?
+Q6 — Is this business the same entity referenced in other sources?
+
+── 8 ACTIONS ──
+1. Deploy ai.json at root → /ai.json
+2. Add Organization schema to homepage → /index.html <head>
+3. Create entities.json → /entities.json
+4. Deploy entity-graph.public.jsonld → /entity-graph.public.jsonld
+5. Update robots.txt with AI crawler permissions → /robots.txt
+6. Create llms.txt → /llms.txt
+7. Add legal identifiers → /ai.json → legalIdentifiers
+8. Submit sitemap.xml and verify canonical URL → /sitemap.xml
+
+── BEFORE / AFTER ──
+Before: AI cannot locate · entity fragmented · category unknown ·
+location missing · AI crawlers blocked · no machine-readable files
+
+After: AI locates entity · names consistent · category mapped ·
+location structured · crawlers permitted · ai.json + entities.json +
+llms.txt deployed
+
+── NEXT STAGE ──
+Understandable™ → Stage 2
+AI LENS™ Free Audit — 100 questions, 24 hours, no website access
