@@ -1,0 +1,309 @@
+TITLE: llms.txt — What It Is and Why Every Business Needs One
+
+BREADCRUMB: Home › Blog › llms.txt Guide
+
+Category: AI-SEO
+
+Post: 14
+
+Reading Time: 7 min
+
+── WHAT IS llms.txt ──
+
+llms.txt is a plain-text file placed at the root of a website.
+
+Example:
+
+https://yourdomain.com/llms.txt
+
+It helps AI systems understand:
+
+Who you are
+
+What you do
+
+What files matter
+
+How AI should interact with your content
+
+Think of it as:
+
+robots.txt = instructions for crawlers
+
+llms.txt = instructions for AI
+
+── WHY IT EXISTS ──
+
+Websites were originally built for humans.
+
+AI systems need structured context.
+
+Without llms.txt AI must guess.
+
+With llms.txt AI receives direct instructions.
+
+This improves:
+
+Understanding
+
+Classification
+
+Retrieval
+
+Citation
+
+Consistency
+
+── CANONICAL STRUCTURE ──
+
+# Company Name
+
+llms.txt v1.1
+
+Website URL
+
+## Entity
+
+Name
+
+Trading Name
+
+Category
+
+Founded
+
+Registration Number
+
+VAT Number
+
+Headquarters
+
+Geography
+
+Languages
+
+## Description
+
+Plain-language explanation of business.
+
+Written for AI.
+
+Not marketing copy.
+
+## Services
+
+Service 1
+
+Service 2
+
+Service 3
+
+## Canonical Files
+
+ai.json
+
+entities.json
+
+intents.json
+
+## Permissions
+
+allow-retrieval
+
+allow-citation
+
+allow-training
+
+allow-summarisation
+
+## Contact
+
+Email
+
+Phone
+
+Website
+
+── REQUIRED FIELDS ──
+
+Company Name
+
+Website URL
+
+Category
+
+Founded
+
+Headquarters
+
+Description
+
+Services
+
+── RECOMMENDED FIELDS ──
+
+Trading Name
+
+Registration Number
+
+Languages
+
+Canonical Files
+
+Permissions
+
+Contact
+
+── OPTIONAL FIELDS ──
+
+Social Profiles
+
+Industry Codes
+
+Operating Hours
+
+Additional Instructions
+
+── DEPLOYMENT ──
+
+Location:
+
+/llms.txt
+
+Example:
+
+https://yourdomain.com/llms.txt
+
+Content-Type:
+
+text/plain
+
+Public
+
+No login required
+
+Accessible by AI systems
+
+── llms.txt vs ai.json ──
+
+llms.txt
+
+Human-readable
+
+Natural language
+
+Context
+
+Instructions
+
+---
+
+ai.json
+
+Machine-readable
+
+Structured JSON
+
+Identity data
+
+Signals
+
+Use both.
+
+Not one or the other.
+
+── COMMON MISTAKES ──
+
+Mistake 1
+
+Marketing language.
+
+Use facts.
+
+---
+
+Mistake 2
+
+Missing services.
+
+---
+
+Mistake 3
+
+No canonical files.
+
+---
+
+Mistake 4
+
+Broken URLs.
+
+---
+
+Mistake 5
+
+Outdated information.
+
+── HOW TO VERIFY ──
+
+Open:
+
+https://yourdomain.com/llms.txt
+
+Check:
+
+Loads publicly
+
+No login
+
+No redirect loops
+
+Correct information
+
+Current information
+
+Valid URLs
+
+── FAQ ──
+
+1. Is llms.txt an official standard?
+
+No.
+
+It is an emerging convention.
+
+2. Is it required?
+
+Not officially.
+
+Strongly recommended.
+
+3. Does it replace robots.txt?
+
+No.
+
+They serve different purposes.
+
+4. Does it replace ai.json?
+
+No.
+
+Use both.
+
+5. Where should it be deployed?
+
+At the root of the domain.
+
+Example:
+
+https://yourdomain.com/llms.txt
+
+── RELATED ──
+
+AI-SEO
+
+ai.json
+
+Schema.org for AI
+
+AI Signals
