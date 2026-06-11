@@ -1,0 +1,312 @@
+TITLE: How to Make Your Business Findable by AI — Stage 1
+
+BREADCRUMB: Home › Blog › Stage 1 — Findable™
+
+Category: AEO
+
+Stage: 1 of 5
+
+── WHAT IS FINDABLE™ ──
+
+Findable™ is Stage 1 of the AI Visibility Ladder.
+
+Before AI can understand your business,
+verify your claims,
+trust your authority,
+or recommend you,
+
+it must first discover that you exist.
+
+Findable™ means:
+
+AI can locate the business.
+
+AI can identify the business.
+
+AI can connect the business to a website.
+
+AI can distinguish the business from other entities.
+
+Being Findable™ does not mean being recommended.
+
+It simply means AI knows you exist.
+
+── WHY BUSINESSES FAIL STAGE 1 ──
+
+Reason 1
+
+No machine-readable files.
+
+Missing:
+
+ai.json
+
+llms.txt
+
+entities.json
+
+Without them AI must guess.
+
+---
+
+Reason 2
+
+AI crawlers blocked.
+
+Old robots.txt rules often block:
+
+GPTBot
+
+anthropic-ai
+
+Google-Extended
+
+PerplexityBot
+
+Bingbot
+
+---
+
+Reason 3
+
+No entity identity.
+
+Missing:
+
+Legal name
+
+Category
+
+Registration number
+
+Canonical URL
+
+sameAs references
+
+---
+
+Reason 4
+
+Inconsistent business information.
+
+Different names.
+
+Different addresses.
+
+Different dates.
+
+Different categories.
+
+AI loses confidence.
+
+── THE 16 FINDABLE™ SIGNALS ──
+
+Required
+
+1. ai.json
+
+2. llms.txt
+
+3. robots.txt
+
+4. Organization JSON-LD
+
+5. sameAs LinkedIn
+
+6. sameAs Company Registry
+
+7. Legal Name
+
+8. Category
+
+9. Canonical URL
+
+10. Founding Date
+
+11. Entity Status
+
+12. Registration Number
+
+13. Headquarters
+
+14. Service Geography
+
+Recommended
+
+15. Language Coverage
+
+16. NACE Code
+
+── SIX STEPS TO FINDABLE™ ──
+
+STEP 1
+
+Create ai.json
+
+Include:
+
+Legal Name
+
+Trading Name
+
+Category
+
+URL
+
+Founding Date
+
+Registration Number
+
+Headquarters
+
+Geography
+
+---
+
+STEP 2
+
+Create llms.txt
+
+Plain-language explanation of the business.
+
+---
+
+STEP 3
+
+Update robots.txt
+
+Allow:
+
+GPTBot
+
+anthropic-ai
+
+Google-Extended
+
+PerplexityBot
+
+Bingbot
+
+---
+
+STEP 4
+
+Add Organization Schema
+
+JSON-LD on homepage.
+
+---
+
+STEP 5
+
+Build sameAs Chain
+
+LinkedIn
+
+Company Registry
+
+Crunchbase
+
+Industry Directories
+
+---
+
+STEP 6
+
+Verify Across AI Systems
+
+Ask:
+
+"Do you know this company?"
+
+ChatGPT
+
+Gemini
+
+Claude
+
+Copilot
+
+Perplexity
+
+── BEFORE ──
+
+AI cannot find business.
+
+No identity.
+
+No entity files.
+
+No crawler access.
+
+No confidence.
+
+── AFTER ──
+
+AI finds business.
+
+Identity confirmed.
+
+Entity recognized.
+
+Files deployed.
+
+Crawler access enabled.
+
+Confidence increased.
+
+── HOW TO VERIFY ──
+
+Ask each AI system:
+
+Who is [Company Name]?
+
+Where is it located?
+
+What does it do?
+
+If answers are accurate,
+
+Stage 1 is working.
+
+── FAQ ──
+
+1. What is Findable™?
+
+The ability for AI systems to discover and identify a business.
+
+2. Is Findable™ the same as SEO?
+
+No.
+
+SEO focuses on rankings.
+
+Findable™ focuses on discovery.
+
+3. How long does it take?
+
+Usually 1–2 weeks.
+
+4. Can I be Findable™ but not Understandable™?
+
+Yes.
+
+AI may know you exist but not understand your services.
+
+5. What is the minimum requirement?
+
+ai.json
+
+llms.txt
+
+robots.txt
+
+Organization schema
+
+sameAs references
+
+── NEXT STAGE ──
+
+Understandable™
+
+Stage 2 of AI Visibility.
