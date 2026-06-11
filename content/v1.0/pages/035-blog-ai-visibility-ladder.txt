@@ -1,0 +1,335 @@
+TITLE: The AI Visibility Ladder — L1 to L6 Explained
+
+BREADCRUMB: Home › Blog › AI Visibility Ladder
+
+Category: AEO / GEO
+
+Post: 18
+
+Reading Time: 10 min
+
+── WHAT IS THE AI VISIBILITY LADDER ──
+
+The AI Visibility Ladder is a maturity model.
+
+It measures how visible a business is to AI systems.
+
+The ladder has six levels.
+
+Each level builds on the previous one.
+
+You cannot skip levels.
+
+A business must first be found.
+
+Then understood.
+
+Then verified.
+
+Then trusted.
+
+Then recommended.
+
+Then selected.
+
+── THE SIX LEVELS ──
+
+L1 — FINDABLE™
+
+AI can find your business.
+
+AI knows you exist.
+
+AI can identify the entity.
+
+Key Question:
+
+Can AI find me?
+
+---
+
+L2 — UNDERSTANDABLE™
+
+AI understands:
+
+What you do.
+
+Who you serve.
+
+What problems you solve.
+
+Key Question:
+
+Can AI understand me?
+
+---
+
+L3 — VERIFIABLE™
+
+AI confirms your claims using external sources.
+
+Key Question:
+
+Can AI verify me?
+
+---
+
+L4 — TRUSTABLE™
+
+AI treats your business as a credible authority.
+
+Key Question:
+
+Can AI trust me?
+
+---
+
+L5 — RECOMMENDABLE™
+
+AI recommends your business when buyers ask.
+
+Key Question:
+
+Will AI recommend me?
+
+---
+
+L6 — SELECTABLE™
+
+AI chooses you over competitors.
+
+Key Question:
+
+Why should AI choose me instead of others?
+
+── THE LADDER VISUAL ──
+
+L6 Selectable™
+
+↑
+
+L5 Recommendable™
+
+↑
+
+L4 Trustable™
+
+↑
+
+L3 Verifiable™
+
+↑
+
+L2 Understandable™
+
+↑
+
+L1 Findable™
+
+── WHAT HAPPENS AT EACH LEVEL ──
+
+L1
+
+Discovery
+
+Identity
+
+Entity Recognition
+
+---
+
+L2
+
+Classification
+
+Intent Matching
+
+Service Understanding
+
+---
+
+L3
+
+Verification
+
+Consistency
+
+Cross-Reference Validation
+
+---
+
+L4
+
+Authority
+
+Trust
+
+Evidence
+
+Governance
+
+---
+
+L5
+
+Recommendations
+
+Visibility
+
+Market Presence
+
+---
+
+L6
+
+Preference
+
+Selection
+
+Competitive Advantage
+
+── COMMON MISTAKE ──
+
+Many businesses focus only on content.
+
+The ladder requires infrastructure.
+
+Content alone is not enough.
+
+AI needs:
+
+Identity
+
+Intent
+
+Trust
+
+Proof
+
+Governance
+
+Signals
+
+── HOW TO MEASURE THE LADDER ──
+
+AI AUDIT™
+
+Measures:
+
+L1 Score
+
+L2 Score
+
+L3 Score
+
+L4 Score
+
+L5 Score
+
+L6 Score
+
+Combined:
+
+AI Readiness Score
+
+0–100
+
+── TYPICAL SCORE RANGES ──
+
+0–39
+
+Invisible
+
+---
+
+40–59
+
+Partially Visible
+
+---
+
+60–79
+
+Visible
+
+---
+
+80–89
+
+Trustable
+
+---
+
+90–100
+
+Recommendable
+
+── HOW TO MOVE UP THE LADDER ──
+
+L1 → L2
+
+AI LENS™
+
+---
+
+L2 → L3
+
+AI READY™
+
+AI SIGNALS™
+
+---
+
+L3 → L4
+
+TRUST LAYER™
+
+PROOF LAYER™
+
+---
+
+L4 → L5
+
+AI SONAR™
+
+Authority Growth
+
+---
+
+L5 → L6
+
+ECONOMIC TWIN™
+
+Competitive Intelligence
+
+── FAQ ──
+
+1. What is the first level?
+
+Findable™.
+
+2. Can I skip levels?
+
+No.
+
+3. What is the most difficult level?
+
+Trustable™ and above.
+
+4. What level should most businesses target first?
+
+L1 and L2.
+
+5. What level means AI recommends me?
+
+L5 Recommendable™.
+
+── RELATED ──
+
+Findable™
+
+Trustable™
+
+Recommendable™
+
+AI Knowledge Graphs
