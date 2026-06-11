@@ -1,0 +1,99 @@
+TITLE: Trustable™ — Stage 4 of AI Visibility
+
+BREADCRUMB: Home › Solutions › Trustable™
+
+STAGE NAV:
+01 Findable™ ·
+02 Understandable™ ·
+03 Verifiable™ ·
+04 Trustable™ ·
+05 Recommendable™
+
+── HERO ──
+
+Stage 04 of 05 · AI Authority™
+
+Trustable™
+
+Stage 4.
+
+AI has found you,
+understood you,
+and verified your claims.
+
+Now it must decide whether to treat your business as a credible,
+authoritative source.
+
+Verification confirms facts.
+
+Trust confirms authority.
+
+── DEFINITION ──
+
+A business is Trustable™ when AI treats it as a credible,
+authoritative source — not just a verified entity.
+
+Verification answers:
+
+"Is this business real and are its claims accurate?"
+
+Trust answers:
+
+"Should this business be weighted as an authority when generating a recommendation?"
+
+── 6 AI TEST QUESTIONS ──
+
+Q1 — Does this business produce knowledge that other sources cite?
+
+Q2 — Is the business consistently present across its sector over time?
+
+Q3 — Do clients and partners publicly reference it with results?
+
+Q4 — Is it referenced by authoritative sources in its sector?
+
+Q5 — Does it have a consistent publishing record in its domain?
+
+Q6 — Is the authority layer cryptographically anchored and verifiable?
+
+── 8 ACTIONS ──
+
+1. Deploy ai-trust.json with authority signal map
+
+2. Publish at least three structured case studies with Case schema
+
+3. Register in sector-specific authoritative directories
+
+4. Add citation layer to entities.json → citations[]
+
+5. Publish methodology document with SHA-256 proof
+
+6. Anchor key authority documents to Bitcoin via OpenTimestamps
+
+7. Create cross-reference layer in ai-signals files
+
+8. Deploy eu-ai-audit.eu verification badge
+
+── BEFORE / AFTER ──
+
+Before:
+
+AI treats business as verified but low-authority ·
+no external citations ·
+case studies absent ·
+not in sector directories ·
+no proof
+
+After:
+
+AI treats business as credible authority ·
+citation network structured ·
+3+ case studies with outcome data ·
+Bitcoin proof layer ·
+third-party verification badge ·
+top recommendations eligible
+
+── NAVIGATION ──
+
+Next → Recommendable™ Stage 5
+
+Previous → Verifiable™ Stage 3
