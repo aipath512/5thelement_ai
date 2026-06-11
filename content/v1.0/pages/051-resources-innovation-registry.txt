@@ -1,0 +1,343 @@
+TITLE: Innovation Registry
+
+BREADCRUMB: Home › Resources › Innovation Registry
+
+9 Verified Innovations
+
+SHA-256 Protected
+
+Bitcoin Anchored
+
+Publicly Verifiable
+
+── PURPOSE ──
+
+The Innovation Registry records important innovations created within the ADI™ ecosystem.
+
+Every innovation is:
+
+Documented
+
+Fingerprint protected
+
+Timestamped
+
+Publicly verifiable
+
+Immutable after anchoring
+
+The goal is proof.
+
+Not marketing.
+
+── WHY IT EXISTS ──
+
+Ideas can be copied.
+
+Claims can be disputed.
+
+Dates can be questioned.
+
+The Innovation Registry provides evidence.
+
+Anyone can independently verify:
+
+What existed
+
+When it existed
+
+Whether it has changed
+
+── VERIFICATION STACK ──
+
+Document
+
+↓
+
+SHA-256 Fingerprint
+
+↓
+
+OpenTimestamps
+
+↓
+
+Bitcoin Blockchain
+
+↓
+
+Public Verification
+
+This creates an independent proof chain.
+
+── REGISTRY STATUS ──
+
+Registry Entries:
+
+9
+
+Verification Status:
+
+Verified
+
+Bitcoin Block Range:
+
+944442 – 952597
+
+OTS Status:
+
+Verified
+
+Verification Method:
+
+OpenTimestamps + Bitcoin
+
+── REGISTRY ENTRY #1 ──
+
+ADI™
+
+AI Delivery Infrastructure™
+
+Category:
+
+Infrastructure
+
+SHA-256:
+
+31aa7a56...
+
+Bitcoin Block:
+
+944442
+
+Date:
+
+March 2025
+
+Status:
+
+Verified
+
+── REGISTRY ENTRY #2 ──
+
+ADI Methodology
+
+Category:
+
+Framework
+
+Status:
+
+Verified
+
+Bitcoin Anchored
+
+── REGISTRY ENTRY #3 ──
+
+ADI Signal Architecture
+
+Category:
+
+Architecture
+
+Status:
+
+Verified
+
+Bitcoin Anchored
+
+── REGISTRY ENTRY #4 ──
+
+ADI Deployment Framework
+
+Category:
+
+Deployment
+
+Status:
+
+Verified
+
+Bitcoin Anchored
+
+── REGISTRY ENTRY #5 ──
+
+ADI Governance Framework
+
+Category:
+
+Governance
+
+Status:
+
+Verified
+
+Bitcoin Anchored
+
+── REGISTRY ENTRY #6 ──
+
+ADI Proof Framework
+
+Category:
+
+Proof
+
+Status:
+
+Verified
+
+Bitcoin Anchored
+
+── REGISTRY ENTRY #7 ──
+
+AI SONAR™
+
+Category:
+
+Monitoring
+
+SHA-256:
+
+c57529c8...
+
+Bitcoin Block:
+
+949375
+
+Status:
+
+Verified
+
+── REGISTRY ENTRY #8 ──
+
+Mockingbird Handshake™
+
+Category:
+
+AI Interaction
+
+SHA-256:
+
+fb388288...
+
+Bitcoin Block:
+
+949346
+
+Status:
+
+Verified
+
+── REGISTRY ENTRY #9 ──
+
+Gemini AI Audit
+
+Category:
+
+External Validation
+
+SHA-256:
+
+dd8896c2...
+
+Bitcoin Block:
+
+952597
+
+Status:
+
+Verified
+
+── REGISTRY RULES ──
+
+Rule 1
+
+Never invent hashes.
+
+---
+
+Rule 2
+
+Never invent Bitcoin blocks.
+
+---
+
+Rule 3
+
+Never claim verification without proof.
+
+---
+
+Rule 4
+
+Use PENDING until verified.
+
+---
+
+Rule 5
+
+Never reference a block without OTS confirmation.
+
+── EPISTEMIC RULE ──
+
+All claims must be classified as:
+
+Self Declared
+
+Publicly Verifiable
+
+Independently Certified
+
+Use:
+
+Supports Readiness
+
+Do Not Use:
+
+Certified
+
+Compliant
+
+Guaranteed
+
+Unless independently verified.
+
+── BENEFITS ──
+
+Proof of existence.
+
+Proof of authorship.
+
+Proof of chronology.
+
+Proof of originality.
+
+Public verification.
+
+Independent validation.
+
+── FAQ ──
+
+1. What is the Innovation Registry?
+
+A public record of verified innovations.
+
+2. Why use SHA-256?
+
+To create immutable fingerprints.
+
+3. Why use Bitcoin?
+
+To obtain independent timestamps.
+
+4. Can anyone verify the registry?
+
+Yes.
+
+5. What comes next?
+
+Technologies.
+
+── NEXT PAGE ──
+
+Technologies
