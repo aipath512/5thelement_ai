@@ -1,0 +1,329 @@
+TITLE: Schema.org for AI — The 25 Most Important Types
+
+BREADCRUMB: Home › Blog › Schema.org for AI
+
+Category: AI-SEO
+
+Post: 16
+
+Reading Time: 10 min
+
+── WHAT IS SCHEMA.ORG ──
+
+Schema.org is the world's most widely used structured data vocabulary.
+
+It helps machines understand information.
+
+Humans read pages.
+
+Machines read schema.
+
+AI systems use Schema.org to understand:
+
+Businesses
+
+People
+
+Services
+
+Products
+
+Articles
+
+Questions
+
+Locations
+
+Relationships
+
+Schema is normally written as JSON-LD.
+
+── WHY IT MATTERS FOR AI ──
+
+Without Schema.org:
+
+AI guesses.
+
+With Schema.org:
+
+AI receives explicit facts.
+
+Benefits:
+
+Better understanding
+
+Better classification
+
+Better verification
+
+Better entity matching
+
+Higher confidence
+
+Improved recommendation potential
+
+── THE 25 MOST IMPORTANT TYPES ──
+
+GROUP 1 — BUSINESS
+
+1. Organization
+
+2. LocalBusiness
+
+3. Corporation
+
+4. ProfessionalService
+
+5. ContactPoint
+
+---
+
+GROUP 2 — WEBSITE
+
+6. WebSite
+
+7. WebPage
+
+8. BreadcrumbList
+
+9. SearchAction
+
+---
+
+GROUP 3 — SERVICES
+
+10. Service
+
+11. Offer
+
+12. PriceSpecification
+
+---
+
+GROUP 4 — CONTENT
+
+13. Article
+
+14. TechArticle
+
+15. BlogPosting
+
+16. NewsArticle
+
+---
+
+GROUP 5 — PEOPLE
+
+17. Person
+
+18. Author
+
+19. Employee
+
+---
+
+GROUP 6 — QUESTIONS
+
+20. FAQPage
+
+21. Question
+
+22. Answer
+
+---
+
+GROUP 7 — KNOWLEDGE
+
+23. DefinedTerm
+
+24. DefinedTermSet
+
+25. Thing
+
+── MOST IMPORTANT FOR B2B ──
+
+Organization
+
+Service
+
+FAQPage
+
+BreadcrumbList
+
+Person
+
+Article
+
+DefinedTerm
+
+These provide the majority of AI understanding value.
+
+── WHERE THEY SHOULD BE USED ──
+
+Homepage
+
+Organization
+
+WebSite
+
+BreadcrumbList
+
+---
+
+Service Pages
+
+Service
+
+Offer
+
+BreadcrumbList
+
+FAQPage
+
+---
+
+Blog Articles
+
+Article
+
+TechArticle
+
+Person
+
+BreadcrumbList
+
+---
+
+Glossary
+
+DefinedTerm
+
+DefinedTermSet
+
+BreadcrumbList
+
+── COMMON MISTAKES ──
+
+Missing required properties.
+
+---
+
+Invalid JSON.
+
+---
+
+Schema not matching visible content.
+
+---
+
+Broken URLs.
+
+---
+
+Duplicate entities.
+
+---
+
+Conflicting information.
+
+── HOW TO VERIFY ──
+
+Check:
+
+Valid JSON-LD
+
+Correct URLs
+
+Correct entity IDs
+
+Correct relationships
+
+Matching page content
+
+No validation errors
+
+── IMPLEMENTATION PATH ──
+
+Step 1
+
+AI AUDIT™
+
+Identify gaps.
+
+---
+
+Step 2
+
+AI LENS™
+
+Collect information.
+
+---
+
+Step 3
+
+AI READY™
+
+Generate Schema.org markup.
+
+---
+
+Step 4
+
+EDGE INJECTOR™
+
+Deploy globally.
+
+---
+
+Step 5
+
+AI SONAR™
+
+Monitor and validate.
+
+── BENEFITS ──
+
+Better AI understanding.
+
+Better entity recognition.
+
+Better knowledge graph inclusion.
+
+Better answer quality.
+
+Better recommendation readiness.
+
+── FAQ ──
+
+1. What is Schema.org?
+
+A structured vocabulary for machines.
+
+2. Does Google use it?
+
+Yes.
+
+3. Do AI systems use it?
+
+Yes.
+
+4. Is Schema.org enough by itself?
+
+No.
+
+It works with ai.json, llms.txt and AI Signals.
+
+5. Which schema type is most important?
+
+Organization.
+
+── RELATED ──
+
+AI-SEO
+
+ai.json
+
+llms.txt
+
+The 167 AI Signals
