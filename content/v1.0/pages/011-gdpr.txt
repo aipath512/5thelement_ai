@@ -1,0 +1,108 @@
+TITLE: GDPR Compliance — 5thelement.ai
+
+BREADCRUMB: Home › GDPR Compliance
+
+Regulation (EU) 2016/679
+
+Last updated: June 2026
+
+── COMMITMENT ──
+
+GDPR compliance is structural.
+
+We process personal data only when necessary,
+with a clear legal basis,
+for defined purposes.
+
+── LEGAL BASES ──
+
+Article 6(1)(b) — Contract
+
+Used for:
+Service delivery data
+
+---
+
+Article 6(1)(c) — Legal Obligation
+
+Used for:
+Financial records
+Regulatory obligations
+
+---
+
+Article 6(1)(f) — Legitimate Interest
+
+Used for:
+Anonymised analytics
+Service improvement
+
+── YOUR RIGHTS ──
+
+Article 15
+Right of Access
+
+Article 16
+Right of Rectification
+
+Article 17
+Right of Erasure
+
+Article 18
+Right of Restriction
+
+Article 20
+Right of Portability
+
+Article 21
+Right to Object
+
+Right to lodge a complaint
+with a supervisory authority
+
+── HOW TO EXERCISE YOUR RIGHTS ──
+
+Contact:
+
+aipath512@gmail.com
+
+Response time:
+
+Within 30 days
+
+Fee:
+
+No fee in normal circumstances
+
+── DATA TRANSFERS ──
+
+Primary processing takes place in the European Union.
+
+Cloudflare:
+EU Standard Contractual Clauses (SCCs)
+
+GitHub:
+EU-US Data Privacy Framework (DPF)
+
+── SUPERVISORY AUTHORITY ──
+
+Romania:
+
+ANSPDCP
+
+Website:
+
+www.dataprotection.ro
+
+You may also contact the supervisory authority
+of your own EU member state.
+
+── CONTACT ──
+
+AiVenture S.R.L.
+
+Email:
+aipath512@gmail.com
+
+Website:
+https://5thelement.ai
