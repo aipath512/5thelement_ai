@@ -1,0 +1,75 @@
+TITLE: Cookie Policy — 5thelement.ai
+
+BREADCRUMB: Home › Cookie Policy
+
+AiVenture S.R.L.
+
+Last updated: June 2026
+
+── APPROACH ──
+
+Minimal cookies.
+
+No advertising.
+
+No tracking.
+
+No third-party analytics.
+
+── COOKIES USED ──
+
+__cf_bm
+
+Purpose:
+Bot management
+
+Retention:
+30 minutes
+
+---
+
+cf_clearance
+
+Purpose:
+Security challenge
+
+Retention:
+30 minutes–24 hours
+
+---
+
+_cfuvid
+
+Purpose:
+Rate limiting
+
+Retention:
+Session
+
+── COOKIES WE DO NOT USE ──
+
+No Google Analytics
+
+No advertising cookies
+
+No social media pixels
+
+No third-party marketing
+
+No persistent user tracking
+
+── MANAGING COOKIES ──
+
+Blocking Cloudflare security cookies
+may affect website access and functionality.
+
+These cookies are strictly necessary
+for security and service delivery.
+
+── CONTACT ──
+
+Email:
+aipath512@gmail.com
+
+Company:
+AiVenture S.R.L.
