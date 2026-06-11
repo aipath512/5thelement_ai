@@ -1,0 +1,274 @@
+TITLE: Identity and Entity Signals — The 48 Signals Explained
+
+BREADCRUMB: Home › Blog › The 167 AI Signals › Identity and Entity
+
+Category: AI Signals
+
+Date: June 10, 2026
+
+Reading Time: 12 min
+
+── WHAT THEY ARE ──
+
+Identity and Entity Signals are the 48 atomic data points that establish
+who a business is inside AI knowledge graphs.
+
+This is the prerequisite category.
+
+AI cannot trust,
+verify,
+or recommend
+an entity it cannot identify.
+
+All other signal categories depend on these first.
+
+── SIX GROUPS ──
+
+GROUP 1 — NAME AND DESIGNATION
+
+8 Signals
+
+entity.legal-name
+
+entity.trading-name
+
+entity.name-variants
+
+entity.previous-names
+
+entity.name-language-variants
+
+entity.tagline
+
+entity.acronym
+
+entity.brand-name
+
+---
+
+GROUP 2 — CLASSIFICATION
+
+7 Signals
+
+entity.category
+
+entity.subcategory
+
+entity.nace-code
+
+entity.sic-code
+
+entity.type
+
+entity.status
+
+entity.sector
+
+---
+
+GROUP 3 — LEGAL IDENTITY
+
+6 Signals
+
+entity.registration-number
+
+entity.vat-number
+
+entity.lei-code
+
+entity.duns-number
+
+entity.founding-date
+
+entity.jurisdiction
+
+---
+
+GROUP 4 — LOCATION AND GEOGRAPHY
+
+9 Signals
+
+entity.headquarters
+
+entity.registered-address
+
+entity.operating-locations
+
+entity.service-geography
+
+entity.country-coverage
+
+entity.language-coverage
+
+entity.timezone
+
+entity.currency
+
+entity.market-segment
+
+---
+
+GROUP 5 — DIGITAL PRESENCE
+
+10 Signals
+
+entity.canonical-url
+
+entity.linkedin-url
+
+entity.crunchbase-url
+
+entity.x-url
+
+entity.github-url
+
+entity.youtube-url
+
+entity.primary-contact
+
+entity.whatsapp
+
+entity.logo-url
+
+entity.primary-color
+
+---
+
+GROUP 6 — ENTITY RELATIONSHIPS
+
+8 Signals
+
+entity.same-as
+
+entity.parent-entity
+
+entity.subsidiaries
+
+entity.founder
+
+entity.key-persons
+
+entity.registry-url
+
+entity.wikidata-id
+
+entity.industry-body-id
+
+── THE 8 MOST CRITICAL SIGNALS ──
+
+entity.legal-name
+
+entity.category
+
+entity.nace-code
+
+entity.canonical-url
+
+entity.founding-date
+
+entity.same-as
+
+entity.registration-number
+
+entity.status
+
+── THE sameAs CHAIN ──
+
+The sameAs chain is how AI verifies
+that multiple sources describe the same entity.
+
+Examples:
+
+LinkedIn
+
+Company Registry
+
+Crunchbase
+
+Wikipedia
+
+Industry Directories
+
+Every sameAs URL should:
+
+Be active
+
+Be accurate
+
+Contain consistent information
+
+── DEPLOYMENT LOCATIONS ──
+
+Identity signals are deployed in four locations:
+
+1. ai.json
+
+Domain root
+
+---
+
+2. entities.json
+
+Domain root
+
+---
+
+3. Organization JSON-LD
+
+Homepage <head>
+
+---
+
+4. entity-graph.public.jsonld
+
+Domain root
+
+All served through EDGE INJECTOR™.
+
+── TYPICAL B2B WEBSITE ──
+
+Average deployment:
+
+8–16 signals correctly implemented
+
+Out of:
+
+48 total signals
+
+This creates incomplete AI understanding.
+
+── FAQ ──
+
+1. What are Identity Signals?
+
+Signals that define who the business is.
+
+2. Why are they important?
+
+Everything else depends on them.
+
+3. What is sameAs?
+
+A verification chain connecting external profiles.
+
+4. Where are they stored?
+
+ai.json, entities.json and JSON-LD.
+
+5. How many businesses implement all 48?
+
+Very few.
+
+Most only implement a small fraction.
+
+── RELATED ──
+
+The 167 AI Signals
+
+Trust and Proof Signals
+
+Intent and Governance Signals
+
+Knowledge Graph™
+
+AI Lens™
