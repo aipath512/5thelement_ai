@@ -1,0 +1,146 @@
+TITLE: Privacy Policy — 5thelement.ai
+
+BREADCRUMB: Home › Privacy Policy
+
+AiVenture S.R.L.
+
+Last updated: June 2026
+
+Effective: March 2025
+
+── 1. DATA CONTROLLER ──
+
+AiVenture S.R.L.
+
+CUI 51415878
+
+J40/2501/2025
+
+București, Romania
+
+Email: aipath512@gmail.com
+
+Phone: +40 737 123 540
+
+── 2. DATA WE COLLECT ──
+
+Contact Form:
+
+- First Name
+- Last Name
+- Email
+- Company
+- Website
+- Service Tier
+- Message
+
+Usage Data:
+
+- Anonymised Cloudflare Analytics
+- Pages Viewed
+- Time on Site
+- Referrer
+- Browser Type
+
+No personally identifiable analytics data collected.
+
+Communication Data:
+
+- Email communications
+- WhatsApp communications
+
+Retained only for service delivery and support.
+
+── 3. PURPOSE AND LEGAL BASIS ──
+
+Service Delivery
+
+Legal Basis:
+Article 6(1)(b) GDPR — Contract
+
+Service Improvement
+
+Legal Basis:
+Article 6(1)(f) GDPR — Legitimate Interest
+
+Legal Compliance
+
+Legal Basis:
+Article 6(1)(c) GDPR — Legal Obligation
+
+── 4. RETENTION ──
+
+Contact Form Data:
+Service relationship duration + 3 years
+
+Communication Data:
+2 years from last contact
+
+Usage Data:
+12 months (anonymised)
+
+Financial Records:
+10 years (Romanian legal requirement)
+
+── 5. DATA SHARING ──
+
+Data is never sold.
+
+Data is never shared for marketing purposes.
+
+Service Providers:
+
+- Cloudflare (EU DPA)
+- GitHub (content hosting)
+
+Legal Authorities:
+
+Only when required by law.
+
+── 6. YOUR GDPR RIGHTS ──
+
+Right of Access
+
+Right of Rectification
+
+Right of Erasure
+
+Right of Restriction
+
+Right of Portability
+
+Right to Object
+
+Right to Lodge Complaint
+
+Contact:
+
+aipath512@gmail.com
+
+── 7. SECURITY ──
+
+HTTPS
+
+Restricted Access
+
+Regular Security Reviews
+
+── 8. COOKIES ──
+
+Minimal cookies only.
+
+Cloudflare technical cookies.
+
+No advertising cookies.
+
+No tracking cookies.
+
+See Cookie Policy.
+
+── 9. CONTACT ──
+
+Email:
+aipath512@gmail.com
+
+Authority:
+www.dataprotection.ro
