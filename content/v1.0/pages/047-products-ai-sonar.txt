@@ -1,0 +1,285 @@
+TITLE: AI SONAR™ — Continuous AI Visibility Monitoring
+
+BREADCRUMB: Home › Products › AI SONAR™
+
+Product 09
+
+Monitoring Engine
+
+5 AI Systems
+
+Weekly Reports
+
+6 Alert Types
+
+Bitcoin Anchored
+
+── WHAT IT DOES ──
+
+AI SONAR™ continuously monitors how AI systems see your business.
+
+It tracks:
+
+Visibility
+
+Recommendations
+
+Descriptions
+
+Competitors
+
+Signal Health
+
+Authority Changes
+
+AI Visibility is not permanent.
+
+It changes.
+
+AI SONAR™ watches continuously.
+
+── THE PROBLEM ──
+
+A business can become Recommendable™ today.
+
+And lose visibility tomorrow.
+
+Reasons include:
+
+Competitor improvements
+
+Signal decay
+
+AI model updates
+
+Missing files
+
+Broken references
+
+Incorrect descriptions
+
+AI SONAR™ detects changes early.
+
+── FIVE AI SYSTEMS MONITORED ──
+
+ChatGPT
+
+Gemini
+
+Claude
+
+Copilot
+
+Perplexity
+
+Monitoring is performed across all systems.
+
+Not just one.
+
+── WHAT AI SONAR™ TRACKS ──
+
+1. Recommendation Frequency
+
+How often AI recommends the business.
+
+---
+
+2. Description Accuracy
+
+Does AI describe the business correctly?
+
+---
+
+3. Cross-System Consistency
+
+Are all AI systems saying the same thing?
+
+---
+
+4. Competitor Movement
+
+Who gained?
+
+Who lost?
+
+Who overtook you?
+
+---
+
+5. Signal Health
+
+Are all AI signals accessible?
+
+Valid?
+
+Current?
+
+---
+
+6. GEO Inclusion
+
+Does the company appear inside:
+
+Reports
+
+Comparisons
+
+Market summaries
+
+AI-generated content
+
+── SIX ALERT TYPES ──
+
+ALERT 1
+
+Recommendation Drop
+
+Business disappears from recommendations.
+
+---
+
+ALERT 2
+
+Description Error
+
+AI describes the business incorrectly.
+
+---
+
+ALERT 3
+
+Signal Decay
+
+Signal files become outdated or unavailable.
+
+---
+
+ALERT 4
+
+Competitor Gain
+
+Competitor becomes more visible.
+
+---
+
+ALERT 5
+
+New AI System
+
+Monitoring scope changes.
+
+---
+
+ALERT 6
+
+Governance Flag
+
+Governance documents require updates.
+
+── WEEKLY REPORT ──
+
+AI Readiness Score
+
+Recommendation Trend
+
+Visibility Trend
+
+Description Accuracy
+
+Competitor Benchmark
+
+Signal Health Status
+
+Alert Summary
+
+Recommended Actions
+
+── INNOVATION REGISTRY ──
+
+AI SONAR™
+
+SHA-256:
+
+c57529c8...
+
+Bitcoin Block:
+
+949375
+
+Status:
+
+Verified
+
+── BENEFITS ──
+
+Early warning system.
+
+Continuous monitoring.
+
+Competitor intelligence.
+
+Recommendation tracking.
+
+Signal health visibility.
+
+Long-term authority protection.
+
+── BEFORE ──
+
+No monitoring.
+
+No visibility tracking.
+
+No recommendation metrics.
+
+No competitor awareness.
+
+No alerts.
+
+---
+
+AFTER
+
+Continuous monitoring.
+
+Weekly reports.
+
+Visibility insights.
+
+Competitor intelligence.
+
+Recommendation tracking.
+
+Early alerts.
+
+── FAQ ──
+
+1. What is AI SONAR™?
+
+An AI visibility monitoring engine.
+
+2. How many AI systems are monitored?
+
+Five.
+
+3. How often are reports generated?
+
+Weekly.
+
+4. Does it monitor competitors?
+
+Yes.
+
+5. What comes after AI SONAR™?
+
+Strategic simulation.
+
+── PREVIOUS PRODUCT ──
+
+PROOF LAYER™
+
+── NEXT PRODUCT ──
+
+ECONOMIC TWIN™
+
+Business, Market and Competitor Intelligence.
