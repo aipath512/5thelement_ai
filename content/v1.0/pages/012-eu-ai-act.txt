@@ -1,0 +1,178 @@
+TITLE: EU AI Act — 5thelement.ai
+
+BREADCRUMB: Home › EU AI Act
+
+Regulation (EU) 2024/1689
+
+Last updated: June 2026
+
+── EPISTEMIC RULE ──
+
+Read this first.
+
+5thelement.ai supports EU AI Act readiness.
+
+We NEVER claim:
+
+- Certification
+- Compliance certification
+- Conformity assessment
+
+All statements describe readiness support.
+
+Nothing on this website should be interpreted as legal certification.
+
+── WHAT IS THE EU AI ACT? ──
+
+The EU AI Act is the world's first comprehensive legal framework
+governing artificial intelligence systems.
+
+Entry into force:
+
+1 August 2024
+
+Objective:
+
+Create a common framework for safe,
+transparent,
+and accountable AI systems across the European Union.
+
+── KEY DATES ──
+
+2 February 2025
+
+Prohibited AI practices become applicable.
+
+---
+
+2 August 2025
+
+General Purpose AI (GPAI) obligations become applicable.
+
+---
+
+2 August 2026
+
+High-risk AI system obligations become applicable.
+
+---
+
+2 August 2027
+
+Full application including Annex I systems.
+
+── OUR POSITION ──
+
+AiVenture S.R.L. provides:
+
+AI visibility infrastructure services
+
+Structured data services
+
+Signal deployment services
+
+Knowledge graph services
+
+Proof layer services
+
+We are NOT:
+
+An AI model provider
+
+A foundation model provider
+
+A conformity assessment body
+
+A legal authority
+
+A certification authority
+
+── HOW OUR SERVICES SUPPORT READINESS ──
+
+Transparency
+
+All deployed signals are machine-readable
+and auditable.
+
+---
+
+Documentation
+
+Every file is versioned,
+dated,
+and logged.
+
+---
+
+Human Oversight
+
+Human-In-The-Loop (HITL)
+is mandatory at every deployment stage.
+
+---
+
+Data Governance
+
+No personal data enters the signal layer
+without lawful basis and consent.
+
+---
+
+Traceability
+
+Claims can be traced through:
+
+SHA-256 fingerprints
+
+OpenTimestamps anchors
+
+Bitcoin blockchain proofs
+
+── EU AUTHORIZED REPRESENTATIVE SERVICE ──
+
+Available through:
+
+eu-ai-act-ready.eu
+
+Intended for non-EU AI providers
+requiring an EU Authorized Representative
+under Article 22.
+
+Important deadline:
+
+2 August 2026
+
+Article 50 transparency obligations.
+
+── INDEPENDENT VERIFICATION ──
+
+eu-ai-audit.eu
+
+Provides:
+
+Scoring
+
+Assessment
+
+Verification
+
+Readiness measurement
+
+It does NOT provide certification.
+
+── CONTACT ──
+
+AiVenture S.R.L.
+
+Email:
+aipath512@gmail.com
+
+Related Properties:
+
+5thelement.ai
+
+eu-ai-audit.eu
+
+eu-ai-act-ready.eu
+
+aiventure.ro
