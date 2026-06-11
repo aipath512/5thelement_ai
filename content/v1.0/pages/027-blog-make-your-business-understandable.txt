@@ -1,0 +1,271 @@
+TITLE: How to Make Your Business Understandable by AI — Stage 2
+
+BREADCRUMB: Home › Blog › Stage 2 — Understandable™
+
+Category: AEO
+
+Stage: 2 of 5
+
+── WHAT IS UNDERSTANDABLE™ ──
+
+Understandable™ is Stage 2 of the AI Visibility Ladder.
+
+AI has found your business.
+
+Now AI must understand:
+
+What you sell.
+
+Who you serve.
+
+What problems you solve.
+
+Why customers buy from you.
+
+Findable™ means AI knows you exist.
+
+Understandable™ means AI knows what you actually do.
+
+── WHY BUSINESSES FAIL STAGE 2 ──
+
+Reason 1
+
+Services are described vaguely.
+
+Examples:
+
+Consulting
+
+Solutions
+
+Digital Transformation
+
+Innovation
+
+These words are too broad.
+
+---
+
+Reason 2
+
+No target client definitions.
+
+AI cannot determine:
+
+Who should buy.
+
+Who should not buy.
+
+---
+
+Reason 3
+
+No problem-solution mapping.
+
+AI sees services.
+
+AI does not understand outcomes.
+
+---
+
+Reason 4
+
+No buyer intent mapping.
+
+Questions buyers ask are not connected to services.
+
+---
+
+Reason 5
+
+FAQ content missing or unstructured.
+
+AI loses context.
+
+── THE CORE UNDERSTANDABLE™ SIGNALS ──
+
+Service Definitions
+
+Service Categories
+
+Buyer Personas
+
+Problem Statements
+
+Outcome Statements
+
+Industry Focus
+
+Company Size Focus
+
+Geography Focus
+
+Languages
+
+Delivery Methods
+
+FAQPage Schema
+
+Intent Registry
+
+── SIX STEPS TO UNDERSTANDABLE™ ──
+
+STEP 1
+
+Define Every Service
+
+For each service:
+
+Name
+
+Description
+
+Problem Solved
+
+Outcome Delivered
+
+---
+
+STEP 2
+
+Define Target Buyers
+
+Role
+
+Industry
+
+Company Size
+
+Geography
+
+Language
+
+---
+
+STEP 3
+
+Create Problem → Solution Mapping
+
+Example:
+
+Problem:
+AI cannot find my company.
+
+Solution:
+AI Visibility™
+
+---
+
+STEP 4
+
+Create Buyer Intent Registry
+
+Questions buyers ask.
+
+Map them to services.
+
+---
+
+STEP 5
+
+Deploy FAQPage Schema
+
+Questions.
+
+Answers.
+
+Structured format.
+
+---
+
+STEP 6
+
+Create intents.json
+
+Contains:
+
+Services
+
+Buyer personas
+
+Triggers
+
+Negative intents
+
+Geographies
+
+Languages
+
+── BEFORE ──
+
+AI knows company exists.
+
+Services unclear.
+
+Target audience unclear.
+
+Problems unclear.
+
+Recommendations inaccurate.
+
+── AFTER ──
+
+AI understands:
+
+Services.
+
+Buyers.
+
+Problems.
+
+Outcomes.
+
+Recommendations become more accurate.
+
+── HOW TO VERIFY ──
+
+Ask AI:
+
+What services does this company provide?
+
+Who are its ideal clients?
+
+What problems does it solve?
+
+If answers are accurate,
+
+Stage 2 is working.
+
+── FAQ ──
+
+1. What is Understandable™?
+
+The ability for AI to correctly interpret a business.
+
+2. Can a company be Findable™ but not Understandable™?
+
+Yes.
+
+Very common.
+
+3. What is the most important file?
+
+intents.json
+
+4. Why are FAQs important?
+
+They provide explicit context for AI.
+
+5. How long does this stage take?
+
+Usually 1–2 weeks after Findable™.
+
+── PREVIOUS STAGE ──
+
+Findable™
+
+── NEXT STAGE ──
+
+Verifiable™
+
+Stage 3 of AI Visibility.
