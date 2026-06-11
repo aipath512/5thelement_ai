@@ -1,0 +1,323 @@
+TITLE: AI SIGNALS™ — Machine-Readable Visibility Layer
+
+BREADCRUMB: Home › Products › AI SIGNALS™
+
+Product 04
+
+Signal Layer
+
+167 Atomic Signals
+
+3 Categories
+
+4 Validation Stages
+
+Live Monitoring
+
+── THE PROBLEM ──
+
+AI systems read signals.
+
+Not websites.
+
+A business without structured signals is difficult for AI to:
+
+Find
+
+Understand
+
+Verify
+
+Trust
+
+Recommend
+
+AI SIGNALS™ creates a machine-readable visibility layer.
+
+── WHAT IS A SIGNAL? ──
+
+A signal is a structured data point.
+
+Examples:
+
+Legal Name
+
+Business Category
+
+NACE Code
+
+Service Category
+
+Buyer Persona
+
+Citation
+
+Review
+
+Certification
+
+sameAs Reference
+
+SHA-256 Proof
+
+Each signal contributes to AI confidence.
+
+── THE 167 SIGNALS ──
+
+CATEGORY 1
+
+Identity & Entity
+
+48 Signals
+
+Examples:
+
+Legal Name
+
+Trading Name
+
+Category
+
+NACE
+
+Founding Date
+
+Headquarters
+
+Registration Number
+
+VAT Number
+
+Canonical URL
+
+sameAs References
+
+---
+
+CATEGORY 2
+
+Trust & Proof
+
+61 Signals
+
+Examples:
+
+Certifications
+
+Awards
+
+Professional Memberships
+
+Reviews
+
+Case Studies
+
+Citations
+
+SHA-256 Anchors
+
+OTS Files
+
+Verification Status
+
+Governance Signals
+
+---
+
+CATEGORY 3
+
+Intent & Governance
+
+58 Signals
+
+Examples:
+
+Service Categories
+
+Buyer Personas
+
+Intent Mapping
+
+Negative Intents
+
+Geographies
+
+Languages
+
+Pricing Signals
+
+GDPR Signals
+
+EU AI Act Signals
+
+HITL Signals
+
+── CANONICAL RULE ──
+
+Signals → Files
+
+Never:
+
+Files → Signals
+
+Pipeline:
+
+RAW
+
+↓
+
+FACT
+
+↓
+
+ENTITY
+
+↓
+
+RELATIONSHIP
+
+↓
+
+SIGNAL
+
+↓
+
+FILE
+
+── FOUR VALIDATION STAGES ──
+
+STAGE 1
+
+Completeness
+
+Are all required fields present?
+
+---
+
+STAGE 2
+
+Consistency
+
+Do signals conflict?
+
+---
+
+STAGE 3
+
+Verifiability
+
+Can external sources confirm them?
+
+---
+
+STAGE 4
+
+Accessibility
+
+Can AI systems access them?
+
+── OUTPUTS ──
+
+AI Signals Registry
+
+Signal Files
+
+Validation Report
+
+Monitoring Feed
+
+Deployment Package
+
+── SIGNAL FILES ──
+
+ai.json
+
+entities.json
+
+intents.json
+
+ai-actions.json
+
+ai-routes.json
+
+ai-validation.json
+
+allow-lane-matrix.json
+
+adn.json
+
+── BEFORE ──
+
+Partial information
+
+Missing signals
+
+Conflicting data
+
+No validation
+
+No monitoring
+
+AI confusion
+
+── AFTER ──
+
+167 signals generated
+
+Validated
+
+Structured
+
+Accessible
+
+Machine-readable
+
+Continuously monitored
+
+AI confidence increased
+
+── BENEFITS ──
+
+Better AI understanding
+
+Better AI verification
+
+Better AI trust
+
+Better recommendation probability
+
+Stronger authority foundation
+
+── FAQ ──
+
+1. What is AI SIGNALS™?
+
+The machine-readable signal layer.
+
+2. How many signals?
+
+167 atomic signals.
+
+3. Why are signals important?
+
+AI uses signals to make decisions.
+
+4. Are signals validated?
+
+Yes.
+
+Through four validation stages.
+
+5. What happens after AI SIGNALS™?
+
+The Knowledge Graph™ stage.
+
+── PREVIOUS PRODUCT ──
+
+AI READY™
+
+── NEXT PRODUCT ──
+
+KNOWLEDGE GRAPH™
+
+Business Entity Relationship Engine.
