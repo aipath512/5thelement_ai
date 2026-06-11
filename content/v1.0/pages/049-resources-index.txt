@@ -1,0 +1,213 @@
+TITLE: Resources — 5thelement.ai
+
+BREADCRUMB: Home › Resources
+
+Resources for the AI Era.
+
+Guides.
+
+Frameworks.
+
+Registries.
+
+Technical Documentation.
+
+Everything required to understand AI Visibility™, AI Authority™, and ADI™.
+
+── PURPOSE ──
+
+This section is the knowledge center of 5thelement.ai.
+
+It contains:
+
+Explanations
+
+Research
+
+Definitions
+
+Frameworks
+
+Technical Guides
+
+Innovation Records
+
+Implementation References
+
+Proof References
+
+── RESOURCE SECTIONS ──
+
+SECTION 1
+
+The AI Era Website
+
+Learn:
+
+What makes a website AI-ready.
+
+How AI systems read websites.
+
+How AI signals work.
+
+How AI proof works.
+
+How AI infrastructure works.
+
+Link:
+
+ai-era-website.html
+
+---
+
+SECTION 2
+
+Innovation Registry
+
+Public registry of innovations.
+
+SHA-256 fingerprints.
+
+Bitcoin anchoring.
+
+OpenTimestamps verification.
+
+Innovation history.
+
+Link:
+
+innovation-registry.html
+
+---
+
+SECTION 3
+
+Technologies
+
+Technical architecture.
+
+Cloudflare.
+
+Workers.
+
+KV.
+
+Pages.
+
+GitHub.
+
+Signal delivery.
+
+Knowledge graphs.
+
+Proof systems.
+
+Link:
+
+technologies.html
+
+---
+
+SECTION 4
+
+Blog
+
+AEO
+
+GEO
+
+AIO
+
+AI-SEO
+
+AI Signals
+
+Knowledge Graphs
+
+EU AI Act
+
+Implementation Guides
+
+Link:
+
+/blog/
+
+── WHY THIS EXISTS ──
+
+Most businesses have never been taught:
+
+How AI discovers companies.
+
+How AI understands companies.
+
+How AI verifies companies.
+
+How AI trusts companies.
+
+How AI recommends companies.
+
+The Resources section explains these topics.
+
+Step by step.
+
+── WHO THIS IS FOR ──
+
+Business Owners
+
+Marketing Teams
+
+Sales Teams
+
+Consultants
+
+Agencies
+
+Architects
+
+Developers
+
+Researchers
+
+Anyone preparing for the AI era.
+
+── RELATED SECTIONS ──
+
+Solutions
+
+Services
+
+Products
+
+Blog
+
+About
+
+Contact
+
+── FAQ ──
+
+1. What is the Resources section?
+
+The knowledge center of 5thelement.ai.
+
+2. Is it free?
+
+Yes.
+
+3. Who should read it?
+
+Anyone wanting to understand AI visibility.
+
+4. Does it contain technical information?
+
+Yes.
+
+Both business and technical information.
+
+5. Where should I start?
+
+The AI Era Website guide.
+
+── NEXT PAGE ──
+
+AI Era Website
