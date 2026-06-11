@@ -1,0 +1,257 @@
+TITLE: PROOF LAYER™ — SHA-256 Fingerprinting + Bitcoin Anchoring
+
+BREADCRUMB: Home › Products › PROOF LAYER™
+
+Product 08
+
+Cryptographic Proof
+
+SHA-256
+
+OpenTimestamps
+
+Bitcoin Anchoring
+
+Public Verification
+
+── THE PROBLEM ──
+
+Claims can be changed.
+
+Documents can be modified.
+
+Dates can be disputed.
+
+Authority can be questioned.
+
+PROOF LAYER™ creates independent proof.
+
+Anyone can verify it.
+
+Nobody needs to trust us.
+
+They can verify it themselves.
+
+── HOW IT WORKS ──
+
+STEP 1
+
+Create Document
+
+---
+
+STEP 2
+
+Generate SHA-256 Hash
+
+A unique fingerprint.
+
+Even one character changed creates a new hash.
+
+---
+
+STEP 3
+
+Submit Hash to OpenTimestamps
+
+---
+
+STEP 4
+
+Anchor into Bitcoin Blockchain
+
+---
+
+STEP 5
+
+Receive OTS Proof
+
+---
+
+STEP 6
+
+Publish Verification Files
+
+Publicly accessible.
+
+Publicly verifiable.
+
+── WHAT IS SHA-256 ──
+
+A cryptographic fingerprint.
+
+Example:
+
+Document A
+
+↓
+
+SHA-256
+
+↓
+
+64 Character Hash
+
+If Document A changes:
+
+Hash changes.
+
+Immediately.
+
+── WHAT IS OPENTIMESTAMPS ──
+
+Open proof protocol.
+
+Proves:
+
+A document existed
+
+Before a specific Bitcoin block
+
+Without revealing document contents.
+
+── WHAT IS BITCOIN ANCHORING ──
+
+The hash becomes linked to Bitcoin.
+
+Bitcoin timestamp becomes proof.
+
+Nobody can alter it afterwards.
+
+No central authority required.
+
+── AI PROOF FILE ──
+
+Published as:
+
+ai-proof.json
+
+Contains:
+
+SHA-256 Hashes
+
+OTS Status
+
+Bitcoin Block Numbers
+
+Verification URLs
+
+Proof References
+
+Manifest Hash
+
+Verification Metadata
+
+── INNOVATION REGISTRY ──
+
+Examples:
+
+#1 ADI™
+
+Block 944442
+
+---
+
+#7 AI SONAR™
+
+Block 949375
+
+---
+
+#8 Mockingbird Handshake™
+
+Block 949346
+
+---
+
+#9 Gemini AI Audit
+
+Block 952597
+
+All verified.
+
+OTS status verified.
+
+── PROOF RULES ──
+
+Never invent hashes.
+
+Never invent block numbers.
+
+Never claim verification without proof.
+
+Mark Pending until verified.
+
+Always provide OTS confirmation.
+
+── BENEFITS ──
+
+Immutable evidence.
+
+Independent verification.
+
+Stronger trust.
+
+Stronger authority.
+
+Higher confidence.
+
+Long-term proof preservation.
+
+── BEFORE ──
+
+Claims only.
+
+No proof.
+
+No timestamps.
+
+No verification.
+
+---
+
+AFTER
+
+Cryptographic proof.
+
+Bitcoin timestamp.
+
+Public verification.
+
+Independent validation.
+
+Authority strengthened.
+
+── FAQ ──
+
+1. What is PROOF LAYER™?
+
+A cryptographic proof system.
+
+2. Why SHA-256?
+
+To create unique fingerprints.
+
+3. Why Bitcoin?
+
+For immutable timestamps.
+
+4. Can anyone verify?
+
+Yes.
+
+Publicly.
+
+5. What comes after PROOF LAYER™?
+
+Monitoring.
+
+── PREVIOUS PRODUCT ──
+
+TRUST LAYER™
+
+── NEXT PRODUCT ──
+
+AI SONAR™
+
+Continuous AI Visibility Monitoring.
