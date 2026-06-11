@@ -1,0 +1,479 @@
+TITLE: AI Visibility Glossary — Every Term Defined
+
+BREADCRUMB: Home › Blog › Glossary
+
+60+ Terms
+
+Bidirectional Cross-References
+
+Live Search
+
+── A ──
+
+ADI™
+
+Platform.
+
+CANON™ → COMPILER™ → HAT™
+
+10 products.
+
+---
+
+AEO
+
+Answer Engine Optimization.
+
+Discipline.
+
+Stages 1–3.
+
+Direct AI answers.
+
+---
+
+AIO
+
+AI Optimization.
+
+Complete AI optimization discipline.
+
+All 5 stages.
+
+All 167 signals.
+
+---
+
+ai.json
+
+Primary machine-readable business identity file.
+
+Located at domain root.
+
+---
+
+AI Readiness Score
+
+0–100 measurement.
+
+Weighted:
+
+35% Identity
+
+45% Trust
+
+20% Intent
+
+---
+
+AI-SEO
+
+Technical discipline.
+
+Enables AEO and GEO.
+
+---
+
+AI Visibility™
+
+Core concept.
+
+Measured by AI Readiness Score.
+
+---
+
+AI Visibility Ladder™
+
+Framework.
+
+L1 → L6.
+
+── B ──
+
+Buyer Persona
+
+Intent Signal.
+
+Role + Sector + Size + Trigger.
+
+---
+
+BreadcrumbList
+
+Schema.org type.
+
+Used for page hierarchy.
+
+── C ──
+
+Canonical URL
+
+Identity Signal.
+
+Single authoritative URL.
+
+---
+
+Citation
+
+Trust Signal.
+
+Highest-weight external trust signal.
+
+---
+
+Cloudflare Workers KV
+
+Signal storage layer.
+
+Edge-delivered.
+
+<10ms global.
+
+── D ──
+
+DefinedTerm
+
+Schema.org glossary entity.
+
+---
+
+DefinedTermSet
+
+Schema.org glossary collection.
+
+── E ──
+
+Edge Delivery
+
+Infrastructure layer.
+
+Cloudflare KV.
+
+Global signal delivery.
+
+---
+
+Entity
+
+Distinct identifiable node.
+
+Knowledge graph object.
+
+---
+
+Entity Graph
+
+Structured network of entities and relationships.
+
+---
+
+Epistemic Discipline
+
+Rule set:
+
+self_declared
+
+publicly_verifiable
+
+independently_certified
+
+Rule:
+
+"supports readiness"
+
+never
+
+"certifies"
+
+or
+
+"compliant"
+
+── F ──
+
+Findable™
+
+Stage 1.
+
+AI locates the entity.
+
+Minimum 16 signals.
+
+── G ──
+
+GEO
+
+Generative Engine Optimization.
+
+Stages 3–5.
+
+Generated AI content inclusion.
+
+---
+
+Governance
+
+Signal category.
+
+58 signals.
+
+HITL
+
+EU AI Act
+
+GDPR
+
+── H ──
+
+HAT™
+
+Deployed artifact.
+
+Final output of CANON™ → COMPILER™ → HAT™
+
+---
+
+HITL
+
+Human-In-The-Loop.
+
+Mandatory at every deployment stage.
+
+── I ──
+
+Intent
+
+Signal category.
+
+58 signals.
+
+Buyer matching layer.
+
+---
+
+Intent Signal
+
+Service-to-query mapping.
+
+---
+
+intents.json
+
+Buyer intent registry file.
+
+Domain root.
+
+── K ──
+
+Knowledge Graph
+
+Entity nodes.
+
+Typed relationships.
+
+Cross references.
+
+Cardinalities.
+
+── L ──
+
+llms.txt
+
+Plain-text AI instruction file.
+
+Domain root.
+
+---
+
+LocalBusiness
+
+Schema.org type.
+
+Business location entity.
+
+── M ──
+
+Market Intent™
+
+Framework.
+
+Entity + Action + Context + Constraint + Time.
+
+── N ──
+
+NACE Code
+
+European business classification code.
+
+Sector matching signal.
+
+---
+
+Negative Intent
+
+Most commonly missing intent signal.
+
+Used to exclude irrelevant recommendations.
+
+── O ──
+
+OpenTimestamps
+
+Proof protocol.
+
+Bitcoin anchored.
+
+SHA-256 verification.
+
+── P ──
+
+Proof Layer™
+
+Cryptographic proof layer.
+
+ai-proof.json
+
+OTS files
+
+Bitcoin anchors
+
+---
+
+Person
+
+Schema.org type.
+
+Human entity.
+
+── Q ──
+
+Question Intent
+
+Buyer query mapped to service intent.
+
+── R ──
+
+Recommendable™
+
+Stage 5.
+
+AI names the business in recommendations.
+
+---
+
+Relationship
+
+Typed connection between entities.
+
+── S ──
+
+sameAs
+
+Schema.org property.
+
+External identity verification.
+
+---
+
+Schema.org
+
+Structured data vocabulary.
+
+JSON-LD implementation.
+
+---
+
+SHA-256
+
+Cryptographic fingerprint.
+
+64-character hash.
+
+Immutable proof.
+
+---
+
+Signal
+
+Atomic machine-readable data point.
+
+Core unit of AI visibility.
+
+---
+
+Service
+
+Schema.org type.
+
+Business service description.
+
+── T ──
+
+Trust Signal
+
+61 signals.
+
+Highest-weight category.
+
+---
+
+Trustable™
+
+Stage 4.
+
+AI treats business as an authority.
+
+── U ──
+
+Understandable™
+
+Stage 2.
+
+AI correctly interprets services and value proposition.
+
+── V ──
+
+Verifiable™
+
+Stage 3.
+
+AI confirms claims through external sources.
+
+── W ──
+
+Workers KV
+
+Cloudflare edge storage.
+
+Global signal delivery.
+
+<10ms response.
+
+── RELATED TERMS ──
+
+AI Visibility™
+
+AI Authority™
+
+AEO
+
+GEO
+
+AIO
+
+AI-SEO
+
+Knowledge Graph
+
+Trust Layer™
+
+Proof Layer™
+
+AI Signals™
+
+AI Ready™
+
+AI Lens™
+
+AI Audit™
