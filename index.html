@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5thelement.ai — When Customers Ask AI, Make Sure It Recommends You</title>
-<meta name="description" content="We help B2B companies become visible, understandable, and recommendable by AI. No website changes. No migration. No redesign.">
-
+<title>5thelement.ai — When AI Recommends, Make Sure It's You</title>
+<meta name="description" content="We help businesses become visible, understandable, and recommendable by AI. ChatGPT · Gemini · Claude · Copilot · Perplexity.">
+<link rel="canonical" href="https://5thelement.ai/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -18,914 +18,248 @@
       "@type": "Organization",
       "name": "5thelement.ai",
       "legalName": "AiVenture S.R.L.",
+      "identifier": "CUI 51415878",
       "url": "https://5thelement.ai/",
-      "description": "We help B2B companies become visible, understandable, and recommendable by AI systems."
+      "description": "AI Visibility for B2B. We help businesses become visible, understandable, and recommendable by AI.",
+      "sameAs": ["https://aiventure.ro","https://eu-ai-audit.eu","https://eu-ai-act-ready.eu"]
     },
     {
-      "@id": "https://5thelement.ai/",
-      "@type": "WebPage",
-      "name": "When Customers Ask AI, Make Sure It Recommends You",
-      "isPartOf": { "@id": "https://5thelement.ai/#organization" }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Do I need to change my website?","acceptedAnswer":{"@type":"Answer","text":"No. We add an AI visibility layer alongside your existing website — not inside it. Your site, CMS, hosting, and design stay exactly as they are."}},
+        {"@type":"Question","name":"How is this different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO targets search engine rankings. AI Visibility targets how AI systems understand, verify, and recommend your business. Different systems, different signals."}},
+        {"@type":"Question","name":"How fast will I see results?","acceptedAnswer":{"@type":"Answer","text":"Free AI Lens audit in 24 hours. Recommendation improvement typically visible in 2–4 weeks after implementation."}},
+        {"@type":"Question","name":"Is this compliant with the EU AI Act?","acceptedAnswer":{"@type":"Answer","text":"Our work supports readiness. We never certify compliance. That distinction is fundamental to our epistemic discipline."}}
+      ]
     }
   ]
 }
 </script>
 
 <style>
-/* ============================================================
-   DESIGN SYSTEM
-   Playfair Display (editorial weight) + Inter (precision body)
-   Dark: #0a0c0f bg, #f5c842 gold, #ffffff text
-   Signature element: the "live pulse" — a single animated dot
-   that travels across AI brand names, implying real-time signal
-   ============================================================ */
-
 :root {
-  --bg: #0a0c0f;
-  --surface: #0f1318;
-  --surface2: #141a22;
-  --border: #1c2530;
-  --border2: #243040;
-  --text: #f0f4f8;
-  --mid: #8090a4;
-  --dim: #3a4a5c;
-  --gold: #f5c842;
-  --gold-soft: rgba(245,200,66,0.08);
-  --gold-line: rgba(245,200,66,0.20);
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
-}
-
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* THEME TOGGLE */
-#tt {
-  position: fixed;
-  top: 68px; left: 16px;
-  z-index: 1000;
-  background: var(--surface);
-  border: 1px solid var(--border2);
-  color: var(--text);
-  width: 34px; height: 34px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  display: flex; align-items: center; justify-content: center;
-  transition: border-color .2s;
-}
-#tt:hover { border-color: var(--gold); }
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(10,12,15,0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 40px;
-}
-.nav-inner {
-  max-width: 1140px; margin: 0 auto;
-  height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.nav-logo {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: -.01em;
-}
-.nav-logo span { color: var(--gold); }
-.nav-links {
-  display: flex; align-items: center; gap: 32px;
-  list-style: none;
-}
-.nav-links a {
-  color: var(--mid);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
-  transition: color .2s;
-}
-.nav-links a:hover { color: var(--text); }
-.nav-cta {
-  background: var(--gold);
-  color: #0a0c0f !important;
-  font-weight: 600 !important;
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-size: 14px !important;
-  transition: opacity .2s !important;
-}
-.nav-cta:hover { opacity: 0.88; }
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  flex-direction: column; gap: 5px;
-  cursor: pointer; background: none; border: none; padding: 4px;
-}
-.hamburger span {
-  display: block; width: 22px; height: 1px;
-  background: var(--text); transition: all .25s;
-}
-.mobile-menu {
-  display: none;
-  position: fixed; inset: 0; top: 60px;
-  background: var(--bg);
-  padding: 32px 40px;
-  flex-direction: column; gap: 24px;
-  z-index: 99;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  color: var(--text); text-decoration: none;
-  font-size: 22px; font-weight: 300; font-family: var(--serif);
-}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero {
-  min-height: 100vh;
-  display: flex; align-items: center;
-  padding: 120px 40px 80px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* subtle grid */
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-/* gold gradient bottom-fade */
-.hero::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 200px;
-  background: linear-gradient(to top, var(--bg), transparent);
-  pointer-events: none;
-}
-
-.hero-inner {
-  max-width: 1140px; margin: 0 auto;
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1fr 420px; gap: 80px;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-eyebrow {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 24px;
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-eyebrow::before {
-  content: '';
-  width: 32px; height: 1px;
-  background: var(--gold);
-}
-
-.hero-h1 {
-  font-family: var(--serif);
-  font-size: clamp(38px, 5vw, 64px);
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: -.02em;
-  color: var(--text);
-  margin-bottom: 28px;
-}
-.hero-h1 em {
-  font-style: italic;
-  color: var(--gold);
-}
-
-.hero-sub {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--mid);
-  line-height: 1.65;
-  margin-bottom: 40px;
-  max-width: 520px;
-}
-.hero-sub strong { color: var(--text); font-weight: 500; }
-
-.hero-actions {
-  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gold);
-  color: #0a0c0f;
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: opacity .2s, transform .2s;
-  border: none; cursor: pointer;
-}
-.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  color: var(--mid);
-  font-size: 14px;
-  text-decoration: none;
-  transition: color .2s;
-  border: none; background: none; cursor: pointer;
-  font-family: var(--sans);
-}
-.btn-ghost:hover { color: var(--text); }
-.btn-ghost::after { content: '→'; transition: transform .2s; }
-.btn-ghost:hover::after { transform: translateX(3px); }
-
-/* AI ENGINE LIST — hero right */
-.hero-right { position: relative; }
-
-.ai-signal-card {
-  background: var(--surface);
-  border: 1px solid var(--border2);
-  border-radius: 12px;
-  padding: 28px;
-  position: relative;
-  overflow: hidden;
-}
-.ai-signal-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
-.asc-label {
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-bottom: 20px;
-}
-
-.engine-list { display: flex; flex-direction: column; gap: 0; }
-
-.engine-row {
-  display: flex; align-items: center; gap: 14px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  cursor: default;
-}
-.engine-row:last-child { border: none; }
-
-.engine-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--dim);
-  flex-shrink: 0;
-  transition: background .4s, box-shadow .4s;
-}
-.engine-dot.active {
-  background: var(--gold);
-  box-shadow: 0 0 10px rgba(245,200,66,0.5);
-}
-
-.engine-name {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--mid);
-  flex: 1;
-  transition: color .3s;
-}
-.engine-row.active .engine-name { color: var(--text); }
-
-.engine-status {
-  font-size: 10px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--dim);
-  transition: color .3s;
-}
-.engine-row.active .engine-status { color: var(--gold); }
-
-.asc-footer {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-  color: var(--dim);
-  line-height: 1.5;
-}
-.asc-footer strong { color: var(--mid); }
-
-/* ============================================================
-   SECTIONS — shared
-   ============================================================ */
-section {
-  padding: 100px 40px;
-}
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-.section-eyebrow {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-}
-
-/* ============================================================
-   WHY THIS MATTERS
-   ============================================================ */
-.why {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.why-h2 {
-  font-family: var(--serif);
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  margin-bottom: 24px;
-}
-.why-h2 em { font-style: italic; color: var(--gold); }
-
-.why-body {
-  font-size: 17px;
-  color: var(--mid);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-.why-body strong { color: var(--text); font-weight: 500; }
-
-.why-risk {
-  background: var(--surface2);
-  border: 1px solid var(--border2);
-  border-left: 3px solid var(--gold);
-  border-radius: 0 6px 6px 0;
-  padding: 18px 22px;
-  font-size: 15px;
-  color: var(--text);
-  line-height: 1.6;
-}
-
-.questions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.q-item {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 17px;
-  color: var(--mid);
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  transition: color .2s;
-}
-.q-item:hover { color: var(--text); }
-.q-item:last-child { border: none; }
-.q-mark {
-  font-family: var(--serif);
-  font-size: 22px;
-  color: var(--gold);
-  line-height: 1;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-/* ============================================================
-   WHAT YOU GAIN
-   ============================================================ */
-.gains-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 48px;
-}
-
-.gain-card {
-  background: var(--surface);
-  padding: 32px 24px;
-  transition: background .2s;
-}
-.gain-card:hover { background: var(--surface2); }
-
-.gain-icon {
-  font-size: 24px;
-  margin-bottom: 14px;
-  display: block;
-}
-
-.gain-title {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-.gain-body {
-  font-size: 14px;
-  color: var(--mid);
-  line-height: 1.6;
-}
-
-/* ============================================================
-   NO REBUILD
-   ============================================================ */
-.no-rebuild {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.rebuild-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.rebuild-h2 {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.5vw, 46px);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  margin-bottom: 24px;
-}
-
-.rebuild-body {
-  font-size: 17px;
-  color: var(--mid);
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.keep-list {
-  display: flex; flex-direction: column; gap: 8px;
-}
-
-.keep-item {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 15px; color: var(--mid);
-}
-.keep-check {
-  width: 18px; height: 18px;
-  border: 1px solid var(--gold);
-  border-radius: 3px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  font-size: 10px;
-  color: var(--gold);
-}
-
-.layer-diagram {
-  background: var(--surface2);
-  border: 1px solid var(--border2);
-  border-radius: 10px;
-  padding: 32px;
-  position: relative;
-}
-
-.layer-row {
-  display: flex; align-items: center;
-  padding: 14px 16px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-.layer-row:last-child { margin: 0; }
-
-.layer-existing {
-  background: rgba(255,255,255,0.04);
-  color: var(--mid);
-  border: 1px dashed var(--border2);
-}
-
-.layer-new {
-  background: var(--gold-soft);
-  color: var(--text);
-  border: 1px solid var(--gold-line);
-  font-weight: 500;
-}
-.layer-new-tag {
-  margin-left: auto;
-  font-size: 9px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid var(--gold-line);
-  padding: 2px 7px;
-  border-radius: 3px;
-}
-
-.layer-plus {
-  text-align: center;
-  font-size: 18px;
-  color: var(--dim);
-  margin: 6px 0;
-  font-weight: 300;
-}
-
-/* ============================================================
-   HOW IT WORKS
-   ============================================================ */
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 48px;
-}
-
-.how-card {
-  background: var(--surface);
-  padding: 36px 28px;
-  transition: background .2s;
-  cursor: default;
-}
-.how-card:hover { background: var(--surface2); }
-
-.how-num {
-  font-family: var(--serif);
-  font-size: 48px;
-  font-weight: 900;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 6px;
-  opacity: 0.35;
-}
-
-.how-title {
-  font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.how-body {
-  font-size: 15px;
-  color: var(--mid);
-  line-height: 1.65;
-  margin-bottom: 20px;
-}
-
-.how-time {
-  font-size: 12px;
-  color: var(--gold);
-  font-weight: 500;
-  letter-spacing: .06em;
-  display: flex; align-items: center; gap: 6px;
-}
-.how-time::before {
-  content: '';
-  width: 20px; height: 1px;
-  background: var(--gold);
-}
-
-/* ============================================================
-   EFFORT + VERIFICATION — two col
-   ============================================================ */
-.effort-verify {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.ev-grid {
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  gap: 0;
-}
-
-.ev-divider { background: var(--border); }
-
-.ev-col { padding: 60px 56px 60px 0; }
-.ev-col:last-child { padding: 60px 0 60px 56px; }
-
-.ev-h3 {
-  font-family: var(--serif);
-  font-size: clamp(24px, 2.5vw, 36px);
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.ev-body {
-  font-size: 16px;
-  color: var(--mid);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-.ev-big {
-  font-family: var(--serif);
-  font-size: 64px;
-  font-weight: 900;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 8px;
-  opacity: 0.7;
-}
-
-.ev-big-label {
-  font-size: 14px;
-  color: var(--mid);
-  margin-bottom: 24px;
-}
-
-.query-example {
-  background: var(--surface2);
-  border: 1px solid var(--border2);
-  border-left: 3px solid var(--gold-line);
-  border-radius: 0 6px 6px 0;
-  padding: 14px 18px;
-  font-size: 14px;
-  color: var(--mid);
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-.query-example::before {
-  content: '"';
-  color: var(--gold);
-  font-size: 20px;
-  font-family: var(--serif);
-  margin-right: 4px;
-  line-height: 0;
-  vertical-align: -4px;
-}
-
-/* ============================================================
-   WHY US
-   ============================================================ */
-.why-us-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.why-us-h2 {
-  font-family: var(--serif);
-  font-size: clamp(30px, 3.5vw, 48px);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  margin-bottom: 24px;
-}
-.why-us-h2 em { font-style: italic; color: var(--gold); }
-
-.why-us-body {
-  font-size: 17px;
-  color: var(--mid);
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.proof-row {
-  display: flex; align-items: flex-start; gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-}
-.proof-row:last-child { border: none; }
-.proof-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-.proof-text { font-size: 14px; color: var(--mid); line-height: 1.6; }
-.proof-text strong { color: var(--text); font-weight: 500; }
-
-/* ============================================================
-   FREE AUDIT + GUARANTEE — two col
-   ============================================================ */
-.free-guarantee {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.fg-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-
-.fg-card {
-  padding: 40px;
-  border: 1px solid var(--border2);
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-.fg-card.featured { border-color: var(--gold-line); background: var(--gold-soft); }
-.fg-card.featured::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
-.fg-tag {
-  font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 14px;
-}
-
-.fg-h3 {
-  font-family: var(--serif);
-  font-size: 26px; font-weight: 700;
-  color: var(--text);
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.fg-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-
-.fg-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 15px; color: var(--mid); line-height: 1.5;
-}
-.fg-bullet {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--gold); flex-shrink: 0; margin-top: 8px;
-}
-
-.fg-note {
-  font-size: 13px; color: var(--dim); line-height: 1.6;
-}
-
-/* ============================================================
-   FINAL CTA
-   ============================================================ */
-.final-cta {
-  padding: 120px 40px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.final-cta::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(245,200,66,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.final-eyebrow {
-  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 28px;
-}
-
-.final-h2 {
-  font-family: var(--serif);
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: -.02em;
-  color: var(--mid);
-  margin-bottom: 16px;
-}
-
-.final-h2-accent {
-  font-family: var(--serif);
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: -.02em;
-  color: var(--text);
-  margin-bottom: 40px;
-}
-.final-h2-accent em { font-style: italic; color: var(--gold); }
-
-.final-sub {
-  font-size: 18px; color: var(--mid);
-  max-width: 480px; margin: 0 auto 40px;
-  line-height: 1.65;
-}
-
-.final-actions {
-  display: flex; align-items: center; justify-content: center;
-  gap: 24px; flex-wrap: wrap;
-}
-
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 32px 40px;
-}
-.footer-inner {
-  max-width: 1140px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px;
-}
-.footer-left { font-size: 13px; color: var(--dim); line-height: 1.6; }
-.footer-left a { color: var(--dim); text-decoration: none; transition: color .2s; }
-.footer-left a:hover { color: var(--gold); }
-.footer-right { font-size: 11px; color: var(--dim); letter-spacing: .05em; }
-
-/* ============================================================
-   LIGHT MODE
-   ============================================================ */
-body.light-mode {
-  --bg: #f5f7fa;
-  --surface: #ffffff;
-  --surface2: #eef1f6;
-  --border: #d0d8e4;
-  --border2: #b8c5d4;
-  --text: #0a0c0f;
-  --mid: #4a5568;
-  --dim: #8a9ab0;
-  --gold: #a07800;
-  --gold-soft: rgba(160,120,0,0.07);
-  --gold-line: rgba(160,120,0,0.25);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-
-  section { padding: 70px 20px; }
-  .hero { padding: 100px 20px 70px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-  .hero-right { display: none; }
-
-  .why-grid, .rebuild-grid, .why-us-grid,
-  .ev-grid, .fg-grid { grid-template-columns: 1fr; gap: 40px; }
-  .ev-col, .ev-col:last-child { padding: 40px 0; }
-  .ev-divider { display: none; }
-
-  .gains-grid { grid-template-columns: 1fr 1fr; }
-  .how-grid { grid-template-columns: 1fr; }
-
-  .final-cta { padding: 80px 20px; }
-  footer { padding: 24px 20px; }
-}
-
-@media (max-width: 500px) {
-  .gains-grid { grid-template-columns: 1fr; }
-  .fg-grid { grid-template-columns: 1fr; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
+  --bg:#0a0c0f; --s1:#0f1318; --s2:#131c25; --s3:#0d1520;
+  --b1:#1c2530; --b2:#243040; --b3:#2d3c4e;
+  --text:#eef2f7; --mid:#7a8fa8; --dim:#364656; --dimmer:#1e2d3d;
+  --gold:#f5c842; --gd10:rgba(245,200,66,.10); --gd20:rgba(245,200,66,.20); --gd04:rgba(245,200,66,.04);
+  --cyan:#4dc8e8; --cd10:rgba(77,200,232,.10);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* ── THEME TOGGLE ─────────────────────── */
+#tt{position:fixed;top:68px;left:16px;z-index:500;background:var(--s1);border:1px solid var(--b2);color:var(--text);width:34px;height:34px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+#tt:hover{border-color:var(--gold)}
+
+/* ── NAV ──────────────────────────────── */
+nav{position:fixed;inset:0 0 auto;z-index:200;background:rgba(10,12,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-.01em;flex-shrink:0}
+.nav-logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{color:var(--mid);text-decoration:none;font-size:13px;font-weight:400;padding:6px 12px;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.nav-cta{background:var(--gold)!important;color:#0a0c0f!important;font-weight:600!important;padding:8px 18px!important;border-radius:4px;transition:opacity .2s!important}
+.nav-cta:hover{opacity:.86!important;background:var(--gold)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob{display:none;position:fixed;inset:64px 0 0;background:var(--bg);padding:32px 24px;flex-direction:column;gap:20px;z-index:190;overflow-y:auto}
+.mob.open{display:flex}
+.mob a{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--b1)}
+.mob a:last-child{border:none;color:var(--gold)}
+
+/* ── SHARED ───────────────────────────── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+section{padding:96px 0}
+.ey{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:24px;height:1px;background:var(--gold)}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0a0c0f;font-family:var(--sans);font-size:15px;font-weight:600;padding:13px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s,transform .15s;white-space:nowrap}
+.btn-p:hover{opacity:.87;transform:translateY(-1px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--mid);font-family:var(--sans);font-size:14px;font-weight:400;padding:13px 22px;border-radius:4px;border:1px solid var(--b2);text-decoration:none;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-o:hover{color:var(--text);border-color:var(--b3)}
+.btn-g{display:inline-flex;align-items:center;gap:6px;color:var(--mid);font-size:14px;text-decoration:none;background:none;border:none;cursor:pointer;font-family:var(--sans);transition:color .2s}
+.btn-g:hover{color:var(--text)}
+.btn-g::after{content:'→';transition:transform .2s}
+.btn-g:hover::after{transform:translateX(3px)}
+
+/* ── HERO ─────────────────────────────── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--b1) 1px,transparent 1px),linear-gradient(90deg,var(--b1) 1px,transparent 1px);background-size:72px 72px;opacity:.22;pointer-events:none}
+.hero-fade{position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none}
+.hero-glow{position:absolute;top:30%;left:20%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,200,66,.04) 0%,transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;width:100%}
+.hero-ey{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-ey::before{content:'';width:28px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-size:clamp(38px,5vw,66px);font-weight:900;line-height:1.07;letter-spacing:-.025em;color:var(--text);margin-bottom:24px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:18px;font-weight:300;color:var(--mid);line-height:1.68;margin-bottom:16px;max-width:500px}
+.ai-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:36px}
+.ai-chip{font-size:12px;color:var(--mid);background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:4px 12px;transition:all .2s}
+.ai-chip:hover{border-color:var(--gold);color:var(--text)}
+.hero-acts{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+
+/* engine card */
+.eng-card{background:var(--s1);border:1px solid var(--b2);border-radius:12px;padding:24px;position:relative;overflow:hidden}
+.eng-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.eng-label{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.eng-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--b1)}
+.eng-row:last-of-type{border:none}
+.eng-dot{width:7px;height:7px;border-radius:50%;background:var(--dim);flex-shrink:0;transition:background .35s,box-shadow .35s}
+.eng-row.lit .eng-dot{background:var(--gold);box-shadow:0 0 8px rgba(245,200,66,.55)}
+.eng-name{font-size:14px;color:var(--mid);flex:1;transition:color .3s}
+.eng-row.lit .eng-name{color:var(--text)}
+.eng-stat{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);transition:color .3s}
+.eng-row.lit .eng-stat{color:var(--gold)}
+.eng-foot{margin-top:16px;padding-top:14px;border-top:1px solid var(--b1);font-size:11px;color:var(--dim);line-height:1.55}
+.eng-foot strong{color:var(--mid)}
+
+/* ── THE SHIFT ────────────────────────── */
+.shift{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
+.shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.shift-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px}
+.shift-h2 em{font-style:italic;color:var(--gold)}
+.shift-body{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:20px}
+.shift-body strong{color:var(--text);font-weight:500}
+.journey{display:flex;flex-direction:column;gap:0}
+.j-row{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--b1)}
+.j-row:last-child{border:none}
+.j-era{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;min-width:90px;padding-top:2px}
+.j-era.old{color:var(--dim)}
+.j-era.now{color:var(--gold)}
+.j-path{font-size:14px;line-height:1.6}
+.j-path.old{color:var(--dim)}
+.j-path.now{color:var(--text)}
+.j-path .arrow{color:var(--dim);margin:0 4px;font-size:12px}
+.j-path .you{color:var(--gold);font-weight:600}
+.j-path .not{color:var(--mid);text-decoration:line-through;opacity:.5}
+.shift-callout{background:var(--s2);border:1px solid var(--b2);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:16px 20px;font-size:15px;color:var(--text);line-height:1.65;margin-top:8px}
+
+/* ── FRAMEWORK ────────────────────────── */
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin-top:48px}
+.fw-col{background:var(--s1);padding:40px 36px}
+.fw-col-tag{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.fw-col-tag.vis{color:var(--cyan)}
+.fw-col-tag.auth{color:var(--gold)}
+.fw-col-h{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.2}
+.fw-col-sub{font-size:14px;color:var(--mid);margin-bottom:28px;line-height:1.6}
+.fw-pills{display:flex;flex-direction:column;gap:8px}
+.fw-pill{display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:5px;border:1px solid var(--b2);background:var(--s2);transition:all .2s;cursor:default}
+.fw-pill:hover{border-color:var(--b3);background:var(--s3)}
+.fw-pill-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.vis .fw-pill-dot{background:var(--cyan)}
+.auth .fw-pill-dot{background:var(--gold)}
+.fw-pill-name{font-size:14px;font-weight:500;color:var(--text)}
+.fw-pill-tm{font-size:9px;color:var(--dim);vertical-align:super}
+.fw-pill-desc{font-size:12px;color:var(--dim);margin-left:auto}
+
+/* ── ENGINES / PRODUCTS ───────────────── */
+.eng-section{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
+.eng-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin-top:48px}
+.eng-prod{background:var(--bg);padding:32px 26px;transition:background .2s;cursor:default;position:relative}
+.eng-prod:hover{background:var(--s2)}
+.eng-prod-num{font-family:var(--serif);font-size:40px;font-weight:900;color:var(--gold);opacity:.2;line-height:1;margin-bottom:8px}
+.eng-prod-name{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.2}
+.eng-prod-price{font-size:12px;color:var(--gold);font-weight:500;margin-bottom:12px;letter-spacing:.04em}
+.eng-prod-desc{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:16px}
+.eng-prod-out{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:3px}
+.eng-prod-out.cyan{color:var(--cyan);background:var(--cd10);border:1px solid rgba(77,200,232,.2)}
+.eng-prod-out.gold{color:var(--gold);background:var(--gd10);border:1px solid var(--gd20)}
+
+/* ── PRICING ──────────────────────────── */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin-top:48px}
+.pr-card{background:var(--s1);padding:36px 28px;position:relative;transition:background .2s}
+.pr-card:hover{background:var(--s2)}
+.pr-card.featured{background:var(--gd04)}
+.pr-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.pr-tier{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.pr-tier.featured{color:var(--gold)}
+.pr-name{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text);margin-bottom:6px}
+.pr-price{font-size:28px;font-weight:300;color:var(--text);margin-bottom:4px;font-family:var(--serif)}
+.pr-price sup{font-size:16px;vertical-align:super}
+.pr-price span{font-size:14px;color:var(--mid);font-family:var(--sans)}
+.pr-includes{font-size:13px;color:var(--mid);margin-bottom:20px;line-height:1.5}
+.pr-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.pr-feat{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--mid);line-height:1.5}
+.pr-feat-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
+.pr-delivery{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:6px;margin-top:auto}
+.pr-delivery::before{content:'';width:14px;height:1px;background:var(--dim)}
+
+/* ── PROOF ────────────────────────────── */
+.proof-section{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.proof-h2{font-family:var(--serif);font-size:clamp(26px,3vw,40px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+.proof-body{font-size:16px;color:var(--mid);line-height:1.7;margin-bottom:28px}
+.hash-table{display:flex;flex-direction:column;gap:0;background:var(--s2);border:1px solid var(--b2);border-radius:8px;overflow:hidden}
+.hash-row{display:flex;align-items:center;gap:14px;padding:11px 16px;border-bottom:1px solid var(--b1);font-size:11px}
+.hash-row:last-child{border:none}
+.hash-key{color:var(--mid);min-width:130px;flex-shrink:0;font-weight:500}
+.hash-val{color:var(--gold);font-family:monospace;font-size:10px;word-break:break-all;line-height:1.4}
+.hash-row.verified .hash-val{color:var(--cyan)}
+.proof-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.p-badge{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:3px;border:1px solid}
+.p-badge.g{color:var(--gold);border-color:var(--gd20);background:var(--gd10)}
+.p-badge.c{color:var(--cyan);border-color:rgba(77,200,232,.2);background:var(--cd10)}
+.p-badge.m{color:var(--mid);border-color:var(--b2);background:transparent}
+
+/* ── FAQ ──────────────────────────────── */
+.faq-list{display:flex;flex-direction:column;gap:0;max-width:780px;margin:40px auto 0}
+.faq-item{border-bottom:1px solid var(--b1)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;cursor:pointer;font-size:16px;font-weight:500;color:var(--text);transition:color .2s;list-style:none;user-select:none}
+.faq-q:hover{color:var(--gold)}
+.faq-q .faq-ico{font-size:18px;color:var(--dim);flex-shrink:0;transition:transform .25s,color .2s;line-height:1}
+.faq-item.open .faq-q .faq-ico{transform:rotate(45deg);color:var(--gold)}
+.faq-a{display:none;padding:0 0 20px;font-size:15px;color:var(--mid);line-height:1.75;max-width:680px}
+.faq-item.open .faq-a{display:block}
+
+/* ── FINAL CTA ────────────────────────── */
+.final{padding:120px 0;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.05) 0%,transparent 65%);pointer-events:none}
+.final-ey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.final-h2{font-family:var(--serif);font-size:clamp(32px,5vw,62px);font-weight:900;line-height:1.08;letter-spacing:-.025em;color:var(--text);margin-bottom:36px}
+.final-h2 em{font-style:italic;color:var(--gold)}
+.final-acts{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+
+/* ── FOOTER ───────────────────────────── */
+footer{border-top:1px solid var(--b1);padding:32px 40px}
+.foot-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot-l{font-size:12px;color:var(--dim);line-height:1.7}
+.foot-l strong{color:var(--mid)}
+.foot-l a{color:var(--dim);text-decoration:none;transition:color .2s}
+.foot-l a:hover{color:var(--gold)}
+.foot-r{font-size:10px;color:var(--dim);letter-spacing:.08em;text-align:right;line-height:1.7}
+
+/* ── LIGHT MODE ───────────────────────── */
+body.light-mode{
+  --bg:#f0f3f7;--s1:#ffffff;--s2:#e8edf4;--s3:#dde4ee;
+  --b1:#c8d4e0;--b2:#b5c3d2;--b3:#9aafc0;
+  --text:#0a0c0f;--mid:#4a5a6a;--dim:#8a9aaa;--dimmer:#c8d4e0;
+  --gold:#8a6500;--gd10:rgba(138,101,0,.08);--gd20:rgba(138,101,0,.18);--gd04:rgba(138,101,0,.04);
+  --cyan:#1a6fa0;--cd10:rgba(26,111,160,.08);
+}
+
+/* ── RESPONSIVE ───────────────────────── */
+@media(max-width:1000px){
+  .nav-inner{padding:0 20px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  section{padding:70px 0}
+  .wrap{padding:0 20px}
+  .hero{padding:100px 0 60px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-right{display:none}
+  .shift-grid,.proof-grid{grid-template-columns:1fr;gap:40px}
+  .fw-grid,.pricing-grid{grid-template-columns:1fr;gap:2px}
+  .eng-grid{grid-template-columns:1fr 1fr}
+  .final{padding:80px 0}
+  footer{padding:24px 20px}
+}
+@media(max-width:600px){
+  .eng-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -933,146 +267,110 @@ body.light-mode {
 <button id="tt" onclick="toggleTheme()">☀</button>
 
 <!-- NAV -->
-<nav aria-label="Main navigation">
+<nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">5the<span>element</span>.ai</a>
+    <a href="/" class="nav-logo">5the<em>element</em>.ai</a>
     <ul class="nav-links">
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#why">Why us</a></li>
-      <li><a href="#free" class="nav-cta">Free AI Audit →</a></li>
+      <li><a href="#framework">Solutions</a></li>
+      <li><a href="#engines">Services</a></li>
+      <li><a href="#engines">Products</a></li>
+      <li><a href="#shift">Use Cases</a></li>
+      <li><a href="#faq">Resources</a></li>
+      <li><a href="#proof">About</a></li>
+      <li><a href="#cta" class="nav-cta">Get AI-Ready →</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <button class="hamburger" onclick="toggleMob()" aria-label="Menu" id="ham">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#how" onclick="toggleMenu()">How it works</a>
-  <a href="#products" onclick="toggleMenu()">Products</a>
-  <a href="#why" onclick="toggleMenu()">Why us</a>
-  <a href="#free" onclick="toggleMenu()" style="color:var(--gold)">Free AI Audit →</a>
+<div class="mob" id="mob">
+  <a href="#framework" onclick="closeMob()">Solutions</a>
+  <a href="#engines" onclick="closeMob()">Services</a>
+  <a href="#engines" onclick="closeMob()">Products</a>
+  <a href="#shift" onclick="closeMob()">Use Cases</a>
+  <a href="#faq" onclick="closeMob()">Resources</a>
+  <a href="#proof" onclick="closeMob()">About</a>
+  <a href="#cta" onclick="closeMob()">Get AI-Ready →</a>
 </div>
 
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="hero" aria-label="Hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-eyebrow">AI Visibility Infrastructure</div>
-      <h1 class="hero-h1">
-        When Customers<br>
-        Ask AI, Make Sure<br>
-        It <em>Recommends You.</em>
-      </h1>
-      <p class="hero-sub">
-        AI is becoming the first place buyers go for answers.<br>
-        We help <strong>B2B companies</strong> become visible, understandable,
-        and recommendable by AI — <strong>without touching your website.</strong>
-      </p>
-      <div class="hero-actions">
-        <a href="#free" class="btn-primary">
-          See How AI Sees Your Business
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="#how" class="btn-ghost">See how it works</a>
-      </div>
-    </div>
-
-    <!-- AI SIGNAL CARD -->
-    <div class="hero-right" aria-label="AI systems covered">
-      <div class="ai-signal-card">
-        <div class="asc-label">Active AI systems</div>
-        <div class="engine-list" id="engine-list">
-          <div class="engine-row" data-engine="chatgpt">
-            <div class="engine-dot"></div>
-            <span class="engine-name">ChatGPT</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="gemini">
-            <div class="engine-dot"></div>
-            <span class="engine-name">Gemini</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="claude">
-            <div class="engine-dot"></div>
-            <span class="engine-name">Claude</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="perplexity">
-            <div class="engine-dot"></div>
-            <span class="engine-name">Perplexity</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="copilot">
-            <div class="engine-dot"></div>
-            <span class="engine-name">Copilot</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="deepseek">
-            <div class="engine-dot"></div>
-            <span class="engine-name">DeepSeek</span>
-            <span class="engine-status">monitoring</span>
-          </div>
-          <div class="engine-row" data-engine="youcom">
-            <div class="engine-dot"></div>
-            <span class="engine-name">You.com</span>
-            <span class="engine-status">monitoring</span>
-          </div>
+<!-- ══ HERO ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-ey">AI Visibility for B2B</div>
+        <h1>When AI Recommends,<br>Make Sure<br><em>It's You.</em></h1>
+        <p class="hero-sub">We help businesses become visible, understandable, and recommendable by AI.</p>
+        <div class="ai-row">
+          <span class="ai-chip">ChatGPT</span>
+          <span class="ai-chip">Gemini</span>
+          <span class="ai-chip">Claude</span>
+          <span class="ai-chip">Copilot</span>
+          <span class="ai-chip">Perplexity</span>
+          <span class="ai-chip">DeepSeek</span>
+          <span class="ai-chip">You.com</span>
         </div>
-        <div class="asc-footer">
-          <strong>Your business needs to be understood</strong> by all of these —
-          not just indexed by one.
+        <div class="hero-acts">
+          <a href="#cta" class="btn-p">Get My Free AI Audit →</a>
+          <a href="#shift" class="btn-g">See what changed</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="eng-card">
+          <div class="eng-label">AI systems — live scan</div>
+          <div id="eng-list">
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">ChatGPT</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Gemini</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Claude</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Copilot</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Perplexity</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">DeepSeek</span><span class="eng-stat">scanning</span></div>
+            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">You.com</span><span class="eng-stat">scanning</span></div>
+          </div>
+          <div class="eng-foot"><strong>Is your business in these answers?</strong><br>Most aren't. We change that.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     WHY THIS MATTERS
-     ============================================================ -->
-<section class="why" aria-labelledby="why-heading">
-  <div class="container">
-    <div class="why-grid">
+<!-- ══ THE SHIFT ═══════════════════════════════════════ -->
+<section class="shift" id="shift">
+  <div class="wrap">
+    <div class="shift-grid">
       <div>
-        <div class="section-eyebrow">Why this matters</div>
-        <h2 class="why-h2" id="why-heading">
-          Every Day,<br>AI <em>Recommends</em><br>Someone.
-        </h2>
-        <p class="why-body">
-          Thousands of business buyers are asking AI right now.
-          They are not searching for keywords.
-          They are asking for <strong>recommendations</strong>.
-        </p>
-        <div class="why-risk">
-          The risk is not losing Google traffic.<br>
-          The risk is becoming <strong>invisible in the next generation of customer discovery.</strong>
+        <div class="ey">The shift</div>
+        <h2 class="shift-h2">The Shift Has Already Happened.<br><em>How Your Customers Find You Now.</em></h2>
+        <p class="shift-body">The buying journey changed permanently. <strong>AI is the new first stop</strong> — not Google.</p>
+        <p class="shift-body">If AI cannot find your business, understand what you sell, verify your claims, and trust your authority — <strong>it recommends someone else. Every day. Automatically.</strong></p>
+        <div class="shift-callout">
+          The question is not whether AI will recommend businesses in your category.<br>
+          It will. The question is whether yours is one of them.
         </div>
       </div>
       <div>
-        <div class="questions-list">
-          <div class="q-item">
-            <span class="q-mark">"</span>
-            Who should I hire for this project?
+        <div class="journey">
+          <div class="j-row">
+            <div class="j-era old">20 Years Ago</div>
+            <div class="j-path old">
+              Customer <span class="arrow">→</span> Google <span class="arrow">→</span> Your Website <span class="arrow">→</span> Contact
+            </div>
           </div>
-          <div class="q-item">
-            <span class="q-mark">"</span>
-            Which supplier should I trust?
+          <div class="j-row">
+            <div class="j-era now">Today</div>
+            <div class="j-path now">
+              Customer <span class="arrow">→</span> AI <span class="arrow">→</span> Recommendation <span class="arrow">→</span> <span class="you">Your competitor.</span>
+            </div>
           </div>
-          <div class="q-item">
-            <span class="q-mark">"</span>
-            What company is best for my needs?
-          </div>
-          <div class="q-item">
-            <span class="q-mark">"</span>
-            Which solution should I choose?
-          </div>
-          <div class="q-item" style="opacity:.5">
-            <span class="q-mark">"</span>
-            <em>If AI cannot clearly understand your business,<br>it may never include you in the answer.</em>
+          <div class="j-row" style="opacity:.4;pointer-events:none">
+            <div class="j-era" style="color:var(--dim)">Today</div>
+            <div class="j-path" style="color:var(--dim)">
+              Customer <span class="arrow">→</span> AI <span class="arrow">→</span> Recommendation <span class="arrow">→</span> <span class="not">Not you.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1080,378 +378,259 @@ body.light-mode {
   </div>
 </section>
 
-<!-- ============================================================
-     WHAT YOU GAIN
-     ============================================================ -->
-<section aria-labelledby="gains-heading">
-  <div class="container">
-    <div class="section-eyebrow">What you gain</div>
-    <h2 id="gains-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
-      Five things that change<br>when AI understands you.
-    </h2>
-    <div class="gains-grid">
-      <div class="gain-card">
-        <span class="gain-icon" aria-hidden="true">◎</span>
-        <div class="gain-title">More Visibility</div>
-        <p class="gain-body">AI systems find and understand your business without guesswork.</p>
+<!-- ══ FRAMEWORK ═══════════════════════════════════════ -->
+<section id="framework">
+  <div class="wrap">
+    <div class="ey">The framework</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;max-width:560px">Two Questions.<br>One Decision.</h2>
+    <div class="fw-grid">
+      <div class="fw-col vis">
+        <div class="fw-col-tag vis">Category 1 — AI Visibility™</div>
+        <div class="fw-col-h">Can AI understand<br>your business?</div>
+        <div class="fw-col-sub">The foundation. Without this, no amount of content or SEO helps. AI systems either understand you or skip you.</div>
+        <div class="fw-pills vis">
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Findable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI can locate you</span></div>
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Understandable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI knows what you do</span></div>
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Verifiable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI can check your claims</span></div>
+        </div>
       </div>
-      <div class="gain-card">
-        <span class="gain-icon" aria-hidden="true">◈</span>
-        <div class="gain-title">Qualified Opportunities</div>
-        <p class="gain-body">Be present when buyers are actively searching for what you offer.</p>
-      </div>
-      <div class="gain-card">
-        <span class="gain-icon" aria-hidden="true">◇</span>
-        <div class="gain-title">Better Positioning</div>
-        <p class="gain-body">Help AI understand what makes your company different from competitors.</p>
-      </div>
-      <div class="gain-card">
-        <span class="gain-icon" aria-hidden="true">◆</span>
-        <div class="gain-title">Stronger Trust</div>
-        <p class="gain-body">Connect claims to evidence, proof, and verified credibility signals.</p>
-      </div>
-      <div class="gain-card">
-        <span class="gain-icon" aria-hidden="true">◉</span>
-        <div class="gain-title">Future Readiness</div>
-        <p class="gain-body">Prepared for AI-driven search, assistants, agents, and what comes next.</p>
+      <div class="fw-col auth">
+        <div class="fw-col-tag auth">Category 2 — AI Authority™</div>
+        <div class="fw-col-h">Will AI recommend<br>your business?</div>
+        <div class="fw-col-sub">The outcome. Once AI understands you, it needs to trust you enough to include you in the answer it gives to buyers.</div>
+        <div class="fw-pills auth">
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Trustable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI trusts your signals</span></div>
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Recommendable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI cites you in answers</span></div>
+          <div class="fw-pill"><div class="fw-pill-dot"></div><span class="fw-pill-name">Inevitable<span class="fw-pill-tm">™</span></span><span class="fw-pill-desc">AI chooses you first</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     NO REBUILD
-     ============================================================ -->
-<section class="no-rebuild" aria-labelledby="rebuild-heading">
-  <div class="container">
-    <div class="rebuild-grid">
+<!-- ══ FOUR ENGINES ═════════════════════════════════════ -->
+<section class="eng-section" id="engines">
+  <div class="wrap">
+    <div class="ey">Four engines</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;max-width:520px">The path from invisible<br>to inevitable.</h2>
+    <div class="eng-grid">
+      <div class="eng-prod">
+        <div class="eng-prod-num">01</div>
+        <div class="eng-prod-name">AI LENS™</div>
+        <div class="eng-prod-price">Free · 24h delivery</div>
+        <p class="eng-prod-desc">100 diagnostic questions map exactly where AI can and cannot find or understand your business.</p>
+        <span class="eng-prod-out cyan">→ Findable™</span>
+      </div>
+      <div class="eng-prod">
+        <div class="eng-prod-num">02</div>
+        <div class="eng-prod-name">AI READY™</div>
+        <div class="eng-prod-price">€49/h</div>
+        <p class="eng-prod-desc">Fix what's missing. Build the information layer AI needs to understand your services, offers, and differentiators.</p>
+        <span class="eng-prod-out gold">→ Understandable™</span>
+      </div>
+      <div class="eng-prod">
+        <div class="eng-prod-num">03</div>
+        <div class="eng-prod-name">AI SIGNALS™</div>
+        <div class="eng-prod-price">€49/h</div>
+        <p class="eng-prod-desc">Machine-readable structured signals deployed at the edge. SHA-256 fingerprinting. Bitcoin-anchored timestamps.</p>
+        <span class="eng-prod-out cyan">→ Verifiable™</span>
+      </div>
+      <div class="eng-prod">
+        <div class="eng-prod-num">04</div>
+        <div class="eng-prod-name">Trust Authority Module™</div>
+        <div class="eng-prod-price">Done For You · Custom</div>
+        <p class="eng-prod-desc">Full AI authority layer. Entity graph, proof registry, bidirectional cross-references. Built, deployed, verified.</p>
+        <span class="eng-prod-out gold">→ Recommendable™</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══════════════════════════════════════════ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="ey">Pricing</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;max-width:480px">Start free.<br>Scale as you go.</h2>
+    <div class="pricing-grid">
+      <div class="pr-card">
+        <div class="pr-tier">Silver — DIY</div>
+        <div class="pr-name">AI LENS™</div>
+        <div class="pr-price">Free</div>
+        <div class="pr-includes">100-question AI visibility diagnostic</div>
+        <div class="pr-features">
+          <div class="pr-feat"><div class="pr-feat-dot"></div>AI Visibility Score</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Gap analysis across L1–L6</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Missing information report</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Recommended next steps</div>
+        </div>
+        <a href="#cta" class="btn-o" style="width:100%;justify-content:center">Start Free Audit →</a>
+        <div class="pr-delivery">Delivered within 24 hours</div>
+      </div>
+      <div class="pr-card featured">
+        <div class="pr-tier featured">Gold — Guided</div>
+        <div class="pr-name">AI READY™ + AI SIGNALS™</div>
+        <div class="pr-price"><sup>€</sup>49<span>/hour</span></div>
+        <div class="pr-includes">Fix gaps · Deploy signals · Verify results</div>
+        <div class="pr-features">
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Everything in Silver</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Content layer build-out</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Machine-readable signals</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Before/after AI verification</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>No website changes needed</div>
+        </div>
+        <a href="#cta" class="btn-p" style="width:100%;justify-content:center">Book a Session →</a>
+        <div class="pr-delivery">Typical scope: 2–8 hours</div>
+      </div>
+      <div class="pr-card">
+        <div class="pr-tier">Platinum — Done For You</div>
+        <div class="pr-name">Trust Authority Module™</div>
+        <div class="pr-price" style="font-size:22px;font-family:var(--sans);font-weight:300">Custom</div>
+        <div class="pr-includes">Full AI authority infrastructure</div>
+        <div class="pr-features">
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Everything in Gold</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Entity graph + proof registry</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>SHA-256 + Bitcoin OTS anchors</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>EU AI Act readiness alignment</div>
+          <div class="pr-feat"><div class="pr-feat-dot"></div>Innovation Registry entry</div>
+        </div>
+        <a href="#cta" class="btn-o" style="width:100%;justify-content:center">Request Evaluation →</a>
+        <div class="pr-delivery">Scoped per engagement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROOF ════════════════════════════════════════════ -->
+<section class="proof-section" id="proof">
+  <div class="wrap">
+    <div class="proof-grid">
       <div>
-        <div class="section-eyebrow">No website rebuild required</div>
-        <h2 class="rebuild-h2" id="rebuild-heading">
-          You keep everything<br>you already have.
-        </h2>
-        <p class="rebuild-body">
-          Most companies assume AI readiness means a redesign.
-          It doesn't. We add an AI layer <em>alongside</em> your website.
-          Not inside it.
-        </p>
-        <div class="keep-list">
-          <div class="keep-item"><div class="keep-check">✓</div>Your website</div>
-          <div class="keep-item"><div class="keep-check">✓</div>Your CMS</div>
-          <div class="keep-item"><div class="keep-check">✓</div>Your hosting</div>
-          <div class="keep-item"><div class="keep-check">✓</div>Your design</div>
-          <div class="keep-item"><div class="keep-check">✓</div>Your content</div>
+        <div class="ey">Proof layer</div>
+        <h2 class="proof-h2">Claims Backed by Cryptographic Proof.</h2>
+        <p class="proof-body">Every ADI™ innovation is SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Pre-existence is mathematically provable — not claimed.</p>
+        <div class="proof-badges">
+          <span class="p-badge g">SHA-256 Fingerprinting</span>
+          <span class="p-badge g">Bitcoin OTS Anchoring</span>
+          <span class="p-badge c">EU AI Act Aligned</span>
+          <span class="p-badge m">Innovation Registry #1–9</span>
+          <span class="p-badge m">Supports Readiness — Never Certifies</span>
         </div>
-      </div>
-      <div>
-        <div class="layer-diagram" role="img" aria-label="Layer diagram showing AI layer added alongside existing website">
-          <div class="layer-row layer-existing">Your website (unchanged)</div>
-          <div class="layer-plus">+</div>
-          <div class="layer-row layer-new">
-            AI visibility layer
-            <span class="layer-new-tag">New</span>
-          </div>
-          <div style="height:16px"></div>
-          <div style="font-size:13px;color:var(--dim);line-height:1.6">
-            Delivered at the network edge.<br>
-            Injected alongside your content.<br>
-            Your source files stay untouched.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     HOW IT WORKS
-     ============================================================ -->
-<section id="how" aria-labelledby="how-heading">
-  <div class="container">
-    <div class="section-eyebrow" id="products">Products</div>
-    <h2 id="how-heading" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-.02em;max-width:480px;line-height:1.1">
-      Three steps.<br>Most done for you.
-    </h2>
-    <div class="how-grid">
-      <div class="how-card">
-        <div class="how-num" aria-hidden="true">01</div>
-        <div class="how-title">AI Lens™</div>
-        <p class="how-body">
-          We find exactly what information AI needs to understand your business.
-          What's there. What's missing. What's unclear.
-        </p>
-        <div class="how-time">Typical delivery: 24 hours</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num" aria-hidden="true">02</div>
-        <div class="how-title">AI Audit™</div>
-        <p class="how-body">
-          We measure your current visibility, trust signals, and recommendation
-          readiness across every major AI system.
-        </p>
-        <div class="how-time">Typical delivery: 24 hours</div>
-      </div>
-      <div class="how-card">
-        <div class="how-num" aria-hidden="true">03</div>
-        <div class="how-title">AI Ready™</div>
-        <p class="how-body">
-          We implement the missing layer. Your business becomes readable,
-          understandable, and citable by AI — without touching your website.
-        </p>
-        <div class="how-time">Typical delivery: 1–7 days</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     EFFORT + VERIFICATION
-     ============================================================ -->
-<section class="effort-verify" aria-labelledby="effort-heading">
-  <div class="container">
-    <div class="ev-grid">
-      <div class="ev-col">
-        <div class="section-eyebrow">Your effort</div>
-        <h2 class="ev-h3" id="effort-heading">
-          Usually 30 to 90 minutes<br>of your time.
-        </h2>
-        <div class="ev-big" aria-hidden="true">90<span style="font-size:32px;opacity:.6">min</span></div>
-        <div class="ev-big-label">Maximum time investment for you</div>
-        <p class="ev-body">
-          We ask questions about your company, services, customers, and
-          what makes you different. After that, we do most of the work.
-          You validate results before deployment.
-        </p>
-      </div>
-      <div class="ev-divider" role="separator"></div>
-      <div class="ev-col" style="padding-left:56px;padding-right:0">
-        <div class="section-eyebrow">Verification</div>
-        <h2 class="ev-h3" id="verify-heading">
-          You test it directly<br>with AI systems.
-        </h2>
-        <p class="ev-body">
-          Before-and-after verification. Ask any AI system the same questions
-          and see the difference yourself.
-        </p>
-        <div class="query-example">
-          Who provides [your service] in [your market]?
-        </div>
-        <div class="query-example">
-          Who should I hire for [your problem]?
-        </div>
-        <div class="query-example">
-          What companies specialize in [your expertise]?
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     WHY US
-     ============================================================ -->
-<section id="why" aria-labelledby="whyus-heading">
-  <div class="container">
-    <div class="why-us-grid">
-      <div>
-        <div class="section-eyebrow">Why 5thelement.ai</div>
-        <h2 class="why-us-h2" id="whyus-heading">
-          Most companies optimize<br>for search engines.<br>
-          We help businesses become<br>
-          <em>understood by AI.</em>
-        </h2>
-        <p class="why-us-body">
-          There is a difference between being indexed and being understood.
-          Between being crawled and being recommended.
-          We build the layer that crosses that gap.
-        </p>
       </div>
       <div>
-        <div class="proof-row">
-          <span class="proof-icon" aria-hidden="true">◈</span>
-          <p class="proof-text">
-            <strong>Business analysis first.</strong> We understand what makes
-            your company different before we build anything.
-          </p>
-        </div>
-        <div class="proof-row">
-          <span class="proof-icon" aria-hidden="true">◎</span>
-          <p class="proof-text">
-            <strong>No website changes required.</strong> The AI layer sits
-            alongside your existing site. No migration. No redesign.
-          </p>
-        </div>
-        <div class="proof-row">
-          <span class="proof-icon" aria-hidden="true">◆</span>
-          <p class="proof-text">
-            <strong>Verified results.</strong> Before-and-after testing across
-            ChatGPT, Gemini, Claude, Perplexity, and more.
-          </p>
-        </div>
-        <div class="proof-row">
-          <span class="proof-icon" aria-hidden="true">◇</span>
-          <p class="proof-text">
-            <strong>We implement on ourselves first.</strong> 5thelement.ai
-            is the live proof-of-concept of every product we sell.
-          </p>
-        </div>
-        <div class="proof-row">
-          <span class="proof-icon" aria-hidden="true">◉</span>
-          <p class="proof-text">
-            <strong>Trusted by named clients.</strong> Roxana Deak, FCCA CPA —
-            ECBTax.com. Real results, documented.
-          </p>
+        <div class="hash-table">
+          <div class="hash-row"><span class="hash-key">ADI_HASH</span><span class="hash-val">31aa7a56...756bc36</span></div>
+          <div class="hash-row"><span class="hash-key">MANIFEST</span><span class="hash-val">82c79d0e...cd1df30</span></div>
+          <div class="hash-row"><span class="hash-key">AI_SONAR</span><span class="hash-val">c57529c8... [block 949375]</span></div>
+          <div class="hash-row"><span class="hash-key">MOCKINGBIRD</span><span class="hash-val">fb388288... [block 949346]</span></div>
+          <div class="hash-row"><span class="hash-key">GEMINI_AUDIT</span><span class="hash-val">dd8896c2... [block 952597]</span></div>
+          <div class="hash-row verified"><span class="hash-key">OTS_STATUS</span><span class="hash-val">✓ verified</span></div>
+          <div class="hash-row"><span class="hash-key">BLOCK RANGE</span><span class="hash-val">944442 – 952597</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     FREE AUDIT + GUARANTEE
-     ============================================================ -->
-<section class="free-guarantee" id="free" aria-labelledby="free-heading">
-  <div class="container">
-    <div class="fg-grid">
-      <div class="fg-card featured">
-        <div class="fg-tag">No credit card. No obligation.</div>
-        <h2 class="fg-h3" id="free-heading">Free AI Audit</h2>
-        <div class="fg-list">
-          <div class="fg-item"><div class="fg-bullet"></div>AI Visibility Score</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Missing Information Report</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Key Opportunities Identified</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Recommended Next Steps</div>
-        </div>
-        <p class="fg-note" style="color:var(--mid);margin-bottom:24px">Delivered within 24 hours.</p>
-        <a href="#" class="btn-primary">Start Free Audit →</a>
+<!-- ══ FAQ ══════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:0">
+      <div class="ey" style="justify-content:center">FAQ</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-.02em">Six questions.<br>Honest answers.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need to change my website?<span class="faq-ico">+</span></div>
+        <div class="faq-a">No. We add an AI visibility layer alongside your existing website — not inside it. Your site, CMS, hosting, and design stay exactly as they are. We work at the network edge.</div>
       </div>
-      <div class="fg-card">
-        <div class="fg-tag">Our guarantee</div>
-        <h2 class="fg-h3">What we can honestly promise.</h2>
-        <div class="fg-list">
-          <div class="fg-item"><div class="fg-bullet"></div>Clear analysis of how AI currently sees you</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Identification of missing information</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Implementation of agreed improvements</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Measurable before-and-after verification</div>
-          <div class="fg-item"><div class="fg-bullet"></div>Transparent reporting of progress</div>
-        </div>
-        <p class="fg-note">
-          Nobody can guarantee that any AI system will recommend a specific company.
-          We guarantee the work. You measure the results.
-        </p>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How is this different from SEO?<span class="faq-ico">+</span></div>
+        <div class="faq-a">SEO optimizes for search engine ranking algorithms. AI Visibility targets how AI systems understand, verify, and recommend your business in generated answers. Different systems, different signals, different outcomes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How fast will I see results?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Free AI Lens audit delivered within 24 hours. After implementation, recommendation improvement in AI systems is typically measurable within 2–4 weeks. We provide before-and-after verification so you can test directly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What if AI still does not recommend me?<span class="faq-ico">+</span></div>
+        <div class="faq-a">We provide a result-based guarantee. If the agreed improvements don't produce measurable change in how AI systems understand your business, we continue working until they do. No AI system can be forced to recommend anyone — but we guarantee the work.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this compliant with the EU AI Act?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Our work supports EU AI Act readiness. We never certify compliance — that distinction is fundamental to our epistemic discipline. We help businesses document, structure, and verify their AI-related claims in line with Article 50 transparency requirements.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What types of businesses does this work for?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Any B2B company that wants to be found, understood, and recommended by AI systems. Professional services, technology companies, consultancies, agencies, and any business where B2B buyers use AI to evaluate options before making contact.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     FINAL CTA
-     ============================================================ -->
-<section class="final-cta" aria-labelledby="final-heading">
-  <div class="container" style="position:relative;z-index:1">
-    <div class="final-eyebrow">The shift has already started</div>
-    <p class="final-h2">Most businesses were built to be found by Google.</p>
-    <p class="final-h2-accent">We help businesses become <em>understood by AI.</em></p>
-    <p class="final-sub">See how AI currently sees your business. It takes 24 hours. It costs nothing.</p>
-    <div class="final-actions">
-      <a href="#free" class="btn-primary" style="font-size:17px;padding:16px 32px">
-        Start Your Free AI Audit →
-      </a>
-      <a href="#how" class="btn-ghost" style="font-size:15px">See how it works</a>
+<!-- ══ FINAL CTA ════════════════════════════════════════ -->
+<section class="final" id="cta">
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="final-ey">Start today</div>
+    <h2 class="final-h2">Make Your Business<br><em>Recommendable by AI.</em></h2>
+    <div class="final-acts">
+      <a href="#" class="btn-p" style="font-size:16px;padding:15px 30px">Start Free Audit →</a>
+      <a href="#" class="btn-o" style="font-size:15px;padding:15px 24px">Book a Session →</a>
+      <a href="#" class="btn-o" style="font-size:15px;padding:15px 24px">Request Evaluation →</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-left">
-      <strong>5thelement.ai</strong> — AiVenture S.R.L., CUI 51415878, București, Romania<br>
+  <div class="foot-inner">
+    <div class="foot-l">
+      <strong>AiVenture S.R.L.</strong> · CUI 51415878 · București, Romania<br>
+      <a href="https://5thelement.ai">5thelement.ai</a> ·
+      <a href="https://eu-ai-audit.eu">eu-ai-audit.eu</a> ·
+      <a href="https://eu-ai-act-ready.eu">eu-ai-act-ready.eu</a> ·
       <a href="https://aiventure.ro">aiventure.ro</a> ·
-      <a href="/ai-proof.json">ai-proof.json</a> ·
       <a href="/llms.txt">llms.txt</a> ·
+      <a href="/ai-proof.json">ai-proof.json</a> ·
       <a href="/sitemap.xml">sitemap.xml</a>
     </div>
-    <div class="footer-right">ADI™ · AI Delivery Infrastructure</div>
+    <div class="foot-r">ADI™ · AI Delivery Infrastructure<br>Supports readiness — never certifies</div>
   </div>
 </footer>
 
 <script>
-// ============================================================
-// THEME TOGGLE
-// ============================================================
-function toggleTheme() {
-  const btn = document.getElementById('tt');
-  document.body.classList.toggle('light-mode');
-  btn.textContent = document.body.classList.contains('light-mode') ? '☾' : '☀';
+function toggleTheme(){const b=document.getElementById('tt');document.body.classList.toggle('light-mode');b.textContent=document.body.classList.contains('light-mode')?'☾':'☀'}
+function toggleMob(){const m=document.getElementById('mob'),h=document.getElementById('ham');const o=m.classList.toggle('open');h.setAttribute('aria-expanded',o)}
+function closeMob(){document.getElementById('mob').classList.remove('open');document.getElementById('ham').setAttribute('aria-expanded','false')}
+
+// ENGINE PULSE
+const rows=document.querySelectorAll('#eng-list .eng-row');
+let idx=0;
+(function pulse(){rows.forEach(r=>r.classList.remove('lit'));rows[idx].classList.add('lit');idx=(idx+1)%rows.length;setTimeout(pulse,1300)})();
+
+// FAQ
+function toggleFaq(el){
+  const item=el.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen) item.classList.add('open');
 }
 
-// ============================================================
-// MOBILE MENU
-// ============================================================
-function toggleMenu() {
-  document.getElementById('mobile-menu').classList.toggle('open');
-}
-
-// ============================================================
-// AI ENGINE PULSE — signature animation
-// Travels dot by dot through engine list, implying live monitoring
-// ============================================================
-const engines = document.querySelectorAll('.engine-row');
-let currentEngine = 0;
-
-function pulseNextEngine() {
-  engines.forEach(e => {
-    e.classList.remove('active');
-    e.querySelector('.engine-dot').classList.remove('active');
-  });
-
-  const row = engines[currentEngine];
-  if (row) {
-    row.classList.add('active');
-    row.querySelector('.engine-dot').classList.add('active');
-  }
-
-  currentEngine = (currentEngine + 1) % engines.length;
-}
-
-// Start immediately, then cycle
-pulseNextEngine();
-setInterval(pulseNextEngine, 1400);
-
-// ============================================================
-// SMOOTH SCROLL for anchor links
-// ============================================================
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
   });
 });
 
-// ============================================================
-// SCROLL REVEAL — subtle opacity/translate on section entry
-// ============================================================
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.gain-card, .how-card, .proof-row, .q-item, .fg-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+// SCROLL REVEAL
+if(window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+  const els=document.querySelectorAll('.eng-prod,.pr-card,.fw-pill,.hash-row,.faq-item,.j-row');
+  const io=new IntersectionObserver((entries,obs)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target)}});
+  },{threshold:0.06});
+  els.forEach(el=>{el.style.cssText+='opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease';io.observe(el)});
+}
 </script>
-
 </body>
 </html>
