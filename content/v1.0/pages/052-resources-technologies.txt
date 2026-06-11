@@ -1,0 +1,419 @@
+TITLE: Technologies
+
+BREADCRUMB: Home › Resources › Technologies
+
+THE TECHNICAL STACK BEHIND ADI™
+
+── PURPOSE ──
+
+This page explains the technology used to build and operate the ADI™ platform.
+
+Everything is based on a simple rule:
+
+GitHub = Content
+
+KV = Signals
+
+Worker = Execution
+
+Three responsibilities.
+
+Three systems.
+
+No overlap.
+
+── EDGE INFRASTRUCTURE ──
+
+Cloudflare Workers
+
+Purpose:
+
+Execution Layer
+
+Handles:
+
+Requests
+
+Routing
+
+Signal Delivery
+
+Logic
+
+Worker = Execution
+
+---
+
+Cloudflare Workers KV
+
+Purpose:
+
+Signal Storage
+
+Stores:
+
+ai.json
+
+llms.txt
+
+entities.json
+
+intents.json
+
+authority.json
+
+governance.json
+
+ai-proof.json
+
+KV = Signals
+
+---
+
+Cloudflare Pages
+
+Purpose:
+
+Website Hosting
+
+Hosts:
+
+HTML
+
+CSS
+
+JavaScript
+
+Images
+
+Pages = Website
+
+---
+
+Global Edge Network
+
+300+ Edge Locations
+
+Less than 10ms delivery
+
+Worldwide availability
+
+── CONTENT INFRASTRUCTURE ──
+
+GitHub
+
+Purpose:
+
+Single Source of Truth
+
+Stores:
+
+Pages
+
+Articles
+
+Documentation
+
+Website Content
+
+Version History
+
+GitHub = Content
+
+---
+
+Deployment Pipeline
+
+GitHub
+
+↓
+
+Cloudflare Pages
+
+↓
+
+Website Live
+
+Automatic deployment
+
+Version controlled
+
+── THE THREE SSOTS ──
+
+SSOT #1
+
+GitHub
+
+Content
+
+---
+
+SSOT #2
+
+KV
+
+Signals
+
+---
+
+SSOT #3
+
+Worker
+
+Execution
+
+Never mix them.
+
+Each has one responsibility.
+
+── ADI FACTORY™ ──
+
+ADI Factory™
+
+Content Production System
+
+Pipeline:
+
+CANON™
+
+↓
+
+COMPILER™
+
+↓
+
+HAT™
+
+Meaning:
+
+Source Truth
+
+↓
+
+Transformation
+
+↓
+
+Deployed Artifact
+
+── THE TEN ARCHITECTURAL LAWS ──
+
+LAW 1
+
+Site = Content
+
+Edge = Signals
+
+---
+
+LAW 2
+
+Edge Central Architecture
+
+---
+
+LAW 3
+
+Three SSOTs
+
+GitHub
+
+KV
+
+Worker
+
+---
+
+LAW 4
+
+Zero LLM in Delivery Edge
+
+---
+
+LAW 5
+
+Supports Readiness
+
+Never Certifies
+
+---
+
+LAW 6
+
+Signals → Files
+
+Never Files → Signals
+
+---
+
+LAW 7
+
+Human In The Loop Mandatory
+
+---
+
+LAW 8
+
+Tenant Isolation
+
+---
+
+LAW 9
+
+Everything Versioned
+
+---
+
+LAW 10
+
+Simple Onboarding
+
+Git + CNAME
+
+── CRYPTOGRAPHIC STACK ──
+
+SHA-256
+
+Fingerprinting
+
+---
+
+OpenTimestamps
+
+Timestamping
+
+---
+
+Bitcoin
+
+Anchoring
+
+---
+
+OTS Files
+
+Verification
+
+Purpose:
+
+Independent Proof
+
+── SIGNAL DELIVERY ──
+
+All signal files delivered from:
+
+Cloudflare Workers KV
+
+Examples:
+
+ai.json
+
+llms.txt
+
+entities.json
+
+intents.json
+
+authority.json
+
+governance.json
+
+ai-proof.json
+
+Fast
+
+Global
+
+Versioned
+
+── SCHEMA IMPLEMENTATION ──
+
+Schema.org JSON-LD
+
+25 Core Types
+
+Examples:
+
+Organization
+
+Service
+
+FAQPage
+
+BreadcrumbList
+
+Person
+
+Article
+
+DefinedTerm
+
+HowTo
+
+Injected at Edge
+
+Validated before deployment
+
+── BENEFITS ──
+
+Scalable
+
+Fast
+
+Global
+
+Version Controlled
+
+Decoupled
+
+AI Friendly
+
+Future Ready
+
+── BEFORE ──
+
+Website only
+
+No signal architecture
+
+No proof architecture
+
+No separation of responsibilities
+
+---
+
+AFTER
+
+Content Layer
+
+Signal Layer
+
+Execution Layer
+
+Proof Layer
+
+Complete AI Infrastructure
+
+── FAQ ──
+
+1. Why GitHub?
+
+Content source of truth.
+
+2. Why KV?
+
+Signal storage.
+
+3. Why Workers?
+
+Execution layer.
+
+4. Why Cloudflare?
+
+Global edge delivery.
+
+5. Why separate everything?
+
+To keep architecture simple, scalable and maintainable.
+
+── END OF RESOURCES SECTION ──
