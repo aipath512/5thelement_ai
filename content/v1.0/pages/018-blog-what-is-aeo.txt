@@ -1,0 +1,210 @@
+TITLE: What Is AEO? Answer Engine Optimisation Explained for B2B
+
+BREADCRUMB: Home › Blog › What Is AEO?
+
+Category: AEO
+
+Date: June 10, 2026
+
+Reading Time: 8 min
+
+── SHORT ANSWER ──
+
+AEO = structuring business information so AI systems can find,
+understand, and cite it when answering buyer queries.
+
+Not a replacement for SEO.
+
+A parallel discipline.
+
+── WHY AEO EXISTS ──
+
+Search engines return ranked pages.
+
+Answer engines return synthesised answers.
+
+The buyer no longer evaluates 10 pages.
+
+AI does it.
+
+B2B procurement research is shifting to AI-assisted workflows.
+
+── AEO vs SEO ──
+
+SEO Target:
+
+Ranking algorithms
+
+Keywords → Pages → Clicks
+
+SEO Signals:
+
+Backlinks
+
+Content
+
+Page Speed
+
+SEO Output:
+
+Ranked Position
+
+---
+
+AEO Target:
+
+AI Knowledge Graphs
+
+Intent → Understanding → Answers
+
+AEO Signals:
+
+JSON-LD
+
+ai.json
+
+llms.txt
+
+AEO Output:
+
+Named recommendation in AI answers
+
+── THE FIVE STAGES ──
+
+Stage 1
+
+Findable™
+
+AI locates entity
+
+---
+
+Stage 2
+
+Understandable™
+
+AI reads services and buyers
+
+---
+
+Stage 3
+
+Verifiable™
+
+AI confirms claims from external sources
+
+---
+
+Stage 4
+
+Trustable™
+
+AI treats business as credible authority
+
+---
+
+Stage 5
+
+Recommendable™
+
+AI names business in answers
+
+── THE 167 AI SIGNALS ──
+
+Identity and Entity
+
+48 Signals
+
+---
+
+Trust and Proof
+
+61 Signals
+
+---
+
+Intent and Governance
+
+58 Signals
+
+Total:
+
+167 Signals
+
+── KEY AEO FILES ──
+
+ai.json
+
+llms.txt
+
+entities.json
+
+intents.json
+
+robots.txt
+
+── ADI™ RULE ──
+
+Signals → Files
+
+Never Files → Signals
+
+Pipeline:
+
+RAW → FACT → ENTITY → RELATIONSHIP → SIGNAL → FILE
+
+── HOW TO START ──
+
+AI AUDIT™
+
+↓
+
+AI LENS™
+
+↓
+
+AI READY™
+
+↓
+
+AI SIGNALS™
+
+↓
+
+EDGE INJECTOR™
+
+── FAQ ──
+
+1. What is AEO?
+
+Structuring business information so AI systems can understand it.
+
+2. How is AEO different from SEO?
+
+SEO optimizes rankings.
+
+AEO optimizes AI answers.
+
+3. Why does AEO matter for B2B?
+
+Buyers increasingly use AI before contacting suppliers.
+
+4. What is the first step?
+
+AI AUDIT™ and AI LENS™.
+
+5. How long does it take?
+
+1–2 weeks for foundations.
+
+2–3 months for full implementation.
+
+── RELATED ──
+
+What Is GEO?
+
+What Is AIO?
+
+AI-SEO
+
+The 167 AI Signals
