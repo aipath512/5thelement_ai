@@ -1,0 +1,271 @@
+TITLE: Services — 5thelement.ai
+
+BREADCRUMB: Home › Services
+
+Expert Implementation.
+
+Your Business.
+
+AI-Ready.
+
+── OVERVIEW ──
+
+Our services help businesses become:
+
+Findable™
+
+Understandable™
+
+Verifiable™
+
+Trustable™
+
+Recommendable™
+
+We implement the products for you.
+
+Four service paths.
+
+Different depth.
+
+Different effort.
+
+Same goal.
+
+AI recommendation readiness.
+
+── SERVICE 1 ──
+
+AI LENS™
+
+Free Baseline Audit
+
+Price:
+
+Free
+
+Delivery:
+
+24 Hours
+
+Purpose:
+
+Understand where you stand.
+
+Included:
+
+100 Questions
+
+AI Visibility Information Map™
+
+Gap Registry
+
+Findable™ Assessment
+
+Priority Gap List
+
+Green / Red / Amber Status
+
+Optional Debrief Call
+
+Best For:
+
+Businesses starting their AI visibility journey.
+
+── SERVICE 2 ──
+
+AI READY™
+
+Expert Implementation
+
+Price:
+
+€49 / Hour
+
+Purpose:
+
+Fix identified gaps.
+
+Included:
+
+Everything from AI LENS™
+
+L1–L4 Improvements
+
+AI Files
+
+Schema
+
+Entity Structure
+
+Intent Mapping
+
+Written Audit Report
+
+Best For:
+
+Businesses wanting rapid implementation.
+
+── SERVICE 3 ──
+
+AI SIGNALS™
+
+Signal Layer Deployment
+
+Price:
+
+€49 / Hour
+
+Purpose:
+
+Deploy complete machine-readable visibility layer.
+
+Included:
+
+Everything from AI READY™
+
+167 AI Signals
+
+Knowledge Graph™
+
+Edge Deployment
+
+Signal Validation
+
+Signal Monitoring Setup
+
+Best For:
+
+Businesses wanting complete technical coverage.
+
+── SERVICE 4 ──
+
+TRUST AUTHORITY MODULE™
+
+Full Authority Enforcement
+
+Price:
+
+Custom
+
+Evaluation Required
+
+Purpose:
+
+Build trust, authority and recommendation capability.
+
+Included:
+
+Everything from AI SIGNALS™
+
+TRUST LAYER™
+
+PROOF LAYER™
+
+AI SONAR™
+
+SHA-256 Proof
+
+Bitcoin Anchoring
+
+Governance Layer
+
+Verification Badge
+
+Quarterly Maintenance
+
+Best For:
+
+Businesses pursuing Recommendable™ status.
+
+── SERVICE COMPARISON ──
+
+AI LENS™
+
+Audit Only
+
+---
+
+AI READY™
+
+Audit + Fix
+
+---
+
+AI SIGNALS™
+
+Audit + Fix + Signals
+
+---
+
+TRUST AUTHORITY MODULE™
+
+Audit + Fix + Signals + Trust + Proof + Monitoring
+
+── SERVICE PATH ──
+
+Step 1
+
+AI LENS™
+
+↓
+
+Step 2
+
+AI READY™
+
+↓
+
+Step 3
+
+AI SIGNALS™
+
+↓
+
+Step 4
+
+TRUST AUTHORITY MODULE™
+
+↓
+
+Recommendable™
+
+── BENEFITS ──
+
+Clear roadmap.
+
+Fast implementation.
+
+No website rebuild.
+
+No CMS migration.
+
+Human review included.
+
+AI-focused outcomes.
+
+── FAQ ──
+
+1. Which service should I start with?
+
+AI LENS™.
+
+2. Is AI LENS™ really free?
+
+Yes.
+
+3. Can I skip directly to AI SIGNALS™?
+
+Yes, but AI LENS™ is recommended.
+
+4. Do I need developers?
+
+No.
+
+5. Which service leads to recommendations?
+
+Trust Authority Module™.
+
+── NEXT PAGE ──
+
+AI LENS™ Service
