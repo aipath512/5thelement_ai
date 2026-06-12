@@ -20,7 +20,6 @@
   <style>
     :root {
       --bg: #07090d;
-      --bg-soft: #0d1118;
       --bg-card: #121824;
       --bg-card-2: #151e2d;
       --text: #ffffff;
@@ -34,13 +33,9 @@
       --radius: 24px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -50,22 +45,16 @@
       line-height: 1.55;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(var(--max), 92%);
       margin: 0 auto;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .section-label {
       color: var(--gold);
       text-transform: uppercase;
       letter-spacing: 0.14em;
@@ -74,19 +63,7 @@
       margin-bottom: 16px;
     }
 
-    .section-label {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
       margin: 0;
       color: var(--text);
       letter-spacing: -0.035em;
@@ -116,11 +93,6 @@
       margin-bottom: 12px;
     }
 
-    h4 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
     p {
       margin: 0 0 18px;
       color: var(--muted);
@@ -131,11 +103,6 @@
       max-width: 860px;
       font-size: 22px;
       color: var(--muted);
-    }
-
-    .small {
-      font-size: 15px;
-      color: var(--muted-2);
     }
 
     .strong {
@@ -184,9 +151,7 @@
       font-weight: 650;
     }
 
-    .navlinks a:hover {
-      color: var(--gold);
-    }
+    .navlinks a:hover { color: var(--gold); }
 
     .nav-contact {
       color: var(--muted);
@@ -198,7 +163,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       min-height: 48px;
       padding: 14px 22px;
       border-radius: 999px;
@@ -209,9 +173,7 @@
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn.secondary {
       background: transparent;
@@ -306,12 +268,6 @@
       gap: 22px;
     }
 
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
     .split {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
@@ -331,10 +287,6 @@
         radial-gradient(circle at top right, rgba(245,200,66,0.16), transparent 32%),
         linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
       border-color: rgba(245,200,66,0.34);
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
     }
 
     .visual {
@@ -374,16 +326,16 @@
       font-size: 18px;
     }
 
-    li {
-      margin: 8px 0;
-    }
+    li { margin: 8px 0; }
 
-    .check-list {
+    .check-list,
+    .bad-list {
       list-style: none;
       padding: 0;
     }
 
-    .check-list li {
+    .check-list li,
+    .bad-list li {
       position: relative;
       padding-left: 28px;
     }
@@ -394,16 +346,6 @@
       left: 0;
       color: var(--gold);
       font-weight: 900;
-    }
-
-    .bad-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .bad-list li {
-      position: relative;
-      padding-left: 28px;
     }
 
     .bad-list li::before {
@@ -431,7 +373,6 @@
     }
 
     .step {
-      position: relative;
       background: var(--bg-card);
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -460,8 +401,7 @@
       margin-top: 28px;
     }
 
-    th,
-    td {
+    th, td {
       border: 1px solid var(--line);
       padding: 18px;
       text-align: left;
@@ -478,9 +418,7 @@
       letter-spacing: 0.08em;
     }
 
-    td strong {
-      color: var(--text);
-    }
+    td strong { color: var(--text); }
 
     .faq details {
       background: var(--bg-card);
@@ -515,17 +453,25 @@
     }
 
     footer {
-      padding: 46px 0;
+      padding: 54px 0;
       color: var(--muted);
       font-size: 14px;
       background: #05070a;
     }
 
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover { color: var(--gold); }
+
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
+      grid-template-columns: 1.1fr 1fr 1.4fr;
+      gap: 34px;
+      align-items: start;
     }
 
     @media (max-width: 980px) {
@@ -533,15 +479,12 @@
       .split,
       .grid-2,
       .grid-3,
-      .grid-4,
-      .timeline {
+      .timeline,
+      .footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .navlinks {
-        display: none;
-      }
-
+      .navlinks,
       .nav-contact {
         display: none;
       }
@@ -552,10 +495,6 @@
 
       .hero {
         padding: 92px 0 80px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -570,32 +509,19 @@
         "name": "AiVenture SRL",
         "url": "https://5thelement.ai/",
         "email": "contact@5thelement.ai",
+        "sameAs": [
+          "https://ro.linkedin.com/in/dan-ionesco-a856082a0",
+          "https://www.linkedin.com/company/107338970",
+          "https://www.linkedin.com/showcase/5thelement-ai/",
+          "https://www.crunchbase.com/organization/aiventure-s-r-l",
+          "https://www.facebook.com/people/Aiventure/61573220584246/",
+          "https://x.com/aipath512",
+          "https://www.youtube.com/@AIVenture-q8u",
+          "https://medium.com/@aipath512"
+        ],
         "brand": {
           "@type": "Brand",
           "name": "5thelement.ai"
-        },
-        "areaServed": [
-          "Romania",
-          "European Union",
-          "United Kingdom",
-          "United States"
-        ],
-        "knowsAbout": [
-          "AI Visibility",
-          "AI Recommendation Readiness",
-          "AEO",
-          "GEO",
-          "AIO",
-          "AI Signals",
-          "AI Discovery Infrastructure",
-          "AI Search",
-          "AI Agents",
-          "B2B Growth"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "contact@5thelement.ai",
-          "contactType": "customer support"
         }
       },
       {
@@ -605,15 +531,14 @@
         "name": "5thelement.ai",
         "publisher": {
           "@id": "https://5thelement.ai/#organization"
-        },
-        "inLanguage": "en"
+        }
       },
       {
         "@type": "WebPage",
         "@id": "https://5thelement.ai/#homepage",
         "url": "https://5thelement.ai/",
         "name": "Attract More Clients. Sell More. Grow With AI.",
-        "description": "AiVenture helps B2B firms attract, promote, sell and grow using AI by making the business visible, understandable, verifiable, trustable and recommendable by AI systems.",
+        "description": "AiVenture helps B2B firms attract, promote, sell and grow using AI.",
         "isPartOf": {
           "@id": "https://5thelement.ai/#website"
         },
@@ -623,16 +548,6 @@
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://5thelement.ai/assets/ai_transition.webp"
-        },
-        "mainEntity": {
-          "@type": "Service",
-          "@id": "https://5thelement.ai/#ai-audit-service",
-          "name": "AI Audit™",
-          "provider": {
-            "@id": "https://5thelement.ai/#organization"
-          },
-          "serviceType": "AI visibility and recommendation readiness audit",
-          "description": "An audit that evaluates how AI systems can find, understand, verify and recommend a business."
         }
       },
       {
@@ -710,681 +625,602 @@
 
 <main>
 
-  <section class="hero" id="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">AI Visibility for B2B Growth</div>
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">AI Visibility for B2B Growth</div>
 
-        <h1>
-          Attract More Clients.<br />
-          Sell More.<br />
-          <em>Grow With AI.</em>
-        </h1>
+      <h1>
+        Attract More Clients.<br />
+        Sell More.<br />
+        <em>Grow With AI.</em>
+      </h1>
 
-        <p class="lead">
-          AiVenture helps B2B companies attract, promote, sell and grow using AI —
-          without rebuilding their website, replacing their team, or disrupting existing systems.
-        </p>
+      <p class="lead">
+        AiVenture helps B2B companies attract, promote, sell and grow using AI —
+        without rebuilding their website, replacing their team, or disrupting existing systems.
+      </p>
 
-        <p class="lead">
-          When AI recommends businesses like yours, does it recommend you — or your competitors?
-        </p>
+      <p class="lead">
+        When AI recommends businesses like yours, does it recommend you — or your competitors?
+      </p>
 
-        <div class="hero-actions">
-          <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
-          <a class="btn secondary" href="#market-shift">See What Changed</a>
-        </div>
-
-        <div class="trust-row" aria-label="Key capabilities">
-          <span class="pill">AI Visibility</span>
-          <span class="pill">AEO</span>
-          <span class="pill">GEO</span>
-          <span class="pill">AIO</span>
-          <span class="pill">AI Signals</span>
-          <span class="pill">AI Agents</span>
-        </div>
+      <div class="hero-actions">
+        <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+        <a class="btn secondary" href="#market-shift">See What Changed</a>
       </div>
 
-      <aside class="hero-panel" aria-label="Homepage promise">
-        <div class="mini-title">The new question for every B2B firm</div>
-        <h3>Can AI find, understand, verify and recommend your business?</h3>
-        <p>
-          Customers are no longer only searching on Google. They ask AI systems and increasingly delegate search,
-          comparison, verification and buying decisions to AI agents.
-        </p>
-        <p>
-          If AI cannot understand why your company should be recommended, it may recommend someone else.
-        </p>
-        <a class="btn" href="/ai-audit/">Check My AI Visibility</a>
-      </aside>
+      <div class="trust-row">
+        <span class="pill">AI Visibility</span>
+        <span class="pill">AEO</span>
+        <span class="pill">GEO</span>
+        <span class="pill">AIO</span>
+        <span class="pill">AI Signals</span>
+        <span class="pill">AI Agents</span>
+      </div>
     </div>
-  </section>
 
-  <section id="market-shift">
-    <div class="container">
-      <div class="section-label">Market Shift</div>
-      <h2>The Way Customers Buy Is Changing</h2>
-
-      <p class="lead">
-        The shift is not that websites disappear. The shift is not that Google disappears.
-        The shift is that the buyer’s representative changes.
+    <aside class="hero-panel">
+      <div class="mini-title">The new question for every B2B firm</div>
+      <h3>Can AI find, understand, verify and recommend your business?</h3>
+      <p>
+        Customers are no longer only searching on Google. They ask AI systems and increasingly delegate search,
+        comparison, verification and buying decisions to AI agents.
       </p>
-
-      <p class="lead">
-        Before, the human searched, compared, trusted, clicked, contacted and bought.
-        Now, AI searches, compares, verifies, filters, recommends and may soon buy.
+      <p>
+        If AI cannot understand why your company should be recommended, it may recommend someone else.
       </p>
+      <a class="btn" href="/ai-audit/">Check My AI Visibility</a>
+    </aside>
+  </div>
+</section>
 
-      <div class="visual">
-        <img src="/assets/ai_transition.webp" alt="2026 market shift from Google search to AI agent recommendation" />
-        <div class="visual-caption">
-          Old road: human search through Google, ads, SEO and social media. New road: AI agent searches, compares,
-          verifies, recommends and routes the customer toward selected options.
-        </div>
+<section id="market-shift">
+  <div class="container">
+    <div class="section-label">Market Shift</div>
+    <h2>The Way Customers Buy Is Changing</h2>
+
+    <p class="lead">
+      The shift is not that websites disappear. The shift is not that Google disappears.
+      The shift is that the buyer’s representative changes.
+    </p>
+
+    <p class="lead">
+      Before, the human searched, compared, trusted, clicked, contacted and bought.
+      Now, AI searches, compares, verifies, filters, recommends and may soon buy.
+    </p>
+
+    <div class="visual">
+      <img src="/assets/ai_transition.webp" alt="2026 market shift from Google search to AI agent recommendation" />
+      <div class="visual-caption">
+        Old road: human search through Google, ads, SEO and social media. New road: AI agent searches, compares,
+        verifies, recommends and routes the customer toward selected options.
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Traffic Economy</h3>
+        <div class="flow">Customer <span class="arrow">→</span> Google <span class="arrow">→</span> Website <span class="arrow">→</span> Contact <span class="arrow">→</span> Purchase</div>
+        <p>The customer performs the work: search, comparison, evaluation, contact and buying decision.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>Traffic Economy</h3>
-          <div class="flow">Customer <span class="arrow">→</span> Google <span class="arrow">→</span> Website <span class="arrow">→</span> Contact <span class="arrow">→</span> Purchase</div>
-          <p>
-            The customer performs the work: search, comparison, evaluation, contact and buying decision.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Answer Economy</h3>
-          <div class="flow">Customer <span class="arrow">→</span> AI <span class="arrow">→</span> Answer <span class="arrow">→</span> Recommendation</div>
-          <p>
-            AI performs part of the work: searches, compares, summarizes, explains and recommends.
-          </p>
-        </div>
-
-        <div class="card gold">
-          <h3>Recommendation Economy</h3>
-          <div class="flow">Customer <span class="arrow">→</span> AI Agent <span class="arrow">→</span> Verified Options <span class="arrow">→</span> Purchase</div>
-          <p>
-            AI agents search, explore, compare, verify, filter, recommend, select and increasingly buy.
-          </p>
-        </div>
+      <div class="card">
+        <h3>Answer Economy</h3>
+        <div class="flow">Customer <span class="arrow">→</span> AI <span class="arrow">→</span> Answer <span class="arrow">→</span> Recommendation</div>
+        <p>AI performs part of the work: searches, compares, summarizes, explains and recommends.</p>
       </div>
 
-      <p class="lead" style="margin-top:34px;">
-        For the first time, companies are not selling only to people.
-        They are also selling to the machines that represent people.
-      </p>
+      <div class="card gold">
+        <h3>Recommendation Economy</h3>
+        <div class="flow">Customer <span class="arrow">→</span> AI Agent <span class="arrow">→</span> Verified Options <span class="arrow">→</span> Purchase</div>
+        <p>AI agents search, explore, compare, verify, filter, recommend, select and increasingly buy.</p>
+      </div>
+    </div>
 
+    <p class="lead" style="margin-top:34px;">
+      For the first time, companies are not selling only to people.
+      They are also selling to the machines that represent people.
+    </p>
+
+    <p class="lead strong">
+      That changes marketing. That changes sales. That changes growth.
+    </p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container split">
+    <div>
+      <div class="section-label">Why You Should Care</div>
+      <h2>AI Can Exclude You Before The Human Buyer Ever Sees You</h2>
+      <p>
+        Most firms still optimize for the old buyer journey:
+        human search, Google results, website visit, contact form and sales conversation.
+      </p>
+      <p>
+        But the new journey increasingly starts with AI. AI systems compare options before the buyer visits your website.
+        AI agents can shortlist suppliers before your sales team knows the opportunity exists.
+      </p>
+      <p>
+        If your business is not understandable, verifiable and selectable by AI, you may lose visibility before the
+        human customer reaches you.
+      </p>
+    </div>
+
+    <div class="card gold">
+      <h3>The new strategic question</h3>
       <p class="lead strong">
-        That changes marketing. That changes sales. That changes growth.
+        Is AI recommending your business — or your competitors?
       </p>
-    </div>
-  </section>
-
-  <section id="why">
-    <div class="container split">
-      <div>
-        <div class="section-label">Why You Should Care</div>
-        <h2>AI Can Exclude You Before The Human Buyer Ever Sees You</h2>
-        <p>
-          Most firms still optimize for the old buyer journey:
-          human search, Google results, website visit, contact form and sales conversation.
-        </p>
-        <p>
-          But the new journey increasingly starts with AI. AI systems compare options before the buyer visits your website.
-          AI agents can shortlist suppliers before your sales team knows the opportunity exists.
-        </p>
-        <p>
-          If your business is not understandable, verifiable and selectable by AI, you may lose visibility before the
-          human customer reaches you.
-        </p>
-      </div>
-
-      <div class="card gold">
-        <h3>The new strategic question</h3>
-        <p class="lead strong">
-          Is AI recommending your business — or your competitors?
-        </p>
-        <p>
-          That is why the first step is not another campaign. The first step is to understand how AI currently sees your business.
-        </p>
-        <a class="btn" href="/ai-audit/">Start AI Audit™</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-label">Marketing, Sales and Growth Shift</div>
-      <h2>Growth Now Has Two Engines</h2>
-
-      <p class="lead">
-        Business growth comes from two directions of interaction: client-initiated demand and firm-initiated demand.
-        Both are changing because AI has entered the buying process.
+      <p>
+        That is why the first step is not another campaign. The first step is to understand how AI currently sees your business.
       </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="metric">30–35%</div>
-          <h3>Client-Initiated Demand</h3>
-          <p>
-            The client starts. They search, ask, compare or delegate the search to AI.
-          </p>
-          <p>
-            This is where AEO, GEO, AIO, AI Signals, AI Visibility and AI Recommendation Readiness matter most.
-          </p>
-          <ul class="check-list">
-            <li>Be found when the buyer asks AI.</li>
-            <li>Be understood when AI reads your business.</li>
-            <li>Be verified when AI checks your claims.</li>
-            <li>Be recommended when AI compares options.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="metric">60–65%</div>
-          <h3>Firm-Initiated Demand</h3>
-          <p>
-            The firm starts. The firm promotes, educates, follows up, reactivates clients and creates opportunities.
-          </p>
-          <p>
-            This is where AI marketing, personalized campaigns, CRM follow-up, WhatsApp sequences and AI sales agents matter most.
-          </p>
-          <ul class="check-list">
-            <li>Create demand continuously.</li>
-            <li>Educate leads automatically.</li>
-            <li>Qualify opportunities faster.</li>
-            <li>Reactivate existing customers.</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="lead" style="margin-top:34px;">
-        Marketing and sales no longer operate as disconnected campaigns. They become an AI-assisted growth loop:
-        discover, attract, educate, qualify, sell, follow up, reactivate and improve.
-      </p>
+      <a class="btn" href="/ai-audit/">Start AI Audit™</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <div class="section-label">Why Companies Contact Us</div>
-      <h2>They Feel The Market Changing, But They Cannot See The AI Layer</h2>
+<section>
+  <div class="container">
+    <div class="section-label">Marketing, Sales and Growth Shift</div>
+    <h2>Growth Now Has Two Engines</h2>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>We are not visible in AI answers</h3>
-          <p>
-            Potential customers ask ChatGPT, Gemini, Claude, Copilot or Perplexity.
-            Competitors appear. Your company does not.
-          </p>
-        </div>
+    <p class="lead">
+      Business growth comes from two directions of interaction: client-initiated demand and firm-initiated demand.
+      Both are changing because AI has entered the buying process.
+    </p>
 
-        <div class="card">
-          <h3>Competitors are being recommended</h3>
-          <p>
-            AI systems increasingly recommend a small set of trusted options.
-            Many firms do not know whether they are included or excluded.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>AI does not understand what we do</h3>
-          <p>
-            Humans may understand your website. AI may not understand your offer, audience, proof, use cases and differentiators.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>AI cannot verify our claims</h3>
-          <p>
-            If AI cannot verify your claims, it may ignore them or recommend another company that is easier to validate.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>We do not know how AI sees us</h3>
-          <p>
-            Most firms have never tested whether AI can find, understand, verify and recommend their business.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>We do not know what to fix first</h3>
-          <p>
-            AI visibility is not one file, one keyword or one campaign. It is a system of business information, proof and signals.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="what-we-do">
-    <div class="container split">
-      <div>
-        <div class="section-label">What We Actually Do</div>
-        <h2>AiVenture Builds An AI Discovery Layer™ Around Your Business</h2>
-
+    <div class="grid-2">
+      <div class="card">
+        <div class="metric">30–35%</div>
+        <h3>Client-Initiated Demand</h3>
         <p>
-          AiVenture helps B2B firms attract, promote, sell and grow using AI.
+          The client starts. They search, ask, compare or delegate the search to AI.
         </p>
-
         <p>
-          We build an AI Discovery Layer™ around your business so AI systems can find, understand, verify, trust and
-          recommend your company.
+          This is where AEO, GEO, AIO, AI Signals, AI Visibility and AI Recommendation Readiness matter most.
         </p>
-
-        <p>
-          This does not require rebuilding your website. It does not require replacing your team. It does not require
-          stopping your existing marketing and sales activity.
-        </p>
-
-        <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+        <ul class="check-list">
+          <li>Be found when the buyer asks AI.</li>
+          <li>Be understood when AI reads your business.</li>
+          <li>Be verified when AI checks your claims.</li>
+          <li>Be recommended when AI compares options.</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>The AI Discovery Layer™ explains to AI:</h3>
+        <div class="metric">60–65%</div>
+        <h3>Firm-Initiated Demand</h3>
+        <p>
+          The firm starts. The firm promotes, educates, follows up, reactivates clients and creates opportunities.
+        </p>
+        <p>
+          This is where AI marketing, personalized campaigns, CRM follow-up, WhatsApp sequences and AI sales agents matter most.
+        </p>
         <ul class="check-list">
-          <li>Who your company is</li>
-          <li>What your company offers</li>
-          <li>Who your company helps</li>
-          <li>Where your company operates</li>
-          <li>Why your company is different</li>
-          <li>What proof supports your claims</li>
-          <li>Why your company should be recommended</li>
+          <li>Create demand continuously.</li>
+          <li>Educate leads automatically.</li>
+          <li>Qualify opportunities faster.</li>
+          <li>Reactivate existing customers.</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <div class="section-label">Before / After</div>
-      <h2>From Invisible To Recommendable</h2>
+    <p class="lead" style="margin-top:34px;">
+      Marketing and sales no longer operate as disconnected campaigns. They become an AI-assisted growth loop:
+      discover, attract, educate, qualify, sell, follow up, reactivate and improve.
+    </p>
+  </div>
+</section>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Before AI Discovery Infrastructure</h3>
-          <ul class="bad-list">
-            <li>AI cannot clearly identify the business.</li>
-            <li>AI struggles to understand the offer.</li>
-            <li>AI cannot connect services to buyer intents.</li>
-            <li>AI cannot verify important claims.</li>
-            <li>AI lacks confidence in the company.</li>
-            <li>AI recommends competitors instead.</li>
-          </ul>
-        </div>
+<section>
+  <div class="container">
+    <div class="section-label">Why Companies Contact Us</div>
+    <h2>They Feel The Market Changing, But They Cannot See The AI Layer</h2>
 
-        <div class="card gold">
-          <h3>After AI Discovery Infrastructure</h3>
-          <ul class="check-list">
-            <li>AI can identify the business.</li>
-            <li>AI can understand the offer.</li>
-            <li>AI can map services to buyer intents.</li>
-            <li>AI can verify business information.</li>
-            <li>AI receives stronger trust signals.</li>
-            <li>AI can confidently include the company in recommendations.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="audit">
-    <div class="container split">
-      <div>
-        <div class="section-label">Start With AI Audit™</div>
-        <h2>The First Step Is To See How AI Sees Your Business</h2>
-
-        <p>
-          Before improving AI visibility, you need to understand your current AI position.
-          The AI Audit™ evaluates the factors that influence AI discovery, understanding, verification, trust and recommendation.
-        </p>
-
-        <p>
-          It gives you a clear starting point: what AI understands, what AI cannot understand, what is missing and what should be fixed first.
-        </p>
-
-        <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
-      </div>
-
-      <div class="card gold">
-        <h3>Your AI Audit™ shows:</h3>
-        <ul class="check-list">
-          <li>What AI currently understands about your business</li>
-          <li>What AI cannot understand from your current presence</li>
-          <li>What business information is missing</li>
-          <li>What proof and trust signals are weak</li>
-          <li>Where competitors may be easier to recommend</li>
-          <li>What should be fixed first</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="readiness">
-    <div class="container split">
-      <div>
-        <div class="section-label">AI Recommendation Readiness™</div>
-        <h2>Can AI Recommend Your Business?</h2>
-
-        <p>
-          The AI Recommendation Readiness™ Score measures how prepared your business is for AI discovery, AI answers,
-          AI recommendations and AI agent selection.
-        </p>
-
-        <p>
-          It is a category score for the Recommendation Economy: not only “can people find you?” but “can AI understand,
-          verify, trust and recommend you?”
-        </p>
-
-        <a class="btn secondary" href="/framework/">See Framework →</a>
+    <div class="grid-2">
+      <div class="card">
+        <h3>We are not visible in AI answers</h3>
+        <p>Potential customers ask ChatGPT, Gemini, Claude, Copilot or Perplexity. Competitors appear. Your company does not.</p>
       </div>
 
       <div class="card">
-        <div class="metric">L1–L10</div>
-        <h3>From Findable™ To Defining™</h3>
-        <p>
-          Your score shows where you are today and what prevents AI systems from confidently recommending your company.
-        </p>
-        <ul class="check-list">
-          <li>AI Visibility™: L1–L3</li>
-          <li>AI Authority™: L4–L6</li>
-          <li>Advanced authority: L7–L10</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="how">
-    <div class="container">
-      <div class="section-label">How It Works</div>
-      <h2>Short Process. Clear Output.</h2>
-
-      <p class="lead">
-        The homepage does not need a technical deep dive. The process is simple:
-        inventory the business information, audit the atomic signals, fix what can be fixed, then verify the result.
-      </p>
-
-      <div class="timeline">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>AI LENS™</h3>
-          <p>
-            Business Information Inventory. We identify what AI needs to understand your business and what it cannot currently find.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>AI AUDIT™</h3>
-          <p>
-            Atomic Signal Assessment. We measure the signals that influence AI visibility, trust and recommendation.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>AI READY™</h3>
-          <p>
-            Automatic Transformation. We implement improvements that help AI systems understand and verify your business.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">4</div>
-          <h3>VERIFY™</h3>
-          <p>
-            Validation and Proof. We validate improvements and provide machine-readable evidence and verification layers.
-          </p>
-        </div>
-      </div>
-
-      <a class="btn secondary" href="/how-it-works/" style="margin-top:30px;">See How It Works →</a>
-    </div>
-  </section>
-
-  <section id="levels">
-    <div class="container">
-      <div class="section-label">Six Levels Overview</div>
-      <h2>The Six Practical Levels Of AI Visibility And Authority</h2>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>L1 Findable™</h3>
-          <p>Can AI discover that your business exists?</p>
-        </div>
-
-        <div class="card">
-          <h3>L2 Understandable™</h3>
-          <p>Can AI understand what your business does, for whom and why?</p>
-        </div>
-
-        <div class="card">
-          <h3>L3 Verifiable™</h3>
-          <p>Can AI verify your claims, credentials, locations, services and proof?</p>
-        </div>
-
-        <div class="card">
-          <h3>L4 Trustable™</h3>
-          <p>Can AI treat your business as a credible and reliable source?</p>
-        </div>
-
-        <div class="card">
-          <h3>L5 Recommendable™</h3>
-          <p>Will AI include your business in relevant recommendations?</p>
-        </div>
-
-        <div class="card gold">
-          <h3>L6 Selectable™</h3>
-          <p>Will AI select your business over competitors in a specific buying context?</p>
-        </div>
-      </div>
-
-      <a class="btn secondary" href="/framework/" style="margin-top:30px;">See Framework →</a>
-    </div>
-  </section>
-
-  <section id="different">
-    <div class="container">
-      <div class="section-label">Why 5thelement.ai Is Different</div>
-      <h2>Not SEO. Not A Web Agency. AI Recommendation Infrastructure.</h2>
-
-      <p class="lead">
-        SEO agencies optimize for search rankings. Web agencies build pages. AiVenture prepares the business to be
-        understood, verified and recommended by AI systems and AI agents.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Question</th>
-            <th>Traditional SEO</th>
-            <th>Web Agency</th>
-            <th>AiVenture / 5thelement.ai</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Main target</strong></td>
-            <td>Google rankings</td>
-            <td>Human website visitors</td>
-            <td>Humans + AI systems + AI agents</td>
-          </tr>
-          <tr>
-            <td><strong>Main output</strong></td>
-            <td>Traffic and keywords</td>
-            <td>Pages and design</td>
-            <td>AI Recommendation Readiness™</td>
-          </tr>
-          <tr>
-            <td><strong>Core question</strong></td>
-            <td>Can we rank?</td>
-            <td>Does the site look good?</td>
-            <td>Can AI find, understand, verify and recommend us?</td>
-          </tr>
-          <tr>
-            <td><strong>Business layer</strong></td>
-            <td>Content and links</td>
-            <td>UX and conversion</td>
-            <td>Business information, proof, signals, intents and machine-readable data</td>
-          </tr>
-          <tr>
-            <td><strong>Growth role</strong></td>
-            <td>Traffic acquisition</td>
-            <td>Website delivery</td>
-            <td>AI-assisted attraction, promotion, sales support and growth loop</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section id="use-cases">
-    <div class="container">
-      <div class="section-label">Use Cases</div>
-      <h2>Built For B2B Companies That Need To Be Understood</h2>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Manufacturing</h3>
-          <p>
-            Help AI understand complex products, capabilities, certifications, production capacity and industrial use cases.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Consulting</h3>
-          <p>
-            Make expertise, methods, proof, case studies and outcomes easier for AI to understand and recommend.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>B2B Services</h3>
-          <p>
-            Clarify offers, service areas, buyer intents, proof and differentiators for AI search and recommendations.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Technology Firms</h3>
-          <p>
-            Explain products, integrations, documentation, use cases and technical proof in a way AI systems can process.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Professional Services</h3>
-          <p>
-            Strengthen authority, trust and recommendation readiness for advisory, legal, financial or expert services.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Local And Regional Firms</h3>
-          <p>
-            Improve AI visibility for high-intent buyers who ask AI for local or specialized recommendations.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="standard">
-    <div class="container split">
-      <div>
-        <div class="section-label">The 5thelement.ai Standard™</div>
-        <h2>A Practical Standard For AI Visibility</h2>
-
-        <p>
-          The 5thelement.ai Standard™ helps businesses become findable, understandable, verifiable, trustable,
-          recommendable and selectable by AI systems.
-        </p>
-
-        <p>
-          It combines AI Discovery Infrastructure™, machine-readable business signals, verification frameworks,
-          trust signals and proof mechanisms.
-        </p>
-
-        <a class="btn secondary" href="/technical-architecture/">See Technical Architecture →</a>
+        <h3>Competitors are being recommended</h3>
+        <p>AI systems increasingly recommend a small set of trusted options. Many firms do not know whether they are included or excluded.</p>
       </div>
 
       <div class="card">
-        <h3>Compressed standard:</h3>
-        <ul class="check-list">
-          <li>AI-readable business identity</li>
-          <li>Clear offer and audience mapping</li>
-          <li>Structured proof and trust signals</li>
-          <li>AI-intent answer coverage</li>
-          <li>Machine-readable validation layer</li>
-          <li>Proof and governance architecture</li>
-        </ul>
+        <h3>AI does not understand what we do</h3>
+        <p>Humans may understand your website. AI may not understand your offer, audience, proof, use cases and differentiators.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI cannot verify our claims</h3>
+        <p>If AI cannot verify your claims, it may ignore them or recommend another company that is easier to validate.</p>
+      </div>
+
+      <div class="card">
+        <h3>We do not know how AI sees us</h3>
+        <p>Most firms have never tested whether AI can find, understand, verify and recommend their business.</p>
+      </div>
+
+      <div class="card">
+        <h3>We do not know what to fix first</h3>
+        <p>AI visibility is not one file, one keyword or one campaign. It is a system of business information, proof and signals.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="faq" class="faq">
-    <div class="container">
-      <div class="section-label">FAQ</div>
-      <h2>Questions Business Owners Ask First</h2>
+<section id="what-we-do">
+  <div class="container split">
+    <div>
+      <div class="section-label">What We Actually Do</div>
+      <h2>AiVenture Builds An AI Discovery Layer™ Around Your Business</h2>
 
-      <details>
-        <summary>Do I need a new website?</summary>
-        <p>
-          No. The AI Discovery Layer™ can be added around the existing business presence without rebuilding the website.
-        </p>
-      </details>
+      <p>AiVenture helps B2B firms attract, promote, sell and grow using AI.</p>
 
-      <details>
-        <summary>Does this replace SEO?</summary>
-        <p>
-          No. It complements SEO. SEO helps with search rankings. AI visibility helps AI systems understand, verify and
-          recommend the business.
-        </p>
-      </details>
-
-      <details>
-        <summary>What is AI Recommendation Readiness™?</summary>
-        <p>
-          AI Recommendation Readiness™ measures whether AI systems can find, understand, verify, trust and recommend your company.
-        </p>
-      </details>
-
-      <details>
-        <summary>How long does the first audit take?</summary>
-        <p>
-          Most initial AI Audits™ can be completed within 24 hours.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can AI really influence buying decisions?</summary>
-        <p>
-          Yes. AI systems already search, compare, summarize and recommend options. AI agents are extending this behavior toward
-          selection, negotiation and purchase workflows.
-        </p>
-      </details>
-
-      <details>
-        <summary>What is the first step?</summary>
-        <p>
-          Start with the AI Audit™. It shows how AI currently sees your business and what should be fixed first.
-        </p>
-      </details>
-    </div>
-  </section>
-
-  <section class="cta-final">
-    <div class="container">
-      <div class="section-label">Final CTA</div>
-      <h2>When AI Recommends Businesses Like Yours, Does It Recommend You?</h2>
-      <p class="lead">
-        The Recommendation Economy has already started.
-        Discover how AI currently sees your business and what should be fixed first.
+      <p>
+        We build an AI Discovery Layer™ around your business so AI systems can find, understand, verify, trust and
+        recommend your company.
       </p>
+
+      <p>
+        This does not require rebuilding your website. It does not require replacing your team. It does not require
+        stopping your existing marketing and sales activity.
+      </p>
+
       <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>The AI Discovery Layer™ explains to AI:</h3>
+      <ul class="check-list">
+        <li>Who your company is</li>
+        <li>What your company offers</li>
+        <li>Who your company helps</li>
+        <li>Where your company operates</li>
+        <li>Why your company is different</li>
+        <li>What proof supports your claims</li>
+        <li>Why your company should be recommended</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Before / After</div>
+    <h2>From Invisible To Recommendable</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Before AI Discovery Infrastructure</h3>
+        <ul class="bad-list">
+          <li>AI cannot clearly identify the business.</li>
+          <li>AI struggles to understand the offer.</li>
+          <li>AI cannot connect services to buyer intents.</li>
+          <li>AI cannot verify important claims.</li>
+          <li>AI lacks confidence in the company.</li>
+          <li>AI recommends competitors instead.</li>
+        </ul>
+      </div>
+
+      <div class="card gold">
+        <h3>After AI Discovery Infrastructure</h3>
+        <ul class="check-list">
+          <li>AI can identify the business.</li>
+          <li>AI can understand the offer.</li>
+          <li>AI can map services to buyer intents.</li>
+          <li>AI can verify business information.</li>
+          <li>AI receives stronger trust signals.</li>
+          <li>AI can confidently include the company in recommendations.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit">
+  <div class="container split">
+    <div>
+      <div class="section-label">Start With AI Audit™</div>
+      <h2>The First Step Is To See How AI Sees Your Business</h2>
+
+      <p>
+        Before improving AI visibility, you need to understand your current AI position.
+        The AI Audit™ evaluates the factors that influence AI discovery, understanding, verification, trust and recommendation.
+      </p>
+
+      <p>
+        It gives you a clear starting point: what AI understands, what AI cannot understand, what is missing and what should be fixed first.
+      </p>
+
+      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+    </div>
+
+    <div class="card gold">
+      <h3>Your AI Audit™ shows:</h3>
+      <ul class="check-list">
+        <li>What AI currently understands about your business</li>
+        <li>What AI cannot understand from your current presence</li>
+        <li>What business information is missing</li>
+        <li>What proof and trust signals are weak</li>
+        <li>Where competitors may be easier to recommend</li>
+        <li>What should be fixed first</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="readiness">
+  <div class="container split">
+    <div>
+      <div class="section-label">AI Recommendation Readiness™</div>
+      <h2>Can AI Recommend Your Business?</h2>
+
+      <p>
+        The AI Recommendation Readiness™ Score measures how prepared your business is for AI discovery, AI answers,
+        AI recommendations and AI agent selection.
+      </p>
+
+      <p>
+        It is a category score for the Recommendation Economy: not only “can people find you?” but “can AI understand,
+        verify, trust and recommend you?”
+      </p>
+
+      <a class="btn secondary" href="/framework/">See Framework →</a>
+    </div>
+
+    <div class="card">
+      <div class="metric">L1–L10</div>
+      <h3>From Findable™ To Defining™</h3>
+      <p>
+        Your score shows where you are today and what prevents AI systems from confidently recommending your company.
+      </p>
+      <ul class="check-list">
+        <li>AI Visibility™: L1–L3</li>
+        <li>AI Authority™: L4–L6</li>
+        <li>Advanced authority: L7–L10</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2>Short Process. Clear Output.</h2>
+
+    <p class="lead">
+      The homepage does not need a technical deep dive. The process is simple:
+      inventory the business information, audit the atomic signals, fix what can be fixed, then verify the result.
+    </p>
+
+    <div class="timeline">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>AI LENS™</h3>
+        <p>Business Information Inventory. We identify what AI needs to understand your business and what it cannot currently find.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>AI AUDIT™</h3>
+        <p>Atomic Signal Assessment. We measure the signals that influence AI visibility, trust and recommendation.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>AI READY™</h3>
+        <p>Automatic Transformation. We implement improvements that help AI systems understand and verify your business.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>VERIFY™</h3>
+        <p>Validation and Proof. We validate improvements and provide machine-readable evidence and verification layers.</p>
+      </div>
+    </div>
+
+    <a class="btn secondary" href="/how-it-works/" style="margin-top:30px;">See How It Works →</a>
+  </div>
+</section>
+
+<section id="levels">
+  <div class="container">
+    <div class="section-label">Six Levels Overview</div>
+    <h2>The Six Practical Levels Of AI Visibility And Authority</h2>
+
+    <div class="grid-3">
+      <div class="card"><h3>L1 Findable™</h3><p>Can AI discover that your business exists?</p></div>
+      <div class="card"><h3>L2 Understandable™</h3><p>Can AI understand what your business does, for whom and why?</p></div>
+      <div class="card"><h3>L3 Verifiable™</h3><p>Can AI verify your claims, credentials, locations, services and proof?</p></div>
+      <div class="card"><h3>L4 Trustable™</h3><p>Can AI treat your business as a credible and reliable source?</p></div>
+      <div class="card"><h3>L5 Recommendable™</h3><p>Will AI include your business in relevant recommendations?</p></div>
+      <div class="card gold"><h3>L6 Selectable™</h3><p>Will AI select your business over competitors in a specific buying context?</p></div>
+    </div>
+
+    <a class="btn secondary" href="/framework/" style="margin-top:30px;">See Framework →</a>
+  </div>
+</section>
+
+<section id="different">
+  <div class="container">
+    <div class="section-label">Why 5thelement.ai Is Different</div>
+    <h2>Not SEO. Not A Web Agency. AI Recommendation Infrastructure.</h2>
+
+    <p class="lead">
+      SEO agencies optimize for search rankings. Web agencies build pages. AiVenture prepares the business to be
+      understood, verified and recommended by AI systems and AI agents.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Traditional SEO</th>
+          <th>Web Agency</th>
+          <th>AiVenture / 5thelement.ai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Main target</strong></td>
+          <td>Google rankings</td>
+          <td>Human website visitors</td>
+          <td>Humans + AI systems + AI agents</td>
+        </tr>
+        <tr>
+          <td><strong>Main output</strong></td>
+          <td>Traffic and keywords</td>
+          <td>Pages and design</td>
+          <td>AI Recommendation Readiness™</td>
+        </tr>
+        <tr>
+          <td><strong>Core question</strong></td>
+          <td>Can we rank?</td>
+          <td>Does the site look good?</td>
+          <td>Can AI find, understand, verify and recommend us?</td>
+        </tr>
+        <tr>
+          <td><strong>Business layer</strong></td>
+          <td>Content and links</td>
+          <td>UX and conversion</td>
+          <td>Business information, proof, signals, intents and machine-readable data</td>
+        </tr>
+        <tr>
+          <td><strong>Growth role</strong></td>
+          <td>Traffic acquisition</td>
+          <td>Website delivery</td>
+          <td>AI-assisted attraction, promotion, sales support and growth loop</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="use-cases">
+  <div class="container">
+    <div class="section-label">Use Cases</div>
+    <h2>Built For B2B Companies That Need To Be Understood</h2>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Manufacturing</h3>
+        <p>Help AI understand complex products, capabilities, certifications, production capacity and industrial use cases.</p>
+      </div>
+
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Make expertise, methods, proof, case studies and outcomes easier for AI to understand and recommend.</p>
+      </div>
+
+      <div class="card">
+        <h3>B2B Services</h3>
+        <p>Clarify offers, service areas, buyer intents, proof and differentiators for AI search and recommendations.</p>
+      </div>
+
+      <div class="card">
+        <h3>Technology Firms</h3>
+        <p>Explain products, integrations, documentation, use cases and technical proof in a way AI systems can process.</p>
+      </div>
+
+      <div class="card">
+        <h3>Professional Services</h3>
+        <p>Strengthen authority, trust and recommendation readiness for advisory, legal, financial or expert services.</p>
+      </div>
+
+      <div class="card">
+        <h3>Local And Regional Firms</h3>
+        <p>Improve AI visibility for high-intent buyers who ask AI for local or specialized recommendations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="standard">
+  <div class="container split">
+    <div>
+      <div class="section-label">The 5thelement.ai Standard™</div>
+      <h2>A Practical Standard For AI Visibility</h2>
+
+      <p>
+        The 5thelement.ai Standard™ helps businesses become findable, understandable, verifiable, trustable,
+        recommendable and selectable by AI systems.
+      </p>
+
+      <p>
+        It combines AI Discovery Infrastructure™, machine-readable business signals, verification frameworks,
+        trust signals and proof mechanisms.
+      </p>
+
+      <a class="btn secondary" href="/technical-architecture/">See Technical Architecture →</a>
+    </div>
+
+    <div class="card">
+      <h3>Compressed standard:</h3>
+      <ul class="check-list">
+        <li>AI-readable business identity</li>
+        <li>Clear offer and audience mapping</li>
+        <li>Structured proof and trust signals</li>
+        <li>AI-intent answer coverage</li>
+        <li>Machine-readable validation layer</li>
+        <li>Proof and governance architecture</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Questions Business Owners Ask First</h2>
+
+    <details>
+      <summary>Do I need a new website?</summary>
+      <p>No. The AI Discovery Layer™ can be added around the existing business presence without rebuilding the website.</p>
+    </details>
+
+    <details>
+      <summary>Does this replace SEO?</summary>
+      <p>No. It complements SEO. SEO helps with search rankings. AI visibility helps AI systems understand, verify and recommend the business.</p>
+    </details>
+
+    <details>
+      <summary>What is AI Recommendation Readiness™?</summary>
+      <p>AI Recommendation Readiness™ measures whether AI systems can find, understand, verify, trust and recommend your company.</p>
+    </details>
+
+    <details>
+      <summary>How long does the first audit take?</summary>
+      <p>Most initial AI Audits™ can be completed within 24 hours.</p>
+    </details>
+
+    <details>
+      <summary>Can AI really influence buying decisions?</summary>
+      <p>Yes. AI systems already search, compare, summarize and recommend options. AI agents are extending this behavior toward selection, negotiation and purchase workflows.</p>
+    </details>
+
+    <details>
+      <summary>What is the first step?</summary>
+      <p>Start with the AI Audit™. It shows how AI currently sees your business and what should be fixed first.</p>
+    </details>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <div class="section-label">Final CTA</div>
+    <h2>When AI Recommends Businesses Like Yours, Does It Recommend You?</h2>
+    <p class="lead">
+      The Recommendation Economy has already started.
+      Discover how AI currently sees your business and what should be fixed first.
+    </p>
+    <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+  </div>
+</section>
 
 </main>
 
@@ -1392,14 +1228,33 @@
   <div class="container footer-grid">
     <div>
       <strong>AiVenture SRL</strong><br />
-      5thelement.ai — AI Visibility & Recommendation Readiness<br />
-      <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+      <strong>5thelement.ai</strong> — AI Visibility & Recommendation Readiness<br />
+      <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a><br />
+      <a href="https://api.whatsapp.com/send/?phone=40737123540" target="_blank" rel="noopener">WhatsApp</a> ·
+      <a href="tel:+40737123540">Call</a>
     </div>
 
     <div>
-      <a href="/privacy-policy/">Privacy</a> ·
-      <a href="/terms-conditions/">Terms</a> ·
-      <a href="/contact/">Contact</a>
+      <strong>Quick Links</strong><br />
+      <a href="/contact/">Contact Form</a> ·
+      <a href="/about/">About</a> ·
+      <a href="/author/">Author</a><br />
+      <a href="/eu-ai-act/">EU AI Act</a> ·
+      <a href="/gdpr/">GDPR</a><br />
+      <a href="/terms-conditions/">Terms & Conditions</a> ·
+      <a href="/cookie-policy/">Cookies Policy</a>
+    </div>
+
+    <div>
+      <strong>Official AiVenture / 5thelement.ai Presence</strong><br />
+      <a href="https://ro.linkedin.com/in/dan-ionesco-a856082a0" target="_blank" rel="noopener">Author LinkedIn</a> ·
+      <a href="https://www.linkedin.com/company/107338970" target="_blank" rel="noopener">LinkedIn Company</a><br />
+      <a href="https://www.linkedin.com/showcase/5thelement-ai/" target="_blank" rel="noopener">LinkedIn Showcase</a> ·
+      <a href="https://www.crunchbase.com/organization/aiventure-s-r-l" target="_blank" rel="noopener">Crunchbase</a><br />
+      <a href="https://www.facebook.com/people/Aiventure/61573220584246/" target="_blank" rel="noopener">Facebook</a> ·
+      <a href="https://x.com/aipath512" target="_blank" rel="noopener">X</a> ·
+      <a href="https://www.youtube.com/@AIVenture-q8u" target="_blank" rel="noopener">YouTube</a> ·
+      <a href="https://medium.com/@aipath512" target="_blank" rel="noopener">Medium</a>
     </div>
   </div>
 </footer>
