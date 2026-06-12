@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>How The AI Growth Machine Works | 5thelement.ai</title>
+  <meta name="description" content="See how AiVenture helps B2B firms attract, educate, qualify, recommend, sell, serve, and grow with a 24/7 AI Growth Machine." />
+
+  <link rel="canonical" href="https://5thelement.ai/how-it-works.html" />
+
+  <style>
+    :root {
+      --bg: #080b10;
+      --panel: #101622;
+      --panel2: #151d2b;
+      --text: #f5f7fb;
+      --muted: #aeb8c8;
+      --gold: #f5c842;
+      --line: rgba(255,255,255,.12);
+      --white: #ffffff;
+      --green: #69e6a3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(8,11,16,.94);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: .03em;
+      color: var(--gold);
+    }
+
+    .menu {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .menu a:hover { color: var(--gold); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      background: var(--gold);
+      color: #111;
+      border: 1px solid var(--gold);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 92px 0 70px;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(245,200,66,.18), transparent 34%),
+        radial-gradient(circle at 80% 20%, rgba(105,230,163,.12), transparent 30%);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 18px;
+      line-height: 1.08;
+    }
+
+    h1 {
+      max-width: 940px;
+      font-size: clamp(44px, 7vw, 82px);
+      letter-spacing: -.05em;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      letter-spacing: -.04em;
+    }
+
+    h3 {
+      font-size: 24px;
+      letter-spacing: -.02em;
+    }
+
+    .gold { color: var(--gold); }
+
+    .lead {
+      max-width: 790px;
+      color: var(--muted);
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: rgba(255,255,255,.03);
+    }
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .machine {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .machine-step {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 22px;
+      align-items: center;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .number {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .flow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #05070b;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      overflow-x: auto;
+      color: var(--green);
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      background: var(--panel);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--gold);
+      background: rgba(245,200,66,.08);
+    }
+
+    td { color: var(--muted); }
+
+    .faq details {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .faq p {
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 52px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-grid a {
+      display: block;
+      margin: 7px 0;
+      color: var(--muted);
+    }
+
+    .footer-grid a:hover { color: var(--gold); }
+
+    @media (max-width: 860px) {
+      .menu { display: none; }
+      .grid-2, .grid-3, .footer-grid { grid-template-columns: 1fr; }
+      .machine-step { grid-template-columns: 1fr; }
+      .hero { padding-top: 70px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://5thelement.ai/#organization",
+        "name": "5thelement.ai",
+        "legalName": "AiVenture S.R.L.",
+        "url": "https://5thelement.ai/",
+        "email": "contact@5thelement.ai",
+        "telephone": "+40737123540",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bucharest",
+          "addressCountry": "RO"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/107338970",
+          "https://www.linkedin.com/showcase/5thelement-ai/",
+          "https://www.crunchbase.com/organization/aiventure-s-r-l",
+          "https://www.facebook.com/people/Aiventure/61573220584246/",
+          "https://x.com/aipath512",
+          "https://www.youtube.com/@AIVenture-q8u",
+          "https://medium.com/@aipath512"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://5thelement.ai/#website",
+        "url": "https://5thelement.ai/",
+        "name": "5thelement.ai",
+        "publisher": { "@id": "https://5thelement.ai/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://5thelement.ai/how-it-works.html#webpage",
+        "url": "https://5thelement.ai/how-it-works.html",
+        "name": "How The AI Growth Machine Works",
+        "description": "How AiVenture helps B2B firms attract, educate, qualify, recommend, sell, serve, and grow with AI.",
+        "isPartOf": { "@id": "https://5thelement.ai/#website" },
+        "about": { "@id": "https://5thelement.ai/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://5thelement.ai/how-it-works.html#service",
+        "name": "AI Growth Machine",
+        "provider": { "@id": "https://5thelement.ai/#organization" },
+        "serviceType": "AI growth, AI visibility, AI recommendation readiness, AI sales enablement",
+        "areaServed": "Global",
+        "description": "A 24/7 AI-assisted business growth layer that helps companies attract, educate, qualify, recommend, sell, serve, and grow."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://5thelement.ai/how-it-works.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this page about AI Audit or business growth?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This page explains how the AI Growth Machine works as a business growth system. AI Audit is only one component inside the system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AiVenture replace my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AiVenture adds an AI growth and discovery layer around the existing business presence without requiring a full website rebuild."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the goal of the AI Growth Machine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The goal is to help a business attract, educate, qualify, recommend, sell, serve, and grow using AI with human control."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">5thelement.ai</a>
+    <nav class="menu">
+      <a href="/">Home</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/solutions/ai-visibility.html">AI Visibility</a>
+      <a href="/services/ai-ready.html">AI Ready</a>
+      <a href="/resources/">Resources</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <a class="btn" href="/contact.html">Start AI Audit™</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">How The AI Growth Machine Works</div>
+    <h1>Attract. Educate. Qualify. Recommend. Sell. Serve. <span class="gold">Grow With AI.</span></h1>
+    <p class="lead">
+      AiVenture helps B2B firms turn AI into a 24/7 growth machine.
+      The objective is not more files, more jargon, or more technical complexity.
+      The objective is more visibility, more qualified conversations, more trust, more sales, and more growth.
+    </p>
+    <div class="cta-row">
+      <a class="btn" href="/contact.html">Start AI Audit™</a>
+      <a class="btn secondary" href="#machine">See The Growth Machine</a>
+    </div>
+    <div class="pills">
+      <span class="pill">AI-assisted growth</span>
+      <span class="pill">24/7 operation</span>
+      <span class="pill">Human-in-the-loop</span>
+      <span class="pill">No website rebuild required</span>
+      <span class="pill">Built for B2B firms</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid grid-2">
+    <div>
+      <div class="eyebrow">The Simple Idea</div>
+      <h2>This Is Not An Audit Page. This Is The Growth Machine.</h2>
+    </div>
+    <div>
+      <p class="lead">
+        AI Audit shows where the business stands. AI Ready fixes the missing signals.
+        But the real objective is bigger: build a business growth machine where AI helps the firm attract, educate,
+        qualify, recommend, sell, serve, and grow continuously.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="machine">
+  <div class="container">
+    <div class="eyebrow">The Growth Architecture</div>
+    <h2>The AI Growth Machine Flow</h2>
+    <p class="lead">
+      Traditional marketing waits for humans to search, click, compare, and contact.
+      The AI Growth Machine prepares the business for a world where AI systems search, compare,
+      explain, qualify, and recommend before the human reaches the website.
+    </p>
+
+    <div class="flow">
+Traditional Growth:
+Marketing → Traffic → Lead → Sales → Customer
+
+AiVenture AI Growth Machine:
+AI Discovery → AI Education → AI Qualification → AI Recommendation → Sales Conversation → Customer → Service → Expansion → Repeat
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Step By Step</div>
+    <h2>How The Machine Works</h2>
+
+    <div class="machine">
+
+      <div class="machine-step">
+        <div class="number">1</div>
+        <div>
+          <h3>Attract</h3>
+          <p>
+            First, the business must become visible where buyers now search and ask questions:
+            ChatGPT, Gemini, Claude, Copilot, Perplexity, search engines, AI assistants, and future AI Agents.
+          </p>
+          <p>
+            AiVenture improves the signals that help AI systems discover the company, its services,
+            its market, its contact points, and its business identity.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">2</div>
+        <div>
+          <h3>Educate</h3>
+          <p>
+            Visibility is not enough. AI must understand what the firm does, who it helps,
+            what problems it solves, what it sells, and why it matters.
+          </p>
+          <p>
+            The AI Growth Machine turns business information into answer-ready explanations
+            that AI systems can reuse when buyers ask questions.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">3</div>
+        <div>
+          <h3>Qualify</h3>
+          <p>
+            Not every visitor is a buyer. AI can help filter intent, use case, urgency,
+            fit, and buyer readiness before a sales conversation begins.
+          </p>
+          <p>
+            This helps the business move from random traffic to better-qualified opportunities.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">4</div>
+        <div>
+          <h3>Recommend</h3>
+          <p>
+            When AI compares several firms, the question becomes:
+            which company is clear, credible, verifiable, and easy to recommend?
+          </p>
+          <p>
+            AiVenture improves Recommendation Readiness™ so the business can become a stronger candidate
+            when AI systems shortlist suppliers, services, or solutions.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">5</div>
+        <div>
+          <h3>Sell</h3>
+          <p>
+            A buyer who arrives after AI research is usually more educated than a cold visitor.
+            They may already understand the category, the problem, and why the company is relevant.
+          </p>
+          <p>
+            That means the sales conversation can start deeper in the funnel:
+            less basic explanation, more qualification, more decision support.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">6</div>
+        <div>
+          <h3>Serve</h3>
+          <p>
+            After the sale, AI can help answer questions, support onboarding,
+            explain services, guide customers, and reduce repetitive communication.
+          </p>
+          <p>
+            Human-in-the-loop control remains essential. AI supports the business;
+            humans keep strategic control.
+          </p>
+        </div>
+      </div>
+
+      <div class="machine-step">
+        <div class="number">7</div>
+        <div>
+          <h3>Grow</h3>
+          <p>
+            Growth becomes continuous. The machine can identify new questions, new content,
+            new buyer intents, new offers, new follow-up opportunities, and new markets.
+          </p>
+          <p>
+            The firm no longer depends only on manual campaigns. It gains a 24/7 AI-assisted growth layer.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid grid-2">
+    <div>
+      <div class="eyebrow">Human + AI</div>
+      <h2>AI Works. Humans Decide.</h2>
+      <p class="lead">
+        The AI Growth Machine is not designed to replace leadership, strategy, judgment, or human relationships.
+        It is designed to support them.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Human-In-The-Loop Control</h3>
+      <p>AI can prepare, monitor, structure, suggest, qualify, and support.</p>
+      <p>Humans decide positioning, offers, claims, strategy, compliance, and final communication.</p>
+      <p><strong class="gold">The machine accelerates growth. The human keeps control.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Before / After</div>
+    <h2>What Changes After The Growth Machine Is Active?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Before</th>
+          <th>After</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI may not know the company exists.</td>
+          <td>AI has clearer discovery signals for the company.</td>
+        </tr>
+        <tr>
+          <td>AI may misunderstand what the business sells.</td>
+          <td>AI receives clearer explanations of services, products, audience, and value.</td>
+        </tr>
+        <tr>
+          <td>AI may not verify claims.</td>
+          <td>Proof, trust, and provenance signals support verification.</td>
+        </tr>
+        <tr>
+          <td>Traffic may be unqualified.</td>
+          <td>AI-assisted education and qualification improve prospect quality.</td>
+        </tr>
+        <tr>
+          <td>Sales starts from zero explanation.</td>
+          <td>Sales can start after AI has already educated the buyer.</td>
+        </tr>
+        <tr>
+          <td>Growth depends mainly on manual campaigns.</td>
+          <td>The business gains a 24/7 AI-assisted growth layer.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">What Powers It</div>
+    <h2>The Engine Under The Growth Machine</h2>
+    <p class="lead">
+      These components are not the final outcome. They are the mechanisms that make the growth machine work.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>AI LENS™</h3>
+        <p>Identifies the business information AI needs to understand the company.</p>
+      </div>
+      <div class="card">
+        <h3>AI AUDIT™</h3>
+        <p>Measures the business against AI Recommendation Readiness™ and atomic AI signals.</p>
+      </div>
+      <div class="card">
+        <h3>AI READY™</h3>
+        <p>Transforms missing or weak information into AI-readable business signals.</p>
+      </div>
+      <div class="card">
+        <h3>ADI™</h3>
+        <p>AI Delivery Infrastructure that deploys signals, files, schema, routes, and structured data.</p>
+      </div>
+      <div class="card">
+        <h3>Trust Layer™</h3>
+        <p>Improves credibility, consistency, governance, and cross-source business trust.</p>
+      </div>
+      <div class="card">
+        <h3>Proof Layer™</h3>
+        <p>Adds verifiable proof records using hashes, timestamps, and provenance logic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Growth Loop</div>
+    <h2>The Machine Does Not Stop After Deployment</h2>
+    <p class="lead">
+      The AI Growth Machine is designed as a loop, not a one-time technical task.
+    </p>
+
+    <div class="flow">
+Monitor → Learn → Improve Signals → Improve Answers → Improve Qualification → Improve Sales Conversations → Improve Growth → Repeat
+    </div>
+
+    <div class="grid grid-3" style="margin-top:24px;">
+      <div class="card">
+        <h3>Monitor</h3>
+        <p>Track how AI systems describe and understand the business.</p>
+      </div>
+      <div class="card">
+        <h3>Improve</h3>
+        <p>Update missing signals, proof, answer blocks, and entity information.</p>
+      </div>
+      <div class="card">
+        <h3>Expand</h3>
+        <p>Add new intents, offers, markets, verticals, and growth opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Delivery Paths</div>
+    <h2>Three Ways To Build The Machine</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Path</th>
+          <th>Best For</th>
+          <th>What Happens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>DIY</strong></td>
+          <td>Technical founders and internal teams.</td>
+          <td>You receive audit, roadmap, guidance, and implementation instructions.</td>
+        </tr>
+        <tr>
+          <td><strong>HELP</strong></td>
+          <td>Teams that want expert support.</td>
+          <td>We guide implementation through working sessions at €49/hour.</td>
+        </tr>
+        <tr>
+          <td><strong>DONE FOR YOU</strong></td>
+          <td>Businesses that want speed and execution.</td>
+          <td>We build, deploy, verify, and improve the AI Growth Machine for you.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow">FAQ</div>
+    <h2>Questions About The AI Growth Machine</h2>
+
+    <details>
+      <summary>Is this only an AI Audit?</summary>
+      <p>No. AI Audit is the entry point. The AI Growth Machine is the full growth system: attract, educate, qualify, recommend, sell, serve, and grow.</p>
+    </details>
+
+    <details>
+      <summary>Does this replace my website?</summary>
+      <p>No. Your website remains the human-facing asset. AiVenture adds AI-readable growth, trust, discovery, and recommendation layers around it.</p>
+    </details>
+
+    <details>
+      <summary>Is this SEO?</summary>
+      <p>No. SEO helps search engines rank links. The AI Growth Machine helps AI systems understand, verify, recommend, and support business growth.</p>
+    </details>
+
+    <details>
+      <summary>What is the first step?</summary>
+      <p>The first step is an AI Audit™ to understand how AI currently sees the business and where the growth machine must start.</p>
+    </details>
+
+    <details>
+      <summary>Can AI sell for me automatically?</summary>
+      <p>AI can support attraction, education, qualification, follow-up, and sales assistance. Humans remain in control of strategy, commitments, pricing, claims, and final decisions.</p>
+    </details>
+
+    <details>
+      <summary>What is the business outcome?</summary>
+      <p>The intended outcome is more AI visibility, better qualified conversations, stronger trust, improved recommendation potential, and more growth opportunities.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Final CTA</div>
+    <h2>Ready To See How The Growth Machine Would Work For Your Business?</h2>
+    <p class="lead">
+      Start with the AI Audit™. We check how AI sees your business today and identify the first improvements needed to build your AI-assisted growth layer.
+    </p>
+    <div class="cta-row">
+      <a class="btn" href="/contact.html">Start AI Audit™</a>
+      <a class="btn secondary" href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+      <a class="btn secondary" href="https://api.whatsapp.com/send/?phone=40737123540">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo">5thelement.ai</div>
+      <p>AiVenture S.R.L. · CUI 51415878 · Bucharest, Romania</p>
+      <p>AI-assisted growth infrastructure for B2B firms.</p>
+    </div>
+
+    <div>
+      <strong>Quick Links</strong>
+      <a href="/">Home</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/about/">About</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong>
+      <a href="/terms-conditions.html">Terms & Conditions</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/cookie-policy.html">Cookie Policy</a>
+      <a href="/gdpr.html">GDPR</a>
+      <a href="/eu-ai-act.html">EU AI Act</a>
+    </div>
+
+    <div>
+      <strong>Official Presence</strong>
+      <a href="https://www.linkedin.com/company/107338970">LinkedIn Company</a>
+      <a href="https://www.linkedin.com/showcase/5thelement-ai/">5thElement LinkedIn</a>
+      <a href="https://www.crunchbase.com/organization/aiventure-s-r-l">Crunchbase</a>
+      <a href="https://medium.com/@aipath512">Medium</a>
+      <a href="https://www.youtube.com/@AIVenture-q8u">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
