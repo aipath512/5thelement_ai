@@ -1,951 +1,738 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>5thelement.ai — AI Recommendation Readiness™ for B2B Growth</title>
-  <meta name="description" content="AiVenture helps B2B companies attract, promote, sell and grow with AI by making them visible, understandable, verifiable, trusted, recommended and selectable by AI systems and AI Agents." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="author" content="AiVenture S.R.L." />
-  <link rel="canonical" href="https://5thelement.ai/" />
+  <title>5thelement.ai — Attract More Clients. Sell More. Grow With AI.</title>
+  <meta name="description" content="AiVenture helps B2B firms attract, promote, sell and grow using AI. Start with an AI Audit and discover if AI can find, understand, verify and recommend your business." />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="5thelement.ai — AI Recommendation Readiness™" />
-  <meta property="og:description" content="Attract more clients, sell more and grow with AI. Start with your AI Audit™." />
-  <meta property="og:url" content="https://5thelement.ai/" />
-  <meta property="og:image" content="https://5thelement.ai/assets/ai_transition.webp" />
+  <style>
+    :root{
+      --bg:#07090d;
+      --bg2:#0d1118;
+      --card:#121824;
+      --card2:#161f2d;
+      --text:#ffffff;
+      --muted:#b8c0cc;
+      --gold:#f5c842;
+      --line:rgba(255,255,255,.12);
+      --max:1180px;
+    }
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="5thelement.ai — AI Recommendation Readiness™" />
-  <meta name="twitter:description" content="Make your business visible, verifiable, trusted and recommended by AI systems." />
-  <meta name="twitter:image" content="https://5thelement.ai/assets/ai_transition.webp" />
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    .container{
+      width:min(var(--max),92%);
+      margin:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(7,9,13,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:-.02em;
+    }
+
+    .brand img{
+      height:42px;
+      width:auto;
+    }
+
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .navlinks a:hover{color:var(--gold)}
+
+    .email{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:999px;
+      background:var(--gold);
+      color:#111;
+      font-weight:800;
+      margin-top:20px;
+      border:1px solid transparent;
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border-color:var(--line);
+    }
+
+    section{
+      padding:88px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero{
+      padding:120px 0 110px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(245,200,66,.22), transparent 34%),
+        radial-gradient(circle at 20% 70%, rgba(95,130,255,.12), transparent 30%),
+        linear-gradient(180deg,#0a0d14,#07090d);
+    }
+
+    .kicker{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    h1{
+      font-size:clamp(46px,7vw,92px);
+      line-height:.94;
+      letter-spacing:-.06em;
+      margin:0 0 26px;
+    }
+
+    h1 em{
+      color:var(--gold);
+      font-style:italic;
+    }
+
+    h2{
+      font-size:clamp(34px,5vw,58px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      margin:0 0 24px;
+    }
+
+    h3{
+      font-size:24px;
+      line-height:1.18;
+      margin:0 0 12px;
+    }
+
+    p{
+      color:var(--muted);
+      font-size:18px;
+      margin:0 0 18px;
+    }
+
+    .lead{
+      max-width:820px;
+      font-size:22px;
+    }
+
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:26px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,var(--card2),var(--card));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+    }
+
+    .visual{
+      margin:36px 0 30px;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#0f1420;
+    }
+
+    .flow{
+      color:#fff;
+      font-size:20px;
+      font-weight:800;
+      margin:16px 0;
+    }
+
+    ul{
+      margin:16px 0 0;
+      padding-left:20px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    li{margin:8px 0}
+
+    .split{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .score{
+      font-size:72px;
+      font-weight:900;
+      color:var(--gold);
+      letter-spacing:-.06em;
+      line-height:1;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:22px;
+      background:var(--card);
+      margin-top:28px;
+    }
+
+    th,td{
+      border:1px solid var(--line);
+      padding:18px;
+      text-align:left;
+      color:var(--muted);
+      vertical-align:top;
+    }
+
+    th{
+      color:#fff;
+      background:#101722;
+    }
+
+    details{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      margin-bottom:14px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      font-size:18px;
+    }
+
+    footer{
+      padding:44px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:900px){
+      .grid-2,.grid-3,.split{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .email{display:none}
+      section{padding:64px 0}
+      .hero{padding:86px 0}
+    }
+  </style>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "Organization",
-        "@id": "https://5thelement.ai/#organization",
-        "name": "5thelement.ai",
-        "legalName": "AiVenture S.R.L.",
-        "url": "https://5thelement.ai/",
-        "logo": "https://5thelement.ai/assets/logo.png",
-        "email": "contact@5thelement.ai",
-        "telephone": "+40737123540",
-        "identifier": "CUI 51415878",
-        "founder": {
-          "@type": "Person",
-          "name": "Dan Ionescu",
-          "alternateName": "Eli"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bucharest",
-          "addressCountry": "RO"
-        },
-        "areaServed": ["Romania", "European Union", "United Kingdom", "United States"],
-        "knowsAbout": [
-          "AI Visibility",
-          "AI Recommendation Readiness",
-          "Answer Engine Optimization",
-          "Generative Engine Optimization",
-          "AI Delivery Infrastructure",
-          "AI Agents",
-          "Schema.org",
-          "OpenTimestamps",
-          "Machine-readable Trust"
-        ],
-        "sameAs": [
-          "https://5thelement.ai/innovations",
-          "https://eu-ai-audit.eu/",
-          "https://aiventure.ro/",
-          "https://5thelement.ai/ai-proof.json",
-          "https://5thelement.ai/llms.txt"
-        ],
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "AiVenture S.R.L.",
-          "identifier": "CUI 51415878"
+        "@type":"Organization",
+        "@id":"https://5thelement.ai/#organization",
+        "name":"AiVenture SRL",
+        "url":"https://5thelement.ai/",
+        "email":"contact@5thelement.ai",
+        "brand":{
+          "@type":"Brand",
+          "name":"5thelement.ai"
         }
       },
       {
-        "@type": "WebSite",
-        "@id": "https://5thelement.ai/#website",
-        "url": "https://5thelement.ai/",
-        "name": "5thelement.ai",
-        "publisher": { "@id": "https://5thelement.ai/#organization" },
-        "inLanguage": "en",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://5thelement.ai/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@type":"WebSite",
+        "@id":"https://5thelement.ai/#website",
+        "url":"https://5thelement.ai/",
+        "name":"5thelement.ai",
+        "publisher":{"@id":"https://5thelement.ai/#organization"}
       },
       {
-        "@type": "WebPage",
-        "@id": "https://5thelement.ai/#webpage",
-        "url": "https://5thelement.ai/",
-        "name": "AI Recommendation Readiness™ for B2B Growth",
-        "description": "Homepage for 5thelement.ai, the AiVenture flagship for AI visibility, AI recommendation readiness, ADI, proof, trust and AI Agent discoverability.",
-        "isPartOf": { "@id": "https://5thelement.ai/#website" },
-        "about": { "@id": "https://5thelement.ai/#organization" },
-        "breadcrumb": { "@id": "https://5thelement.ai/#breadcrumb" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://5thelement.ai/assets/ai_transition.webp",
-          "caption": "Transition from the old Google traffic funnel to the AI Agent answer and recommendation journey."
-        },
-        "datePublished": "2026-06-12",
-        "dateModified": "2026-06-12",
-        "version": "v1.6",
-        "mainEntity": [
-          { "@id": "https://5thelement.ai/#service" },
-          { "@id": "https://5thelement.ai/#faq" },
-          { "@id": "https://5thelement.ai/#terms" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://5thelement.ai/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://5thelement.ai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "AI Recommendation Readiness",
-            "item": "https://5thelement.ai/#hero"
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://5thelement.ai/#service",
-        "name": "AI Recommendation Readiness™",
-        "provider": { "@id": "https://5thelement.ai/#organization" },
-        "serviceType": "AI Visibility, AI Audit, AI Ready deployment and AI Delivery Infrastructure",
-        "areaServed": ["B2B", "Romania", "European Union", "United Kingdom", "United States"],
-        "audience": {
-          "@type": "BusinessAudience",
-          "audienceType": "B2B company owners, founders, marketing managers, sales leaders and technical teams"
-        },
-        "offers": {
-          "@type": "Offer",
-          "name": "Start AI Audit™",
-          "url": "https://eu-ai-audit.eu/",
-          "availability": "https://schema.org/InStock"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://5thelement.ai/#terms",
-        "name": "5thelement.ai AI Visibility Glossary",
-        "hasDefinedTerm": [
-          { "@type": "DefinedTerm", "name": "AI Visibility™", "description": "The capability of AI systems to discover and understand a business." },
-          { "@type": "DefinedTerm", "name": "AI Recommendation Readiness™", "description": "A six-dimensional diagnostic for how ready a business is to be recommended by AI systems." },
-          { "@type": "DefinedTerm", "name": "ADI™", "description": "AI Delivery Infrastructure, the machine-readable delivery layer used to structure AI signals, trust and proof." },
-          { "@type": "DefinedTerm", "name": "AI Sonar™", "description": "A predictive EDGE observability layer for hostile machine-intent propagation patterns before visible attack impact." },
-          { "@type": "DefinedTerm", "name": "Mockingbird Handshake™", "description": "A registered innovation in the 5thelement.ai proof and trust architecture." }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://5thelement.ai/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do I need to change my website?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. AiVenture adds an AI discovery and recommendation layer alongside your existing website. Your CMS, hosting, design and current pages can stay as they are." }
-          },
-          {
-            "@type": "Question",
-            "name": "How is this different from SEO?",
-            "acceptedAnswer": { "@type": "Answer", "text": "SEO helps search engines rank pages for humans to click. AI Recommendation Readiness helps AI systems find, understand, verify, trust and recommend your business inside AI-generated answers and AI Agent workflows." }
-          },
-          {
-            "@type": "Question",
-            "name": "How fast can I start?",
-            "acceptedAnswer": { "@type": "Answer", "text": "You can start with the AI Audit. The initial audit path is designed for fast onboarding and the AI discovery layer can be deployed quickly depending on the scope and available information." }
-          },
-          {
-            "@type": "Question",
-            "name": "What does the AI Audit show?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The AI Audit shows what AI systems understand about your business, what they cannot verify, which signals are weak and which fixes should be prioritized first." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the AI Recommendation Readiness Score?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It is a diagnostic score built across six dimensions: Findable, Understandable, Verifiable, Trustable, Recommendable and Selectable." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can AiVenture guarantee that AI will always recommend me first?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No honest provider can guarantee that every AI system will always recommend one company first. AiVenture focuses on measurable signal improvement, verification and readiness." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is this compliant with the EU AI Act?",
-            "acceptedAnswer": { "@type": "Answer", "text": "AiVenture supports EU AI Act readiness through documentation, transparency, governance and traceability infrastructure. It does not certify legal compliance." }
-          },
-          {
-            "@type": "Question",
-            "name": "What types of businesses is this for?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It is designed for B2B companies, consultants, manufacturers, professional services, SaaS firms, industrial suppliers and compliance-oriented companies that want to be found, understood and recommended by AI." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the 5thElement Innovation Registry?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It is the public registry of AiVenture and 5thelement.ai innovations, including ADI, AI Sonar, Mockingbird Handshake and other proof-backed concepts." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the proof layer?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The proof layer uses SHA-256 fingerprints and OpenTimestamps anchoring to help prove that important files, definitions and innovations existed at a given time and were not silently altered." }
-          }
-        ]
+        "@type":"WebPage",
+        "@id":"https://5thelement.ai/#homepage",
+        "url":"https://5thelement.ai/",
+        "name":"Attract More Clients. Sell More. Grow With AI.",
+        "description":"AiVenture helps B2B firms attract, promote, sell and grow using AI.",
+        "isPartOf":{"@id":"https://5thelement.ai/#website"},
+        "about":{"@id":"https://5thelement.ai/#organization"}
       }
     ]
   }
   </script>
-
-  <style>
-    :root {
-      --bg: #0a0c0f;
-      --bg2: #10141b;
-      --panel: rgba(255,255,255,0.045);
-      --panel2: rgba(255,255,255,0.075);
-      --text: #ffffff;
-      --muted: #b8c0cc;
-      --soft: #d9dee7;
-      --gold: #f5c842;
-      --gold2: #ffe99a;
-      --blue: #7ec8ff;
-      --border: rgba(255,255,255,0.11);
-      --shadow: 0 28px 80px rgba(0,0,0,0.35);
-      --radius: 18px;
-      --max: 1160px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background:
-        radial-gradient(circle at 50% 0%, rgba(245,200,66,0.12), transparent 35%),
-        radial-gradient(circle at 80% 20%, rgba(126,200,255,0.07), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
-    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.12; letter-spacing: -0.025em; }
-    h1 { font-size: clamp(2.65rem, 7vw, 5.6rem); }
-    h2 { font-size: clamp(2rem, 4.5vw, 3.35rem); }
-    h3 { font-size: clamp(1.25rem, 2vw, 1.7rem); }
-    p { color: var(--muted); }
-
-    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-    .gold { color: var(--gold); }
-    .blue { color: var(--blue); }
-    .italic { font-style: italic; }
-    .strong { color: var(--text); font-weight: 700; }
-    .muted { color: var(--muted); }
-    .small { font-size: 0.92rem; }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      background: rgba(10,12,15,0.82);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .logo {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.45rem;
-      font-weight: 800;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .nav-links { display: flex; align-items: center; gap: 22px; font-size: 0.92rem; }
-    .nav-links a { color: var(--muted); text-decoration: none; transition: 0.2s ease; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta { display: flex; gap: 10px; align-items: center; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 46px;
-      padding: 13px 22px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--gold); color: #111; box-shadow: 0 14px 34px rgba(245,200,66,0.22); }
-    .btn-secondary { border-color: var(--border); color: var(--soft); background: rgba(255,255,255,0.035); }
-    .btn-secondary:hover { border-color: rgba(245,200,66,0.45); color: var(--gold); }
-
-    .module { padding: 92px 0; border-top: 1px solid var(--border); }
-    .module.compact { padding: 72px 0; }
-    .module.alt { background: rgba(255,255,255,0.025); }
-    .section-head { max-width: 820px; margin: 0 auto 46px; text-align: center; }
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-    .section-head p { margin-top: 18px; font-size: 1.08rem; }
-
-    .breadcrumb {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.84rem;
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-    .breadcrumb a { color: var(--muted); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--gold); }
-
-    .hero { padding: 92px 0 105px; text-align: center; border-top: none; }
-    .hero-inner { max-width: 980px; margin: 0 auto; }
-    .hero h1 { margin-bottom: 26px; }
-    .hero-sub { font-size: 1.22rem; max-width: 790px; margin: 0 auto 24px; color: var(--soft); }
-    .hero-proof { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 28px auto 34px; }
-    .pill { border: 1px solid var(--border); background: var(--panel); border-radius: 999px; padding: 8px 13px; color: var(--soft); font-size: 0.9rem; }
-    .hero-question { font-family: "Playfair Display"; font-size: clamp(1.35rem, 3vw, 2rem); color: var(--text); font-style: italic; margin: 10px 0 34px; }
-    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-    .image-card {
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      overflow: hidden;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      margin: 0 auto 42px;
-      max-width: 1080px;
-    }
-    .lead-copy { max-width: 850px; margin: 0 auto; text-align: center; }
-    .lead-copy p { font-size: 1.1rem; margin-bottom: 18px; }
-    .lead-copy .final-line { color: var(--text); font-weight: 700; font-size: 1.16rem; }
-
-    .grid { display: grid; gap: 22px; }
-    .grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .grid.four { grid-template-columns: repeat(4, minmax(0,1fr)); }
-    .card {
-      border: 1px solid var(--border);
-      background: var(--panel);
-      border-radius: var(--radius);
-      padding: 28px;
-      min-height: 100%;
-    }
-    .card.highlight { background: linear-gradient(180deg, rgba(245,200,66,0.12), rgba(255,255,255,0.045)); border-color: rgba(245,200,66,0.35); }
-    .card h3 { margin-bottom: 10px; }
-    .card p, .card li { color: var(--muted); }
-    .card ul { margin-left: 20px; margin-top: 10px; }
-
-    .quote-stack { max-width: 850px; margin: 0 auto; display: grid; gap: 16px; }
-    .quote {
-      border-left: 4px solid var(--gold);
-      background: var(--panel);
-      padding: 18px 22px;
-      border-radius: 12px;
-      color: var(--soft);
-      font-weight: 700;
-    }
-
-    .before-after .card h3 { font-size: 1.8rem; }
-    .before-after .before { border-color: rgba(255,255,255,0.13); }
-    .before-after .after { border-color: rgba(245,200,66,0.42); background: rgba(245,200,66,0.07); }
-
-    .steps { counter-reset: step; }
-    .step { display: grid; grid-template-columns: 68px 1fr; gap: 22px; align-items: start; }
-    .step-num {
-      width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center;
-      background: rgba(245,200,66,0.16); color: var(--gold); font-family: "Playfair Display"; font-size: 1.8rem; font-weight: 900;
-      border: 1px solid rgba(245,200,66,0.3);
-    }
-
-    .score-box {
-      max-width: 900px;
-      margin: 0 auto 34px;
-      border: 1px solid rgba(245,200,66,0.38);
-      border-radius: 24px;
-      padding: 36px;
-      background: linear-gradient(135deg, rgba(245,200,66,0.13), rgba(126,200,255,0.07));
-      text-align: center;
-    }
-    .score-number { font-family: "Playfair Display"; font-size: clamp(3.2rem, 9vw, 7rem); color: var(--gold); line-height: 1; font-weight: 900; }
-
-    table { width: 100%; border-collapse: collapse; overflow: hidden; }
-    .table-wrap { border: 1px solid var(--border); border-radius: 18px; overflow-x: auto; background: var(--panel); }
-    th, td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-    th { color: var(--gold); font-weight: 900; background: rgba(255,255,255,0.04); }
-    td { color: var(--muted); }
-    tr:last-child td { border-bottom: none; }
-    .highlight-row td { background: rgba(245,200,66,0.07); }
-    .highlight-row td:first-child { color: var(--gold); font-weight: 900; }
-
-    .proof { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.84rem; color: var(--soft); word-break: break-all; background: rgba(0,0,0,0.22); border: 1px solid var(--border); border-radius: 12px; padding: 13px; margin-top: 12px; }
-    .microqa {
-      margin-top: 28px;
-      border: 1px solid rgba(126,200,255,0.22);
-      background: rgba(126,200,255,0.045);
-      border-radius: 16px;
-      padding: 18px 20px;
-    }
-    .microqa strong { color: var(--blue); }
-
-    .faq-list { max-width: 940px; margin: 0 auto; display: grid; gap: 14px; }
-    details {
-      border: 1px solid var(--border);
-      background: var(--panel);
-      border-radius: 14px;
-      padding: 18px 20px;
-    }
-    summary { cursor: pointer; color: var(--text); font-weight: 800; }
-    details p { margin-top: 12px; }
-
-    .contact-box { max-width: 900px; margin: 0 auto; border: 1px solid rgba(245,200,66,0.35); border-radius: 24px; background: rgba(245,200,66,0.06); padding: 34px; }
-    .contact-line { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
-
-    .footer { padding: 58px 0; border-top: 1px solid var(--border); background: #07090d; }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 28px; }
-    .footer h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--gold); }
-    .footer a { display: block; color: var(--muted); text-decoration: none; margin-bottom: 8px; font-size: 0.92rem; }
-    .footer a:hover { color: var(--gold); }
-    .footer p { font-size: 0.92rem; }
-    .version { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.86rem; text-align: center; }
-
-    @media (max-width: 920px) {
-      .nav-links { display: none; }
-      .grid.two, .grid.three, .grid.four, .footer-grid { grid-template-columns: 1fr; }
-      .module { padding: 68px 0; }
-      .hero { padding-top: 66px; }
-      .step { grid-template-columns: 1fr; }
-      .nav-cta .btn-secondary { display: none; }
-    }
-  </style>
 </head>
+
 <body>
-  <nav class="nav" aria-label="Primary navigation">
-    <div class="container nav-inner">
-      <a href="https://5thelement.ai/" class="logo">5th<span class="gold">element</span>.ai</a>
-      <div class="nav-links">
-        <a href="#market-shift">Shift</a>
-        <a href="#why-companies-contact-us">Why Us</a>
-        <a href="#audit">AI Audit</a>
-        <a href="#score">Score</a>
-        <a href="#innovations">Innovations</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-cta">
-        <a href="https://5thelement.ai/how-to.html" class="btn btn-secondary">See How It Works</a>
-        <a href="https://eu-ai-audit.eu" class="btn btn-primary">Start AI Audit™</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- MODULE START: hero -->
-  <header id="hero" class="hero" data-module="hero">
-    <div class="container hero-inner">
-      <div class="breadcrumb" aria-label="Breadcrumb">
-        <a href="https://5thelement.ai/">Home</a>
-        <span>›</span>
-        <span>AI Recommendation Readiness</span>
-      </div>
-      <span class="eyebrow">The Transition From Traffic Economy To Recommendation Economy™</span>
-      <h1>Attract More Clients. Sell More. <span class="gold italic">Grow With AI.</span></h1>
-      <p class="hero-sub">AiVenture helps B2B companies attract, promote, sell, and grow using AI by making them visible, understandable, verifiable, trusted, recommended, and selectable by AI systems.</p>
-      <div class="hero-proof" aria-label="Key promises">
-        <span class="pill">No website rebuild</span>
-        <span class="pill">AI Audit™ first</span>
-        <span class="pill">Works beside your site</span>
-        <span class="pill">Human-In-The-Loop</span>
-        <span class="pill">Proof-backed infrastructure</span>
-      </div>
-      <p class="hero-question">Is AI recommending your business — or your competitors?</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://eu-ai-audit.eu">Start AI Audit™</a>
-        <a class="btn btn-secondary" href="https://5thelement.ai/how-to.html">See How It Works</a>
-      </div>
-      <div class="microqa">
-        <p><strong>Micro Q&A:</strong> What does AiVenture actually do? We help AI systems find, understand, verify, trust, recommend, and select your business.</p>
-      </div>
-    </div>
-  </header>
-  <!-- MODULE END: hero -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="/assets/aiventure-logo.png" alt="AiVenture SRL logo">
+      <span>5thelement.ai</span>
+    </a>
 
-  <!-- MODULE START: market-shift -->
-  <section id="market-shift" class="module alt" data-module="market-shift">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The shift already happened</span>
-        <h2>The Buyer’s Representative Has Changed</h2>
-        <p>The market shift is simple: the customer is delegating more research, comparison, verification, and recommendation work to AI.</p>
-      </div>
-      <figure class="image-card">
-        <img src="assets/ai_transition.webp" alt="The Old Way: search on Google through a marketing funnel. The New Way: AI Agent searches, understands, verifies, analyzes, personalizes, and recommends the best companies." loading="eager" />
-      </figure>
-      <div class="lead-copy">
-        <p>This is not happening because websites disappear, Google disappears, or salespeople disappear.</p>
-        <p>It is happening because the buyer’s representative changes.</p>
-        <p>For decades, the human searched, compared, verified, contacted, and bought.</p>
-        <p>Now AI increasingly searches, understands, verifies, compares, recommends, and prepares the buying path.</p>
-        <p class="final-line">Businesses are no longer selling only to people. They are also selling to the machines that represent people.</p>
-      </div>
-      <div class="microqa">
-        <p><strong>Micro Q&A:</strong> Is Google dead? No. Google remains important. The change is that AI increasingly becomes the first research and recommendation layer.</p>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: market-shift -->
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#shift">Market Shift</a>
+      <a href="#audit">AI Audit</a>
+      <a href="#levels">Levels</a>
+      <a href="#different">Different</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
-  <!-- MODULE START: why-companies-contact-us -->
-  <section id="why-companies-contact-us" class="module" data-module="why-companies-contact-us">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The questions that bring business owners to us</span>
-        <h2>Is AI Even Aware Your Company Exists?</h2>
-        <p>Most companies do not contact us because they want “AI.” They contact us because they want more visibility, better leads, more sales, and faster growth.</p>
-      </div>
-      <div class="quote-stack">
-        <div class="quote">“We asked ChatGPT about our industry and our competitor appeared. We didn’t.”</div>
-        <div class="quote">“We rank on Google, but do we appear when someone asks AI for a recommendation?”</div>
-        <div class="quote">“We do not know what AI understands about our company.”</div>
-      </div>
-      <div class="grid three" style="margin-top:34px;">
-        <div class="card"><h3>More Visibility</h3><p>Be easier for AI systems to discover when customers ask for companies like yours.</p></div>
-        <div class="card"><h3>More Qualified Leads</h3><p>Make your offer clearer before the buyer reaches your website or contact form.</p></div>
-        <div class="card"><h3>More Sales</h3><p>Help AI understand why your company is a valid, credible option.</p></div>
-      </div>
-      <div class="microqa">
-        <p><strong>Micro Q&A:</strong> Why are competitors showing up instead of us? Often because AI can understand, verify, and trust their information more easily.</p>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: why-companies-contact-us -->
+    <a class="email" href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+  </div>
+</header>
 
-  <!-- MODULE START: what-we-do -->
-  <section id="what-we-do" class="module alt" data-module="what-we-do">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Simple explanation</span>
-        <h2>We Build The Layer AI Actually Reads</h2>
-        <p>AiVenture creates an AI visibility and recommendation layer around your business, without rebuilding your existing website.</p>
-      </div>
-      <div class="grid three">
-        <div class="card"><h3>AI Finds You</h3><p>We improve the machine-readable entry points that help AI discover your business.</p></div>
-        <div class="card"><h3>AI Understands You</h3><p>We structure offers, services, proof, differentiators, and customer intent in clearer formats.</p></div>
-        <div class="card"><h3>AI Recommends You</h3><p>We improve the signals that help AI verify, trust, compare, and recommend you when relevant.</p></div>
-      </div>
-      <div class="cta-row" style="margin-top:34px;">
-        <a class="btn btn-primary" href="https://eu-ai-audit.eu">Start AI Audit™</a>
-        <a class="btn btn-secondary" href="https://5thelement.ai/how-to.html">See How It Works</a>
-      </div>
-      <div class="microqa">
-        <p><strong>Micro Q&A:</strong> Is this another website redesign? No. We work alongside your existing website.</p>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: what-we-do -->
+<main>
 
-  <!-- MODULE START: before-after -->
-  <section id="before-after" class="module before-after" data-module="before-after">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Before and after</span>
-        <h2>What Changes?</h2>
-      </div>
-      <div class="grid two">
-        <div class="card before">
-          <h3>Before</h3>
-          <p>AI cannot clearly understand who you are, what you sell, why you are different, or whether your claims are true.</p>
-          <ul>
-            <li>Weak entity clarity</li>
-            <li>Missing proof signals</li>
-            <li>Unclear offer structure</li>
-            <li>Competitors easier to verify</li>
-          </ul>
-          <p class="strong" style="margin-top:14px;">Result: AI may recommend somebody else.</p>
-        </div>
-        <div class="card after">
-          <h3>After</h3>
-          <p>AI can identify your business, understand your offers, verify your claims, compare you correctly, and recommend you when relevant.</p>
-          <ul>
-            <li>Clear business entity</li>
-            <li>Machine-readable offer data</li>
-            <li>Proof and provenance layer</li>
-            <li>Better readiness for AI Agent shortlists</li>
-          </ul>
-          <p class="strong" style="margin-top:14px;">Result: you become a stronger candidate.</p>
-        </div>
-      </div>
-      <div class="microqa">
-        <p><strong>Micro Q&A:</strong> What is the first measurable step? Start with the AI Audit™ so you can see your current before-state.</p>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: before-after -->
+<section class="hero">
+  <div class="container">
+    <div class="kicker">AI Visibility for B2B Growth</div>
 
-  <!-- MODULE START: audit -->
-  <section id="audit" class="module alt" data-module="audit">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The first step</span>
-        <h2>See How AI Sees Your Business Today</h2>
-        <p>The AI Audit™ shows what AI understands, what it cannot verify, what competitors may do better, and what must be fixed first.</p>
-      </div>
-      <div class="grid steps">
-        <div class="card step"><div class="step-num">1</div><div><h3>Request Audit</h3><p>Start at the dedicated AI Audit site.</p></div></div>
-        <div class="card step"><div class="step-num">2</div><div><h3>AI Visibility Scan</h3><p>We analyze how AI systems read your business information.</p></div></div>
-        <div class="card step"><div class="step-num">3</div><div><h3>Readiness Score</h3><p>You receive the AI Recommendation Readiness™ Score across six dimensions.</p></div></div>
-        <div class="card step"><div class="step-num">4</div><div><h3>Priority Roadmap</h3><p>You see what to fix first, what can wait, and what is already working.</p></div></div>
-        <div class="card step"><div class="step-num">5</div><div><h3>Implementation Path</h3><p>Choose DIY, guided help, or done-for-you execution.</p></div></div>
-      </div>
-      <div class="cta-row" style="margin-top:34px;">
-        <a class="btn btn-primary" href="https://eu-ai-audit.eu">Start AI Audit™</a>
-        <a class="btn btn-secondary" href="https://5thelement.ai/how-to.html">See How It Works</a>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Where does the audit start? At <span class="strong">eu-ai-audit.eu</span>.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: audit -->
+    <h1>
+      Attract More Clients.<br>
+      Sell More.<br>
+      <em>Grow With AI.</em>
+    </h1>
 
-  <!-- MODULE START: score -->
-  <section id="score" class="module" data-module="score">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">One number. Six dimensions.</span>
-        <h2>AI Recommendation Readiness™ Score</h2>
-        <p>Every company needs a simple way to measure where it stands before and after AI visibility work.</p>
-      </div>
-      <div class="score-box">
-        <div class="score-number">0–100</div>
-        <p class="strong">A diagnostic score for how ready your business is to be recommended by AI.</p>
-      </div>
-      <div class="grid three">
-        <div class="card"><h3>L1 Findable™</h3><p>Can AI discover your business?</p></div>
-        <div class="card"><h3>L2 Understandable™</h3><p>Can AI explain what you do correctly?</p></div>
-        <div class="card"><h3>L3 Verifiable™</h3><p>Can AI check whether your claims are supported?</p></div>
-        <div class="card"><h3>L4 Trustable™</h3><p>Does AI see your business as credible?</p></div>
-        <div class="card"><h3>L5 Recommendable™</h3><p>Would AI include you as an option?</p></div>
-        <div class="card"><h3>L6 Selectable™</h3><p>Would AI choose you over alternatives?</p></div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Is the score a vanity metric? No. It is a diagnostic system used to prioritize action.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: score -->
+    <p class="lead">
+      AiVenture helps B2B companies attract, promote, sell and grow using AI —
+      without rebuilding their website, replacing their team, or disrupting existing systems.
+    </p>
 
-  <!-- MODULE START: six-levels-overview -->
-  <section id="six-levels-overview" class="module alt" data-module="six-levels-overview">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The framework</span>
-        <h2>The Six Levels Of AI Recommendation Readiness™</h2>
-        <p>The homepage gives the overview. The detailed framework belongs on the dedicated how-to page.</p>
-      </div>
-      <div class="grid six grid three">
-        <div class="card"><h3>L1 Findable™</h3><p>AI can find you.</p></div>
-        <div class="card"><h3>L2 Understandable™</h3><p>AI understands you.</p></div>
-        <div class="card"><h3>L3 Verifiable™</h3><p>AI can verify you.</p></div>
-        <div class="card"><h3>L4 Trustable™</h3><p>AI can trust you.</p></div>
-        <div class="card"><h3>L5 Recommendable™</h3><p>AI can recommend you.</p></div>
-        <div class="card"><h3>L6 Selectable™</h3><p>AI can select you.</p></div>
-      </div>
-      <div class="cta-row" style="margin-top:34px;"><a class="btn btn-secondary" href="https://5thelement.ai/how-to.html">See How It Works</a></div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Why only an overview here? Because the homepage should convert; deeper education belongs on the how-to page.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: six-levels-overview -->
+    <p class="lead">
+      When AI recommends businesses like yours, does it recommend you — or your competitors?
+    </p>
 
-  <!-- MODULE START: why-5thelement-is-different -->
-  <section id="why-5thelement-is-different" class="module" data-module="why-5thelement-is-different">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Not another SEO agency</span>
-        <h2>Built For AI Search And AI Agents</h2>
-        <p>SEO, marketing, and web design remain useful. But AI recommendation requires a different infrastructure.</p>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Provider</th><th>Main Focus</th><th>Limitation</th></tr></thead>
-          <tbody>
-            <tr><td>SEO Agency</td><td>Google rankings</td><td>AI does not only rank pages. It reads, verifies, compares, and recommends.</td></tr>
-            <tr><td>Marketing Agency</td><td>Campaigns and attention</td><td>Paid attention does not guarantee machine-readable trust.</td></tr>
-            <tr><td>Web Agency</td><td>Website design and build</td><td>A beautiful website can still be weak for AI extraction.</td></tr>
-            <tr class="highlight-row"><td>5thelement.ai</td><td>AI visibility, verification, trust, recommendation</td><td>Purpose-built for AI Search and AI Agents.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="grid four" style="margin-top:28px;">
-        <div class="card"><h3>AI LENS™</h3><p>Business information inventory.</p></div>
-        <div class="card"><h3>AI AUDIT™</h3><p>Atomic signal audit.</p></div>
-        <div class="card"><h3>AI READY™</h3><p>Automatic transformation path.</p></div>
-        <div class="card"><h3>ADI™</h3><p>AI Delivery Infrastructure.</p></div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Why not just SEO? Because AI recommendations need structured business facts, proof, trust, and machine-readable context.</p></div>
+    <div class="hero-actions">
+      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+      <a class="btn secondary" href="#shift">See What Changed</a>
     </div>
-  </section>
-  <!-- MODULE END: why-5thelement-is-different -->
+  </div>
+</section>
 
-  <!-- MODULE START: innovations -->
-  <section id="innovations" class="module alt" data-module="innovations">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Protected innovations</span>
-        <h2>The 5thElement Innovation Registry</h2>
-        <p>AiVenture and 5thelement.ai use a proof-backed innovation registry with SHA-256 and OpenTimestamps references.</p>
-      </div>
-      <div class="grid two">
-        <div class="card"><h3>Web-AI B2B Network</h3><div class="proof">4d708888ebe4dfb79f36052f6c34735d4516f5501f5402126c300e76892ad5a6</div></div>
-        <div class="card"><h3>B2B Indirect Marketing</h3><div class="proof">217881f60755e3701496b1cb8690d0fd807362f64f478618385ae23318387499</div></div>
-        <div class="card"><h3>AI-Trust Protocol</h3><div class="proof">2395f0b7bd8c3d319a555c0c8638544e343f26d38d1bde28de84d15516990b5e</div></div>
-        <div class="card"><h3>1-Click Edge Injector</h3><div class="proof">697fe1310d5b453ac71c637a2d5af655221f4e0bbc1f3117c023fa9a0444f826</div></div>
-        <div class="card"><h3>B2B Economic Twins</h3><div class="proof">0716ca58759f65f4760259efe71e99eecf5d22d7471ce4ef7107b49a86c0a077</div></div>
-        <div class="card"><h3>AI Delivery Infrastructure™</h3><div class="proof">31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36</div></div>
-        <div class="card"><h3>AI Sonar™</h3><div class="proof">c57529c8c8bfb010483fc00d4cefece739fdf7c624b8cd1bb6b26f9455f156b5</div><p class="small">OTS block: 949375</p></div>
-        <div class="card"><h3>Mockingbird Handshake™</h3><div class="proof">fb3882881d15dd05056140c7928b8b94e2a323e0d0c53dd5fc1c411bc2b16a22</div><p class="small">OTS block: 949346</p></div>
-      </div>
-      <div class="cta-row" style="margin-top:34px;"><a class="btn btn-secondary" href="https://5thelement.ai/innovations">Explore Innovation Registry</a></div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> What is the innovation registry? It is the public list of registered AiVenture / 5thelement.ai innovations with proof references.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: innovations -->
+<section id="shift">
+  <div class="container">
+    <div class="kicker">The Market Shift</div>
+    <h2>The Way Customers Buy Is Changing</h2>
 
-  <!-- MODULE START: ai-sonar -->
-  <section id="ai-sonar" class="module" data-module="ai-sonar">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">AI Sonar™</span>
-        <h2>Predictive Machine Observability</h2>
-        <p>AI Sonar™ is a predictive EDGE cybersecurity observability system focused on detecting hostile machine-intent propagation patterns before visible attack impact occurs.</p>
-      </div>
-      <div class="grid two">
-        <div class="card">
-          <h3>What It Observes</h3>
-          <ul>
-            <li>Synchronization anomalies</li>
-            <li>Distributed cadence drift</li>
-            <li>Retry propagation patterns</li>
-            <li>Route exploration behavior</li>
-            <li>TLS/header coherence</li>
-            <li>Machine-intent propagation fingerprints</li>
-          </ul>
-        </div>
-        <div class="card highlight">
-          <h3>Proof</h3>
-          <p>SHA-256 fingerprint:</p>
-          <div class="proof">c57529c8c8bfb010483fc00d4cefece739fdf7c624b8cd1bb6b26f9455f156b5</div>
-          <p class="small">OpenTimestamps: block 949375</p>
-        </div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Is AI Sonar™ a replacement for EDR, XDR, or SIEM? No. It is an additional EDGE-native observability layer.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: ai-sonar -->
+    <p class="lead">
+      The shift is not that websites disappear. The shift is not that Google disappears.
+      The shift is that the buyer’s representative changes.
+    </p>
 
-  <!-- MODULE START: proof-layer -->
-  <section id="proof-layer" class="module alt" data-module="proof-layer">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Proof layer</span>
-        <h2>Proof. Not Claims.</h2>
-        <p>Every major innovation can be fingerprinted, timestamped, and made independently verifiable.</p>
-      </div>
-      <div class="grid three">
-        <div class="card"><h3>SHA-256</h3><p>A cryptographic fingerprint of a file, definition, or proof artifact.</p></div>
-        <div class="card"><h3>OpenTimestamps</h3><p>A timestamping method that anchors proof to Bitcoin blocks.</p></div>
-        <div class="card"><h3>Gemini Audit Proof</h3><p>Independent Gemini architectural audit status: Cryptographically Secured / Gemini Audit Compliant.</p></div>
-      </div>
-      <div class="card" style="margin-top:24px;">
-        <h3>Root Manifest Hash</h3>
-        <div class="proof">82c79d0e82e678cdbc4f3d3990f73a7ac5f3452ca02706f99779ff2c8cd1df30</div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Why does proof matter? Because AI systems and human buyers both need stronger evidence that business claims, files, and definitions are stable and verifiable.</p></div>
+    <div class="visual">
+      <img src="/assets/ai_transition.webp" alt="Market shift from Google search to AI agent recommendation">
     </div>
-  </section>
-  <!-- MODULE END: proof-layer -->
 
-  <!-- MODULE START: use-cases -->
-  <section id="use-cases" class="module" data-module="use-cases">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Use cases</span>
-        <h2>Where This Creates Business Value</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Traffic Economy</h3>
+        <div class="flow">Customer → Google → Website → Contact → Purchase</div>
+        <p>The human searches, compares, evaluates, contacts and buys.</p>
       </div>
-      <div class="grid three">
-        <div class="card"><h3>Manufacturing</h3><p>Make capabilities, certifications, markets, and supplier fit easier for AI to understand.</p></div>
-        <div class="card"><h3>Consulting</h3><p>Turn expertise, methodology, proof, and founder authority into clearer AI-readable signals.</p></div>
-        <div class="card"><h3>Professional Services</h3><p>Clarify offer, local relevance, credentials, and client problem fit.</p></div>
-        <div class="card"><h3>SaaS</h3><p>Help AI compare product category, use cases, integrations, proof, and differentiators.</p></div>
-        <div class="card"><h3>Industrial Suppliers</h3><p>Expose technical capacity, delivery conditions, compliance, and product/service scope.</p></div>
-        <div class="card"><h3>Compliance Firms</h3><p>Structure documentation, governance, EU AI Act readiness, and trust signals.</p></div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Is this only for tech companies? No. It is especially useful for B2B firms whose offer must be understood and compared before purchase.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: use-cases -->
 
-  <!-- MODULE START: standard -->
-  <section id="standard" class="module alt" data-module="standard">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The 5thElement Standard™</span>
-        <h2>The Engine Behind The Results</h2>
-        <p>You do not need to understand cryptography, entity graphs, AI signal registries, or data architecture to benefit from them. We handle the infrastructure. You get the business outcome.</p>
+      <div class="card">
+        <h3>Answer Economy</h3>
+        <div class="flow">Customer → AI → Answer → Recommendation</div>
+        <p>AI searches, compares, explains and recommends.</p>
       </div>
-      <div class="grid four">
-        <div class="card"><h3>AI LENS™</h3><p>Business information inventory.</p></div>
-        <div class="card"><h3>AI AUDIT™</h3><p>Atomic signal audit.</p></div>
-        <div class="card"><h3>AI READY™</h3><p>Transformation and deployment path.</p></div>
-        <div class="card"><h3>ADI™</h3><p>AI Delivery Infrastructure layer.</p></div>
-      </div>
-      <div class="microqa"><p><strong>Micro Q&A:</strong> Do business owners need to configure this? No. The technical standard operates in the background.</p></div>
-    </div>
-  </section>
-  <!-- MODULE END: standard -->
 
-  <!-- MODULE START: faq -->
-  <section id="faq" class="module" data-module="faq">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Honest Answers</h2></div>
-      <div class="faq-list">
-        <details open><summary>Do I need to change my website?</summary><p>No. AiVenture adds an AI discovery and recommendation layer alongside your existing website. Your CMS, hosting, design and current pages can stay as they are.</p></details>
-        <details><summary>How is this different from SEO?</summary><p>SEO helps search engines rank pages for humans to click. AI Recommendation Readiness helps AI systems find, understand, verify, trust and recommend your business inside AI-generated answers and AI Agent workflows.</p></details>
-        <details><summary>How fast can I start?</summary><p>You can start with the AI Audit. The initial audit path is designed for fast onboarding and the AI discovery layer can be deployed quickly depending on the scope and available information.</p></details>
-        <details><summary>What does the AI Audit show?</summary><p>The AI Audit shows what AI systems understand about your business, what they cannot verify, which signals are weak and which fixes should be prioritized first.</p></details>
-        <details><summary>What is the AI Recommendation Readiness Score?</summary><p>It is a diagnostic score built across six dimensions: Findable, Understandable, Verifiable, Trustable, Recommendable and Selectable.</p></details>
-        <details><summary>Can AiVenture guarantee that AI will always recommend me first?</summary><p>No honest provider can guarantee that every AI system will always recommend one company first. AiVenture focuses on measurable signal improvement, verification and readiness.</p></details>
-        <details><summary>Is this compliant with the EU AI Act?</summary><p>AiVenture supports EU AI Act readiness through documentation, transparency, governance and traceability infrastructure. It does not certify legal compliance.</p></details>
-        <details><summary>What types of businesses is this for?</summary><p>It is designed for B2B companies, consultants, manufacturers, professional services, SaaS firms, industrial suppliers and compliance-oriented companies that want to be found, understood and recommended by AI.</p></details>
-        <details><summary>What is the 5thElement Innovation Registry?</summary><p>It is the public registry of AiVenture and 5thelement.ai innovations, including ADI, AI Sonar, Mockingbird Handshake and other proof-backed concepts.</p></details>
-        <details><summary>What is the proof layer?</summary><p>The proof layer uses SHA-256 fingerprints and OpenTimestamps anchoring to help prove that important files, definitions and innovations existed at a given time and were not silently altered.</p></details>
+      <div class="card">
+        <h3>Recommendation Economy</h3>
+        <div class="flow">Customer → AI Agent → Verified Options → Selection → Purchase</div>
+        <p>AI agents search, verify, filter, recommend, select and increasingly buy.</p>
       </div>
     </div>
-  </section>
-  <!-- MODULE END: faq -->
 
-  <!-- MODULE START: glossary -->
-  <section id="glossary" class="module alt compact" data-module="glossary">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">Glossary</span><h2>Terms Used On This Page</h2></div>
-      <div class="grid three">
-        <div class="card"><h3>AI Visibility™</h3><p>Can AI discover and understand the business?</p></div>
-        <div class="card"><h3>AI Authority™</h3><p>Will AI trust, recommend, select, and prefer the business?</p></div>
-        <div class="card"><h3>AI LENS™</h3><p>Business information inventory.</p></div>
-        <div class="card"><h3>AI AUDIT™</h3><p>Atomic signal audit.</p></div>
-        <div class="card"><h3>AI READY™</h3><p>Automatic transformation engine.</p></div>
-        <div class="card"><h3>ADI™</h3><p>AI Delivery Infrastructure.</p></div>
-        <div class="card"><h3>OpenTimestamps</h3><p>Bitcoin-anchored proof of existence.</p></div>
-        <div class="card"><h3>Entity Graph</h3><p>Structured relationships between business entities.</p></div>
-        <div class="card"><h3>Proof Layer</h3><p>Verifiable evidence for claims and files.</p></div>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: glossary -->
+    <p class="lead" style="margin-top:34px;">
+      For the first time, companies are not selling only to people.
+      They are also selling to the machines that represent people.
+      That changes marketing. That changes sales. That changes growth.
+    </p>
+  </div>
+</section>
 
-  <!-- MODULE START: contact -->
-  <section id="contact" class="module" data-module="contact">
-    <div class="container">
-      <div class="contact-box">
-        <div class="section-head" style="margin-bottom:20px;">
-          <span class="eyebrow">Final CTA</span>
-          <h2>Is AI Recommending Your Competitors?</h2>
-          <p>Or is it recommending you? Start with your AI Audit™ and see what AI understands about your business today.</p>
-        </div>
-        <div class="contact-line">
-          <a class="btn btn-primary" href="https://eu-ai-audit.eu">Start AI Audit™</a>
-          <a class="btn btn-secondary" href="https://5thelement.ai/how-to.html">See How It Works</a>
-          <a class="btn btn-secondary" href="mailto:contact@5thelement.ai">Email</a>
-          <a class="btn btn-secondary" href="https://wa.me/40737123540">WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- MODULE END: contact -->
+<section>
+  <div class="container">
+    <div class="kicker">Why Companies Contact Us</div>
+    <h2>AI May Already Be Choosing Your Competitors</h2>
 
-  <!-- MODULE START: footer -->
-  <footer class="footer" data-module="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3>5thelement.ai</h3>
-          <p>AiVenture S.R.L. · CUI 51415878 · Bucharest, Romania</p>
-          <p>ADI™ · AI Delivery Infrastructure™</p>
-          <p>Supports readiness — never certifies.</p>
-          <p><a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></p>
-          <p><a href="https://wa.me/40737123540">WhatsApp: +40 737 123 540</a></p>
-        </div>
-        <div>
-          <h3>Quick Links</h3>
-          <a href="https://5thelement.ai/solutions/">Solutions</a>
-          <a href="https://5thelement.ai/services/">Services</a>
-          <a href="https://5thelement.ai/products/">Products</a>
-          <a href="https://5thelement.ai/use-cases/">Use Cases</a>
-          <a href="https://5thelement.ai/resources/">Resources</a>
-          <a href="https://5thelement.ai/blog/">Blog</a>
-          <a href="https://5thelement.ai/innovations">Innovation Registry</a>
-          <a href="https://5thelement.ai/contact/">Contact</a>
-        </div>
-        <div>
-          <h3>Technical Links</h3>
-          <a href="https://5thelement.ai/robots.txt">robots.txt</a>
-          <a href="https://5thelement.ai/sitemap.xml">sitemap.xml</a>
-          <a href="https://5thelement.ai/llms.txt">llms.txt</a>
-          <a href="https://5thelement.ai/ai.json">ai.json</a>
-          <a href="https://5thelement.ai/ai-proof.json">ai-proof.json</a>
-          <a href="https://5thelement.ai/adn.json">adn.json</a>
-          <a href="https://5thelement.ai/.well-known/">.well-known</a>
-        </div>
-        <div>
-          <h3>Cross-References</h3>
-          <a href="#score">AI Recommendation Readiness™</a>
-          <a href="#six-levels-overview">Six Levels</a>
-          <a href="#innovations">Innovation Registry</a>
-          <a href="#ai-sonar">AI Sonar™</a>
-          <a href="#proof-layer">Proof Layer</a>
-          <a href="#glossary">Glossary</a>
-        </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>We are not visible in AI answers</h3>
+        <p>Potential customers ask ChatGPT, Gemini, Claude, Copilot or Perplexity. Competitors appear. You do not.</p>
       </div>
-      <div class="version">
-        Homepage version: v1.6 · Current date: 2026-06-12 · Last updated: 2026-06-12 · Primary CTA: Start AI Audit™ → eu-ai-audit.eu · Secondary CTA: See How It Works → 5thelement.ai/how-to.html
+
+      <div class="card">
+        <h3>Competitors are recommended</h3>
+        <p>AI systems recommend a small set of trusted companies. Many firms do not know whether they are included or excluded.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI does not understand us</h3>
+        <p>Humans may understand your website. AI may not understand your offer, audience, proof or differentiators.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI cannot verify us</h3>
+        <p>If AI cannot verify your claims, it may ignore them or recommend someone easier to validate.</p>
       </div>
     </div>
-  </footer>
-  <!-- MODULE END: footer -->
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <div class="kicker">What We Actually Do</div>
+      <h2>AI Visibility for the Recommendation Economy</h2>
+      <p>
+        AiVenture helps B2B firms attract, promote, sell and grow using AI.
+        We build an AI Discovery Layer™ around your business.
+      </p>
+      <p>
+        The goal is simple: help AI systems find, understand, verify, trust and recommend your company.
+      </p>
+      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+    </div>
+
+    <div class="card">
+      <h3>The AI Discovery Layer™ helps AI understand:</h3>
+      <ul>
+        <li>Who you are</li>
+        <li>What you offer</li>
+        <li>Who you help</li>
+        <li>Why you are different</li>
+        <li>What proof supports your claims</li>
+        <li>Why your business should be recommended</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Before / After</div>
+    <h2>From Invisible to Recommendable</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Before</h3>
+        <ul>
+          <li>AI cannot clearly identify the business.</li>
+          <li>AI struggles to understand the offer.</li>
+          <li>AI cannot verify important claims.</li>
+          <li>AI lacks confidence.</li>
+          <li>AI recommends competitors.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>After</h3>
+        <ul>
+          <li>AI understands the business.</li>
+          <li>AI understands the offer.</li>
+          <li>AI verifies the information.</li>
+          <li>AI trusts the signals.</li>
+          <li>AI can confidently recommend the company.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit">
+  <div class="container split">
+    <div>
+      <div class="kicker">Start With AI Audit™</div>
+      <h2>The First Step Is To See How AI Sees Your Business</h2>
+      <p>
+        Before improving AI visibility, you need to understand your current AI position.
+        The AI Audit™ evaluates discovery, understanding, verification, trust and recommendation readiness.
+      </p>
+      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+    </div>
+
+    <div class="card">
+      <h3>The audit shows:</h3>
+      <ul>
+        <li>What AI understands</li>
+        <li>What AI cannot understand</li>
+        <li>What information is missing</li>
+        <li>What competitors are doing differently</li>
+        <li>What should be fixed first</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <div class="kicker">AI Recommendation Readiness™</div>
+      <h2>Can AI Recommend Your Business?</h2>
+      <p>
+        The AI Recommendation Readiness™ Score measures how prepared your company is
+        for AI discovery and recommendation.
+      </p>
+      <p>
+        The higher your readiness, the easier it becomes for AI systems to understand,
+        verify and recommend your business.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="score">L1–L10</div>
+      <h3>Your AI Visibility and Authority Position</h3>
+      <p>From Findable™ to Defining™ — a clear score for the Recommendation Economy.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">How It Works</div>
+    <h2>Short Process. Clear Output.</h2>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>AI LENS™</h3>
+        <p>Business Information Inventory. We identify what AI needs but cannot currently find.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI AUDIT™</h3>
+        <p>Atomic Signal Assessment. We measure the signals that influence AI visibility and recommendation.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI READY™</h3>
+        <p>Automatic Transformation. We implement improvements that help AI understand and verify the business.</p>
+      </div>
+    </div>
+
+    <p class="lead" style="margin-top:28px;">
+      Then we VERIFY™ the result with validation, proof and machine-readable signals.
+    </p>
+
+    <a class="btn secondary" href="/how-it-works/">See How It Works →</a>
+  </div>
+</section>
+
+<section id="levels">
+  <div class="container">
+    <div class="kicker">Six Levels Overview</div>
+    <h2>The Six Practical Levels of AI Visibility</h2>
+
+    <div class="grid-3">
+      <div class="card"><h3>L1 Findable™</h3><p>Can AI find the business?</p></div>
+      <div class="card"><h3>L2 Understandable™</h3><p>Can AI understand the business?</p></div>
+      <div class="card"><h3>L3 Verifiable™</h3><p>Can AI verify the business?</p></div>
+      <div class="card"><h3>L4 Trustable™</h3><p>Can AI trust the business?</p></div>
+      <div class="card"><h3>L5 Recommendable™</h3><p>Will AI recommend the business?</p></div>
+      <div class="card"><h3>L6 Selectable™</h3><p>Will AI select the business over competitors?</p></div>
+    </div>
+
+    <a class="btn secondary" href="/framework/">See Framework →</a>
+  </div>
+</section>
+
+<section id="different">
+  <div class="container">
+    <div class="kicker">Why 5thelement.ai Is Different</div>
+    <h2>Not SEO. Not A Web Agency. AI Recommendation Infrastructure.</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Traditional SEO</th>
+          <th>Web Agency</th>
+          <th>AiVenture / 5thelement.ai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Optimizes for Google rankings</td>
+          <td>Builds websites</td>
+          <td>Optimizes for AI recommendation</td>
+        </tr>
+        <tr>
+          <td>Measures traffic</td>
+          <td>Measures delivery</td>
+          <td>Measures AI Recommendation Readiness™</td>
+        </tr>
+        <tr>
+          <td>Human-first search</td>
+          <td>Human-first design</td>
+          <td>Human + AI-first discovery</td>
+        </tr>
+        <tr>
+          <td>Clicks</td>
+          <td>Pages</td>
+          <td>Visibility, verification and recommendation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Use Cases</div>
+    <h2>Built For B2B Companies That Need To Be Understood</h2>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Manufacturing</h3>
+        <p>Help AI understand complex products, capabilities, certifications and industrial use cases.</p>
+      </div>
+
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Increase visibility in AI-generated recommendations for expert services and advisory work.</p>
+      </div>
+
+      <div class="card">
+        <h3>B2B Services</h3>
+        <p>Make offers, proof, trust and outcomes easier for AI to understand and recommend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <div class="kicker">The 5thelement.ai Standard™</div>
+      <h2>A Practical Standard For AI Visibility</h2>
+      <p>
+        The 5thelement.ai Standard™ helps businesses become findable, understandable,
+        verifiable, trustable, recommendable and selectable by AI systems.
+      </p>
+      <p>
+        It combines AI Discovery Infrastructure™, machine-readable business signals,
+        verification frameworks and proof mechanisms.
+      </p>
+      <a class="btn secondary" href="/technical-architecture/">See Technical Architecture →</a>
+    </div>
+
+    <div class="card">
+      <h3>Compressed standard:</h3>
+      <ul>
+        <li>AI-readable business identity</li>
+        <li>Clear offer and audience mapping</li>
+        <li>Structured proof and trust signals</li>
+        <li>AI-intent answer coverage</li>
+        <li>Machine-readable validation layer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="kicker">FAQ</div>
+    <h2>Questions Business Owners Ask First</h2>
+
+    <details>
+      <summary>Do I need a new website?</summary>
+      <p>No. The AI Discovery Layer™ can be added around the existing business presence.</p>
+    </details>
+
+    <details>
+      <summary>Does this replace SEO?</summary>
+      <p>No. It complements SEO by preparing your business for AI search, AI answers and AI recommendations.</p>
+    </details>
+
+    <details>
+      <summary>How long does the first audit take?</summary>
+      <p>Most initial AI Audits™ can be completed within 24 hours.</p>
+    </details>
+
+    <details>
+      <summary>Can AI really influence buying decisions?</summary>
+      <p>Yes. AI systems increasingly search, compare, verify, summarize and recommend options before customers make decisions.</p>
+    </details>
+
+    <details>
+      <summary>What is the first step?</summary>
+      <p>Start with the AI Audit™ to understand how AI currently sees your business.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Final CTA</div>
+    <h2>When AI Recommends Businesses Like Yours, Does It Recommend You?</h2>
+    <p class="lead">
+      The Recommendation Economy has already started.
+      Discover how AI currently sees your business and what should be fixed first.
+    </p>
+    <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>AiVenture SRL</strong><br>
+    5thelement.ai — AI Visibility & Recommendation Readiness<br>
+    <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+  </div>
+</footer>
+
 </body>
 </html>
