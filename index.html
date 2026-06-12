@@ -448,6 +448,60 @@
     margin-top: 56px;
   }
 
+
+
+  .proof-bar {
+    max-width: 900px;
+    margin: 34px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .proof-item {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .proof-item strong { display:block; color:var(--gold); font-size:1rem; margin-bottom:4px; }
+  .proof-item span { color:var(--mid); font-size:.82rem; }
+
+  .two-col {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .content-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    background: var(--bg-alt);
+  }
+  .content-card h3 { font-size:1.35rem; margin-bottom:14px; }
+  .content-card p, .content-card li { color:var(--mid); font-size:.98rem; }
+  .content-card ul { margin-left: 18px; margin-top: 12px; }
+  .content-card li { margin-bottom: 8px; }
+  .quote-grid { max-width:960px; margin: 0 auto; display:grid; gap:16px; }
+  .quote-card { border-left:4px solid var(--gold); background:var(--bg-alt); padding:22px 24px; border-radius:12px; color:var(--mid); font-size:1.05rem; }
+  .score-box { max-width:900px; margin:0 auto; border:1px solid var(--border); border-radius:18px; background:var(--bg-alt); padding:36px; }
+  .score-number { font-family:'Playfair Display',serif; font-size:4rem; color:var(--gold); line-height:1; text-align:center; margin-bottom:8px; }
+  .score-label { text-align:center; color:var(--text); font-weight:600; margin-bottom:26px; }
+  .level-grid { max-width:960px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .level-card { border:1px solid var(--border); border-radius:12px; padding:24px; background:var(--bg-alt); }
+  .level-card h3 { font-size:1.12rem; color:var(--gold); margin-bottom:8px; }
+  .level-card p { color:var(--mid); font-size:.94rem; }
+  .faq-list { max-width:850px; margin:0 auto; display:grid; gap:16px; }
+  .faq-item { border:1px solid var(--border); border-radius:12px; padding:24px; background:var(--bg-alt); }
+  .faq-item h3 { font-family:'Inter',sans-serif; font-size:1rem; margin-bottom:8px; color:var(--gold); }
+  .faq-item p { color:var(--mid); margin:0; }
+
+  @media (max-width: 768px) {
+    .proof-bar, .two-col, .level-grid { grid-template-columns:1fr; }
+  }
+
   /* Footer */
   footer {
     padding: 56px 32px;
@@ -497,9 +551,10 @@
 <nav>
   <div class="logo">5th<span class="gold-text">element</span>.ai</div>
   <div class="nav-links">
-    <a href="#why">Why AiVenture</a>
-    <a href="#how">How It Works</a>
-    <a href="#where">Where It Matters</a>
+    <a href="#contact-us">Why Contact Us</a>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#audit">AI Audit</a>
+    <a href="#standard">Standard</a>
     <a href="#audit" class="cta-primary" style="padding:10px 22px; font-size:13px;">Start AI Audit™</a>
   </div>
   <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -507,10 +562,10 @@
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#why">Why AiVenture</a>
-  <a href="#how">How It Works</a>
-  <a href="#where">Where It Matters</a>
-  <a href="#audit">Start AI Audit™</a>
+  <a href="#contact-us">Why Contact Us</a>
+  <a href="#what-we-do">What We Do</a>
+  <a href="#audit">AI Audit</a>
+  <a href="#standard">Standard</a>
 </div>
 
 <!-- HERO -->
@@ -526,6 +581,12 @@
     </p>
     <p class="hero-question">Is AI recommending your business — or your competitors?</p>
     <a href="#audit" class="cta-primary">Start Your Free AI Audit™</a>
+    <div class="proof-bar" aria-label="Trust signals">
+      <div class="proof-item"><strong>24h</strong><span>first AI visibility audit</span></div>
+      <div class="proof-item"><strong>167</strong><span>atomic AI signals</span></div>
+      <div class="proof-item"><strong>No rebuild</strong><span>external AI layer</span></div>
+      <div class="proof-item"><strong>Proof layer</strong><span>SHA-256 + OTS</span></div>
+    </div>
   </div>
 </header>
 
@@ -533,154 +594,261 @@
 <section class="transition-section">
   <div class="container">
     <div class="transition-image-wrap">
-      <img src="ai_transition.webp" alt="The Old Way: search on Google through a marketing funnel. The New Way: AI Agent searches, understands, verifies, analyzes, personalizes, and recommends the best companies." loading="lazy">
+      <img src="assets/ai_transition.webp" alt="The Old Way: search on Google through a marketing funnel. The New Way: AI Agent searches, understands, verifies, analyzes, personalizes, and recommends the best companies." loading="lazy">
     </div>
     <div class="bridge-copy">
+      <span class="eyebrow">The market shift</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.8rem); margin-bottom:22px;">The Shift Is Not That Websites Disappear. <span class="italic-accent">The Buyer’s Representative Changes.</span></h2>
+      <p>The old journey was simple: Human → Google → Website → Contact → Sales → Purchase.</p>
+      <p>The new journey is different: Human → AI Agent → Verified Options → Recommendation → Purchase.</p>
       <p>The shift isn't that customers stopped searching. The shift is that AI increasingly performs the searching, understanding, verification, comparison, and recommendation on behalf of the customer.</p>
       <p>AiVenture helps your business become <span class="gold-text">visible, understandable, verifiable, trusted, and recommendable</span> in this new AI-driven buying journey.</p>
     </div>
   </div>
 </section>
 
-<!-- WHY AIVENTURE -->
-<section id="why">
+
+<!-- WHY COMPANIES CONTACT US -->
+<section id="contact-us">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">This isn't SEO. It's a different kind of visibility.</span>
-      <h2>We Make Sure AI Knows You Exist — And Recommends You</h2>
+      <span class="eyebrow">Why companies contact us</span>
+      <h2>“Is AI Even Aware My Company Exists?”</h2>
     </div>
-
-    <div class="why-grid">
-      <p>SEO helps you rank in search engines, for humans clicking links.</p>
-      <p class="highlight">AiVenture helps AI systems — and the AI Agents acting on behalf of your customers — find, understand, verify, trust, and recommend your business.</p>
+    <div class="quote-grid">
+      <div class="quote-card">“We asked ChatGPT about our own industry — and our company wasn’t mentioned. Our competitor was.”</div>
+      <div class="quote-card">“We rank on Google. But when someone asks an AI assistant for a recommendation, do we show up?”</div>
+      <div class="quote-card">“A client found us through AI search. We don’t know why it picked us — or whether it will happen again.”</div>
     </div>
+    <div class="where-closing">
+      <p>The business may be real, credible, and established. But if AI cannot find it, understand it, verify it, or trust it, AI may recommend someone else.</p>
+      <p>That is why companies contact AiVenture: not because they want “AI,” but because they want to stop being invisible to the systems their customers are already asking.</p>
+    </div>
+  </div>
+</section>
 
+<!-- WHAT WE ACTUALLY DO -->
+<section id="what-we-do" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we actually do</span>
+      <h2>We Build The Layer AI Systems Can Read, Trust, And Use</h2>
+    </div>
+    <div class="two-col">
+      <div class="content-card">
+        <h3>For the business owner</h3>
+        <p>AiVenture helps B2B firms attract more clients, generate more qualified opportunities, support sales, and grow with AI.</p>
+        <ul>
+          <li>More AI visibility</li>
+          <li>More qualified leads</li>
+          <li>More trust before contact</li>
+          <li>More sales conversations</li>
+        </ul>
+      </div>
+      <div class="content-card">
+        <h3>For the AI systems</h3>
+        <p>We structure the business information AI needs to find, understand, verify, trust, recommend, and select your company.</p>
+        <ul>
+          <li>Machine-readable business data</li>
+          <li>Entity and offer clarity</li>
+          <li>Proof and provenance signals</li>
+          <li>AI-ready answer blocks</li>
+        </ul>
+      </div>
+    </div>
     <div class="no-rebuild">
-      <strong>We do this without touching your website.</strong>
-      <p>No rebuild. No migration. No new CMS. We add an external AI discovery layer that runs alongside what you already have — live in 24 hours, operating 24/7.</p>
+      <strong>Without rebuilding your website.</strong>
+      <p>No migration. No new CMS. No redesign dependency. We add an external AI discovery layer alongside what already exists.</p>
     </div>
+  </div>
+</section>
 
+<!-- BEFORE AFTER -->
+<section id="before-after">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Before / After</span>
+      <h2>AI Cannot Recommend What It Cannot Understand</h2>
+    </div>
+    <div class="two-col">
+      <div class="content-card">
+        <h3>Before AiVenture</h3>
+        <p>AI may not clearly know:</p>
+        <ul>
+          <li>who your company is</li>
+          <li>what you sell</li>
+          <li>who you help</li>
+          <li>why you are different</li>
+          <li>whether your claims are true</li>
+        </ul>
+        <p><strong>Result:</strong> AI may recommend a clearer competitor.</p>
+      </div>
+      <div class="content-card">
+        <h3>After AiVenture</h3>
+        <p>AI can more clearly:</p>
+        <ul>
+          <li>identify your business</li>
+          <li>understand your offer</li>
+          <li>verify your claims</li>
+          <li>match you to buyer intent</li>
+          <li>include you in recommendations</li>
+        </ul>
+        <p><strong>Result:</strong> your business becomes a stronger candidate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- START WITH AUDIT -->
+<section id="audit" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Start with AI Audit™</span>
+      <h2>No Complexity. No Code To Learn. See Where You Stand Today.</h2>
+    </div>
+    <div class="steps">
+      <div class="step-card"><div class="step-num">1</div><div><h3>Request your AI Audit™</h3><p>We start by checking how AI systems currently read your business.</p></div></div>
+      <div class="step-card"><div class="step-num">2</div><div><h3>See what AI understands and what it cannot verify</h3><p>You receive a clear view of missing, weak, or inconsistent signals.</p></div></div>
+      <div class="step-card"><div class="step-num">3</div><div><h3>Get a prioritized action plan</h3><p>You know what to fix first, what can be automated, and what needs human review.</p></div></div>
+    </div>
+    <div class="center-cta" style="margin-top:42px;">
+      <a href="mailto:contact@5thelement.ai" class="cta-primary">Start Your Free AI Audit™</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCORE -->
+<section id="score">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">AI Recommendation Readiness™ Score</span>
+      <h2>One Number. Six Dimensions. Full Clarity.</h2>
+    </div>
+    <div class="score-box">
+      <div class="score-number">0–100</div>
+      <div class="score-label">Your AI Recommendation Readiness™ Score</div>
+      <div class="table-wrap" style="margin-bottom:0;">
+        <table class="table-aiventure">
+          <thead><tr><th>Dimension</th><th>What It Measures</th><th>Business Question</th></tr></thead>
+          <tbody>
+            <tr><td>Findable™</td><td>Discovery</td><td>Can AI discover your business?</td></tr>
+            <tr><td>Understandable™</td><td>Clarity</td><td>Can AI explain what you do correctly?</td></tr>
+            <tr><td>Verifiable™</td><td>Evidence</td><td>Can AI check that your claims are true?</td></tr>
+            <tr><td>Trustable™</td><td>Credibility</td><td>Does AI see you as a safe source?</td></tr>
+            <tr><td>Recommendable™</td><td>Shortlisting</td><td>Would AI include you as an option?</td></tr>
+            <tr><td>Selectable™</td><td>Choice</td><td>Would AI choose you over alternatives?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIX LEVELS -->
+<section id="levels" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Six levels overview</span>
+      <h2>From Invisible To Selectable</h2>
+    </div>
+    <div class="level-grid">
+      <div class="level-card"><h3>L1 Findable™</h3><p>AI can discover your company.</p></div>
+      <div class="level-card"><h3>L2 Understandable™</h3><p>AI understands what you sell and who you help.</p></div>
+      <div class="level-card"><h3>L3 Verifiable™</h3><p>AI can check your claims and evidence.</p></div>
+      <div class="level-card"><h3>L4 Trustable™</h3><p>AI sees your business as credible enough to mention.</p></div>
+      <div class="level-card"><h3>L5 Recommendable™</h3><p>AI includes you as a relevant option.</p></div>
+      <div class="level-card"><h3>L6 Selectable™</h3><p>AI can choose you from alternatives.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENT -->
+<section id="different">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why 5thElement is different</span>
+      <h2>SEO Gets You Clicked. AI Readiness Gets You Understood.</h2>
+    </div>
     <div class="table-wrap">
       <table class="table-aiventure">
-        <thead>
-          <tr>
-            <th></th>
-            <th>What They Do</th>
-            <th>What's Missing</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Provider</th><th>Main Focus</th><th>Limitation</th></tr></thead>
         <tbody>
-          <tr>
-            <td>SEO Agency</td>
-            <td>Rank pages on Google</td>
-            <td>AI doesn't rank pages — it reads, verifies, and recommends</td>
-          </tr>
-          <tr>
-            <td>Marketing Agency</td>
-            <td>Run campaigns for attention</td>
-            <td>AI doesn't respond to ads — it responds to verifiable information</td>
-          </tr>
-          <tr>
-            <td>Web Agency</td>
-            <td>Design and build websites</td>
-            <td>A great website doesn't guarantee AI can read or trust it</td>
-          </tr>
-          <tr class="highlight-row">
-            <td>AiVenture</td>
-            <td>Makes you findable, understandable, verifiable, trustable, recommendable, and selectable by AI</td>
-            <td>—</td>
-          </tr>
+          <tr><td>SEO Agency</td><td>Google ranking</td><td>Optimizes for search pages, not AI recommendations.</td></tr>
+          <tr><td>Marketing Agency</td><td>Campaigns and traffic</td><td>Depends on paid attention and human clicks.</td></tr>
+          <tr><td>Web Agency</td><td>Website design</td><td>A beautiful website may still be unclear to AI.</td></tr>
+          <tr class="highlight-row"><td>5thElement.ai</td><td>AI discovery, verification, trust, and recommendation</td><td>Built for AI Search and AI Agents.</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div class="center-cta">
-      <p style="color:var(--mid); margin-bottom:20px; font-size:1.05rem;">
-        <strong style="color:var(--text);">Start with your AI Audit™</strong> — see exactly what AI currently understands about your business, and what's missing.
-      </p>
-      <a href="#audit" class="cta-primary">Start Your Free AI Audit™</a>
-    </div>
   </div>
 </section>
 
-<!-- HOW AIVENTURE HELPS -->
-<section id="how" style="background:var(--bg-alt);">
+<!-- USE CASES -->
+<section id="use-cases" style="background:var(--bg-alt);">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">From audit to AI Agent — how it actually works</span>
-      <h2>Three Steps. No Disruption To Your Business.</h2>
+      <span class="eyebrow">Use cases</span>
+      <h2>Where This Matters First</h2>
     </div>
-
-    <div class="steps">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div>
-          <h3>We Audit How AI Sees You Today</h3>
-          <p>Before anything changes, we check what AI systems currently know — and don't know — about your business.</p>
-          <p>You get an <span class="score-highlight">AI Recommendation Readiness™ Score</span> across six dimensions: Findable, Understandable, Verifiable, Trustable, Recommendable, Selectable.</p>
-          <p>This shows exactly where AI loses track of you — and what's blocking AI from recommending you over a competitor.</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div>
-          <h3>We Build The Layer AI Actually Reads</h3>
-          <p>We add structured, machine-readable information about your business — your offers, your proof, your credentials, your differentiators — in the formats AI systems use to find, understand, and verify companies.</p>
-          <p>This runs <strong style="color:var(--text);">alongside</strong> your existing website. Nothing gets rebuilt, migrated, or replaced. It goes live in 24 hours and operates continuously.</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div>
-          <h3>We Track What Changes</h3>
-          <p>Your AI Recommendation Readiness™ Score is measured again after implementation — so you can see, in numbers, whether AI now understands and recommends your business better than before.</p>
-          <p>This isn't a one-time fix. AI systems update constantly, so the layer stays active, keeping your business visible as AI search and AI Agents evolve.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHERE THIS MATTERS -->
-<section id="where">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Wherever your customers are asking AI</span>
-      <h2>Your Customers Are Already Asking AI About You</h2>
-    </div>
-
-    <p style="text-align:center; max-width:680px; margin:0 auto 48px; color:var(--mid); font-size:1.05rem;">
-      Whether they realize it or not, AI is involved earlier and earlier in how people find and choose businesses:
-    </p>
-
     <div class="where-grid">
-      <div class="where-card">
-        <h4>Search Assistants</h4>
-        <p>ChatGPT, Gemini, Claude, Perplexity, and Copilot answering "who can help me with X."</p>
+      <div class="where-card"><h4>Manufacturing</h4><p>Make capabilities, certifications, markets served, and supplier fit easier for AI to understand.</p></div>
+      <div class="where-card"><h4>Consulting</h4><p>Clarify expertise, methodology, authority, and proof so AI can distinguish you from generic competitors.</p></div>
+      <div class="where-card"><h4>Professional Services</h4><p>Help AI match your service offer to buyer problems, location, urgency, and trust requirements.</p></div>
+      <div class="where-card"><h4>SaaS & Technology</h4><p>Structure product claims, integrations, security, use cases, and comparisons for AI-assisted evaluation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARD -->
+<section id="standard">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The 5thElement Standard™</span>
+      <h2>The Engine Behind The Result</h2>
+    </div>
+    <div class="two-col">
+      <div class="content-card">
+        <h3>Business takeaway</h3>
+        <p>Your business information becomes clearer, more structured, and easier for AI systems to verify. That is what increases confidence.</p>
       </div>
-      <div class="where-card">
-        <h4>AI Agents</h4>
-        <p>Tools that search, compare, and shortlist companies on a person's behalf.</p>
-      </div>
-      <div class="where-card">
-        <h4>Voice & Chat Interfaces</h4>
-        <p>Increasingly the first point of contact for B2B buyers researching vendors.</p>
-      </div>
-      <div class="where-card">
-        <h4>Internal Company AI Tools</h4>
-        <p>Procurement and research assistants used by your prospects' own teams.</p>
+      <div class="content-card">
+        <h3>Technical layer</h3>
+        <p>AI LENS™, AI AUDIT™, AI READY™, ADI™, 167 AI Signals, Entity Graph, Trust Layer, SHA-256, and OpenTimestamps proof records.</p>
       </div>
     </div>
-
     <div class="where-closing">
-      <p>If AI can't find, understand, or verify your business in any of these contexts, you're not in the conversation — even if your website looks great and your Google ranking is solid.</p>
-      <p>AiVenture makes sure you're part of that conversation, wherever it happens.</p>
+      <p>Proof is not marketing language. It is verifiable infrastructure.</p>
+      <p>We do not change your website. We change what AI understands about it.</p>
     </div>
+  </div>
+</section>
 
-    <div class="final-cta-wrap" id="audit">
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Honest Answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><h3>Do I need to change my website?</h3><p>No. We add an AI discovery layer alongside your existing website. No rebuild, migration, or lock-in.</p></div>
+      <div class="faq-item"><h3>How is this different from SEO?</h3><p>SEO helps humans find pages. AI Recommendation Readiness helps AI systems understand, verify, trust, and recommend your business.</p></div>
+      <div class="faq-item"><h3>How fast can we start?</h3><p>The first AI Audit™ can be started immediately and initial delivery can be prepared within 24 hours depending on available information.</p></div>
+      <div class="faq-item"><h3>Do you certify EU AI Act compliance?</h3><p>No. We support readiness, documentation, transparency, and traceability. We never certify legal compliance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:30px;">
+      <span class="eyebrow">Final question</span>
+      <h2>Is AI Recommending Your Competitors? <span class="italic-accent">Or Is It Recommending You?</span></h2>
+    </div>
+    <div class="center-cta">
       <a href="mailto:contact@5thelement.ai" class="cta-primary">Start Your Free AI Audit™</a>
+      <p style="color:var(--mid); margin-top:20px;">contact@5thelement.ai</p>
     </div>
   </div>
 </section>
