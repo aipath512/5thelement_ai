@@ -3,956 +3,706 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5thelement.ai — Attract More Clients. Sell More. Grow With AI.</title>
-<meta name="description" content="The Transition From Traffic Economy To Recommendation Economy. Your customers now ask ChatGPT, Gemini, Claude, Copilot and Perplexity. We help AI find, understand, verify and recommend your business. No rebuild. No migration. Live in 24 hours.">
-<link rel="canonical" href="https://5thelement.ai/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>5thelement.ai — AI Recommendation Readiness™</title>
+<meta name="description" content="AiVenture helps B2B companies become visible, understandable, verifiable, trusted, and recommended by AI systems — without changing your website.">
 
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://5thelement.ai/#organization",
-      "@type": "Organization",
-      "name": "5thelement.ai",
-      "legalName": "AiVenture S.R.L.",
-      "identifier": "CUI 51415878",
-      "url": "https://5thelement.ai/",
-      "description": "The Transition From Traffic Economy To Recommendation Economy. We help AI find, understand, verify and recommend your business.",
-      "sameAs": ["https://aiventure.ro","https://eu-ai-audit.eu","https://eu-ai-act-ready.eu"]
-    },
-    {
-      "@type": "ItemList",
-      "name": "AI Recommendation Readiness Levels",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Findable","description":"AI scrapers can access your core data without being blocked."},
-        {"@type":"ListItem","position":2,"name":"Understandable","description":"AI can correctly interpret your services, pricing and offers."},
-        {"@type":"ListItem","position":3,"name":"Verifiable","description":"AI can independently confirm your claims are accurate."},
-        {"@type":"ListItem","position":4,"name":"Trustable","description":"AI treats your business as a credible, citable source."},
-        {"@type":"ListItem","position":5,"name":"Recommendable","description":"AI surfaces your business ahead of competitors."},
-        {"@type":"ListItem","position":6,"name":"Selectable","description":"AI Agents can hand off ready-to-buy clients to your team."}
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"Do I need to change my website?","acceptedAnswer":{"@type":"Answer","text":"No. We add an AI discovery layer alongside your existing website — not inside it. Your site, CMS, hosting, and design stay exactly as they are. No rebuild, no migration, no rollout."}},
-        {"@type":"Question","name":"How is this different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO targets search engine rankings that humans click through. AI Recommendation Readiness targets how AI systems understand, verify and recommend your business in generated answers and agent decisions."}},
-        {"@type":"Question","name":"How fast will I see results?","acceptedAnswer":{"@type":"Answer","text":"Free AI Audit delivered within 24 hours. Recommendation improvement is typically measurable within 2–4 weeks after implementation, with before-and-after verification."}},
-        {"@type":"Question","name":"What if AI still does not recommend me?","acceptedAnswer":{"@type":"Answer","text":"We provide a result-based guarantee. If the agreed improvements don't produce measurable change in how AI systems understand your business, we continue working until they do."}},
-        {"@type":"Question","name":"Is this compliant with the EU AI Act?","acceptedAnswer":{"@type":"Answer","text":"Our work supports EU AI Act readiness. We never certify compliance — that distinction is fundamental to our epistemic discipline."}},
-        {"@type":"Question","name":"What types of businesses does this work for?","acceptedAnswer":{"@type":"Answer","text":"Any B2B company that wants to be found, understood and recommended by AI systems — professional services, consultancies, agencies, and any business where buyers use AI to evaluate options before making contact."}}
-      ]
-    }
-  ]
+  "@type": "Organization",
+  "name": "5thelement.ai",
+  "url": "https://5thelement.ai",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "AiVenture S.R.L.",
+    "identifier": "CUI 51415878"
+  },
+  "description": "AI Recommendation Readiness infrastructure for B2B companies."
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --bg:#0a0c0f; --s1:#0f1318; --s2:#131c25; --s3:#0d1520;
-  --b1:#1c2530; --b2:#243040; --b3:#2d3c4e;
-  --text:#ffffff; --mid:#aebccb; --dim:#7f93a8; --dimmer:#3a4a5c;
-  --gold:#f5c842; --gd10:rgba(245,200,66,.10); --gd20:rgba(245,200,66,.20); --gd04:rgba(245,200,66,.04);
-  --cyan:#4dc8e8; --cd10:rgba(77,200,232,.10);
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'Inter',system-ui,sans-serif;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  :root {
+    --bg: #0a0c0f;
+    --bg-alt: #0f1217;
+    --text: #ffffff;
+    --mid: #cccccc;
+    --light: #aaaaaa;
+    --accent: #7ec8ff;
+    --gold: #f5c842;
+    --border: rgba(255,255,255,0.08);
+  }
 
-/* ── THEME TOGGLE ─────────────────────── */
-#tt{position:fixed;top:68px;left:16px;z-index:500;background:var(--s1);border:1px solid var(--b2);color:var(--text);width:34px;height:34px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
-#tt:hover{border-color:var(--gold)}
+  body.light-mode {
+    --bg: #ffffff;
+    --bg-alt: #f5f5f7;
+    --text: #0a0a0a;
+    --mid: #333333;
+    --light: #555555;
+    --accent: #0051A8;
+    --gold: #b8860b;
+    --border: rgba(0,0,0,0.08);
+  }
 
-/* ── NAV ──────────────────────────────── */
-nav{position:fixed;inset:0 0 auto;z-index:200;background:rgba(10,12,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.nav-logo{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-.01em;flex-shrink:0}
-.nav-logo em{color:var(--gold);font-style:normal}
-.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
-.nav-links a{color:var(--mid);text-decoration:none;font-size:13px;font-weight:400;padding:6px 12px;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap}
-.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.04)}
-.nav-cta{background:var(--gold)!important;color:#0a0c0f!important;font-weight:600!important;padding:8px 18px!important;border-radius:4px;transition:opacity .2s!important}
-.nav-cta:hover{opacity:.86!important;background:var(--gold)!important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{display:block;width:22px;height:1px;background:var(--text)}
-.mob{display:none;position:fixed;inset:64px 0 0;background:var(--bg);padding:32px 24px;flex-direction:column;gap:20px;z-index:190;overflow-y:auto}
-.mob.open{display:flex}
-.mob a{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--b1)}
-.mob a:last-child{border:none;color:var(--gold)}
+  body.light-mode * { color: #0a0a0a !important; }
+  body.light-mode .gold-text,
+  body.light-mode .eyebrow,
+  body.light-mode .pill,
+  body.light-mode .cta-primary,
+  body.light-mode .cta-primary *,
+  body.light-mode .table-aiventure td:first-child { color: inherit !important; }
+  body.light-mode .gold-text { color: var(--gold) !important; }
+  body.light-mode .eyebrow { color: var(--gold) !important; }
 
-/* ── SHARED ───────────────────────────── */
-.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
-section{padding:96px 0}
-.ey{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.ey::before{content:'';width:24px;height:1px;background:var(--gold)}
-.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0a0c0f;font-family:var(--sans);font-size:15px;font-weight:600;padding:13px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s,transform .15s;white-space:nowrap}
-.btn-p:hover{opacity:.87;transform:translateY(-1px)}
-.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--mid);font-family:var(--sans);font-size:14px;font-weight:400;padding:13px 22px;border-radius:4px;border:1px solid var(--b2);text-decoration:none;cursor:pointer;transition:all .2s;white-space:nowrap}
-.btn-o:hover{color:var(--text);border-color:var(--b3)}
-.btn-g{display:inline-flex;align-items:center;gap:6px;color:var(--mid);font-size:14px;text-decoration:none;background:none;border:none;cursor:pointer;font-family:var(--sans);transition:color .2s}
-.btn-g:hover{color:var(--text)}
-.btn-g::after{content:'→';transition:transform .2s}
-.btn-g:hover::after{transform:translateX(3px)}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── HERO ─────────────────────────────── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--b1) 1px,transparent 1px),linear-gradient(90deg,var(--b1) 1px,transparent 1px);background-size:72px 72px;opacity:.22;pointer-events:none}
-.hero-fade{position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none}
-.hero-glow{position:absolute;top:30%;left:20%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,200,66,.04) 0%,transparent 65%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;width:100%}
-.hero-ey{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.hero-ey::before{content:'';width:28px;height:1px;background:var(--gold)}
-h1{font-family:var(--serif);font-size:clamp(38px,5vw,66px);font-weight:900;line-height:1.07;letter-spacing:-.025em;color:var(--text);margin-bottom:20px}
-h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:19px;font-weight:400;color:var(--mid);line-height:1.6;margin-bottom:28px;max-width:540px}
+  html { scroll-behavior: smooth; }
 
-.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
-.hero-pill{font-size:13px;font-weight:600;color:var(--gold);background:var(--gd10);border:1px solid var(--gd20);border-radius:20px;padding:7px 16px;letter-spacing:.02em}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
 
-.hero-acts{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
 
-/* engine card */
-.eng-card{background:var(--s1);border:1px solid var(--b2);border-radius:12px;padding:24px;position:relative;overflow:hidden}
-.eng-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.eng-label{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
-.eng-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--b1)}
-.eng-row:last-of-type{border:none}
-.eng-dot{width:7px;height:7px;border-radius:50%;background:var(--dim);flex-shrink:0;transition:background .35s,box-shadow .35s}
-.eng-row.lit .eng-dot{background:var(--gold);box-shadow:0 0 8px rgba(245,200,66,.55)}
-.eng-name{font-size:14px;color:var(--mid);flex:1;transition:color .3s}
-.eng-row.lit .eng-name{color:var(--text)}
-.eng-stat{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);transition:color .3s}
-.eng-row.lit .eng-stat{color:var(--gold)}
-.eng-foot{margin-top:16px;padding-top:14px;border-top:1px solid var(--b1);font-size:11px;color:var(--dim);line-height:1.55}
-.eng-foot strong{color:var(--mid)}
+  .gold-text { color: var(--gold); }
+  .italic-accent { font-style: italic; font-weight: 600; color: var(--gold); }
 
-/* ── VISUAL GALLERY ───────────────────── */
-.gallery{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.gallery-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:40px}
-.gallery-h2 em{font-style:italic;color:var(--gold)}
-.gallery-grid{display:flex;flex-direction:column;gap:32px}
-.gallery-item{border:1px solid var(--b2);border-radius:10px;overflow:hidden;background:#f0f3f7;position:relative}
-.gallery-item img{display:block;width:100%;height:auto}
-.gallery-tag{position:absolute;top:16px;left:16px;font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.1em;color:#0a0c0f;background:var(--gold);padding:6px 14px;border-radius:4px;z-index:2}
+  /* Theme toggle */
+  #theme-toggle {
+    position: fixed;
+    top: 68px;
+    left: 24px;
+    z-index: 1000;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  #theme-toggle:hover { border-color: var(--gold); }
+  #theme-toggle .label { display: none; font-size: 11px; font-weight: 500; }
 
-/* ── WHY NOW / RISK ───────────────────── */
-.risk{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.risk-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px;max-width:680px}
-.risk-h2 em{font-style:italic;color:var(--gold)}
-.risk-body{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:16px;max-width:680px}
-.risk-body strong{color:var(--text);font-weight:500}
-.trust-phrase{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text);margin-top:24px;max-width:680px;line-height:1.5}
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(10,12,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body.light-mode nav { background: rgba(255,255,255,0.85); }
 
-/* ── TRANSITION ───────────────────────── */
-.transition{background:var(--bg);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.transition-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}
-.transition-h2 em{font-style:italic;color:var(--gold)}
-.transition-sub{font-size:15px;color:var(--mid);margin-bottom:40px;max-width:640px}
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  .logo .gold-text { font-style: italic; }
 
-.gallery-grid{display:flex;flex-direction:column;gap:24px;margin-bottom:48px}
-.gallery-item{border:1px solid var(--b2);border-radius:10px;overflow:hidden;background:#f0f3f7;position:relative}
-.gallery-item img{display:block;width:100%;height:auto}
-.gallery-tag{position:absolute;top:16px;left:16px;font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.1em;color:#0a0c0f;background:var(--gold);padding:6px 14px;border-radius:4px;z-index:2}
+  .nav-links { display: flex; gap: 32px; font-size: 14px; }
+  .nav-links a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
 
-.era-sub-label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:10px}
-.era-tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.era-tags li{font-size:11px;color:var(--mid);background:var(--s2);border:1px solid var(--b2);border-radius:14px;padding:3px 10px}
-.era-card.last .era-tags li,.era-card.mid .era-tags li{border-color:var(--b2)}
-.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.era-card{background:var(--s1);padding:32px 28px;display:flex;flex-direction:column;gap:14px;transition:background .2s}
-.era-card:hover{background:var(--s2)}
-.era-card.mid{background:var(--s2)}
-.era-card.mid:hover{background:var(--s3)}
-.era-year{font-family:var(--serif);font-size:34px;font-weight:900;color:var(--gold);opacity:.25;line-height:1}
-.era-tag{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
-.era-card.last .era-tag{color:var(--gold)}
-.era-name{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--text);line-height:1.2}
-.era-flow{display:flex;flex-direction:column;gap:0;font-size:13px;color:var(--mid);border-top:1px solid var(--b1);padding-top:12px;margin-top:4px}
-.era-flow-step{padding:6px 0;border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:8px}
-.era-flow-step:last-child{border:none}
-.era-flow-step .dot{width:5px;height:5px;border-radius:50%;background:var(--dim);flex-shrink:0}
-.era-card.last .era-flow-step .dot{background:var(--gold)}
-.era-desc{font-size:13px;color:var(--dim);line-height:1.6;margin-top:4px}
-.era-summary{font-size:13px;color:var(--text);margin-top:4px;font-style:italic;border-left:2px solid var(--gold);padding-left:10px}
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 28px;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--text);
+  }
 
-.transition-visual{margin-top:48px;border:1px solid var(--b2);border-radius:10px;overflow:hidden;background:#f0f3f7}
-.transition-visual img{display:block;width:100%;height:auto}
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
 
-.transition-callout{background:var(--s2);border:1px solid var(--b2);border-left:2px solid var(--gold);border-radius:0 6px 6px 0;padding:18px 22px;font-size:15px;color:var(--text);line-height:1.65;margin-top:40px}
+  /* Hero */
+  .hero {
+    padding: 120px 32px 100px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(245,200,66,0.07) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; }
 
-/* ── EVOLUTION BLOCKS ─────────────────── */
-.evo-block{margin-top:64px}
-.evo-h3{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-.01em}
-.evo-lead{font-size:14px;color:var(--mid);margin-bottom:28px}
-.evo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.evo-card{background:var(--s1);padding:26px 24px;transition:background .2s}
-.evo-card:hover{background:var(--s2)}
-.evo-card.last{background:var(--s2)}
-.evo-card.last:hover{background:var(--s3)}
-.evo-year{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
-.evo-label{font-size:13px;color:var(--text);font-weight:500;margin-bottom:14px;line-height:1.5}
-.evo-list{list-style:none;display:flex;flex-direction:column;gap:6px}
-.evo-list li{font-size:14px;color:var(--mid);padding:6px 0;border-bottom:1px solid var(--b1)}
-.evo-list li:last-child{border:none}
-.evo-for{font-size:12px;color:var(--dim);margin-top:12px;font-style:italic}
-.evo-flow{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--mid)}
-.evo-flow span:not(.evo-arrow){padding:5px 0}
-.evo-arrow{color:var(--gold);font-size:12px;text-align:center;line-height:1}
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+  }
 
-.growth-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.growth-card{background:var(--s1);padding:28px 26px}
-.growth-card.last{background:var(--s2)}
-.growth-label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
-.growth-card.last .growth-label{color:var(--gold)}
-.growth-eq{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:var(--mid)}
-.growth-eq-sign{color:var(--gold);font-weight:700}
-.growth-result{color:var(--text);font-weight:600}
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    margin-bottom: 28px;
+  }
 
-.position-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.position-card{background:var(--s1);padding:26px 24px;transition:background .2s}
-.position-card:hover{background:var(--s2)}
-.position-card.last{background:var(--gd04)}
-.position-card.last:hover{background:var(--gd10)}
-.position-card p{font-size:15px;color:var(--text);line-height:1.6;margin-top:10px}
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--mid);
+    max-width: 680px;
+    margin: 0 auto 24px;
+    font-weight: 300;
+  }
 
-/* ── HOW IT WORKS ─────────────────────── */
-.hiw{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.hiw-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px;max-width:600px}
-.hiw-h2 em{font-style:italic;color:var(--gold)}
-.hiw-sub{font-size:15px;color:var(--mid);margin-bottom:48px;max-width:600px}
-.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.hiw-card{background:var(--bg);padding:32px 26px;display:flex;flex-direction:column;gap:12px}
-.hiw-card.next{background:var(--gd04)}
-.hiw-tag{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
-.hiw-card.next .hiw-tag{color:var(--gold)}
-.hiw-name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--text)}
-.hiw-flow{display:flex;flex-direction:column;gap:0;font-size:13px;color:var(--mid);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1);padding:10px 0}
-.hiw-flow .step{padding:5px 0}
-.hiw-flow .arr{color:var(--gold);font-size:11px}
-.hiw-desc{font-size:13px;color:var(--dim);line-height:1.6}
+  .hero-bold-line {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 36px;
+    letter-spacing: 0.02em;
+  }
+  .hero-bold-line span { color: var(--gold); }
 
-/* ── WHAT WE DO (L1-L6) ───────────────── */
-.ladder-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px;max-width:680px}
-.ladder-sub{font-size:15px;color:var(--mid);margin-bottom:48px;max-width:680px}
-.ladder{display:flex;flex-direction:column;gap:0;border:1px solid var(--b1);border-radius:10px;overflow:hidden}
-.l-row{display:grid;grid-template-columns:90px 200px 1fr;gap:24px;align-items:center;padding:24px 28px;border-bottom:1px solid var(--b1);background:var(--bg);transition:background .2s}
-.l-row:last-child{border-bottom:none}
-.l-row:hover{background:var(--s2)}
-.l-num{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--gold);opacity:.35}
-.l-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--text)}
-.l-name span{font-size:11px;color:var(--dim);vertical-align:super}
-.l-desc{font-size:14px;color:var(--mid);line-height:1.6}
+  .hero-question {
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 40px;
+    color: var(--text);
+  }
 
-/* ── AI AUDIT CTA ─────────────────────── */
-.audit{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.audit-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
-.audit-h2 em{font-style:italic;color:var(--gold)}
-.audit-body{font-size:16px;color:var(--mid);line-height:1.7;margin-bottom:8px}
-.audit-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:24px 0 28px;border-top:1px solid var(--b1)}
-.audit-list li{font-size:15px;color:var(--mid);padding:13px 0;border-bottom:1px solid var(--b1);display:flex;align-items:flex-start;gap:10px}
-.audit-list li::before{content:'—';color:var(--gold);flex-shrink:0}
-.audit-steps{display:flex;flex-direction:column;gap:0;background:var(--bg);border:1px solid var(--b2);border-radius:10px;overflow:hidden}
-.audit-step{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;border-bottom:1px solid var(--b1)}
-.audit-step:last-child{border-bottom:none}
-.audit-step .snum{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--gold);opacity:.4;flex-shrink:0;min-width:28px}
-.audit-step p{font-size:14px;color:var(--mid);line-height:1.55;padding-top:2px}
-.audit-step p strong{color:var(--text)}
+  /* Buttons */
+  .cta-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: #0a0c0f !important;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 38px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245,200,66,0.25);
+  }
 
-/* ── THREE WAYS ───────────────────────── */
-.ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin-top:48px}
-.way-card{background:var(--bg);padding:36px 28px;display:flex;flex-direction:column;transition:background .2s}
-.way-card:hover{background:var(--s2)}
-.way-card.featured{background:var(--gd04)}
-.way-card.featured:hover{background:var(--gd10)}
-.way-tier{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
-.way-card.featured .way-tier{color:var(--gold)}
-.way-name{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--text);margin-bottom:6px}
-.way-price{font-size:24px;font-weight:300;color:var(--text);margin-bottom:14px;font-family:var(--serif)}
-.way-price span{font-size:13px;color:var(--mid);font-family:var(--sans)}
-.way-desc{font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:24px;flex-grow:1}
-.way-desc strong{color:var(--text)}
+  /* Sections */
+  section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+  }
+  .hero { border-top: none; }
 
-/* ── STANDARD / PROOF ─────────────────── */
-.standard-section{background:var(--s1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)}
-.standard-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.standard-h2{font-family:var(--serif);font-size:clamp(26px,3vw,40px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
-.standard-body{font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:16px}
-.standard-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.s-tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--gold);background:var(--gd10);border:1px solid var(--gd20);border-radius:3px;padding:5px 12px}
-.standard-note{font-size:13px;color:var(--dim);line-height:1.7;font-style:italic;margin-top:8px}
-.hash-table{display:flex;flex-direction:column;gap:0;background:var(--s2);border:1px solid var(--b2);border-radius:8px;overflow:hidden}
-.hash-row{display:flex;align-items:center;gap:14px;padding:11px 16px;border-bottom:1px solid var(--b1);font-size:11px}
-.hash-row:last-child{border:none}
-.hash-key{color:var(--mid);min-width:130px;flex-shrink:0;font-weight:500}
-.hash-val{color:var(--gold);font-family:monospace;font-size:10px;word-break:break-all;line-height:1.4}
-.hash-row.verified .hash-val{color:var(--cyan)}
-.proof-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.p-badge{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:3px;border:1px solid}
-.p-badge.g{color:var(--gold);border-color:var(--gd20);background:var(--gd10)}
-.p-badge.c{color:var(--cyan);border-color:rgba(77,200,232,.2);background:var(--cd10)}
-.p-badge.m{color:var(--mid);border-color:var(--b2);background:transparent}
+  .section-head {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 60px;
+  }
+  .section-head h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-top: 10px;
+  }
 
-/* ── FAQ ──────────────────────────────── */
-.faq-list{display:flex;flex-direction:column;gap:0;max-width:780px;margin:40px auto 0}
-.faq-item{border-bottom:1px solid var(--b1)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;cursor:pointer;font-size:16px;font-weight:500;color:var(--text);transition:color .2s;list-style:none;user-select:none}
-.faq-q:hover{color:var(--gold)}
-.faq-q .faq-ico{font-size:18px;color:var(--dim);flex-shrink:0;transition:transform .25s,color .2s;line-height:1}
-.faq-item.open .faq-q .faq-ico{transform:rotate(45deg);color:var(--gold)}
-.faq-a{display:none;padding:0 0 20px;font-size:15px;color:var(--mid);line-height:1.75;max-width:680px}
-.faq-item.open .faq-a{display:block}
+  /* Transition image section */
+  .transition-section {
+    background: var(--bg-alt);
+  }
+  .transition-image-wrap {
+    max-width: 1000px;
+    margin: 0 auto 48px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  }
+  .transition-image-wrap img {
+    width: 100%;
+    display: block;
+  }
 
-/* ── FINAL CTA ────────────────────────── */
-.final{padding:120px 0;text-align:center;position:relative;overflow:hidden}
-.final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(245,200,66,.05) 0%,transparent 65%);pointer-events:none}
-.final-ey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-.final-h2{font-family:var(--serif);font-size:clamp(32px,5vw,62px);font-weight:900;line-height:1.08;letter-spacing:-.025em;color:var(--text);margin-bottom:16px}
-.final-h2 em{font-style:italic;color:var(--gold)}
-.final-sub{font-size:16px;color:var(--mid);margin-bottom:36px}
-.final-acts{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px}
-.final-contact{font-size:13px;color:var(--dim)}
-.final-contact a{color:var(--gold);text-decoration:none}
+  .bridge-copy {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bridge-copy p {
+    font-size: 1.1rem;
+    color: var(--mid);
+    margin-bottom: 22px;
+  }
+  .bridge-copy p:last-child {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-bottom: 0;
+  }
+  .bridge-copy p:last-child .gold-text { font-weight: 600; }
 
-/* ── FOOTER ───────────────────────────── */
-footer{border-top:1px solid var(--b1);padding:32px 40px}
-.foot-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.foot-l{font-size:12px;color:var(--dim);line-height:1.7}
-.foot-l strong{color:var(--mid)}
-.foot-l a{color:var(--dim);text-decoration:none;transition:color .2s}
-.foot-l a:hover{color:var(--gold)}
-.foot-r{font-size:10px;color:var(--dim);letter-spacing:.08em;text-align:right;line-height:1.7}
+  /* Why AiVenture */
+  .why-grid {
+    max-width: 760px;
+    margin: 0 auto 56px;
+  }
+  .why-grid p {
+    font-size: 1.05rem;
+    color: var(--mid);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .why-grid .highlight {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
 
-/* ── LIGHT MODE ───────────────────────── */
-body.light-mode{
-  --bg:#f0f3f7;--s1:#ffffff;--s2:#e8edf4;--s3:#dde4ee;
-  --b1:#c8d4e0;--b2:#b5c3d2;--b3:#9aafc0;
-  --text:#000000;--mid:#33414f;--dim:#5a6b7c;--dimmer:#c8d4e0;
-  --gold:#8a6500;--gd10:rgba(138,101,0,.08);--gd20:rgba(138,101,0,.18);--gd04:rgba(138,101,0,.04);
-  --cyan:#1a6fa0;--cd10:rgba(26,111,160,.08);
-}
+  .no-rebuild {
+    text-align: center;
+    max-width: 640px;
+    margin: 40px auto 56px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-alt);
+  }
+  .no-rebuild strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+  }
+  .no-rebuild p { color: var(--mid); font-size: 1rem; margin: 0; }
 
-/* ── RESPONSIVE ───────────────────────── */
-@media(max-width:1000px){
-  .nav-inner{padding:0 20px}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  section{padding:70px 0}
-  .wrap{padding:0 20px}
-  .hero{padding:100px 0 60px}
-  .hero-inner{grid-template-columns:1fr;gap:40px}
-  .hero-right{display:none}
-  .fw-grid,.era-grid,.era-grid-detailed,.evo-grid,.growth-grid,.position-grid,.hiw-grid,.ways-grid{grid-template-columns:1fr;gap:2px}
-  .audit-grid,.standard-grid{grid-template-columns:1fr;gap:40px}
-  .l-row{grid-template-columns:1fr;gap:6px}
-  .l-num{font-size:20px}
-  .final{padding:80px 0}
-  footer{padding:24px 20px}
-}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+  /* Comparison table */
+  .table-wrap {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  table.table-aiventure {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  table.table-aiventure th,
+  table.table-aiventure td {
+    padding: 18px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  table.table-aiventure th {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 1rem;
+    background: var(--bg-alt);
+  }
+  table.table-aiventure td { color: var(--mid); }
+  table.table-aiventure td:first-child {
+    color: var(--text);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  table.table-aiventure tr:last-child td { border-bottom: none; }
+  table.table-aiventure tr.highlight-row td {
+    background: rgba(245,200,66,0.06);
+  }
+  table.table-aiventure tr.highlight-row td:first-child {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  table.table-aiventure td:nth-child(3) {
+    color: var(--light);
+    font-style: italic;
+  }
+
+  .center-cta { text-align: center; margin-top: 12px; }
+
+  /* How AiVenture helps - 3 steps */
+  .steps {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    gap: 28px;
+  }
+  .step-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px;
+    background: var(--bg-alt);
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .step-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .step-card p { color: var(--mid); font-size: 1rem; }
+  .step-card .score-highlight {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* Where this matters */
+  .where-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .where-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .where-card h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+  }
+  .where-card p {
+    color: var(--mid);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  .where-closing {
+    max-width: 720px;
+    margin: 48px auto 0;
+    text-align: center;
+  }
+  .where-closing p {
+    font-size: 1.05rem;
+    color: var(--mid);
+    margin-bottom: 14px;
+  }
+  .where-closing p:last-child {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .final-cta-wrap {
+    text-align: center;
+    margin-top: 56px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 56px 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--light);
+    font-size: 0.85rem;
+  }
+  footer p { margin-bottom: 10px; }
+  footer .gold-text { font-weight: 600; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--mid); text-decoration: none; font-size: 15px; }
+
+    .hero { padding: 90px 20px 70px; }
+    section { padding: 64px 0; }
+    .where-grid { grid-template-columns: 1fr; }
+    .step-card { grid-template-columns: 44px 1fr; padding: 24px; gap: 16px; }
+    .step-num { font-size: 1.6rem; }
+    table.table-aiventure th, table.table-aiventure td { padding: 12px 14px; font-size: 0.85rem; }
+    #theme-toggle { top: 16px; left: 16px; }
+  }
 </style>
 </head>
 <body>
 
-<button id="tt" onclick="toggleTheme()">☀</button>
+<button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+  <span id="theme-icon">☀</span>
+</button>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">5the<em>element</em>.ai</a>
-    <ul class="nav-links">
-      <li><a href="#transition">The Shift</a></li>
-      <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#what-we-do">What We Do</a></li>
-      <li><a href="#work-with-us">Work With Us</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#cta" class="nav-cta">Start AI Audit →</a></li>
-    </ul>
-    <button class="hamburger" onclick="toggleMob()" aria-label="Menu" id="ham">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="logo">5th<span class="gold-text">element</span>.ai</div>
+  <div class="nav-links">
+    <a href="#why">Why AiVenture</a>
+    <a href="#how">How It Works</a>
+    <a href="#where">Where It Matters</a>
+    <a href="#audit" class="cta-primary" style="padding:10px 22px; font-size:13px;">Start AI Audit™</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
   </div>
 </nav>
-<div class="mob" id="mob">
-  <a href="#transition" onclick="closeMob()">The Shift</a>
-  <a href="#how-it-works" onclick="closeMob()">How It Works</a>
-  <a href="#what-we-do" onclick="closeMob()">What We Do</a>
-  <a href="#work-with-us" onclick="closeMob()">Work With Us</a>
-  <a href="#faq" onclick="closeMob()">FAQ</a>
-  <a href="#cta" onclick="closeMob()">Start AI Audit →</a>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#why">Why AiVenture</a>
+  <a href="#how">How It Works</a>
+  <a href="#where">Where It Matters</a>
+  <a href="#audit">Start AI Audit™</a>
 </div>
 
-<!-- ══ HERO ═══════════════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-fade"></div>
-  <div class="hero-glow"></div>
-  <div class="wrap">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-ey">The Transition From Traffic Economy To Recommendation Economy™</div>
-        <h1>Attract More Clients.<br>Sell More.<br><em>Grow With AI.</em></h1>
-        <p class="hero-sub">Is AI recommending your business — or your competitors? We help AI find, understand, verify and recommend you.</p>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">The Transition From Traffic Economy To Recommendation Economy™</span>
+    <h1>Attract More Clients. Sell More. <span class="italic-accent">Grow With AI.</span></h1>
+    <p class="hero-sub">
+      AiVenture helps B2B companies become visible, understandable, verifiable, trusted, and recommended by AI systems — ChatGPT, Gemini, Claude, Copilot, Perplexity, and AI Agents.
+    </p>
+    <p class="hero-bold-line">
+      <span>Without changing your website.</span> &nbsp;·&nbsp; <span>Live in 24 hours.</span> &nbsp;·&nbsp; <span>Operating 24/7.</span>
+    </p>
+    <p class="hero-question">Is AI recommending your business — or your competitors?</p>
+    <a href="#audit" class="cta-primary">Start Your Free AI Audit™</a>
+  </div>
+</header>
 
-        <div class="hero-pills">
-          <span class="hero-pill">Automatic</span>
-          <span class="hero-pill">Live in 24h</span>
-          <span class="hero-pill">Non-Stop</span>
-          <span class="hero-pill">No Site Changes</span>
-        </div>
+<!-- TRANSITION IMAGE -->
+<section class="transition-section">
+  <div class="container">
+    <div class="transition-image-wrap">
+      <img src="ai_transition.webp" alt="The Old Way: search on Google through a marketing funnel. The New Way: AI Agent searches, understands, verifies, analyzes, personalizes, and recommends the best companies." loading="lazy">
+    </div>
+    <div class="bridge-copy">
+      <p>The shift isn't that customers stopped searching. The shift is that AI increasingly performs the searching, understanding, verification, comparison, and recommendation on behalf of the customer.</p>
+      <p>AiVenture helps your business become <span class="gold-text">visible, understandable, verifiable, trusted, and recommendable</span> in this new AI-driven buying journey.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="hero-acts">
-          <a href="#cta" class="btn-p">Start AI Audit™ →</a>
-          <a href="#how-it-works" class="btn-g">See How It Works</a>
+<!-- WHY AIVENTURE -->
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">This isn't SEO. It's a different kind of visibility.</span>
+      <h2>We Make Sure AI Knows You Exist — And Recommends You</h2>
+    </div>
+
+    <div class="why-grid">
+      <p>SEO helps you rank in search engines, for humans clicking links.</p>
+      <p class="highlight">AiVenture helps AI systems — and the AI Agents acting on behalf of your customers — find, understand, verify, trust, and recommend your business.</p>
+    </div>
+
+    <div class="no-rebuild">
+      <strong>We do this without touching your website.</strong>
+      <p>No rebuild. No migration. No new CMS. We add an external AI discovery layer that runs alongside what you already have — live in 24 hours, operating 24/7.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table-aiventure">
+        <thead>
+          <tr>
+            <th></th>
+            <th>What They Do</th>
+            <th>What's Missing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SEO Agency</td>
+            <td>Rank pages on Google</td>
+            <td>AI doesn't rank pages — it reads, verifies, and recommends</td>
+          </tr>
+          <tr>
+            <td>Marketing Agency</td>
+            <td>Run campaigns for attention</td>
+            <td>AI doesn't respond to ads — it responds to verifiable information</td>
+          </tr>
+          <tr>
+            <td>Web Agency</td>
+            <td>Design and build websites</td>
+            <td>A great website doesn't guarantee AI can read or trust it</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>AiVenture</td>
+            <td>Makes you findable, understandable, verifiable, trustable, recommendable, and selectable by AI</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="center-cta">
+      <p style="color:var(--mid); margin-bottom:20px; font-size:1.05rem;">
+        <strong style="color:var(--text);">Start with your AI Audit™</strong> — see exactly what AI currently understands about your business, and what's missing.
+      </p>
+      <a href="#audit" class="cta-primary">Start Your Free AI Audit™</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW AIVENTURE HELPS -->
+<section id="how" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">From audit to AI Agent — how it actually works</span>
+      <h2>Three Steps. No Disruption To Your Business.</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div>
+          <h3>We Audit How AI Sees You Today</h3>
+          <p>Before anything changes, we check what AI systems currently know — and don't know — about your business.</p>
+          <p>You get an <span class="score-highlight">AI Recommendation Readiness™ Score</span> across six dimensions: Findable, Understandable, Verifiable, Trustable, Recommendable, Selectable.</p>
+          <p>This shows exactly where AI loses track of you — and what's blocking AI from recommending you over a competitor.</p>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="eng-card">
-          <div class="eng-label">AI Agents — live scan</div>
-          <div id="eng-list">
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">ChatGPT</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Gemini</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Claude</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Copilot</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">Perplexity</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">DeepSeek</span><span class="eng-stat">scanning</span></div>
-            <div class="eng-row"><div class="eng-dot"></div><span class="eng-name">You.com</span><span class="eng-stat">scanning</span></div>
-          </div>
-          <div class="eng-foot"><strong>Is AI recommending your business right now?</strong><br>Most aren't recommended. We change that.</div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We Build The Layer AI Actually Reads</h3>
+          <p>We add structured, machine-readable information about your business — your offers, your proof, your credentials, your differentiators — in the formats AI systems use to find, understand, and verify companies.</p>
+          <p>This runs <strong style="color:var(--text);">alongside</strong> your existing website. Nothing gets rebuilt, migrated, or replaced. It goes live in 24 hours and operates continuously.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div>
+          <h3>We Track What Changes</h3>
+          <p>Your AI Recommendation Readiness™ Score is measured again after implementation — so you can see, in numbers, whether AI now understands and recommends your business better than before.</p>
+          <p>This isn't a one-time fix. AI systems update constantly, so the layer stays active, keeping your business visible as AI search and AI Agents evolve.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ THE TRANSITION: 2024 → 2025 → 2026 ═══════════════ -->
-<section class="transition" id="transition">
-  <div class="wrap">
-    <div class="ey">The transition every business is going through</div>
-    <h2 class="transition-h2">2024 → 2025 → 2026<br><em>From the Traffic Economy to the Recommendation Economy™</em></h2>
-    <p class="transition-sub">Three major shifts — from Google, to AI Search, to AI Agents — each with a direct impact on marketing, sales and growth.</p>
+<!-- WHERE THIS MATTERS -->
+<section id="where">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Wherever your customers are asking AI</span>
+      <h2>Your Customers Are Already Asking AI About You</h2>
+    </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-tag">2024</div>
-        <img src="/assets/old-new-way-2024.png" alt="The Old Way: search on Google through ads, SEO, networking and email marketing leading to a sales funnel. The New Way: AI search cycle where AI finds, understands, verifies and recommends companies, delivering a response with links." loading="lazy">
+    <p style="text-align:center; max-width:680px; margin:0 auto 48px; color:var(--mid); font-size:1.05rem;">
+      Whether they realize it or not, AI is involved earlier and earlier in how people find and choose businesses:
+    </p>
+
+    <div class="where-grid">
+      <div class="where-card">
+        <h4>Search Assistants</h4>
+        <p>ChatGPT, Gemini, Claude, Perplexity, and Copilot answering "who can help me with X."</p>
       </div>
-      <div class="gallery-item">
-        <div class="gallery-tag">2025</div>
-        <img src="/assets/old-new-way-2025.png" alt="2025 diagram: the old way of searching on Google versus the new way where AI searches, finds, understands, verifies and recommends the best companies in a continuous 24/7 cycle, delivering a response with links." loading="lazy">
+      <div class="where-card">
+        <h4>AI Agents</h4>
+        <p>Tools that search, compare, and shortlist companies on a person's behalf.</p>
       </div>
-      <div class="gallery-item">
-        <div class="gallery-tag">2026</div>
-        <img src="/assets/old-new-way-2026.png" alt="2026 diagram: the old way of searching on Google versus the new way where an AI Agent searches, understands user intent, personalizes results, analyzes multiple data sources, synchronizes across channels and predicts results to recommend the best companies." loading="lazy">
+      <div class="where-card">
+        <h4>Voice & Chat Interfaces</h4>
+        <p>Increasingly the first point of contact for B2B buyers researching vendors.</p>
+      </div>
+      <div class="where-card">
+        <h4>Internal Company AI Tools</h4>
+        <p>Procurement and research assistants used by your prospects' own teams.</p>
       </div>
     </div>
 
-    <div class="era-grid era-grid-detailed">
-      <div class="era-card">
-        <div class="era-year">2024</div>
-        <div class="era-tag">Marketing Era</div>
-        <div class="era-name">Traffic Economy</div>
-        <div class="era-flow">
-          <div class="era-flow-step"><div class="dot"></div>Company</div>
-          <div class="era-flow-step"><div class="dot"></div>Marketing</div>
-          <div class="era-flow-step"><div class="dot"></div>Human</div>
-          <div class="era-flow-step"><div class="dot"></div>Sale</div>
-        </div>
-        <div class="era-desc">The company pushes messages to the market. Marketing is responsible for capturing attention.</div>
-        <div class="era-sub-label">Main tools</div>
-        <ul class="era-tags">
-          <li>Google Ads</li><li>Facebook Ads</li><li>SEO</li><li>Email Marketing</li><li>Networking</li><li>PR</li><li>Content</li>
-        </ul>
-        <div class="era-sub-label">Goals</div>
-        <ul class="era-tags">
-          <li>Visibility</li><li>Traffic</li><li>Leads</li><li>Sales</li>
-        </ul>
-        <div class="era-summary">Reality: the company must constantly chase the customer's attention.</div>
-      </div>
-
-      <div class="era-card mid">
-        <div class="era-year">2025</div>
-        <div class="era-tag">AI Search Era</div>
-        <div class="era-name">Answer Economy</div>
-        <div class="era-flow">
-          <div class="era-flow-step"><div class="dot"></div>Human</div>
-          <div class="era-flow-step"><div class="dot"></div>ChatGPT · Gemini · Claude · Copilot · Perplexity</div>
-          <div class="era-flow-step"><div class="dot"></div>Response + Links</div>
-        </div>
-        <div class="era-desc">People begin outsourcing search to AI. Instead of visiting 20 websites, they ask AI directly.</div>
-        <div class="era-sub-label">AI becomes</div>
-        <ul class="era-tags">
-          <li>Search Engine</li><li>Researcher</li><li>Comparator</li><li>Summarizer</li>
-        </ul>
-        <div class="era-summary">The goal shifts from <strong>more clicks</strong> to <strong>the best answer</strong>. Marketing starts optimizing for AI Search — companies must be Findable, Understandable, Verifiable and Trustable.</div>
-      </div>
-
-      <div class="era-card last">
-        <div class="era-year">2026</div>
-        <div class="era-tag">AI Agent Era</div>
-        <div class="era-name">Recommendation Economy</div>
-        <div class="era-flow">
-          <div class="era-flow-step"><div class="dot"></div>Human Intent</div>
-          <div class="era-flow-step"><div class="dot"></div>AI Agent</div>
-          <div class="era-flow-step"><div class="dot"></div>Search · Compare · Verify · Recommend</div>
-          <div class="era-flow-step"><div class="dot"></div>Company</div>
-        </div>
-        <div class="era-desc">People no longer outsource only search. They outsource search, comparison, verification and selection to AI Agents.</div>
-        <div class="era-sub-label">AI Agent becomes</div>
-        <ul class="era-tags">
-          <li>Personal Digital Assistant</li><li>Digital Consultant</li><li>Buying Assistant</li><li>User's Representative</li>
-        </ul>
-        <div class="era-summary">Marketing starts optimizing for AI Agents. It is no longer enough to be found — you must be <strong>recommended and selected</strong>.</div>
-      </div>
+    <div class="where-closing">
+      <p>If AI can't find, understand, or verify your business in any of these contexts, you're not in the conversation — even if your website looks great and your Google ranking is solid.</p>
+      <p>AiVenture makes sure you're part of that conversation, wherever it happens.</p>
     </div>
 
-    <div class="transition-callout">
-      The question is not whether AI Agents will recommend businesses in your category. They will. The question is whether yours is one of them.
-    </div>
-
-    <!-- EVOLUTION: Marketing -->
-    <div class="evo-block">
-      <h3 class="evo-h3">What Happens To Marketing?</h3>
-      <p class="evo-lead">Marketing does not disappear. It evolves.</p>
-      <div class="evo-grid">
-        <div class="evo-card">
-          <div class="evo-year">2024</div>
-          <div class="evo-label">Marketing optimizes</div>
-          <ul class="evo-list">
-            <li>Visibility</li>
-            <li>Traffic</li>
-            <li>Clicks</li>
-          </ul>
-        </div>
-        <div class="evo-card">
-          <div class="evo-year">2025</div>
-          <div class="evo-label">Marketing optimizes</div>
-          <ul class="evo-list">
-            <li>Visibility</li>
-            <li>Understanding</li>
-            <li>Trust</li>
-          </ul>
-          <div class="evo-for">for AI Search</div>
-        </div>
-        <div class="evo-card last">
-          <div class="evo-year">2026</div>
-          <div class="evo-label">Marketing optimizes</div>
-          <ul class="evo-list">
-            <li>Recommendation</li>
-            <li>Selection</li>
-            <li>Preference</li>
-          </ul>
-          <div class="evo-for">for AI Agents</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EVOLUTION: Sales -->
-    <div class="evo-block">
-      <h3 class="evo-h3">What Happens To Sales?</h3>
-      <div class="evo-grid">
-        <div class="evo-card">
-          <div class="evo-year">2024</div>
-          <div class="evo-label">Sales begins after the lead</div>
-          <div class="evo-flow">
-            <span>Lead</span><span class="evo-arrow">↓</span>
-            <span>Call</span><span class="evo-arrow">↓</span>
-            <span>Meeting</span><span class="evo-arrow">↓</span>
-            <span>Proposal</span><span class="evo-arrow">↓</span>
-            <span>Contract</span>
-          </div>
-        </div>
-        <div class="evo-card">
-          <div class="evo-year">2025</div>
-          <div class="evo-label">AI pre-qualifies</div>
-          <div class="evo-flow">
-            <span>AI</span><span class="evo-arrow">↓</span>
-            <span>Qualified Lead</span><span class="evo-arrow">↓</span>
-            <span>Sales</span>
-          </div>
-        </div>
-        <div class="evo-card last">
-          <div class="evo-year">2026</div>
-          <div class="evo-label">AI Agents are part of the buying process</div>
-          <div class="evo-flow">
-            <span>AI Agent</span><span class="evo-arrow">↓</span>
-            <span>Shortlist</span><span class="evo-arrow">↓</span>
-            <span>Sales</span><span class="evo-arrow">↓</span>
-            <span>Contract</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EVOLUTION: Growth -->
-    <div class="evo-block">
-      <h3 class="evo-h3">What Happens To Growth?</h3>
-      <div class="growth-grid">
-        <div class="growth-card">
-          <div class="growth-label">Old Growth</div>
-          <div class="growth-eq">
-            <span>More Traffic</span>
-            <span class="growth-eq-sign">=</span>
-            <span class="growth-result">More Sales</span>
-          </div>
-        </div>
-        <div class="growth-card last">
-          <div class="growth-label">New Growth</div>
-          <div class="growth-eq">
-            <span>More AI Recommendations</span>
-            <span class="growth-eq-sign">=</span>
-            <span>More Qualified Leads</span>
-            <span class="growth-eq-sign">=</span>
-            <span class="growth-result">More Sales</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- POSITIONING -->
-    <div class="evo-block">
-      <h3 class="evo-h3">Our Positioning</h3>
-      <p class="evo-lead">This is probably the simplest explanation of what we do.</p>
-      <div class="position-grid">
-        <div class="position-card">
-          <div class="evo-year">2024</div>
-          <p>We helped companies get traffic.</p>
-        </div>
-        <div class="position-card">
-          <div class="evo-year">2025</div>
-          <p>We help AI find, understand and trust companies.</p>
-        </div>
-        <div class="position-card last">
-          <div class="evo-year">2026</div>
-          <p>We help AI Agents recommend and select companies.</p>
-        </div>
-      </div>
+    <div class="final-cta-wrap" id="audit">
+      <a href="mailto:contact@5thelement.ai" class="cta-primary">Start Your Free AI Audit™</a>
     </div>
   </div>
 </section>
 
-<!-- ══ HOW IT WORKS ══════════════════════════════════════ -->
-<section class="hiw" id="how-it-works">
-  <div class="wrap">
-    <div class="ey">Clear pathways to the customer</div>
-    <h2 class="hiw-h2">Old Roads vs. The AI Highway.<br><em>How Decisions Are Made Now.</em></h2>
-    <p class="hiw-sub">Three roads to the same destination — your business. Only one of them is built for how decisions get made today.</p>
-
-    <div class="hiw-grid">
-      <div class="hiw-card">
-        <div class="hiw-tag">The Old Way — Google Era</div>
-        <div class="hiw-name">Manual Evaluation</div>
-        <div class="hiw-flow">
-          <div class="step">Customer</div>
-          <div class="arr">↓</div>
-          <div class="step">Google Search</div>
-          <div class="arr">↓</div>
-          <div class="step">Clicks on 5 Links</div>
-          <div class="arr">↓</div>
-          <div class="step">Visits Website</div>
-          <div class="arr">↓</div>
-          <div class="step">Contact Form</div>
-          <div class="arr">↓</div>
-          <div class="step">Sale</div>
-        </div>
-        <div class="hiw-desc">Relies entirely on a human having the time, energy and patience to manually evaluate you.</div>
-      </div>
-
-      <div class="hiw-card">
-        <div class="hiw-tag">The New Way — AI Search Era</div>
-        <div class="hiw-name">AI-Mediated Discovery</div>
-        <div class="hiw-flow">
-          <div class="step">Customer</div>
-          <div class="arr">↓</div>
-          <div class="step">Asks AI</div>
-          <div class="arr">↓</div>
-          <div class="step">AI Scans Web</div>
-          <div class="arr">↓</div>
-          <div class="step">AI Understands Site</div>
-          <div class="arr">↓</div>
-          <div class="step">AI Verifies Facts</div>
-          <div class="arr">↓</div>
-          <div class="step">Business Recommended</div>
-        </div>
-        <div class="hiw-desc">Relies on AI models instantly finding your data clear, authoritative and machine-readable.</div>
-      </div>
-
-      <div class="hiw-card next">
-        <div class="hiw-tag">The Next Way — Autonomous Agent Era</div>
-        <div class="hiw-name">Agent-Driven Selection</div>
-        <div class="hiw-flow">
-          <div class="step">Customer</div>
-          <div class="arr">↓</div>
-          <div class="step">Instructs AI Agent</div>
-          <div class="arr">↓</div>
-          <div class="step">Agent Screens Market</div>
-          <div class="arr">↓</div>
-          <div class="step">Filters Unverified Data</div>
-          <div class="arr">↓</div>
-          <div class="step">Shortlist of 3</div>
-          <div class="arr">↓</div>
-          <div class="step">Final Selection → Business</div>
-        </div>
-        <div class="hiw-desc">100% automated procurement and validation. Your operational data matching their agent's criteria.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHAT WE DO (L1-L6) ════════════════════════════════ -->
-<section id="what-we-do">
-  <div class="wrap">
-    <div class="ey">The 5thelement.ai capability framework</div>
-    <h2 class="ladder-h2">The Six Levels of AI Recommendation Readiness™</h2>
-    <p class="ladder-sub">We don't rewrite your website. We implement an external intelligence layer that guides AI systems through the entire selection funnel — from finding you to having an AI Agent hand off a ready-to-buy client.</p>
-
-    <div class="ladder">
-      <div class="l-row">
-        <div class="l-num">L1</div>
-        <div class="l-name">Findable<span>™</span></div>
-        <div class="l-desc">We ensure AI scrapers can access your core data layers without being blocked by legacy firewalls or bad routing.</div>
-      </div>
-      <div class="l-row">
-        <div class="l-num">L2</div>
-        <div class="l-name">Understandable<span>™</span></div>
-        <div class="l-desc">We translate your services, pricing and offers into clear machine-readable formats so AI doesn't have to guess what you do.</div>
-      </div>
-      <div class="l-row">
-        <div class="l-num">L3</div>
-        <div class="l-name">Verifiable<span>™</span></div>
-        <div class="l-desc">We establish independent cryptographic proof lines so AI can instantly verify that your company is real, active and legitimate.</div>
-      </div>
-      <div class="l-row">
-        <div class="l-num">L4</div>
-        <div class="l-name">Trustable<span>™</span></div>
-        <div class="l-desc">We synchronize cross-web signals to build a high-authority footprint that AI models can safely rely on without risking hallucinations.</div>
-      </div>
-      <div class="l-row">
-        <div class="l-num">L5</div>
-        <div class="l-name">Recommendable<span>™</span></div>
-        <div class="l-desc">We optimize your entity relations so AI models consistently rank your profile ahead of direct market competitors.</div>
-      </div>
-      <div class="l-row">
-        <div class="l-num">L6</div>
-        <div class="l-name">Selectable<span>™</span></div>
-        <div class="l-desc">We format your business transaction endpoints so autonomous AI Agents can seamlessly hand off ready-to-buy clients to your team.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ START WITH AN AI AUDIT ════════════════════════════ -->
-<section class="audit" id="cta">
-  <div class="wrap">
-    <div class="audit-grid">
-      <div>
-        <div class="ey">Simple, non-technical onboarding</div>
-        <h2 class="audit-h2">No Complexity. No Code to Learn.<br><em>See Exactly Where Your Business Stands With AI Today.</em></h2>
-        <p class="audit-body">You do not need to rewrite your code, change your hosting, or memorize confusing AI terminology. Getting started takes less than five minutes.</p>
-        <ul class="audit-list">
-          <li>What AI understands about your business</li>
-          <li>What AI cannot verify</li>
-          <li>Why competitors are recommended instead of you</li>
-          <li>What is preventing your business from being recommended</li>
-        </ul>
-        <p class="trust-phrase" style="margin-top:0">"Most businesses do not know that competitors are already being recommended instead of them."</p>
-        <div style="margin-top:24px">
-          <a href="https://eu-ai-audit.eu" class="btn-p">Start Your Free AI Audit™ →</a>
-        </div>
-      </div>
-      <div class="audit-steps">
-        <div class="audit-step"><div class="snum">1</div><p>Request your formal <strong>AI Audit™</strong>.</p></div>
-        <div class="audit-step"><div class="snum">2</div><p>See exactly what <strong>ChatGPT, Gemini and Claude</strong> understand about your business right now.</p></div>
-        <div class="audit-step"><div class="snum">3</div><p>Uncover what critical information AI is <strong>failing to verify</strong> about your company.</p></div>
-        <div class="audit-step"><div class="snum">4</div><p>Receive a clear, prioritized, <strong>step-by-step business action plan</strong>.</p></div>
-        <div class="audit-step"><div class="snum">5</div><p>Choose the <strong>implementation model</strong> that fits your company's operational speed.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ THREE WAYS TO WORK WITH US ════════════════════════ -->
-<section id="work-with-us">
-  <div class="wrap">
-    <div class="ey">Flexible deployment options</div>
-    <h2 class="hiw-h2">Choose Your Speed.<br><em>From Self-Guided Instructions to Complete Turnkey Execution.</em></h2>
-
-    <div class="ways-grid">
-      <div class="way-card">
-        <div class="way-tier">A — DIY</div>
-        <div class="way-name">Do It Yourself</div>
-        <div class="way-price">Self-guided</div>
-        <p class="way-desc">Direct access to our complete library of technical deployment frameworks. <strong>Best for:</strong> in-house developers or technical webmasters who want to deploy the signals themselves.</p>
-        <a href="#" class="btn-o" style="width:100%;justify-content:center">View Implementation Guides →</a>
-      </div>
-
-      <div class="way-card featured">
-        <div class="way-tier">B — Help</div>
-        <div class="way-name">Guided Execution</div>
-        <div class="way-price"><sup style="font-size:14px">€</sup>49<span>/hour</span></div>
-        <p class="way-desc">Personal screen-share strategy and engineering sessions. Human + AI support. <strong>Best for:</strong> business owners and marketing managers who want direct expert supervision.</p>
-        <a href="#" class="btn-p" style="width:100%;justify-content:center">Book a Zoom Session →</a>
-      </div>
-
-      <div class="way-card">
-        <div class="way-tier">C — Done For You</div>
-        <div class="way-name">Full Implementation</div>
-        <div class="way-price" style="font-size:20px;font-family:var(--sans);font-weight:300">Custom scope</div>
-        <p class="way-desc">Complete end-to-end turnkey deployment handled entirely by our infrastructure team. <strong>Best for:</strong> firms and owners who want maximum speed and guaranteed engineering results.</p>
-        <a href="#" class="btn-o" style="width:100%;justify-content:center">Request Full Implementation →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ THE 5THELEMENT STANDARD ═══════════════════════════ -->
-<section class="standard-section" id="standard">
-  <div class="wrap">
-    <div class="standard-grid">
-      <div>
-        <div class="ey">The engine behind the results</div>
-        <h2 class="standard-h2">The 5thElement Standard™</h2>
-        <p class="standard-body">The proprietary technologies, data models and protocols we use are not something you need to study or configure. Just as you don't need to understand mechanics to drive an advanced vehicle, you don't need a degree in cryptography to benefit from enterprise-grade data architecture.</p>
-        <p class="standard-body">Our underlying delivery matrix runs completely in the background to guarantee data authenticity to global AI networks.</p>
-        <div class="standard-tags">
-          <span class="s-tag">AI LENS™</span>
-          <span class="s-tag">AI AUDIT™</span>
-          <span class="s-tag">AI READY™</span>
-          <span class="s-tag">AI Delivery Infrastructure™ (ADI)</span>
-          <span class="s-tag">167 AI Signals Layer</span>
-          <span class="s-tag">Entity Graph & Trust Layer</span>
-          <span class="s-tag">Proof & Provenance Layer</span>
-        </div>
-        <div class="proof-badges">
-          <span class="p-badge g">SHA-256 Fingerprinting</span>
-          <span class="p-badge g">Bitcoin OTS Anchoring</span>
-          <span class="p-badge c">EU AI Act Aligned</span>
-          <span class="p-badge m">Innovation Registry #1–9</span>
-          <span class="p-badge m">Supports Readiness — Never Certifies</span>
-        </div>
-        <p class="standard-note">"We do not change your website. We change what AI understands about it."</p>
-        <p class="standard-note">Every ADI™ innovation is SHA-256 fingerprinted and anchored to the Bitcoin blockchain via OpenTimestamps. Pre-existence is mathematically provable — not claimed.</p>
-      </div>
-      <div>
-        <div class="hash-table">
-          <div class="hash-row"><span class="hash-key">ADI_HASH</span><span class="hash-val">31aa7a56...756bc36</span></div>
-          <div class="hash-row"><span class="hash-key">MANIFEST</span><span class="hash-val">82c79d0e...cd1df30</span></div>
-          <div class="hash-row"><span class="hash-key">AI_SONAR</span><span class="hash-val">c57529c8... [block 949375]</span></div>
-          <div class="hash-row"><span class="hash-key">MOCKINGBIRD</span><span class="hash-val">fb388288... [block 949346]</span></div>
-          <div class="hash-row"><span class="hash-key">GEMINI_AUDIT</span><span class="hash-val">dd8896c2... [block 952597]</span></div>
-          <div class="hash-row verified"><span class="hash-key">OTS_STATUS</span><span class="hash-val">✓ verified</span></div>
-          <div class="hash-row"><span class="hash-key">BLOCK RANGE</span><span class="hash-val">944442 – 952597</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FAQ ══════════════════════════════════════════════ -->
-<section id="faq">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:0">
-      <div class="ey" style="justify-content:center">FAQ</div>
-      <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.1;letter-spacing:-.02em">Honest Answers.</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Do I need to change my website?<span class="faq-ico">+</span></div>
-        <div class="faq-a">No. We add an AI discovery layer alongside your existing website — not inside it. Your site, CMS, hosting and design stay exactly as they are. No rebuild, no migration, no rollout.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How is this different from SEO?<span class="faq-ico">+</span></div>
-        <div class="faq-a">SEO targets search engine rankings that humans click through. AI Recommendation Readiness targets how AI systems understand, verify and recommend your business in generated answers and agent decisions.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How fast will I see results?<span class="faq-ico">+</span></div>
-        <div class="faq-a">Free AI Audit delivered within 24 hours. Recommendation improvement is typically measurable within 2–4 weeks after implementation, with before-and-after verification.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What if AI still does not recommend me?<span class="faq-ico">+</span></div>
-        <div class="faq-a">We provide a result-based guarantee. If the agreed improvements don't produce measurable change in how AI systems understand your business, we continue working until they do. No AI system can be forced to recommend anyone — but we guarantee the work.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is this compliant with the EU AI Act?<span class="faq-ico">+</span></div>
-        <div class="faq-a">Our work supports EU AI Act readiness. We never certify compliance — that distinction is fundamental to our epistemic discipline. We help businesses document, structure and verify their AI-related claims in line with Article 50 transparency requirements.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What types of businesses does this work for?<span class="faq-ico">+</span></div>
-        <div class="faq-a">Any B2B company that wants to be found, understood and recommended by AI systems. Professional services, technology companies, consultancies, agencies, and any business where buyers use AI to evaluate options before making contact.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FINAL CTA ════════════════════════════════════════ -->
-<section class="final">
-  <div class="wrap" style="position:relative;z-index:1">
-    <div class="final-ey">Start today</div>
-    <h2 class="final-h2">Is AI Recommending<br>Your Competitors?<br><em>Or Is It Recommending You?</em></h2>
-    <p class="final-sub">Start your AI Audit today.</p>
-    <div class="final-acts">
-      <a href="https://eu-ai-audit.eu" class="btn-p" style="font-size:16px;padding:15px 30px">Start AI Audit™ →</a>
-    </div>
-    <p class="final-contact">Or email us directly at <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></p>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="foot-inner">
-    <div class="foot-l">
-      <strong>AiVenture S.R.L.</strong> · CUI 51415878 · București, Romania<br>
-      <a href="https://5thelement.ai">5thelement.ai</a> ·
-      <a href="https://eu-ai-audit.eu">eu-ai-audit.eu</a> ·
-      <a href="https://eu-ai-act-ready.eu">eu-ai-act-ready.eu</a> ·
-      <a href="https://aiventure.ro">aiventure.ro</a> ·
-      <a href="/llms.txt">llms.txt</a> ·
-      <a href="/ai-proof.json">ai-proof.json</a> ·
-      <a href="/sitemap.xml">sitemap.xml</a>
-    </div>
-    <div class="foot-r">ADI™ · AI Delivery Infrastructure<br>Supports readiness — never certifies</div>
-  </div>
+  <p><span class="gold-text">AiVenture S.R.L.</span> · CUI 51415878 · J40/2501/2025 · București, Romania</p>
+  <p>5thelement.ai · eu-ai-audit.eu · eu-ai-act-ready.eu · aiventure.ro</p>
+  <p>ADI™ · AI Delivery Infrastructure™ — Supports readiness, never certifies.</p>
+  <p>contact@5thelement.ai</p>
 </footer>
 
 <script>
-function toggleTheme(){const b=document.getElementById('tt');document.body.classList.toggle('light-mode');b.textContent=document.body.classList.contains('light-mode')?'☾':'☀'}
-function toggleMob(){const m=document.getElementById('mob'),h=document.getElementById('ham');const o=m.classList.toggle('open');h.setAttribute('aria-expanded',o)}
-function closeMob(){document.getElementById('mob').classList.remove('open');document.getElementById('ham').setAttribute('aria-expanded','false')}
-
-// ENGINE PULSE
-const rows=document.querySelectorAll('#eng-list .eng-row');
-let idx=0;
-(function pulse(){rows.forEach(r=>r.classList.remove('lit'));rows[idx].classList.add('lit');idx=(idx+1)%rows.length;setTimeout(pulse,1300)})();
-
-// FAQ
-function toggleFaq(el){
-  const item=el.parentElement;
-  const wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  if(!wasOpen) item.classList.add('open');
-}
-
-// SMOOTH SCROLL
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
-  });
-});
-
-// SCROLL REVEAL
-if(window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
-  const els=document.querySelectorAll('.gallery-item,.era-card,.evo-card,.growth-card,.position-card,.hiw-card,.l-row,.way-card,.hash-row,.faq-item');
-  const io=new IntersectionObserver((entries,obs)=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target)}});
-  },{threshold:0.06});
-  els.forEach(el=>{el.style.cssText+='opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease';io.observe(el)});
-}
+  function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const icon = document.getElementById('theme-icon');
+    icon.textContent = document.body.classList.contains('light-mode') ? '☾' : '☀';
+  }
+  function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
 </script>
+
 </body>
 </html>
