@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  sitemap-signals.xml — 5thelement.ai
-  V1.0 — 2026-06-11
-
-  WHY THIS FILE EXISTS:
-  The ADI™ architecture is machine-first discovery.
-  These files are not web pages. They are the AI discovery layer.
-  Google does not need them. AI crawlers DO.
-  Including them in a sitemap makes the discovery layer explicit:
-  "Here is our machine-readable signal infrastructure."
-
-  RULE: every file listed here must actually be served at that URL.
-  Verify: open each URL and confirm you get the correct file format,
-  not a 404 and not an HTML page.
-
-  These use loc only — no changefreq/priority needed for machine files.
-  Some validators will warn about non-HTML URLs in sitemaps.
-  That is acceptable. The ADI™ philosophy takes precedence.
+sitemap-signals.xml — 5thelement.ai — V1.6 — AI discovery and ADI signal files
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ═══ PRIMARY AI DISCOVERY FILES ═══════════════════════ -->
   <url>
     <loc>https://5thelement.ai/llms.txt</loc>
     <lastmod>2026-06-11</lastmod>
@@ -33,8 +15,42 @@
     <loc>https://5thelement.ai/ai-proof.json</loc>
     <lastmod>2026-06-11</lastmod>
   </url>
-
-  <!-- ═══ EXTENDED SIGNAL LAYER ════════════════════════════ -->
+  <url>
+    <loc>https://5thelement.ai/adn.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-actions.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-entity.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-intents.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-ready.html</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-routes.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-signals.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-trust.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/ai-validation.json</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
   <url>
     <loc>https://5thelement.ai/entities.json</loc>
     <lastmod>2026-06-11</lastmod>
@@ -47,11 +63,16 @@
     <loc>https://5thelement.ai/allow-lane-matrix.json</loc>
     <lastmod>2026-06-11</lastmod>
   </url>
-
-  <!-- ═══ SCHEMA / ENTITY GRAPH ════════════════════════════ -->
   <url>
     <loc>https://5thelement.ai/entity-graph.public.jsonld</loc>
     <lastmod>2026-06-11</lastmod>
   </url>
-
+  <url>
+    <loc>https://5thelement.ai/.well-known/ai-plugin.json</loc>
+    <lastmod>2026-06-12</lastmod>
+  </url>
+  <url>
+    <loc>https://5thelement.ai/.well-known/ai.json</loc>
+    <lastmod>2026-06-12</lastmod>
+  </url>
 </urlset>
