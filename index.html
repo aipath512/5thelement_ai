@@ -27,6 +27,7 @@
       --muted-2: #8892a3;
       --gold: #f5c842;
       --gold-soft: rgba(245, 200, 66, 0.16);
+      --green: #25d366;
       --line: rgba(255,255,255,0.12);
       --line-strong: rgba(255,255,255,0.22);
       --max: 1180px;
@@ -34,7 +35,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -110,6 +110,11 @@
       font-weight: 800;
     }
 
+    .small {
+      font-size: 14px;
+      color: var(--muted-2);
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -120,11 +125,12 @@
     }
 
     .nav {
-      height: 76px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 22px;
+      padding: 10px 0;
     }
 
     .brand {
@@ -170,6 +176,7 @@
       color: #101010;
       font-weight: 900;
       border: 1px solid transparent;
+      cursor: pointer;
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
@@ -184,6 +191,11 @@
     .btn.secondary:hover {
       border-color: var(--gold);
       background: var(--gold-soft);
+    }
+
+    .btn.whatsapp {
+      background: var(--green);
+      color: #06140a;
     }
 
     section {
@@ -420,6 +432,66 @@
 
     td strong { color: var(--text); }
 
+    .contact-form {
+      background: linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 16px 0 8px;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #080c13;
+      color: var(--text);
+      font: inherit;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: var(--gold);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .direct-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .direct-contact {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .direct-contact strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
     .faq details {
       background: var(--bg-card);
       border: 1px solid var(--line);
@@ -453,7 +525,7 @@
     }
 
     footer {
-      padding: 54px 0;
+      padding: 54px 0 92px;
       color: var(--muted);
       font-size: 14px;
       background: #05070a;
@@ -474,13 +546,46 @@
       align-items: start;
     }
 
+    .floating-contact-widget {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 124px;
+      min-height: 46px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    }
+
+    .floating-btn.whatsapp {
+      background: var(--green);
+      color: #06140a;
+    }
+
+    .floating-btn.call {
+      background: var(--gold);
+      color: #111;
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .split,
       .grid-2,
       .grid-3,
       .timeline,
-      .footer-grid {
+      .footer-grid,
+      .direct-contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -497,6 +602,24 @@
         padding: 92px 0 80px;
       }
     }
+
+    @media (max-width: 720px) {
+      footer {
+        padding-bottom: 86px;
+      }
+
+      .floating-contact-widget {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        flex-direction: row;
+      }
+
+      .floating-btn {
+        flex: 1;
+        min-width: 0;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -509,6 +632,7 @@
         "name": "AiVenture SRL",
         "url": "https://5thelement.ai/",
         "email": "contact@5thelement.ai",
+        "telephone": "+40737123540",
         "sameAs": [
           "https://ro.linkedin.com/in/dan-ionesco-a856082a0",
           "https://www.linkedin.com/company/107338970",
@@ -522,6 +646,12 @@
         "brand": {
           "@type": "Brand",
           "name": "5thelement.ai"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@5thelement.ai",
+          "telephone": "+40737123540",
+          "contactType": "AI Audit request"
         }
       },
       {
@@ -606,7 +736,7 @@
 <header>
   <div class="container nav">
     <a class="brand" href="/" aria-label="5thelement.ai home">
-      <img src="/assets/aiventure-logo.png" alt="AiVenture SRL logo" />
+      <img src="assets/aiventure-logo.svg" alt="AiVenture SRL logo" />
       <span>5thelement.ai</span>
     </a>
 
@@ -614,8 +744,8 @@
       <a href="#market-shift">Market Shift</a>
       <a href="#why">Why</a>
       <a href="#audit">AI Audit</a>
+      <a href="#contact">Contact</a>
       <a href="#levels">Levels</a>
-      <a href="#different">Different</a>
       <a href="#faq">FAQ</a>
     </nav>
 
@@ -646,7 +776,7 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+        <a class="btn" href="#contact">Start Free AI Audit™</a>
         <a class="btn secondary" href="#market-shift">See What Changed</a>
       </div>
 
@@ -670,7 +800,7 @@
       <p>
         If AI cannot understand why your company should be recommended, it may recommend someone else.
       </p>
-      <a class="btn" href="/ai-audit/">Check My AI Visibility</a>
+      <a class="btn" href="#contact">Check My AI Visibility</a>
     </aside>
   </div>
 </section>
@@ -691,7 +821,7 @@
     </p>
 
     <div class="visual">
-      <img src="/assets/ai_transition.webp" alt="2026 market shift from Google search to AI agent recommendation" />
+      <img src="assets/ai_transition.webp" alt="2026 market shift from Google search to AI agent recommendation" />
       <div class="visual-caption">
         Old road: human search through Google, ads, SEO and social media. New road: AI agent searches, compares,
         verifies, recommends and routes the customer toward selected options.
@@ -756,7 +886,7 @@
       <p>
         That is why the first step is not another campaign. The first step is to understand how AI currently sees your business.
       </p>
-      <a class="btn" href="/ai-audit/">Start AI Audit™</a>
+      <a class="btn" href="#contact">Start AI Audit™</a>
     </div>
   </div>
 </section>
@@ -871,7 +1001,7 @@
         stopping your existing marketing and sales activity.
       </p>
 
-      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+      <a class="btn" href="#contact">Start Free AI Audit™</a>
     </div>
 
     <div class="card">
@@ -937,7 +1067,7 @@
         It gives you a clear starting point: what AI understands, what AI cannot understand, what is missing and what should be fixed first.
       </p>
 
-      <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+      <a class="btn" href="#contact">Start Free AI Audit™</a>
     </div>
 
     <div class="card gold">
@@ -1107,35 +1237,12 @@
     <h2>Built For B2B Companies That Need To Be Understood</h2>
 
     <div class="grid-3">
-      <div class="card">
-        <h3>Manufacturing</h3>
-        <p>Help AI understand complex products, capabilities, certifications, production capacity and industrial use cases.</p>
-      </div>
-
-      <div class="card">
-        <h3>Consulting</h3>
-        <p>Make expertise, methods, proof, case studies and outcomes easier for AI to understand and recommend.</p>
-      </div>
-
-      <div class="card">
-        <h3>B2B Services</h3>
-        <p>Clarify offers, service areas, buyer intents, proof and differentiators for AI search and recommendations.</p>
-      </div>
-
-      <div class="card">
-        <h3>Technology Firms</h3>
-        <p>Explain products, integrations, documentation, use cases and technical proof in a way AI systems can process.</p>
-      </div>
-
-      <div class="card">
-        <h3>Professional Services</h3>
-        <p>Strengthen authority, trust and recommendation readiness for advisory, legal, financial or expert services.</p>
-      </div>
-
-      <div class="card">
-        <h3>Local And Regional Firms</h3>
-        <p>Improve AI visibility for high-intent buyers who ask AI for local or specialized recommendations.</p>
-      </div>
+      <div class="card"><h3>Manufacturing</h3><p>Help AI understand complex products, capabilities, certifications, production capacity and industrial use cases.</p></div>
+      <div class="card"><h3>Consulting</h3><p>Make expertise, methods, proof, case studies and outcomes easier for AI to understand and recommend.</p></div>
+      <div class="card"><h3>B2B Services</h3><p>Clarify offers, service areas, buyer intents, proof and differentiators for AI search and recommendations.</p></div>
+      <div class="card"><h3>Technology Firms</h3><p>Explain products, integrations, documentation, use cases and technical proof in a way AI systems can process.</p></div>
+      <div class="card"><h3>Professional Services</h3><p>Strengthen authority, trust and recommendation readiness for advisory, legal, financial or expert services.</p></div>
+      <div class="card"><h3>Local And Regional Firms</h3><p>Improve AI visibility for high-intent buyers who ask AI for local or specialized recommendations.</p></div>
     </div>
   </div>
 </section>
@@ -1170,6 +1277,79 @@
         <li>Proof and governance architecture</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container split">
+    <div>
+      <div class="section-label">Contact AiVenture</div>
+      <h2>Start With Your AI Audit™</h2>
+
+      <p>
+        Send your website and business details. We will review how AI currently sees your company and what should be fixed first.
+      </p>
+
+      <div class="direct-contact-grid">
+        <a class="direct-contact" href="mailto:contact@5thelement.ai?subject=AI%20Audit%20Request%20-%205thelement.ai">
+          <strong>Email</strong>
+          contact@5thelement.ai
+        </a>
+
+        <a class="direct-contact" href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20" target="_blank" rel="noopener">
+          <strong>WhatsApp</strong>
+          +40 737 123 540
+        </a>
+
+        <a class="direct-contact" href="tel:+40737123540">
+          <strong>Call</strong>
+          +40 737 123 540
+        </a>
+      </div>
+
+      <p class="small" style="margin-top:18px;">
+        WhatsApp opens with this preloaded message: “Hello AiVenture, I want to start my AI Audit for my business. My website is:”
+      </p>
+    </div>
+
+    <form class="contact-form" action="mailto:contact@5thelement.ai" method="post" enctype="text/plain">
+      <h3>AI Audit™ Request Form</h3>
+
+      <label for="name">Name</label>
+      <input id="name" name="Name" type="text" placeholder="Your name" required />
+
+      <label for="company">Company</label>
+      <input id="company" name="Company" type="text" placeholder="Company name" required />
+
+      <label for="website">Website</label>
+      <input id="website" name="Website" type="url" placeholder="https://yourcompany.com" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="Email" type="email" placeholder="you@company.com" required />
+
+      <label for="phone">Phone / WhatsApp</label>
+      <input id="phone" name="Phone" type="tel" placeholder="+40..." />
+
+      <label for="goal">Main goal</label>
+      <select id="goal" name="Main goal">
+        <option value="AI Audit">Start AI Audit™</option>
+        <option value="AI Visibility">Improve AI Visibility</option>
+        <option value="AI Recommendation">Become recommended by AI</option>
+        <option value="AI Growth">Attract, sell and grow with AI</option>
+      </select>
+
+      <label for="message">What do you want AI to recommend you for?</label>
+      <textarea id="message" name="Message" rows="6" placeholder="Example: We want to be recommended for B2B consulting, manufacturing services, AI compliance, industrial products..."></textarea>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">Send Email Request</button>
+        <button class="btn whatsapp" type="button" onclick="sendWhatsAppAuditRequest()">Send by WhatsApp</button>
+      </div>
+
+      <p class="small" style="margin-top:14px;">
+        The email button opens your email client. The WhatsApp button opens WhatsApp with your request preloaded.
+      </p>
+    </form>
   </div>
 </section>
 
@@ -1218,7 +1398,7 @@
       The Recommendation Economy has already started.
       Discover how AI currently sees your business and what should be fixed first.
     </p>
-    <a class="btn" href="/ai-audit/">Start Free AI Audit™</a>
+    <a class="btn" href="#contact">Start Free AI Audit™</a>
   </div>
 </section>
 
@@ -1230,7 +1410,7 @@
       <strong>AiVenture SRL</strong><br />
       <strong>5thelement.ai</strong> — AI Visibility & Recommendation Readiness<br />
       <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a><br />
-      <a href="https://api.whatsapp.com/send/?phone=40737123540" target="_blank" rel="noopener">WhatsApp</a> ·
+      <a href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20" target="_blank" rel="noopener">WhatsApp</a> ·
       <a href="tel:+40737123540">Call</a>
     </div>
 
@@ -1258,6 +1438,50 @@
     </div>
   </div>
 </footer>
+
+<div class="floating-contact-widget" aria-label="Quick contact">
+  <a
+    class="floating-btn whatsapp"
+    href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact AiVenture on WhatsApp"
+  >
+    WhatsApp
+  </a>
+
+  <a
+    class="floating-btn call"
+    href="tel:+40737123540"
+    aria-label="Call AiVenture"
+  >
+    Call
+  </a>
+</div>
+
+<script>
+  function sendWhatsAppAuditRequest() {
+    const name = document.getElementById("name")?.value || "";
+    const company = document.getElementById("company")?.value || "";
+    const website = document.getElementById("website")?.value || "";
+    const email = document.getElementById("email")?.value || "";
+    const phone = document.getElementById("phone")?.value || "";
+    const goal = document.getElementById("goal")?.value || "AI Audit";
+    const message = document.getElementById("message")?.value || "";
+
+    const text =
+      "Hello AiVenture, I want to start my AI Audit for my business.%0A%0A" +
+      "Name: " + encodeURIComponent(name) + "%0A" +
+      "Company: " + encodeURIComponent(company) + "%0A" +
+      "Website: " + encodeURIComponent(website) + "%0A" +
+      "Email: " + encodeURIComponent(email) + "%0A" +
+      "Phone: " + encodeURIComponent(phone) + "%0A" +
+      "Goal: " + encodeURIComponent(goal) + "%0A" +
+      "Message: " + encodeURIComponent(message);
+
+    window.open("https://api.whatsapp.com/send/?phone=40737123540&text=" + text, "_blank", "noopener");
+  }
+</script>
 
 </body>
 </html>
