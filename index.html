@@ -8,6 +8,7 @@
   <meta name="description" content="AiVenture helps B2B firms attract, promote, sell and grow using AI by making their business visible, understandable, verifiable, trustable and recommendable by AI systems and AI agents." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="AiVenture SRL" />
+  <link rel="canonical" href="https://5thelement.ai/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="5thelement.ai — Attract More Clients. Sell More. Grow With AI." />
@@ -15,610 +16,460 @@
   <meta property="og:url" content="https://5thelement.ai/" />
   <meta property="og:image" content="https://5thelement.ai/assets/ai_transition.webp" />
 
-  <link rel="canonical" href="https://5thelement.ai/" />
-
   <style>
     :root {
-      --bg: #07090d;
-      --bg-card: #121824;
-      --bg-card-2: #151e2d;
-      --text: #ffffff;
-      --muted: #b8c0cc;
-      --muted-2: #8892a3;
-      --gold: #f5c842;
-      --gold-soft: rgba(245, 200, 66, 0.16);
-      --green: #25d366;
-      --line: rgba(255,255,255,0.12);
-      --line-strong: rgba(255,255,255,0.22);
-      --max: 1180px;
-      --radius: 24px;
+      --bg:#07090d;
+      --bg2:#0d1118;
+      --card:#121824;
+      --card2:#151e2d;
+      --text:#fff;
+      --muted:#b8c0cc;
+      --muted2:#8892a3;
+      --gold:#f5c842;
+      --green:#25d366;
+      --line:rgba(255,255,255,.12);
+      --line2:rgba(255,255,255,.22);
+      --max:1180px;
+      --radius:24px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),92%);margin:auto}
 
-    .container {
-      width: min(var(--max), 92%);
-      margin: 0 auto;
+    .topbar{
+      background:#05070a;
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+      color:var(--muted);
     }
 
-    .eyebrow,
-    .section-label {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 16px;
+    .topbar-inner{
+      min-height:38px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
     }
 
-    h1, h2, h3, h4 {
-      margin: 0;
-      color: var(--text);
-      letter-spacing: -0.035em;
+    .topbar a{text-decoration:underline;text-underline-offset:3px}
+    .topbar a:hover{color:var(--gold)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(7,9,13,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
     }
 
-    h1 {
-      font-size: clamp(46px, 7.6vw, 94px);
-      line-height: 0.94;
-      letter-spacing: -0.065em;
-      margin-bottom: 28px;
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
     }
 
-    h1 em {
-      color: var(--gold);
-      font-style: italic;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:900;
+      white-space:nowrap;
     }
 
-    h2 {
-      font-size: clamp(34px, 5vw, 60px);
-      line-height: 1.04;
-      margin-bottom: 24px;
+    .brand img{height:42px;width:auto}
+
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:700;
     }
 
-    h3 {
-      font-size: 24px;
-      line-height: 1.18;
-      margin-bottom: 12px;
+    .navlinks a:hover{color:var(--gold)}
+
+    .header-cta{
+      padding:10px 16px;
+      border-radius:999px;
+      background:var(--gold);
+      color:#111;
+      font-weight:900;
+      font-size:14px;
+      white-space:nowrap;
     }
 
-    p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 18px;
+    .eyebrow,.section-label{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:13px;
+      font-weight:900;
+      margin-bottom:16px;
     }
 
-    .lead {
-      max-width: 860px;
-      font-size: 22px;
-      color: var(--muted);
+    h1,h2,h3{margin:0;color:var(--text);letter-spacing:-.035em}
+    h1{
+      font-size:clamp(46px,7.6vw,94px);
+      line-height:.94;
+      letter-spacing:-.065em;
+      margin-bottom:28px;
     }
-
-    .strong {
-      color: var(--text);
-      font-weight: 800;
+    h1 em{color:var(--gold);font-style:italic}
+    h2{
+      font-size:clamp(34px,5vw,60px);
+      line-height:1.04;
+      margin-bottom:24px;
     }
+    h3{font-size:24px;line-height:1.18;margin-bottom:12px}
+    p{margin:0 0 18px;color:var(--muted);font-size:18px}
+    .lead{max-width:860px;font-size:22px;color:var(--muted)}
+    .strong{color:var(--text);font-weight:900}
+    .small{font-size:14px;color:var(--muted2)}
 
-    .small {
-      font-size: 14px;
-      color: var(--muted-2);
-    }
+    section{padding:92px 0;border-bottom:1px solid var(--line)}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(7, 9, 13, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-      padding: 10px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-
-    .brand img {
-      height: 42px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .navlinks a:hover { color: var(--gold); }
-
-    .nav-contact {
-      color: var(--muted);
-      font-size: 14px;
-      white-space: nowrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      background: var(--gold);
-      color: #101010;
-      font-weight: 900;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--line-strong);
-    }
-
-    .btn.secondary:hover {
-      border-color: var(--gold);
-      background: var(--gold-soft);
-    }
-
-    .btn.whatsapp {
-      background: var(--green);
-      color: #06140a;
-    }
-
-    section {
-      padding: 92px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero {
-      padding: 124px 0 112px;
+    .hero{
+      padding:124px 0 112px;
       background:
-        radial-gradient(circle at 76% 16%, rgba(245, 200, 66, 0.24), transparent 30%),
-        radial-gradient(circle at 18% 72%, rgba(80, 110, 255, 0.14), transparent 28%),
-        linear-gradient(180deg, #0a0d14 0%, #07090d 100%);
+        radial-gradient(circle at 76% 16%,rgba(245,200,66,.24),transparent 30%),
+        radial-gradient(circle at 18% 72%,rgba(80,110,255,.14),transparent 28%),
+        linear-gradient(180deg,#0a0d14 0%,#07090d 100%);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 44px;
-      align-items: center;
+    .hero-grid,.split{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:44px;
+      align-items:center;
     }
 
-    .hero-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      padding: 28px;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+    .hero-panel,.card,.contact-form{
+      background:linear-gradient(180deg,var(--card2),var(--card));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
     }
 
-    .hero-panel .mini-title {
-      color: var(--gold);
-      font-weight: 900;
-      margin-bottom: 14px;
+    .hero-panel{
+      border-radius:34px;
+      box-shadow:0 30px 90px rgba(0,0,0,.35);
     }
 
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 26px;
+    .mini-title{color:var(--gold);font-weight:900;margin-bottom:14px}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:14px 22px;
+      border-radius:999px;
+      background:var(--gold);
+      color:#111;
+      font-weight:900;
+      border:1px solid transparent;
+      cursor:pointer;
     }
 
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
+    .btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border-color:var(--line2);
     }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      background: rgba(255,255,255,0.035);
-      font-size: 14px;
-      font-weight: 650;
+    .btn.whatsapp{background:var(--green);color:#06140a}
+
+    .hero-actions,.form-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:26px;
     }
 
-    .pill::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:26px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background:rgba(255,255,255,.035);
+      font-size:14px;
+      font-weight:700;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+    .pill:before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--gold);
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 42px;
-      align-items: center;
-    }
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 
-    .card {
-      background: linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-
-    .card.gold {
+    .card.gold{
       background:
-        radial-gradient(circle at top right, rgba(245,200,66,0.16), transparent 32%),
-        linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
-      border-color: rgba(245,200,66,0.34);
+        radial-gradient(circle at top right,rgba(245,200,66,.16),transparent 32%),
+        linear-gradient(180deg,var(--card2),var(--card));
+      border-color:rgba(245,200,66,.34);
     }
 
-    .visual {
-      margin: 40px 0 34px;
-      border-radius: 30px;
-      overflow: hidden;
-      border: 1px solid var(--line-strong);
-      background: #0f1420;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.38);
+    .visual{
+      margin:40px 0 34px;
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid var(--line2);
+      background:#0f1420;
+      box-shadow:0 30px 90px rgba(0,0,0,.38);
     }
 
-    .visual-caption {
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.045);
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 15px;
+    .visual-caption{
+      padding:16px 18px;
+      background:rgba(255,255,255,.045);
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:15px;
     }
 
-    .flow {
-      color: var(--text);
-      font-size: 20px;
-      font-weight: 900;
-      line-height: 1.28;
-      margin: 16px 0 14px;
+    .flow{
+      color:#fff;
+      font-size:20px;
+      font-weight:900;
+      line-height:1.28;
+      margin:16px 0 14px;
     }
 
-    .arrow {
-      color: var(--gold);
-      font-weight: 900;
+    .arrow{color:var(--gold);font-weight:900}
+    ul{margin:16px 0 0;padding-left:20px;color:var(--muted);font-size:18px}
+    li{margin:8px 0}
+
+    .check-list,.bad-list{list-style:none;padding:0}
+    .check-list li,.bad-list li{position:relative;padding-left:28px}
+    .check-list li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+    .bad-list li:before{content:"×";position:absolute;left:0;color:#ff6b6b;font-weight:900}
+
+    .metric{
+      font-size:70px;
+      line-height:1;
+      font-weight:950;
+      color:var(--gold);
+      letter-spacing:-.07em;
+      margin-bottom:12px;
     }
 
-    ul {
-      margin: 16px 0 0;
-      padding-left: 20px;
-      color: var(--muted);
-      font-size: 18px;
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:28px;
     }
 
-    li { margin: 8px 0; }
-
-    .check-list,
-    .bad-list {
-      list-style: none;
-      padding: 0;
+    .step{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
     }
 
-    .check-list li,
-    .bad-list li {
-      position: relative;
-      padding-left: 28px;
+    .step-number{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--gold);
+      color:#111;
+      font-weight:900;
+      margin-bottom:18px;
     }
 
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-weight: 900;
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:22px;
+      background:var(--card);
+      margin-top:28px;
     }
 
-    .bad-list li::before {
-      content: "×";
-      position: absolute;
-      left: 0;
-      color: #ff6b6b;
-      font-weight: 900;
+    th,td{
+      border:1px solid var(--line);
+      padding:18px;
+      text-align:left;
+      color:var(--muted);
+      vertical-align:top;
+      font-size:16px;
     }
 
-    .metric {
-      font-size: 70px;
-      line-height: 1;
-      font-weight: 950;
-      color: var(--gold);
-      letter-spacing: -0.07em;
-      margin-bottom: 12px;
+    th{
+      color:#fff;
+      background:#101722;
+      font-size:15px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
     }
 
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 28px;
-    }
+    td strong{color:#fff}
 
-    .step {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .step-number {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gold);
-      color: #111;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      border-radius: 22px;
-      background: var(--bg-card);
-      margin-top: 28px;
-    }
-
-    th, td {
-      border: 1px solid var(--line);
-      padding: 18px;
-      text-align: left;
-      color: var(--muted);
-      vertical-align: top;
-      font-size: 16px;
-    }
-
-    th {
-      color: var(--text);
-      background: #101722;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    td strong { color: var(--text); }
-
-    .contact-form {
-      background: linear-gradient(180deg, var(--bg-card-2), var(--bg-card));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-
-    .contact-form label {
-      display: block;
-      margin: 16px 0 8px;
-      color: var(--text);
-      font-weight: 800;
-      font-size: 14px;
+    .contact-form label{
+      display:block;
+      margin:16px 0 8px;
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
     }
 
     .contact-form input,
     .contact-form textarea,
-    .contact-form select {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #080c13;
-      color: var(--text);
-      font: inherit;
-      outline: none;
+    .contact-form select{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#080c13;
+      color:#fff;
+      font:inherit;
+      outline:none;
     }
 
     .contact-form input:focus,
     .contact-form textarea:focus,
-    .contact-form select:focus {
-      border-color: var(--gold);
+    .contact-form select:focus{border-color:var(--gold)}
+
+    .direct-contact-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:20px;
     }
 
-    .form-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 18px;
+    .direct-contact{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
     }
 
-    .direct-contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 20px;
+    .direct-contact strong{display:block;margin-bottom:6px}
+
+    .faq details{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      margin-bottom:14px;
     }
 
-    .direct-contact {
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.035);
+    .faq summary{
+      cursor:pointer;
+      font-weight:900;
+      font-size:18px;
+      color:#fff;
     }
 
-    .direct-contact strong {
-      display: block;
-      margin-bottom: 6px;
-    }
+    .faq details p{margin-top:14px;margin-bottom:0}
 
-    .faq details {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 20px;
-      margin-bottom: 14px;
-    }
-
-    .faq summary {
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 18px;
-      color: var(--text);
-    }
-
-    .faq details p {
-      margin-top: 14px;
-      margin-bottom: 0;
-    }
-
-    .cta-final {
+    .cta-final{
       background:
-        radial-gradient(circle at 80% 20%, rgba(245,200,66,0.22), transparent 28%),
-        linear-gradient(180deg, #0f1420, #07090d);
-      text-align: center;
+        radial-gradient(circle at 80% 20%,rgba(245,200,66,.22),transparent 28%),
+        linear-gradient(180deg,#0f1420,#07090d);
+      text-align:center;
     }
 
-    .cta-final .lead {
-      margin-left: auto;
-      margin-right: auto;
+    .cta-final .lead{margin-left:auto;margin-right:auto}
+
+    footer{
+      padding:54px 0 92px;
+      color:var(--muted);
+      font-size:14px;
+      background:#05070a;
     }
 
-    footer {
-      padding: 54px 0 92px;
-      color: var(--muted);
-      font-size: 14px;
-      background: #05070a;
+    footer a{
+      color:var(--muted);
+      text-decoration:underline;
+      text-underline-offset:3px;
     }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    footer a:hover{color:var(--gold)}
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.1fr 1fr 1.4fr;
+      gap:34px;
+      align-items:start;
     }
 
-    footer a:hover { color: var(--gold); }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr 1.4fr;
-      gap: 34px;
-      align-items: start;
+    .floating-contact-widget{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:200;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
-    .floating-contact-widget {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 200;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .floating-btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-width:124px;
+      min-height:46px;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 14px 40px rgba(0,0,0,.35);
     }
 
-    .floating-btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 124px;
-      min-height: 46px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      font-weight: 900;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    .floating-btn.whatsapp{background:var(--green);color:#06140a}
+    .floating-btn.call{background:var(--gold);color:#111}
+
+    @media(max-width:980px){
+      .hero-grid,.split,.grid-2,.grid-3,.timeline,.footer-grid,.direct-contact-grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .topbar-inner{justify-content:center}
+      section{padding:68px 0}
+      .hero{padding:92px 0 80px}
     }
 
-    .floating-btn.whatsapp {
-      background: var(--green);
-      color: #06140a;
-    }
-
-    .floating-btn.call {
-      background: var(--gold);
-      color: #111;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .split,
-      .grid-2,
-      .grid-3,
-      .timeline,
-      .footer-grid,
-      .direct-contact-grid {
-        grid-template-columns: 1fr;
+    @media(max-width:720px){
+      .header-cta{display:none}
+      footer{padding-bottom:86px}
+      .floating-contact-widget{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        flex-direction:row;
       }
-
-      .navlinks,
-      .nav-contact {
-        display: none;
-      }
-
-      section {
-        padding: 68px 0;
-      }
-
-      .hero {
-        padding: 92px 0 80px;
-      }
-    }
-
-    @media (max-width: 720px) {
-      footer {
-        padding-bottom: 86px;
-      }
-
-      .floating-contact-widget {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
-        flex-direction: row;
-      }
-
-      .floating-btn {
-        flex: 1;
-        min-width: 0;
-      }
+      .floating-btn{flex:1;min-width:0}
     }
   </style>
 
@@ -630,9 +481,31 @@
         "@type": "Organization",
         "@id": "https://5thelement.ai/#organization",
         "name": "AiVenture SRL",
+        "legalName": "AiVenture SRL",
         "url": "https://5thelement.ai/",
+        "logo": "https://5thelement.ai/assets/aiventure-logo.svg",
+        "image": "https://5thelement.ai/assets/ai_transition.webp",
         "email": "contact@5thelement.ai",
         "telephone": "+40737123540",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://5thelement.ai/#dan-ionesco",
+          "name": "Dan Ionesco",
+          "alternateName": "Dan Ionescu",
+          "url": "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
+        },
+        "brand": {
+          "@type": "Brand",
+          "@id": "https://5thelement.ai/#brand",
+          "name": "5thelement.ai"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "AI Audit request",
+          "email": "contact@5thelement.ai",
+          "telephone": "+40737123540",
+          "availableLanguage": ["English", "Romanian", "French"]
+        },
         "sameAs": [
           "https://ro.linkedin.com/in/dan-ionesco-a856082a0",
           "https://www.linkedin.com/company/107338970",
@@ -643,24 +516,34 @@
           "https://www.youtube.com/@AIVenture-q8u",
           "https://medium.com/@aipath512"
         ],
-        "brand": {
-          "@type": "Brand",
-          "name": "5thelement.ai"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "contact@5thelement.ai",
-          "telephone": "+40737123540",
-          "contactType": "AI Audit request"
-        }
+        "areaServed": ["Romania", "European Union", "United Kingdom", "United States"],
+        "knowsAbout": [
+          "AI Visibility",
+          "AI Recommendation Readiness",
+          "AI Audit",
+          "AI Discovery Infrastructure",
+          "AEO",
+          "GEO",
+          "AIO",
+          "AI Signals",
+          "AI Search",
+          "AI Agents",
+          "B2B Growth",
+          "AI Marketing",
+          "AI Sales"
+        ]
       },
       {
         "@type": "WebSite",
         "@id": "https://5thelement.ai/#website",
         "url": "https://5thelement.ai/",
         "name": "5thelement.ai",
-        "publisher": {
-          "@id": "https://5thelement.ai/#organization"
+        "publisher": { "@id": "https://5thelement.ai/#organization" },
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://5thelement.ai/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
       },
       {
@@ -668,17 +551,86 @@
         "@id": "https://5thelement.ai/#homepage",
         "url": "https://5thelement.ai/",
         "name": "Attract More Clients. Sell More. Grow With AI.",
-        "description": "AiVenture helps B2B firms attract, promote, sell and grow using AI.",
-        "isPartOf": {
-          "@id": "https://5thelement.ai/#website"
-        },
-        "about": {
-          "@id": "https://5thelement.ai/#organization"
-        },
+        "headline": "Attract More Clients. Sell More. Grow With AI.",
+        "description": "AiVenture helps B2B firms attract, promote, sell and grow using AI by making their business visible, understandable, verifiable, trustable and recommendable by AI systems and AI agents.",
+        "isPartOf": { "@id": "https://5thelement.ai/#website" },
+        "about": [
+          { "@id": "https://5thelement.ai/#organization" },
+          { "@id": "https://5thelement.ai/#ai-recommendation-readiness" },
+          { "@id": "https://5thelement.ai/#ai-audit-service" }
+        ],
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://5thelement.ai/assets/ai_transition.webp"
+          "@id": "https://5thelement.ai/#market-shift-image",
+          "url": "https://5thelement.ai/assets/ai_transition.webp",
+          "caption": "Market shift from Google search to AI agent recommendation."
+        },
+        "breadcrumb": { "@id": "https://5thelement.ai/#breadcrumb" },
+        "mainEntity": { "@id": "https://5thelement.ai/#ai-audit-service" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://5thelement.ai/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://5thelement.ai/"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://5thelement.ai/#ai-audit-service",
+        "name": "AI Audit™",
+        "serviceType": "AI visibility and recommendation readiness audit",
+        "provider": { "@id": "https://5thelement.ai/#organization" },
+        "brand": { "@id": "https://5thelement.ai/#brand" },
+        "audience": {
+          "@type": "BusinessAudience",
+          "audienceType": "B2B firms"
+        },
+        "areaServed": ["Romania", "European Union", "United Kingdom", "United States"],
+        "description": "AI Audit evaluates whether AI systems can find, understand, verify, trust and recommend a business.",
+        "offers": {
+          "@type": "Offer",
+          "@id": "https://5thelement.ai/#ai-audit-offer",
+          "name": "Start Free AI Audit™",
+          "url": "https://5thelement.ai/#contact",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AiVenture AI Visibility Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI LENS™" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI AUDIT™" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI READY™" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VERIFY™" } }
+          ]
         }
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://5thelement.ai/#ai-recommendation-readiness",
+        "name": "AI Recommendation Readiness™",
+        "description": "A score measuring whether AI systems can find, understand, verify, trust, recommend and select a business."
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://5thelement.ai/#ai-visibility-levels",
+        "name": "AI Visibility and Authority Levels",
+        "hasDefinedTerm": [
+          { "@type": "DefinedTerm", "name": "L1 Findable™" },
+          { "@type": "DefinedTerm", "name": "L2 Understandable™" },
+          { "@type": "DefinedTerm", "name": "L3 Verifiable™" },
+          { "@type": "DefinedTerm", "name": "L4 Trustable™" },
+          { "@type": "DefinedTerm", "name": "L5 Recommendable™" },
+          { "@type": "DefinedTerm", "name": "L6 Selectable™" }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -718,6 +670,14 @@
           },
           {
             "@type": "Question",
+            "name": "Can AI really influence buying decisions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. AI systems already search, compare, summarize and recommend options. AI agents are extending this behavior toward selection, negotiation and purchase workflows."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "What is the first step?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -733,6 +693,17 @@
 
 <body>
 
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>Official AiVenture / 5thelement.ai Presence</div>
+    <div>
+      <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a> ·
+      <a href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20" target="_blank" rel="noopener">WhatsApp</a> ·
+      <a href="tel:+40737123540">Call +40 737 123 540</a>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="container nav">
     <a class="brand" href="/" aria-label="5thelement.ai home">
@@ -741,15 +712,17 @@
     </a>
 
     <nav class="navlinks" aria-label="Main navigation">
-      <a href="#market-shift">Market Shift</a>
-      <a href="#why">Why</a>
-      <a href="#audit">AI Audit</a>
+      <a href="/">Home</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/services/">Services</a>
+      <a href="/products/">Products</a>
+      <a href="/growth-os/">AI Growth OS</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
       <a href="#contact">Contact</a>
-      <a href="#levels">Levels</a>
-      <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="nav-contact" href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+    <a class="header-cta" href="#contact">Start AI Audit™</a>
   </div>
 </header>
 
@@ -905,12 +878,8 @@
       <div class="card">
         <div class="metric">30–35%</div>
         <h3>Client-Initiated Demand</h3>
-        <p>
-          The client starts. They search, ask, compare or delegate the search to AI.
-        </p>
-        <p>
-          This is where AEO, GEO, AIO, AI Signals, AI Visibility and AI Recommendation Readiness matter most.
-        </p>
+        <p>The client starts. They search, ask, compare or delegate the search to AI.</p>
+        <p>This is where AEO, GEO, AIO, AI Signals, AI Visibility and AI Recommendation Readiness matter most.</p>
         <ul class="check-list">
           <li>Be found when the buyer asks AI.</li>
           <li>Be understood when AI reads your business.</li>
@@ -922,12 +891,8 @@
       <div class="card">
         <div class="metric">60–65%</div>
         <h3>Firm-Initiated Demand</h3>
-        <p>
-          The firm starts. The firm promotes, educates, follows up, reactivates clients and creates opportunities.
-        </p>
-        <p>
-          This is where AI marketing, personalized campaigns, CRM follow-up, WhatsApp sequences and AI sales agents matter most.
-        </p>
+        <p>The firm starts. The firm promotes, educates, follows up, reactivates clients and creates opportunities.</p>
+        <p>This is where AI marketing, personalized campaigns, CRM follow-up, WhatsApp sequences and AI sales agents matter most.</p>
         <ul class="check-list">
           <li>Create demand continuously.</li>
           <li>Educate leads automatically.</li>
@@ -950,35 +915,12 @@
     <h2>They Feel The Market Changing, But They Cannot See The AI Layer</h2>
 
     <div class="grid-2">
-      <div class="card">
-        <h3>We are not visible in AI answers</h3>
-        <p>Potential customers ask ChatGPT, Gemini, Claude, Copilot or Perplexity. Competitors appear. Your company does not.</p>
-      </div>
-
-      <div class="card">
-        <h3>Competitors are being recommended</h3>
-        <p>AI systems increasingly recommend a small set of trusted options. Many firms do not know whether they are included or excluded.</p>
-      </div>
-
-      <div class="card">
-        <h3>AI does not understand what we do</h3>
-        <p>Humans may understand your website. AI may not understand your offer, audience, proof, use cases and differentiators.</p>
-      </div>
-
-      <div class="card">
-        <h3>AI cannot verify our claims</h3>
-        <p>If AI cannot verify your claims, it may ignore them or recommend another company that is easier to validate.</p>
-      </div>
-
-      <div class="card">
-        <h3>We do not know how AI sees us</h3>
-        <p>Most firms have never tested whether AI can find, understand, verify and recommend their business.</p>
-      </div>
-
-      <div class="card">
-        <h3>We do not know what to fix first</h3>
-        <p>AI visibility is not one file, one keyword or one campaign. It is a system of business information, proof and signals.</p>
-      </div>
+      <div class="card"><h3>We are not visible in AI answers</h3><p>Potential customers ask ChatGPT, Gemini, Claude, Copilot or Perplexity. Competitors appear. Your company does not.</p></div>
+      <div class="card"><h3>Competitors are being recommended</h3><p>AI systems increasingly recommend a small set of trusted options. Many firms do not know whether they are included or excluded.</p></div>
+      <div class="card"><h3>AI does not understand what we do</h3><p>Humans may understand your website. AI may not understand your offer, audience, proof, use cases and differentiators.</p></div>
+      <div class="card"><h3>AI cannot verify our claims</h3><p>If AI cannot verify your claims, it may ignore them or recommend another company that is easier to validate.</p></div>
+      <div class="card"><h3>We do not know how AI sees us</h3><p>Most firms have never tested whether AI can find, understand, verify and recommend their business.</p></div>
+      <div class="card"><h3>We do not know what to fix first</h3><p>AI visibility is not one file, one keyword or one campaign. It is a system of business information, proof and signals.</p></div>
     </div>
   </div>
 </section>
@@ -988,19 +930,9 @@
     <div>
       <div class="section-label">What We Actually Do</div>
       <h2>AiVenture Builds An AI Discovery Layer™ Around Your Business</h2>
-
       <p>AiVenture helps B2B firms attract, promote, sell and grow using AI.</p>
-
-      <p>
-        We build an AI Discovery Layer™ around your business so AI systems can find, understand, verify, trust and
-        recommend your company.
-      </p>
-
-      <p>
-        This does not require rebuilding your website. It does not require replacing your team. It does not require
-        stopping your existing marketing and sales activity.
-      </p>
-
+      <p>We build an AI Discovery Layer™ around your business so AI systems can find, understand, verify, trust and recommend your company.</p>
+      <p>This does not require rebuilding your website. It does not require replacing your team. It does not require stopping your existing marketing and sales activity.</p>
       <a class="btn" href="#contact">Start Free AI Audit™</a>
     </div>
 
@@ -1057,16 +989,8 @@
     <div>
       <div class="section-label">Start With AI Audit™</div>
       <h2>The First Step Is To See How AI Sees Your Business</h2>
-
-      <p>
-        Before improving AI visibility, you need to understand your current AI position.
-        The AI Audit™ evaluates the factors that influence AI discovery, understanding, verification, trust and recommendation.
-      </p>
-
-      <p>
-        It gives you a clear starting point: what AI understands, what AI cannot understand, what is missing and what should be fixed first.
-      </p>
-
+      <p>Before improving AI visibility, you need to understand your current AI position. The AI Audit™ evaluates the factors that influence AI discovery, understanding, verification, trust and recommendation.</p>
+      <p>It gives you a clear starting point: what AI understands, what AI cannot understand, what is missing and what should be fixed first.</p>
       <a class="btn" href="#contact">Start Free AI Audit™</a>
     </div>
 
@@ -1089,26 +1013,15 @@
     <div>
       <div class="section-label">AI Recommendation Readiness™</div>
       <h2>Can AI Recommend Your Business?</h2>
-
-      <p>
-        The AI Recommendation Readiness™ Score measures how prepared your business is for AI discovery, AI answers,
-        AI recommendations and AI agent selection.
-      </p>
-
-      <p>
-        It is a category score for the Recommendation Economy: not only “can people find you?” but “can AI understand,
-        verify, trust and recommend you?”
-      </p>
-
+      <p>The AI Recommendation Readiness™ Score measures how prepared your business is for AI discovery, AI answers, AI recommendations and AI agent selection.</p>
+      <p>It is a category score for the Recommendation Economy: not only “can people find you?” but “can AI understand, verify, trust and recommend you?”</p>
       <a class="btn secondary" href="/framework/">See Framework →</a>
     </div>
 
     <div class="card">
       <div class="metric">L1–L10</div>
       <h3>From Findable™ To Defining™</h3>
-      <p>
-        Your score shows where you are today and what prevents AI systems from confidently recommending your company.
-      </p>
+      <p>Your score shows where you are today and what prevents AI systems from confidently recommending your company.</p>
       <ul class="check-list">
         <li>AI Visibility™: L1–L3</li>
         <li>AI Authority™: L4–L6</li>
@@ -1123,35 +1036,13 @@
     <div class="section-label">How It Works</div>
     <h2>Short Process. Clear Output.</h2>
 
-    <p class="lead">
-      The homepage does not need a technical deep dive. The process is simple:
-      inventory the business information, audit the atomic signals, fix what can be fixed, then verify the result.
-    </p>
+    <p class="lead">The homepage does not need a technical deep dive. The process is simple: inventory the business information, audit the atomic signals, fix what can be fixed, then verify the result.</p>
 
     <div class="timeline">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>AI LENS™</h3>
-        <p>Business Information Inventory. We identify what AI needs to understand your business and what it cannot currently find.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>AI AUDIT™</h3>
-        <p>Atomic Signal Assessment. We measure the signals that influence AI visibility, trust and recommendation.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>AI READY™</h3>
-        <p>Automatic Transformation. We implement improvements that help AI systems understand and verify your business.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">4</div>
-        <h3>VERIFY™</h3>
-        <p>Validation and Proof. We validate improvements and provide machine-readable evidence and verification layers.</p>
-      </div>
+      <div class="step"><div class="step-number">1</div><h3>AI LENS™</h3><p>Business Information Inventory. We identify what AI needs to understand your business and what it cannot currently find.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>AI AUDIT™</h3><p>Atomic Signal Assessment. We measure the signals that influence AI visibility, trust and recommendation.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>AI READY™</h3><p>Automatic Transformation. We implement improvements that help AI systems understand and verify your business.</p></div>
+      <div class="step"><div class="step-number">4</div><h3>VERIFY™</h3><p>Validation and Proof. We validate improvements and provide machine-readable evidence and verification layers.</p></div>
     </div>
 
     <a class="btn secondary" href="/how-it-works/" style="margin-top:30px;">See How It Works →</a>
@@ -1181,10 +1072,7 @@
     <div class="section-label">Why 5thelement.ai Is Different</div>
     <h2>Not SEO. Not A Web Agency. AI Recommendation Infrastructure.</h2>
 
-    <p class="lead">
-      SEO agencies optimize for search rankings. Web agencies build pages. AiVenture prepares the business to be
-      understood, verified and recommended by AI systems and AI agents.
-    </p>
+    <p class="lead">SEO agencies optimize for search rankings. Web agencies build pages. AiVenture prepares the business to be understood, verified and recommended by AI systems and AI agents.</p>
 
     <table>
       <thead>
@@ -1196,36 +1084,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>Main target</strong></td>
-          <td>Google rankings</td>
-          <td>Human website visitors</td>
-          <td>Humans + AI systems + AI agents</td>
-        </tr>
-        <tr>
-          <td><strong>Main output</strong></td>
-          <td>Traffic and keywords</td>
-          <td>Pages and design</td>
-          <td>AI Recommendation Readiness™</td>
-        </tr>
-        <tr>
-          <td><strong>Core question</strong></td>
-          <td>Can we rank?</td>
-          <td>Does the site look good?</td>
-          <td>Can AI find, understand, verify and recommend us?</td>
-        </tr>
-        <tr>
-          <td><strong>Business layer</strong></td>
-          <td>Content and links</td>
-          <td>UX and conversion</td>
-          <td>Business information, proof, signals, intents and machine-readable data</td>
-        </tr>
-        <tr>
-          <td><strong>Growth role</strong></td>
-          <td>Traffic acquisition</td>
-          <td>Website delivery</td>
-          <td>AI-assisted attraction, promotion, sales support and growth loop</td>
-        </tr>
+        <tr><td><strong>Main target</strong></td><td>Google rankings</td><td>Human website visitors</td><td>Humans + AI systems + AI agents</td></tr>
+        <tr><td><strong>Main output</strong></td><td>Traffic and keywords</td><td>Pages and design</td><td>AI Recommendation Readiness™</td></tr>
+        <tr><td><strong>Core question</strong></td><td>Can we rank?</td><td>Does the site look good?</td><td>Can AI find, understand, verify and recommend us?</td></tr>
+        <tr><td><strong>Business layer</strong></td><td>Content and links</td><td>UX and conversion</td><td>Business information, proof, signals, intents and machine-readable data</td></tr>
+        <tr><td><strong>Growth role</strong></td><td>Traffic acquisition</td><td>Website delivery</td><td>AI-assisted attraction, promotion, sales support and growth loop</td></tr>
       </tbody>
     </table>
   </div>
@@ -1252,17 +1115,8 @@
     <div>
       <div class="section-label">The 5thelement.ai Standard™</div>
       <h2>A Practical Standard For AI Visibility</h2>
-
-      <p>
-        The 5thelement.ai Standard™ helps businesses become findable, understandable, verifiable, trustable,
-        recommendable and selectable by AI systems.
-      </p>
-
-      <p>
-        It combines AI Discovery Infrastructure™, machine-readable business signals, verification frameworks,
-        trust signals and proof mechanisms.
-      </p>
-
+      <p>The 5thelement.ai Standard™ helps businesses become findable, understandable, verifiable, trustable, recommendable and selectable by AI systems.</p>
+      <p>It combines AI Discovery Infrastructure™, machine-readable business signals, verification frameworks, trust signals and proof mechanisms.</p>
       <a class="btn secondary" href="/technical-architecture/">See Technical Architecture →</a>
     </div>
 
@@ -1286,9 +1140,7 @@
       <div class="section-label">Contact AiVenture</div>
       <h2>Start With Your AI Audit™</h2>
 
-      <p>
-        Send your website and business details. We will review how AI currently sees your company and what should be fixed first.
-      </p>
+      <p>Send your website and business details. We will review how AI currently sees your company and what should be fixed first.</p>
 
       <div class="direct-contact-grid">
         <a class="direct-contact" href="mailto:contact@5thelement.ai?subject=AI%20Audit%20Request%20-%205thelement.ai">
@@ -1358,35 +1210,12 @@
     <div class="section-label">FAQ</div>
     <h2>Questions Business Owners Ask First</h2>
 
-    <details>
-      <summary>Do I need a new website?</summary>
-      <p>No. The AI Discovery Layer™ can be added around the existing business presence without rebuilding the website.</p>
-    </details>
-
-    <details>
-      <summary>Does this replace SEO?</summary>
-      <p>No. It complements SEO. SEO helps with search rankings. AI visibility helps AI systems understand, verify and recommend the business.</p>
-    </details>
-
-    <details>
-      <summary>What is AI Recommendation Readiness™?</summary>
-      <p>AI Recommendation Readiness™ measures whether AI systems can find, understand, verify, trust and recommend your company.</p>
-    </details>
-
-    <details>
-      <summary>How long does the first audit take?</summary>
-      <p>Most initial AI Audits™ can be completed within 24 hours.</p>
-    </details>
-
-    <details>
-      <summary>Can AI really influence buying decisions?</summary>
-      <p>Yes. AI systems already search, compare, summarize and recommend options. AI agents are extending this behavior toward selection, negotiation and purchase workflows.</p>
-    </details>
-
-    <details>
-      <summary>What is the first step?</summary>
-      <p>Start with the AI Audit™. It shows how AI currently sees your business and what should be fixed first.</p>
-    </details>
+    <details><summary>Do I need a new website?</summary><p>No. The AI Discovery Layer™ can be added around the existing business presence without rebuilding the website.</p></details>
+    <details><summary>Does this replace SEO?</summary><p>No. It complements SEO. SEO helps with search rankings. AI visibility helps AI systems understand, verify and recommend the business.</p></details>
+    <details><summary>What is AI Recommendation Readiness™?</summary><p>AI Recommendation Readiness™ measures whether AI systems can find, understand, verify, trust and recommend your company.</p></details>
+    <details><summary>How long does the first audit take?</summary><p>Most initial AI Audits™ can be completed within 24 hours.</p></details>
+    <details><summary>Can AI really influence buying decisions?</summary><p>Yes. AI systems already search, compare, summarize and recommend options. AI agents are extending this behavior toward selection, negotiation and purchase workflows.</p></details>
+    <details><summary>What is the first step?</summary><p>Start with the AI Audit™. It shows how AI currently sees your business and what should be fixed first.</p></details>
   </div>
 </section>
 
@@ -1394,10 +1223,7 @@
   <div class="container">
     <div class="section-label">Final CTA</div>
     <h2>When AI Recommends Businesses Like Yours, Does It Recommend You?</h2>
-    <p class="lead">
-      The Recommendation Economy has already started.
-      Discover how AI currently sees your business and what should be fixed first.
-    </p>
+    <p class="lead">The Recommendation Economy has already started. Discover how AI currently sees your business and what should be fixed first.</p>
     <a class="btn" href="#contact">Start Free AI Audit™</a>
   </div>
 </section>
@@ -1440,23 +1266,8 @@
 </footer>
 
 <div class="floating-contact-widget" aria-label="Quick contact">
-  <a
-    class="floating-btn whatsapp"
-    href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20"
-    target="_blank"
-    rel="noopener"
-    aria-label="Contact AiVenture on WhatsApp"
-  >
-    WhatsApp
-  </a>
-
-  <a
-    class="floating-btn call"
-    href="tel:+40737123540"
-    aria-label="Call AiVenture"
-  >
-    Call
-  </a>
+  <a class="floating-btn whatsapp" href="https://api.whatsapp.com/send/?phone=40737123540&text=Hello%20AiVenture%2C%20I%20want%20to%20start%20my%20AI%20Audit%20for%20my%20business.%20My%20website%20is%3A%20" target="_blank" rel="noopener" aria-label="Contact AiVenture on WhatsApp">WhatsApp</a>
+  <a class="floating-btn call" href="tel:+40737123540" aria-label="Call AiVenture">Call</a>
 </div>
 
 <script>
