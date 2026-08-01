@@ -1,0 +1,77 @@
+{
+  "protocolVersion": "1.0",
+  "name": "EU AI Act Ready Agent (eu-ai-act.ro)",
+  "description": "Machine-readable EU AI Act readiness agent operated by AIVENTURE S.R.L. (CUI 51415878, Bucuresti, Romania). Answers questions about Regulation (EU) 2024/1689 obligations, applicable deadlines, and the ten governance modules, and returns content fingerprints for published signal files. Supports readiness. Does NOT certify, satisfy or attest conformity - official verification remains with the competent authority.",
+  "version": "1.0.0",
+  "url": "https://edge.5thelement.ai/a2a/v1/eu-ai-act-ro",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "AIVENTURE S.R.L.",
+    "url": "https://5thelement.ai"
+  },
+  "documentationUrl": "https://eu-ai-act.ro/llms.txt",
+  "preferredLanguages": ["ro", "en"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["application/json", "text/plain"],
+  "securitySchemes": {},
+  "security": [],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "eu-ai-act-timeline",
+      "name": "EU AI Act Applicability Timeline",
+      "description": "Returns the published application dates for Regulation (EU) 2024/1689 obligations as they stand after the June 2026 Digital Omnibus, including Article 50 transparency, generated-content marking, and the two high-risk tranches. Deterministic lookup of a published table, not legal advice.",
+      "tags": ["eu-ai-act", "regulation-2024-1689", "deadlines", "article-50", "compliance", "timeline"],
+      "examples": [
+        "When does Article 50 of the EU AI Act start applying?",
+        "What EU AI Act obligations apply to a Romanian SME in 2027?",
+        "Care sunt termenele EU AI Act pentru sisteme cu risc ridicat?"
+      ],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "governance-module-lookup",
+      "name": "Governance Module Lookup",
+      "description": "Returns the structure of the ten EU AI Act governance modules - AI system inventory, risk classification, AI literacy, prohibited practices, high-risk assessment, technical documentation, human oversight, data governance, logging and monitoring, incident reporting - and the seven document types produced per module: policy, procedure, work instruction, checklist, register, declaration, evidence.",
+      "tags": ["governance", "documentation", "modules", "eu-ai-act", "policy", "procedure"],
+      "examples": [
+        "Which documents does the risk classification module produce?",
+        "What are the ten governance modules?",
+        "Ce contine modulul de supraveghere umana?"
+      ],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "entity-lookup",
+      "name": "Canonical Entity Lookup",
+      "description": "Returns the published entity graph and legal identity of the operator: legal name, CUI 51415878, EUID, trade register number, registered office, founder, partner relationships and sibling nodes in the network. Deterministic read of published signals.",
+      "tags": ["entity", "identity", "legal", "lookup", "deterministic"],
+      "examples": [
+        "Who operates eu-ai-act.ro?",
+        "Return the entity graph for this site"
+      ],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "content-fingerprint",
+      "name": "Content Fingerprint",
+      "description": "Returns the SHA-256 content fingerprint published for a signal file on this domain, so a calling agent can download the file, re-hash it and confirm it has not changed. This domain publishes content fingerprints only. It does NOT use blockchain or OpenTimestamps anchoring, and any claim of blockchain attestation for eu-ai-act.ro would be false.",
+      "tags": ["proof", "sha256", "fingerprint", "integrity", "verification"],
+      "examples": [
+        "What is the content fingerprint for entities.json?",
+        "How can I verify this site's published signals?"
+      ],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"]
+    }
+  ],
+  "signatures": []
+}
