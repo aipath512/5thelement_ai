@@ -114,6 +114,17 @@
         "module_name": "Assistant IA Conversationnel",
         "purpose": "French market gateway for voice/text AI assistant activation and conversational lead capture."
       }
+    },
+    {
+      "domain": "https://firmsfinder.eu",
+      "role": "firm_data_node",
+      "status": "active",
+      "adn": "https://firmsfinder.eu/adn.json",
+      "belongs_to_value_ladder": {
+        "module": "DATA",
+        "module_name": "Firm Data Infrastructure",
+        "purpose": "National Romanian firm database (ONRC and Ministry of Finance data) with a frozen, hash-verified data dictionary readable by humans and agents."
+      }
     }
   ]
 }
