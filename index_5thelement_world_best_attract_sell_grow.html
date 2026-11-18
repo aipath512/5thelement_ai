@@ -30,46 +30,99 @@
         "@type": "Organization",
         "@id": "https://5thelement.ai/#organization",
         "name": "AiVenture S.R.L.",
-        "alternateName": ["5THELEMENT.AI", "5thElement.ai", "AiVenture"],
+        "alternateName": [
+          "5THELEMENT.AI",
+          "5thElement.ai",
+          "AiVenture"
+        ],
         "legalName": "AiVenture S.R.L.",
-        "identifier": "CUI 51415878",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CUI",
+            "value": "51415878"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "EUID",
+            "value": "ROONRC.J2025016406000"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "ONRC",
+            "value": "J2025016406000"
+          }
+        ],
         "foundingDate": "2025-03-07",
         "url": "https://5thelement.ai/",
         "email": "contact@5thelement.ai",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Bucharest",
+          "streetAddress": "Drumul Pădurea Pustnicul nr. 141C, Corp A, Etaj 2, Ap. 5",
+          "addressLocality": "București",
+          "addressRegion": "Sector 1",
+          "postalCode": "014044",
           "addressCountry": "RO"
         },
-        "founder": {"@id":"https://5thelement.ai/#dan-ionescu"},
+        "founder": {
+          "@id": "https://5thelement.ai/#dan-ionescu",
+          "sameAs": [
+            "https://orcid.org/0009-0002-5498-1046",
+            "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
+          ]
+        },
         "sameAs": [
-          "https://ro.linkedin.com/in/dan-ionesco-a856082a0",
+          "https://5thelement.ai/",
+          "https://aiventure.ro/",
           "https://www.linkedin.com/company/107338970",
           "https://www.linkedin.com/showcase/5thelement-ai/",
           "https://www.crunchbase.com/organization/aiventure-s-r-l",
           "https://www.facebook.com/people/Aiventure/61573220584246/",
           "https://x.com/aipath512",
           "https://www.youtube.com/@AIVenture-q8u",
-          "https://medium.com/@aipath512"
+          "https://medium.com/@aipath512",
+          "https://www.reddit.com/user/AiVentureRO/",
+          "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
         ],
         "knowsAbout": [
-          "AI Recommendation Readiness", "AI Delivery Infrastructure", "AI Discovery Infrastructure", "AI Visibility", "AI Authority", "AI Signals", "AEO", "GEO", "OpenTimestamps", "SHA-256", "Cloudflare Edge", "AI search optimization", "machine-readable business data"
-        ]
+          "AI Recommendation Readiness",
+          "AI Delivery Infrastructure",
+          "AI Discovery Infrastructure",
+          "AI Visibility",
+          "AI Authority",
+          "AI Signals",
+          "AEO",
+          "GEO",
+          "OpenTimestamps",
+          "SHA-256",
+          "Cloudflare Edge",
+          "AI search optimization",
+          "machine-readable business data"
+        ],
+        "taxID": "51415878",
+        "vatID": "RO51415878"
       },
       {
         "@type": "Person",
         "@id": "https://5thelement.ai/#dan-ionescu",
         "name": "Dan Ionescu",
-        "alternateName": ["Dan Ionesco", "Eli"],
+        "alternateName": [
+          "Dan Ionesco",
+          "Eli"
+        ],
         "url": "https://ro.linkedin.com/in/dan-ionesco-a856082a0",
-        "worksFor": {"@id":"https://5thelement.ai/#organization"}
+        "worksFor": {
+          "@id": "https://5thelement.ai/#organization"
+        }
       },
       {
         "@type": "WebSite",
         "@id": "https://5thelement.ai/#website",
         "url": "https://5thelement.ai/",
         "name": "5THELEMENT.AI",
-        "publisher": {"@id":"https://5thelement.ai/#organization"},
+        "publisher": {
+          "@id": "https://5thelement.ai/#organization"
+        },
         "inLanguage": "en"
       },
       {
@@ -78,8 +131,12 @@
         "url": "https://5thelement.ai/",
         "name": "Attract More Clients. Sell More. Grow With AI.",
         "description": "5THELEMENT.AI helps B2B firms attract more clients, sell more, and grow by becoming understandable, verifiable, and recommendable by AI systems and AI agents.",
-        "isPartOf": {"@id":"https://5thelement.ai/#website"},
-        "about": {"@id":"https://5thelement.ai/#ai-recommendation-readiness"},
+        "isPartOf": {
+          "@id": "https://5thelement.ai/#website"
+        },
+        "about": {
+          "@id": "https://5thelement.ai/#ai-recommendation-readiness"
+        },
         "primaryImageOfPage": "https://5thelement.ai/assets/og/5thelement-ai-home.jpg",
         "dateModified": "2026-06-13",
         "inLanguage": "en"
@@ -89,7 +146,9 @@
         "@id": "https://5thelement.ai/#ai-lens",
         "name": "AI LENS™",
         "serviceType": "AI visibility and recommendation readiness scan",
-        "provider": {"@id":"https://5thelement.ai/#organization"},
+        "provider": {
+          "@id": "https://5thelement.ai/#organization"
+        },
         "description": "AI LENS scans public business information and identifies what AI systems can understand, what is missing, and what cannot yet be verified.",
         "areaServed": "Global",
         "offers": {
@@ -105,7 +164,9 @@
         "@id": "https://5thelement.ai/#ai-ready",
         "name": "AI READY™",
         "serviceType": "AI-ready business layer deployment",
-        "provider": {"@id":"https://5thelement.ai/#organization"},
+        "provider": {
+          "@id": "https://5thelement.ai/#organization"
+        },
         "description": "AI READY restructures and formats business information for AI systems, without rebuilding the existing website."
       },
       {
@@ -136,12 +197,54 @@
         "@type": "FAQPage",
         "@id": "https://5thelement.ai/#faq",
         "mainEntity": [
-          {"@type":"Question","name":"What does 5THELEMENT.AI do?","acceptedAnswer":{"@type":"Answer","text":"5THELEMENT.AI helps B2B firms become understandable, verifiable, and recommendable by AI systems and AI agents so they can attract more clients, sell more, and grow in the AI era."}},
-          {"@type":"Question","name":"Do I need to rebuild my website?","acceptedAnswer":{"@type":"Answer","text":"No. AiVenture deploys an AI-ready layer around the existing website at the network edge, without changing the current website design or codebase."}},
-          {"@type":"Question","name":"What is AI LENS?","acceptedAnswer":{"@type":"Answer","text":"AI LENS is the first diagnostic scan. It identifies what AI can understand about a business, what is missing, what is unclear, and what cannot yet be verified."}},
-          {"@type":"Question","name":"What is Recommendation Readiness?","acceptedAnswer":{"@type":"Answer","text":"Recommendation Readiness measures whether AI can find, understand, verify, trust, and recommend a business."}},
-          {"@type":"Question","name":"How fast can the AI-ready layer be live?","acceptedAnswer":{"@type":"Answer","text":"The AI-ready layer can be operational within 24 hours, depending on available business information and deployment access."}},
-          {"@type":"Question","name":"What does the proof layer verify?","acceptedAnswer":{"@type":"Answer","text":"The proof layer uses SHA-256 fingerprints, OpenTimestamps, and Bitcoin block attestations to support public verification, traceability, and historical consistency of selected architecture and business artifacts."}}
+          {
+            "@type": "Question",
+            "name": "What does 5THELEMENT.AI do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "5THELEMENT.AI helps B2B firms become understandable, verifiable, and recommendable by AI systems and AI agents so they can attract more clients, sell more, and grow in the AI era."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to rebuild my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AiVenture deploys an AI-ready layer around the existing website at the network edge, without changing the current website design or codebase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is AI LENS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI LENS is the first diagnostic scan. It identifies what AI can understand about a business, what is missing, what is unclear, and what cannot yet be verified."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Recommendation Readiness?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recommendation Readiness measures whether AI can find, understand, verify, trust, and recommend a business."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can the AI-ready layer be live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The AI-ready layer can be operational within 24 hours, depending on available business information and deployment access."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the proof layer verify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The proof layer uses SHA-256 fingerprints, OpenTimestamps, and Bitcoin block attestations to support public verification, traceability, and historical consistency of selected architecture and business artifacts."
+            }
+          }
         ]
       }
     ]
