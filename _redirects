@@ -1,0 +1,11 @@
+# Adrese vechi din meniu/subsol -> pagina legală unică (/legal/ servită de aiventure-legal-worker). 2026-11-18
+/privacy-policy/   /legal/#privacy        301
+/privacy-policy    /legal/#privacy        301
+/terms-conditions/ /legal/#terms          301
+/terms-conditions  /legal/#terms          301
+/cookie-policy/    /legal/#cookies        301
+/cookie-policy     /legal/#cookies        301
+/gdpr/             /legal/#gdpr-rights    301
+/gdpr              /legal/#gdpr-rights    301
+/eu-ai-act/        /legal/eu-ai-act/      301
+/eu-ai-act         /legal/eu-ai-act/      301
