@@ -1,0 +1,25 @@
+# ==== AiVenture — _headers standard de rețea v1.0 · 2026-11-23 · site: 5thelement.ai ====
+# Bloc comun (identic pe toate site-urile rețelei). Regulile proprii site-ului sunt mai jos.
+# Regulă: un antet nu se repetă în două reguli care se suprapun (Cloudflare le lipește: „*, *”).
+# CSP în modul Report-Only (doar observă, nu blochează nimic).
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://gdpr.aiventure.ro https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://cloudflareinsights.com https://gdpr.aiventure.ro https://api.whatsapp.com; frame-src 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'
+  X-ADI-Network: 5thelement.ai
+  X-ADI-Site: 5thelement.ai
+
+# Fișiere JSON pentru agenți AI: tip corect + citire de pe orice domeniu (CORS)
+/*.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+# Copii de lucru pe adrese *.pages.dev: niciodată indexabile (nu afectează domeniul real)
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
